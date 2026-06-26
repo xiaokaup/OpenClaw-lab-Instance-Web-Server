@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📤 投投 · 投放+分发官</title>
+<style>
+:root {
+  --bg: #080b11; --surface: #111620; --card: #161b26;
+  --border: #212836; --text: #e1e4eb; --muted: #6e7687;
+  --accent: #6366f1; --accent2: #8b5cf6; --green: #22c55e;
+  --yellow: #eab308; --red: #ef4444; --orange: #f97316;
+  --cyan: #06b6d4; --radius: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.header-left{display:flex;align-items:center;gap:12px}
+.header-emoji{font-size:28px}
+.header-title{font-size:18px;font-weight:700}
+.header-subtitle{font-size:12px;color:var(--muted);margin-left:12px}
+.header-right{display:flex;align-items:center;gap:12px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.mode-badge{padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600}
+.mode-badge.demo{background:#eab30820;color:var(--yellow)}
+.mode-badge.live{background:#22c55e20;color:var(--green)}
+
+.tabs{display:flex;gap:2px;padding:12px 24px 0;background:var(--bg);border-bottom:1px solid var(--border)}
+.tab-btn{padding:8px 18px;border:none;background:none;color:var(--muted);font-size:13px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-family:inherit;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+
+.content{padding:24px;max-width:1400px;margin:0 auto}
+.panels{display:none}
+.panels.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600}
+.card-subtitle{font-size:11px;color:var(--muted)}
+
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.form-group{margin-bottom:12px}
+.form-label{font-size:11px;color:var(--muted);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+.form-input,.form-textarea,.form-select{width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);font-size:13px;font-family:inherit}
+.form-textarea{min-height:80px;resize:vertical}
+.form-select{appearance:none;cursor:pointer}
+.form-row{display:flex;gap:8px}
+
+.btn{padding:8px 16px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{background:var(--border)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn-primary:hover{background:#5558e8}
+.btn-danger{background:var(--red);border-color:var(--red);color:#fff}.btn-danger:hover{background:#dc2626}
+.btn-sm{padding:4px 10px;font-size:10px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* ── Material Cards ── */
+.material-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.material-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px}
+.material-platform{font-size:12px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.material-platform .ratio{font-size:10px;color:var(--muted);background:var(--card);padding:1px 6px;border-radius:4px}
+.material-title{font-size:13px;font-weight:500;margin-bottom:4px;color:var(--text)}
+.material-desc{font-size:11px;color:var(--muted);margin-bottom:6px;line-height:1.4}
+.material-cta{display:inline-block;padding:2px 8px;background:var(--accent);color:#fff;border-radius:4px;font-size:10px;font-weight:600}
+.material-visual{font-size:10px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.material-hashtags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.hashtag{font-size:9px;color:var(--cyan);background:#06b6d420;padding:1px 6px;border-radius:3px}
+
+/* ── Channel Allocation ── */
+.channel-row{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--border);font-size:13px}
+.channel-row:last-child{border-bottom:none}
+.channel-name{width:100px;font-weight:600;flex-shrink:0}
+.channel-budget{width:80px;text-align:right;font-weight:600;flex-shrink:0}
+.channel-pct{width:50px;text-align:right;font-size:11px;color:var(--muted)}
+.channel-bar{flex:1;height:6px;background:var(--surface);border-radius:3px;overflow:hidden;min-width:60px}
+.channel-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.channel-stats{font-size:10px;color:var(--muted);flex-shrink:0;text-align:right;line-height:1.4}
+.channel-stats span{display:block}
+
+/* ── ROI Dashboard ── */
+.roi-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px}
+.roi-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center}
+.roi-card.warn{border-color:var(--yellow)}
+.roi-card.critical{border-color:var(--red)}
+.roi-value{font-size:28px;font-weight:700;margin:4px 0}
+.roi-value.good{color:var(--green)}.roi-value.warn{color:var(--yellow)}.roi-value.bad{color:var(--red)}
+.roi-label{font-size:10px;color:var(--muted);text-transform:uppercase}
+.roi-trend{font-size:10px;margin-top:4px}
+.roi-trend.up{color:var(--green)}.roi-trend.down{color:var(--red)}
+
+.alert-ok{color:var(--green)}.alert-watch{color:var(--cyan)}.alert-warn{color:var(--yellow)}
+.alert-critical{color:var(--red)}.alert-meltdown{color:var(--red);font-weight:700}
+
+/* ── Bid Strategy ── */
+.bid-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:12px}
+.bid-card.recommended{border-color:var(--accent);border-width:2px}
+.bid-card.recommended::before{content:'⭐ 推荐';display:block;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.bid-mode{font-size:13px;font-weight:700;margin-bottom:4px}
+.bid-amount{font-size:20px;font-weight:700;color:var(--accent)}
+.bid-detail{font-size:11px;color:var(--muted);margin-top:6px}
+.bid-rules{font-size:10px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.bid-rule{display:flex;gap:8px;padding:2px 0;align-items:flex-start}
+.bid-rule-condition{color:var(--yellow);flex-shrink:0}
+.bid-rule-note{font-size:10px;color:var(--muted);margin-top:4px;padding-left:10px;border-left:1px solid var(--border)}
+
+/* ── Full Plan ── */
+.plan-section{margin-bottom:24px}
+.plan-section-title{font-size:14px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted)}
+.system-link{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;font-size:12px;color:var(--accent);border:1px solid var(--border);border-radius:6px;text-decoration:none;transition:all .15s}
+.system-link:hover{background:var(--card);text-decoration:none}
+
+.toast{position:fixed;bottom:24px;right:24px;padding:12px 20px;border-radius:8px;font-size:13px;z-index:100;animation:slideIn .3s ease;max-width:400px}
+.toast.success{background:#22c55e20;border:1px solid var(--green);color:var(--green)}
+.toast.error{background:#ef444420;border:1px solid var(--red);color:var(--red)}
+@keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+
+/* Quick Action Bar */
+.quick-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <span class="header-emoji">📤</span>
+    <div>
+      <div class="header-title">投投 · 投放+分发官</div>
+      <div class="header-subtitle">渠道选择 · 素材适配 · 出价优化 · ROI实时监控</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span id="api-mode" class="mode-badge demo">DEMO</span>
+    <span class="status-dot"></span>
+    <span style="font-size:11px;color:var(--muted)">v4-flash</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="full-plan">📋 一键方案</button>
+  <button class="tab-btn" data-tab="adapt">🎨 素材适配</button>
+  <button class="tab-btn" data-tab="channels">📡 渠道选择</button>
+  <button class="tab-btn" data-tab="bidding">💰 出价优化</button>
+  <button class="tab-btn" data-tab="roi">📊 ROI监控</button>
+</div>
+
+<div class="content">
+  <!-- ═══ 一键方案 ═══ -->
+  <div id="panel-full-plan" class="panels active">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">📋 一键生成投放方案</div><div class="card-subtitle">输入内容+目标人群 → 自动生成完整投放策略</div></div>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <div class="form-group">
+            <label class="form-label">内容标题</label>
+            <input class="form-input" id="fp-title" placeholder="e.g. 你的人格画像值多少钱？" value="你的人格画像值多少钱？">
+          </div>
+          <div class="form-group">
+            <label class="form-label">核心内容</label>
+            <textarea class="form-textarea" id="fp-body" placeholder="描述你的测试/内容的核心卖点">AI深度分析你的8个认知维度，3分钟生成专属人格画像。不是娱乐测试，是AI对你的认知操作系统做一次系统诊断。</textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group" style="flex:1">
+              <label class="form-label">CTA</label>
+              <input class="form-input" id="fp-cta" value="免费测试">
+            </div>
+            <div class="form-group" style="flex:1">
+              <label class="form-label">日预算 (¥)</label>
+              <input class="form-input" id="fp-budget" type="number" value="500" min="50" step="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">核心卖点 (逗号分隔)</label>
+            <input class="form-input" id="fp-keypoints" placeholder="AI分析8维度, 3分钟完成, 免费, 可分享" value="AI分析8维度, 3分钟完成, 免费, 可分享">
+          </div>
+        </div>
+        <div>
+          <div class="form-group">
+            <label class="form-label">目标人群年龄</label>
+            <select class="form-select" id="fp-age">
+              <option value="18-35" selected>18-35岁</option>
+              <option value="18-24">18-24岁</option>
+              <option value="25-35">25-35岁</option>
+              <option value="25-45">25-45岁</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">兴趣标签 (逗号分隔)</label>
+            <input class="form-input" id="fp-interests" placeholder="心理, 自我提升, AI, 测试" value="心理, 自我提升, AI, 测试">
+          </div>
+          <div class="form-group">
+            <label class="form-label">投放目标</label>
+            <select class="form-select" id="fp-goal">
+              <option value="conversion" selected>转化 (测试完成)</option>
+              <option value="traffic">流量 (点击进入)</option>
+              <option value="awareness">曝光 (品牌认知)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">内容形态</label>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+                <input type="checkbox" id="fp-format-short" checked> 短视频
+              </label>
+              <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+                <input type="checkbox" id="fp-format-image" checked> 图文
+              </label>
+              <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+                <input type="checkbox" id="fp-format-long"> 长文
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="generateFullPlan()" id="btn-generate" style="margin-top:12px;width:100%;justify-content:center">
+            🚀 生成投放方案
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="full-plan-result"></div>
+  </div>
+
+  <!-- ═══ 素材适配 ═══ -->
+  <div id="panel-adapt" class="panels">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">🎨 素材适配引擎</div><div class="card-subtitle">1份源内容 → 多平台规格自动适配</div></div>
+        <button class="btn btn-sm" onclick="loadPlatformSpecs()">📐 查看规格</button>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <div class="form-group"><label class="form-label">源标题</label><input class="form-input" id="ad-title" placeholder="核心标题" value="你的人格画像值多少钱？"></div>
+          <div class="form-group"><label class="form-label">源正文</label><textarea class="form-textarea" id="ad-body" placeholder="内容正文...">AI深度分析你的8个认知维度，3分钟生成专属人格画像。不是娱乐测试，是AI对你的认知操作系统做一次系统诊断。完成后你会得到：完整的8维度画像、个性化洞察、AI助手配置建议。</textarea></div>
+          <div class="form-row">
+            <div class="form-group" style="flex:1"><label class="form-label">CTA</label><input class="form-input" id="ad-cta" value="免费测试"></div>
+            <div class="form-group" style="flex:1"><label class="form-label">视觉风格</label><input class="form-input" id="ad-visual" placeholder="e.g. 简洁现代" value="内省深邃"></div>
+          </div>
+          <div class="form-group"><label class="form-label">目标平台</label>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="douyin" checked> 抖音</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="xiaohongshu" checked> 小红书</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="bilibili" checked> B站</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="wechat_moments" checked> 朋友圈</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="zhihu"> 知乎</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="weibo"> 微博</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="oceanengine"> 巨量引擎</label>
+              <label style="font-size:11px"><input type="checkbox" class="ad-platform" value="wechat_ads"> 微信广告</label>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="adaptMaterial()" style="margin-top:8px">🔄 适配素材</button>
+        </div>
+        <div id="adapt-preview" class="empty-state">👈 输入源素材后点击"适配素材"</div>
+      </div>
+    </div>
+    <div id="platform-specs-panel"></div>
+  </div>
+
+  <!-- ═══ 渠道选择 ═══ -->
+  <div id="panel-channels" class="panels">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">📡 渠道选择 + 预算分配</div><div class="card-subtitle">智能推荐渠道组合，按ROI+人群匹配度自动分配预算</div></div>
+        <button class="btn btn-sm" onclick="loadChannelProfiles()">📊 渠道数据</button>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <div class="form-group"><label class="form-label">内容类型</label>
+            <select class="form-select" id="ch-type">
+              <option value="quiz" selected>测试/问答</option>
+              <option value="article">长文/分析</option>
+              <option value="video">视频内容</option>
+              <option value="social">社交话题</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">目标年龄</label>
+            <select class="form-select" id="ch-age">
+              <option value="18-35" selected>18-35岁</option>
+              <option value="18-24">18-24岁</option>
+              <option value="25-35">25-35岁</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">兴趣标签</label>
+            <input class="form-input" id="ch-interests" value="心理, 自我提升, AI">
+          </div>
+        </div>
+        <div>
+          <div class="form-group"><label class="form-label">日预算 (¥)</label>
+            <input class="form-input" id="ch-budget" type="number" value="500" min="50">
+          </div>
+          <div class="form-group"><label class="form-label">最多渠道数</label>
+            <select class="form-select" id="ch-max">
+              <option value="3" selected>3个渠道</option>
+              <option value="4">4个渠道</option>
+              <option value="5">5个渠道</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" onclick="selectChannels()" style="margin-top:12px;width:100%;justify-content:center">📡 分析渠道</button>
+        </div>
+      </div>
+    </div>
+    <div id="channel-result"></div>
+  </div>
+
+  <!-- ═══ 出价优化 ═══ -->
+  <div id="panel-bidding" class="panels">
+    <div class="quick-bar">
+      <button class="btn btn-sm" onclick="optimizeBid('douyin')">抖音</button>
+      <button class="btn btn-sm" onclick="optimizeBid('xiaohongshu')">小红书</button>
+      <button class="btn btn-sm" onclick="optimizeBid('bilibili')">B站</button>
+      <button class="btn btn-sm" onclick="optimizeBid('wechat_moments')">朋友圈</button>
+      <button class="btn btn-sm" onclick="compareAllBids()">📊 全渠道对比</button>
+    </div>
+    <div class="grid grid-2">
+      <div>
+        <div class="card">
+          <div class="card-header"><div class="card-title">⚙️ 出价参数</div></div>
+          <div class="form-group"><label class="form-label">投放目标</label>
+            <select class="form-select" id="bid-goal">
+              <option value="conversion" selected>转化 (测试完成)</option>
+              <option value="traffic">流量 (点击)</option>
+              <option value="awareness">曝光</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">日预算 (¥)</label>
+            <input class="form-input" id="bid-budget" type="number" value="500">
+          </div>
+          <div class="form-group"><label class="form-label">目标CPA (¥)</label>
+            <input class="form-input" id="bid-cpa" type="number" value="30" min="5">
+          </div>
+          <div class="form-group"><label class="form-label">竞争程度</label>
+            <select class="form-select" id="bid-competition">
+              <option value="low">低竞争</option>
+              <option value="medium" selected>中等竞争</option>
+              <option value="high">高竞争</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="bid-result" class="empty-state">👈 选择渠道后点击上方渠道按钮查看出价建议</div>
+    </div>
+    <div id="bid-compare"></div>
+  </div>
+
+  <!-- ═══ ROI监控 ═══ -->
+  <div id="panel-roi" class="panels">
+    <div class="quick-bar">
+      <button class="btn btn-sm btn-primary" onclick="simulateROIData()">🎲 模拟数据</button>
+      <button class="btn btn-sm" onclick="refreshROI()">🔄 刷新</button>
+      <button class="btn btn-sm" onclick="loadMeltdownRules()">🛡️ 熔断规则</button>
+    </div>
+    <div id="roi-dashboard">
+      <div class="empty-state">👆 点击"模拟数据"生成演示数据，或连接真实API查看实时ROI</div>
+    </div>
+    <div id="meltdown-rules" style="margin-top:20px"></div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script>
+// ── Iframe 检测: 嵌入时隐藏自身 header ──
+if (window !== window.parent) {
+  document.head.insertAdjacentHTML('beforeend', `
+    <style>
+      .header { display: none !important; }
+      body { padding-top: 0; }
+      .tabs { padding-top: 16px; }
+    </style>
+  `);
+}
+
+const API_BASE = window.location.origin + '/api/toutou';
+
+// ── Tab Navigation ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.panels').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ── Toast ──
+function toast(msg, type='success') {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 3000);
+}
+
+// ── API Call ──
+async function api(path, method='GET', body=null) {
+  const opts = {method, headers:{'Content-Type':'application/json'}};
+  if (body) opts.body = JSON.stringify(body);
+  try {
+    const resp = await fetch(API_BASE + path, opts);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    return await resp.json();
+  } catch(e) {
+    toast(`API错误: ${e.message}`, 'error');
+    return null;
+  }
+}
+
+// ── Load Status ──
+async function loadStatus() {
+  const data = await api('/status');
+  if (data) {
+    document.getElementById('api-mode').textContent = data.demo_mode ? 'DEMO' : 'LIVE';
+    document.getElementById('api-mode').className = `mode-badge ${data.demo_mode?'demo':'live'}`;
+  }
+}
+loadStatus();
+
+// ═════════════════════════════════════════════════════════════
+//  一键方案
+// ═════════════════════════════════════════════════════════════
+
+async function generateFullPlan() {
+  const btn = document.getElementById('btn-generate');
+  btn.disabled = true;
+  btn.innerHTML = '⏳ 生成中...';
+
+  const formats = [];
+  if (document.getElementById('fp-format-short').checked) formats.push('短视频');
+  if (document.getElementById('fp-format-image').checked) formats.push('图文');
+  if (document.getElementById('fp-format-long').checked) formats.push('长文');
+
+  const body = {
+    content: {
+      title: document.getElementById('fp-title').value,
+      body: document.getElementById('fp-body').value,
+      cta: document.getElementById('fp-cta').value,
+      key_points: document.getElementById('fp-keypoints').value.split(',').map(s=>s.trim()).filter(Boolean),
+      type: 'quiz',
+      formats: formats,
+      goal: document.getElementById('fp-goal').value,
+    },
+    target_audience: {
+      age: document.getElementById('fp-age').value,
+      interests: document.getElementById('fp-interests').value.split(',').map(s=>s.trim()).filter(Boolean),
+    },
+    budget_daily: parseFloat(document.getElementById('fp-budget').value) || 500,
+  };
+
+  const data = await api('/full-plan', 'POST', body);
+  btn.disabled = false;
+  btn.innerHTML = '🚀 生成投放方案';
+  if (!data) return;
+
+  const plan = data.plan;
+  const materials = data.materials;
+  const bidding = data.bidding;
+
+  let html = '';
+
+  // Plan Summary
+  html += `<div class="card" style="border-color:var(--accent)">
+    <div class="card-header"><div class="card-title">📋 投放方案摘要</div><span style="font-size:11px;color:var(--muted)">${plan.summary}</span></div>
+    <div style="margin-bottom:16px">`;
+
+  plan.channels.forEach(c => {
+    html += `<div class="channel-row">
+      <span class="channel-name">📡 ${c.channel_name}</span>
+      <div class="channel-bar"><div class="channel-bar-fill" style="width:${c.budget_pct}%;background:var(--accent)"></div></div>
+      <span class="channel-budget">¥${c.budget}/天</span>
+      <span class="channel-pct">${c.budget_pct}%</span>
+      <span class="channel-stats">
+        <span>匹配度 ${c.audience_match}%</span>
+        <span>${c.bid_recommendation}</span>
+      </span>
+    </div>`;
+  });
+
+  html += `</div>`;
+  if (plan.risk_notes.length > 0) {
+    html += `<div style="font-size:11px;color:var(--yellow);margin-top:8px">⚠️ ${plan.risk_notes.join(' · ')}</div>`;
+  }
+  html += `</div>`;
+
+  // Materials
+  html += `<div class="plan-section"><div class="plan-section-title">🎨 适配素材</div>
+    <div class="material-grid">`;
+  materials.forEach(m => {
+    html += `<div class="material-card">
+      <div class="material-platform">${m.platform_name} <span class="ratio">${m.aspect_ratio}</span></div>
+      <div class="material-title">${esc(m.title)}</div>
+      <div class="material-desc">${esc(m.description).substring(0,80)}…</div>
+      <span class="material-cta">${esc(m.cta)}</span>
+      <div class="material-visual">🎯 ${esc(m.visual_note).substring(0,80)}…</div>
+    </div>`;
+  });
+  html += `</div></div>`;
+
+  // Bidding
+  html += `<div class="plan-section"><div class="plan-section-title">💰 出价策略</div><div class="grid grid-2">`;
+  for (const [ch, b] of Object.entries(bidding)) {
+    html += `<div class="card"><div class="card-title" style="margin-bottom:8px">📡 ${b.channel_name}</div>
+      <div style="font-size:12px;color:var(--accent);margin-bottom:8px">${b.recommended}</div>`;
+    b.strategies.forEach(s => {
+      html += `<div class="bid-detail"><strong>${s.mode}</strong> ¥${s.bid_amount} — ${s.notes[0]||''}</div>`;
+    });
+    html += `</div>`;
+  }
+  html += `</div></div>`;
+
+  document.getElementById('full-plan-result').innerHTML = html;
+  toast('✅ 投放方案生成完成');
+}
+
+// ═════════════════════════════════════════════════════════════
+//  素材适配
+// ═════════════════════════════════════════════════════════════
+
+async function adaptMaterial() {
+  const platforms = [];
+  document.querySelectorAll('.ad-platform:checked').forEach(cb => platforms.push(cb.value));
+
+  const body = {
+    title: document.getElementById('ad-title').value,
+    body: document.getElementById('ad-body').value,
+    cta: document.getElementById('ad-cta').value,
+    visual_style: document.getElementById('ad-visual').value,
+    platforms: platforms,
+  };
+
+  const data = await api('/adapt', 'POST', body);
+  if (!data) return;
+
+  let html = '<div class="material-grid">';
+  data.materials.forEach(m => {
+    html += `<div class="material-card">
+      <div class="material-platform">📱 ${m.platform_name} <span class="ratio">${m.aspect_ratio}</span></div>
+      <div class="material-title">${esc(m.title)}</div>
+      <div class="material-desc">${esc(m.description).substring(0,100)}${m.description.length>100?'…':''}</div>
+      <span class="material-cta">${esc(m.cta)}</span>
+      ${m.hashtags.length ? `<div class="material-hashtags">${m.hashtags.map(t=>`<span class="hashtag">${esc(t)}</span>`).join('')}</div>` : ''}
+      <div class="material-visual">🎯 ${esc(m.visual_note)}</div>
+    </div>`;
+  });
+  html += '</div>';
+  document.getElementById('adapt-preview').innerHTML = html;
+  toast(`✅ 已适配 ${data.count} 个平台`);
+}
+
+async function loadPlatformSpecs() {
+  const data = await api('/platform-specs');
+  if (!data) return;
+  let html = '<div class="card"><div class="card-title" style="margin-bottom:12px">📐 平台素材规格</div>';
+  html += '<table style="width:100%;font-size:11px;border-collapse:collapse">';
+  html += '<tr style="color:var(--muted);border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px">平台</th><th>比例</th><th>标题(字)</th><th>描述(字)</th><th>CTA(字)</th><th>视频</th></tr>';
+  for (const [key, spec] of Object.entries(data)) {
+    html += `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px;font-weight:600">${spec.name}</td>
+      <td style="padding:6px">${spec.aspect_ratio}</td>
+      <td style="padding:6px">${spec.title_min}-${spec.title_max}</td>
+      <td style="padding:6px">${spec.desc_max||'无限制'}</td>
+      <td style="padding:6px">${spec.cta_max||'无限制'}</td>
+      <td style="padding:6px">${spec.supports_video?'✅':'❌'}</td>
+    </tr>`;
+  }
+  html += '</table></div>';
+  document.getElementById('platform-specs-panel').innerHTML = html;
+}
+
+// ═════════════════════════════════════════════════════════════
+//  渠道选择
+// ═════════════════════════════════════════════════════════════
+
+async function selectChannels() {
+  const body = {
+    content: {
+      topic: '人格测试',
+      type: document.getElementById('ch-type').value,
+      formats: ['短视频', '图文'],
+      goal: 'conversion',
+    },
+    target_audience: {
+      age: document.getElementById('ch-age').value,
+      interests: document.getElementById('ch-interests').value.split(',').map(s=>s.trim()).filter(Boolean),
+    },
+    budget_daily: parseFloat(document.getElementById('ch-budget').value) || 500,
+    max_channels: parseInt(document.getElementById('ch-max').value) || 3,
+  };
+
+  const data = await api('/channels', 'POST', body);
+  if (!data) return;
+
+  let html = `<div class="card" style="border-color:var(--accent)">
+    <div class="card-header"><div class="card-title">📊 渠道分析结果</div><span style="font-size:11px;color:var(--muted)">${data.summary}</span></div>`;
+
+  data.channels.forEach(c => {
+    const barColor = c.roi_score >= 7 ? 'var(--green)' : c.roi_score >= 5 ? 'var(--accent)' : 'var(--yellow)';
+    html += `<div class="channel-row">
+      <span class="channel-name">📡 ${c.channel_name}</span>
+      <div class="channel-bar"><div class="channel-bar-fill" style="width:${c.budget_pct}%;background:${barColor}"></div></div>
+      <span class="channel-budget">¥${c.budget}/天</span>
+      <span class="channel-pct">${c.budget_pct}%</span>
+      <span class="channel-stats">
+        <span>曝光 ~${c.daily_impression_est.toLocaleString()}</span>
+        <span>点击 ~${c.daily_click_est.toLocaleString()}</span>
+        <span>CPC ¥${c.estimated_cpc}</span>
+      </span>
+    </div>`;
+  });
+
+  html += `<div style="font-size:11px;color:var(--muted);margin-top:12px;padding-top:8px;border-top:1px solid var(--border)">
+    匹配度: ${data.channels.map(c=>`${c.channel_name} ${c.audience_match}%`).join(' · ')}
+  </div>`;
+
+  if (data.ab_test_groups.length > 0) {
+    html += `<div style="margin-top:12px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)">
+      🧪 A/B对照: ${data.ab_test_groups.map(g=>`${g.name} ${g.variant}`).join(' vs ')}
+    </div>`;
+  }
+
+  if (data.risk_notes.length > 0) {
+    html += `<div style="font-size:11px;color:var(--yellow);margin-top:8px">⚠️ ${data.risk_notes.join(' · ')}</div>`;
+  }
+
+  html += '</div>';
+  document.getElementById('channel-result').innerHTML = html;
+}
+
+async function loadChannelProfiles() {
+  const data = await api('/channel-profiles');
+  if (!data) return;
+  let html = '<div class="card"><div class="card-title" style="margin-bottom:12px">📊 渠道数据 (2026基准)</div>';
+  html += '<table style="width:100%;font-size:11px;border-collapse:collapse">';
+  html += '<tr style="color:var(--muted);border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px">渠道</th><th>DAU</th><th>CPC范围</th><th>CPM范围</th><th>行业ROI</th></tr>';
+  for (const [key, ch] of Object.entries(data)) {
+    html += `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:6px;font-weight:600">${ch.name}</td>
+      <td style="padding:6px">${(ch.dau/100000000).toFixed(1)}亿</td>
+      <td style="padding:6px">¥${ch.avg_cpc[0]}-${ch.avg_cpc[1]}</td>
+      <td style="padding:6px">¥${ch.avg_cpm[0]}-${ch.avg_cpm[1]}</td>
+      <td style="padding:6px">${ch.roi_benchmark}x</td>
+    </tr>`;
+  }
+  html += '</table></div>';
+  document.getElementById('channel-result').innerHTML = html;
+}
+
+// ═════════════════════════════════════════════════════════════
+//  出价优化
+// ═════════════════════════════════════════════════════════════
+
+async function optimizeBid(channel) {
+  const body = {
+    channel: channel,
+    goal: document.getElementById('bid-goal').value,
+    daily_budget: parseFloat(document.getElementById('bid-budget').value) || 500,
+    target_cpa: parseFloat(document.getElementById('bid-cpa').value) || 30,
+    target_roi: 2.0,
+    competition_level: document.getElementById('bid-competition').value,
+    is_new_campaign: true,
+  };
+
+  const data = await api('/bid/optimize', 'POST', body);
+  if (!data) return;
+
+  let html = `<div class="card" style="border-color:var(--accent)">
+    <div class="card-header">
+      <div><div class="card-title">📡 ${data.channel_name} · 出价建议</div></div>
+      <span style="font-size:10px;color:var(--muted)">置信度: ${(data.confidence*100).toFixed(0)}%</span>
+    </div>
+    <div style="font-size:12px;color:var(--accent);margin-bottom:12px">${data.recommended}</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:12px">市场出价范围: ¥${data.market_range[0]} – ¥${data.market_range[1]}</div>`;
+
+  data.strategies.forEach((s, i) => {
+    const isRec = i === 0;
+    html += `<div class="bid-card ${isRec?'recommended':''}">
+      <div class="bid-mode">${s.mode} 出价模式</div>
+      <div class="bid-amount">¥${s.bid_amount}</div>
+      <div class="bid-detail">目标CPA ¥${s.target_cpa} · ROI ${s.target_roi}x · 日预算 ¥${s.daily_budget}</div>
+      ${s.notes.map(n=>`<div style="font-size:10px;color:var(--muted);margin-top:2px">💡 ${esc(n)}</div>`).join('')}`;
+    if (s.auto_rules.length > 0) {
+      html += `<div class="bid-rules"><strong>自动调价规则:</strong>`;
+      s.auto_rules.forEach(r => {
+        html += `<div class="bid-rule"><span class="bid-rule-condition">${esc(r.condition)}</span> → ${esc(r.action)}</div>`;
+        if (r.reason) html += `<div class="bid-rule-note">${esc(r.reason)}</div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div>`;
+  });
+
+  html += '</div>';
+  document.getElementById('bid-result').innerHTML = html;
+}
+
+async function compareAllBids() {
+  const channels = ['douyin', 'xiaohongshu', 'bilibili', 'wechat_moments', 'zhihu', 'weibo'];
+  const body = {
+    channels: channels,
+    daily_budget: parseFloat(document.getElementById('bid-budget').value) || 500,
+    target_cpa: parseFloat(document.getElementById('bid-cpa').value) || 30,
+  };
+
+  const data = await api('/bid/compare', 'POST', body);
+  if (!data) return;
+
+  let html = '<div class="card"><div class="card-title" style="margin-bottom:12px">📊 全渠道出价对比</div>';
+  html += '<table style="width:100%;font-size:12px;border-collapse:collapse">';
+  html += '<tr style="color:var(--muted);border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px">渠道</th><th>推荐策略</th><th>市场出价范围</th><th>置信度</th></tr>';
+  data.forEach(r => {
+    html += `<tr style="border-bottom:1px solid var(--border)">
+      <td style="padding:8px;font-weight:600">${r.channel_name}</td>
+      <td style="padding:8px;font-size:11px">${esc(r.recommended)}</td>
+      <td style="padding:8px">¥${r.market_range[0]}-¥${r.market_range[1]}</td>
+      <td style="padding:8px">${(r.confidence*100).toFixed(0)}%</td>
+    </tr>`;
+  });
+  html += '</table></div>';
+  document.getElementById('bid-compare').innerHTML = html;
+}
+
+// ═════════════════════════════════════════════════════════════
+//  ROI 监控
+// ═════════════════════════════════════════════════════════════
+
+function getChannelColor(ch) {
+  const colors = {douyin:'var(--accent)',xiaohongshu:'#ec4899',bilibili:'#3b82f6',oceanengine:'var(--accent)',wechat_ads:'#22c55e'};
+  return colors[ch] || 'var(--muted)';
+}
+
+async function simulateROIData() {
+  const channels = [
+    {ch:'douyin', spend:85, revenue:230, imp:8500, click:340, conv:8},
+    {ch:'xiaohongshu', spend:45, revenue:160, imp:4500, click:180, conv:5},
+    {ch:'bilibili', spend:60, revenue:120, imp:3000, click:90, conv:4},
+    {ch:'oceanengine', spend:120, revenue:280, imp:12000, click:480, conv:10},
+    {ch:'wechat_ads', spend:40, revenue:90, imp:2000, click:60, conv:3},
+  ];
+
+  for (const c of channels) {
+    await api('/roi/record', 'POST', {
+      channel: c.ch,
+      spend: c.spend,
+      revenue: c.revenue,
+      impressions: c.imp,
+      clicks: c.click,
+      conversions: c.conv,
+    });
+  }
+  await refreshROI();
+  toast('✅ 模拟数据已生成');
+}
+
+async function refreshROI() {
+  const data = await api('/roi/all-summaries');
+  if (!data || data.length === 0) {
+    document.getElementById('roi-dashboard').innerHTML = '<div class="empty-state">暂无数据，点击"模拟数据"开始</div>';
+    return;
+  }
+
+  // Summary cards
+  let totalSpend = 0, totalRevenue = 0, totalImp = 0, totalClick = 0, totalConv = 0;
+  data.forEach(s => {
+    totalSpend += s.total_spend;
+    totalRevenue += s.total_revenue;
+    totalImp += s.total_impressions;
+    totalClick += s.total_clicks;
+    totalConv += s.total_conversions;
+  });
+  const totalROI = totalSpend > 0 ? totalRevenue / totalSpend : 0;
+  const totalCPA = totalConv > 0 ? totalSpend / totalConv : 0;
+  const totalCTR = totalImp > 0 ? totalClick / totalImp : 0;
+  const totalCVR = totalClick > 0 ? totalConv / totalClick : 0;
+
+  let html = `<div class="roi-cards">
+    <div class="roi-card"><div class="roi-label">总花费</div><div class="roi-value">¥${totalSpend.toFixed(0)}</div></div>
+    <div class="roi-card"><div class="roi-label">总收入</div><div class="roi-value">¥${totalRevenue.toFixed(0)}</div></div>
+    <div class="roi-card ${totalROI>=2?'':'warn'}"><div class="roi-label">ROI</div><div class="roi-value ${totalROI>=2?'good':totalROI>=1?'warn':'bad'}">${totalROI.toFixed(1)}x</div></div>
+    <div class="roi-card ${totalCPA<=30?'':'warn'}"><div class="roi-label">平均CPA</div><div class="roi-value ${totalCPA<=30?'good':'warn'}">¥${totalCPA.toFixed(1)}</div></div>
+    <div class="roi-card"><div class="roi-label">总曝光</div><div class="roi-value" style="font-size:22px">${(totalImp/1000).toFixed(0)}K</div></div>
+    <div class="roi-card"><div class="roi-label">总点击</div><div class="roi-value" style="font-size:22px">${totalClick}</div></div>
+  </div>`;
+
+  // Per-channel breakdown
+  html += '<div class="card"><div class="card-title" style="margin-bottom:12px">📡 渠道明细</div>';
+  data.forEach(s => {
+    const color = getChannelColor(s.channel);
+    const alertClass = `alert-${s.alert_level}`;
+    const trendEmoji = s.trend === 'up' ? '📈' : s.trend === 'down' ? '📉' : '➡️';
+    html += `<div class="channel-row">
+      <span class="channel-name">📡 ${s.channel_name||s.channel}</span>
+      <span style="font-size:12px;color:${color};font-weight:600;width:60px">ROI ${s.roi.toFixed(1)}x</span>
+      <span style="font-size:11px;width:70px">CPA ¥${s.avg_cpa.toFixed(1)}</span>
+      <span class="roi-trend ${s.trend}">${trendEmoji} ${s.trend}</span>
+      <span style="font-size:11px;color:var(--muted)">花费¥${s.total_spend}</span>
+      <span style="font-size:11px;color:var(--muted)">曝光${(s.total_impressions/1000).toFixed(0)}K</span>
+      <span style="font-size:10px" class="${alertClass}">${s.alert_level}</span>
+    </div>`;
+  });
+  html += '</div>';
+
+  document.getElementById('roi-dashboard').innerHTML = html;
+}
+
+async function loadMeltdownRules() {
+  const data = await api('/roi/rules');
+  if (!data) return;
+  let html = '<div class="card"><div class="card-title" style="margin-bottom:12px">🛡️ 熔断保护规则</div>';
+  data.forEach(r => {
+    html += `<div style="padding:8px 0;border-bottom:1px solid var(--border);font-size:12px">
+      <div style="font-weight:600">${esc(r.rule)}</div>
+      <div style="font-size:11px;color:var(--muted)">触发: ${esc(r.condition)}</div>
+      <div style="font-size:10px;color:var(--accent)">动作: ${esc(r.action)}</div>
+    </div>`;
+  });
+  html += '</div>';
+  document.getElementById('meltdown-rules').innerHTML = html;
+}
+
+// ── Utils ──
+function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+</script>
+</body>
+</html>

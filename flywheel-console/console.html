@@ -237,8 +237,9 @@ const SYSTEMS = [
   { name:'Canvas 托管', desc:'飞轮控制台 SPA', status:'ok', icon:'🖼️' },
   { name:'心因引擎 Flask', desc:'人格测试 + 数据收集 + 广告管理', status:'ok', icon:'🧬', checkUrl:FLASK_URL+'/api/health' },
   { name:'用户端 H5', desc:'人格测试页 /result 结果页', status:'ok', icon:'👤', link:FLASK_URL },
+  { name:'投投工作区', desc:'素材适配·渠道选择·出价·ROI', status:'ok', icon:'📤', note:'Phase 1', link:FLASK_URL+'/toutou' },
   { name:'Workboard', desc:'Agent 任务调度', status:'ok', icon:'📋' },
-  { name:'L1 API层', desc:'巨量引擎 + 微信广告', status:'warn', icon:'🔌', note:'Phase 1' },
+  { name:'L1 API层', desc:'巨量引擎 + 微信广告', status:'warn', icon:'🔌', note:'凭证待申请' },
   { name:'支付系统', desc:'Stripe/Paddle 集成', status:'warn', icon:'💳', note:'Phase 2' },
 ];
 
@@ -309,7 +310,8 @@ function navigate(persona, page) {
     case 'dashboard': renderDashboard(main, p); break;
     case 'systems': renderSystems(main, p); break;
     case 'apis': renderApis(main, p); break;
-    case 'cece': case 'xixi': case 'toutou': case 'jianjian': case 'kongkong':
+    case 'toutou': renderToutouWorkspace(main, AGENTS.find(a=>a.id==='toutou'), p); break;
+    case 'cece': case 'xixi': case 'jianjian': case 'kongkong':
       renderAgentPlaceholder(main, AGENTS.find(a=>a.id===page), p); break;
     case 'market': renderPlaceholder(main, p, '🌍', '市场数据', '赛道分析 · 用户趋势 · 渠道表现', 'Phase 2'); break;
     case 'competitors': renderPlaceholder(main, p, '👥', '竞品动态', '竞品追踪 · 差异化分析', 'Phase 2'); break;
@@ -472,31 +474,103 @@ function renderAgentCard(a) {
 
 // ── Pages ──
 function renderAgentPlaceholder(main, agent, p) {
+  // 析析 has its own workspace — redirect
+  if (agent.id === 'xixi') {
+    main.innerHTML = `
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+          <span style="font-size:11px;color:var(--muted)">模型: ${agent.model}</span>
+        </div>
+        <div class="topbar-right">
+          <div class="persona-switcher">
+            <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+            <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="card" style="text-align:center;padding:32px 20px">
+          <div style="font-size:48px;margin-bottom:12px">🔬</div>
+          <div style="font-size:16px;font-weight:600;margin-bottom:6px">析析 工作区已上线</div>
+          <div style="color:var(--muted);font-size:13px;max-width:420px;margin:0 auto 20px;line-height:1.6">
+            人格画像 · 置信度可视化 · 个性化洞察 · AI Prompt生成<br>
+            <strong style="color:var(--accent2)">价值原点 — pro模型专属</strong>
+          </div>
+          <a href="${FLASK_URL}/xixi" target="_blank" class="btn btn-primary" style="font-size:14px;padding:12px 28px;text-decoration:none">
+            🚀 打开析析工作区
+          </a>
+          <div style="margin-top:12px;font-size:10px;color:var(--muted)">
+            或直接访问 <code style="background:var(--card);padding:2px 6px;border-radius:4px">localhost:8899/xixi</code>
+          </div>
+        </div>
+      </div>
+    `;
+  } else {
+    main.innerHTML = `
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+          <span style="font-size:11px;color:var(--muted)">模型: ${agent.model}</span>
+        </div>
+        <div class="topbar-right">
+          <div class="persona-switcher">
+            <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+            <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="card" style="text-align:center;padding:80px 20px">
+          <div style="font-size:64px;margin-bottom:16px">${agent.emoji}</div>
+          <div style="font-size:18px;font-weight:600;margin-bottom:8px">${agent.name} 工作区</div>
+          <div style="color:var(--muted);font-size:13px;max-width:400px;margin:0 auto">${agent.desc}</div>
+          <div style="margin-top:24px;color:var(--muted);font-size:12px">
+            🚧 Phase 1 搭建 · Agent 将在此页面直接操作
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  bindSwitcher();
+}
+
+function renderToutouWorkspace(main, agent, p) {
   main.innerHTML = `
     <div class="topbar">
       <div class="topbar-left">
         <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
-        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model}</span>
+        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model} | Phase 1 · L1 API对接</span>
+        <span style="font-size:10px;margin-left:8px;display:flex;align-items:center;gap:4px">
+          <span id="toutou-conn-dot" style="width:6px;height:6px;border-radius:50%;background:var(--muted);display:inline-block"></span>
+          <span id="toutou-conn-text" style="color:var(--muted)">检测中…</span>
+        </span>
       </div>
       <div class="topbar-right">
+        <a href="${FLASK_URL}/toutou" target="_blank" class="btn btn-sm" style="text-decoration:none">↗ 新窗口</a>
+        <button class="btn btn-sm" onclick="reloadToutouIframe()">🔄 刷新</button>
         <div class="persona-switcher">
           <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
           <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
         </div>
       </div>
     </div>
-    <div class="content">
-      <div class="card" style="text-align:center;padding:80px 20px">
-        <div style="font-size:64px;margin-bottom:16px">${agent.emoji}</div>
-        <div style="font-size:18px;font-weight:600;margin-bottom:8px">${agent.name} 工作区</div>
-        <div style="color:var(--muted);font-size:13px;max-width:400px;margin:0 auto">${agent.desc}</div>
-        <div style="margin-top:24px;color:var(--muted);font-size:12px">
-          🚧 Phase 1 搭建 · Agent 将在此页面直接操作
-        </div>
+    <div class="content" style="padding:0;height:calc(100vh - 120px);overflow:hidden">
+      <div id="toutou-loading" style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--muted);font-size:14px">
+        📤 正在连接投投工作区…
       </div>
+      <iframe id="toutou-iframe" src="${FLASK_URL}/toutou" 
+        style="width:100%;height:100%;border:none;display:none"
+        onload="onToutouIframeLoaded()"
+        onerror="onToutouIframeError()"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
     </div>
   `;
   bindSwitcher();
+  // Start connection check
+  checkToutouConnection();
 }
 
 function renderSystems(main, p) {
@@ -640,6 +714,64 @@ async function updateLiveMetrics() {
 }
 
 // ── Workboard API ──
+async function loadWorkboardTasks() {
+
+// ══════════════════════════════════════════════════════════
+//  投投 工作区 iframe 连接
+// ══════════════════════════════════════════════════════════
+
+async function checkToutouConnection() {
+  const dot = document.getElementById('toutou-conn-dot');
+  const text = document.getElementById('toutou-conn-text');
+  if (!dot || !text) return;
+  try {
+    const resp = await fetch(`${FLASK_URL}/api/toutou/status`);
+    if (resp.ok) {
+      const data = await resp.json();
+      dot.style.background = data.demo_mode ? 'var(--yellow)' : 'var(--green)';
+      text.textContent = data.demo_mode ? 'DEMO' : 'LIVE';
+      text.style.color = data.demo_mode ? 'var(--yellow)' : 'var(--green)';
+    }
+  } catch(e) {
+    dot.style.background = 'var(--red)';
+    text.textContent = '离线';
+    text.style.color = 'var(--red)';
+  }
+}
+
+function onToutouIframeLoaded() {
+  const loading = document.getElementById('toutou-loading');
+  const iframe = document.getElementById('toutou-iframe');
+  if (loading) loading.style.display = 'none';
+  if (iframe) iframe.style.display = 'block';
+  checkToutouConnection();
+}
+
+function onToutouIframeError() {
+  const loading = document.getElementById('toutou-loading');
+  if (loading) {
+    loading.innerHTML = '⚠️ 无法连接投投工作区<br><span style="font-size:12px;margin-top:8px">请确认 Flask 心因引擎已启动 (port 8899)</span>';
+  }
+  const dot = document.getElementById('toutou-conn-dot');
+  const text = document.getElementById('toutou-conn-text');
+  if (dot) dot.style.background = 'var(--red)';
+  if (text) { text.textContent = '离线'; text.style.color = 'var(--red)'; }
+}
+
+function reloadToutouIframe() {
+  const iframe = document.getElementById('toutou-iframe');
+  const loading = document.getElementById('toutou-loading');
+  if (loading) loading.style.display = 'flex';
+  if (iframe) {
+    iframe.style.display = 'none';
+    iframe.src = iframe.src; // reload
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  Workboard
+// ══════════════════════════════════════════════════════════
+
 async function loadWorkboardTasks() {
   const card = document.getElementById('tasks-card');
   if (!card) return;

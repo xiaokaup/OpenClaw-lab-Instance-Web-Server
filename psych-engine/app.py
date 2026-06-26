@@ -21,6 +21,24 @@ from ad_platforms import AdManager
 
 ad_mgr = AdManager(demo=True)  # 默认Demo模式
 
+# ============ 投投 工作区 ============
+import importlib.util
+_toutou_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "toutou-workspace")
+try:
+    _spec = importlib.util.spec_from_file_location("toutou_app", os.path.join(_toutou_dir, "app.py"))
+    _toutou_module = importlib.util.module_from_spec(_spec)
+    # Ensure toutou-workspace and api-layer are in path for internal imports
+    if _toutou_dir not in sys.path:
+        sys.path.insert(0, _toutou_dir)
+    _projects_root = os.path.dirname(os.path.dirname(__file__))
+    if _projects_root not in sys.path:
+        sys.path.insert(0, _projects_root)
+    _spec.loader.exec_module(_toutou_module)
+    app.register_blueprint(_toutou_module.toutou_bp)
+    print("[psych-engine] ✅ 投投工作区已加载")
+except Exception as e:
+    print(f"[psych-engine] ⚠️ 投投工作区加载失败: {e}")
+
 QUESTIONS_FILE = os.path.join(os.path.dirname(__file__), "questions.json")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 USERS_FILE = os.path.join(DATA_DIR, "users.jsonl")
@@ -36,9 +54,11 @@ DIM_ORDER = ["IM", "DA", "AS", "ME", "ST", "CB", "FM", "TB"]
 
 
 def calc_scores(answers):
-    """计算8维度原始分，归一化到0-100"""
+    """计算8维度原始分，归一化到0-100，同时计算置信度"""
     raw = {d: 0 for d in DIM_ORDER}
     cnt = {d: 0 for d in DIM_ORDER}
+    # 收集每个维度下所有贡献分数，用于方差计算
+    dim_scores = {d: [] for d in DIM_ORDER}
     for i, choice in enumerate(answers):
         q = Q["questions"][i]
         dim = q["dim"]
@@ -46,15 +66,57 @@ def calc_scores(answers):
         for d, score in opt["scores"].items():
             raw[d] += score
             cnt[d] += 1
+            dim_scores[d].append(score)
     norm = {}
+    confidence = {}
     for d in DIM_ORDER:
         if cnt[d] > 0:
             avg = raw[d] / cnt[d]
-            # 映射 -3..3 → 0..100
             norm[d] = max(1, min(99, int((avg + 3) / 6 * 100)))
+            # 置信度计算：基于分数离散度 + 题数信度
+            confidence[d] = calc_confidence(dim_scores[d])
         else:
             norm[d] = 50
-    return norm
+            confidence[d] = 0.0
+    return norm, confidence
+
+
+def calc_confidence(scores):
+    """
+    置信度计算引擎
+    
+    多维度信号融合：
+    1. 内部一致性 (60%权重): 同一维度下各题分数方差越小 → 信号越一致 → 置信度越高
+    2. 题数信度 (25%权重): 采样点越多 → 置信度越高 (2题=0.7基数, 3题+趋于1.0)
+    3. 极端度 (15%权重): 极端分数(很高/很低)比中等分数更可信
+    
+    返回 0.0-1.0 的置信度
+    """
+    n = len(scores)
+    if n == 0:
+        return 0.0
+    if n == 1:
+        return 0.55  # 单题最低信任度
+    
+    # 1. 内部一致性（正态化方差）
+    mean = sum(scores) / n
+    # 分数范围 -3..3, 最大可能方差是 9 (两个极端)
+    if n >= 2:
+        variance = sum((s - mean) ** 2 for s in scores) / (n - 1)
+        max_variance = 9.0
+        consistency = max(0.0, 1.0 - (variance / max_variance))
+    else:
+        consistency = 0.6
+    
+    # 2. 题数信度
+    sample_trust = min(1.0, 0.55 + (n - 1) * 0.25)
+    
+    # 3. 极端度：偏离中位越远越可信（中等分数可能只是随意选的）
+    extremeness = abs(mean) / 3.0  # 0..1
+    
+    # 加权融合
+    confidence = consistency * 0.60 + sample_trust * 0.25 + extremeness * 0.15
+    return round(min(0.99, max(0.15, confidence)), 4)
 
 
 def level_label(val):
@@ -177,10 +239,16 @@ def blindspot_text(low2, scores):
 
 # ============ 付费版内容 ============
 
-def build_premium(scores):
+def conf_label(c):
+    if c >= 0.85: return "高"
+    if c >= 0.65: return "中"
+    return "低"
+
+
+def build_premium(scores, confidence=None):
     dims_detail = {}
     for d in DIM_ORDER:
-        dims_detail[d] = generate_dim_detail(d, scores[d])
+        dims_detail[d] = generate_dim_detail(d, scores[d], confidence.get(d, 0.5) if confidence else 0.5)
 
     return {
         "dimensions": dims_detail,
@@ -190,8 +258,13 @@ def build_premium(scores):
     }
 
 
-def generate_dim_detail(dim, val):
+def generate_dim_detail(dim, val, confidence_val=0.5):
     level = level_label(val)
+    conf_note = ""
+    if confidence_val < 0.5:
+        conf_note = f"\n\n⚠️ 本维度置信度较低（{confidence_val:.0%}），因为你的回答信号不够一致。建议关注同维度下不同场景的选择差异。"
+    elif confidence_val < 0.65:
+        conf_note = f"\n\n💡 本维度置信度中等（{confidence_val:.0%}），画像方向可信但细节可能有微调空间。"
     d = DIMS[dim]
 
     details = {
@@ -239,9 +312,9 @@ def generate_dim_detail(dim, val):
 
     for th, text in details.get(dim, []):
         if val >= th:
-            return {"label": d["name"], "icon": d["icon"], "level": level, "detail": text}
+            return {"label": d["name"], "icon": d["icon"], "level": level, "detail": text + conf_note, "confidence": confidence_val}
 
-    return {"label": d["name"], "icon": d["icon"], "level": level, "detail": ""}
+    return {"label": d["name"], "icon": d["icon"], "level": level, "detail": conf_note, "confidence": confidence_val}
 
 
 def os_profile_text(scores):
@@ -333,8 +406,9 @@ def submit():
     nickname = data.get("nickname", "").strip()
     if len(answers) != len(Q["questions"]):
         return jsonify({"error": "请完成所有题目"}), 400
-    scores = calc_scores(answers)
+    scores, confidence = calc_scores(answers)
     session["scores"] = scores
+    session["confidence"] = confidence
     session["answers"] = answers
     session["unlocked"] = False
     session["nickname"] = nickname
@@ -365,6 +439,7 @@ def submit():
         "created_at": now,
         "scores": scores,
         "answers": answers,
+        "confidence": confidence,
         "top_dims": sorted(scores, key=scores.get, reverse=True)[:2],
         "low_dims": sorted(scores, key=scores.get)[:2]
     }
@@ -381,12 +456,17 @@ def result():
                                estimated_time=Q["estimated_time"],
                                error="请先完成测试")
     unlocked = session.get("unlocked", False)
+    confidence = session.get("confidence", {d: 0.5 for d in DIM_ORDER})
     dim_data = build_dim_data(scores)
+    # 附加置信度信息
+    for d in DIM_ORDER:
+        dim_data[d]["confidence"] = confidence.get(d, 0.5)
+        dim_data[d]["conf_label"] = conf_label(confidence.get(d, 0.5))
     profile = build_profile(scores)
-    premium = build_premium(scores) if unlocked else None
+    premium = build_premium(scores, confidence) if unlocked else None
     return render_template("result.html", scores=scores, dim_data=dim_data,
                            profile=profile, premium=premium, unlocked=unlocked,
-                           dims_meta=DIMS, dim_order=DIM_ORDER)
+                           dims_meta=DIMS, dim_order=DIM_ORDER, confidence=confidence)
 
 @app.route("/pay", methods=["POST"])
 def pay():
@@ -396,12 +476,28 @@ def pay():
 @app.route("/api/portrait")
 def api_portrait():
     scores = session.get("scores")
+    confidence = session.get("confidence", {})
     if not scores:
         return jsonify({"error": "no session"}), 404
-    return jsonify({"scores": scores, "unlocked": session.get("unlocked", False)})
+    return jsonify({"scores": scores, "confidence": confidence, "unlocked": session.get("unlocked", False)})
 
 
 # ============ 广告投放 API ============
+
+@app.route("/toutou")
+def toutou_workspace():
+    """投投 投放+分发官 工作区 — Phase 1"""
+    import os as _os
+    html_path = _os.path.join(_os.path.dirname(_os.path.dirname(__file__)), "toutou-workspace", "templates", "toutou.html")
+    if _os.path.exists(html_path):
+        with open(html_path, "r") as f:
+            return f.read()
+    return "<h1>投投工作区 UI 未找到</h1>", 404
+
+@app.route("/xixi")
+def xixi_workspace():
+    """析析 人格分析引擎 工作区 — Phase 1"""
+    return render_template("xixi.html", dims_meta=DIMS, dim_order=DIM_ORDER)
 
 @app.route("/ads")
 def ads_dashboard():
@@ -515,6 +611,311 @@ def api_stats():
         "total_results": total_results,
         "dimension_averages": dim_avgs
     })
+
+
+# ═══════════════════════════════════════════════════════════
+# 析析 工作区 API — Phase 1
+# ═══════════════════════════════════════════════════════════
+
+@app.route("/api/workspace/records")
+def api_workspace_records():
+    """获取所有测试记录列表（支持分页）"""
+    page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per_page", 20, type=int)
+    sort = request.args.get("sort", "created_at")  # created_at / confidence / score
+
+    records = []
+    try:
+        if os.path.exists(RESULTS_FILE):
+            with open(RESULTS_FILE) as f:
+                for line in f:
+                    r = json.loads(line)
+                    records.append(r)
+    except Exception:
+        pass
+
+    total = len(records)
+
+    # 排序
+    if sort == "confidence" and records:
+        records.sort(key=lambda r: sum(r.get("confidence", {}).values()) / max(len(r.get("confidence", {})), 1), reverse=True)
+    elif sort == "score" and records:
+        records.sort(key=lambda r: sum(r.get("scores", {}).values()), reverse=True)
+    else:
+        records.sort(key=lambda r: r.get("created_at", ""), reverse=True)
+
+    # 分页
+    start = (page - 1) * per_page
+    end = start + per_page
+    page_records = records[start:end]
+
+    return jsonify({
+        "total": total,
+        "page": page,
+        "per_page": per_page,
+        "records": page_records
+    })
+
+
+@app.route("/api/workspace/portrait/<user_id>")
+def api_workspace_portrait(user_id):
+    """获取指定用户的完整画像（含置信度 + 个性化洞察）"""
+    record = None
+    user_info = None
+    try:
+        if os.path.exists(RESULTS_FILE):
+            with open(RESULTS_FILE) as f:
+                for line in f:
+                    r = json.loads(line)
+                    if r.get("user_id") == user_id:
+                        record = r
+                        break
+        if os.path.exists(USERS_FILE):
+            with open(USERS_FILE) as f:
+                for line in f:
+                    u = json.loads(line)
+                    if u.get("user_id") == user_id:
+                        user_info = u
+                        break
+    except Exception:
+        pass
+
+    if not record:
+        return jsonify({"error": "user not found"}), 404
+
+    scores = record.get("scores", {})
+    confidence = record.get("confidence", {d: 0.5 for d in DIM_ORDER})
+    answers = record.get("answers", [])
+
+    # 基本画像
+    dim_data = build_dim_data(scores)
+    for d in DIM_ORDER:
+        dim_data[d]["confidence"] = confidence.get(d, 0.5)
+        dim_data[d]["conf_label"] = conf_label(confidence.get(d, 0.5))
+
+    profile = build_profile(scores)
+
+    # 个性化洞察（基于答案模式 + 分数）
+    insights = generate_personalized_insights(scores, confidence, answers)
+
+    # AI系统配置提示
+    prompts = generate_ai_prompts(scores, confidence)
+
+    return jsonify({
+        "user_id": user_id,
+        "nickname": record.get("nickname", ""),
+        "created_at": record.get("created_at", ""),
+        "scores": scores,
+        "confidence": confidence,
+        "dim_data": dim_data,
+        "profile": profile,
+        "insights": insights,
+        "prompts": prompts
+    })
+
+
+@app.route("/api/workspace/summary")
+def api_workspace_summary():
+    """工作区概览：总量、分布、趋势"""
+    records = []
+    try:
+        if os.path.exists(RESULTS_FILE):
+            with open(RESULTS_FILE) as f:
+                for line in f:
+                    r = json.loads(line)
+                    records.append(r)
+    except Exception:
+        pass
+
+    total = len(records)
+    if total == 0:
+        return jsonify({"total": 0, "dim_averages": {}, "confidence_averages": {}, "daily_counts": {}})
+
+    # 各维度平均分
+    dim_sums = {d: 0.0 for d in DIM_ORDER}
+    conf_sums = {d: 0.0 for d in DIM_ORDER}
+    daily = {}
+
+    for r in records:
+        s = r.get("scores", {})
+        c = r.get("confidence", {})
+        for d in DIM_ORDER:
+            dim_sums[d] += s.get(d, 50)
+            conf_sums[d] += c.get(d, 0.5)
+        # 按日期统计
+        dt = r.get("created_at", "")[:10]
+        daily[dt] = daily.get(dt, 0) + 1
+
+    dim_avgs = {d: round(dim_sums[d] / total, 1) for d in DIM_ORDER}
+    conf_avgs = {d: round(conf_sums[d] / total, 4) for d in DIM_ORDER}
+
+    return jsonify({
+        "total": total,
+        "dim_averages": dim_avgs,
+        "confidence_averages": conf_avgs,
+        "daily_counts": dict(sorted(daily.items()))
+    })
+
+
+# ═══════════════════════════════════════════════════════════
+# 析析 洞察 & 提示词生成引擎
+# ═══════════════════════════════════════════════════════════
+
+def generate_personalized_insights(scores, confidence, answers):
+    """基于多维度数据生成个性化洞察"""
+    insights = []
+
+    top1 = max(scores, key=scores.get)
+    low1 = min(scores, key=scores.get)
+    avg_score = sum(scores.values()) / len(scores)
+    avg_conf = sum(confidence.values()) / max(len(confidence), 1)
+
+    # 洞察1: 主导维度 + 置信度
+    insights.append({
+        "type": "dominant",
+        "title": f"主导模式：{DIMS[top1]['name']}",
+        "body": f"你对世界的默认处理方式由「{DIMS[top1]['name']}」驱动——{'这是你最稳定的特质' if confidence.get(top1, 0) >= 0.7 else '这个方向明确但具体表现可能随情境波动'}。在AI看来，这是理解你的第一把钥匙。",
+        "confidence": confidence.get(top1, 0.5),
+        "icon": DIMS[top1]['icon']
+    })
+
+    # 洞察2: 冲突维度（两个相关维度出现矛盾时特别有价值）
+    if scores["IM"] > 60 and scores["AS"] < 40:
+        insights.append({
+            "type": "conflict",
+            "title": "信息渴求 vs 注意分散",
+            "body": "你对信息有强烈渴求（IM高），但注意力容易分散（AS低）。这意味着你收集了很多信息却没时间深度消化。建议：每天设1小时'深度消化时段'，关掉所有干扰，只处理已收集的信息。",
+            "confidence": (confidence.get("IM", 0.5) + confidence.get("AS", 0.5)) / 2,
+            "icon": "⚡"
+        })
+    if scores["ST"] > 60 and scores["FM"] > 60:
+        insights.append({
+            "type": "conflict",
+            "title": "社交驱动 + 反馈敏感",
+            "body": "你的社交网络是能量来源（ST高），但你对外界反馈高度敏感（FM高）。这让你在人际关系中既充电又耗电。建议：识别出'纯充电关系'和'需要管理的关系'，分别对待。",
+            "confidence": (confidence.get("ST", 0.5) + confidence.get("FM", 0.5)) / 2,
+            "icon": "🔄"
+        })
+    if scores["DA"] > 60 and scores["ME"] < 40:
+        insights.append({
+            "type": "conflict",
+            "title": "分析型决策 + 外部驱动",
+            "body": "你的决策链路很精密（DA高），但驱动力更多来自外部（ME低）。这可能导致你'把别人的问题分析得很透彻，但自己的事迟迟不动'。建议：每周给自己设定一个'只为自己做'的小目标。",
+            "confidence": (confidence.get("DA", 0.5) + confidence.get("ME", 0.5)) / 2,
+            "icon": "🎯"
+        })
+
+    # 洞察3: 整体画像稳定性
+    if avg_conf >= 0.7:
+        insights.append({
+            "type": "stability",
+            "title": "高度稳定的画像",
+            "body": f"你的整体画像置信度很高（{avg_conf:.0%}），各维度信号一致性强。这说明你的回答模式内部自洽——你对自己的认知比较清晰，测试结果可信度高。",
+            "confidence": avg_conf,
+            "icon": "✅"
+        })
+    elif avg_conf < 0.5:
+        insights.append({
+            "type": "stability",
+            "title": "画像波动较大",
+            "body": f"你的整体画像置信度偏低（{avg_conf:.0%}），可能因为你在不同情境下的选择差异较大，或者你还在探索自己的认知模式。这本身就是一个发现：你的认知操作系统还在'自我调参'阶段。",
+            "confidence": avg_conf,
+            "icon": "🔧"
+        })
+
+    # 洞察4: 基于具体答案的个性化提示
+    if answers and len(answers) == 16:
+        # 分析社交模式
+        q9_choice = answers[8]  # 第9题：社交场
+        q10_choice = answers[9]  # 第10题：信息获取来源
+        if q9_choice == 2 and q10_choice == 0:
+            insights.append({
+                "type": "behavioral",
+                "title": "独立研究者模式",
+                "body": "你在社交场合偏好观察分析，获取信息主要靠自己主动搜寻。你是典型的'独立研究者'——靠自己构建知识体系，不依赖他人的信息供给。优势是独立思考能力强，可关注的是：偶尔向外界'广播'你的发现，让别人知道你的价值。",
+                "confidence": 0.75,
+                "icon": "🔍"
+            })
+
+    return insights
+
+
+def generate_ai_prompts(scores, confidence):
+    """生成可复制粘贴的AI系统配置提示词"""
+    top2 = sorted(scores, key=scores.get, reverse=True)[:2]
+    low2 = sorted(scores, key=scores.get)[:2]
+
+    # 信息密度 & 风格
+    if scores["IM"] >= 60:
+        density = "高信息密度。请直接呈现完整分析框架、底层逻辑和关键数据，不需要摘要和简化。我可以消化复杂度。"
+    elif scores["IM"] >= 40:
+        density = "中等信息密度。请先给出核心结论和建议，再展开细节原因。使用结构化方式（标题-要点-展开）。"
+    else:
+        density = "轻量信息。请用简洁明了的语言、可视化的方式呈现，突出最关键的2-3个要点。避免信息过载。"
+
+    if scores["AS"] >= 60:
+        rhythm = "深度交互模式。每次对话聚焦一个主题深入讨论，不要频繁切换话题。单次回复可以较长（500-1000字），我会花时间消化。"
+    else:
+        rhythm = "快节奏交互。每次回复控制在200字以内，分点呈现。如果需要深度讨论，明确告知我'这个需要深度展开'让我做好心理准备。"
+
+    if scores["DA"] >= 60:
+        decision = "系统化决策辅助。帮我建立评估框架，列出每个选项的利弊、假设、不确定性和敏感变量。给我完整的分析而不是结论——我会自己判断。"
+    else:
+        decision = "直给式建议。给我2-3个可行方案及简短理由（每个2-3句话），帮我避免过度分析。重要决策时主动问我'是否需要深度分析'。"
+
+    if scores["FM"] <= 40:
+        feedback = "直接客观。指出我的盲点和错误时不需要委婉——给我事实和逻辑，我能处理。问题可以尖锐，但要基于证据。"
+    else:
+        feedback = "建设性温和。指出问题时同时给出改进建议和解决方案。先肯定方向再指出偏差。语气保持友好和支持性。"
+
+    if scores["TB"] >= 60:
+        trust = "基于证据推荐。给我数据和案例，让我看到推理链条。提到'别人都在用'时请补充具体数据和来源。"
+    else:
+        trust = "可以引用社会证明。告诉我类似用户的选择和评价，帮助我快速决策。但请区分'事实'和'流行观点'。"
+
+    # 完整 prompt
+    full_prompt = f"""# 我的AI助手个性化配置
+
+基于我的认知操作系统分析（心因引擎 Psych-Engine），请按以下方式与我交互：
+
+## 信息密度偏好
+{density}
+
+## 交互节奏
+{rhythm}
+
+## 决策辅助方式
+{decision}
+
+## 反馈风格
+{feedback}
+
+## 信任建立
+{trust}
+
+## 我的认知特征
+- 主导维度：{DIMS[top2[0]]['name']}（{scores[top2[0]]}分） + {DIMS[top2[1]]['name']}（{scores[top2[1]]}分）
+- 成长空间：{DIMS[low2[0]]['name']} + {DIMS[low2[1]]['name']}
+- 信息获取偏好：{'文字>视频' if scores['IM']>=60 else '视频>文字' if scores['IM']<=40 else '看情况'}
+- 社交模式：{'网络节点型' if scores['ST']>=60 else '独立节点型' if scores['ST']<=40 else '弹性连接型'}
+
+---
+*此配置可通过心因引擎测试生成: psych-engine*"""
+
+    # 裁缝版（给不同AI平台的简短版）
+    short_prompt = f"""请记住我的偏好：{density.split('。')[0]}。{rhythm.split('。')[0]}。{feedback.split('。')[0]}。我的认知风格是{DIMS[top2[0]]['name']}+{DIMS[top2[1]]['name']}主导。"""
+
+    return {
+        "full": full_prompt,
+        "short": short_prompt,
+        "params": {
+            "density": "high" if scores["IM"] >= 60 else ("medium" if scores["IM"] >= 40 else "low"),
+            "rhythm": "deep" if scores["AS"] >= 60 else "fast",
+            "decision": "systematic" if scores["DA"] >= 60 else "direct",
+            "feedback": "direct" if scores["FM"] <= 40 else "gentle",
+            "trust": "evidence" if scores["TB"] >= 60 else "social_proof"
+        }
+    }
 
 
 if __name__ == "__main__":
