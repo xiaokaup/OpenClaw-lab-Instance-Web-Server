@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞轮控制台 · Flywheel Console</title>
+<style>
+:root {
+  --bg: #080b11;
+  --surface: #111620;
+  --card: #161b26;
+  --border: #212836;
+  --text: #e1e4eb;
+  --muted: #6e7687;
+  --accent: #6366f1;
+  --accent2: #8b5cf6;
+  --green: #22c55e;
+  --yellow: #eab308;
+  --red: #ef4444;
+  --orange: #f97316;
+  --blue: #3b82f6;
+  --cyan: #06b6d4;
+  --radius: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── Layout ── */
+.app{display:flex;min-height:100vh}
+.sidebar{width:220px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar-logo{padding:20px;border-bottom:1px solid var(--border)}
+.sidebar-logo h1{font-size:18px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.5px}
+.sidebar-logo span{font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.sidebar-nav{flex:1;padding:12px 8px}
+.nav-section{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:12px 12px 6px;font-weight:600}
+.nav-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:6px;font-size:13px;color:var(--muted);cursor:pointer;transition:all .15s;text-decoration:none;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+.nav-item:hover{background:var(--card);color:var(--text);text-decoration:none}
+.nav-item.active{background:var(--accent);color:#fff;font-weight:500}
+.nav-item .badge{font-size:10px;background:var(--red);color:#fff;padding:1px 6px;border-radius:10px;margin-left:auto}
+.nav-item .badge.ok{background:var(--green)}
+.sidebar-footer{padding:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+.sidebar-footer .status-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:4px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.sidebar-footer .names{display:flex;gap:12px;margin-top:4px;font-size:10px}
+
+.main{flex:1;overflow-y:auto}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.topbar-left{display:flex;align-items:center;gap:16px}
+.topbar-title{font-size:18px;font-weight:600}
+.topbar-right{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--muted)}
+
+/* ── Persona Switcher ── */
+.persona-switcher{display:flex;gap:4px;background:var(--card);border-radius:8px;padding:2px}
+.persona-btn{border:none;background:none;color:var(--muted);font-size:11px;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .15s;font-family:inherit;white-space:nowrap}
+.persona-btn:hover{color:var(--text)}
+.persona-btn.active{background:var(--accent);color:#fff;font-weight:500}
+.persona-indicator{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:500}
+.persona-indicator .dot{width:7px;height:7px;border-radius:50%}
+.persona-indicator .dot.cto{background:var(--accent)}
+.persona-indicator .dot.ceo{background:var(--cyan)}
+
+.content{padding:24px}
+
+/* ── Cards ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600}
+.card-subtitle{font-size:11px;color:var(--muted)}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid-5{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1200px){.grid-5{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.sidebar{display:none}.grid-2,.grid-3,.grid-4,.grid-5{grid-template-columns:1fr}}
+
+/* ── Agent Cards ── */
+.agent-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-align:center;transition:border-color .2s}
+.agent-card:hover{border-color:var(--accent)}
+.agent-emoji{font-size:36px;margin-bottom:8px}
+.agent-name{font-size:14px;font-weight:600;margin-bottom:2px}
+.agent-role{font-size:11px;color:var(--muted);margin-bottom:8px}
+.agent-status{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:12px;font-size:10px;font-weight:600}
+.agent-status.online{background:#22c55e20;color:var(--green)}
+.agent-status.idle{background:#eab30820;color:var(--yellow)}
+.agent-model{font-size:10px;color:var(--muted);margin-top:6px}
+
+/* ── Health ── */
+.health-card{display:flex;align-items:center;gap:14px;padding:16px}
+.health-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.health-icon.ok{background:#22c55e20}.health-icon.warn{background:#eab30820}.health-icon.err{background:#ef444420}
+.health-info{flex:1;min-width:0}
+.health-name{font-size:13px;font-weight:600}
+.health-desc{font-size:11px;color:var(--muted)}
+.health-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;flex-shrink:0}
+.health-badge.ok{background:#22c55e20;color:var(--green)}
+.health-badge.warn{background:#eab30820;color:var(--yellow)}
+.health-badge.err{background:#ef444420;color:var(--red)}
+
+/* ── Workboard ── */
+.task-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.task-row:last-child{border-bottom:none}
+.task-status{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.task-status.todo{background:var(--muted)}
+.task-status.done{background:var(--green)}
+.task-status.ready{background:var(--accent)}
+.task-status.in_progress{background:var(--yellow);animation:pulse 1.5s infinite}
+.task-title{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.task-board{font-size:10px;color:var(--muted);padding:1px 6px;background:var(--surface);border-radius:4px;flex-shrink:0}
+.task-priority{font-size:10px;font-weight:600;flex-shrink:0}
+.task-priority.high{color:var(--red)}
+.task-priority.normal{color:var(--muted)}
+.empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
+
+/* ── Metrics ── */
+.metric-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.metric-icon{font-size:24px}
+.metric-value{font-size:28px;font-weight:700;letter-spacing:-1px}
+.metric-label{font-size:11px;color:var(--muted);margin-top:2px}
+.metric-change{font-size:11px;margin-top:4px}
+.metric-change.up{color:var(--green)}.metric-change.down{color:var(--red)}
+
+/* ── Buttons ── */
+.btn{padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{background:var(--border);text-decoration:none}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn-primary:hover{background:#5558e8}
+.btn-sm{padding:3px 10px;font-size:10px}
+.section-title{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;margin-top:24px}
+.section-title:first-child{margin-top:0}
+
+/* ── KPI Row ── */
+.kpi-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+.kpi-row:last-child{border-bottom:none}
+.kpi-label{flex:1;min-width:0}
+.kpi-value{font-weight:600;flex-shrink:0}
+.kpi-trend{font-size:10px;flex-shrink:0;min-width:50px;text-align:right}
+
+/* ── Role Badge ── */
+.role-badge{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600}
+.role-badge.cto{background:var(--accent);color:#fff}
+.role-badge.ceo{background:var(--cyan);color:#000}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- ─── Sidebar ─── -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Dynamically rendered by persona -->
+  </aside>
+
+  <!-- ─── Main Content ─── -->
+  <main class="main" id="main-content">
+    <!-- Filled by JS router -->
+  </main>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+// Flywheel Console — Multi-Persona SPA
+// ══════════════════════════════════════════════════════════
+
+const PERSONA = {
+  jiean: { id:'jiean', name:'杰安', role:'CTO', emoji:'⚙️', dot:'cto', color:'var(--accent)',
+    tagline:'技术框架 · 系统架构 · Agent管理',
+    nav:[
+      {section:'概览', items:[
+        {page:'dashboard', icon:'🖥️', label:'技术仪表盘'},
+      ]},
+      {section:'系统', items:[
+        {page:'systems', icon:'⚙️', label:'系统健康'},
+        {page:'apis', icon:'🔑', label:'API 凭证'},
+      ]},
+      {section:'Agent 群', items:[
+        {page:'cece', icon:'🧠', label:'策策'},
+        {page:'xixi', icon:'🔬', label:'析析'},
+        {page:'toutou', icon:'📤', label:'投投'},
+        {page:'jianjian', icon:'🎯', label:'荐荐'},
+        {page:'kongkong', icon:'💰', label:'控控'},
+      ]},
+      {section:'任务', items:[
+        {page:'workboard', icon:'📋', label:'任务看板', external:true, href:'/workboard'},
+      ]},
+    ],
+    metrics:[
+      {icon:'🔌', label:'API 层状态', value:'就绪'},
+      {icon:'🤖', label:'Agent 就绪', value:'5/5'},
+      {icon:'📊', label:'Workboard 任务', value:'—'},
+      {icon:'💻', label:'代码覆盖', value:'L1 100%'},
+    ],
+  },
+  heshan: { id:'heshan', name:'河山', role:'CEO', emoji:'💼', dot:'ceo', color:'var(--cyan)',
+    tagline:'项目方向 · 市场策略 · 商业变现',
+    nav:[
+      {section:'概览', items:[
+        {page:'dashboard', icon:'📈', label:'商业仪表盘'},
+      ]},
+      {section:'市场', items:[
+        {page:'market', icon:'🌍', label:'市场数据'},
+        {page:'competitors', icon:'👥', label:'竞品动态'},
+      ]},
+      {section:'财务', items:[
+        {page:'budget', icon:'💵', label:'预算总览'},
+        {page:'unit_econ', icon:'📐', label:'单位经济学'},
+      ]},
+      {section:'产品', items:[
+        {page:'pricing', icon:'🏷️', label:'定价策略'},
+        {page:'pipeline', icon:'🛤️', label:'产品路线图'},
+      ]},
+    ],
+    metrics:[
+      {icon:'👥', label:'用户获取', value:'Phase 0'},
+      {icon:'💵', label:'月预算', value:'待定'},
+      {icon:'📈', label:'收入预测', value:'Phase 3'},
+      {icon:'🎯', label:'市场份额', value:'待评估'},
+    ],
+  }
+};
+
+let currentPersona = 'jiean';
+let currentPage = 'dashboard';
+
+// ── AGENTS ──
+const AGENTS = [
+  { id:'cece', name:'策策', emoji:'🧠', role:'策略+内容官', model:'v4-flash', status:'idle', desc:'测试话题设计·内容生产·裂变机制' },
+  { id:'xixi', name:'析析', emoji:'🔬', role:'人格分析引擎', model:'v4-pro', status:'idle', desc:'人格画像·置信度·AI提示词生成', highlight:true },
+  { id:'toutou', name:'投投', emoji:'📤', role:'投放+分发官', model:'v4-flash', status:'idle', desc:'渠道选择·素材适配·出价优化·ROI' },
+  { id:'jianjian', name:'荐荐', emoji:'🎯', role:'分类+推荐官', model:'v4-flash', status:'idle', desc:'用户分群·产品匹配·推荐理由生成' },
+  { id:'kongkong', name:'控控', emoji:'💰', role:'财务官', model:'v4-flash', status:'idle', desc:'预算管控·单位经济学·异常熔断' },
+];
+
+const FLASK_URL = 'http://localhost:8899';
+
+const SYSTEMS = [
+  { name:'Canvas 托管', desc:'飞轮控制台 SPA', status:'ok', icon:'🖼️' },
+  { name:'心因引擎 Flask', desc:'人格测试 + 数据收集 + 广告管理', status:'ok', icon:'🧬', checkUrl:FLASK_URL+'/api/health' },
+  { name:'用户端 H5', desc:'人格测试页 /result 结果页', status:'ok', icon:'👤', link:FLASK_URL },
+  { name:'Workboard', desc:'Agent 任务调度', status:'ok', icon:'📋' },
+  { name:'L1 API层', desc:'巨量引擎 + 微信广告', status:'warn', icon:'🔌', note:'Phase 1' },
+  { name:'支付系统', desc:'Stripe/Paddle 集成', status:'warn', icon:'💳', note:'Phase 2' },
+];
+
+// ── Render Sidebar ──
+function renderSidebar() {
+  const p = PERSONA[currentPersona];
+  const sidebar = document.getElementById('sidebar');
+  sidebar.innerHTML = `
+    <div class="sidebar-logo">
+      <h1>🔄 飞轮控制台</h1>
+      <span>Flywheel Console v0.1</span>
+    </div>
+    <nav class="sidebar-nav">
+      ${p.nav.map(section => `
+        <div class="nav-section">${section.section}</div>
+        ${section.items.map(item => {
+          if (item.external) {
+            return `<a class="nav-item" href="${item.href}" target="_blank">
+              <span>${item.icon}</span> ${item.label}
+              <span class="badge ok" id="task-count">→</span>
+            </a>`;
+          }
+          return `<button class="nav-item" data-page="${item.page}">
+            <span>${item.icon}</span> ${item.label}
+          </button>`;
+        }).join('')}
+      `).join('')}
+    </nav>
+    <div class="sidebar-footer">
+      <span class="status-dot"></span> 运行中
+      <div class="names">
+        <span>杰安<small>(CTO)</small></span>
+        <span style="color:var(--muted)">·</span>
+        <span>河山<small>(CEO)</small></span>
+      </div>
+    </div>
+  `;
+
+  // Re-bind sidebar nav
+  sidebar.querySelectorAll('.nav-item[data-page]').forEach(el => {
+    el.addEventListener('click', function() {
+      const page = this.dataset.page;
+      navigate(currentPersona, page);
+    });
+  });
+}
+
+// ── Navigate ──
+function navigate(persona, page) {
+  currentPersona = persona;
+  currentPage = page;
+  renderSidebar();
+  document.querySelectorAll('.persona-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.p === persona);
+  });
+  
+  const main = document.getElementById('main-content');
+  const p = PERSONA[persona];
+
+  // Highlight active nav
+  setTimeout(() => {
+    document.querySelectorAll('.nav-item[data-page]').forEach(el => {
+      el.classList.toggle('active', el.dataset.page === page);
+    });
+  }, 0);
+
+  switch(page) {
+    case 'dashboard': renderDashboard(main, p); break;
+    case 'systems': renderSystems(main, p); break;
+    case 'apis': renderApis(main, p); break;
+    case 'cece': case 'xixi': case 'toutou': case 'jianjian': case 'kongkong':
+      renderAgentPlaceholder(main, AGENTS.find(a=>a.id===page), p); break;
+    case 'market': renderPlaceholder(main, p, '🌍', '市场数据', '赛道分析 · 用户趋势 · 渠道表现', 'Phase 2'); break;
+    case 'competitors': renderPlaceholder(main, p, '👥', '竞品动态', '竞品追踪 · 差异化分析', 'Phase 2'); break;
+    case 'budget': renderPlaceholder(main, p, '💵', '预算总览', '全渠道预算 · 费效比 · 现金流', 'Phase 2'); break;
+    case 'unit_econ': renderPlaceholder(main, p, '📐', '单位经济学', 'CAC · LTV · ROI · 回本周期', 'Phase 2'); break;
+    case 'pricing': renderPlaceholder(main, p, '🏷️', '定价策略', '免费/付费分层 · 价格测试', 'Phase 2'); break;
+    case 'pipeline': renderPlaceholder(main, p, '🛤️', '产品路线图', '功能排期 · 里程碑', 'Phase 1'); break;
+    default: renderDashboard(main, p);
+  }
+}
+
+// ── Dashboard (persona-aware) ──
+function renderDashboard(main, p) {
+  const isCTO = p.id === 'jiean';
+
+  if (isCTO) {
+    main.innerHTML = `
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-title">🖥️ 技术仪表盘</div>
+          <div class="persona-indicator"><span class="dot cto"></span> 杰安视角</div>
+        </div>
+        <div class="topbar-right">
+          <div class="persona-switcher">
+            <button class="persona-btn active" data-p="jiean">⚙️ 杰安</button>
+            <button class="persona-btn" data-p="heshan">💼 河山</button>
+          </div>
+          <span id="clock">--</span>
+        </div>
+      </div>
+      <div class="content">
+        <!-- Metrics -->
+        <div class="grid grid-4" style="margin-bottom:24px">
+          ${renderMetric(p.metrics[0])}${renderMetric(p.metrics[1])}${renderMetric(p.metrics[2])}${renderMetric(p.metrics[3])}
+        </div>
+
+        <!-- System Health -->
+        <div class="section-title">🟢 系统健康</div>
+        <div class="grid grid-3" style="margin-bottom:24px" id="systems-grid">
+          ${SYSTEMS.map((s,i) => `
+            <div class="health-card card" id="sys-${i}">
+              <div class="health-icon ${s.status}">${s.icon}</div>
+              <div class="health-info">
+                <div class="health-name">${s.link?`<a href="${s.link}" target="_blank">${s.name}</a>`:s.name}</div>
+                <div class="health-desc">${s.note||s.desc}</div>
+              </div>
+              <span class="health-badge ${s.status}" id="sys-badge-${i}">${s.status==='ok'?'正常':s.status==='warn'?'待建':'异常'}</span>
+            </div>
+          `).join('')}
+        </div>
+
+        <!-- Agents -->
+        <div class="section-title">🤖 Agent 群</div>
+        <div class="grid grid-5" style="margin-bottom:24px">
+          ${AGENTS.map(renderAgentCard).join('')}
+        </div>
+
+        <!-- Workboard -->
+        <div class="section-title">📋 最近任务 <a href="/workboard" target="_blank" style="font-size:11px;font-weight:400;margin-left:8px">→ 完整看板</a></div>
+        <div class="card" id="tasks-card"><div class="empty-state">⏳ 加载中...</div></div>
+      </div>
+    `;
+  } else {
+    // 河山视角 — Business Dashboard
+    main.innerHTML = `
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-title">📈 商业仪表盘</div>
+          <div class="persona-indicator"><span class="dot ceo"></span> 河山视角</div>
+        </div>
+        <div class="topbar-right">
+          <div class="persona-switcher">
+            <button class="persona-btn" data-p="jiean">⚙️ 杰安</button>
+            <button class="persona-btn active" data-p="heshan">💼 河山</button>
+          </div>
+          <span id="clock">--</span>
+        </div>
+      </div>
+      <div class="content">
+        <!-- Business KPIs -->
+        <div class="grid grid-4" style="margin-bottom:24px">
+          ${renderMetric(p.metrics[0])}${renderMetric(p.metrics[1])}${renderMetric(p.metrics[2])}${renderMetric(p.metrics[3])}
+        </div>
+
+        <!-- Strategy Overview -->
+        <div class="section-title">🎯 项目进展</div>
+        <div class="grid grid-2" style="margin-bottom:24px">
+          <div class="card">
+            <div style="font-weight:600;margin-bottom:12px">📐 Phase 进展</div>
+            <div class="kpi-row"><span class="kpi-label">Phase 0 · 入口验证</span><span class="kpi-value" style="color:var(--green)">进行中</span></div>
+            <div class="kpi-row"><span class="kpi-label">Phase 1 · 最小闭环</span><span class="kpi-value" style="color:var(--muted)">待启动</span></div>
+            <div class="kpi-row"><span class="kpi-label">Phase 2 · 投放自动化</span><span class="kpi-value" style="color:var(--muted)">待启动</span></div>
+            <div class="kpi-row"><span class="kpi-label">Phase 3 · 裂变自驱</span><span class="kpi-value" style="color:var(--muted)">待启动</span></div>
+          </div>
+          <div class="card">
+            <div style="font-weight:600;margin-bottom:12px">🎯 市场机会</div>
+            <div class="kpi-row"><span class="kpi-label">赛道</span><span class="kpi-value">AI+心理测试</span></div>
+            <div class="kpi-row"><span class="kpi-label">核心优势</span><span class="kpi-value" style="color:var(--green)">全自动化</span></div>
+            <div class="kpi-row"><span class="kpi-label">变现路径</span><span class="kpi-value">分析免费·推荐收费</span></div>
+            <div class="kpi-row"><span class="kpi-label">目标市场</span><span class="kpi-value">18-35岁社媒用户</span></div>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <div class="section-title">👥 团队</div>
+        <div class="card">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div>
+              <div style="font-weight:600;margin-bottom:8px"><span class="role-badge cto">CTO</span> 杰安</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.6">
+                技术框架 · 系统架构 · 5 Agent管理<br>
+                代码质量 · API对接 · 自动化流程
+              </div>
+            </div>
+            <div>
+              <div style="font-weight:600;margin-bottom:8px"><span class="role-badge ceo">CEO</span> 河山</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.6">
+                资金 · 项目方向 · 市场策略<br>
+                商业变现判断 · KPI审批
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Bind persona switcher
+  document.querySelectorAll('.persona-btn').forEach(btn => {
+    btn.addEventListener('click', () => navigate(btn.dataset.p, 'dashboard'));
+  });
+  
+  startClock();
+  if (isCTO) { loadWorkboardTasks(); checkSystemHealth(); }
+}
+
+function renderMetric(m) {
+  return `
+    <div class="card">
+      <div class="metric-head"><span class="metric-icon">${m.icon}</span></div>
+      <div class="metric-value">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      ${m.change?`<div class="metric-change ${m.change.includes('+')?'up':'down'}">${m.change}</div>`:''}
+    </div>
+  `;
+}
+
+function renderAgentCard(a) {
+  return `
+    <div class="agent-card" ${a.highlight?'style="border-color:var(--accent2);border-width:2px"':''}>
+      <div class="agent-emoji">${a.emoji}</div>
+      <div class="agent-name">${a.name}</div>
+      <div class="agent-role">${a.role}</div>
+      <div class="agent-status ${a.status}">${a.status==='online'?'运行中':'待命中'}</div>
+      <div class="agent-model">${a.model}</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">${a.desc}</div>
+    </div>
+  `;
+}
+
+// ── Pages ──
+function renderAgentPlaceholder(main, agent, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model}</span>
+      </div>
+      <div class="topbar-right">
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card" style="text-align:center;padding:80px 20px">
+        <div style="font-size:64px;margin-bottom:16px">${agent.emoji}</div>
+        <div style="font-size:18px;font-weight:600;margin-bottom:8px">${agent.name} 工作区</div>
+        <div style="color:var(--muted);font-size:13px;max-width:400px;margin:0 auto">${agent.desc}</div>
+        <div style="margin-top:24px;color:var(--muted);font-size:12px">
+          🚧 Phase 1 搭建 · Agent 将在此页面直接操作
+        </div>
+      </div>
+    </div>
+  `;
+  bindSwitcher();
+}
+
+function renderSystems(main, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left"><div class="topbar-title">⚙️ 系统管理</div></div>
+      <div class="topbar-right">
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="section-title">📦 已部署系统</div>
+      ${SYSTEMS.map(s => `
+        <div class="card" style="margin-bottom:12px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:24px">${s.icon}</span>
+            <div style="flex:1">
+              <div style="font-weight:600">${s.link?`<a href="${s.link}" target="_blank">${s.name} ↗</a>`:s.name}</div>
+              <div style="font-size:11px;color:var(--muted)">${s.desc} ${s.note?'· '+s.note:''}</div>
+            </div>
+            <span class="health-badge ${s.status}">${s.status==='ok'?'正常':s.status==='warn'?'待建':'异常'}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  bindSwitcher();
+}
+
+function renderApis(main, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left"><div class="topbar-title">🔑 API 凭证</div></div>
+      <div class="topbar-right">
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">平台 API 凭证</div><div class="card-subtitle">L1 原生API层</div></div>
+          <a href="/workboard" target="_blank" class="btn btn-primary btn-sm">→ 申请进度</a>
+        </div>
+        <table style="width:100%;font-size:12px;border-collapse:collapse">
+          <tr style="color:var(--muted);border-bottom:1px solid var(--border)">
+            <th style="text-align:left;padding:8px">平台</th><th style="text-align:left;padding:8px">状态</th><th style="text-align:left;padding:8px">备注</th>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:8px">巨量引擎</td><td style="padding:8px;color:var(--yellow)">⏳ 待申请</td><td style="padding:8px;font-size:11px;color:var(--muted)">需营业执照+广告账户</td>
+          </tr>
+          <tr>
+            <td style="padding:8px">微信广告</td><td style="padding:8px;color:var(--yellow)">⏳ 待申请</td><td style="padding:8px;font-size:11px;color:var(--muted)">需广告主账号+开发者认证</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  `;
+  bindSwitcher();
+}
+
+function renderPlaceholder(main, p, emoji, title, desc, phase) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left"><div class="topbar-title">${emoji} ${title}</div></div>
+      <div class="topbar-right">
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card" style="text-align:center;padding:80px 20px">
+        <div style="font-size:64px;margin-bottom:16px">${emoji}</div>
+        <div style="font-size:18px;font-weight:600;margin-bottom:8px">${title}</div>
+        <div style="color:var(--muted);font-size:13px;max-width:400px;margin:0 auto">${desc}</div>
+        <div style="margin-top:24px;color:var(--muted);font-size:12px">🚧 将在 ${phase} 搭建</div>
+      </div>
+    </div>
+  `;
+  bindSwitcher();
+}
+
+function bindSwitcher() {
+  document.querySelectorAll('.persona-btn').forEach(btn => {
+    btn.addEventListener('click', () => navigate(btn.dataset.p, currentPage));
+  });
+}
+
+// ── Flask Health Check ──
+async function checkSystemHealth() {
+  // Check Flask engine health
+  for (let i = 0; i < SYSTEMS.length; i++) {
+    const s = SYSTEMS[i];
+    if (!s.checkUrl) continue;
+    try {
+      const resp = await fetch(s.checkUrl);
+      if (resp.ok) {
+        const data = await resp.json();
+        s.status = 'ok';
+        s.liveData = data;
+        const badge = document.getElementById('sys-badge-'+i);
+        const icon = document.querySelector('#sys-'+i+' .health-icon');
+        if (badge) { badge.className = 'health-badge ok'; badge.textContent = '正常'; }
+        if (icon) { icon.className = 'health-icon ok'; }
+      }
+    } catch(e) {
+      s.status = 'err';
+      const badge = document.getElementById('sys-badge-'+i);
+      const icon = document.querySelector('#sys-'+i+' .health-icon');
+      if (badge) { badge.className = 'health-badge err'; badge.textContent = '离线'; }
+      if (icon) { icon.className = 'health-icon err'; }
+    }
+  }
+  // Update metrics with live data
+  await updateLiveMetrics();
+}
+
+async function updateLiveMetrics() {
+  try {
+    const resp = await fetch(FLASK_URL+'/api/stats');
+    if (!resp.ok) return;
+    const data = await resp.json();
+    // Update workboard task count if metric exists
+    const taskEl = document.getElementById('metric-task-count');
+    if (taskEl && data.total_results) {
+      taskEl.textContent = data.total_results;
+    }
+    // Update user count
+    const userEl = document.getElementById('metric-user-count');
+    if (userEl && data.total_users) {
+      userEl.textContent = data.total_users;
+    }
+  } catch(e) { /* Flask not reachable */ }
+}
+
+// ── Workboard API ──
+async function loadWorkboardTasks() {
+  const card = document.getElementById('tasks-card');
+  if (!card) return;
+  try {
+    const resp = await fetch(`http://127.0.0.1:18789/api/workboard/cards?status=todo&limit=8`);
+    if (!resp.ok) throw new Error('API unavailable');
+    const data = await resp.json();
+    const tasks = data.cards || [];
+    if (tasks.length === 0) { card.innerHTML = '<div class="empty-state">✨ 没有待办任务</div>'; return; }
+    card.innerHTML = tasks.slice(0,8).map(t => `
+      <div class="task-row">
+        <span class="task-status ${t.status}"></span>
+        <span class="task-title">${esc(t.title)}</span>
+        <span class="task-board">${esc(t.board||'default')}</span>
+        <span class="task-priority ${t.priority}">${t.priority||'normal'}</span>
+      </div>
+    `).join('');
+  } catch(e) {
+    card.innerHTML = '<div class="empty-state">⚠️ Workboard API 未连接<br><span style="font-size:11px">在 Control UI → Workboard 查看</span></div>';
+  }
+}
+
+// ── Utils ──
+function startClock() {
+  const el = document.getElementById('clock');
+  if (!el) return;
+  const tick = () => { el.textContent = new Date().toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false}); };
+  tick(); setInterval(tick,1000);
+}
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+// ── Init ──
+renderSidebar();
+navigate('jiean', 'dashboard');
+</script>
+</body>
+</html>

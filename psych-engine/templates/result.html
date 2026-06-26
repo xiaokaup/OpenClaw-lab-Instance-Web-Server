@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>心因引擎 · 你的认知操作系统</title>
+<meta name="description" content="来看看我的AI人格画像！8维度认知操作系统分析">
+<meta property="og:title" content="心因引擎 · 我的认知操作系统">
+<meta property="og:description" content="来看看我的AI人格画像！8维度深度分析">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#0a0a14;--card:#13132b;--bdr:#252545;--tx:#eaeaf5;--mt:#8888aa;--ac:#7c5cfc;--ac2:#a78bfa;--pink:#f472b6;--cyan:#22d3ee;--gr:#4ade80;--yl:#fbbf24;--or:#fb923c;--rd:#f87171}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;min-height:100vh;display:flex;justify-content:center}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 30% at 50% 0%,#7c5cfc10,transparent),radial-gradient(ellipse 50% 30% at 50% 100%,#f472b608,transparent);pointer-events:none}
+.wrap{width:100%;max-width:480px;padding:16px 16px 40px;position:relative;z-index:1}
+
+/* Shareable Card */
+.share-card{background:linear-gradient(170deg,#13132b 0%,#1a1040 50%,#0f0f2a 100%);border:1px solid #7c5cfc30;border-radius:20px;padding:24px 20px;text-align:center;margin-bottom:16px;position:relative;overflow:hidden;box-shadow:0 8px 32px #7c5cfc12}
+.share-card::before{content:'';position:absolute;top:-60px;right:-60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,#7c5cfc15,transparent 70%);pointer-events:none}
+.share-card .card-badge{display:inline-block;font-size:11px;padding:4px 12px;border-radius:12px;background:#7c5cfc18;color:var(--ac2);border:1px solid #7c5cfc25;margin-bottom:12px}
+.share-card .card-name{font-size:18px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.share-card .card-date{font-size:10px;color:var(--mt);margin-bottom:14px}
+.share-card .card-emoji{font-size:44px;margin-bottom:10px}
+
+/* Bar chart in card */
+.card-bars{padding:0 4px;margin-bottom:12px}
+.card-bar{display:flex;align-items:center;gap:6px;margin-bottom:5px}
+.card-bar .b-icon{width:20px;text-align:center;font-size:12px;flex-shrink:0}
+.card-bar .b-label{width:48px;font-size:9px;color:var(--mt);text-align:right;flex-shrink:0}
+.card-bar .b-track{flex:1;height:5px;background:var(--bdr);border-radius:3px;overflow:hidden}
+.card-bar .b-fill{height:100%;border-radius:3px}
+.card-bar .b-val{width:22px;font-size:9px;font-weight:600;text-align:right;flex-shrink:0}
+
+.card-tagline{font-size:12px;color:var(--ac2);font-weight:600;margin-top:8px;line-height:1.6}
+.card-footer{font-size:9px;color:var(--mt);margin-top:10px;opacity:.6}
+
+/* Share buttons */
+.share-btns{display:flex;gap:8px;margin-bottom:20px}
+.share-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;padding:10px 8px;border-radius:10px;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:all .15s;color:#fff}
+.share-btn:active{transform:scale(.96)}
+.share-btn.wechat{background:#07c160}
+.share-btn.copy{background:var(--card);border:1px solid var(--bdr);color:var(--tx)}
+.share-btn.save{background:linear-gradient(135deg,var(--ac),#6d28d9)}
+
+/* Insight cards */
+.c{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:18px 16px;margin-bottom:12px}
+.c h2{font-size:13px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.os-box{background:var(--bg);border-radius:8px;padding:14px;font-size:13px;line-height:1.8;color:#d1d5db}
+.os-box strong{color:var(--tx)}
+.insight-row{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--bdr);font-size:12px;line-height:1.7}
+.insight-row:last-child{border-bottom:none}
+.insight-row .i-icon{font-size:18px;flex-shrink:0;width:26px;text-align:center;padding-top:2px}
+
+/* Tip */
+.tip-banner{background:#7c5cfc08;border:1px solid #7c5cfc20;border-radius:10px;padding:12px 14px;font-size:11px;color:var(--mt);text-align:center;margin-bottom:12px;line-height:1.7}
+.tip-banner strong{color:var(--ac2)}
+
+/* Footer */
+.ft{text-align:center;padding:16px;font-size:10px;color:var(--mt)}.ft a{color:var(--ac2)}
+
+/* Toast */
+.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:8px;font-size:12px;font-weight:600;z-index:999;background:var(--gr);color:#000;animation:toastIn .3s,toastOut .3s 2.2s forwards}
+@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes toastOut{from{opacity:1}to{opacity:0;transform:translateX(-50%) translateY(-10px)}}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ SHAREABLE CARD ============ -->
+  <div class="share-card" id="shareCard">
+    <div class="card-badge">🧬 AI 人格画像</div>
+    <div class="card-emoji" id="cardEmoji">🧠</div>
+    <div class="card-name" id="cardName">你的认知操作系统</div>
+    <div class="card-date" id="cardDate"></div>
+    <div class="card-bars">
+      {% for d in dim_order %}
+      {% set dd = dim_data[d] %}
+      <div class="card-bar">
+        <span class="b-icon">{{ dd.icon }}</span>
+        <span class="b-label">{{ dd.label }}</span>
+        <div class="b-track"><div class="b-fill" style="width:{{ dd.pct }}%;background:{{ dd.color }}"></div></div>
+        <span class="b-val" style="color:{{ dd.color }}">{{ dd.pct }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="card-tagline" id="cardTagline">你的认知操作系统已生成</div>
+    <div class="card-footer">心因引擎 Psych-Engine · 扫码来测</div>
+  </div>
+
+  <!-- Share buttons -->
+  <div class="share-btns">
+    <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
+    <button class="share-btn save" onclick="saveCard()">📸 保存卡片</button>
+  </div>
+
+  <!-- ============ DETAILS ============ -->
+  <div class="c">
+    <h2>🧠 认知操作系统</h2>
+    <div class="os-box">
+      {{ profile.cognitive_os }}
+      <div style="margin-top:12px;font-size:10px;color:var(--mt);line-height:1.6">
+        最强维度：{% for d in profile.top_dims %}<strong style="color:var(--ac2)">{{ dims_meta[d].name }}</strong>{% if not loop.last %} · {% endif %}{% endfor %}
+        &nbsp;|&nbsp;
+        成长空间：{% for d in profile.low_dims %}{{ dims_meta[d].name }}{% if not loop.last %} · {% endif %}{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="c">
+    <h2>💡 核心洞察</h2>
+    <div class="insight-row"><span class="i-icon">⚡</span><span><strong>核心优势</strong><br>{{ profile.strength }}</span></div>
+    <div class="insight-row"><span class="i-icon">🔍</span><span><strong>成长空间</strong><br>{{ profile.blindspot }}</span></div>
+  </div>
+
+  <div class="tip-banner">
+    💬 <strong>分享你的画像给朋友</strong>，看看你们的认知操作系统有什么不同！<br>点击上方按钮复制链接或保存卡片图片
+  </div>
+
+  <div class="ft"><a href="/">← 重新测试</a> · 心因引擎 Psych-Engine</div>
+</div>
+
+<script>
+const scores = {{ scores|tojson }};
+const dimsMeta = {{ dims_meta|tojson }};
+const dimOrder = {{ dim_order|tojson }};
+const nickname = {{ (session.get('nickname','') or '')|tojson }};
+
+// ============ INIT ============
+document.getElementById('cardDate').textContent = new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric'});
+
+if (nickname) {
+  document.getElementById('cardName').textContent = nickname + ' · 认知操作系统';
+}
+
+// Tagline from top dims
+const top2 = {{ profile.top_dims|tojson }};
+const topNames = top2.map(d => dimsMeta[d].name).join(' + ');
+document.getElementById('cardTagline').textContent = '主导维度：' + topNames;
+
+// Emoji based on top dim
+const emojiMap = {
+  IM: '🧬', DA: '⚙️', AS: '🎯', ME: '🚀',
+  ST: '🌐', CB: '💻', FM: '🔄', TB: '🔗'
+};
+document.getElementById('cardEmoji').textContent = emojiMap[top2[0]] || '🧠';
+
+// ============ COPY LINK ============
+function copyLink() {
+  const url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => showToast('✅ 链接已复制，发送给朋友吧！'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = url; ta.style.position='fixed';ta.opacity=0;
+    document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    showToast('✅ 链接已复制');
+  }
+}
+
+// ============ SAVE CARD AS IMAGE ============
+async function saveCard() {
+  const btn = event.target;
+  btn.textContent = '⏳ 生成中…';
+  btn.disabled = true;
+
+  // Simple approach: use canvas to render a share image
+  try {
+    const card = document.getElementById('shareCard');
+    // Create a clean clone for capture
+    const clone = card.cloneNode(true);
+    clone.style.position = 'fixed';
+    clone.style.top = '-9999px';
+    clone.style.left = '0';
+    clone.style.width = '420px';
+    clone.style.transform = 'none';
+    document.body.appendChild(clone);
+
+    // Use html2canvas approach — but to avoid dependency, we generate a simple share image via canvas
+    // For now, we use a simpler approach: just download the card as a text-based image
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const scale = 2;
+    canvas.width = 420 * scale;
+    canvas.height = 600 * scale;
+    ctx.scale(scale, scale);
+
+    // Background
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, 600);
+    bgGrad.addColorStop(0, '#13132b');
+    bgGrad.addColorStop(0.5, '#1a1040');
+    bgGrad.addColorStop(1, '#0f0f2a');
+    ctx.fillStyle = bgGrad;
+    ctx.beginPath();ctx.roundRect(0, 0, 420, 600, 20);ctx.fill();
+
+    // Border
+    ctx.strokeStyle = '#7c5cfc30';
+    ctx.lineWidth = 1;
+    ctx.beginPath();ctx.roundRect(2, 2, 416, 596, 18);ctx.stroke();
+
+    // Badge
+    ctx.fillStyle = '#7c5cfc18';
+    ctx.beginPath();ctx.roundRect(140, 24, 140, 24, 12);ctx.fill();
+    ctx.fillStyle = '#a78bfa';
+    ctx.font = '11px -apple-system,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('🧬 AI 人格画像', 210, 41);
+
+    // Emoji
+    ctx.font = '48px -apple-system,sans-serif';
+    ctx.fillText(document.getElementById('cardEmoji').textContent, 210, 100);
+
+    // Name
+    ctx.fillStyle = '#eaeaf5';
+    ctx.font = 'bold 18px -apple-system,"PingFang SC",sans-serif';
+    ctx.fillText(document.getElementById('cardName').textContent, 210, 136);
+
+    // Date
+    ctx.fillStyle = '#8888aa';
+    ctx.font = '10px -apple-system,sans-serif';
+    ctx.fillText(document.getElementById('cardDate').textContent, 210, 154);
+
+    // Bars
+    let y = 175;
+    dimOrder.forEach(d => {
+      const dd = {{ dim_data|tojson }}[d];
+      const pct = dd.pct;
+      // Icon + label
+      ctx.fillStyle = '#8888aa';
+      ctx.font = '9px -apple-system,sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText(dd.label, 100, y + 12);
+      ctx.textAlign = 'left';
+      ctx.font = '12px -apple-system,sans-serif';
+      ctx.fillText(dd.icon, 108, y + 12);
+      // Track
+      ctx.fillStyle = '#252545';
+      ctx.beginPath();ctx.roundRect(130, y + 6, 210, 5, 3);ctx.fill();
+      // Fill
+      ctx.fillStyle = dd.color;
+      ctx.beginPath();ctx.roundRect(130, y + 6, 210 * pct / 100, 5, 3);ctx.fill();
+      // Value
+      ctx.fillStyle = dd.color;
+      ctx.font = 'bold 9px -apple-system,sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText(pct + '', 346, y + 12);
+      y += 22;
+    });
+
+    // Tagline
+    ctx.fillStyle = '#a78bfa';
+    ctx.font = 'bold 12px -apple-system,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(document.getElementById('cardTagline').textContent, 210, y + 20);
+
+    // Footer
+    ctx.fillStyle = '#8888aa';
+    ctx.font = '9px -apple-system,sans-serif';
+    ctx.fillText('心因引擎 Psych-Engine · 扫码来测', 210, y + 42);
+
+    // QR placeholder
+    ctx.fillStyle = '#252545';
+    ctx.beginPath();ctx.roundRect(160, y + 56, 100, 100, 8);ctx.fill();
+    ctx.fillStyle = '#8888aa';
+    ctx.font = '10px -apple-system,sans-serif';
+    ctx.fillText('扫码来测 →', 210, y + 110);
+
+    document.body.removeChild(clone);
+
+    // Download
+    const link = document.createElement('a');
+    link.download = '心因引擎-人格画像.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    showToast('📸 卡片已保存！分享到朋友圈吧');
+  } catch(e) {
+    showToast('生成失败，请截图保存');
+  }
+
+  btn.textContent = '📸 保存卡片';
+  btn.disabled = false;
+}
+
+// ============ TOAST ============
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.className = 'toast'; t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2600);
+}
+</script>
+</body>
+</html>

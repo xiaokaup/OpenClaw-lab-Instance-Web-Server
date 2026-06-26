@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心因引擎 · 广告投放管理</title>
+<style>
+:root{--bg:#0f1117;--card:#1a1d27;--bdr:#2a2d3a;--tx:#e4e6eb;--mt:#8b8fa3;--ac:#6366f1;--gr:#22c55e;--yl:#eab308;--rd:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;padding:20px}
+.wrap{max-width:800px;margin:0 auto}
+h1{font-size:22px;background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:8px;padding:16px}
+.card h3{font-size:13px;margin-bottom:10px;color:var(--ac)}
+.stat{font-size:28px;font-weight:700;margin:4px 0}.stat-sub{font-size:11px;color:var(--mt)}
+.platform-card{background:var(--card);border:1px solid var(--bdr);border-radius:8px;padding:16px;margin-bottom:12px}
+.platform-card h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.platform-card h3 .icon{font-size:20px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.metric{text-align:center;background:var(--bg);padding:10px 6px;border-radius:6px}
+.metric .val{font-size:16px;font-weight:700}.metric .lbl{font-size:9px;color:var(--mt);margin-top:2px}
+.roi-badge{display:inline-block;padding:3px 8px;border-radius:4px;font-weight:700;font-size:12px}
+.roi-badge.good{background:#22c55e20;color:var(--gr)}.roi-badge.ok{background:#eab30820;color:var(--yl)}.roi-badge.bad{background:#ef444420;color:var(--rd)}
+.controls{display:flex;gap:8px;margin-top:10px}
+.controls input{background:var(--bg);border:1px solid var(--bdr);border-radius:5px;padding:6px 10px;color:var(--tx);font-size:11px;width:80px}
+.btn{padding:6px 14px;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;border:none}
+.btn-ac{background:var(--ac);color:#fff}.btn-gr{background:var(--gr);color:#fff}.btn-rd{background:var(--rd);color:#fff}
+.btn:hover{opacity:.9}
+.form-row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin-bottom:16px;padding:12px;background:var(--card);border-radius:8px;border:1px solid var(--bdr)}
+.form-row label{font-size:10px;color:var(--mt);display:block;margin-bottom:2px}
+.form-row select,.form-row input{background:var(--bg);border:1px solid var(--bdr);border-radius:5px;padding:6px 10px;color:var(--tx);font-size:12px}
+.toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:6px;font-size:12px;font-weight:600;z-index:99}
+.toast.ok{background:#22c55e;color:#fff;animation:to 2s forwards}.toast.er{background:#ef4444;color:#fff;animation:to 2s forwards}
+@keyframes to{0%,70%{opacity:1}100%{opacity:0}}
+.ft{text-align:center;padding:16px;font-size:10px;color:var(--mt)}
+.ft a{color:var(--ac)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📡 心因引擎 · 广告投放管理</h1>
+
+  <!-- 总览 -->
+  <div class="row" id="overview"></div>
+
+  <!-- 新建投放 -->
+  <div class="form-row">
+    <div><label>渠道</label><select id="ch"><option value="douyin">抖音</option><option value="bilibili">B站</option><option value="xiaohongshu">小红书</option></select></div>
+    <div><label>名称</label><input id="nm" value="心理测试投放" style="width:160px"></div>
+    <div><label>日预算(¥)</label><input id="bg" type="number" value="200" style="width:80px"></div>
+    <div><label>标题</label><input id="tt" value="测测你的认知操作系统" style="width:200px"></div>
+    <button class="btn btn-gr" onclick="launch()" style="align-self:flex-end">🚀 启动投放</button>
+  </div>
+
+  <!-- 平台卡片 -->
+  <div id="platforms"></div>
+
+  <div class="ft"><a href="/">← 回到测试</a> · <a href="javascript:refresh()">刷新数据</a></div>
+</div>
+
+<script>
+const ICONS={douyin:'🎵',bilibili:'📺',xiaohongshu:'📕'};
+const NAMES={douyin:'抖音·巨量引擎',bilibili:'B站·哔哩哔哩',xiaohongshu:'小红书·聚光'};
+
+async function refresh(){
+  const[st,rp]=await Promise.all([
+    fetch('/api/ads/status').then(r=>r.json()),
+    fetch('/api/ads/reports').then(r=>r.json())
+  ]);
+  render(st,rp);
+}
+
+function render(st,rp){
+  // Overview
+  document.getElementById('overview').innerHTML=`
+    <div class="card"><h3>📊 总日预算</h3><div class="stat">¥${st.total_budget_daily||0}</div><div class="stat-sub">${st.active_platforms?.length||0} 个平台活跃</div></div>
+    <div class="card"><h3>📈 投放组数</h3><div class="stat">${Object.values(st.channels||{}).reduce((s,c)=>s+c.count,0)}</div><div class="stat-sub">${Object.keys(st.channels||{}).length} 个渠道</div></div>
+    <div class="card"><h3>🔄 模式</h3><div class="stat" style="font-size:18px">${st.demo_mode?'Demo':'Live'}</div><div class="stat-sub">${st.demo_mode?'模拟数据':'真实投放'}</div></div>
+  `;
+
+  // Platform cards
+  const reportsByPlatform={};
+  (rp||[]).forEach(r=>{if(!reportsByPlatform[r.platform])reportsByPlatform[r.platform]=[];reportsByPlatform[r.platform].push(r)});
+
+  document.getElementById('platforms').innerHTML=['douyin','bilibili','xiaohongshu'].map(ch=>{
+    const reports=reportsByPlatform[Object.keys(ICONS).find(k=>NAMES[k]?.includes?.(ch==='douyin'?'抖音':ch==='bilibili'?'B站':'小红书'))]||[];
+    // find by channel name
+    const matchingReports=(rp||[]).filter(r=>{
+      if(ch==='douyin')return r.platform.includes('抖音');
+      if(ch==='bilibili')return r.platform.includes('B站');
+      return r.platform.includes('小红书');
+    });
+    const chData=st.channels?.[ch]||{budget:0,count:0};
+
+    if(matchingReports.length===0){
+      return `<div class="platform-card"><h3><span class="icon">${ICONS[ch]}</span>${NAMES[ch]} <span style="color:var(--mt);font-weight:400;font-size:11px">未投放</span></h3>
+        <div style="font-size:11px;color:var(--mt)">点击上方「启动投放」开始</div></div>`;
+    }
+
+    const r=matchingReports[0];
+    const roiClass=r.roi>=2?'good':r.roi>=1?'ok':'bad';
+    return `<div class="platform-card">
+      <h3><span class="icon">${ICONS[ch]}</span>${NAMES[ch]} <span class="roi-badge ${roiClass}">ROI ${r.roi.toFixed(2)}x</span></h3>
+      <div class="metrics">
+        <div class="metric"><div class="val">${r.impressions.toLocaleString()}</div><div class="lbl">曝光</div></div>
+        <div class="metric"><div class="val">${r.clicks.toLocaleString()}</div><div class="lbl">点击</div></div>
+        <div class="metric"><div class="val">${r.conversions.toLocaleString()}</div><div class="lbl">转化</div></div>
+        <div class="metric"><div class="val">¥${r.spend.toFixed(0)}</div><div class="lbl">花费</div></div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="val">${r.ctr.toFixed(1)}%</div><div class="lbl">CTR</div></div>
+        <div class="metric"><div class="val">${r.cvr.toFixed(1)}%</div><div class="lbl">CVR</div></div>
+        <div class="metric"><div class="val">¥${r.cpc.toFixed(1)}</div><div class="lbl">CPC</div></div>
+        <div class="metric"><div class="val">¥${r.cpa.toFixed(0)}</div><div class="lbl">CPA</div></div>
+      </div>
+      <div class="controls">
+        <span style="font-size:11px;color:var(--mt)">日预算 ¥</span>
+        <input type="number" id="bg_${ch}" value="${chData.budget||0}">
+        <button class="btn btn-ac" onclick="updateBudget('${ch}')">调整</button>
+        <button class="btn btn-rd" onclick="pauseChannel('${ch}')">⏸ 暂停</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function launch(){
+  const ch=document.getElementById('ch').value;
+  const resp=await fetch('/api/ads/launch',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+    channel:ch,name:document.getElementById('nm').value,
+    budget:parseFloat(document.getElementById('bg').value),
+    creative:{title:document.getElementById('tt').value,description:'心因引擎AI人格测试',cta:'立即测试',landing_url:'http://localhost:8899/'}
+  })});
+  const d=await resp.json();
+  if(d.success){toast('✅ 投放已启动','ok');refresh()}
+  else toast('❌ '+d.error,'er');
+}
+
+async function updateBudget(ch){
+  const el=document.getElementById('bg_'+ch);
+  const budget=parseFloat(el.value)||0;
+  await fetch('/api/ads/rebalance',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({allocation:{[ch]:budget}})});
+  toast('✅ 预算已更新','ok');refresh();
+}
+
+async function pauseChannel(ch){
+  await fetch('/api/ads/rebalance',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({allocation:{[ch]:0}})});
+  toast('⏸ 已暂停','ok');refresh();
+}
+
+function toast(m,c){const e=document.createElement('div');e.className='toast '+c;e.textContent=m;document.body.appendChild(e);setTimeout(()=>e.remove(),2000);}
+
+refresh();
+</script>
+</body>
+</html>

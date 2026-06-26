@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>心因引擎 · AI人格测试</title>
+<meta name="description" content="16道题揭示你的认知操作系统——从AI的视角理解你">
+<meta property="og:title" content="心因引擎 · AI人格深度测试">
+<meta property="og:description" content="16道题揭示你的认知操作系统——从AI的视角理解你">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#0a0a14;--card:#13132b;--bdr:#252545;--tx:#eaeaf5;--mt:#8888aa;--ac:#7c5cfc;--ac2:#a78bfa;--pink:#f472b6;--cyan:#22d3ee;--gr:#4ade80}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;min-height:100vh;overflow-x:hidden;display:flex;justify-content:center}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -20%,#7c5cfc10,transparent),radial-gradient(ellipse 60% 40% at 80% 80%,#f472b608,transparent);pointer-events:none}
+.container{width:100%;max-width:480px;padding:20px 16px 60px;position:relative;z-index:1}
+
+/* Intro Screen */
+.intro-screen{text-align:center;padding-top:60px;animation:fadeUp .6s}
+.intro-screen .logo{font-size:56px;margin-bottom:8px;animation:float 3s ease-in-out infinite}
+.intro-screen h1{font-size:26px;font-weight:800;margin-bottom:6px;background:linear-gradient(135deg,#c4b5fd,#7c5cfc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.intro-screen .tagline{font-size:13px;color:var(--mt);margin-bottom:24px;line-height:1.6}
+.intro-screen .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.intro-screen .tag{font-size:11px;padding:5px 12px;border-radius:20px;background:var(--card);border:1px solid var(--bdr);color:var(--mt)}
+.intro-screen .tag.hl{border-color:var(--ac);color:var(--ac2);background:#7c5cfc10}
+
+.nick-input-wrap{margin-bottom:20px;text-align:left}
+.nick-input-wrap label{font-size:12px;color:var(--mt);display:block;margin-bottom:8px}
+.nick-input-wrap input{width:100%;padding:12px 16px;border-radius:10px;border:1px solid var(--bdr);background:var(--card);color:var(--tx);font-size:15px;outline:none;transition:border-color .2s}
+.nick-input-wrap input:focus{border-color:var(--ac)}
+.nick-input-wrap input::placeholder{color:#555}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--ac),#6d28d9);color:#fff;box-shadow:0 4px 20px #7c5cfc30}
+.btn-primary:active{transform:scale(.97);opacity:.9}
+.btn-secondary{background:var(--card);color:var(--mt);border:1px solid var(--bdr)}
+
+/* Question area */
+.quiz-wrap{display:none}
+.quiz-wrap.show{display:block;animation:fadeUp .3s}
+
+.progress-wrap{margin-bottom:24px}
+.progress-info{display:flex;justify-content:space-between;font-size:11px;color:var(--mt);margin-bottom:6px}
+.progress-track{height:5px;background:var(--bdr);border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--ac),var(--pink));border-radius:3px;transition:width .4s}
+.progress-dots{display:flex;gap:4px;margin-top:8px}
+.progress-dot{flex:1;height:3px;border-radius:2px;background:var(--bdr);transition:background .3s}
+.progress-dot.done{background:var(--ac)}
+.progress-dot.current{background:var(--ac2);box-shadow:0 0 8px #7c5cfc60}
+
+.question-card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:24px 20px;margin-bottom:16px;animation:fadeUp .35s}
+.dim-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--ac2);margin-bottom:12px;background:#7c5cfc10;padding:4px 10px;border-radius:12px}
+.question-text{font-size:17px;font-weight:600;line-height:1.5;margin-bottom:20px}
+.options{display:flex;flex-direction:column;gap:10px}
+.option-btn{background:var(--bg);border:2px solid var(--bdr);border-radius:12px;padding:14px 16px;text-align:left;font-size:14px;color:var(--tx);cursor:pointer;transition:all .15s;display:flex;align-items:flex-start;gap:10px;line-height:1.5;position:relative}
+.option-btn:active{transform:scale(.98)}
+.option-btn.selected{border-color:var(--ac);background:#7c5cfc12;box-shadow:0 0 0 2px #7c5cfc20}
+.option-btn .opt-letter{width:26px;height:26px;border-radius:8px;background:var(--bdr);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--mt);flex-shrink:0;transition:all .15s}
+.option-btn.selected .opt-letter{background:var(--ac);color:#fff}
+
+.nav-btns{display:flex;gap:10px;margin-top:8px}
+.nav-btns .btn{flex:1}
+.nav-btns .btn:only-child{flex:none;width:100%}
+
+/* Loading */
+.loading-screen{display:none;text-align:center;padding-top:80px}
+.loading-screen.show{display:block;animation:fadeUp .3s}
+.loading-screen .orb{width:60px;height:60px;border-radius:50%;margin:0 auto 20px;background:linear-gradient(135deg,var(--ac),var(--pink),var(--cyan));animation:orbSpin 2s linear infinite;filter:blur(1px)}
+@keyframes orbSpin{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.1)}100%{transform:rotate(360deg) scale(1)}}
+.loading-screen .loading-text{font-size:14px;color:var(--mt)}
+.loading-screen .loading-sub{font-size:11px;color:var(--mt);margin-top:6px;opacity:.6}
+
+.error{background:#ef444410;border:1px solid #ef444430;color:#f87171;padding:12px 16px;border-radius:10px;font-size:13px;text-align:center;margin-bottom:16px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+</style>
+</head>
+<body>
+<div class="container">
+  {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+  <!-- ============ INTRO SCREEN ============ -->
+  <div class="intro-screen" id="introScreen">
+    <div class="logo">🧬</div>
+    <h1>{{ title }}</h1>
+    <div class="tagline">{{ subtitle }}</div>
+    <div class="tags">
+      <span class="tag hl">⚡ 3分钟</span>
+      <span class="tag">🤖 AI分析</span>
+      <span class="tag">📊 8维度</span>
+      <span class="tag">🎯 个性化</span>
+    </div>
+    <div class="nick-input-wrap">
+      <label>怎么称呼你？（选填，用于生成专属报告）</label>
+      <input type="text" id="nickname" placeholder="输入你的昵称…" maxlength="20">
+    </div>
+    <button class="btn btn-primary" onclick="startTest()" style="width:100%;font-size:16px;padding:16px">✨ 开始测试</button>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="quiz-wrap" id="quizWrap">
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span id="progressLabel">第 1/{{ questions|length }} 题</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+      <div class="progress-dots" id="progressDots">
+        {% for q in questions %}
+        <div class="progress-dot" id="dot{{ loop.index0 }}"></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="questionArea"></div>
+
+    <div class="nav-btns" id="navBtns">
+      <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()">← 上一题</button>
+      <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">下一题 →</button>
+    </div>
+  </div>
+
+  <!-- ============ LOADING ============ -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="orb"></div>
+    <div class="loading-text">AI 正在分析你的人格画像…</div>
+    <div class="loading-sub">计算8个维度 · 生成专属报告</div>
+  </div>
+</div>
+
+<script>
+// ============ DATA ============
+const questions = {{ questions|tojson }};
+const dimsMeta = {{ dims|tojson }};
+const total = questions.length;
+let currentIdx = 0;
+let answers = new Array(total).fill(-1);
+let nickname = '';
+
+// ============ START ============
+function startTest() {
+  nickname = document.getElementById('nickname').value.trim();
+  document.getElementById('introScreen').style.display = 'none';
+  document.getElementById('quizWrap').classList.add('show');
+  renderQuestion(0);
+  updateDots(0);
+}
+
+// ============ RENDER QUESTION ============
+function renderQuestion(idx) {
+  currentIdx = idx;
+  const q = questions[idx];
+  const dim = dimsMeta[q.dim];
+
+  const answered = answers.filter(a => a >= 0).length;
+  const pct = Math.round(answered / total * 100);
+  document.getElementById('progressLabel').textContent = `第 ${idx + 1}/${total} 题`;
+  document.getElementById('progressPct').textContent = pct + '%';
+  document.getElementById('progressFill').style.width = pct + '%';
+
+  let html = `<div class="question-card">`;
+  html += `<div class="dim-badge">${dim.icon} ${dim.name}</div>`;
+  html += `<div class="question-text">${q.text}</div>`;
+  html += `<div class="options">`;
+  const letters = ['A','B','C','D'];
+  q.options.forEach((opt, oi) => {
+    const sel = answers[idx] === oi ? ' selected' : '';
+    html += `<button class="option-btn${sel}" onclick="selectOption(${idx},${oi})">`;
+    html += `<span class="opt-letter">${letters[oi]}</span>`;
+    html += `<span>${opt.text}</span>`;
+    html += `</button>`;
+  });
+  html += `</div></div>`;
+  document.getElementById('questionArea').innerHTML = html;
+
+  document.getElementById('prevBtn').style.display = idx === 0 ? 'none' : '';
+  const nextBtn = document.getElementById('nextBtn');
+  if (idx === total - 1) {
+    nextBtn.textContent = answers.filter(a => a >= 0).length === total ? '✨ 查看结果' : '请完成所有题目';
+    nextBtn.disabled = answers.filter(a => a >= 0).length !== total;
+    nextBtn.onclick = answers.filter(a => a >= 0).length === total ? submitAnswers : null;
+  } else {
+    nextBtn.textContent = '下一题 →';
+    nextBtn.disabled = answers[idx] < 0;
+    nextBtn.onclick = nextQuestion;
+  }
+}
+
+// ============ SELECT ============
+function selectOption(qIdx, oIdx) {
+  answers[qIdx] = oIdx;
+  renderQuestion(currentIdx);
+  updateDots();
+}
+
+// ============ NAVIGATION ============
+function prevQuestion() {
+  if (currentIdx > 0) renderQuestion(currentIdx - 1);
+}
+function nextQuestion() {
+  if (answers[currentIdx] < 0) return;
+  if (currentIdx < total - 1) renderQuestion(currentIdx + 1);
+}
+function updateDots(highlight) {
+  for (let i = 0; i < total; i++) {
+    const dot = document.getElementById('dot' + i);
+    dot.className = 'progress-dot';
+    if (answers[i] >= 0) dot.classList.add('done');
+    if (i === currentIdx) dot.classList.add('current');
+  }
+}
+
+// ============ SUBMIT ============
+async function submitAnswers() {
+  document.getElementById('quizWrap').classList.remove('show');
+  document.getElementById('loadingScreen').classList.add('show');
+
+  try {
+    const resp = await fetch('/submit', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        answers: answers,
+        nickname: nickname
+      })
+    });
+    const data = await resp.json();
+    if (data.success) {
+      window.location.href = data.redirect;
+    } else {
+      alert(data.error || '提交失败');
+      document.getElementById('loadingScreen').classList.remove('show');
+      document.getElementById('quizWrap').classList.add('show');
+    }
+  } catch(e) {
+    alert('网络错误，请重试');
+    document.getElementById('loadingScreen').classList.remove('show');
+    document.getElementById('quizWrap').classList.add('show');
+  }
+}
+</script>
+</body>
+</html>
