@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, jsonify, session, make_respon
 
 # ============ CORS（允许飞轮控制台跨端口调用）============
 app = Flask(__name__)
-app.secret_key = "psych-engine-mvp-secret-key-2026"
+app.secret_key = os.environ.get("SECRET_KEY", "psych-engine-dev-fallback")
 
 @app.after_request
 def add_cors(response):

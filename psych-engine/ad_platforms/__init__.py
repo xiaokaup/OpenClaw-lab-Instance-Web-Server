@@ -51,9 +51,13 @@ class AdManager:
             "bilibili": {"app_id": "", "secret": ""},
             "xiaohongshu": {"app_id": "", "secret": "", "advertiser_id": ""},
         }
+        If credentials not provided, reads from env vars:
+          DOUYIN_APP_ID, DOUYIN_SECRET, DOUYIN_ADVERTISER_ID
+          BILIBILI_APP_ID, BILIBILI_SECRET
+          XIAOHONGSHU_APP_ID, XIAOHONGSHU_SECRET, XIAOHONGSHU_ADVERTISER_ID
         """
         self.demo = demo
-        self.credentials = credentials or {}
+        self.credentials = credentials or self._load_credentials_from_env()
 
         # 初始化平台实例
         self._platforms = {}
@@ -61,6 +65,26 @@ class AdManager:
 
         # 投放记录
         self._campaigns = {}   # {campaign_id: {channel, platform, budget}}
+
+    @staticmethod
+    def _load_credentials_from_env() -> dict:
+        """从环境变量加载广告平台凭证"""
+        return {
+            "douyin": {
+                "app_id": os.environ.get("DOUYIN_APP_ID", ""),
+                "secret": os.environ.get("DOUYIN_SECRET", ""),
+                "advertiser_id": os.environ.get("DOUYIN_ADVERTISER_ID", ""),
+            },
+            "bilibili": {
+                "app_id": os.environ.get("BILIBILI_APP_ID", ""),
+                "secret": os.environ.get("BILIBILI_SECRET", ""),
+            },
+            "xiaohongshu": {
+                "app_id": os.environ.get("XIAOHONGSHU_APP_ID", ""),
+                "secret": os.environ.get("XIAOHONGSHU_SECRET", ""),
+                "advertiser_id": os.environ.get("XIAOHONGSHU_ADVERTISER_ID", ""),
+            },
+        }
 
     def _init_platforms(self):
         """初始化各平台适配器"""
