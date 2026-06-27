@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>飞轮系统 · 统一门户</title>
+<style>
+:root{--bg:#080b11;--surface:#111620;--border:#212836;--fg:#e1e4eb;--muted:#6e7687;--accent:#6366f1;--green:#22c55e;--red:#ef4444}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,sans-serif}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.topbar h1{font-size:16px}
+.topbar .live{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--green)}
+.topbar .live .dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px;max-width:1600px;margin:0 auto}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.card-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px}
+.card-header h3{font-size:14px;font-weight:600}
+.card-header a{color:var(--accent);font-size:11px;text-decoration:none}
+.card-header a:hover{text-decoration:underline}
+.card-header .emoji{font-size:18px;margin-right:6px}
+.card-body{padding:0;position:relative}
+.card-body iframe{width:100%;height:480px;border:none;display:block;background:#fff}
+.card-body .placeholder{display:flex;align-items:center;justify-content:center;height:200px;color:var(--muted);font-size:13px;flex-direction:column;gap:12px}
+.card-body .placeholder .icon{font-size:40px}
+.btn{padding:8px 20px;border-radius:6px;border:1px solid var(--accent);background:var(--accent);color:#fff;font-size:13px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{opacity:.9}
+.status-row{display:flex;gap:24px;padding:12px 16px;font-size:11px;color:var(--muted)}
+.status-row span{display:flex;align-items:center;gap:4px}
+.status-dot{width:6px;height:6px;border-radius:50%}
+.status-dot.ok{background:var(--green)}
+footer{text-align:center;padding:24px;color:var(--muted);font-size:11px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>🔄 飞轮系统 · 统一门户</h1>
+  <div class="live"><span class="dot"></span>全部服务运行中 · 8899 / 18789</div>
+</div>
+
+<div class="grid">
+
+<!-- Console -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">🖥️</span>飞轮控制台</h3>
+    <a href="http://localhost:8899/flywheel" target="_blank">新窗口打开 ↗</a>
+  </div>
+  <div class="card-body">
+    <iframe src="http://localhost:8899/flywheel"></iframe>
+  </div>
+  <div class="status-row">
+    <span><span class="status-dot ok"></span>Canvas 托管</span>
+    <span>双视角(CTO/CEO)</span>
+    <span>6 Agent 面板</span>
+  </div>
+</div>
+
+<!-- User Test Page -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">🧬</span>用户端 · 人格测试</h3>
+    <a href="http://localhost:8899" target="_blank">新窗口打开 ↗</a>
+  </div>
+  <div class="card-body">
+    <iframe src="http://localhost:8899"></iframe>
+  </div>
+  <div class="status-row">
+    <span><span class="status-dot ok"></span>Flask :8899</span>
+    <span>16题×8维度</span>
+    <span>心因引擎 v2.0</span>
+  </div>
+</div>
+
+<!-- Xixi Workspace -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">🔬</span>析析工作区</h3>
+    <a href="http://localhost:8899/xixi" target="_blank">新窗口打开 ↗</a>
+  </div>
+  <div class="card-body">
+    <iframe src="http://localhost:8899/xixi"></iframe>
+  </div>
+  <div class="status-row">
+    <span><span class="status-dot ok"></span>人格画像仪表盘</span>
+    <span>9 用户数据</span>
+    <span>置信度可视化</span>
+  </div>
+</div>
+
+<!-- Toutou Workspace -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">📤</span>投投工作区</h3>
+    <a href="http://localhost:8899/api/toutou/ui" target="_blank">新窗口打开 ↗</a>
+  </div>
+  <div class="card-body">
+    <iframe src="http://localhost:8899/api/toutou/ui"></iframe>
+  </div>
+  <div class="status-row">
+    <span><span class="status-dot ok"></span>素材适配引擎</span>
+    <span>渠道选择+预算</span>
+    <span>Demo 模式</span>
+  </div>
+</div>
+
+<!-- Ads Dashboard -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">📊</span>广告管理</h3>
+    <a href="http://localhost:8899/ads" target="_blank">新窗口打开 ↗</a>
+  </div>
+  <div class="card-body">
+    <iframe src="http://localhost:8899/ads"></iframe>
+  </div>
+  <div class="status-row">
+    <span><span class="status-dot ok"></span>广告 Demo</span>
+    <span>多平台管理</span>
+    <span>巨量+微信</span>
+  </div>
+</div>
+
+<!-- API Status -->
+<div class="card">
+  <div class="card-header">
+    <h3><span class="emoji">📡</span>API 状态 / 数据总览</h3>
+    <a href="http://localhost:8899/api/health" target="_blank">health ↗</a>
+  </div>
+  <div class="card-body">
+    <div class="placeholder" id="api-status">
+      <div class="icon">📡</div>
+      <div>加载 API 摘要中...</div>
+    </div>
+  </div>
+  <div class="status-row">
+    <span>/api/health</span>
+    <span>/api/workspace/summary</span>
+    <span>/api/toutou/status</span>
+  </div>
+</div>
+
+</div>
+
+<footer>飞轮系统统一门户 · projects/flywheel-console/portal.html · 2026-06-27 03:23 CST</footer>
+
+<script>
+(async function(){
+  const el = document.getElementById('api-status');
+  try {
+    const [health, xixi, toutou] = await Promise.all([
+      fetch('http://localhost:8899/api/health').then(r=>r.json()),
+      fetch('http://localhost:8899/api/workspace/summary').then(r=>r.json()),
+      fetch('http://localhost:8899/api/toutou/status').then(r=>r.json())
+    ]);
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;width:100%;padding:20px">
+        <div style="text-align:center">
+          <div style="font-size:28px;color:var(--green)">✅</div>
+          <div style="font-weight:600;margin:4px 0">心因引擎</div>
+          <div style="font-size:11px;color:var(--muted)">v${health.version} · 端口 ${health.port}</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:2px">${health.started_at}</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:28px">🔬</div>
+          <div style="font-weight:600;margin:4px 0">析析引擎</div>
+          <div style="font-size:20px;color:var(--accent)">${xixi.total||0} <span style="font-size:11px;color:var(--muted)">用户</span></div>
+          <div style="font-size:10px;color:var(--muted);margin-top:2px">8维度 · 置信度 ${Math.round((Object.values(xixi.confidence_averages||{}).reduce((a,b)=>a+b,0)/8)*100)}%</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:28px">📤</div>
+          <div style="font-weight:600;margin:4px 0">投投引擎</div>
+          <div style="font-size:11px;color:var(--muted)">${toutou.demo_mode?'Demo 模式':'Live 模式'}</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:2px">目标ROI ${toutou.monitor?.target_roi}x · 日预算 ¥${toutou.monitor?.daily_budget}</div>
+        </div>
+      </div>`;
+  } catch(e) {
+    el.innerHTML = `<div class="icon">⚠️</div><div>API 连接失败</div><div style="font-size:11px">请确认 Flask 已启动</div>`;
+  }
+})();
+</script>
+</body>
+</html>

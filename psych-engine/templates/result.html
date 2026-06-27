@@ -23,25 +23,39 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .share-card .card-date{font-size:10px;color:var(--mt);margin-bottom:14px}
 .share-card .card-emoji{font-size:44px;margin-bottom:10px}
 
-/* Bar chart in card */
+/* Bar chart in card — with confidence dots */
 .card-bars{padding:0 4px;margin-bottom:12px}
 .card-bar{display:flex;align-items:center;gap:6px;margin-bottom:5px}
 .card-bar .b-icon{width:20px;text-align:center;font-size:12px;flex-shrink:0}
 .card-bar .b-label{width:48px;font-size:9px;color:var(--mt);text-align:right;flex-shrink:0}
 .card-bar .b-track{flex:1;height:5px;background:var(--bdr);border-radius:3px;overflow:hidden}
-.card-bar .b-fill{height:100%;border-radius:3px}
+.card-bar .b-fill{height:100%;border-radius:3px;position:relative}
+.card-bar .b-fill.low-conf{opacity:.45;background-image:repeating-linear-gradient(90deg,transparent,transparent 3px,var(--bg) 3px,var(--bg) 6px)}
+.card-bar .b-fill.mid-conf{opacity:.75}
+.card-bar .b-fill.high-conf{opacity:1}
 .card-bar .b-val{width:22px;font-size:9px;font-weight:600;text-align:right;flex-shrink:0}
+.card-bar .b-conf{width:16px;font-size:8px;text-align:center;flex-shrink:0}
 
 .card-tagline{font-size:12px;color:var(--ac2);font-weight:600;margin-top:8px;line-height:1.6}
 .card-footer{font-size:9px;color:var(--mt);margin-top:10px;opacity:.6}
+
+/* Overall confidence badge */
+.overall-conf{display:inline-flex;align-items:center;gap:4px;font-size:10px;padding:3px 10px;border-radius:10px;margin-top:8px;font-weight:600}
+.overall-conf.high{background:#34d39918;color:var(--gr);border:1px solid #34d39930}
+.overall-conf.mid{background:#fbbf2418;color:var(--yl);border:1px solid #fbbf2430}
+.overall-conf.low{background:#f8717118;color:var(--rd);border:1px solid #f8717130}
 
 /* Share buttons */
 .share-btns{display:flex;gap:8px;margin-bottom:20px}
 .share-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:4px;padding:10px 8px;border-radius:10px;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:all .15s;color:#fff}
 .share-btn:active{transform:scale(.96)}
-.share-btn.wechat{background:#07c160}
 .share-btn.copy{background:var(--card);border:1px solid var(--bdr);color:var(--tx)}
 .share-btn.save{background:linear-gradient(135deg,var(--ac),#6d28d9)}
+
+/* Workspace link button */
+.workspace-link{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:12px;background:linear-gradient(135deg,#1a1040,#13132b);border:1px solid var(--ac);color:var(--ac2);font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;margin-bottom:16px;transition:all .2s}
+.workspace-link:hover{background:linear-gradient(135deg,#2a1060,#1a1040);border-color:var(--ac2);color:#fff;text-decoration:none}
+.workspace-link .arrow{font-size:16px}
 
 /* Insight cards */
 .c{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:18px 16px;margin-bottom:12px}
@@ -51,6 +65,12 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .insight-row{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--bdr);font-size:12px;line-height:1.7}
 .insight-row:last-child{border-bottom:none}
 .insight-row .i-icon{font-size:18px;flex-shrink:0;width:26px;text-align:center;padding-top:2px}
+
+/* Confidence highlight */
+.conf-tag{display:inline-block;font-size:9px;padding:2px 6px;border-radius:6px;font-weight:600;margin-left:4px}
+.conf-tag.high{background:#34d39920;color:var(--gr)}
+.conf-tag.mid{background:#fbbf2420;color:var(--yl)}
+.conf-tag.low{background:#f8717120;color:var(--rd)}
 
 /* Tip */
 .tip-banner{background:#7c5cfc08;border:1px solid #7c5cfc20;border-radius:10px;padding:12px 14px;font-size:11px;color:var(--mt);text-align:center;margin-bottom:12px;line-height:1.7}
@@ -63,7 +83,6 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);padding:10px 20px;border-radius:8px;font-size:12px;font-weight:600;z-index:999;background:var(--gr);color:#000;animation:toastIn .3s,toastOut .3s 2.2s forwards}
 @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(-10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 @keyframes toastOut{from{opacity:1}to{opacity:0;transform:translateX(-50%) translateY(-10px)}}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
@@ -76,18 +95,32 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div class="card-emoji" id="cardEmoji">🧠</div>
     <div class="card-name" id="cardName">你的认知操作系统</div>
     <div class="card-date" id="cardDate"></div>
+
+    <!-- Bars with confidence dots -->
     <div class="card-bars">
       {% for d in dim_order %}
       {% set dd = dim_data[d] %}
       <div class="card-bar">
         <span class="b-icon">{{ dd.icon }}</span>
         <span class="b-label">{{ dd.label }}</span>
-        <div class="b-track"><div class="b-fill" style="width:{{ dd.pct }}%;background:{{ dd.color }}"></div></div>
+        <div class="b-track">
+          <div class="b-fill {{ 'high-conf' if dd.confidence >= 0.7 else ('mid-conf' if dd.confidence >= 0.5 else 'low-conf') }}"
+               style="width:{{ dd.pct }}%;background:{{ dd.color }}"></div>
+        </div>
         <span class="b-val" style="color:{{ dd.color }}">{{ dd.pct }}</span>
+        <span class="b-conf" title="置信度 {{ (dd.confidence * 100)|int }}%">
+          {% if dd.confidence >= 0.85 %}●●●
+          {% elif dd.confidence >= 0.7 %}●●◐
+          {% elif dd.confidence >= 0.5 %}●●○
+          {% elif dd.confidence >= 0.35 %}●○○
+          {% else %}○○○{% endif %}
+        </span>
       </div>
       {% endfor %}
     </div>
+
     <div class="card-tagline" id="cardTagline">你的认知操作系统已生成</div>
+    <div class="overall-conf" id="overallConf"></div>
     <div class="card-footer">心因引擎 Psych-Engine · 扫码来测</div>
   </div>
 
@@ -96,6 +129,11 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <button class="share-btn copy" onclick="copyLink()">📋 复制链接</button>
     <button class="share-btn save" onclick="saveCard()">📸 保存卡片</button>
   </div>
+
+  <!-- ============ WORKSPACE LINK ============ -->
+  <a class="workspace-link" href="/xixi" target="_blank">
+    🔬 在析析工作区查看完整分析<span class="arrow">→</span>
+  </a>
 
   <!-- ============ DETAILS ============ -->
   <div class="c">
@@ -116,17 +154,24 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <div class="insight-row"><span class="i-icon">🔍</span><span><strong>成长空间</strong><br>{{ profile.blindspot }}</span></div>
   </div>
 
+  <!-- Confidence Summary -->
+  <div class="c" id="confSummaryCard">
+    <h2>🔬 画像置信度</h2>
+    <div id="confSummary"></div>
+  </div>
+
   <div class="tip-banner">
     💬 <strong>分享你的画像给朋友</strong>，看看你们的认知操作系统有什么不同！<br>点击上方按钮复制链接或保存卡片图片
   </div>
 
-  <div class="ft"><a href="/">← 重新测试</a> · 心因引擎 Psych-Engine</div>
+  <div class="ft"><a href="/">← 重新测试</a> · <a href="/xixi" target="_blank">🔬 析析工作区</a> · 心因引擎 Psych-Engine</div>
 </div>
 
 <script>
 const scores = {{ scores|tojson }};
 const dimsMeta = {{ dims_meta|tojson }};
 const dimOrder = {{ dim_order|tojson }};
+const confidence = {{ confidence|tojson }};
 const nickname = {{ (session.get('nickname','') or '')|tojson }};
 
 // ============ INIT ============
@@ -148,6 +193,44 @@ const emojiMap = {
 };
 document.getElementById('cardEmoji').textContent = emojiMap[top2[0]] || '🧠';
 
+// Overall confidence badge
+const avgConf = Object.values(confidence).reduce((a,b)=>a+b,0) / Object.values(confidence).length;
+const confPct = Math.round(avgConf * 100);
+const confLevel = avgConf >= 0.7 ? 'high' : (avgConf >= 0.5 ? 'mid' : 'low');
+const confLabel = avgConf >= 0.7 ? '🟢 ' : (avgConf >= 0.5 ? '🟡 ' : '🔴 ');
+const confText = avgConf >= 0.7 ? '高信度画像' : (avgConf >= 0.5 ? '中信度画像' : '低信度画像');
+document.getElementById('overallConf').className = 'overall-conf ' + confLevel;
+document.getElementById('overallConf').textContent = confLabel + confText + ' · ' + confPct + '%';
+
+// Confidence summary section
+renderConfSummary();
+
+function renderConfSummary() {
+  const high = [], mid = [], low = [];
+  for (const d of dimOrder) {
+    const c = confidence[d] || 0.5;
+    if (c >= 0.7) high.push(d);
+    else if (c >= 0.5) mid.push(d);
+    else low.push(d);
+  }
+  let html = '';
+  if (high.length) {
+    html += '<div style="margin-bottom:10px"><span style="color:var(--gr);font-weight:600">✅ 高信度维度</span><br>';
+    html += high.map(d => `<span style="font-size:11px">${dimsMeta[d].icon} ${dimsMeta[d].name} <span class="conf-tag high">${Math.round(confidence[d]*100)}%</span></span>`).join(' · ');
+    html += '</div>';
+  }
+  if (low.length) {
+    html += '<div><span style="color:var(--rd);font-weight:600">⚠️ 需更多数据</span><br>';
+    html += low.map(d => `<span style="font-size:11px">${dimsMeta[d].icon} ${dimsMeta[d].name} <span class="conf-tag low">${Math.round(confidence[d]*100)}%</span></span>`).join(' · ');
+    html += '<div style="font-size:10px;color:var(--mt);margin-top:6px">低信度可能说明你在这些维度上在不同情境下表现差异较大。这不是"不准"，而是一个有价值的发现。</div>';
+    html += '</div>';
+  }
+  if (!high.length && !low.length) {
+    html = '<div style="font-size:12px;color:var(--mt)">所有维度置信度在50-70%之间，画像方向基本可信。</div>';
+  }
+  document.getElementById('confSummary').innerHTML = html;
+}
+
 // ============ COPY LINK ============
 function copyLink() {
   const url = window.location.href;
@@ -168,39 +251,26 @@ async function saveCard() {
   btn.textContent = '⏳ 生成中…';
   btn.disabled = true;
 
-  // Simple approach: use canvas to render a share image
   try {
-    const card = document.getElementById('shareCard');
-    // Create a clean clone for capture
-    const clone = card.cloneNode(true);
-    clone.style.position = 'fixed';
-    clone.style.top = '-9999px';
-    clone.style.left = '0';
-    clone.style.width = '420px';
-    clone.style.transform = 'none';
-    document.body.appendChild(clone);
-
-    // Use html2canvas approach — but to avoid dependency, we generate a simple share image via canvas
-    // For now, we use a simpler approach: just download the card as a text-based image
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     const scale = 2;
     canvas.width = 420 * scale;
-    canvas.height = 600 * scale;
+    canvas.height = 660 * scale;
     ctx.scale(scale, scale);
 
     // Background
-    const bgGrad = ctx.createLinearGradient(0, 0, 0, 600);
+    const bgGrad = ctx.createLinearGradient(0, 0, 0, 660);
     bgGrad.addColorStop(0, '#13132b');
     bgGrad.addColorStop(0.5, '#1a1040');
     bgGrad.addColorStop(1, '#0f0f2a');
     ctx.fillStyle = bgGrad;
-    ctx.beginPath();ctx.roundRect(0, 0, 420, 600, 20);ctx.fill();
+    ctx.beginPath();ctx.roundRect(0, 0, 420, 660, 20);ctx.fill();
 
     // Border
     ctx.strokeStyle = '#7c5cfc30';
     ctx.lineWidth = 1;
-    ctx.beginPath();ctx.roundRect(2, 2, 416, 596, 18);ctx.stroke();
+    ctx.beginPath();ctx.roundRect(2, 2, 416, 656, 18);ctx.stroke();
 
     // Badge
     ctx.fillStyle = '#7c5cfc18';
@@ -224,52 +294,69 @@ async function saveCard() {
     ctx.font = '10px -apple-system,sans-serif';
     ctx.fillText(document.getElementById('cardDate').textContent, 210, 154);
 
-    // Bars
+    // Bars with confidence
     let y = 175;
+    const confData = {{ dim_data|tojson }};
     dimOrder.forEach(d => {
-      const dd = {{ dim_data|tojson }}[d];
+      const dd = confData[d];
       const pct = dd.pct;
-      // Icon + label
+      const conf = dd.confidence || 0.5;
+      const confDots = conf >= 0.85 ? '●●●' : (conf >= 0.7 ? '●●◐' : (conf >= 0.5 ? '●●○' : (conf >= 0.35 ? '●○○' : '○○○')));
       ctx.fillStyle = '#8888aa';
       ctx.font = '9px -apple-system,sans-serif';
       ctx.textAlign = 'right';
-      ctx.fillText(dd.label, 100, y + 12);
+      ctx.fillText(dd.label, 90, y + 12);
       ctx.textAlign = 'left';
       ctx.font = '12px -apple-system,sans-serif';
-      ctx.fillText(dd.icon, 108, y + 12);
+      ctx.fillText(dd.icon, 98, y + 12);
       // Track
       ctx.fillStyle = '#252545';
-      ctx.beginPath();ctx.roundRect(130, y + 6, 210, 5, 3);ctx.fill();
-      // Fill
+      ctx.beginPath();ctx.roundRect(120, y + 6, 200, 5, 3);ctx.fill();
+      // Fill with confidence opacity
+      ctx.globalAlpha = conf >= 0.7 ? 1 : (conf >= 0.5 ? 0.75 : 0.45);
       ctx.fillStyle = dd.color;
-      ctx.beginPath();ctx.roundRect(130, y + 6, 210 * pct / 100, 5, 3);ctx.fill();
+      ctx.beginPath();ctx.roundRect(120, y + 6, 200 * pct / 100, 5, 3);ctx.fill();
+      ctx.globalAlpha = 1;
       // Value
       ctx.fillStyle = dd.color;
       ctx.font = 'bold 9px -apple-system,sans-serif';
       ctx.textAlign = 'left';
-      ctx.fillText(pct + '', 346, y + 12);
+      ctx.fillText(pct + '', 326, y + 12);
+      // Confidence dots
+      ctx.fillStyle = conf >= 0.7 ? '#34d399' : (conf >= 0.5 ? '#fbbf24' : '#f87171');
+      ctx.font = '7px -apple-system,sans-serif';
+      ctx.fillText(confDots, 352, y + 12);
       y += 22;
     });
+
+    // Overall confidence
+    ctx.fillStyle = avgConf >= 0.7 ? '#34d39918' : (avgConf >= 0.5 ? '#fbbf2418' : '#f8717118');
+    ctx.strokeStyle = avgConf >= 0.7 ? '#34d39930' : (avgConf >= 0.5 ? '#fbbf2430' : '#f8717130');
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();ctx.roundRect(140, y + 8, 140, 20, 10);ctx.fill();ctx.stroke();
+    ctx.fillStyle = avgConf >= 0.7 ? '#34d399' : (avgConf >= 0.5 ? '#fbbf24' : '#f87171');
+    ctx.font = 'bold 9px -apple-system,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(confText + ' · ' + confPct + '%', 210, y + 22);
+    y += 38;
 
     // Tagline
     ctx.fillStyle = '#a78bfa';
     ctx.font = 'bold 12px -apple-system,sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(document.getElementById('cardTagline').textContent, 210, y + 20);
+    ctx.fillText(document.getElementById('cardTagline').textContent, 210, y);
 
     // Footer
     ctx.fillStyle = '#8888aa';
     ctx.font = '9px -apple-system,sans-serif';
-    ctx.fillText('心因引擎 Psych-Engine · 扫码来测', 210, y + 42);
+    ctx.fillText('心因引擎 Psych-Engine · 扫码来测', 210, y + 20);
 
     // QR placeholder
     ctx.fillStyle = '#252545';
-    ctx.beginPath();ctx.roundRect(160, y + 56, 100, 100, 8);ctx.fill();
+    ctx.beginPath();ctx.roundRect(160, y + 32, 100, 100, 8);ctx.fill();
     ctx.fillStyle = '#8888aa';
     ctx.font = '10px -apple-system,sans-serif';
-    ctx.fillText('扫码来测 →', 210, y + 110);
-
-    document.body.removeChild(clone);
+    ctx.fillText('扫码来测 →', 210, y + 86);
 
     // Download
     const link = document.createElement('a');
@@ -285,7 +372,6 @@ async function saveCard() {
   btn.disabled = false;
 }
 
-// ============ TOAST ============
 function showToast(msg) {
   const t = document.createElement('div');
   t.className = 'toast'; t.textContent = msg;

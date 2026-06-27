@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎯 荐荐 · 分类+推荐官</title>
+<style>
+:root {
+  --bg: #080b11; --surface: #111620; --card: #161b26;
+  --border: #212836; --text: #e1e4eb; --muted: #6e7687;
+  --accent: #f59e0b; --accent2: #d97706; --green: #22c55e;
+  --yellow: #eab308; --red: #ef4444; --orange: #f97316;
+  --cyan: #06b6d4; --purple: #8b5cf6; --radius: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.header-emoji{font-size:28px}
+.header-title{font-size:18px;font-weight:700}.header-subtitle{font-size:12px;color:var(--muted);margin-left:12px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.tabs{display:flex;gap:2px;padding:12px 24px 0;background:var(--bg);border-bottom:1px solid var(--border)}
+.tab-btn{padding:8px 18px;border:none;background:none;color:var(--muted);font-size:13px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-family:inherit;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+
+.content{padding:24px;max-width:1400px;margin:0 auto}
+.panels{display:none}.panels.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600}.card-subtitle{font-size:11px;color:var(--muted)}
+
+.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.btn{padding:8px 16px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{background:var(--border)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#000}.btn-primary:hover{background:#d97706}
+.btn-sm{padding:4px 10px;font-size:10px}.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* ── Cluster Cards ── */
+.cluster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-bottom:20px}
+.cluster-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all .2s}
+.cluster-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cluster-card.selected{border-color:var(--accent);background:var(--card)}
+.cluster-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.cluster-icon{font-size:24px}.cluster-name{font-size:14px;font-weight:600}.cluster-count{font-size:11px;color:var(--muted);margin-left:auto;background:var(--card);padding:2px 8px;border-radius:10px}
+.cluster-dims{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.dim-tag{font-size:10px;padding:2px 8px;border-radius:10px;background:var(--card);color:var(--muted);border:1px solid var(--border)}
+.dim-tag.high{color:var(--green);border-color:#22c55e40;background:#22c55e10}
+.cluster-desc{font-size:11px;color:var(--muted);line-height:1.5}
+.cluster-action{margin-top:10px;font-size:11px;color:var(--accent);font-weight:500}
+
+/* ── User Cards ── */
+.user-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.user-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+.user-top{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.user-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700}
+.user-name{font-size:13px;font-weight:600}.user-id{font-size:10px;color:var(--muted)}
+.user-dims{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.dim-bar{flex:1;height:4px;background:var(--bg);border-radius:2px;overflow:hidden;min-width:30px}
+.dim-bar-fill{height:100%;border-radius:2px}
+.user-actions{display:flex;gap:8px;margin-top:10px}
+
+/* ── Product Cards ── */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.product-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;transition:border-color .2s}
+.product-card:hover{border-color:var(--accent)}
+.product-tier{font-size:10px;font-weight:600;text-transform:uppercase;margin-bottom:6px;display:inline-block;padding:2px 8px;border-radius:4px}
+.product-tier.tier1{background:#22c55e20;color:var(--green)}
+.product-tier.tier2{background:#8b5cf620;color:var(--purple)}
+.product-tier.tier3{background:#f59e0b20;color:var(--yellow)}
+.product-name{font-size:14px;font-weight:600;margin-bottom:4px}
+.product-price{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:6px}
+.product-fit{font-size:10px;color:var(--muted);margin-bottom:8px;line-height:1.4}
+.product-actions{display:flex;gap:6px}
+
+/* ── Recommendation Cards ── */
+.rec-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.rec-card.recommended{border-color:var(--green);border-width:2px}.rec-card.recommended::before{content:'✅ 最准匹配';display:block;font-size:10px;color:var(--green);font-weight:600;margin-bottom:6px}
+.rec-card.challenge{border-color:var(--accent);border-width:2px}.rec-card.challenge::before{content:'🔮 挑战推荐';display:block;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:6px}
+.rec-card.surprise{border-color:var(--purple);border-width:2px}.rec-card.surprise::before{content:'✨ 惊喜推荐';display:block;font-size:10px;color:var(--purple);font-weight:600;margin-bottom:6px}
+.rec-title{font-size:14px;font-weight:600;margin-bottom:6px}
+.rec-reason{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:8px}
+.rec-match{font-size:10px;font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.rec-match.good{color:var(--green)}.rec-match.medium{color:var(--yellow)}
+
+/* ── Results list ── */
+.rec-list-item{display:flex;align-items:center;gap:12px;padding:12px;border-bottom:1px solid var(--border);font-size:13px}
+.rec-list-item:last-child{border-bottom:none}
+.rec-user{width:120px;font-weight:600;flex-shrink:0}
+.rec-products{flex:1;display:flex;gap:6px;flex-wrap:wrap}
+.rec-badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:500}
+.rec-badge.match{background:#22c55e20;color:var(--green)}
+.rec-badge.challenge{background:#f59e0b20;color:var(--accent)}
+.rec-badge.surprise{background:#8b5cf620;color:var(--purple)}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty-state .emoji{font-size:48px;margin-bottom:12px}
+.loading{display:flex;align-items:center;justify-content:center;padding:40px;color:var(--muted);gap:8px}
+.spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.toast{position:fixed;bottom:24px;right:24px;padding:12px 20px;border-radius:8px;font-size:13px;z-index:100;animation:slideIn .3s ease;max-width:400px}
+.toast.success{background:#22c55e20;border:1px solid var(--green);color:var(--green)}
+.toast.error{background:#ef444420;border:1px solid var(--red);color:var(--red)}
+@keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+
+.metric-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center}
+.metric-value{font-size:24px;font-weight:700;color:var(--accent)}
+.metric-label{font-size:10px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left" style="display:flex;align-items:center;gap:12px">
+    <span class="header-emoji">🎯</span>
+    <div>
+      <div class="header-title">荐荐 · 分类+推荐官</div>
+      <div class="header-subtitle">用户分群 · 产品匹配 · 推荐理由生成 · 留一手策略</div>
+    </div>
+  </div>
+  <div class="header-right" style="display:flex;align-items:center;gap:12px">
+    <span class="status-dot"></span>
+    <span style="font-size:11px;color:var(--muted)">v4-flash</span>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="clusters">📊 用户分群</button>
+  <button class="tab-btn" data-tab="recommend">🎯 产品推荐</button>
+  <button class="tab-btn" data-tab="results">📋 推荐结果</button>
+  <button class="tab-btn" data-tab="products">📦 产品目录</button>
+</div>
+
+<div class="content">
+  <!-- ═══ 用户分群 ═══ -->
+  <div id="panel-clusters" class="panels active">
+    <div class="metric-cards" id="cluster-stats"></div>
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">📊 人格分群</div><div class="card-subtitle">基于8维度画像自动聚类 · 点击查看用户</div></div>
+        <button class="btn btn-sm" onclick="loadClusters()">🔄 刷新</button>
+      </div>
+      <div class="cluster-grid" id="clusters-container">
+        <div class="loading"><div class="spinner"></div> 正在分析用户画像...</div>
+      </div>
+    </div>
+    <div class="card" id="cluster-users-panel" style="display:none">
+      <div class="card-header">
+        <div><div class="card-title" id="cluster-users-title">👥 用户列表</div><div class="card-subtitle" id="cluster-users-subtitle"></div></div>
+        <button class="btn btn-sm" onclick="document.getElementById('cluster-users-panel').style.display='none'">✕</button>
+      </div>
+      <div class="user-grid" id="cluster-users-container"></div>
+    </div>
+  </div>
+
+  <!-- ═══ 产品推荐 ═══ -->
+  <div id="panel-recommend" class="panels">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">🎯 智能推荐引擎</div><div class="card-subtitle">基于人格画像 + 产品目录 → 留一手推荐（1准+1挑战+1惊喜）</div></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+        <select id="rec-user-select" class="btn" style="flex:1;max-width:300px">
+          <option value="">— 选择用户 —</option>
+        </select>
+        <button class="btn btn-primary" onclick="generateRecommend()" id="btn-recommend">
+          🚀 生成推荐
+        </button>
+        <button class="btn" onclick="generateAllRecommend()" id="btn-recommend-all">
+          ⚡ 批量推荐全部用户
+        </button>
+      </div>
+    </div>
+    <div id="recommend-result" class="empty-state">
+      <div class="emoji">🎯</div>
+      <div>选择一个用户，点击「生成推荐」</div>
+      <div style="font-size:11px;margin-top:8px">荐荐会基于析析画像 + 产品目录，生成留一手推荐策略</div>
+    </div>
+  </div>
+
+  <!-- ═══ 推荐结果列表 ═══ -->
+  <div id="panel-results" class="panels">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">📋 全部推荐记录</div><div class="card-subtitle" id="results-count"></div></div>
+        <button class="btn btn-sm" onclick="loadRecHistory()">🔄 刷新</button>
+      </div>
+      <div id="results-container">
+        <div class="empty-state"><div class="emoji">📋</div><div>暂无推荐记录</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 产品目录 ═══ -->
+  <div id="panel-products" class="panels">
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">📦 可推荐产品清单</div><div class="card-subtitle">Tier 1 自有虚拟 · Tier 2 联盟分销 · Tier 3 未来上架</div></div>
+      </div>
+      <div id="products-container">
+        <div class="loading"><div class="spinner"></div> 加载产品目录...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" style="display:none"></div>
+
+<script>
+// ═══════ API Base ═══════
+const API = '/api/jianjian';
+
+// ═══════ Tabs ═══════
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.panels').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    if (btn.dataset.tab === 'clusters') loadClusters();
+    if (btn.dataset.tab === 'recommend') loadUserSelect();
+    if (btn.dataset.tab === 'results') loadRecHistory();
+    if (btn.dataset.tab === 'products') loadProducts();
+  });
+});
+
+// ═══════ Toast ═══════
+function toast(msg, type) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.className = 'toast ' + (type||'success'); t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 3000);
+}
+
+// ═══════ Utils ═══════
+const DIMS = {IM:'信息代谢',DA:'决策架构',AS:'注意结构',ME:'动机引擎',ST:'社交拓扑',CB:'认知带宽',FM:'反馈敏感',TB:'信任建立'};
+const DIM_ICONS = {IM:'📖',DA:'🤔',AS:'🧘',ME:'🔥',ST:'🕸️',CB:'🧩',FM:'📡',TB:'🛡️'};
+
+function dimColor(val) {
+  if (val >= 72) return '#22c55e'; if (val >= 58) return '#a3e635';
+  if (val >= 43) return '#eab308'; if (val >= 28) return '#f97316'; return '#ef4444';
+}
+
+// ═══════ 1. 用户分群 ═══════
+async function loadClusters() {
+  const container = document.getElementById('clusters-container');
+  container.innerHTML = '<div class="loading"><div class="spinner"></div> 正在分析用户画像...</div>';
+  try {
+    const resp = await fetch(API + '/clusters');
+    const data = await resp.json();
+    renderClusterStats(data.stats);
+    renderClusters(data);
+  } catch(e) {
+    container.innerHTML = '<div class="empty-state"><div class="emoji">⚠️</div><div>无法加载分群数据</div></div>';
+    console.error(e);
+  }
+}
+
+function renderClusterStats(stats) {
+  document.getElementById('cluster-stats').innerHTML = `
+    <div class="metric-card"><div class="metric-value">${stats.total}</div><div class="metric-label">总用户数</div></div>
+    <div class="metric-card"><div class="metric-value">${stats.clustered}</div><div class="metric-label">已分群</div></div>
+    <div class="metric-card"><div class="metric-value">${stats.types}</div><div class="metric-label">人格类型</div></div>
+    <div class="metric-card"><div class="metric-value">${stats.avg_confidence}%</div><div class="metric-label">平均置信度</div></div>
+  `;
+}
+
+function renderClusters(data) {
+  const container = document.getElementById('clusters-container');
+  if (!data.clusters || !data.clusters.length) {
+    container.innerHTML = '<div class="empty-state"><div class="emoji">📊</div><div>暂无足够数据，需要更多用户完成测试</div></div>';
+    return;
+  }
+  container.innerHTML = data.clusters.map(c => `
+    <div class="cluster-card" onclick="showClusterUsers('${c.id}', '${c.name}')" id="cluster-${c.id}">
+      <div class="cluster-header">
+        <span class="cluster-icon">${c.icon}</span>
+        <span class="cluster-name">${c.name}</span>
+        <span class="cluster-count">${c.count}人</span>
+      </div>
+      <div class="cluster-dims">
+        ${c.key_dims.map(d => `<span class="dim-tag high">${d}</span>`).join('')}
+      </div>
+      <div class="cluster-desc">${c.desc}</div>
+      <div class="cluster-action">👆 点击查看用户 →</div>
+    </div>
+  `).join('');
+}
+
+async function showClusterUsers(clusterId, clusterName) {
+  document.querySelectorAll('.cluster-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('cluster-' + clusterId).classList.add('selected');
+  
+  const panel = document.getElementById('cluster-users-panel');
+  panel.style.display = 'block';
+  document.getElementById('cluster-users-title').textContent = '👥 ' + clusterName;
+  document.getElementById('cluster-users-subtitle').textContent = '加载中...';
+  
+  try {
+    const resp = await fetch(API + '/clusters/' + clusterId + '/users');
+    const data = await resp.json();
+    document.getElementById('cluster-users-subtitle').textContent = data.count + ' 位用户';
+    renderClusterUsers(data.users);
+    panel.scrollIntoView({behavior:'smooth'});
+  } catch(e) {
+    document.getElementById('cluster-users-subtitle').textContent = '加载失败';
+    console.error(e);
+  }
+}
+
+function renderClusterUsers(users) {
+  const container = document.getElementById('cluster-users-container');
+  container.innerHTML = users.map(u => `
+    <div class="user-card">
+      <div class="user-top">
+        <div class="user-avatar" style="background:${u.avatar_color}20;color:${u.avatar_color}">${u.nickname?.[0]||'?'}</div>
+        <div>
+          <div class="user-name">${u.nickname||'匿名用户'}</div>
+          <div class="user-id">${u.user_id?.slice(0,8)}...</div>
+        </div>
+      </div>
+      <div class="user-dims">
+        ${u.top_dims.map(d => {
+          const val = u.scores?.[d]||50;
+          return `<div style="flex:1;text-align:center">
+            <div style="font-size:9px;color:var(--muted)">${DIM_ICONS[d]} ${DIMS[d]?.slice(0,2)}</div>
+            <div class="dim-bar"><div class="dim-bar-fill" style="width:${val}%;background:${dimColor(val)}"></div></div>
+            <div style="font-size:10px;font-weight:600">${val}</div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="user-actions">
+        <button class="btn btn-sm" onclick="selectUserForRec('${u.user_id}','${(u.nickname||'匿名').replace(/'/g,"\\'")}')">🎯 推荐</button>
+        <a href="/api/workspace/portrait/${u.user_id}" target="_blank" class="btn btn-sm" style="text-decoration:none">🔬 画像</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function selectUserForRec(userId, nickname) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('[data-tab="recommend"]').classList.add('active');
+  document.querySelectorAll('.panels').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-recommend').classList.add('active');
+  loadUserSelect(userId, nickname);
+}
+
+// ═══════ 2. 产品推荐 ═══════
+async function loadUserSelect(preselectedId, preselectedName) {
+  const select = document.getElementById('rec-user-select');
+  try {
+    const resp = await fetch('/api/workspace/records?per_page=50');
+    const data = await resp.json();
+    select.innerHTML = '<option value="">— 选择用户 —</option>' +
+      data.records.map(r => {
+        const name = r.nickname || '匿名用户';
+        return `<option value="${r.user_id}" ${r.user_id===preselectedId?'selected':''}>${name} (${(r.top_dims||[]).slice(0,2).map(d=>DIMS[d]?.slice(0,2)).join('+')||'未知'})</option>`;
+      }).join('');
+    if (preselectedId) generateRecommend();
+  } catch(e) { console.error(e); }
+}
+
+async function generateRecommend() {
+  const userId = document.getElementById('rec-user-select').value;
+  const userLabel = document.getElementById('rec-user-select').selectedOptions[0]?.text || '';
+  if (!userId) { toast('请先选择一个用户', 'error'); return; }
+  
+  const btn = document.getElementById('btn-recommend');
+  const container = document.getElementById('recommend-result');
+  btn.disabled = true; btn.textContent = '⏳ 分析中...';
+  container.innerHTML = '<div class="loading"><div class="spinner"></div> 正在基于人格画像生成推荐...</div>';
+  
+  try {
+    const resp = await fetch(API + '/recommend/' + userId);
+    const data = await resp.json();
+    if (data.error) { container.innerHTML = `<div class="empty-state"><div class="emoji">⚠️</div><div>${data.error}</div></div>`; return; }
+    renderRecommendResult(data, userLabel);
+    toast('✅ 推荐生成完成！');
+  } catch(e) {
+    container.innerHTML = '<div class="empty-state"><div class="emoji">⚠️</div><div>推荐生成失败</div></div>';
+    console.error(e);
+  } finally { btn.disabled = false; btn.textContent = '🚀 生成推荐'; }
+}
+
+async function generateAllRecommend() {
+  const btn = document.getElementById('btn-recommend-all');
+  btn.disabled = true; btn.textContent = '⏳ 批量处理中...';
+  try {
+    const resp = await fetch(API + '/recommend/all', { method: 'POST' });
+    const data = await resp.json();
+    toast(`✅ 已为 ${data.generated||0} 位用户生成推荐`);
+    loadRecHistory();
+  } catch(e) {
+    toast('批量推荐失败', 'error');
+    console.error(e);
+  } finally { btn.disabled = false; btn.textContent = '⚡ 批量推荐全部用户'; }
+}
+
+function renderRecommendResult(data, userLabel) {
+  const container = document.getElementById('recommend-result');
+  container.innerHTML = `
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header"><div class="card-title">👤 ${userLabel}</div><div style="font-size:11px;color:var(--muted)">${data.cluster||'未分群'}</div></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+        ${Object.entries(data.scores||{}).map(([d,v]) => {
+          const icon = DIM_ICONS[d]||'';
+          return `<div style="text-align:center;min-width:50px">
+            <div style="font-size:9px;color:var(--muted)">${icon}</div>
+            <div style="font-size:13px;font-weight:700;color:${dimColor(v)}">${v}</div>
+            <div style="font-size:8px;color:var(--muted)">${DIMS[d]?.slice(0,2)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+    ${data.recommendations?.map((r,i) => {
+      let cls = ''; let label = '';
+      if (r.strategy === 'match') { cls = 'recommended'; label = '✅ 最准匹配'; }
+      else if (r.strategy === 'challenge') { cls = 'challenge'; label = '🔮 挑战推荐'; }
+      else { cls = 'surprise'; label = '✨ 惊喜推荐'; }
+      return `<div class="rec-card ${cls}">
+        <div class="rec-title">${i+1}. ${r.product_name}</div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:4px">${r.product_tier} · ¥${r.price}</div>
+        <div class="rec-reason">💡 ${r.reason}</div>
+        <div class="rec-match ${r.match_score>=70?'good':'medium'}">
+          📊 匹配度: ${r.match_score}%
+          <span style="font-size:10px;color:var(--muted);margin-left:8px">基于: ${r.match_dims?.join(' + ')||''}</span>
+        </div>
+      </div>`;
+    }).join('')||'<div class="empty-state">暂无推荐</div>'}
+  `;
+}
+
+// ═══════ 3. 推荐历史 ═══════
+async function loadRecHistory() {
+  const container = document.getElementById('results-container');
+  container.innerHTML = '<div class="loading"><div class="spinner"></div> 加载推荐记录...</div>';
+  try {
+    const resp = await fetch(API + '/history');
+    const data = await resp.json();
+    document.getElementById('results-count').textContent = `共 ${data.total||0} 条推荐记录`;
+    if (!data.records?.length) {
+      container.innerHTML = '<div class="empty-state"><div class="emoji">📋</div><div>暂无推荐记录<br><span style="font-size:11px">去「产品推荐」页生成</span></div></div>';
+      return;
+    }
+    container.innerHTML = data.records.map(r => `
+      <div class="rec-list-item">
+        <div class="rec-user">${r.nickname||'匿名'}</div>
+        <div style="font-size:10px;color:var(--muted);width:80px">${r.cluster||''}</div>
+        <div class="rec-products">
+          ${r.recommendations?.map(rec => {
+            let cls = rec.strategy==='match'?'match':rec.strategy==='challenge'?'challenge':'surprise';
+            return `<span class="rec-badge ${cls}">${rec.product_name?.slice(0,12)}</span>`;
+          }).join('')||''}
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-left:auto">${r.created_at?.slice(0,10)||''}</div>
+      </div>
+    `).join('');
+  } catch(e) {
+    container.innerHTML = '<div class="empty-state"><div class="emoji">⚠️</div><div>加载失败</div></div>';
+    console.error(e);
+  }
+}
+
+// ═══════ 4. 产品目录 ═══════
+async function loadProducts() {
+  const container = document.getElementById('products-container');
+  try {
+    const resp = await fetch(API + '/products');
+    const data = await resp.json();
+    container.innerHTML = data.products?.map(p => `
+      <div class="product-card">
+        <span class="product-tier ${p.tier==='tier1'?'tier1':p.tier==='tier2'?'tier2':'tier3'}">${p.tier_label}</span>
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">¥${p.price}</div>
+        <div class="product-fit">👤 适配: ${p.fit_personas?.join(' · ')||'全部'}</div>
+        <div style="font-size:10px;color:var(--muted);margin-bottom:6px">${p.desc}</div>
+        <div class="product-actions">
+          <span style="font-size:10px;color:var(--muted)">成本: ¥${p.cost}</span>
+          <span style="font-size:10px;color:var(--green);margin-left:auto">利润: ¥${p.price - p.cost}</span>
+        </div>
+      </div>
+    `).join('');
+  } catch(e) {
+    container.innerHTML = '<div class="empty-state"><div class="emoji">⚠️</div><div>加载失败</div></div>';
+    console.error(e);
+  }
+}
+
+// ═══════ Init ═══════
+loadClusters();
+loadUserSelect();
+</script>
+</body>
+</html>

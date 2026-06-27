@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>析析 🔬 人格分析引擎</title>
+<style>
+:root {
+  --bg: #080b11; --surface: #0f1320; --card: #161b2a; --border: #1e2640;
+  --text: #e1e8f0; --muted: #7b8399; --accent: #818cf8; --accent2: #a78bfa;
+  --green: #34d399; --yellow: #fbbf24; --red: #f87171; --orange: #fb923c;
+  --cyan: #22d3ee; --pink: #f472b6;
+  --radius: 12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 30% -10%,#818cf806,transparent),radial-gradient(ellipse 50% 30% at 80% 90%,#f472b606,transparent);pointer-events:none;z-index:0}
+
+.app{display:flex;min-height:100vh;position:relative;z-index:1}
+.sidebar{width:220px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto}
+.sidebar-header{padding:18px;border-bottom:1px solid var(--border)}
+.sidebar-header .logo{font-size:24px;margin-bottom:2px}
+.sidebar-header h1{font-size:15px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sidebar-header .sub{font-size:9px;color:var(--muted);margin-top:2px}
+.sidebar-nav{flex:1;padding:10px 8px}
+.nav-section{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);padding:12px 12px 4px;font-weight:600}
+.nav-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:7px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .15s;border:none;background:none;width:100%;text-align:left;font-family:inherit}
+.nav-item:hover{background:var(--card);color:var(--text)}
+.nav-item.active{background:var(--accent);color:#fff;font-weight:500}
+.nav-item .count{font-size:9px;background:var(--accent);color:#fff;padding:1px 6px;border-radius:8px;margin-left:auto;min-width:18px;text-align:center}
+.sidebar-footer{padding:12px;border-top:1px solid var(--border);font-size:9px;color:var(--muted)}
+.sidebar-footer a{color:var(--accent2);text-decoration:none}
+.sidebar-footer a:hover{text-decoration:underline}
+.sidebar-footer .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;margin-right:4px}
+
+.main{flex:1;overflow-y:auto;max-height:100vh}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10}
+.topbar-left{display:flex;align-items:center;gap:10px}
+.topbar-title{font-size:15px;font-weight:600}
+.topbar-right{display:flex;align-items:center;gap:10px;font-size:10px;color:var(--muted)}
+.content{padding:20px}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+.card-title{font-size:13px;font-weight:600}
+.card-sub{font-size:10px;color:var(--muted);margin-top:1px}
+.grid{display:grid;gap:14px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.sidebar{display:none}.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+/* Metric */
+.metric{text-align:center;padding:10px}
+.metric .val{font-size:26px;font-weight:700}
+.metric .lbl{font-size:10px;color:var(--muted);margin-top:1px}
+
+/* Confidence bar */
+.conf-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.conf-icon{width:20px;text-align:center;font-size:12px;flex-shrink:0}
+.conf-label{width:52px;font-size:10px;color:var(--muted);text-align:right;flex-shrink:0}
+.conf-track{flex:1;height:7px;background:var(--border);border-radius:4px;overflow:hidden;position:relative}
+.conf-fill{height:100%;border-radius:4px;position:absolute;left:0;top:0;transition:width .5s}
+.conf-fill.lo{opacity:.4;background-image:repeating-linear-gradient(90deg,transparent,transparent 4px,var(--bg) 4px,var(--bg) 8px)}
+.conf-fill.md{opacity:.75}
+.conf-fill.hi{opacity:1}
+.conf-val{width:26px;font-size:10px;font-weight:600;text-align:right;flex-shrink:0}
+.conf-dots{width:28px;font-size:8px;text-align:center;flex-shrink:0;letter-spacing:1px}
+.conf-dots.hi{color:var(--green)}
+.conf-dots.md{color:var(--yellow)}
+.conf-dots.lo{color:var(--red)}
+
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:9px;padding:2px 8px;border-radius:8px;font-weight:600}
+.badge.hi{background:#34d39915;color:var(--green)}
+.badge.md{background:#fbbf2415;color:var(--yellow)}
+.badge.lo{background:#f8717115;color:var(--red)}
+.badge.ac{background:#818cf815;color:var(--accent2)}
+
+/* Table */
+.data-table{width:100%;font-size:11px;border-collapse:collapse}
+.data-table th{text-align:left;padding:8px 10px;font-size:9px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);font-weight:600;letter-spacing:.5px}
+.data-table td{padding:8px 10px;border-bottom:1px solid var(--border)}
+.data-table tr{cursor:pointer;transition:background .15s}
+.data-table tr:hover{background:var(--surface)}
+.data-table tr.sel{background:linear-gradient(90deg,#818cf810,transparent);border-left:2px solid var(--accent)}
+
+/* Insight */
+.insight{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px;display:flex;gap:10px}
+.insight .ii{font-size:20px;flex-shrink:0;width:28px;text-align:center}
+.insight .ib{flex:1}
+.insight .it{font-size:12px;font-weight:600;margin-bottom:3px}
+.insight .itext{font-size:11px;color:var(--muted);line-height:1.7}
+
+/* Prompt */
+.prompt-box{background:#0a0d16;border:1px solid var(--border);border-radius:10px;padding:14px;font-family:'SF Mono','Menlo',monospace;font-size:11px;line-height:1.8;white-space:pre-wrap;max-height:360px;overflow-y:auto;position:relative}
+.copy-btn{position:absolute;top:8px;right:8px;font-size:9px;padding:3px 8px;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;transition:all .15s}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Filter */
+.fbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.fbar input,.fbar select{padding:7px 10px;border-radius:7px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:11px;outline:none;font-family:inherit}
+.fbar input:focus,.fbar select:focus{border-color:var(--accent)}
+.fbar input{width:180px}.fbar input::placeholder{color:#444}
+
+/* Buttons */
+.btn{padding:7px 14px;border-radius:7px;font-size:11px;font-weight:500;cursor:pointer;transition:all .15s;border:none;font-family:inherit;display:inline-flex;align-items:center;gap:5px;text-decoration:none}
+.btn-p{background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff}.btn-p:hover{opacity:.9}
+.btn-o{background:transparent;border:1px solid var(--border);color:var(--muted)}.btn-o:hover{background:var(--card);color:var(--text)}
+.btn-s{padding:3px 8px;font-size:9px}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* Loading / Empty */
+.loading{text-align:center;padding:60px 20px;color:var(--muted)}.loading .spin{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.empty{text-align:center;padding:50px 20px;color:var(--muted);font-size:13px}
+.empty .ic{font-size:40px;margin-bottom:10px}
+
+/* Detail */
+.detail-head{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.detail-head .av{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--pink));display:flex;align-items:center;justify-content:center;font-size:18px}
+.tabs{display:flex;gap:2px;background:var(--surface);border-radius:9px;padding:2px;margin-bottom:16px}
+.tabs button{flex:1;padding:7px 12px;border-radius:7px;border:none;background:transparent;color:var(--muted);font-size:11px;cursor:pointer;transition:all .15s;font-family:inherit}
+.tabs button.on{background:var(--accent);color:#fff;font-weight:500}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:8px 18px;border-radius:8px;font-size:11px;font-weight:600;z-index:999;background:var(--green);color:#000;animation:tIn .3s,tOut .3s 2s forwards;pointer-events:none}
+@keyframes tIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes tOut{from{opacity:1}to{opacity:0;transform:translateX(-50%) translateY(-10px)}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">🔬</div>
+      <h1>析析 · 分析引擎</h1>
+      <div class="sub">v4-pro · 价值原点</div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">工作区</div>
+      <button class="nav-item active" data-v="dashboard"><span>📊</span> 数据总览<span class="count" id="navN">-</span></button>
+      <button class="nav-item" data-v="records"><span>👥</span> 用户档案</button>
+      <div class="nav-section">工具</div>
+      <button class="nav-item" data-v="prompts"><span>⚡</span> Prompt工坊</button>
+    </nav>
+    <div class="sidebar-footer">
+      <span class="dot"></span> <a href="/">← 回到测试</a>
+    </div>
+  </aside>
+  <main class="main" id="mc"></main>
+</div>
+
+<script>
+const A='http://localhost:8899';
+const DM={{ dims_meta|tojson }};
+const DO={{ dim_order|tojson }};
+let S={view:'dashboard',records:[],summary:null,uid:null,portrait:null};
+
+function nav(v){S.view=v;document.querySelectorAll('.nav-item').forEach(e=>e.classList.toggle('active',e.dataset.v===v));
+  switch(v){case'dashboard':dash();break;case'records':recs();break;case'detail':detail();break;case'prompts':pw();break}}
+
+// ═══ DASHBOARD ═══
+async function dash(){
+  document.getElementById('mc').innerHTML='<div class="loading"><div class="spin"></div>加载中...</div>';
+  try{
+    const[sr,rr]=await Promise.all([fetch(A+'/api/workspace/summary'),fetch(A+'/api/workspace/records?per_page=50')]);
+    S.summary=await sr.json();S.records=(await rr.json()).records||[];
+    document.getElementById('navN').textContent=S.summary.total||0;
+  }catch(e){document.getElementById('mc').innerHTML='<div class="empty"><div class="ic">⚠️</div>无法连接心因引擎 (port 8899)<br><span style="font-size:10px">请先启动 Flask 服务</span></div>';return}
+  const s=S.summary,da=s.dim_averages||{},ca=s.confidence_averages||{},dc=s.daily_counts||{};
+  document.getElementById('mc').innerHTML=`
+    <div class="topbar"><div class="topbar-left"><div class="topbar-title">📊 数据总览</div></div><div class="topbar-right"><span class="badge ac">实时</span></div></div>
+    <div class="content">
+      <div class="grid grid-4" style="margin-bottom:16px">
+        ${m('👥','总用户数',s.total||0,'人')}${m('📊','测试完成',s.total||0,'次')}${m('🎯','平均置信度',Math.round(ac(da,ca)*100)+'%','')}${m('📅','活跃天数',Object.keys(dc).length,'天')}
+      </div>
+      <div class="grid grid-2" style="margin-bottom:16px">
+        <div class="card"><div class="card-title" style="margin-bottom:12px">📊 各维度分布</div>${bars(da,ca)}</div>
+        <div class="card"><div class="card-title" style="margin-bottom:12px">🔬 置信度总览</div>${cov(ca)}</div>
+      </div>
+      <div class="card"><div class="card-title" style="margin-bottom:12px">📈 日测试量</div>${dt(dc)}</div>
+      <div class="card"><div class="card-header"><div><div class="card-title">🆕 最近测试</div></div><button class="btn btn-o" onclick="nav('records')">全部 →</button></div>${mt(S.records.slice(0,5))}</div>
+    </div>`;
+}
+function ac(da,ca){const v=Object.values(ca||{});return v.length?v.reduce((a,b)=>a+b,0)/v.length:0}
+function m(icon,label,val,unit){return`<div class="card metric"><div style="font-size:20px;margin-bottom:2px">${icon}</div><div class="val">${val}<span style="font-size:12px;color:var(--muted);font-weight:400">${unit?' '+unit:''}</span></div><div class="lbl">${label}</div></div>`}
+function bars(da,ca){return DO.map(d=>{const v=da[d]||50,c=ca[d]||.5,dm=DM[d],cl=c>=.7?'hi':(c>=.5?'md':'lo'),col=v>=72?'#34d399':v>=58?'#a3e635':v>=43?'#fbbf24':v>=28?'#fb923c':'#f87171';
+  return`<div class="conf-row"><span class="conf-icon">${dm.icon}</span><span class="conf-label">${dm.name}</span><div class="conf-track"><div class="conf-fill ${cl}" style="width:${v}%;background:${col}"></div></div><span class="conf-val" style="color:${col}">${v}</span><span class="conf-dots ${cl}">${c>=.85?'●●●':c>=.7?'●●◐':c>=.5?'●●○':c>=.35?'●○○':'○○○'}</span></div>`}).join('')}
+function cov(ca){return DO.map(d=>{const c=ca[d]||.5,dm=DM[d],p=Math.round(c*100),col=c>=.7?'var(--green)':(c>=.5?'var(--yellow)':'var(--red)'),lb=c>=.7?'高信度':(c>=.5?'中信度':'低信度');
+  return`<div class="conf-row"><span class="conf-icon">${dm.icon}</span><span class="conf-label">${dm.name}</span><div class="conf-track"><div class="conf-fill" style="width:${p}%;background:${col}"></div></div><span class="conf-val" style="color:${col}">${p}%</span><span class="badge ${c>=.7?'hi':(c>=.5?'md':'lo')}">${lb}</span></div>`}).join('')}
+function dt(dc){const e=Object.entries(dc).slice(-14);if(!e.length)return'<div class="empty">暂无数据</div>';const mx=Math.max(...e.map(x=>x[1]),1);
+  return`<div style="display:flex;align-items:flex-end;gap:4px;height:100px;padding:8px 0">${e.map(([d,c])=>`<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px"><span style="font-size:9px;font-weight:600;color:var(--accent)">${c}</span><div style="width:100%;max-width:28px;height:${Math.max(3,Math.round(c/mx*80))}px;background:linear-gradient(180deg,var(--accent),#6d28d9);border-radius:3px 3px 0 0"></div><span style="font-size:7px;color:var(--muted)">${d.slice(5)}</span></div>`).join('')}</div>`}
+function mt(rs){if(!rs.length)return'<div class="empty">暂无记录</div>';
+  return`<table class="data-table"><thead><tr><th>用户</th><th>时间</th><th>主导维度</th><th>均分</th><th>置信度</th></tr></thead><tbody>${rs.map(r=>{const s=r.scores||{},c=r.confidence||{},t=Object.entries(s).sort((a,b)=>b[1]-a[1])[0],as=Math.round(Object.values(s).reduce((a,b)=>a+b,0)/8),ac=Object.values(c).length?Object.values(c).reduce((a,b)=>a+b,0)/Object.values(c).length:.5,cl=ac>=.7?'hi':(ac>=.5?'md':'lo');
+  return`<tr onclick="su('${r.user_id}')"><td><strong>${es(r.nickname||'匿名')}</strong></td><td style="color:var(--muted)">${(r.created_at||'').slice(0,16)}</td><td>${t?(DM[t[0]]?.icon||'')+' '+DM[t[0]]?.name:'-'}</td><td>${as}</td><td><span class="badge ${cl}">${ac>=.7?'高':ac>=.5?'中':'低'} ${Math.round(ac*100)}%</span></td></tr>`}).join('')}</tbody></table>`}
+
+// ═══ RECORDS ═══
+async function recs(){
+  document.getElementById('mc').innerHTML='<div class="loading"><div class="spin"></div>加载中...</div>';
+  if(!S.records.length){try{const r=await fetch(A+'/api/workspace/records?per_page=100');S.records=(await r.json()).records||[]}catch(e){}}
+  ru();
+}
+function ru(){
+  document.getElementById('mc').innerHTML=`
+    <div class="topbar"><div class="topbar-left"><div class="topbar-title">👥 用户档案</div><span style="font-size:10px;color:var(--muted)">${S.records.length} 条</span></div><div class="topbar-right"><select id="sb" onchange="rf()"><option value="created_at">按时间</option><option value="confidence">按置信度</option><option value="score">按得分</option></select></div></div>
+    <div class="content"><div class="fbar"><input id="sq" placeholder="🔍 搜索昵称..." oninput="rf()"><select id="sf" onchange="rf()"><option value="all">全部</option><option value="hi">高信度 ≥70%</option><option value="md">中信度</option><option value="lo">低信度 &lt;50%</option></select></div>
+    <div class="card" style="padding:0;overflow:hidden"><table class="data-table"><thead><tr><th>用户</th><th>时间</th><th>主导维度</th><th>均分</th><th>置信度</th></tr></thead><tbody id="rt"></tbody></table></div>
+    <div style="text-align:center;color:var(--muted);font-size:10px;margin-top:8px" id="ri"></div></div>`;
+  rf();
+}
+function rf(){
+  const t=document.getElementById('rt'),i=document.getElementById('ri');if(!t)return;
+  let f=[...S.records];const q=(document.getElementById('sq')?.value||'').toLowerCase(),sf=document.getElementById('sf')?.value;
+  if(q)f=f.filter(r=>(r.nickname||'').toLowerCase().includes(q));
+  if(sf==='hi')f=f.filter(r=>{const c=Object.values(r.confidence||{});return c.length&&(c.reduce((a,b)=>a+b,0)/c.length)>=.7});
+  else if(sf==='lo')f=f.filter(r=>{const c=Object.values(r.confidence||{});return c.length&&(c.reduce((a,b)=>a+b,0)/c.length)<.5});
+  else if(sf==='md')f=f.filter(r=>{const c=Object.values(r.confidence||{});const a=c.length?c.reduce((a,b)=>a+b,0)/c.length:0;return a>=.5&&a<.7});
+  const sb=document.getElementById('sb')?.value||'created_at';
+  if(sb==='confidence')f.sort((a,b)=>{const ac=Object.values(a.confidence||{}).reduce((x,y)=>x+y,0)/Math.max(1,Object.values(a.confidence||{}).length),bc=Object.values(b.confidence||{}).reduce((x,y)=>x+y,0)/Math.max(1,Object.values(b.confidence||{}).length);return bc-ac});
+  else if(sb==='score')f.sort((a,b)=>{const as=Object.values(a.scores||{}).reduce((x,y)=>x+y,0),bs=Object.values(b.scores||{}).reduce((x,y)=>x+y,0);return bs-as});
+  else f.sort((a,b)=>(b.created_at||'').localeCompare(a.created_at||''));
+  i.textContent=`显示 ${f.length} / ${S.records.length} 条`;
+  t.innerHTML=f.map(r=>{const s=r.scores||{},c=r.confidence||{},t=Object.entries(s).sort((a,b)=>b[1]-a[1])[0],as=Math.round(Object.values(s).reduce((a,b)=>a+b,0)/8),ac=Object.values(c).length?Object.values(c).reduce((a,b)=>a+b,0)/Object.values(c).length:.5,cl=ac>=.7?'hi':(ac>=.5?'md':'lo');
+  return`<tr class="${S.uid===r.user_id?'sel':''}" onclick="su('${r.user_id}')"><td><strong>${es(r.nickname||'匿名')}</strong></td><td style="color:var(--muted)">${(r.created_at||'').slice(0,16)}</td><td>${t?(DM[t[0]]?.icon||'')+' '+DM[t[0]]?.name:'-'}</td><td>${as}</td><td><span class="badge ${cl}">${ac>=.7?'高':ac>=.5?'中':'低'} ${Math.round(ac*100)}%</span></td></tr>`}).join('')}
+
+// ═══ USER DETAIL ═══
+async function su(uid){
+  S.uid=uid;S.view='detail';document.querySelectorAll('.nav-item').forEach(e=>e.classList.remove('active'));
+  document.getElementById('mc').innerHTML='<div class="loading"><div class="spin"></div>加载画像...</div>';
+  try{const r=await fetch(A+'/api/workspace/portrait/'+uid);if(!r.ok)throw new Error('not found');S.portrait=await r.json();detail()}catch(e){document.getElementById('mc').innerHTML=`<div class="empty"><div class="ic">❌</div>加载失败<br><button class="btn btn-o" style="margin-top:10px" onclick="nav('records')">← 返回</button></div>`}
+}
+function detail(){
+  const p=S.portrait;if(!p){nav('records');return}
+  const dd=p.dim_data||{},sc=p.scores||{},cf=p.confidence||{},ins=p.insights||[],pr=p.prompts||{},prf=p.profile||{};
+  const acv=Object.values(cf).length?Math.round(Object.values(cf).reduce((a,b)=>a+b,0)/Object.values(cf).length*100):50;
+  const asv=Math.round(Object.values(sc).reduce((a,b)=>a+b,0)/8);
+  const td=Object.entries(sc).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('mc').innerHTML=`
+    <div class="topbar"><div class="topbar-left"><div class="topbar-title">🔬 用户画像</div><span style="font-size:10px;color:var(--muted)"><a href="#" onclick="nav('records');return false" style="color:var(--muted)">档案</a> / ${es(p.nickname||'匿名')}</span></div><div class="topbar-right"><span class="badge ${acv>=70?'hi':(acv>=50?'md':'lo')}">信度 ${acv}%</span><button class="btn btn-o" onclick="nav('records')">← 返回</button></div></div>
+    <div class="content">
+      <div class="detail-head"><div class="av">${td?DM[td[0]]?.icon||'🧠':'🧠'}</div><div><div style="font-weight:600;font-size:16px">${es(p.nickname||'匿名')}</div><div style="font-size:10px;color:var(--muted)">${(p.created_at||'').slice(0,19)} · 均分${asv} · 信度${acv}%</div></div></div>
+      <div class="tabs"><button class="on" onclick="st('portrait',this)">📊 画像</button><button onclick="st('insights',this)">💡 洞察</button><button onclick="st('prompts',this)">⚡ Prompts</button><button onclick="st('raw',this)">🔢 数据</button></div>
+      <div id="tp">
+        <div class="grid grid-2" style="margin-bottom:14px">
+          <div class="card"><div class="card-title" style="margin-bottom:12px">📊 8维分数 · 置信度</div>${ubars(dd,cf,sc)}</div>
+          <div class="card"><div class="card-title" style="margin-bottom:12px">🔬 信度分析</div>${ua(cf,sc)}</div>
+        </div>
+        ${prf.cognitive_os?`<div class="card"><div style="font-weight:600;margin-bottom:10px">🧠 认知OS</div><div style="background:var(--surface);border-radius:8px;padding:12px;font-size:12px;line-height:1.8;color:#d1d5db">${es(prf.cognitive_os)}</div></div>`:''}
+      </div>
+      <div id="ti" style="display:none"><div class="card"><div class="card-title" style="margin-bottom:12px">💡 ${ins.length} 条洞察</div>${ins.length?ins.map(x=>`<div class="insight"><div class="ii">${x.icon||'💡'}</div><div class="ib"><div class="it">${es(x.title)}</div><div class="itext">${es(x.body)}</div><div style="font-size:8px;color:var(--muted);margin-top:2px">信度 ${Math.round((x.confidence||.5)*100)}% · ${x.type}</div></div></div>`).join(''):'<div class="empty">暂无个性化洞察</div>'}</div></div>
+      <div id="tpr" style="display:none"><div class="card"><div class="card-header"><div><div class="card-title">⚡ AI配置提示词</div><div class="card-sub">复制到 ChatGPT/Claude Custom Instructions</div></div></div><div style="display:flex;gap:4px;margin-bottom:10px"><button class="btn btn-s btn-p" onclick="spm('full',this)">完整版</button><button class="btn btn-s btn-o" onclick="spm('short',this)">精简版</button></div><div class="prompt-box"><button class="copy-btn" onclick="cp()">📋 复制</button><div id="ptx">${es(pr.full||'')}</div></div>${pr.params?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${Object.entries(pr.params).map(([k,v])=>`<span class="badge ac">${k}: ${v}</span>`).join('')}</div>`:''}</div></div>
+      <div id="tr" style="display:none"><div class="card"><div class="card-title" style="margin-bottom:10px">🔢 原始数据</div><table class="data-table"><thead><tr><th>维度</th><th>分数</th><th>等级</th><th>信度</th></tr></thead><tbody>${DO.map(d=>{const x=dd[d]||{},c=cf[d]||.5;return`<tr><td>${x.icon} ${x.label}</td><td><strong>${sc[d]||50}</strong></td><td>${x.level||'-'}</td><td><span class="badge ${c>=.7?'hi':(c>=.5?'md':'lo')}">${Math.round(c*100)}%</span></td></tr>`}).join('')}</tbody></table></div><div class="card"><pre style="font-size:10px;color:var(--muted);max-height:300px;overflow:auto">${es(JSON.stringify({scores:sc,confidence:cf},null,2))}</pre></div></div>
+    </div>`;
+  S.pm='full';
+}
+function ubars(dd,cf,sc){return DO.map(d=>{const x=dd[d]||{},v=sc[d]||50,c=cf[d]||.5,cl=c>=.7?'hi':(c>=.5?'md':'lo'),col=v>=72?'#34d399':v>=58?'#a3e635':v>=43?'#fbbf24':v>=28?'#fb923c':'#f87171';
+  return`<div class="conf-row"><span class="conf-icon">${x.icon||''}</span><span class="conf-label">${x.label||''}</span><div class="conf-track"><div class="conf-fill ${cl}" style="width:${v}%;background:${col}"></div></div><span class="conf-val" style="color:${col}">${v}</span><span class="conf-dots ${cl}" title="信度${Math.round(c*100)}%">${c>=.85?'●●●':c>=.7?'●●◐':c>=.5?'●●○':c>=.35?'●○○':'○○○'}</span></div>`}).join('')}
+function ua(cf,sc){const e=Object.entries(cf).sort((a,b)=>b[1]-a[1]),hi=e.filter(([,v])=>v>=.7),lo=e.filter(([,v])=>v<.5);let h='';
+  if(hi.length)h+=`<div style="margin-bottom:10px"><div style="font-size:10px;color:var(--green);font-weight:600;margin-bottom:4px">✅ 高信度 (≥70%)</div>${hi.map(([d,v])=>`<div style="font-size:11px;padding:2px 0">${DM[d]?.icon||''} ${DM[d]?.name||d} <span style="color:var(--green);font-weight:600">${Math.round(v*100)}%</span> <span style="font-size:9px;color:var(--muted)">分数${sc[d]||50}·信号一致</span></div>`).join('')}</div>`;
+  if(lo.length)h+=`<div><div style="font-size:10px;color:var(--red);font-weight:600;margin-bottom:4px">⚠️ 低信度 (&lt;50%)</div>${lo.map(([d,v])=>`<div style="font-size:11px;padding:2px 0">${DM[d]?.icon||''} ${DM[d]?.name||d} <span style="color:var(--red);font-weight:600">${Math.round(v*100)}%</span> <span style="font-size:9px;color:var(--muted)">分数${sc[d]||50}·信号波动</span></div>`).join('')}<div style="font-size:9px;color:var(--muted);margin-top:6px;line-height:1.5">💡 低信度可能说明情境依赖行为差异，建议更多数据验证。</div></div>`;
+  if(!h)h='<div style="font-size:11px;color:var(--muted);text-align:center;padding:16px">所有维度信度在50-70%，方向可信。</div>';
+  return h}
+function st(tab,btn){document.getElementById('tp').style.display=tab==='portrait'?'block':'none';document.getElementById('ti').style.display=tab==='insights'?'block':'none';document.getElementById('tpr').style.display=tab==='prompts'?'block':'none';document.getElementById('tr').style.display=tab==='raw'?'block':'none';document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('on'));if(btn)btn.classList.add('on')}
+function spm(mode,btn){S.pm=mode;document.querySelectorAll('#tpr .btn-s').forEach(b=>b.classList.toggle('btn-p',b===btn).classList.toggle('btn-o',b!==btn));const pr=S.portrait?.prompts;if(pr)document.getElementById('ptx').textContent=pr[mode]||''}
+function cp(){const t=document.getElementById('ptx')?.textContent||'';navigator.clipboard?.writeText(t).then(()=>{const b=document.querySelector('.copy-btn');if(b){b.textContent='✅ 已复制';setTimeout(()=>b.textContent='📋 复制',2000)}})}
+
+// ═══ PROMPT WORKSHOP ═══
+function pw(){
+  document.getElementById('mc').innerHTML=`
+    <div class="topbar"><div class="topbar-left"><div class="topbar-title">⚡ Prompt 工坊</div></div></div>
+    <div class="content"><div class="card"><div class="card-header"><div><div class="card-title">🎯 按用户生成AI提示词</div><div class="card-sub">可直接用于 ChatGPT/Claude 的个性化配置</div></div></div>
+    <div style="margin-bottom:12px"><select id="pu" style="padding:8px 12px;border-radius:7px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;width:100%;max-width:360px;outline:none;font-family:inherit"><option value="">-- 选择用户 --</option>${(S.records||[]).map(r=>{const ac=Object.values(r.confidence||{}).length?Math.round(Object.values(r.confidence).reduce((a,b)=>a+b,0)/Object.values(r.confidence).length*100):50;return`<option value="${r.user_id}">${es(r.nickname||'匿名')} · 信度${ac}% · ${(r.created_at||'').slice(0,16)}</option>`}).join('')}</select>
+    <button class="btn btn-p" style="margin-left:6px" onclick="gp()">⚡ 生成</button></div>
+    <div id="wr"></div></div></div>`;
+}
+async function gp(){const uid=document.getElementById('pu')?.value;if(!uid)return;const r=document.getElementById('wr');r.innerHTML='<div class="loading"><div class="spin"></div>生成中...</div>';
+  try{const p=await(await fetch(A+'/api/workspace/portrait/'+uid)).json();const pr=p.prompts||{};
+  r.innerHTML=`<div style="margin-top:12px"><div style="display:flex;gap:4px;margin-bottom:8px"><button class="btn btn-s btn-p" onclick="wpm('full',this,\`${ea(pr.full||'')}\`)">完整版</button><button class="btn btn-s btn-o" onclick="wpm('short',this,\`${ea(pr.short||'')}\`)">精简版</button></div><div class="prompt-box"><button class="copy-btn" onclick="wcp()">📋 复制</button><div id="wpt">${es(pr.full||'')}</div></div>${pr.params?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">${Object.entries(pr.params).map(([k,v])=>`<span class="badge ac">${k}: ${v}</span>`).join('')}</div>`:''}</div>`}catch(e){r.innerHTML=`<div style="color:var(--red);font-size:11px;padding:8px">错误: ${e.message}</div>`}}
+function wpm(mode,btn,txt){document.querySelectorAll('#wr .btn-s').forEach(b=>b.classList.toggle('btn-p',b===btn).classList.toggle('btn-o',b!==btn));document.getElementById('wpt').textContent=txt}
+function wcp(){const t=document.getElementById('wpt')?.textContent||'';navigator.clipboard?.writeText(t).then(()=>st2('✅ 已复制'))}
+
+// ═══ UTILS ═══
+function es(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function ea(s){return(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function st2(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2300)}
+
+document.querySelectorAll('.nav-item').forEach(e=>e.addEventListener('click',()=>nav(e.dataset.v)));
+nav('dashboard');
+</script>
+</body>
+</html>
