@@ -82,7 +82,7 @@ done
 
 # ── 2. 飞轮控制台 Canvas ──
 info "飞轮控制台由 OpenClaw Gateway 托管"
-CANVAS_URL="http://localhost:18789/__openclaw__/canvas/flywheel/console.html"
+CANVAS_URL="http://localhost:8899/flywheel"
 if curl -s -o /dev/null -w "%{http_code}" "$CANVAS_URL" 2>/dev/null | grep -q 200; then
     log "飞轮控制台已就绪"
 else

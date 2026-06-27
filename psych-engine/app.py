@@ -499,10 +499,129 @@ def xixi_workspace():
     """析析 人格分析引擎 工作区 — Phase 1"""
     return render_template("xixi.html", dims_meta=DIMS, dim_order=DIM_ORDER)
 
+@app.route("/cece")
+def cece_workspace():
+    """策策 策略+内容官 工作区 — Phase 1"""
+    return render_template("cece.html")
+
+@app.route("/jianjian")
+def jianjian_workspace():
+    """荐荐 分类+推荐官 工作区 — Phase 1"""
+    return render_template("jianjian.html")
+
+@app.route("/kongkong")
+def kongkong_workspace():
+    """控控 财务官 工作区 — Phase 1"""
+    return render_template("kongkong.html")
+
+# ============ 策策 API ============
+
+@app.route("/api/cece/topics")
+def api_cece_topics():
+    """返回当前活跃话题列表"""
+    return jsonify({
+        "topics": [
+            {"id":1,"title":"精神内耗等级测试","hook":"测测你的精神内耗到了哪一级","viral_score":9.2,"phase":"trending","audience":"23-35岁职场人","platforms":["小红书","抖音","B站"]},
+            {"id":2,"title":"情绪价值类型测试","hook":"你在关系中提供的是哪种情绪价值？","viral_score":8.1,"phase":"testing","audience":"18-30岁社交活跃用户","platforms":["小红书","微博"]},
+            {"id":3,"title":"人生副本模式测试","hook":"你的人生正在玩哪个难度副本？","viral_score":7.5,"phase":"ready","audience":"20-35岁游戏+成长交叉人群","platforms":["B站","抖音"]},
+        ],
+        "total_active": 3,
+        "avg_viral_score": 7.8
+    })
+
+@app.route("/api/cece/status")
+def api_cece_status():
+    """策策工作区状态"""
+    return jsonify({
+        "name": "策策 · 策略+内容官",
+        "status": "ready",
+        "active_topics": 3,
+        "questions_drafted": 16,
+        "content_pieces": 12,
+        "model": "v4-flash"
+    })
+
+# ============ 荐荐 API ============
+
+@app.route("/api/jianjian/status")
+def api_jianjian_status():
+    """荐荐工作区状态"""
+    return jsonify({
+        "name": "荐荐 · 分类+推荐官",
+        "status": "ready",
+        "products": len(PRODUCTS),
+        "clusters": 4,
+        "recommendations_generated": 0,
+        "model": "v4-flash"
+    })
+
+@app.route("/api/jianjian/products")
+def api_jianjian_products():
+    """返回产品目录"""
+    return jsonify({"products": PRODUCTS})
+
+# ============ 控控 API ============
+
+@app.route("/api/kongkong/status")
+def api_kongkong_status():
+    """控控工作区状态"""
+    return jsonify({
+        "name": "控控 · 财务官",
+        "status": "ready",
+        "total_budget": 30000,
+        "spent": 0,
+        "remaining": 30000,
+        "daily_limit": 1000,
+        "channels": [
+            {"name":"抖音","icon":"🎵","alloc_pct":35,"alloc_amt":10500,"spent":0},
+            {"name":"小红书","icon":"📕","alloc_pct":25,"alloc_amt":7500,"spent":0},
+            {"name":"B站","icon":"📺","alloc_pct":15,"alloc_amt":4500,"spent":0},
+            {"name":"微博","icon":"🟠","alloc_pct":15,"alloc_amt":4500,"spent":0},
+            {"name":"机动","icon":"🔧","alloc_pct":10,"alloc_amt":3000,"spent":0},
+        ],
+        "alerts": [],
+        "model": "v4-flash"
+    })
+
+RECS_FILE = os.path.join(DATA_DIR, "recommendations.jsonl")
+
+PRODUCTS = [
+    {"id":"prompt-pack","name":"AI个性化提示词包","price":9.9,"cost":0,"tier":"tier1","tier_label":"Tier 1 · 自有虚拟","desc":"基于人格画像的10条专属AI提示词模板","fit_personas":["深度分析型","社交驱动型","内在探索型","稳健信任型"]},
+    {"id":"deep-report","name":"深度人格报告","price":29.9,"cost":0,"tier":"tier1","tier_label":"Tier 1 · 自有虚拟","desc":"5维度+职业建议+AI适配方案","fit_personas":["深度分析型","内在探索型"]},
+    {"id":"ai-coach","name":"AI沟通训练营","price":49.9,"cost":0,"tier":"tier1","tier_label":"Tier 1 · 自有虚拟","desc":"7天，每天一个基于人格的提示词练习","fit_personas":["深度分析型","内在探索型"]},
+    {"id":"soul-mate","name":"你的AI灵魂伴侣报告","price":19.9,"cost":0,"tier":"tier1","tier_label":"Tier 1 · 自有虚拟","desc":"哪款AI最适合你+怎么调教它","fit_personas":["社交驱动型","稳健信任型"]},
+    {"id":"notion-ai","name":"Notion AI 会员","price":69,"cost":0,"tier":"tier2","tier_label":"Tier 2 · 联盟分销","desc":"~20%佣金","fit_personas":["深度分析型"]},
+    {"id":"midjourney","name":"Midjourney 会员","price":199,"cost":0,"tier":"tier2","tier_label":"Tier 2 · 联盟分销","desc":"~15%佣金","fit_personas":["稳健信任型"]},
+    {"id":"character-ai","name":"Character.AI Premium","price":69,"cost":0,"tier":"tier2","tier_label":"Tier 2 · 联盟分销","desc":"~20%佣金","fit_personas":["社交驱动型"]},
+    {"id":"perplexity","name":"Perplexity Pro","price":139,"cost":0,"tier":"tier2","tier_label":"Tier 2 · 联盟分销","desc":"~25%佣金","fit_personas":["内在探索型"]},
+    {"id":"claude-max","name":"Claude Max 订阅","price":699,"cost":0,"tier":"tier2","tier_label":"Tier 2 · 联盟分销","desc":"~15%佣金","fit_personas":["内在探索型"]},
+    {"id":"ai-coach-pro","name":"你的专属AI教练","price":99,"cost":0,"tier":"tier3","tier_label":"Tier 3 · 未来上架","desc":"基于人格画像的每日1v1 AI对话（月费）","fit_personas":["深度分析型","社交驱动型"]},
+    {"id":"team-report","name":"团队人格匹配报告","price":199,"cost":0,"tier":"tier3","tier_label":"Tier 3 · 未来上架","desc":"企业版：团队人格分布+协作建议","fit_personas":["深度分析型"]},
+    {"id":"annual-pass","name":"AI人格进化年度会员","price":299,"cost":0,"tier":"tier3","tier_label":"Tier 3 · 未来上架","desc":"含月度报告+专属提示词更新+新品体验","fit_personas":["深度分析型","内在探索型"]},
+]
+
+# 产品也在 /api/kongkong/pricing 暴露给控控
+@app.route("/api/kongkong/pricing")
+def api_kongkong_pricing():
+    """定价分层数据"""
+    return jsonify({
+        "tiers": [
+            {"name":"免费层","price":0,"features":["基础人格画像","8维度得分","认知OS总结","分享结果卡片"]},
+            {"name":"Pro 层","price":9.9,"features":["全部免费内容","8维深度解析","AI个性化提示词包","职业建议","月度更新"]},
+            {"name":"高客单","price":"99-299","features":["Pro全部内容","专属AI教练","月度深度报告","新品优先体验","年度会员"]},
+        ],
+        "products": PRODUCTS
+    })
+
 @app.route("/ads")
 def ads_dashboard():
     """广告投放管理页面"""
     return render_template("ads.html")
+
+@app.route("/portal")
+def flywheel_portal():
+    """飞轮系统统一门户"""
+    return render_template("portal.html")
 
 @app.route("/api/ads/status")
 def api_ads_status():

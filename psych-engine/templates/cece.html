@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 策策 · 策略+内容官</title>
+<style>
+:root {
+  --bg: #080b11; --surface: #111620; --card: #161b26;
+  --border: #212836; --text: #e1e4eb; --muted: #6e7687;
+  --accent: #8b5cf6; --accent2: #6366f1; --green: #22c55e;
+  --yellow: #eab308; --red: #ef4444; --orange: #f97316;
+  --cyan: #06b6d4; --radius: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.header-left{display:flex;align-items:center;gap:12px}
+.header-emoji{font-size:28px}
+.header-title{font-size:18px;font-weight:700}.header-subtitle{font-size:12px;color:var(--muted)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.tabs{display:flex;gap:2px;padding:12px 24px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.tab-btn{padding:8px 18px;border:none;background:none;color:var(--muted);font-size:13px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-family:inherit;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+
+.content{padding:24px;max-width:1400px;margin:0 auto}
+.panels{display:none}.panels.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600}.card-subtitle{font-size:11px;color:var(--muted)}
+
+.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.btn{padding:8px 16px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{background:var(--border)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn-primary:hover{background:#7c3aed}
+.btn-danger{background:var(--red);border-color:var(--red);color:#fff}
+.btn-sm{padding:4px 10px;font-size:10px}.btn:disabled{opacity:.5;cursor:not-allowed}
+
+input,textarea,select{width:100%;padding:8px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;font-family:inherit}
+textarea{resize:vertical;min-height:80px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px;font-weight:500}
+.form-group{margin-bottom:16px}
+
+.tag{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:500}
+.tag-trending{background:#22c55e20;color:var(--green)}
+.tag-testing{background:#eab30820;color:var(--yellow)}
+.tag-ready{background:#6366f120;color:var(--accent)}
+.tag-draft{background:#6e768720;color:var(--muted)}
+
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+.metric-value{font-size:24px;font-weight:700;margin-bottom:4px}
+.metric-label{font-size:11px;color:var(--muted)}
+
+.topic-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all .2s}
+.topic-card:hover{border-color:var(--accent)}
+.topic-card.selected{border-color:var(--accent);border-width:2px}
+.topic-title{font-size:14px;font-weight:600;margin-bottom:6px}
+.topic-meta{font-size:11px;color:var(--muted);display:flex;gap:12px}
+.topic-score{display:flex;align-items:center;gap:4px;margin-top:8px}
+.score-bar{flex:1;height:6px;border-radius:3px;background:var(--border);overflow:hidden}
+.score-fill{height:100%;border-radius:3px;background:var(--accent);transition:width .3s}
+
+.q-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.q-number{font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;margin-bottom:4px}
+.q-text{font-size:14px;font-weight:500;margin-bottom:12px}
+.q-options{display:grid;gap:8px}
+.q-option{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:12px;transition:all .15s}
+.q-option:hover{border-color:var(--accent)}
+.opt-letter{width:24px;height:24px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--muted);flex-shrink:0}
+
+.content-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:8px}
+.content-platform{font-size:11px;font-weight:600;margin-bottom:4px}
+.content-preview{font-size:12px;color:var(--muted);line-height:1.5}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty-state .icon{font-size:48px;margin-bottom:12px}
+
+.badge{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
+.badge-hot{background:#ef444420;color:var(--red)}.badge-new{background:#6366f120;color:var(--accent)}
+
+.platform-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.platform-tag{padding:3px 10px;border-radius:12px;font-size:10px;font-weight:500;border:1px solid var(--border)}
+.platform-tag.xhs{color:#ff5c5c;border-color:#ff5c5c30}
+.platform-tag.douyin{color:#fff;border-color:#ffffff20}
+.platform-tag.bili{color:#00a1d6;border-color:#00a1d630}
+.platform-tag.weibo{color:var(--red);border-color:#ef444430}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="header-emoji">🧠</div>
+    <div>
+      <div class="header-title">策策 · 策略+内容官</div>
+      <div class="header-subtitle">入口设计 · 内容生产 · 裂变机制 · v4-flash</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:11px;color:var(--muted)" id="conn-status">🟡 就绪</span>
+    <a href="/" style="color:var(--muted);text-decoration:none;font-size:11px">← 回到测试</a>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="strategy">📊 策略仪表盘</button>
+  <button class="tab-btn" data-tab="questions">📝 题目设计</button>
+  <button class="tab-btn" data-tab="content">📱 内容规划</button>
+  <button class="tab-btn" data-tab="viral">🦠 裂变机制</button>
+</div>
+
+<div class="content">
+  <!-- STRATEGY DASHBOARD -->
+  <div class="panels active" id="panel-strategy">
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card">
+        <div class="metric-value" id="m-active-topics">3</div>
+        <div class="metric-label">活跃话题</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="m-avg-viral-score">7.8</div>
+        <div class="metric-label">平均爆款分 /10</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="m-questions-drafted">16</div>
+        <div class="metric-label">已拟题目</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="m-content-pieces">12</div>
+        <div class="metric-label">待发布内容</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">🔥 活跃测试话题</div>
+          <div class="card-subtitle">按爆款潜力排序 · 点击展开策略详情</div>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="newTopic()">+ 新话题</button>
+      </div>
+      <div id="topic-list"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📈 话题性能趋势</div>
+      </div>
+      <div id="trend-chart" style="height:200px;display:flex;align-items:center;justify-content:center;color:var(--muted)">
+        📊 连接真实数据后将展示趋势图
+      </div>
+    </div>
+  </div>
+
+  <!-- QUESTION DESIGNER -->
+  <div class="panels" id="panel-questions">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">📝 题目编辑器</div>
+          <div class="card-subtitle">动态出题 · 8维度覆盖 · 自适应测试</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-sm" onclick="resetQForm()">🔄 重置</button>
+          <button class="btn btn-primary btn-sm" id="btn-save-q">💾 保存题目</button>
+        </div>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <div class="form-group">
+            <label>所属维度</label>
+            <select id="q-dim">
+              <option value="IM">🧬 信息代谢</option><option value="DA">⚙️ 决策架构</option>
+              <option value="AS">🎯 注意力结构</option><option value="ME">🚀 动机引擎</option>
+              <option value="ST">🌐 社交拓扑</option><option value="CB">💻 认知带宽</option>
+              <option value="FM">🔄 反馈模式</option><option value="TB">🔗 信任建立</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>题目文字</label>
+            <textarea id="q-text" placeholder="例如：你在做一个重要决定时，更倾向于..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>题目类型</label>
+            <select id="q-type"><option value="scenario">情景题</option><option value="preference">偏好题</option><option value="self-report">自评题</option></select>
+          </div>
+          <div class="form-group">
+            <label>爆款钩子（可选）</label>
+            <input id="q-hook" placeholder="让人忍不住点进来的一句话">
+          </div>
+        </div>
+        <div>
+          <label style="margin-bottom:12px">选项设计（每题4选项，含维度分 -3~+3）</label>
+          <div id="q-options-editor"></div>
+          <button class="btn btn-sm" style="margin-top:8px" onclick="addOption()">+ 加选项</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📋 已拟题目</div>
+      </div>
+      <div id="q-list">加载中...</div>
+    </div>
+  </div>
+
+  <!-- CONTENT PLANNER -->
+  <div class="panels" id="panel-content">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">📱 社媒内容规划</div>
+          <div class="card-subtitle">小红书 · 抖音 · B站 · 视频号 · 微博</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <select id="content-platform" style="width:auto;min-width:120px" onchange="filterContent()">
+            <option value="all">全部平台</option>
+            <option value="小红书">小红书</option>
+            <option value="抖音">抖音</option>
+            <option value="B站">B站</option>
+            <option value="视频号">视频号</option>
+            <option value="微博">微博</option>
+          </select>
+          <button class="btn btn-primary btn-sm" onclick="newContent()">+ 新内容</button>
+        </div>
+      </div>
+      <div id="content-list"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📅 3天内容排期</div>
+      </div>
+      <div class="grid grid-3" id="schedule-grid">
+        <div class="card" style="text-align:center">
+          <div style="font-weight:600;margin-bottom:8px">Day 1 · 引爆</div>
+          <div style="font-size:12px;color:var(--muted)">情绪钩子+争议角度<br>首日曝光最大化</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-weight:600;margin-bottom:8px">Day 2 · 裂变</div>
+          <div style="font-size:12px;color:var(--muted)">分享卡片+UGC刺激<br>传播路径扩展</div>
+        </div>
+        <div class="card" style="text-align:center">
+          <div style="font-weight:600;margin-bottom:8px">Day 3 · 沉淀</div>
+          <div style="font-size:12px;color:var(--muted)">深度分析+知识沉淀<br>长尾流量收割</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIRAL MECHANISMS -->
+  <div class="panels" id="panel-viral">
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🦠 裂变机制设计</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;color:var(--muted)">
+          <p style="margin-bottom:12px"><strong style="color:var(--text)">分享话术模板</strong></p>
+          <div style="background:var(--surface);padding:12px;border-radius:8px;margin-bottom:16px">
+            <p>"我的认知OS居然是XX型——测完感觉被看穿了 🔗"</p>
+          </div>
+          <div style="background:var(--surface);padding:12px;border-radius:8px;margin-bottom:16px">
+            <p>"测完这个我理解了为什么我和XX总是想得不一样..."</p>
+          </div>
+          <div style="background:var(--surface);padding:12px;border-radius:8px">
+            <p>"朋友发我的这个测试...结果准到我不敢发朋友圈 😂"</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📊 传播路径监测</div>
+        </div>
+        <div id="viral-metrics" style="margin-bottom:12px">
+          <div class="metric-grid" style="grid-template-columns:repeat(2,1fr)">
+            <div class="metric-card"><div class="metric-value">--</div><div class="metric-label">分享率</div></div>
+            <div class="metric-card"><div class="metric-value">--</div><div class="metric-label">裂变系数 K</div></div>
+            <div class="metric-card"><div class="metric-value">--</div><div class="metric-label">ref链最深</div></div>
+            <div class="metric-card"><div class="metric-value">--</div><div class="metric-label">回流率</div></div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--muted)">
+          <p>💡 <strong style="color:var(--text)">第一性原理：</strong>裂变 = 分享欲 ÷ 分享摩擦。降低摩擦（一键复制、预填文案、截图优化）比提升分享欲更可控。</p>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column:1/-1">
+        <div class="card-header">
+          <div class="card-title">🧪 A/B测试对照</div>
+        </div>
+        <div class="grid grid-3">
+          <div style="padding:12px;background:var(--surface);border-radius:8px">
+            <div style="font-weight:600;font-size:13px;margin-bottom:6px">A组 · 情绪钩子</div>
+            <div style="font-size:11px;color:var(--muted)">"测测你是不是精神内耗体质"</div>
+          </div>
+          <div style="padding:12px;background:var(--surface);border-radius:8px">
+            <div style="font-weight:600;font-size:13px;margin-bottom:6px">B组 · 身份认同</div>
+            <div style="font-size:11px;color:var(--muted)">"你的认知系统属于哪种类型？"</div>
+          </div>
+          <div style="padding:12px;background:var(--surface);border-radius:8px">
+            <div style="font-weight:600;font-size:13px;margin-bottom:6px">对照组 · 功能导向</div>
+            <div style="font-size:11px;color:var(--muted)">"8维度AI人格分析测试"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── State ──
+const phaseLabels = {trending:'🔥趋势', testing:'🧪测试中', ready:'✅就绪', draft:'📝草稿'};
+const statusLabels = {draft:'草稿', published:'已发布'};
+let topics = [
+  {id:1, title:'精神内耗等级测试', hook:'测测你的精神内耗到了哪一级', viral_score:9.2, phase:'trending', audience:'23-35岁职场人', platforms:['小红书','抖音','B站'], insights:'年轻人精神内耗话题持续高热，结合MBTI退潮后的测试缺口'},
+  {id:2, title:'情绪价值类型测试', hook:'你在关系中提供的是哪种情绪价值？', viral_score:8.1, phase:'testing', audience:'18-30岁社交活跃用户', platforms:['小红书','微博'], insights:'情绪价值=2025-2026社交货币，分享意愿极高'},
+  {id:3, title:'人生副本模式测试', hook:'你的人生正在玩哪个难度副本？', viral_score:7.5, phase:'ready', audience:'20-35岁游戏+成长交叉人群', platforms:['B站','抖音'], insights:'游戏化叙事降低心理防御，适合男性用户入口'}
+];
+
+let contentItems = [
+  {id:1, platform:'小红书', topic:'精神内耗', title:'做完这个测试，我终于知道自己为什么这么累了', format:'图文', status:'draft', day:1},
+  {id:2, platform:'抖音', topic:'精神内耗', title:'3类人最容易被内耗吃掉 #精神内耗 #心理测试', format:'短视频', status:'draft', day:1},
+  {id:3, platform:'B站', topic:'精神内耗', title:'深度解析：你的大脑在用什么操作系统？18分钟版', format:'中视频', status:'draft', day:3},
+  {id:4, platform:'小红书', topic:'情绪价值', title:'测完才知道我一直在关系中提供这种价值', format:'图文', status:'draft', day:1},
+  {id:5, platform:'微博', topic:'情绪价值', title:'#你的情绪价值类型# 测完，原来我是XX型', format:'话题', status:'draft', day:2},
+];
+
+// ── Render Topics ──
+function renderTopics() {
+  const el = document.getElementById('topic-list');
+  el.innerHTML = topics.map(t => `
+    <div class="topic-card" onclick="selectTopic(${t.id})">
+      <div style="display:flex;justify-content:space-between;align-items:start">
+        <div style="flex:1">
+          <div class="topic-title">${t.title}</div>
+          <div class="topic-meta">
+            <span>🎯 ${t.audience}</span>
+            <span class="tag tag-${t.phase}">${phaseLabels[t.phase]}</span>
+          </div>
+          <div class="topic-score">
+            <span style="font-size:11px;color:var(--muted)">爆款分</span>
+            <div class="score-bar" style="width:120px"><div class="score-fill" style="width:${t.viral_score*10}%"></div></div>
+            <strong style="font-size:13px">${t.viral_score}/10</strong>
+          </div>
+        </div>
+        <div class="platform-tags">
+          ${t.platforms.map(p => `<span class="platform-tag ${p==='小红书'?'xhs':p==='抖音'?'douyin':p==='B站'?'bili':'weibo'}">${p}</span>`).join('')}
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:var(--muted)">💡 ${t.insights}</div>
+    </div>
+  `).join('');
+}
+
+// ── Render Content ──
+function renderContent() {
+  const el = document.getElementById('content-list');
+  const plat = document.getElementById('content-platform')?.value || 'all';
+  const items = plat === 'all' ? contentItems : contentItems.filter(c => c.platform === plat);
+  el.innerHTML = items.map(c => `
+    <div class="content-item">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="content-platform" style="color:${c.platform==='小红书'?'#ff5c5c':c.platform==='抖音'?'#fff':c.platform==='B站'?'#00a1d6':c.platform==='微博'?'#ef4444':'var(--accent)'}">${c.platform} · ${c.format} · Day ${c.day}</div>
+          <div class="content-preview">${c.title}</div>
+        </div>
+        <span class="tag tag-${c.status}">${c.status==='draft'?'草稿':c.status}</span>
+      </div>
+    </div>
+  `).join('') || '<div class="empty-state"><div class="icon">📭</div>该平台暂无内容</div>';
+}
+
+function filterContent() { renderContent(); }
+
+// ── Question Editor ──
+let qOptions = [];
+function initQEditor() {
+  qOptions = [
+    {text:'', scores:{IM:0,DA:0,AS:0,ME:0,ST:0,CB:0,FM:0,TB:0}},
+    {text:'', scores:{IM:0,DA:0,AS:0,ME:0,ST:0,CB:0,FM:0,TB:0}},
+    {text:'', scores:{IM:0,DA:0,AS:0,ME:0,ST:0,CB:0,FM:0,TB:0}},
+    {text:'', scores:{IM:0,DA:0,AS:0,ME:0,ST:0,CB:0,FM:0,TB:0}},
+  ];
+  renderQOptions();
+}
+
+function renderQOptions() {
+  const el = document.getElementById('q-options-editor');
+  el.innerHTML = qOptions.map((o,i) => `
+    <div class="q-option">
+      <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+      <input value="${o.text}" placeholder="选项文字" style="flex:1;min-width:120px" 
+        onchange="qOptions[${i}].text=this.value">
+      <select style="width:auto;min-width:80px;font-size:10px" onchange="qOptions[${i}].scores[document.getElementById('q-dim').value]=parseInt(this.value)">
+        <option value="0">0</option><option value="1">+1</option><option value="2">+2</option><option value="3">+3</option>
+        <option value="-1">-1</option><option value="-2">-2</option><option value="-3">-3</option>
+      </select>
+    </div>
+  `).join('');
+}
+
+function addOption() {
+  if (qOptions.length < 6) {
+    const dim = document.getElementById('q-dim').value;
+    qOptions.push({text:'', scores:{IM:0,DA:0,AS:0,ME:0,ST:0,CB:0,FM:0,TB:0,[dim]:0}});
+    renderQOptions();
+  }
+}
+
+function resetQForm() {
+  document.getElementById('q-text').value = '';
+  document.getElementById('q-hook').value = '';
+  initQEditor();
+}
+
+function newTopic() {
+  const title = prompt('话题名称（如"情绪价值类型测试"）：');
+  if (title) {
+    topics.push({id:Date.now(), title, hook:'', viral_score:5, phase:'draft', audience:'待定', platforms:[], insights:'新话题，待完善'});
+    renderTopics();
+  }
+}
+
+function newContent() {
+  const platform = document.getElementById('content-platform')?.value || '小红书';
+  const title = prompt('内容标题/角度：');
+  if (title) {
+    contentItems.push({id:Date.now(), platform:platform==='all'?'小红书':platform, topic:'', title, format:'图文', status:'draft', day:1});
+    renderContent();
+  }
+}
+
+// ── Tabs ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.panels').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ── Init ──
+renderTopics();
+renderContent();
+initQEditor();
+
+// ── Iframe detection: hide header when embedded ──
+if (window !== window.parent) {
+  document.head.insertAdjacentHTML('beforeend', `<style>.header{display:none!important}body{padding-top:0}</style>`);
+}
+</script>
+</body>
+</html>

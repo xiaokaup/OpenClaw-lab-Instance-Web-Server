@@ -153,7 +153,10 @@ a:hover{text-decoration:underline}
 
   <!-- ─── Main Content ─── -->
   <main class="main" id="main-content">
-    <!-- Filled by JS router -->
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;color:var(--muted);font-size:14px;flex-direction:column;gap:12px">
+      <div style="font-size:32px">🔄</div>
+      <div>飞轮控制台加载中...</div>
+    </div>
   </main>
 </div>
 
@@ -311,8 +314,10 @@ function navigate(persona, page) {
     case 'systems': renderSystems(main, p); break;
     case 'apis': renderApis(main, p); break;
     case 'toutou': renderToutouWorkspace(main, AGENTS.find(a=>a.id==='toutou'), p); break;
-    case 'cece': case 'xixi': case 'jianjian': case 'kongkong':
-      renderAgentPlaceholder(main, AGENTS.find(a=>a.id===page), p); break;
+    case 'cece': renderCeceWorkspace(main, AGENTS.find(a=>a.id==='cece'), p); break;
+    case 'xixi': renderAgentPlaceholder(main, AGENTS.find(a=>a.id==='xixi'), p); break;
+    case 'jianjian': renderJianjianWorkspace(main, AGENTS.find(a=>a.id==='jianjian'), p); break;
+    case 'kongkong': renderKongkongWorkspace(main, AGENTS.find(a=>a.id==='kongkong'), p); break;
     case 'market': renderPlaceholder(main, p, '🌍', '市场数据', '赛道分析 · 用户趋势 · 渠道表现', 'Phase 2'); break;
     case 'competitors': renderPlaceholder(main, p, '👥', '竞品动态', '竞品追踪 · 差异化分析', 'Phase 2'); break;
     case 'budget': renderPlaceholder(main, p, '💵', '预算总览', '全渠道预算 · 费效比 · 现金流', 'Phase 2'); break;
@@ -573,6 +578,120 @@ function renderToutouWorkspace(main, agent, p) {
   checkToutouConnection();
 }
 
+// ── 策策 工作区 iframe ──
+function renderCeceWorkspace(main, agent, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model} | 测试话题设计·内容生产·裂变</span>
+        <span style="font-size:10px;margin-left:8px;display:flex;align-items:center;gap:4px">
+          <span id="cece-conn-dot" style="width:6px;height:6px;border-radius:50%;background:var(--muted);display:inline-block"></span>
+          <span id="cece-conn-text" style="color:var(--muted)">检测中…</span>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a href="${FLASK_URL}/cece" target="_blank" class="btn btn-sm" style="text-decoration:none">↗ 新窗口</a>
+        <button class="btn btn-sm" onclick="reloadCeceIframe()">🔄 刷新</button>
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="padding:0;height:calc(100vh - 120px);overflow:hidden">
+      <div id="cece-loading" style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--muted);font-size:14px">
+        🧠 正在连接策策工作区…
+      </div>
+      <iframe id="cece-iframe" src="${FLASK_URL}/cece" 
+        style="width:100%;height:100%;border:none;display:none"
+        onload="onCeceIframeLoaded()"
+        onerror="onCeceIframeError()"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
+    </div>
+  `;
+  bindSwitcher();
+  checkCeceConnection();
+}
+
+// ── 荐荐 工作区 iframe ──
+function renderJianjianWorkspace(main, agent, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model} | 用户分群·产品匹配·推荐理由</span>
+        <span style="font-size:10px;margin-left:8px;display:flex;align-items:center;gap:4px">
+          <span id="jianjian-conn-dot" style="width:6px;height:6px;border-radius:50%;background:var(--muted);display:inline-block"></span>
+          <span id="jianjian-conn-text" style="color:var(--muted)">检测中…</span>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a href="${FLASK_URL}/jianjian" target="_blank" class="btn btn-sm" style="text-decoration:none">↗ 新窗口</a>
+        <button class="btn btn-sm" onclick="reloadJianjianIframe()">🔄 刷新</button>
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="padding:0;height:calc(100vh - 120px);overflow:hidden">
+      <div id="jianjian-loading" style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--muted);font-size:14px">
+        🎯 正在连接荐荐工作区…
+      </div>
+      <iframe id="jianjian-iframe" src="${FLASK_URL}/jianjian" 
+        style="width:100%;height:100%;border:none;display:none"
+        onload="onJianjianIframeLoaded()"
+        onerror="onJianjianIframeError()"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
+    </div>
+  `;
+  bindSwitcher();
+  checkJianjianConnection();
+}
+
+// ── 控控 工作区 iframe ──
+function renderKongkongWorkspace(main, agent, p) {
+  main.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-title">${agent.emoji} ${agent.name} · ${agent.role}</div>
+        <span style="font-size:11px;color:var(--muted)">模型: ${agent.model} | 预算管控·CAC/LTV·熔断预警</span>
+        <span style="font-size:10px;margin-left:8px;display:flex;align-items:center;gap:4px">
+          <span id="kongkong-conn-dot" style="width:6px;height:6px;border-radius:50%;background:var(--muted);display:inline-block"></span>
+          <span id="kongkong-conn-text" style="color:var(--muted)">检测中…</span>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a href="${FLASK_URL}/kongkong" target="_blank" class="btn btn-sm" style="text-decoration:none">↗ 新窗口</a>
+        <button class="btn btn-sm" onclick="reloadKongkongIframe()">🔄 刷新</button>
+        <div class="persona-switcher">
+          <button class="persona-btn ${p.id==='jiean'?'active':''}" data-p="jiean">⚙️ 杰安</button>
+          <button class="persona-btn ${p.id==='heshan'?'active':''}" data-p="heshan">💼 河山</button>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="padding:0;height:calc(100vh - 120px);overflow:hidden">
+      <div id="kongkong-loading" style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--muted);font-size:14px">
+        💰 正在连接控控工作区…
+      </div>
+      <iframe id="kongkong-iframe" src="${FLASK_URL}/kongkong" 
+        style="width:100%;height:100%;border:none;display:none"
+        onload="onKongkongIframeLoaded()"
+        onerror="onKongkongIframeError()"
+        allow="clipboard-write"
+        loading="lazy">
+      </iframe>
+    </div>
+  `;
+  bindSwitcher();
+  checkKongkongConnection();
+}
+
 function renderSystems(main, p) {
   main.innerHTML = `
     <div class="topbar">
@@ -713,9 +832,6 @@ async function updateLiveMetrics() {
   } catch(e) { /* Flask not reachable */ }
 }
 
-// ── Workboard API ──
-async function loadWorkboardTasks() {
-
 // ══════════════════════════════════════════════════════════
 //  投投 工作区 iframe 连接
 // ══════════════════════════════════════════════════════════
@@ -765,6 +881,159 @@ function reloadToutouIframe() {
   if (iframe) {
     iframe.style.display = 'none';
     iframe.src = iframe.src; // reload
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  策策 工作区 iframe 连接
+// ══════════════════════════════════════════════════════════
+
+async function checkCeceConnection() {
+  const dot = document.getElementById('cece-conn-dot');
+  const text = document.getElementById('cece-conn-text');
+  if (!dot || !text) return;
+  try {
+    const resp = await fetch(`${FLASK_URL}/api/cece/status`);
+    if (resp.ok) {
+      dot.style.background = 'var(--green)';
+      text.textContent = 'LIVE';
+      text.style.color = 'var(--green)';
+    }
+  } catch(e) {
+    dot.style.background = 'var(--red)';
+    text.textContent = '离线';
+    text.style.color = 'var(--red)';
+  }
+}
+
+function onCeceIframeLoaded() {
+  const loading = document.getElementById('cece-loading');
+  const iframe = document.getElementById('cece-iframe');
+  if (loading) loading.style.display = 'none';
+  if (iframe) iframe.style.display = 'block';
+  checkCeceConnection();
+}
+
+function onCeceIframeError() {
+  const loading = document.getElementById('cece-loading');
+  if (loading) {
+    loading.innerHTML = '⚠️ 无法连接策策工作区<br><span style="font-size:12px;margin-top:8px">请确认 Flask 心因引擎已启动 (port 8899)</span>';
+  }
+  const dot = document.getElementById('cece-conn-dot');
+  const text = document.getElementById('cece-conn-text');
+  if (dot) dot.style.background = 'var(--red)';
+  if (text) { text.textContent = '离线'; text.style.color = 'var(--red)'; }
+}
+
+function reloadCeceIframe() {
+  const iframe = document.getElementById('cece-iframe');
+  const loading = document.getElementById('cece-loading');
+  if (loading) loading.style.display = 'flex';
+  if (iframe) {
+    iframe.style.display = 'none';
+    iframe.src = iframe.src;
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  荐荐 工作区 iframe 连接
+// ══════════════════════════════════════════════════════════
+
+async function checkJianjianConnection() {
+  const dot = document.getElementById('jianjian-conn-dot');
+  const text = document.getElementById('jianjian-conn-text');
+  if (!dot || !text) return;
+  try {
+    const resp = await fetch(`${FLASK_URL}/api/jianjian/status`);
+    if (resp.ok) {
+      dot.style.background = 'var(--green)';
+      text.textContent = 'LIVE';
+      text.style.color = 'var(--green)';
+    }
+  } catch(e) {
+    dot.style.background = 'var(--red)';
+    text.textContent = '离线';
+    text.style.color = 'var(--red)';
+  }
+}
+
+function onJianjianIframeLoaded() {
+  const loading = document.getElementById('jianjian-loading');
+  const iframe = document.getElementById('jianjian-iframe');
+  if (loading) loading.style.display = 'none';
+  if (iframe) iframe.style.display = 'block';
+  checkJianjianConnection();
+}
+
+function onJianjianIframeError() {
+  const loading = document.getElementById('jianjian-loading');
+  if (loading) {
+    loading.innerHTML = '⚠️ 无法连接荐荐工作区<br><span style="font-size:12px;margin-top:8px">请确认 Flask 心因引擎已启动 (port 8899)</span>';
+  }
+  const dot = document.getElementById('jianjian-conn-dot');
+  const text = document.getElementById('jianjian-conn-text');
+  if (dot) dot.style.background = 'var(--red)';
+  if (text) { text.textContent = '离线'; text.style.color = 'var(--red)'; }
+}
+
+function reloadJianjianIframe() {
+  const iframe = document.getElementById('jianjian-iframe');
+  const loading = document.getElementById('jianjian-loading');
+  if (loading) loading.style.display = 'flex';
+  if (iframe) {
+    iframe.style.display = 'none';
+    iframe.src = iframe.src;
+  }
+}
+
+// ══════════════════════════════════════════════════════════
+//  控控 工作区 iframe 连接
+// ══════════════════════════════════════════════════════════
+
+async function checkKongkongConnection() {
+  const dot = document.getElementById('kongkong-conn-dot');
+  const text = document.getElementById('kongkong-conn-text');
+  if (!dot || !text) return;
+  try {
+    const resp = await fetch(`${FLASK_URL}/api/kongkong/status`);
+    if (resp.ok) {
+      dot.style.background = 'var(--green)';
+      text.textContent = 'LIVE';
+      text.style.color = 'var(--green)';
+    }
+  } catch(e) {
+    dot.style.background = 'var(--red)';
+    text.textContent = '离线';
+    text.style.color = 'var(--red)';
+  }
+}
+
+function onKongkongIframeLoaded() {
+  const loading = document.getElementById('kongkong-loading');
+  const iframe = document.getElementById('kongkong-iframe');
+  if (loading) loading.style.display = 'none';
+  if (iframe) iframe.style.display = 'block';
+  checkKongkongConnection();
+}
+
+function onKongkongIframeError() {
+  const loading = document.getElementById('kongkong-loading');
+  if (loading) {
+    loading.innerHTML = '⚠️ 无法连接控控工作区<br><span style="font-size:12px;margin-top:8px">请确认 Flask 心因引擎已启动 (port 8899)</span>';
+  }
+  const dot = document.getElementById('kongkong-conn-dot');
+  const text = document.getElementById('kongkong-conn-text');
+  if (dot) dot.style.background = 'var(--red)';
+  if (text) { text.textContent = '离线'; text.style.color = 'var(--red)'; }
+}
+
+function reloadKongkongIframe() {
+  const iframe = document.getElementById('kongkong-iframe');
+  const loading = document.getElementById('kongkong-loading');
+  if (loading) loading.style.display = 'flex';
+  if (iframe) {
+    iframe.style.display = 'none';
+    iframe.src = iframe.src;
   }
 }
 

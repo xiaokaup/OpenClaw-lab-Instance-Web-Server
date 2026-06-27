@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💰 控控 · 财务官</title>
+<style>
+:root {
+  --bg: #080b11; --surface: #111620; --card: #161b26;
+  --border: #212836; --text: #e1e4eb; --muted: #6e7687;
+  --accent: #f59e0b; --accent2: #d97706; --green: #22c55e;
+  --yellow: #eab308; --red: #ef4444; --orange: #f97316;
+  --cyan: #06b6d4; --purple: #8b5cf6; --radius: 10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;line-height:1.5;min-height:100vh}
+
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.header-left{display:flex;align-items:center;gap:12px}
+.header-emoji{font-size:28px}
+.header-title{font-size:18px;font-weight:700}.header-subtitle{font-size:12px;color:var(--muted)}
+
+.tabs{display:flex;gap:2px;padding:12px 24px 0;background:var(--surface);border-bottom:1px solid var(--border)}
+.tab-btn{padding:8px 18px;border:none;background:none;color:var(--muted);font-size:13px;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;font-family:inherit;display:flex;align-items:center;gap:6px}
+.tab-btn:hover{color:var(--text)}.tab-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+
+.content{padding:24px;max-width:1400px;margin:0 auto}
+.panels{display:none}.panels.active{display:block}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.card-title{font-size:14px;font-weight:600}.card-subtitle{font-size:11px;color:var(--muted)}
+
+.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.btn{padding:8px 16px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;transition:all .15s;font-family:inherit;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.btn:hover{background:var(--border)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#000}.btn-primary:hover{background:#d97706}
+.btn-danger{background:var(--red);border-color:var(--red);color:#fff}
+.btn-sm{padding:4px 10px;font-size:10px}
+
+input,select{width:100%;padding:8px 12px;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;font-family:inherit}
+input:focus,select:focus{outline:none;border-color:var(--accent)}
+label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px;font-weight:500}
+.form-group{margin-bottom:16px}.form-row{display:flex;gap:12px}.form-row>.form-group{flex:1}
+
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;position:relative;overflow:hidden}
+.metric-card.alert{border-color:var(--red)}
+.metric-card.warning{border-color:var(--yellow)}
+.metric-value{font-size:28px;font-weight:700;margin-bottom:4px}
+.metric-label{font-size:11px;color:var(--muted)}
+.metric-delta{font-size:10px;margin-top:4px}.metric-delta.up{color:var(--green)}.metric-delta.down{color:var(--red)}
+
+.progress-bar{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin-top:8px}
+.progress-fill{height:100%;border-radius:3px;transition:width .4s}
+.progress-fill.green{background:var(--green)}.progress-fill.yellow{background:var(--yellow)}.progress-fill.red{background:var(--red)}.progress-fill.accent{background:var(--accent)}
+
+.alert-item{display:flex;align-items:center;gap:12px;padding:12px;background:var(--surface);border-radius:8px;margin-bottom:8px;border-left:3px solid var(--border)}
+.alert-item.critical{border-left-color:var(--red)}
+.alert-item.warning{border-left-color:var(--yellow)}
+.alert-item.info{border-left-color:var(--cyan)}
+.alert-icon{font-size:20px;flex-shrink:0}
+.alert-body{flex:1;min-width:0}
+.alert-title{font-size:13px;font-weight:600}.alert-desc{font-size:11px;color:var(--muted)}
+.alert-time{font-size:10px;color:var(--muted);flex-shrink:0}
+
+.tier-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;transition:all .2s}
+.tier-card:hover{border-color:var(--accent)}
+.tier-icon{font-size:32px;margin-bottom:8px}
+.tier-name{font-size:16px;font-weight:700;margin-bottom:4px}
+.tier-price{font-size:24px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.tier-features{font-size:11px;color:var(--muted);line-height:1.8}
+
+.channel-bar{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.channel-name{font-size:13px;font-weight:500;width:80px;flex-shrink:0}
+.channel-bar-track{flex:1;height:28px;border-radius:6px;background:var(--border);overflow:hidden;position:relative}
+.channel-bar-fill{height:100%;border-radius:6px;position:absolute;left:0;top:0;display:flex;align-items:center;padding-left:8px;font-size:10px;font-weight:600;min-width:2px}
+.channel-bar-spent{opacity:.5}
+.channel-amount{font-size:12px;font-weight:600;width:70px;text-align:right;flex-shrink:0}
+
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);color:var(--muted);font-weight:500;font-size:11px;text-transform:uppercase}
+td{padding:10px 12px;border-bottom:1px solid var(--border)}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty-state .icon{font-size:48px;margin-bottom:12px}
+
+.status-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px}
+.status-dot.green{background:var(--green);animation:pulse 2s infinite}
+.status-dot.yellow{background:var(--yellow)}
+.status-dot.red{background:var(--red);animation:pulse .8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="header-emoji">💰</div>
+    <div>
+      <div class="header-title">控控 · 财务官</div>
+      <div class="header-subtitle">预算管控 · 单位经济学 · 异常预警 · v4-flash</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <span style="font-size:11px;color:var(--muted)" id="conn-status">
+      <span class="status-dot green"></span> 独立运行
+    </span>
+    <a href="/" style="color:var(--muted);text-decoration:none;font-size:11px">← 回到测试</a>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="overview">📊 预算总览</button>
+  <button class="tab-btn" data-tab="unit-econ">📐 单位经济学</button>
+  <button class="tab-btn" data-tab="pricing">🏷️ 定价分层</button>
+  <button class="tab-btn" data-tab="alerts">🚨 预警中心</button>
+</div>
+
+<div class="content">
+  <!-- BUDGET OVERVIEW -->
+  <div class="panels active" id="panel-overview">
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card">
+        <div class="metric-label">总预算（月）</div>
+        <div class="metric-value">¥30,000</div>
+        <div class="metric-delta">Phase 1 额度</div>
+      </div>
+      <div class="metric-card warning">
+        <div class="metric-label">已消耗</div>
+        <div class="metric-value" style="color:var(--yellow)">¥0</div>
+        <div class="metric-delta">尚未启动投放</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">剩余可用</div>
+        <div class="metric-value" style="color:var(--green)">¥30,000</div>
+        <div class="metric-delta up">100% 可用</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">日均上限</div>
+        <div class="metric-value">¥1,000</div>
+        <div class="metric-delta">投投方案约束</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📡 渠道预算分配</div>
+      </div>
+      <div id="channel-breakdown">
+        <div class="channel-bar">
+          <span class="channel-name">🎵 抖音</span>
+          <div class="channel-bar-track">
+            <div class="channel-bar-fill" style="width:35%;background:var(--cyan)">35%</div>
+          </div>
+          <span class="channel-amount">¥10,500</span>
+        </div>
+        <div class="channel-bar">
+          <span class="channel-name">📕 小红书</span>
+          <div class="channel-bar-track">
+            <div class="channel-bar-fill" style="width:25%;background:#ff5c5c">25%</div>
+          </div>
+          <span class="channel-amount">¥7,500</span>
+        </div>
+        <div class="channel-bar">
+          <span class="channel-name">📺 B站</span>
+          <div class="channel-bar-track">
+            <div class="channel-bar-fill" style="width:15%;background:#00a1d6">15%</div>
+          </div>
+          <span class="channel-amount">¥4,500</span>
+        </div>
+        <div class="channel-bar">
+          <span class="channel-name">🟠 微博</span>
+          <div class="channel-bar-track">
+            <div class="channel-bar-fill" style="width:15%;background:var(--red)">15%</div>
+          </div>
+          <span class="channel-amount">¥4,500</span>
+        </div>
+        <div class="channel-bar">
+          <span class="channel-name">🔧 机动</span>
+          <div class="channel-bar-track">
+            <div class="channel-bar-fill" style="width:10%;background:var(--muted)">10%</div>
+          </div>
+          <span class="channel-amount">¥3,000</span>
+        </div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:var(--muted)">
+        💡 策略：抖音最大（覆盖面）+ 小红书第二（转化率）+ B站/微博各15% + 10%机动应对爆款
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📊 支出流水</div>
+        <div style="display:flex;gap:8px">
+          <select style="width:auto;min-width:100px"><option>本月</option><option>上周</option><option>全部</option></select>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>日期</th><th>渠道</th><th>类型</th><th>金额</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td colspan="5" style="text-align:center;padding:40px;color:var(--muted)">
+            📭 暂无支出记录 — 投放系统尚未启动
+          </td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- UNIT ECONOMICS -->
+  <div class="panels" id="panel-unit-econ">
+    <div class="metric-grid" style="margin-bottom:20px">
+      <div class="metric-card">
+        <div class="metric-label">CAC 获客成本</div>
+        <div class="metric-value">--</div>
+        <div class="metric-delta">需≥30样本</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">LTV 用户终身价值</div>
+        <div class="metric-value">--</div>
+        <div class="metric-delta">需转化数据</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">LTV/CAC 比率</div>
+        <div class="metric-value">--</div>
+        <div class="metric-delta">目标 ≥3:1</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">ROI</div>
+        <div class="metric-value">--</div>
+        <div class="metric-delta">收入/投放支出</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📐 CAC 计算器</div>
+          <div class="card-subtitle">用户获取成本分解</div>
+        </div>
+        <div class="form-group"><label>总投放支出 (¥)</label><input id="cac-spend" type="number" value="10000" oninput="calcCAC()"></div>
+        <div class="form-group"><label>新增用户数</label><input id="cac-users" type="number" value="500" oninput="calcCAC()"></div>
+        <div class="form-group"><label>自然新增（非付费）</label><input id="cac-organic" type="number" value="200" oninput="calcCAC()"></div>
+        <div style="background:var(--surface);padding:16px;border-radius:8px;text-align:center">
+          <div style="font-size:11px;color:var(--muted)">估算 CAC</div>
+          <div style="font-size:28px;font-weight:700;color:var(--accent)" id="cac-result">¥20.00</div>
+          <div style="font-size:10px;color:var(--muted)">总用户 CAC: <span id="cac-total">¥14.29</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📈 LTV 估算器</div>
+          <div class="card-subtitle">基于转化漏斗预测</div>
+        </div>
+        <div class="form-group"><label>免费→付费转化率 (%)</label><input id="ltv-conv" type="number" value="5" step="0.1" oninput="calcLTV()"></div>
+        <div class="form-group"><label>平均客单价 (¥)</label><input id="ltv-arpu" type="number" value="29.9" oninput="calcLTV()"></div>
+        <div class="form-group"><label>用户平均留存月数</label><input id="ltv-months" type="number" value="6" oninput="calcLTV()"></div>
+        <div style="background:var(--surface);padding:16px;border-radius:8px;text-align:center">
+          <div style="font-size:11px;color:var(--muted)">估算 LTV</div>
+          <div style="font-size:28px;font-weight:700;color:var(--green)" id="ltv-result">¥8.97</div>
+          <div style="font-size:10px;color:var(--muted)" id="ltv-ratio">LTV/CAC = --</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🔄 回本周期模型</div>
+      </div>
+      <div style="text-align:center;padding:20px">
+        <div style="font-size:48px;margin-bottom:8px">⏳</div>
+        <div style="color:var(--muted);font-size:13px">
+          第一性原理：回本周期 = CAC ÷ (ARPU × 转化率 × 月均复购)<br>
+          当前数据不足，需积累 ≥100 付费用户后建模
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="panels" id="panel-pricing">
+    <div class="grid grid-3" style="margin-bottom:20px">
+      <div class="tier-card">
+        <div class="tier-icon">🆓</div>
+        <div class="tier-name">免费层</div>
+        <div class="tier-price">¥0</div>
+        <div class="tier-features">
+          ✅ 基础人格画像<br>
+          ✅ 8维度得分<br>
+          ✅ 认知OS总结<br>
+          ✅ 分享结果卡片<br>
+          ❌ 深度分析<br>
+          ❌ AI提示词
+        </div>
+        <div style="margin-top:12px;font-size:10px;color:var(--muted)">入口获取 · 裂变驱动</div>
+      </div>
+      <div class="tier-card" style="border-color:var(--accent);border-width:2px">
+        <div class="tier-icon">⭐</div>
+        <div class="tier-name">Pro 层</div>
+        <div class="tier-price">¥9.9</div>
+        <div class="tier-features">
+          ✅ 全部免费内容<br>
+          ✅ 8维深度解析<br>
+          ✅ AI个性化提示词包<br>
+          ✅ 职业建议<br>
+          ✅ 月度更新
+        </div>
+        <div style="margin-top:12px;font-size:10px;color:var(--accent)">核心收入 · ¥9.9起</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-icon">👑</div>
+        <div class="tier-name">高客单</div>
+        <div class="tier-price">¥99-299</div>
+        <div class="tier-features">
+          ✅ Pro全部内容<br>
+          ✅ 专属AI教练<br>
+          ✅ 月度深度报告<br>
+          ✅ 新品优先体验<br>
+          ✅ 年度会员
+        </div>
+        <div style="margin-top:12px;font-size:10px;color:var(--muted)">高价值 · 待上线</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🎯 定价第一性原理</div>
+      </div>
+      <div style="display:grid;gap:12px;font-size:13px;line-height:1.7">
+        <div style="background:var(--surface);padding:14px;border-radius:8px">
+          <strong style="color:var(--accent)">① 锚定效应：</strong>先给免费层完整展示价值（"哇，这个好准"），再出 ¥9.9 Pro 就显得极便宜。¥9.9 不是收入来源，是「信任建立」+「支付意愿测试」。
+        </div>
+        <div style="background:var(--surface);padding:14px;border-radius:8px">
+          <strong style="color:var(--accent)">② 分层逻辑：</strong>免费=流量入口 · ¥9.9=转化验证 · ¥99=规模化收入。三层互相独立，问题只影响对应层。
+        </div>
+        <div style="background:var(--surface);padding:14px;border-radius:8px">
+          <strong style="color:var(--accent)">③ 价格弹性测试：</strong>后续 A/B test ¥9.9 vs ¥19.9 vs ¥29.9，找转化率×客单价最优解。当前 ¥9.9 是安全下限。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERTS -->
+  <div class="panels" id="panel-alerts">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🚨 预警阈值配置</div>
+      </div>
+      <div class="grid grid-2">
+        <div>
+          <div class="form-group"><label>日预算超支预警 (%)</label><input type="number" value="80" min="0" max="100"> <span style="font-size:10px;color:var(--muted)">消耗达日均80%时告警</span></div>
+          <div class="form-group"><label>ROI 下限</label><input type="number" value="0.8" step="0.1"> <span style="font-size:10px;color:var(--muted)">ROI&lt;0.8 自动熔断</span></div>
+          <div class="form-group"><label>CAC 上限 (¥)</label><input type="number" value="50"> <span style="font-size:10px;color:var(--muted)">CAC&gt;¥50 预警</span></div>
+        </div>
+        <div>
+          <div class="form-group"><label>单渠道占比上限 (%)</label><input type="number" value="60"> <span style="font-size:10px;color:var(--muted)">避免单渠道依赖</span></div>
+          <div class="form-group"><label>连续亏损天数</label><input type="number" value="3"> <span style="font-size:10px;color:var(--muted)">连续N天ROI&lt;1触发熔断</span></div>
+          <div class="form-group"><label>数据异常检测</label>
+            <select><option value="on">开启</option><option value="off">关闭</option></select>
+            <span style="font-size:10px;color:var(--muted)">检测刷量/异常转化模式</span>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary">💾 保存配置</button>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">📋 告警日志</div>
+      </div>
+      <div id="alert-list">
+        <div class="alert-item info">
+          <span class="alert-icon">ℹ️</span>
+          <div class="alert-body">
+            <div class="alert-title">系统就绪</div>
+            <div class="alert-desc">预警引擎已启动，等待投放数据流入</div>
+          </div>
+          <span class="alert-time">06-27 10:00</span>
+        </div>
+        <div class="alert-item info">
+          <span class="alert-icon">📋</span>
+          <div class="alert-body">
+            <div class="alert-title">预算池初始化</div>
+            <div class="alert-desc">月预算¥30,000已分配至5个渠道，日均上限¥1,000</div>
+          </div>
+          <span class="alert-time">06-27 10:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">🛡️ 熔断机制</div>
+        <div class="card-subtitle">财务故障不能影响核心分析质量 — 控控的设计原则</div>
+      </div>
+      <div style="display:grid;gap:12px">
+        <div style="background:var(--surface);padding:14px;border-radius:8px;font-size:13px">
+          <strong style="color:var(--red)">🔴 自动熔断条件：</strong>
+          ① ROI &lt; 0.5 持续2天 → 暂停该渠道投放<br>
+          ② 单日消耗超预算150% → 冻结当日投放<br>
+          ③ CAC &gt; ¥100 → 降权该渠道至机动池
+        </div>
+        <div style="background:var(--surface);padding:14px;border-radius:8px;font-size:13px">
+          <strong style="color:var(--yellow)">🟡 人工审核触发：</strong>
+          ① ROI 0.5-0.8 → 提示但不停<br>
+          ② 单渠道占比 &gt; 60% → 建议分散<br>
+          ③ 转化率骤降 &gt; 30% → 提示A/B测试
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── CAC Calculator ──
+function calcCAC() {
+  const spend = parseFloat(document.getElementById('cac-spend').value) || 0;
+  const users = parseInt(document.getElementById('cac-users').value) || 0;
+  const organic = parseInt(document.getElementById('cac-organic').value) || 0;
+  const paidCAC = users > 0 ? spend / users : 0;
+  const totalCAC = (users + organic) > 0 ? spend / (users + organic) : 0;
+  document.getElementById('cac-result').textContent = '¥' + paidCAC.toFixed(2);
+  document.getElementById('cac-total').textContent = '¥' + totalCAC.toFixed(2);
+  updateLTVRatio();
+}
+
+// ── LTV Calculator ──
+function calcLTV() {
+  const conv = (parseFloat(document.getElementById('ltv-conv').value) || 0) / 100;
+  const arpu = parseFloat(document.getElementById('ltv-arpu').value) || 0;
+  const months = parseInt(document.getElementById('ltv-months').value) || 0;
+  const ltv = conv * arpu * months;
+  document.getElementById('ltv-result').textContent = '¥' + ltv.toFixed(2);
+  updateLTVRatio();
+}
+
+function updateLTVRatio() {
+  const ltv = parseFloat(document.getElementById('ltv-result').textContent.replace('¥',''));
+  const cac = parseFloat(document.getElementById('cac-result').textContent.replace('¥',''));
+  const ratio = cac > 0 ? (ltv / cac).toFixed(1) : '--';
+  const el = document.getElementById('ltv-ratio');
+  el.textContent = 'LTV/CAC = ' + ratio;
+  el.style.color = parseFloat(ratio) >= 3 ? 'var(--green)' : parseFloat(ratio) >= 1 ? 'var(--yellow)' : 'var(--red)';
+}
+
+// ── Tabs ──
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.panels').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ── Init ──
+calcCAC(); calcLTV();
+
+// ── Iframe detection ──
+if (window !== window.parent) {
+  document.head.insertAdjacentHTML('beforeend', `<style>.header{display:none!important}body{padding-top:0}</style>`);
+}
+</script>
+</body>
+</html>
