@@ -1,23 +1,23 @@
 {
   "pool_status": {
-    "level": 125,
+    "level": 133,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池125>>25软上限·投投~190h+零部署·D21-B10设设满产7臂fresh·购买页逾期~500h+·Plan C激活·内容池CRITICAL根因为投投零部署非内容过剩",
-    "last_creation": "2026-08-19T23:21:00+08:00",
-    "last_creation_batch": "D21-B10",
-    "last_deployment": "2026-08-19T09:25:00+08:00",
-    "last_deployment_batch": "D21-B10",
-    "net_change_this_batch": 7,
+    "last_creation": "2026-08-20T08:30:00+08:00",
+    "last_creation_batch": "D21-B11",
+    "last_deployment": "2026-08-20T09:25:00+08:00",
+    "last_deployment_batch": "D21-B11",
+    "net_change_this_batch": 4,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 125,
-    "active_items": 77,
+    "total_items": 133,
+    "active_items": 81,
     "hook_conflict_items": 1,
     "last_deployment_arms": 7,
-    "sheshe_supplement": "设设D21-B10满产7臂fresh(ENTJ/ENTP/INTJ/ENFP/INFJ/ISTJ/ENFJ)·0复用·大面积轮出批落地(反常识ENTJ/INTJ+好奇心ENTP+身份认同INFJ四臂新hook首触+情感共鸣ENFJ恢复首触全fresh)·王石自我觉醒连续2批(开健身房9旗舰)+依恋母题七夕续(520红包8)·平均q8.84·[ESC-08-18-1]路径漂移修正后首批·报告直写契约路径(绝对路径+写后校验)",
-    "fresh_arms_this_batch": 7,
-    "reuse_arms_this_batch": 0,
+    "sheshe_supplement": "设设D21-B11局部轮出批·4臂fresh(ENTJ反常识9旗舰+INTJ反常识9旗舰+ENFP社会证明新hook首触+ISTJ好奇心新hook首触)·3臂batch2续复用B10 fresh(ENTP好奇心/INFJ身份认同/ENFJ情感共鸣)·B11局部轮出(ENFP情感共鸣→社会证明+ISTJ社会证明→好奇心两臂新hook)·退役大卡4条错位stale(01:00提前产·hook/channel不符08:15方向船·ENFP-2误用冷却钩社会货币)·平均q8.85·华为天才少年9+笔试前13名9双旗舰",
+    "fresh_arms_this_batch": 4,
+    "reuse_arms_this_batch": 3,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
       "posts_added": 13,
@@ -3213,7 +3213,7 @@
       "created": "2026-08-19T08:33:00+08:00",
       "ttl_hours": 72,
       "status": "deployed",
-      "usage_count": 1,
+      "usage_count": 2,
       "budget": 25,
       "priority": "P0",
       "vessel_ref": "workspace-shared/pools/content-vessels/D21-B10-ENTP-1.json",
@@ -3229,11 +3229,11 @@
       "attachment_theory_resonance": false,
       "actual_ctr": null,
       "actual_roi": null,
-      "last_used": "2026-08-19T09:25:00+08:00",
-      "deployed_batch": "D21-B10",
-      "deployed_arm": 2,
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "deployed_batch": "D21-B11",
+      "deployed_arm": 3,
       "deployed_budget": 25,
-      "writeback_note": "fresh首用·usage 0→1·arm2 ENTP 好奇心 抖音",
+      "writeback_note": "batch2续复用·usage→2·arm3 D21-B11",
       "brief": {
         "pain_point": "ENTP的Ne最爱拆'理所当然'，对'稀缺=贵'的定价神话有天然质疑欲；河南钻石把稀缺量产，直接戳穿这条旧商业逻辑。",
         "hook_first3": "第一行'河南钻石，把英伟达馋哭了'抛梗；第二行'ENTP没把它当段子'切人格；第三行'他拆出了让人好奇的暗线'制造悬念。",
@@ -3372,7 +3372,7 @@
       "created": "2026-08-19T08:33:00+08:00",
       "ttl_hours": 72,
       "status": "deployed",
-      "usage_count": 1,
+      "usage_count": 2,
       "budget": 25,
       "priority": "P0",
       "vessel_ref": "workspace-shared/pools/content-vessels/D21-B10-INFJ-1.json",
@@ -3388,11 +3388,11 @@
       "attachment_theory_resonance": false,
       "actual_ctr": null,
       "actual_roi": null,
-      "last_used": "2026-08-19T09:25:00+08:00",
-      "deployed_batch": "D21-B10",
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "deployed_batch": "D21-B11",
       "deployed_arm": 5,
       "deployed_budget": 25,
-      "writeback_note": "fresh首用·usage 0→1·arm5 INFJ 身份认同 微博",
+      "writeback_note": "batch2续复用·usage→2·arm5 D21-B11",
       "brief": {
         "pain_point": "INFJ的Ni-Fe对'身份转型'极度共情，尤其'敢承认旧身份已不属于我'这种自我放下的勇气；反诈老陈的从头再来正是身份重塑样本。",
         "hook_first3": "第一行'反诈老陈脱下警服后的新工作，月薪1.5万'点事件；第二行'INFJ没把它当过气网红新闻'切人格；第三行'她看懂了真正让人动容的地方'制造情绪期待。",
@@ -3466,7 +3466,7 @@
       "created": "2026-08-19T08:33:00+08:00",
       "ttl_hours": 72,
       "status": "deployed",
-      "usage_count": 1,
+      "usage_count": 2,
       "budget": 25,
       "priority": "P1",
       "vessel_ref": "workspace-shared/pools/content-vessels/D21-B10-ENFJ-1.json",
@@ -3482,11 +3482,11 @@
       "attachment_theory_resonance": false,
       "actual_ctr": null,
       "actual_roi": null,
-      "last_used": "2026-08-19T09:25:00+08:00",
-      "deployed_batch": "D21-B10",
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "deployed_batch": "D21-B11",
       "deployed_arm": 7,
       "deployed_budget": 25,
-      "writeback_note": "fresh首用·usage 0→1·arm7 ENFJ 情感共鸣 小红书",
+      "writeback_note": "batch2续复用·usage→2·arm7 D21-B11",
       "brief": {
         "pain_point": "ENFJ的Fe对'体面与爱'极度敏感，容易为'英雄迟暮'心碎；周星驰的'不重回幕前'恰好是'用爱守护体面'的范本。",
         "hook_first3": "第一行'周星驰说，自己不享受镜头了'点事件；第二行'有人觉得可惜/江郎才尽'摆大众反应；第三行'但我听出一种很深的温柔'反转制造停留。",
@@ -3527,8 +3527,11 @@
       ],
       "channel": "小红书",
       "quality": 8.8,
-      "status": "active",
+      "status": "retired",
       "vessel_ref": "D21-B11-ENTP-1.json",
+      "retired_by": "设设",
+      "retired_at": "2026-08-20T08:30:00+08:00",
+      "retired_reason": "D21-B11错位stale·非08:15方向船对齐(hook/channel不符·ENFP-2误用冷却钩社会货币·无batch/producer/paradigm/signals·由大卡01:00提前产)",
       "has_post": true
     },
     {
@@ -3540,8 +3543,11 @@
       ],
       "channel": "小红书",
       "quality": 8.8,
-      "status": "active",
+      "status": "retired",
       "vessel_ref": "D21-B11-INTJ-1.json",
+      "retired_by": "设设",
+      "retired_at": "2026-08-20T08:30:00+08:00",
+      "retired_reason": "D21-B11错位stale·非08:15方向船对齐(hook/channel不符·ENFP-2误用冷却钩社会货币·无batch/producer/paradigm/signals·由大卡01:00提前产)",
       "has_post": true
     },
     {
@@ -3553,8 +3559,11 @@
       ],
       "channel": "小红书",
       "quality": 8.7,
-      "status": "active",
+      "status": "retired",
       "vessel_ref": "D21-B11-ISTJ-1.json",
+      "retired_by": "设设",
+      "retired_at": "2026-08-20T08:30:00+08:00",
+      "retired_reason": "D21-B11错位stale·非08:15方向船对齐(hook/channel不符·ENFP-2误用冷却钩社会货币·无batch/producer/paradigm/signals·由大卡01:00提前产)",
       "has_post": true
     },
     {
@@ -3566,12 +3575,223 @@
       ],
       "channel": "小红书",
       "quality": 8.7,
-      "status": "active",
+      "status": "retired",
       "vessel_ref": "D21-B11-ENFP-2.json",
+      "retired_by": "设设",
+      "retired_at": "2026-08-20T08:30:00+08:00",
+      "retired_reason": "D21-B11错位stale·非08:15方向船对齐(hook/channel不符·ENFP-2误用冷却钩社会货币·无batch/producer/paradigm/signals·由大卡01:00提前产)",
       "has_post": true
+    },
+    {
+      "id": "D21-B11-ENTJ-1",
+      "title": "华为\"天才少年\"，年薪百万的天花板，转身去卖玉米——ENTJ没有把这当成一条\"可惜了\"的新闻。他的Te系统在0.3秒里读懂了这件事真正反常识的地方：一个人最顶级的自我觉醒，不是终于爬到最高处，而是敢在最高处说一句\"这座山，我不爬了\"",
+      "hook": "反常识",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 9.0,
+      "created": "2026-08-20T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B11-ENTJ-1.json",
+      "paradigm": "反常识·Te-Ni自我觉醒型(反常识batch1→batch2续·Te解构:'天才少年'年薪百万=外部给定的最高成就梯子·却转身去卖玉米·Ni对照:真正的觉醒不是爬得更高·而是敢说'这座山我不爬了'·华为天才少年9分旗舰·自我觉醒母题二级命中)",
+      "role": "P0·ENTJ反常识batch2续·华为天才少年卖玉米9旗舰(自我觉醒)·content_sync_rule点名需优先保fresh·抖音Te位",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B11",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "fresh首用·usage 0→1·arm1 D21-B11",
+      "brief": {
+        "pain_point": "ENTJ的Te把'成就'当坐标系，最容易把'年薪百万/天才少年'当成人生终极答案；当有人拿到顶级答案后亲手撕掉，会逼ENTJ直面一个问题：我爬的这座山，到底是谁给我选的？",
+        "hook_first3": "第一行'华为天才少年，年薪百万的天花板，转身去卖玉米'抛极致反差；第二行'评论区一半说可惜一半说通透'写大众分裂；第三行'但ENTJ没有跟着叹可惜'切人格视角。",
+        "emotion_curve": "惊讶/惋惜(百万年薪去卖玉米) → 被击中(梯子是谁给的) → 解绑(成就不等于自由) → 觉醒(我的山我自己选)。",
+        "structure": [
+          "钩子·极致反差",
+          "拆解·天才少年=外部给的最高梯子",
+          "洞察·成就不等于自由",
+          "觉醒·撕掉别人递来的梯子",
+          "落点·你爬的该是你自己选的山"
+        ],
+        "differentiation": "别人写华为天才少年讲'躺平/可惜/内卷'，我们讲'自我觉醒的最高形态：拿到顶级答案后亲手撕掉'；用Te效率视角拆'百万年薪'，落到掌控感而非反内卷鸡汤。"
+      },
+      "deployed_batch": "D21-B11",
+      "deployed_arm": 1,
+      "deployed_budget": 25,
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "has_post": false
+    },
+    {
+      "id": "D21-B11-INTJ-2",
+      "title": "一场选拔，笔试前13名全军覆没，倒数5名全部逆袭——INTJ没有把这当成一条\"逆袭爽文\"。他的Ni系统在0.3秒里拆出了这件事真正值得深挖的地方：当\"分数\"这把号称最公平的尺子开始失灵，我们该怀疑的从来不是考生，而是那把尺子本身量错了什么",
+      "hook": "反常识",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 9.0,
+      "created": "2026-08-20T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B11-INTJ-2.json",
+      "paradigm": "反常识·Ni-Te制度解构型(反常识batch1→batch2续·Ni解构:笔试前13名全淘汰/倒数5名全逆袭·说明'分数'这把最公平的尺子在选拔里失真了·Te对照:该怀疑的不是考生·是那把尺子量错了维度·9分旗舰·教育公平制度深挖)",
+      "role": "P0·INTJ反常识batch2续·笔试前13名9旗舰(教育公平)·content_sync_rule点名需优先保fresh·B站深度分析单一强臂",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B11",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "fresh首用·usage 0→1·arm2 D21-B11",
+      "brief": {
+        "pain_point": "INTJ的Ni对'系统/制度'有天然解构欲，最痛恨'用一个分数给复杂的人排座次'的粗暴；前13名全淘汰恰好证明：单一维度的排名，可能连它想测的东西都测不准。",
+        "hook_first3": "第一行'笔试前13名全军覆没，倒数5名全部逆袭'抛极致反常；第二行'很多人当爽文看'点大众反应；第三行'但INTJ盯着的是那把尺子'切视角。",
+        "emotion_curve": "好奇/爽(逆袭) → 冷下来(尺子为什么失灵) → 解构(分数测错了维度) → 清醒(别再用一把尺子量人)。",
+        "structure": [
+          "钩子·极致反常",
+          "现象·前13与倒数5的倒挂",
+          "解构·尺子量错了什么",
+          "升华·教育公平的病灶",
+          "落点·拒绝单维度给人排座次"
+        ],
+        "differentiation": "别人写笔试逆袭讲'努力逆袭爽文/运气'，我们讲'分数尺子失灵→制度该被怀疑'；用Ni拆到制度层，不消费逆袭情绪，落到教育公平的结构性追问。"
+      },
+      "deployed_batch": "D21-B11",
+      "deployed_arm": 2,
+      "deployed_budget": 25,
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "has_post": false
+    },
+    {
+      "id": "D21-B11-ENFP-1",
+      "title": "大学生一个月该给多少生活费？——ENFP没有把这当成一道\"算账题\"。她的Fi系统在0.3秒里听懂了这个问题真正烫手的地方：家长在问\"给多少\"，孩子听到的是\"我在你心里，到底值多少\"",
+      "hook": "社会证明",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "created": "2026-08-20T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B11-ENFP-1.json",
+      "paradigm": "社会证明·Fi-Ne亲子代际型(情感共鸣batch2达上限→轮出社会证明batch1首触·Fi代际:家长问'给多少'·孩子听成'我在你心里值多少'·Ne对照:生活费从来不是一道算账题·是一次被迫摊开的边界与爱的谈判·6分·小红书高信任基线)",
+      "role": "P1·ENFP社会证明batch1首触(情感共鸣batch2轮出)·大学生生活费6(亲子代际)·小红书Fi位·新hook首触需fresh",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B11",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "fresh首用·usage 0→1·arm4 D21-B11",
+      "brief": {
+        "pain_point": "ENFP的Fi最在意'被爱是否真实/被信任是否足够'，而生活费数字恰好把亲子关系量化成一个尴尬的'别人给多少'；背后的焦虑不是钱，是'我的价值被怎么定价'。",
+        "hook_first3": "第一行'大学生一个月该给多少生活费'抛全民争议题；第二行'家长在算账，孩子在算爱'点穿代际错位；第三行'ENFP听到的不是数字'切人格视角。",
+        "emotion_curve": "共鸣/尴尬(给多少之争) → 被戳中(算钱还是算爱) → 释然(数字不重要，边界才重要) → 勇气(把话摊开谈)。",
+        "structure": [
+          "钩子·争议题",
+          "现象·家长算账vs孩子算爱",
+          "洞察·生活费是边界谈判",
+          "升华·谈钱不可耻，谈爱要直说",
+          "CTA·你家怎么定的"
+        ],
+        "differentiation": "别人写生活费讲'给多少合适/攀比/啃老'，我们讲'生活费是一场被数字包装的边界与爱的谈判'；落在Fi亲子代际，不做攀比焦虑，不judge给多给少。"
+      },
+      "post": {
+        "cover_title": "生活费给多少？孩子算的是爱",
+        "body": "大学生一个月该给多少生活费？\n\n这道题，每年开学都要吵上热搜。\n\n有人说 1500 就够，有人说 3000 都紧。\n\n但吵来吵去，很少有人点破一件事——\n\n家长在算账，孩子其实在算爱。💔\n\n你有没有过那种瞬间：\n\n开口要生活费，比开口说「我爱你」还难。\n\n不是真的缺那几百块，\n是怕一张嘴，就变成「怎么又花完了」。\n\n生活费这个数字，\n从来不是一道算术题。\n\n它是两代人第一次，\n被迫坐下来谈「边界」和「信任」。\n\n给多少，其实没有标准答案。\n\n真正重要的，是你们有没有把话说开：\n\n「这个月怎么花的，我们一起看」\n比「省着点花」有用一百倍。\n\n谈钱，一点都不伤感情。\n藏着掖着，才伤。🌙\n\n你们家生活费是怎么定的？\n评论区聊聊，说不定能帮到别人。👇",
+        "hashtags": [
+          "#ENFP",
+          "#大学生生活费",
+          "#亲子关系",
+          "#代际沟通",
+          "#MBTI"
+        ],
+        "cover_visual": "一张摊开的记账本，旁边一杯奶茶和几枚硬币，暖黄色调，生活感，呼应'算账与算爱'的双重主题",
+        "cta": "你们家生活费是怎么定的？评论区聊聊，说不定能帮到别人。",
+        "post_time": "18:00-20:00（开学季·晚高峰情感流量）",
+        "avoid": "不制造'给多给少'的攀比焦虑、不judge任何家庭的金额、不贩卖'啃老/不孝'对立、聚焦代际沟通"
+      },
+      "post_spec_version": "v2.0",
+      "deployed_batch": "D21-B11",
+      "deployed_arm": 4,
+      "deployed_budget": 25,
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "has_post": true
+    },
+    {
+      "id": "D21-B11-ISTJ-2",
+      "title": "一款抗癌疫苗，一夜引爆美股医药股——ISTJ没有把这当成一条\"炒股\"新闻。他的Si系统在0.3秒里开始逐条核对这件事背后最硬的事实：当\"防癌\"第一次从\"玄学\"变成\"可复制的流水线\"，被点燃的不只是股价，是人类对抗癌症的下一张底牌",
+      "hook": "好奇心",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "created": "2026-08-20T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B11-ISTJ-2.json",
+      "paradigm": "好奇心·Si-Te事实核查型(社会证明batch2达上限→轮出好奇心batch1首触·Si核查:一款疫苗凭什么让美股医药股集体起飞·不是炒股玄学·是一条条硬事实·Te对照:当'防癌'第一次从'玄学'变成'可复制的流水线'·点燃的是人类抗癌的下一张底牌·6分·微博公共舆论位)",
+      "role": "P1·ISTJ好奇心batch1首触(社会证明batch2轮出)·抗癌疫苗6(医疗科技)·微博公共舆论位·新hook首触需fresh",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B11",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "fresh首用·usage 0→1·arm6 D21-B11",
+      "brief": {
+        "pain_point": "ISTJ的Si尊重'可验证的事实'，对'抗癌疫苗引爆股价'这种标题天然警觉——他要的不是情绪，是硬事实：这疫苗到底是什么、证据有多硬、为什么市场用真金白银投票。",
+        "hook_first3": "第一行'一款抗癌疫苗，一夜引爆美股医药股'抛事实冲击；第二行'有人看到炒股，有人看到希望'点人群分化；第三行'ISTJ先不激动，他逐条核对'切人格视角。",
+        "emotion_curve": "警觉/好奇(是不是噱头) → 逐条验证(硬事实浮现) → 踏实(证据站得住) → 审慎的振奋(抗癌多了一张底牌)。",
+        "structure": [
+          "钩子·事实冲击",
+          "现象·股价狂欢",
+          "核查·疫苗是什么/证据有多硬",
+          "洞察·防癌从玄学变流水线",
+          "落点·审慎地相信科学"
+        ],
+        "differentiation": "别人写抗癌疫苗讲'炒股/暴富/神药'，我们讲'Si逐条核查后的审慎振奋：防癌第一次可复制'；不贩卖医疗焦虑(禁恐惧按钮)，落到事实与科学进程。"
+      },
+      "deployed_batch": "D21-B11",
+      "deployed_arm": 6,
+      "deployed_budget": 25,
+      "last_used": "2026-08-20T09:25:00+08:00",
+      "has_post": false
     }
   ],
-  "total": 129,
+  "total": 133,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -3774,6 +3994,61 @@
         "avoid": "避免\"必须发红包\"\"不发就是不爱你\"等消费主义绑架表述；不鼓励攀比金额；不出现\"转账\"\"红包雨\"等诱导性营销词；弱化\"大额\"字眼。"
       },
       "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B11-ENFP-1",
+      "title": "大学生一个月该给多少生活费？——ENFP没有把这当成一道\"算账题\"。她的Fi系统在0.3秒里听懂了这个问题真正烫手的地方：家长在问\"给多少\"，孩子听到的是\"我在你心里，到底值多少\"",
+      "hook": "社会证明",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "arm_id": 4,
+      "batch_num": 1,
+      "signals": [
+        "大学生一个月给多少生活费合适(6分·亲子代际/社会证明)"
+      ],
+      "paradigm": "社会证明·Fi-Ne亲子代际型(情感共鸣batch2达上限→轮出社会证明batch1首触·Fi代际:家长问'给多少'·孩子听成'我在你心里值多少'·Ne对照:生活费从来不是一道算账题·是一次被迫摊开的边界与爱的谈判·6分·小红书高信任基线)",
+      "role": "P1·ENFP社会证明batch1首触(情感共鸣batch2轮出)·大学生生活费6(亲子代际)·小红书Fi位·新hook首触需fresh",
+      "direction_compliance": "D21-B11 direction-vessel arm4 100%对齐·ENFP×社会证明×小红书·batch1轮出首触",
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "note": "🟢 fresh(新hook首触·ENFP情感共鸣batch2达上限→轮出社会证明batch1)·生活费6分·亲子代际Fi·小红书v2.0成品post落地",
+      "brief": {
+        "pain_point": "ENFP的Fi最在意'被爱是否真实/被信任是否足够'，而生活费数字恰好把亲子关系量化成一个尴尬的'别人给多少'；背后的焦虑不是钱，是'我的价值被怎么定价'。",
+        "hook_first3": "第一行'大学生一个月该给多少生活费'抛全民争议题；第二行'家长在算账，孩子在算爱'点穿代际错位；第三行'ENFP听到的不是数字'切人格视角。",
+        "emotion_curve": "共鸣/尴尬(给多少之争) → 被戳中(算钱还是算爱) → 释然(数字不重要，边界才重要) → 勇气(把话摊开谈)。",
+        "structure": [
+          "钩子·争议题",
+          "现象·家长算账vs孩子算爱",
+          "洞察·生活费是边界谈判",
+          "升华·谈钱不可耻，谈爱要直说",
+          "CTA·你家怎么定的"
+        ],
+        "differentiation": "别人写生活费讲'给多少合适/攀比/啃老'，我们讲'生活费是一场被数字包装的边界与爱的谈判'；落在Fi亲子代际，不做攀比焦虑，不judge给多给少。"
+      },
+      "post": {
+        "cover_title": "生活费给多少？孩子算的是爱",
+        "body": "大学生一个月该给多少生活费？\n\n这道题，每年开学都要吵上热搜。\n\n有人说 1500 就够，有人说 3000 都紧。\n\n但吵来吵去，很少有人点破一件事——\n\n家长在算账，孩子其实在算爱。💔\n\n你有没有过那种瞬间：\n\n开口要生活费，比开口说「我爱你」还难。\n\n不是真的缺那几百块，\n是怕一张嘴，就变成「怎么又花完了」。\n\n生活费这个数字，\n从来不是一道算术题。\n\n它是两代人第一次，\n被迫坐下来谈「边界」和「信任」。\n\n给多少，其实没有标准答案。\n\n真正重要的，是你们有没有把话说开：\n\n「这个月怎么花的，我们一起看」\n比「省着点花」有用一百倍。\n\n谈钱，一点都不伤感情。\n藏着掖着，才伤。🌙\n\n你们家生活费是怎么定的？\n评论区聊聊，说不定能帮到别人。👇",
+        "hashtags": [
+          "#ENFP",
+          "#大学生生活费",
+          "#亲子关系",
+          "#代际沟通",
+          "#MBTI"
+        ],
+        "cover_visual": "一张摊开的记账本，旁边一杯奶茶和几枚硬币，暖黄色调，生活感，呼应'算账与算爱'的双重主题",
+        "cta": "你们家生活费是怎么定的？评论区聊聊，说不定能帮到别人。",
+        "post_time": "18:00-20:00（开学季·晚高峰情感流量）",
+        "avoid": "不制造'给多给少'的攀比焦虑、不judge任何家庭的金额、不贩卖'啃老/不孝'对立、聚焦代际沟通"
+      }
     },
     {
       "id": "D21-B11-ENFP-2",
@@ -8277,6 +8552,143 @@
         "note": "自评保守·实际质量可能更高·缺乏设设范式知识库(停产中)·基于D15-D18内容范式推断"
       }
     },
+    "D21-B11-INTJ-2": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B11-INTJ-2",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B11"
+        },
+        "created_at": "2026-08-20T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-20-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B11-INTJ-2",
+        "title": "一场选拔，笔试前13名全军覆没，倒数5名全部逆袭——INTJ没有把这当成一条\"逆袭爽文\"。他的Ni系统在0.3秒里拆出了这件事真正值得深挖的地方：当\"分数\"这把号称最公平的尺子开始失灵，我们该怀疑的从来不是考生，而是那把尺子本身量错了什么",
+        "hook": "反常识",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 2,
+        "batch_num": 2,
+        "signals": [
+          "笔试前13名全淘汰 倒数5名全逆袭(9分·教育公平·旗舰)"
+        ],
+        "paradigm": "反常识·Ni-Te制度解构型(反常识batch1→batch2续·Ni解构:笔试前13名全淘汰/倒数5名全逆袭·说明'分数'这把最公平的尺子在选拔里失真了·Te对照:该怀疑的不是考生·是那把尺子量错了维度·9分旗舰·教育公平制度深挖)",
+        "role": "P0·INTJ反常识batch2续·笔试前13名9旗舰(教育公平)·content_sync_rule点名需优先保fresh·B站深度分析单一强臂",
+        "direction_compliance": "D21-B11 direction-vessel arm2 100%对齐·INTJ×反常识×B站·batch2",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(信号变更·非复用泡面科普)·反常识batch2达上限(max=2合规)·笔试前13名9分旗舰·Ni教育公平制度深挖·B12反常识必轮出",
+        "brief": {
+          "pain_point": "INTJ的Ni对'系统/制度'有天然解构欲，最痛恨'用一个分数给复杂的人排座次'的粗暴；前13名全淘汰恰好证明：单一维度的排名，可能连它想测的东西都测不准。",
+          "hook_first3": "第一行'笔试前13名全军覆没，倒数5名全部逆袭'抛极致反常；第二行'很多人当爽文看'点大众反应；第三行'但INTJ盯着的是那把尺子'切视角。",
+          "emotion_curve": "好奇/爽(逆袭) → 冷下来(尺子为什么失灵) → 解构(分数测错了维度) → 清醒(别再用一把尺子量人)。",
+          "structure": [
+            "钩子·极致反常",
+            "现象·前13与倒数5的倒挂",
+            "解构·尺子量错了什么",
+            "升华·教育公平的病灶",
+            "落点·拒绝单维度给人排座次"
+          ],
+          "differentiation": "别人写笔试逆袭讲'努力逆袭爽文/运气'，我们讲'分数尺子失灵→制度该被怀疑'；用Ni拆到制度层，不消费逆袭情绪，落到教育公平的结构性追问。"
+        }
+      }
+    },
+    "D21-B11-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B11-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B11"
+        },
+        "created_at": "2026-08-20T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-20-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B11-ENFP-1",
+        "title": "大学生一个月该给多少生活费？——ENFP没有把这当成一道\"算账题\"。她的Fi系统在0.3秒里听懂了这个问题真正烫手的地方：家长在问\"给多少\"，孩子听到的是\"我在你心里，到底值多少\"",
+        "hook": "社会证明",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "大学生一个月给多少生活费合适(6分·亲子代际/社会证明)"
+        ],
+        "paradigm": "社会证明·Fi-Ne亲子代际型(情感共鸣batch2达上限→轮出社会证明batch1首触·Fi代际:家长问'给多少'·孩子听成'我在你心里值多少'·Ne对照:生活费从来不是一道算账题·是一次被迫摊开的边界与爱的谈判·6分·小红书高信任基线)",
+        "role": "P1·ENFP社会证明batch1首触(情感共鸣batch2轮出)·大学生生活费6(亲子代际)·小红书Fi位·新hook首触需fresh",
+        "direction_compliance": "D21-B11 direction-vessel arm4 100%对齐·ENFP×社会证明×小红书·batch1轮出首触",
+        "flagship": false,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(新hook首触·ENFP情感共鸣batch2达上限→轮出社会证明batch1)·生活费6分·亲子代际Fi·小红书v2.0成品post落地",
+        "brief": {
+          "pain_point": "ENFP的Fi最在意'被爱是否真实/被信任是否足够'，而生活费数字恰好把亲子关系量化成一个尴尬的'别人给多少'；背后的焦虑不是钱，是'我的价值被怎么定价'。",
+          "hook_first3": "第一行'大学生一个月该给多少生活费'抛全民争议题；第二行'家长在算账，孩子在算爱'点穿代际错位；第三行'ENFP听到的不是数字'切人格视角。",
+          "emotion_curve": "共鸣/尴尬(给多少之争) → 被戳中(算钱还是算爱) → 释然(数字不重要，边界才重要) → 勇气(把话摊开谈)。",
+          "structure": [
+            "钩子·争议题",
+            "现象·家长算账vs孩子算爱",
+            "洞察·生活费是边界谈判",
+            "升华·谈钱不可耻，谈爱要直说",
+            "CTA·你家怎么定的"
+          ],
+          "differentiation": "别人写生活费讲'给多少合适/攀比/啃老'，我们讲'生活费是一场被数字包装的边界与爱的谈判'；落在Fi亲子代际，不做攀比焦虑，不judge给多给少。"
+        },
+        "post": {
+          "cover_title": "生活费给多少？孩子算的是爱",
+          "body": "大学生一个月该给多少生活费？\n\n这道题，每年开学都要吵上热搜。\n\n有人说 1500 就够，有人说 3000 都紧。\n\n但吵来吵去，很少有人点破一件事——\n\n家长在算账，孩子其实在算爱。💔\n\n你有没有过那种瞬间：\n\n开口要生活费，比开口说「我爱你」还难。\n\n不是真的缺那几百块，\n是怕一张嘴，就变成「怎么又花完了」。\n\n生活费这个数字，\n从来不是一道算术题。\n\n它是两代人第一次，\n被迫坐下来谈「边界」和「信任」。\n\n给多少，其实没有标准答案。\n\n真正重要的，是你们有没有把话说开：\n\n「这个月怎么花的，我们一起看」\n比「省着点花」有用一百倍。\n\n谈钱，一点都不伤感情。\n藏着掖着，才伤。🌙\n\n你们家生活费是怎么定的？\n评论区聊聊，说不定能帮到别人。👇",
+          "hashtags": [
+            "#ENFP",
+            "#大学生生活费",
+            "#亲子关系",
+            "#代际沟通",
+            "#MBTI"
+          ],
+          "cover_visual": "一张摊开的记账本，旁边一杯奶茶和几枚硬币，暖黄色调，生活感，呼应'算账与算爱'的双重主题",
+          "cta": "你们家生活费是怎么定的？评论区聊聊，说不定能帮到别人。",
+          "post_time": "18:00-20:00（开学季·晚高峰情感流量）",
+          "avoid": "不制造'给多给少'的攀比焦虑、不judge任何家庭的金额、不贩卖'啃老/不孝'对立、聚焦代际沟通"
+        }
+      }
+    },
     "D20-B4-INTP-1": {
       "id": "D20-B4-INTP-1",
       "title": "「老登」这个词到底错在哪——INTP的第一反应不是站队，他的Ti系统在0.3秒内拆完了这个词的全部语法：一个词能在三个月内从网络黑话变成全网争议，说明它的背后站着一个还没被定义清楚的社会结构。而超市毛巾广告标「老人臭」被骂下架，只是同一个结构漏出来的另一角",
@@ -11850,6 +12262,67 @@
         "note": "reconstructed from content-active index·original vessel file lost"
       }
     },
+    "D21-B11-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B11-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B11"
+        },
+        "created_at": "2026-08-20T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-20-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B11-ENTJ-1",
+        "title": "华为\"天才少年\"，年薪百万的天花板，转身去卖玉米——ENTJ没有把这当成一条\"可惜了\"的新闻。他的Te系统在0.3秒里读懂了这件事真正反常识的地方：一个人最顶级的自我觉醒，不是终于爬到最高处，而是敢在最高处说一句\"这座山，我不爬了\"",
+        "hook": "反常识",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "华为\"天才少年\"回应离职后卖玉米(9分·自我觉醒/职业选择·旗舰)"
+        ],
+        "paradigm": "反常识·Te-Ni自我觉醒型(反常识batch1→batch2续·Te解构:'天才少年'年薪百万=外部给定的最高成就梯子·却转身去卖玉米·Ni对照:真正的觉醒不是爬得更高·而是敢说'这座山我不爬了'·华为天才少年9分旗舰·自我觉醒母题二级命中)",
+        "role": "P0·ENTJ反常识batch2续·华为天才少年卖玉米9旗舰(自我觉醒)·content_sync_rule点名需优先保fresh·抖音Te位",
+        "direction_compliance": "D21-B11 direction-vessel arm1 100%对齐·ENTJ×反常识×抖音·batch2",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(信号变更·非复用王石)·反常识batch2达上限(max=2合规)·华为天才少年9分旗舰·自我觉醒母题二级命中·B12反常识必轮出",
+        "brief": {
+          "pain_point": "ENTJ的Te把'成就'当坐标系，最容易把'年薪百万/天才少年'当成人生终极答案；当有人拿到顶级答案后亲手撕掉，会逼ENTJ直面一个问题：我爬的这座山，到底是谁给我选的？",
+          "hook_first3": "第一行'华为天才少年，年薪百万的天花板，转身去卖玉米'抛极致反差；第二行'评论区一半说可惜一半说通透'写大众分裂；第三行'但ENTJ没有跟着叹可惜'切人格视角。",
+          "emotion_curve": "惊讶/惋惜(百万年薪去卖玉米) → 被击中(梯子是谁给的) → 解绑(成就不等于自由) → 觉醒(我的山我自己选)。",
+          "structure": [
+            "钩子·极致反差",
+            "拆解·天才少年=外部给的最高梯子",
+            "洞察·成就不等于自由",
+            "觉醒·撕掉别人递来的梯子",
+            "落点·你爬的该是你自己选的山"
+          ],
+          "differentiation": "别人写华为天才少年讲'躺平/可惜/内卷'，我们讲'自我觉醒的最高形态：拿到顶级答案后亲手撕掉'；用Te效率视角拆'百万年薪'，落到掌控感而非反内卷鸡汤。"
+        }
+      }
+    },
     "D18-B1-4": {
       "vessel": {
         "version": "1.0",
@@ -12459,6 +12932,67 @@
             "vessel_id": "D20-B7"
           }
         ]
+      }
+    },
+    "D21-B11-ISTJ-2": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B11-ISTJ-2",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B11"
+        },
+        "created_at": "2026-08-20T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-20-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B11-ISTJ-2",
+        "title": "一款抗癌疫苗，一夜引爆美股医药股——ISTJ没有把这当成一条\"炒股\"新闻。他的Si系统在0.3秒里开始逐条核对这件事背后最硬的事实：当\"防癌\"第一次从\"玄学\"变成\"可复制的流水线\"，被点燃的不只是股价，是人类对抗癌症的下一张底牌",
+        "hook": "好奇心",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "微博",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 6,
+        "batch_num": 1,
+        "signals": [
+          "一款抗癌疫苗引爆美股医药股(6分·医疗科技/好奇心)"
+        ],
+        "paradigm": "好奇心·Si-Te事实核查型(社会证明batch2达上限→轮出好奇心batch1首触·Si核查:一款疫苗凭什么让美股医药股集体起飞·不是炒股玄学·是一条条硬事实·Te对照:当'防癌'第一次从'玄学'变成'可复制的流水线'·点燃的是人类抗癌的下一张底牌·6分·微博公共舆论位)",
+        "role": "P1·ISTJ好奇心batch1首触(社会证明batch2轮出)·抗癌疫苗6(医疗科技)·微博公共舆论位·新hook首触需fresh",
+        "direction_compliance": "D21-B11 direction-vessel arm6 100%对齐·ISTJ×好奇心×微博·batch1轮出首触",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(新hook首触·ISTJ社会证明batch2达上限→轮出好奇心batch1)·抗癌疫苗6分·Si医疗科技事实型·SJ象限平衡保持",
+        "brief": {
+          "pain_point": "ISTJ的Si尊重'可验证的事实'，对'抗癌疫苗引爆股价'这种标题天然警觉——他要的不是情绪，是硬事实：这疫苗到底是什么、证据有多硬、为什么市场用真金白银投票。",
+          "hook_first3": "第一行'一款抗癌疫苗，一夜引爆美股医药股'抛事实冲击；第二行'有人看到炒股，有人看到希望'点人群分化；第三行'ISTJ先不激动，他逐条核对'切人格视角。",
+          "emotion_curve": "警觉/好奇(是不是噱头) → 逐条验证(硬事实浮现) → 踏实(证据站得住) → 审慎的振奋(抗癌多了一张底牌)。",
+          "structure": [
+            "钩子·事实冲击",
+            "现象·股价狂欢",
+            "核查·疫苗是什么/证据有多硬",
+            "洞察·防癌从玄学变流水线",
+            "落点·审慎地相信科学"
+          ],
+          "differentiation": "别人写抗癌疫苗讲'炒股/暴富/神药'，我们讲'Si逐条核查后的审慎振奋：防癌第一次可复制'；不贩卖医疗焦虑(禁恐惧按钮)，落到事实与科学进程。"
+        }
       }
     },
     "D21-B8-INFP-1": {
