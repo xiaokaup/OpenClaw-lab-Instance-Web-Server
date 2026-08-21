@@ -475,5 +475,217 @@
       "deliverable_urls": []
     }
   ],
+  "candidates": [
+    {
+      "id": "#1",
+      "name": "双人依恋匹配卡",
+      "category": "关系/依恋线",
+      "priority": "P0",
+      "status": "已交付",
+      "status_note": "S2 v1.1",
+      "form": "双人互动网页(各填→匹配度)",
+      "fun": "关系星座+匹配度积分+吵架预警"
+    },
+    {
+      "id": "#11",
+      "name": "认知功能速查卡",
+      "category": "解构/认知线",
+      "priority": "P0",
+      "status": "已交付",
+      "status_note": "S3",
+      "form": "8功能卡 HTML",
+      "fun": "超能力/副作用游戏化"
+    },
+    {
+      "id": "N1",
+      "name": "职业匹配记分卡",
+      "category": "职场线",
+      "priority": "P0",
+      "status": "候选",
+      "status_note": "付费最强",
+      "form": "测一测→职业天赋矩阵",
+      "fun": "职业天赋矩阵+适合/回避方向"
+    },
+    {
+      "id": "N3",
+      "name": "消费人格记分卡",
+      "category": "金钱线",
+      "priority": "P0",
+      "status": "候选",
+      "status_note": "传播强",
+      "form": "测一测→消费决策模式",
+      "fun": "冲动/面子/理性诊断"
+    },
+    {
+      "id": "#4",
+      "name": "人格觉醒时刻卡",
+      "category": "自我觉醒线",
+      "priority": "P1",
+      "status": "备料完成",
+      "status_note": "待产",
+      "form": "生成式海报",
+      "fun": "觉醒宣言分享卡"
+    },
+    {
+      "id": "#5",
+      "name": "人格边界说明书",
+      "category": "自我觉醒线",
+      "priority": "P1",
+      "status": "备料完成",
+      "status_note": "待产",
+      "form": "PDF可打印卡片集",
+      "fun": "产品说明书格式"
+    },
+    {
+      "id": "#10",
+      "name": "人格反常识解构卡",
+      "category": "解构/认知线",
+      "priority": "P1",
+      "status": "备料完成",
+      "status_note": "引流",
+      "form": "PDF卡片集/网页",
+      "fun": "反常识真相+认知功能拆解"
+    },
+    {
+      "id": "N2",
+      "name": "副业匹配记分卡",
+      "category": "职场线",
+      "priority": "P1",
+      "status": "候选",
+      "status_note": "",
+      "form": "测一测→副业天赋",
+      "fun": "副业启动类型+变现路径"
+    },
+    {
+      "id": "N5",
+      "name": "育儿风格记分卡",
+      "category": "育儿线",
+      "priority": "P1",
+      "status": "候选",
+      "status_note": "家长付费强",
+      "form": "测一测→育儿风格",
+      "fun": "边界/守护/放养诊断"
+    },
+    {
+      "id": "#2",
+      "name": "16型恋爱类型卡",
+      "category": "关系/依恋线",
+      "priority": "P2",
+      "status": "候选",
+      "status_note": "",
+      "form": "可交互网页",
+      "fun": "恋爱人设"
+    },
+    {
+      "id": "#7",
+      "name": "人格感官映射卡",
+      "category": "趣味/表达线",
+      "priority": "P2",
+      "status": "候选",
+      "status_note": "",
+      "form": "多感官选择器",
+      "fun": "代表动物/颜色/歌单"
+    },
+    {
+      "id": "#8",
+      "name": "人格能量日历",
+      "category": "趣味/表达线",
+      "priority": "P2",
+      "status": "候选",
+      "status_note": "标注娱乐性",
+      "form": "年历/电子表格",
+      "fun": "12月能量周期"
+    },
+    {
+      "id": "N7",
+      "name": "朋友关系记分卡",
+      "category": "社交线",
+      "priority": "P2",
+      "status": "候选",
+      "status_note": "",
+      "form": "测一测→朋友类型",
+      "fun": "治愈型/校准型/记录型"
+    },
+    {
+      "id": "N8",
+      "name": "社交能量记分卡",
+      "category": "社交线",
+      "priority": "P2",
+      "status": "候选",
+      "status_note": "",
+      "form": "测一测→社交电池",
+      "fun": "耗电仪表盘+充电策略"
+    },
+    {
+      "id": "#3",
+      "name": "恋爱吸引力模型卡",
+      "category": "关系/依恋线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入#1/#2",
+      "form": "测验式互动",
+      "fun": "吸引人群画像"
+    },
+    {
+      "id": "#6",
+      "name": "人格出厂设置卡",
+      "category": "自我觉醒线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入#5",
+      "form": "可交互网页",
+      "fun": "出厂设置vs现在"
+    },
+    {
+      "id": "#9",
+      "name": "人格社交电池卡",
+      "category": "趣味/表达线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入S1组件",
+      "form": "滑动条",
+      "fun": "社交耗电模拟"
+    },
+    {
+      "id": "#12",
+      "name": "人格决策风格卡",
+      "category": "解构/认知线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入#11",
+      "form": "决策流程图",
+      "fun": "理性/直觉/情感派"
+    },
+    {
+      "id": "N4",
+      "name": "金钱关系记分卡",
+      "category": "金钱线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入N3",
+      "form": "测一测→金钱脚本",
+      "fun": "守护/焦虑/洒脱/控制"
+    },
+    {
+      "id": "N6",
+      "name": "亲子关系记分卡",
+      "category": "育儿线",
+      "priority": "P3",
+      "status": "并入",
+      "status_note": "并入N5",
+      "form": "双人互动",
+      "fun": "亲子关系图谱"
+    },
+    {
+      "id": "N9",
+      "name": "成长轨迹记分卡",
+      "category": "成长线",
+      "priority": "P3",
+      "status": "等数据",
+      "status_note": "需复测数据",
+      "form": "测一测→成长曲线",
+      "fun": "复测追踪成长"
+    }
+  ],
   "total": 8
 }
