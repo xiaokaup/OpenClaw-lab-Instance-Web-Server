@@ -174,7 +174,14 @@ function retry() {
 }
 
 function stdHtmlFn(t) {
-  return __STD_FN__;
+  let h = '';
+  if (t.core) h += '<p><b>核心：</b>'+t.core+'</p>';
+  (DATA.result_fields || []).forEach(function(f){
+    var v = t[f.key];
+    if (v != null && v !== '') h += '<p><b>'+f.label+'：</b>'+v+'</p>';
+  });
+  if (t.case) h += '<p style="color:#b0523c;"><b>案例：</b>'+t.case+'</p>';
+  return h;
 }
 function renderStd() {
   const g = document.getElementById('stdGrid');

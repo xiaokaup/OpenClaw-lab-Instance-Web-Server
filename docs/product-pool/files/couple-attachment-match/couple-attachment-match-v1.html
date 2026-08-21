@@ -146,12 +146,7 @@ function tryMatch() {
   const ring = document.getElementById('rRing');
   ring.style.background = 'conic-gradient(var(--accent) '+deg+'deg, #f0e8dd '+deg+'deg)';
   const nameA = TMETA[ta].name, nameB = TMETA[tb].name;
-  const txt = '💞 我和TA的依恋匹配卡
-星座：'+m.constellation+'（'+nameA+' × '+nameB+'）
-匹配度：'+m.score+' 分 · 等级 '+m.level+'
-最可能吵的点：'+m.tension+'
-建议：'+m.advice+'
-——来自双人依恋匹配卡';
+  const txt = '💞 我和TA的依恋匹配卡\n星座：'+m.constellation+'（'+nameA+' × '+nameB+'）\n匹配度：'+m.score+' 分 · 等级 '+m.level+'\n最可能吵的点：'+m.tension+'\n建议：'+m.advice+'\n——来自双人依恋匹配卡';
   document.getElementById('shareText').value = txt;
   r.scrollIntoView({behavior:'smooth'});
 }
