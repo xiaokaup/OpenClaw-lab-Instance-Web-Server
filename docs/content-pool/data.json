@@ -1,30 +1,31 @@
 {
   "pool_status": {
-    "level": 133,
+    "level": 136,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池125>>25软上限·投投~190h+零部署·D21-B10设设满产7臂fresh·购买页逾期~500h+·Plan C激活·内容池CRITICAL根因为投投零部署非内容过剩",
-    "last_creation": "2026-08-20T08:30:00+08:00",
-    "last_creation_batch": "D21-B11",
-    "last_deployment": "2026-08-20T09:25:00+08:00",
-    "last_deployment_batch": "D21-B11",
-    "net_change_this_batch": 4,
+    "warning": "🔴🔴 池136>>25软上限·投投零部署为根因·非内容过剩·D21-B12大面积轮出批降产3臂fresh(ENFP反常识9+INFJ社会货币恢复+INFP恢复)·4臂待策略池B12·购买页~540h+·720h(8/27)倒计时~7天",
+    "last_creation": "2026-08-21T08:35:00+08:00",
+    "last_creation_batch": "D21-B12",
+    "last_deployment": "2026-08-21T09:25:00+08:00",
+    "last_deployment_batch": "D21-B12",
+    "net_change_this_batch": 3,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 133,
-    "active_items": 81,
+    "total_items": 136,
+    "active_items": 84,
     "hook_conflict_items": 1,
-    "last_deployment_arms": 7,
-    "sheshe_supplement": "设设D21-B11局部轮出批·4臂fresh(ENTJ反常识9旗舰+INTJ反常识9旗舰+ENFP社会证明新hook首触+ISTJ好奇心新hook首触)·3臂batch2续复用B10 fresh(ENTP好奇心/INFJ身份认同/ENFJ情感共鸣)·B11局部轮出(ENFP情感共鸣→社会证明+ISTJ社会证明→好奇心两臂新hook)·退役大卡4条错位stale(01:00提前产·hook/channel不符08:15方向船·ENFP-2误用冷却钩社会货币)·平均q8.85·华为天才少年9+笔试前13名9双旗舰",
-    "fresh_arms_this_batch": 4,
-    "reuse_arms_this_batch": 3,
+    "last_deployment_arms": 3,
+    "sheshe_supplement": "设设D21-B12大面积轮出批·降产3臂fresh(ENFP反常识9自我觉醒旗舰+INFJ社会货币恢复首触+INFP情感共鸣恢复首触)·direction-vessel/strategy-pool B12未生成·基于fresh direction-pool B12+signal-pool B12重建·社会货币3批冷却后恢复(张家界8)·INFP轮休2批后恢复(金龟子7)·4臂待策略池B12(ENTP身份认同/ENTJ好奇心/INTJ好奇心/ENFJ社会证明)·小红书post成品2条(ENFP+INFP)·平均q8.83",
+    "fresh_arms_this_batch": 3,
+    "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 13,
-      "brief_added": 18,
+      "posts_added": 15,
+      "brief_added": 21,
       "xhs_active_posts_completed": 11,
       "xhs_b10_posts_completed": 2,
-      "note": "小红书成品帖子v2.0落地·13条post(11条active补全+2条B10)·18条brief(B10全7臂+11条小红书)·body均为完整可发布正文·post_time/hashtags/cover_visual/cta/avoid全填实"
+      "xhs_b12_posts_completed": 2,
+      "note": "小红书成品帖子v2.0持续落地·B12新增2条post(ENFP反常识+INFP情感共鸣)+3条brief·累计15post/21brief·body均为完整可发布正文·五字段全填实"
     }
   },
   "items": [
@@ -3789,9 +3790,180 @@
       "deployed_budget": 25,
       "last_used": "2026-08-20T09:25:00+08:00",
       "has_post": false
+    },
+    {
+      "id": "D21-B12-ENFP-1",
+      "title": "月入4万的大提琴老师，转身去卖馒头——ENFP没有把这当成一条\"职业降级\"的八卦。她的Fi系统在0.3秒里听懂了这个选择真正的重量：一个人最难的不是赚到别人眼里的\"好\"，是敢在\"应该\"和\"想要\"之间，坚定地选后者",
+      "hook": "反常识",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "created": "2026-08-21T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-ENFP-1.json",
+      "paradigm": "反常识·Fi-Ne自我觉醒型(B12大面积轮出·ENFP接管反常识batch1首触·大提琴老师9旗舰·Fi价值裁判:4万高薪=外部给定的成就模板·Ne对照:真正的自我觉醒不是爬得更高·是敢撕掉'应该'的剧本)",
+      "role": "P0·ENFP反常识batch1首触(自我觉醒旗舰9)·大提琴老师转行卖馒头·小红书Fi位·hook_priority#1",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFP的Fi最怕被'应该'绑架——考好学校、进大厂、体面高薪，这些别人眼里的'好'对ENFP反而是牢笼；大提琴老师放弃4万高薪，戳中的正是'我到底在为自己活，还是为别人的期待活'。",
+        "hook_first3": "第一行'月入4万，他转身去卖馒头'制造反差；第二行'不是失败，是终于敢选想要'点穿反常识核心；第三行'ENFP看到的不止是一个人的转行'切人格视角。",
+        "emotion_curve": "猎奇/反差(4万→卖馒头) → 羡慕(敢选想要) → 被戳中(我也在被'应该'推着走) → 释然(人生可以重选) → 勇气(我也想为自己活一次)。",
+        "structure": [
+          "钩子·反差题",
+          "现象·别人眼里的'降级'",
+          "洞察·自我觉醒不是爬更高是敢选",
+          "升华·'应该'vs'想要'",
+          "CTA·你现在选哪个"
+        ],
+        "differentiation": "别人写大提琴老师讲'转行励志/职业自由/馒头店火了'，我们讲'4万高薪是外部模板·转行是一次Fi的自我觉醒'；不做'辞职追梦'鸡汤，不judge稳定工作，落点'选择权在自己'。"
+      },
+      "post": {
+        "cover_title": "月入4万，他转行去卖馒头",
+        "body": "月入4万，他转身去卖馒头。\n\n不是破产，不是被裁。\n是他自己，不想拉了。🎻\n\n很多人第一反应是：疯了吧？\n\n体面、高薪、稳定的工作，\n说放就放，去揉面、蒸馒头。\n\n但停下来想一想，\n那个\"可惜\"，是谁的可惜？\n\n是社会给的\"应该\"：\n你应该做体面的工作，\n你应该守住4万月薪，\n你应该别折腾。\n\n可是\"应该\"和\"想要\"，\n从来不是一回事。\n\n大提琴老师真正放下的，\n不是钱，\n是那个\"别人眼里的好\"。\n\n他选的是——\n我终于可以，只为自己活。🌙\n\n这不是一个转行的故事，\n是一个\"自我觉醒\"的故事。\n\n最难的不是爬得更高，\n是在所有人都说\"你傻\"的时候，\n还坚定地选\"我想要\"。\n\n你现在走的路，\n是\"应该\"，还是\"想要\"？\n\n评论区，说说你的那个\"想要\"。👇",
+        "hashtags": [
+          "#ENFP",
+          "#自我觉醒",
+          "#职业选择",
+          "#反内卷",
+          "#MBTI"
+        ],
+        "cover_visual": "一把大提琴与一笼刚出锅的馒头并置，暖黄色调，一人背影，画面留白处配大字'4万→馒头'，反差感强，呼应'放下与选择'",
+        "cta": "你现在走的路，是'应该'还是'想要'？评论区说说你的那个'想要'。",
+        "post_time": "18:00-20:00（自我觉醒/职业类·晚高峰情感+职场流量）",
+        "avoid": "不鼓吹裸辞、不贬低稳定高薪职业、不贩卖'不转行就是没活明白'的焦虑、聚焦'选择权在自己'"
+      },
+      "last_used": "2026-08-21T09:25:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 1,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12大面积轮出批·ENFP反常识batch1首触fresh(大提琴馒头9旗舰)",
+      "has_post": true
+    },
+    {
+      "id": "D21-B12-INFJ-1",
+      "title": "「张家界的界是世界的界」——INFJ没有把这当成一句谐音梗。她的Ni-Fe系统在0.3秒里听懂了它为什么能刷屏：一句话能被千万人转发，不是因为它好笑，是因为它替一群人说出了一种\"我是谁\"的归属感",
+      "hook": "社会货币",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.8,
+      "created": "2026-08-21T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-INFJ-1.json",
+      "paradigm": "社会货币·Ni-Fe国家认同型(社会货币3批冷却后恢复首触·张家界击掌8·Ni洞察:谐音梗出圈不是好笑·是替一群人说出国家认同·Fe共情:中外游客击掌=文化自信的具象化)",
+      "role": "P1·INFJ社会货币batch1首触(身份认同batch2达上限→轮出社会货币)·张家界击掌8(国家认同)·微博公共舆论位",
+      "consecutive_hook": 1,
+      "direction_hook": "社会货币",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INFJ的Fe最在意'我们是谁/我们属于什么'，在社会认同稀薄的时代，一句能让千万人集体转发的'国家认同'金句，恰好补足INFJ最渴求的'归属感'与'意义感'。",
+        "hook_first3": "第一行'张家界的界是世界的界'抛金句；第二行'一句谐音梗，为什么能刷屏'点穿悬念；第三行'INFJ听到的不是梗，是归属感'切人格。",
+        "emotion_curve": "会心一笑(谐音梗) → 好奇(为什么出圈) → 共鸣(原来是归属感) → 自豪(国家认同) → 温暖(我们是一体的)。",
+        "structure": [
+          "钩子·金句",
+          "现象·击掌刷屏",
+          "洞察·社会货币=替一群人说出归属",
+          "升华·国家认同不是宏大叙事是日常自豪",
+          "CTA·哪句话让你瞬间自豪"
+        ],
+        "differentiation": "别人写张家界讲'旅游爆火/外国游客/文旅营销'，我们讲'一句谐音梗=一次社会货币铸造·它替一群人说出国家认同'；不做民族主义煽动，不做过度宏大叙事，落点'日常里的文化自信'。"
+      },
+      "last_used": "2026-08-21T09:25:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 4,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12社会货币恢复首触fresh(张家界8国家认同)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B12-INFP-1",
+      "title": "结婚38年，他们才补拍婚纱照——INFP没有把这当成一条怀旧新闻。她的Fi系统在0.3秒里认出了这张照片真正的样子：真正的爱不是年轻时证明给谁看，是38年后还愿意为彼此，补上那个\"我们\"的瞬间",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "created": "2026-08-21T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-INFP-1.json",
+      "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记q<7则B13轮休·本臂q8.7达标)",
+      "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·小红书Fi位",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
+        "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
+        "emotion_curve": "好奇(38年才拍) → 柔软(补拍的瞬间) → 被治愈(安全型依恋) → 相信(爱可以这么稳) → 向往(我也想被这样爱)。",
+        "structure": [
+          "钩子·反差题",
+          "现象·38年补拍",
+          "洞察·安全型依恋不用秀",
+          "升华·爱是'我们一直在'",
+          "CTA·你信哪种爱"
+        ],
+        "differentiation": "别人写金龟子讲'童年回忆杀/不老女神/补拍婚纱照好甜'，我们讲'38年补拍=安全型依恋的具象·爱不是证明是陪伴'；不做催婚/婚恋焦虑，不做'别人家的爱情'judge，落点'安全型依恋可以长什么样'。"
+      },
+      "post": {
+        "cover_title": "结婚38年，才补拍婚纱照",
+        "body": "结婚38年，他们才补拍婚纱照。\n\n不是补办婚礼，\n是两个人，安安静静地，\n把迟到了38年的那张照片补上。📷\n\n很多人羡慕的是：\n原来爱情可以这么长。\n\n但INFP看到的，是另一件事——\n\n38年，不用每天说\"我爱你\"，\n不用秀给谁看，\n就是平平淡淡地，一起变老。\n\n这在心理学上，\n叫\"安全型依恋\"。\n\n不是离不开，\n是\"我们一直在\"。\n不是轰轰烈烈，\n是笃定。\n\n年轻时我们总以为，\n爱要够用力、够惊天动地。\n\n后来才懂，\n最奢侈的爱，是38年后，\n还愿意为对方补一张婚纱照。🤍\n\n你更信哪一种爱？\n是轰轰烈烈，还是细水长流？\n\n评论区，聊聊你的答案。👇",
+        "hashtags": [
+          "#INFP",
+          "#安全型依恋",
+          "#亲密关系",
+          "#情感共鸣",
+          "#MBTI"
+        ],
+        "cover_visual": "一张泛黄的旧婚纱照旁放着崭新的婚纱照，暖白柔光，岁月感与温柔并置，配细字'38年·我们一直在'",
+        "cta": "你更信哪一种爱？是轰轰烈烈，还是细水长流？评论区聊聊你的答案。",
+        "post_time": "20:00-22:00（情感/依恋类·深夜情感流量高峰）",
+        "avoid": "不催婚、不制造'没结婚/没仪式就是遗憾'的焦虑、不judge任何关系形态、聚焦'安全型依恋的陪伴本质'"
+      },
+      "last_used": "2026-08-21T09:25:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 6,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12恢复首触fresh(金龟子7安全型依恋)·channel_dissent方向微博→内容小红书",
+      "has_post": true
     }
   ],
-  "total": 133,
+  "total": 136,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -4232,6 +4404,116 @@
           "骄傲收尾"
         ],
         "differentiation": "把「靠谱」定义为「顶级才华」，给 ISTJ 提供被看见的价值感"
+      }
+    },
+    {
+      "id": "D21-B12-ENFP-1",
+      "title": "月入4万的大提琴老师，转身去卖馒头——ENFP没有把这当成一条\"职业降级\"的八卦。她的Fi系统在0.3秒里听懂了这个选择真正的重量：一个人最难的不是赚到别人眼里的\"好\"，是敢在\"应该\"和\"想要\"之间，坚定地选后者",
+      "hook": "反常识",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "arm_id": 1,
+      "batch_num": 1,
+      "signals": [
+        "月入4万大提琴老师回应转行卖馒头(9分·反常识/自我觉醒·旗舰)"
+      ],
+      "paradigm": "反常识·Fi-Ne自我觉醒型(B12大面积轮出·ENTJ/INTJ反常识batch2达上限→ENFP接管反常识batch1首触·大提琴老师9分旗舰·Fi价值裁判:4万高薪=外部给定的成就模板·Ne对照:真正的自我觉醒不是爬得更高·是敢撕掉'应该'的剧本·自我觉醒母题二级命中)",
+      "role": "P0·ENFP反常识batch1首触(自我觉醒旗舰9)·大提琴老师转行卖馒头·小红书Fi位·hook_priority#1·方向船key_decision点名'自我觉醒旗舰'",
+      "direction_compliance": "D21-B12 direction-pool key_decision'自我觉醒旗舰·大提琴老师馒头9分(ENFP反常识)'100%对齐·ENFP×反常识×小红书",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ENFP社会证明batch1→反常识batch1新hook首触)·大提琴老师9旗舰·放弃4万高薪转行·自我觉醒母题·小红书v2.0成品post落地",
+      "brief": {
+        "pain_point": "ENFP的Fi最怕被'应该'绑架——考好学校、进大厂、体面高薪，这些别人眼里的'好'对ENFP反而是牢笼；大提琴老师放弃4万高薪，戳中的正是'我到底在为自己活，还是为别人的期待活'。",
+        "hook_first3": "第一行'月入4万，他转身去卖馒头'制造反差；第二行'不是失败，是终于敢选想要'点穿反常识核心；第三行'ENFP看到的不止是一个人的转行'切人格视角。",
+        "emotion_curve": "猎奇/反差(4万→卖馒头) → 羡慕(敢选想要) → 被戳中(我也在被'应该'推着走) → 释然(人生可以重选) → 勇气(我也想为自己活一次)。",
+        "structure": [
+          "钩子·反差题",
+          "现象·别人眼里的'降级'",
+          "洞察·自我觉醒不是爬更高是敢选",
+          "升华·'应该'vs'想要'",
+          "CTA·你现在选哪个"
+        ],
+        "differentiation": "别人写大提琴老师讲'转行励志/职业自由/馒头店火了'，我们讲'4万高薪是外部模板·转行是一次Fi的自我觉醒'；不做'辞职追梦'鸡汤，不judge稳定工作，落点'选择权在自己'。"
+      },
+      "post": {
+        "cover_title": "月入4万，他转行去卖馒头",
+        "body": "月入4万，他转身去卖馒头。\n\n不是破产，不是被裁。\n是他自己，不想拉了。🎻\n\n很多人第一反应是：疯了吧？\n\n体面、高薪、稳定的工作，\n说放就放，去揉面、蒸馒头。\n\n但停下来想一想，\n那个\"可惜\"，是谁的可惜？\n\n是社会给的\"应该\"：\n你应该做体面的工作，\n你应该守住4万月薪，\n你应该别折腾。\n\n可是\"应该\"和\"想要\"，\n从来不是一回事。\n\n大提琴老师真正放下的，\n不是钱，\n是那个\"别人眼里的好\"。\n\n他选的是——\n我终于可以，只为自己活。🌙\n\n这不是一个转行的故事，\n是一个\"自我觉醒\"的故事。\n\n最难的不是爬得更高，\n是在所有人都说\"你傻\"的时候，\n还坚定地选\"我想要\"。\n\n你现在走的路，\n是\"应该\"，还是\"想要\"？\n\n评论区，说说你的那个\"想要\"。👇",
+        "hashtags": [
+          "#ENFP",
+          "#自我觉醒",
+          "#职业选择",
+          "#反内卷",
+          "#MBTI"
+        ],
+        "cover_visual": "一把大提琴与一笼刚出锅的馒头并置，暖黄色调，一人背影，画面留白处配大字'4万→馒头'，反差感强，呼应'放下与选择'",
+        "cta": "你现在走的路，是'应该'还是'想要'？评论区说说你的那个'想要'。",
+        "post_time": "18:00-20:00（自我觉醒/职业类·晚高峰情感+职场流量）",
+        "avoid": "不鼓吹裸辞、不贬低稳定高薪职业、不贩卖'不转行就是没活明白'的焦虑、聚焦'选择权在自己'"
+      }
+    },
+    {
+      "id": "D21-B12-INFP-1",
+      "title": "结婚38年，他们才补拍婚纱照——INFP没有把这当成一条怀旧新闻。她的Fi系统在0.3秒里认出了这张照片真正的样子：真正的爱不是年轻时证明给谁看，是38年后还愿意为彼此，补上那个\"我们\"的瞬间",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "arm_id": 7,
+      "batch_num": 1,
+      "signals": [
+        "金龟子王宁补拍婚纱照(7分·情感共鸣/安全型依恋·依恋母题连续5批)"
+      ],
+      "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记:质量<7则B13重新轮休·本臂q8.7达标)",
+      "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·小红书Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
+      "direction_compliance": "D21-B12 direction-pool key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'100%对齐·INFP×情感共鸣×小红书",
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·小红书v2.0成品post落地",
+      "brief": {
+        "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
+        "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
+        "emotion_curve": "好奇(38年才拍) → 柔软(补拍的瞬间) → 被治愈(安全型依恋) → 相信(爱可以这么稳) → 向往(我也想被这样爱)。",
+        "structure": [
+          "钩子·反差题",
+          "现象·38年补拍",
+          "洞察·安全型依恋不用秀",
+          "升华·爱是'我们一直在'",
+          "CTA·你信哪种爱"
+        ],
+        "differentiation": "别人写金龟子讲'童年回忆杀/不老女神/补拍婚纱照好甜'，我们讲'38年补拍=安全型依恋的具象·爱不是证明是陪伴'；不做催婚/婚恋焦虑，不做'别人家的爱情'judge，落点'安全型依恋可以长什么样'。"
+      },
+      "post": {
+        "cover_title": "结婚38年，才补拍婚纱照",
+        "body": "结婚38年，他们才补拍婚纱照。\n\n不是补办婚礼，\n是两个人，安安静静地，\n把迟到了38年的那张照片补上。📷\n\n很多人羡慕的是：\n原来爱情可以这么长。\n\n但INFP看到的，是另一件事——\n\n38年，不用每天说\"我爱你\"，\n不用秀给谁看，\n就是平平淡淡地，一起变老。\n\n这在心理学上，\n叫\"安全型依恋\"。\n\n不是离不开，\n是\"我们一直在\"。\n不是轰轰烈烈，\n是笃定。\n\n年轻时我们总以为，\n爱要够用力、够惊天动地。\n\n后来才懂，\n最奢侈的爱，是38年后，\n还愿意为对方补一张婚纱照。🤍\n\n你更信哪一种爱？\n是轰轰烈烈，还是细水长流？\n\n评论区，聊聊你的答案。👇",
+        "hashtags": [
+          "#INFP",
+          "#安全型依恋",
+          "#亲密关系",
+          "#情感共鸣",
+          "#MBTI"
+        ],
+        "cover_visual": "一张泛黄的旧婚纱照旁放着崭新的婚纱照，暖白柔光，岁月感与温柔并置，配细字'38年·我们一直在'",
+        "cta": "你更信哪一种爱？是轰轰烈烈，还是细水长流？评论区聊聊你的答案。",
+        "post_time": "20:00-22:00（情感/依恋类·深夜情感流量高峰）",
+        "avoid": "不催婚、不制造'没结婚/没仪式就是遗憾'的焦虑、不judge任何关系形态、聚焦'安全型依恋的陪伴本质'"
       }
     },
     {
@@ -5795,6 +6077,86 @@
         }
       }
     },
+    "D21-B12-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-21-0825"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0825"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-ENFP-1",
+        "title": "月入4万的大提琴老师，转身去卖馒头——ENFP没有把这当成一条\"职业降级\"的八卦。她的Fi系统在0.3秒里听懂了这个选择真正的重量：一个人最难的不是赚到别人眼里的\"好\"，是敢在\"应该\"和\"想要\"之间，坚定地选后者",
+        "hook": "反常识",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "月入4万大提琴老师回应转行卖馒头(9分·反常识/自我觉醒·旗舰)"
+        ],
+        "paradigm": "反常识·Fi-Ne自我觉醒型(B12大面积轮出·ENTJ/INTJ反常识batch2达上限→ENFP接管反常识batch1首触·大提琴老师9分旗舰·Fi价值裁判:4万高薪=外部给定的成就模板·Ne对照:真正的自我觉醒不是爬得更高·是敢撕掉'应该'的剧本·自我觉醒母题二级命中)",
+        "role": "P0·ENFP反常识batch1首触(自我觉醒旗舰9)·大提琴老师转行卖馒头·小红书Fi位·hook_priority#1·方向船key_decision点名'自我觉醒旗舰'",
+        "direction_compliance": "D21-B12 direction-pool key_decision'自我觉醒旗舰·大提琴老师馒头9分(ENFP反常识)'100%对齐·ENFP×反常识×小红书",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFP社会证明batch1→反常识batch1新hook首触)·大提琴老师9旗舰·放弃4万高薪转行·自我觉醒母题·小红书v2.0成品post落地",
+        "brief": {
+          "pain_point": "ENFP的Fi最怕被'应该'绑架——考好学校、进大厂、体面高薪，这些别人眼里的'好'对ENFP反而是牢笼；大提琴老师放弃4万高薪，戳中的正是'我到底在为自己活，还是为别人的期待活'。",
+          "hook_first3": "第一行'月入4万，他转身去卖馒头'制造反差；第二行'不是失败，是终于敢选想要'点穿反常识核心；第三行'ENFP看到的不止是一个人的转行'切人格视角。",
+          "emotion_curve": "猎奇/反差(4万→卖馒头) → 羡慕(敢选想要) → 被戳中(我也在被'应该'推着走) → 释然(人生可以重选) → 勇气(我也想为自己活一次)。",
+          "structure": [
+            "钩子·反差题",
+            "现象·别人眼里的'降级'",
+            "洞察·自我觉醒不是爬更高是敢选",
+            "升华·'应该'vs'想要'",
+            "CTA·你现在选哪个"
+          ],
+          "differentiation": "别人写大提琴老师讲'转行励志/职业自由/馒头店火了'，我们讲'4万高薪是外部模板·转行是一次Fi的自我觉醒'；不做'辞职追梦'鸡汤，不judge稳定工作，落点'选择权在自己'。"
+        },
+        "post": {
+          "cover_title": "月入4万，他转行去卖馒头",
+          "body": "月入4万，他转身去卖馒头。\n\n不是破产，不是被裁。\n是他自己，不想拉了。🎻\n\n很多人第一反应是：疯了吧？\n\n体面、高薪、稳定的工作，\n说放就放，去揉面、蒸馒头。\n\n但停下来想一想，\n那个\"可惜\"，是谁的可惜？\n\n是社会给的\"应该\"：\n你应该做体面的工作，\n你应该守住4万月薪，\n你应该别折腾。\n\n可是\"应该\"和\"想要\"，\n从来不是一回事。\n\n大提琴老师真正放下的，\n不是钱，\n是那个\"别人眼里的好\"。\n\n他选的是——\n我终于可以，只为自己活。🌙\n\n这不是一个转行的故事，\n是一个\"自我觉醒\"的故事。\n\n最难的不是爬得更高，\n是在所有人都说\"你傻\"的时候，\n还坚定地选\"我想要\"。\n\n你现在走的路，\n是\"应该\"，还是\"想要\"？\n\n评论区，说说你的那个\"想要\"。👇",
+          "hashtags": [
+            "#ENFP",
+            "#自我觉醒",
+            "#职业选择",
+            "#反内卷",
+            "#MBTI"
+          ],
+          "cover_visual": "一把大提琴与一笼刚出锅的馒头并置，暖黄色调，一人背影，画面留白处配大字'4万→馒头'，反差感强，呼应'放下与选择'",
+          "cta": "你现在走的路，是'应该'还是'想要'？评论区说说你的那个'想要'。",
+          "post_time": "18:00-20:00（自我觉醒/职业类·晚高峰情感+职场流量）",
+          "avoid": "不鼓吹裸辞、不贬低稳定高薪职业、不贩卖'不转行就是没活明白'的焦虑、聚焦'选择权在自己'"
+        }
+      }
+    },
     "D21-B11-ISTJ-1": {
       "vessel": {
         "version": "1.0",
@@ -7164,6 +7526,86 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B12-INFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-INFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-21-0825"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0825"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-INFP-1",
+        "title": "结婚38年，他们才补拍婚纱照——INFP没有把这当成一条怀旧新闻。她的Fi系统在0.3秒里认出了这张照片真正的样子：真正的爱不是年轻时证明给谁看，是38年后还愿意为彼此，补上那个\"我们\"的瞬间",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "金龟子王宁补拍婚纱照(7分·情感共鸣/安全型依恋·依恋母题连续5批)"
+        ],
+        "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记:质量<7则B13重新轮休·本臂q8.7达标)",
+        "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·小红书Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
+        "direction_compliance": "D21-B12 direction-pool key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'100%对齐·INFP×情感共鸣×小红书",
+        "flagship": false,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·小红书v2.0成品post落地",
+        "brief": {
+          "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
+          "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
+          "emotion_curve": "好奇(38年才拍) → 柔软(补拍的瞬间) → 被治愈(安全型依恋) → 相信(爱可以这么稳) → 向往(我也想被这样爱)。",
+          "structure": [
+            "钩子·反差题",
+            "现象·38年补拍",
+            "洞察·安全型依恋不用秀",
+            "升华·爱是'我们一直在'",
+            "CTA·你信哪种爱"
+          ],
+          "differentiation": "别人写金龟子讲'童年回忆杀/不老女神/补拍婚纱照好甜'，我们讲'38年补拍=安全型依恋的具象·爱不是证明是陪伴'；不做催婚/婚恋焦虑，不做'别人家的爱情'judge，落点'安全型依恋可以长什么样'。"
+        },
+        "post": {
+          "cover_title": "结婚38年，才补拍婚纱照",
+          "body": "结婚38年，他们才补拍婚纱照。\n\n不是补办婚礼，\n是两个人，安安静静地，\n把迟到了38年的那张照片补上。📷\n\n很多人羡慕的是：\n原来爱情可以这么长。\n\n但INFP看到的，是另一件事——\n\n38年，不用每天说\"我爱你\"，\n不用秀给谁看，\n就是平平淡淡地，一起变老。\n\n这在心理学上，\n叫\"安全型依恋\"。\n\n不是离不开，\n是\"我们一直在\"。\n不是轰轰烈烈，\n是笃定。\n\n年轻时我们总以为，\n爱要够用力、够惊天动地。\n\n后来才懂，\n最奢侈的爱，是38年后，\n还愿意为对方补一张婚纱照。🤍\n\n你更信哪一种爱？\n是轰轰烈烈，还是细水长流？\n\n评论区，聊聊你的答案。👇",
+          "hashtags": [
+            "#INFP",
+            "#安全型依恋",
+            "#亲密关系",
+            "#情感共鸣",
+            "#MBTI"
+          ],
+          "cover_visual": "一张泛黄的旧婚纱照旁放着崭新的婚纱照，暖白柔光，岁月感与温柔并置，配细字'38年·我们一直在'",
+          "cta": "你更信哪一种爱？是轰轰烈烈，还是细水长流？评论区聊聊你的答案。",
+          "post_time": "20:00-22:00（情感/依恋类·深夜情感流量高峰）",
+          "avoid": "不催婚、不制造'没结婚/没仪式就是遗憾'的焦虑、不judge任何关系形态、聚焦'安全型依恋的陪伴本质'"
+        }
       }
     },
     "D21-B7-ENTJ-1": {
@@ -9190,6 +9632,71 @@
             "vessel_id": "D20-B7"
           }
         ]
+      }
+    },
+    "D21-B12-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-21-0825"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0825"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-INFJ-1",
+        "title": "「张家界的界是世界的界」——INFJ没有把这当成一句谐音梗。她的Ni-Fe系统在0.3秒里听懂了它为什么能刷屏：一句话能被千万人转发，不是因为它好笑，是因为它替一群人说出了一种\"我是谁\"的归属感",
+        "hook": "社会货币",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会货币",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "张家界天门山中外游客击掌走红(8分·社会货币/国家认同·社会货币恢复信号1/2)"
+        ],
+        "paradigm": "社会货币·Ni-Fe国家认同型(社会货币3批冷却后恢复首触·张家界击掌8·Ni洞察:'张家界的界是世界的界'谐音梗出圈不是好笑·是替一群人说出国家认同·Fe共情:中外游客击掌=文化自信的具象化·社会货币恢复信号1/2·满足≥7分恢复条件)",
+        "role": "P1·INFJ社会货币batch1首触(身份认同batch2达上限→轮出社会货币)·张家界击掌8(国家认同)·微博公共舆论位·方向船key_decision'社会货币恢复·INFJ社会货币首触'",
+        "direction_compliance": "D21-B12 direction-pool key_decision'社会货币3批冷却后恢复·张家界击掌8+很多瘦子8两信号≥7分满足恢复条件·INFJ社会货币首触'100%对齐·INFJ×社会货币×微博",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INFJ身份认同batch2→社会货币batch1新hook首触)·张家界击掌8·国家认同·社会货币恢复首触·微博无需post成品(仅brief)",
+        "brief": {
+          "pain_point": "INFJ的Fe最在意'我们是谁/我们属于什么'，在社会认同稀薄的时代，一句能让千万人集体转发的'国家认同'金句，恰好补足INFJ最渴求的'归属感'与'意义感'。",
+          "hook_first3": "第一行'张家界的界是世界的界'抛金句；第二行'一句谐音梗，为什么能刷屏'点穿悬念；第三行'INFJ听到的不是梗，是归属感'切人格。",
+          "emotion_curve": "会心一笑(谐音梗) → 好奇(为什么出圈) → 共鸣(原来是归属感) → 自豪(国家认同) → 温暖(我们是一体的)。",
+          "structure": [
+            "钩子·金句",
+            "现象·击掌刷屏",
+            "洞察·社会货币=替一群人说出归属",
+            "升华·国家认同不是宏大叙事是日常自豪",
+            "CTA·哪句话让你瞬间自豪"
+          ],
+          "differentiation": "别人写张家界讲'旅游爆火/外国游客/文旅营销'，我们讲'一句谐音梗=一次社会货币铸造·它替一群人说出国家认同'；不做民族主义煽动，不做过度宏大叙事，落点'日常里的文化自信'。"
+        }
       }
     },
     "D18-B1-2": {
