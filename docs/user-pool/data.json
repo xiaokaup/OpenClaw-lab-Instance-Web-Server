@@ -911,5 +911,851 @@
       "by": "析析",
       "note": "v2.1.0生命周期分群·数据历史回填止7/4·析析8/4 21:00前刷新当前数据·分群人数沿用结构口径(8,250)"
     }
+  },
+  "personas": {
+    "vessel": {
+      "version": "1.0",
+      "type": "persona-pool-vessel",
+      "source": {
+        "agent": "大卡",
+        "subsystem": "平台·知识",
+        "theme": "mbti"
+      },
+      "created_at": "2026-08-21T18:49:45.709932+08:00",
+      "freshness_ttl_hours": 24,
+      "info_contract": {
+        "excludes": "persona 是运行时聚合视图·非单个用户·unmet_need 为待析析填充占位·匹配结果≠诊断",
+        "action_threshold": "某型 sample<30 或 avg_confidence<0.6 → 标记 sample_low/confidence_low·禁止下钻",
+        "expires_after": "24h·随 profiles.json / user-targeting.json 刷新"
+      },
+      "dependencies": [
+        {
+          "vessel_type": "user-insight-vessel",
+          "vessel_id": "profiles-latest"
+        },
+        {
+          "vessel_type": "user-pool-vessel",
+          "vessel_id": "user-targeting-latest"
+        }
+      ]
+    },
+    "theme": "mbti",
+    "dimensions": [
+      {
+        "id": "IM",
+        "name": "信息代谢"
+      },
+      {
+        "id": "DA",
+        "name": "决策架构"
+      },
+      {
+        "id": "AS",
+        "name": "注意力结构"
+      },
+      {
+        "id": "ME",
+        "name": "动机引擎"
+      },
+      {
+        "id": "ST",
+        "name": "社交拓扑"
+      },
+      {
+        "id": "CB",
+        "name": "认知带宽"
+      },
+      {
+        "id": "FM",
+        "name": "反馈模式"
+      },
+      {
+        "id": "TB",
+        "name": "信任建立"
+      }
+    ],
+    "personas": [
+      {
+        "persona_id": "INTJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTJ",
+            "confidence": 0.7286,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ME",
+            "DA"
+          ],
+          "low_dims": [
+            "TB",
+            "FM"
+          ],
+          "top_dims_label": [
+            "动机引擎",
+            "决策架构"
+          ],
+          "low_dims_label": [
+            "信任建立",
+            "反馈模式"
+          ],
+          "dimension_scores": {
+            "IM": 56.3,
+            "DA": 73.1,
+            "AS": 54.3,
+            "ME": 75.0,
+            "ST": 69.6,
+            "CB": 73.1,
+            "FM": 49.8,
+            "TB": 54.1
+          },
+          "avg_confidence": 0.7286
+        },
+        "touch_state": {
+          "trust": 8.56,
+          "eligible": false,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 390,
+            "cooling": 455,
+            "dormant": 415,
+            "lost": 345
+          },
+          "total_count": 1605,
+          "note": "零维护·生产级归档·自然覆盖"
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "INTP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTP",
+            "confidence": 0.7457,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "CB",
+            "ME"
+          ],
+          "low_dims": [
+            "ST",
+            "FM"
+          ],
+          "top_dims_label": [
+            "认知带宽",
+            "动机引擎"
+          ],
+          "low_dims_label": [
+            "社交拓扑",
+            "反馈模式"
+          ],
+          "dimension_scores": {
+            "IM": 63.2,
+            "DA": 60.4,
+            "AS": 63.4,
+            "ME": 64.6,
+            "ST": 57.4,
+            "CB": 70.6,
+            "FM": 49.0,
+            "TB": 59.4
+          },
+          "avg_confidence": 0.7457
+        },
+        "touch_state": {
+          "trust": 7.1,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 330,
+            "cooling": 155,
+            "dormant": 185,
+            "lost": 205
+          },
+          "total_count": 875,
+          "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low"
+        ]
+      },
+      {
+        "persona_id": "ENTJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTJ",
+            "confidence": 0.7633,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ST",
+            "CB"
+          ],
+          "low_dims": [
+            "TB",
+            "FM"
+          ],
+          "top_dims_label": [
+            "社交拓扑",
+            "认知带宽"
+          ],
+          "low_dims_label": [
+            "信任建立",
+            "反馈模式"
+          ],
+          "dimension_scores": {
+            "IM": 65.7,
+            "DA": 73.7,
+            "AS": 68.7,
+            "ME": 66.0,
+            "ST": 81.0,
+            "CB": 80.3,
+            "FM": 42.3,
+            "TB": 57.7
+          },
+          "avg_confidence": 0.7633
+        },
+        "touch_state": {
+          "trust": 7.74,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 300,
+            "cooling": 285,
+            "dormant": 335,
+            "lost": 215
+          },
+          "total_count": 1135,
+          "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖"
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low"
+        ]
+      },
+      {
+        "persona_id": "ENTP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTP",
+            "confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": null,
+          "low_dims": null,
+          "top_dims_label": [],
+          "low_dims_label": [],
+          "dimension_scores": null,
+          "avg_confidence": null
+        },
+        "touch_state": {
+          "trust": 6.5,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 82,
+            "cooling": 162,
+            "dormant": 155,
+            "lost": 95
+          },
+          "total_count": 494,
+          "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落"
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "INFJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFJ",
+            "confidence": 0.6947,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "DA",
+            "CB"
+          ],
+          "low_dims": [
+            "IM",
+            "AS"
+          ],
+          "top_dims_label": [
+            "决策架构",
+            "认知带宽"
+          ],
+          "low_dims_label": [
+            "信息代谢",
+            "注意力结构"
+          ],
+          "dimension_scores": {
+            "IM": 41.6,
+            "DA": 82.8,
+            "AS": 41.3,
+            "ME": 61.0,
+            "ST": 53.2,
+            "CB": 74.9,
+            "FM": 60.1,
+            "TB": 50.2
+          },
+          "avg_confidence": 0.6947
+        },
+        "touch_state": {
+          "trust": 8.18,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 155,
+            "cooling": 102,
+            "dormant": 245,
+            "lost": 215
+          },
+          "total_count": 717,
+          "note": "首触即峰值·全系统最高信任·零维护双极候选"
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "INFP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFP",
+            "confidence": 0.7137,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "CB",
+            "AS"
+          ],
+          "low_dims": [
+            "ME",
+            "TB"
+          ],
+          "top_dims_label": [
+            "认知带宽",
+            "注意力结构"
+          ],
+          "low_dims_label": [
+            "动机引擎",
+            "信任建立"
+          ],
+          "dimension_scores": {
+            "IM": 55.0,
+            "DA": 60.0,
+            "AS": 70.0,
+            "ME": 54.0,
+            "ST": 55.0,
+            "CB": 75.0,
+            "FM": 64.0,
+            "TB": 33.0
+          },
+          "avg_confidence": 0.7137
+        },
+        "touch_state": {
+          "trust": 6.8,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 225,
+            "cooling": 112,
+            "dormant": 112,
+            "lost": 101
+          },
+          "total_count": 550,
+          "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察"
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low"
+        ]
+      },
+      {
+        "persona_id": "ENFJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFJ",
+            "confidence": 0.7657,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ST",
+            "DA"
+          ],
+          "low_dims": [
+            "AS",
+            "TB"
+          ],
+          "top_dims_label": [
+            "社交拓扑",
+            "决策架构"
+          ],
+          "low_dims_label": [
+            "注意力结构",
+            "信任建立"
+          ],
+          "dimension_scores": {
+            "IM": 72.0,
+            "DA": 75.0,
+            "AS": 55.0,
+            "ME": 66.0,
+            "ST": 76.0,
+            "CB": 66.0,
+            "FM": 58.0,
+            "TB": 33.0
+          },
+          "avg_confidence": 0.7657
+        },
+        "touch_state": {
+          "trust": 7.2,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 92,
+            "cooling": 122,
+            "dormant": 162,
+            "lost": 152
+          },
+          "total_count": 528,
+          "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07"
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ENFP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFP",
+            "confidence": 0.224,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ST",
+            "CB"
+          ],
+          "low_dims": [
+            "AS",
+            "IM"
+          ],
+          "top_dims_label": [
+            "社交拓扑",
+            "认知带宽"
+          ],
+          "low_dims_label": [
+            "注意力结构",
+            "信息代谢"
+          ],
+          "dimension_scores": {
+            "IM": 57.0,
+            "DA": 64.5,
+            "AS": 58.0,
+            "ME": 66.0,
+            "ST": 85.2,
+            "CB": 67.0,
+            "FM": 64.5,
+            "TB": 66.5
+          },
+          "avg_confidence": 0.224
+        },
+        "touch_state": {
+          "trust": 6.49,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 270,
+            "cooling": 10,
+            "dormant": 195,
+            "lost": 128
+          },
+          "total_count": 603,
+          "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率"
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low",
+          "confidence_low"
+        ]
+      },
+      {
+        "persona_id": "ISTJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTJ",
+            "confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": null,
+          "low_dims": null,
+          "top_dims_label": [],
+          "low_dims_label": [],
+          "dimension_scores": null,
+          "avg_confidence": null
+        },
+        "touch_state": {
+          "trust": 7.63,
+          "eligible": true,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 155,
+            "cooling": 285,
+            "dormant": 275,
+            "lost": 200
+          },
+          "total_count": 915,
+          "note": "D18-B2反常识首触✅·D18-B6好奇心·微博"
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ISFJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFJ",
+            "confidence": 0.7581,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "DA",
+            "FM"
+          ],
+          "low_dims": [
+            "ST",
+            "CB"
+          ],
+          "top_dims_label": [
+            "决策架构",
+            "反馈模式"
+          ],
+          "low_dims_label": [
+            "社交拓扑",
+            "认知带宽"
+          ],
+          "dimension_scores": {
+            "IM": 60.0,
+            "DA": 75.0,
+            "AS": 50.0,
+            "ME": 50.0,
+            "ST": 50.0,
+            "CB": 50.0,
+            "FM": 66.0,
+            "TB": 55.0
+          },
+          "avg_confidence": 0.7581
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": 1,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low"
+        ]
+      },
+      {
+        "persona_id": "ESTJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ESTJ",
+            "confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": null,
+          "low_dims": null,
+          "top_dims_label": [],
+          "low_dims_label": [],
+          "dimension_scores": null,
+          "avg_confidence": null
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": null,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ESFJ",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ESFJ",
+            "confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": null,
+          "low_dims": null,
+          "top_dims_label": [],
+          "low_dims_label": [],
+          "dimension_scores": null,
+          "avg_confidence": null
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": null,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ISTP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTP",
+            "confidence": 0.7326,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "IM",
+            "AS"
+          ],
+          "low_dims": [
+            "CB",
+            "FM"
+          ],
+          "top_dims_label": [
+            "信息代谢",
+            "注意力结构"
+          ],
+          "low_dims_label": [
+            "认知带宽",
+            "反馈模式"
+          ],
+          "dimension_scores": {
+            "IM": 75.0,
+            "DA": 57.9,
+            "AS": 74.6,
+            "ME": 57.7,
+            "ST": 65.5,
+            "CB": 55.7,
+            "FM": 54.1,
+            "TB": 56.6
+          },
+          "avg_confidence": 0.7326
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": 1134,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ISFP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFP",
+            "confidence": 0.7317,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "IM",
+            "TB"
+          ],
+          "low_dims": [
+            "DA",
+            "AS"
+          ],
+          "top_dims_label": [
+            "信息代谢",
+            "信任建立"
+          ],
+          "low_dims_label": [
+            "决策架构",
+            "注意力结构"
+          ],
+          "dimension_scores": {
+            "IM": 69.7,
+            "DA": 55.7,
+            "AS": 55.0,
+            "ME": 59.7,
+            "ST": 65.0,
+            "CB": 57.0,
+            "FM": 62.3,
+            "TB": 67.7
+          },
+          "avg_confidence": 0.7317
+        },
+        "touch_state": {
+          "trust": 6.7,
+          "eligible": false,
+          "primary_lifecycle": "active",
+          "lifecycle_distribution": {
+            "active": 165,
+            "cooling": 162,
+            "dormant": 165,
+            "lost": 136
+          },
+          "total_count": 628,
+          "note": "UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估"
+        },
+        "unmet_need": null,
+        "flags": [
+          "sample_low"
+        ]
+      },
+      {
+        "persona_id": "ESTP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ESTP",
+            "confidence": 0.7681,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ST",
+            "AS"
+          ],
+          "low_dims": [
+            "TB",
+            "FM"
+          ],
+          "top_dims_label": [
+            "社交拓扑",
+            "注意力结构"
+          ],
+          "low_dims_label": [
+            "信任建立",
+            "反馈模式"
+          ],
+          "dimension_scores": {
+            "IM": 58.0,
+            "DA": 63.0,
+            "AS": 78.9,
+            "ME": 66.0,
+            "ST": 83.0,
+            "CB": 58.0,
+            "FM": 48.0,
+            "TB": 50.0
+          },
+          "avg_confidence": 0.7681
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": 488,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": []
+      },
+      {
+        "persona_id": "ESFP",
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ESFP",
+            "confidence": 0.2963,
+            "source": "profiles.json"
+          }
+        ],
+        "profile": {
+          "top_dims": [
+            "ST",
+            "FM"
+          ],
+          "low_dims": [
+            "CB",
+            "IM"
+          ],
+          "top_dims_label": [
+            "社交拓扑",
+            "反馈模式"
+          ],
+          "low_dims_label": [
+            "认知带宽",
+            "信息代谢"
+          ],
+          "dimension_scores": {
+            "IM": 54.0,
+            "DA": 60.0,
+            "AS": 55.0,
+            "ME": 61.0,
+            "ST": 80.0,
+            "CB": 55.0,
+            "FM": 74.9,
+            "TB": 66.0
+          },
+          "avg_confidence": 0.2963
+        },
+        "touch_state": {
+          "trust": null,
+          "eligible": null,
+          "primary_lifecycle": null,
+          "lifecycle_distribution": {},
+          "total_count": 384,
+          "note": null
+        },
+        "unmet_need": null,
+        "flags": [
+          "confidence_low"
+        ]
+      }
+    ]
   }
 }
