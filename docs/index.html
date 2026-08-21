@@ -172,6 +172,7 @@ const PERSONA = {
       {section:'系统', items:[
         {page:'systems', icon:'⚙️', label:'系统健康'},
         {page:'apis', icon:'🔑', label:'API 凭证'},
+        {page:'system-design', icon:'🧩', label:'系统设计', external:true, href:'system-design/'},
       ]},
       {section:'Agent 群', items:[
         {page:'cece', icon:'🧠', label:'策策'},
@@ -192,7 +193,7 @@ const PERSONA = {
     ],
     metrics:[
       {icon:'🔌', label:'API 层状态', value:'就绪'},
-      {icon:'🤖', label:'Agent 就绪', value:'5/5'},
+      {icon:'🤖', label:'Agent 就绪', value:'9/9'},
       {icon:'📊', label:'Workboard 任务', value:'—'},
       {icon:'💻', label:'代码覆盖', value:'L1 100%'},
     ],
@@ -236,11 +237,15 @@ let currentPage = 'dashboard';
 
 // ── AGENTS ──
 const AGENTS = [
-  { id:'cece', name:'策策', emoji:'🧠', role:'策略+内容官', model:'v4-flash', status:'idle', desc:'测试话题设计·内容生产·裂变机制' },
-  { id:'xixi', name:'析析', emoji:'🔬', role:'人格分析引擎', model:'v4-pro', status:'idle', desc:'人格画像·置信度·AI提示词生成', highlight:true },
-  { id:'toutou', name:'投投', emoji:'📤', role:'投放+分发官', model:'v4-flash', status:'idle', desc:'渠道选择·素材适配·出价优化·ROI' },
-  { id:'jianjian', name:'荐荐', emoji:'🎯', role:'分类+推荐官', model:'v4-flash', status:'idle', desc:'用户分群·产品匹配·推荐理由生成' },
-  { id:'kongkong', name:'控控', emoji:'💰', role:'财务官', model:'v4-flash', status:'idle', desc:'预算管控·单位经济学·异常熔断' },
+  { id:'cece', name:'策策', emoji:'🧠', role:'策略Hub核心', model:'v4-pro', status:'online', desc:'信号选择·策略组合·全局调度' },
+  { id:'toutou', name:'投投', emoji:'📤', role:'渠道执行', model:'v4-flash', status:'online', desc:'渠道组合·投放执行·效果回写' },
+  { id:'sheshe', name:'设设', emoji:'🎨', role:'内容创作', model:'v4-flash', status:'online', desc:'内容质量·母题+需求标签' },
+  { id:'xixi', name:'析析', emoji:'🔬', role:'用户认知·红队', model:'v4-pro', status:'online', desc:'人格画像·红队审查·unmet_need', highlight:true },
+  { id:'jianjian', name:'荐荐', emoji:'🎯', role:'产品研发', model:'v4-flash', status:'online', desc:'产品匹配·CVR·一次性交付物' },
+  { id:'kongkong', name:'控控', emoji:'💰', role:'财务·ROI', model:'v4-flash', status:'online', desc:'ROI测算·三层反馈·刹车' },
+  { id:'yingying', name:'营营', emoji:'🧑‍🤝‍🧑', role:'用户运营', model:'v4-flash', status:'online', desc:'分群·召回·NPS闭环' },
+  { id:'jiji', name:'技技', emoji:'⚙️', role:'技术基建', model:'v4-pro', status:'online', desc:'Flask·API·数据管道' },
+  { id:'jinjin', name:'进进', emoji:'🧬', role:'进化审计', model:'v4-pro', status:'online', desc:'三源汇入·三层裁决·ESC' },
 ];
 
 const FLASK_URL = 'http://localhost:8899';
@@ -261,7 +266,7 @@ function renderSidebar() {
   sidebar.innerHTML = `
     <div class="sidebar-logo">
       <h1>🔄 飞轮控制台</h1>
-      <span>Flywheel Console v0.1</span>
+      <span>Flywheel Console v0.2 · 机制+主题插件</span>
     </div>
     <nav class="sidebar-nav">
       ${p.nav.map(section => `

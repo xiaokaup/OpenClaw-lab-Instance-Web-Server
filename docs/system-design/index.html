@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>飞轮 · 机制 + 主题插件系统</title>
+<style>
+:root{--bg:#080b11;--surface:#111620;--surface2:#161b26;--border:#212836;--fg:#e1e4eb;--muted:#6e7687;--accent:#6366f1;--accent2:#8b5cf6;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--orange:#f97316;--cyan:#06b6d4;--blue:#60a5fa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:14px/1.6 system-ui,-apple-system,sans-serif;padding:24px;max-width:1100px;margin:0 auto}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+h1{font-size:22px;margin-bottom:6px}
+h2{font-size:16px;margin:28px 0 12px;padding-left:10px;border-left:3px solid var(--accent)}
+.sub{color:var(--muted);font-size:12px;margin-bottom:20px}
+.insight{background:linear-gradient(135deg,#1a1f2e,#172554);border:1px solid var(--accent);border-radius:10px;padding:16px 18px;margin:16px 0;font-size:14px}
+.insight b{color:var(--accent2)}
+.layers{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:720px){.layers{grid-template-columns:1fr}}
+.layer{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px}
+.layer.mech{border-color:var(--blue)}
+.layer.plugin{border-color:var(--accent2)}
+.layer h3{font-size:13px;margin-bottom:8px}
+.layer.mech h3{color:var(--blue)}
+.layer.plugin h3{color:var(--accent2)}
+.layer .tag{font-size:10px;color:var(--muted);margin-bottom:8px}
+.prims{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:14px 0}
+.prim{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center}
+.prim .icon{font-size:26px}
+.prim .name{font-weight:600;margin-top:6px}
+.prim .en{font-size:10px;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0}
+th{color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);font-weight:500}
+td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+.badge{font-size:9px;padding:2px 8px;border-radius:10px;border:1px solid var(--border);white-space:nowrap}
+.badge.mature{background:#0d2b16;color:var(--green);border-color:var(--green)}
+.badge.validating{background:#1a1f2e;color:var(--cyan);border-color:var(--cyan)}
+.badge.cold{background:#3a2a1d;color:var(--orange);border-color:var(--orange)}
+.chain{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin:12px 0}
+.chain .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:12px 0}
+.chain .node{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:11px}
+.chain .node b{display:block;font-size:9px;color:var(--muted);font-weight:400}
+.chain .arrow{color:var(--muted)}
+.steps{counter-reset:s;list-style:none}
+.steps li{position:relative;padding:8px 0 8px 34px;border-bottom:1px solid var(--border);font-size:13px}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:8px;width:22px;height:22px;background:var(--accent);color:#fff;border-radius:6px;text-align:center;line-height:22px;font-size:11px}
+.steps li b{color:var(--accent2)}
+.footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<h1>🔧 飞轮 · 机制 + 主题插件系统</h1>
+<div class="sub">Mechanism + Theme Plugin System · 原则 #16 · 2026-08-22 · 大卡维护</div>
+
+<div class="insight">
+  <b>核心洞察</b>：飞轮是<b>机制</b>（主题无关的动词），MBTI 是<b>主题</b>（可插拔的名词实例）。
+  产品/用户/策略/内容是大概念，MBTI 只是当前从信号里析出的第一个主题。
+</div>
+
+<h2>两层架构</h2>
+<div class="layers">
+  <div class="layer mech">
+    <h3>⚙️ 机制层 · 主题无关 · 永久</h3>
+    <div class="tag">系统的「动词」——怎么转、怎么匹配、怎么进化</div>
+    <div style="font-size:12px;line-height:1.9">
+      运营飞轮：信号→策略→内容→投放→用户→产品→财务→进化<br>
+      集装箱体系（Vessel）· 进化机制（三源汇入）· 守护系统<br>
+      <span style="color:var(--blue)">5 个通用原语（引擎只认这些）</span>
+    </div>
+  </div>
+  <div class="layer plugin">
+    <h3>🧩 插件层 · 主题相关 · 可插拔</h3>
+    <div class="tag">系统的「名词实例」——转的是什么货、切的是什么人</div>
+    <div style="font-size:12px;line-height:1.9">
+      一个主题插件 = 5 个分类法：<br>
+      用户 / 需求 / 内容 / 信号过滤 / 产品映射<br>
+      <span style="color:var(--accent2)">MBTI · 依恋 · 职场 · 金钱 · 成长</span>
+    </div>
+  </div>
+</div>
+
+<h2>5 个通用原语</h2>
+<div class="prims">
+  <div class="prim"><div class="icon">👤</div><div class="name">用户</div><div class="en">persona · 人设</div></div>
+  <div class="prim"><div class="icon">🎯</div><div class="name">需求</div><div class="en">need · 未被满足</div></div>
+  <div class="prim"><div class="icon">📄</div><div class="name">内容</div><div class="en">motif · 母题</div></div>
+  <div class="prim"><div class="icon">📦</div><div class="name">产品</div><div class="en">product · 满足物</div></div>
+  <div class="prim"><div class="icon">🧠</div><div class="name">策略</div><div class="en">strategy · 匹配</div></div>
+</div>
+
+<h2>主题注册表</h2>
+<table>
+  <tr><th>主题</th><th>生命周期</th><th>用户分类法</th><th>说明</th></tr>
+  <tr><td>🔵 MBTI 人格</td><td><span class="badge mature">mature</span></td><td>16 型 × 8 维认知</td><td>第一个注册主题·personality 已解耦 persona.themes[]</td></tr>
+  <tr><td>💜 依恋类型</td><td><span class="badge validating">validating</span></td><td>4 型（安全/焦虑/回避/混乱）</td><td>第二实例·母题连5批·S2匹配卡已交付·persona 数据待建</td></tr>
+  <tr><td>💼 职场</td><td><span class="badge cold">cold_start</span></td><td>待建</td><td>候选·N1职业匹配卡已交付</td></tr>
+  <tr><td>💰 金钱</td><td><span class="badge cold">cold_start</span></td><td>待建</td><td>候选·N3消费人格</td></tr>
+  <tr><td>🌱 成长</td><td><span class="badge cold">cold_start</span></td><td>待建</td><td>候选·N5育儿/成长</td></tr>
+</table>
+
+<h2>匹配链（策略的核心语义）</h2>
+<div class="chain">
+  <div style="font-size:12px;color:var(--muted)">一条策略 = 一条匹配链，每环指向同一个未满足需求：</div>
+  <div class="flow">
+    <span class="node"><b>📡 信号</b>蛋饼店主卖爆单</span><span class="arrow">→</span>
+    <span class="node"><b>🎯 需求</b>被看见/被确认</span><span class="arrow">→</span>
+    <span class="node"><b>👤 人设</b>ENFJ</span><span class="arrow">→</span>
+    <span class="node"><b>📄 母题</b>暖意</span><span class="arrow">→</span>
+    <span class="node"><b>🎨 方式</b>社会证明</span><span class="arrow">→</span>
+    <span class="node"><b>📡 渠道</b>小红书</span><span class="arrow">→</span>
+    <span class="node"><b>📦 产品</b>人格报告</span>
+  </div>
+  <div style="font-size:11px;color:var(--muted)">母题≠钩子（母题=叙事内核·讲什么；钩子=表达技巧·怎么抓注意力）</div>
+</div>
+
+<h2>迁移五步（已完成）</h2>
+<ol class="steps">
+  <li><b>schema 解耦</b> — personality 主键 → persona.themes[]（MBTI 降级为标签）</li>
+  <li><b>用户池 v2 = 人设池</b> — 主视图从 MBTI 分群 → 人设</li>
+  <li><b>策略池 v2 = 匹配引擎</b> — 主视图从投放臂清单 → 匹配链</li>
+  <li><b>主题注册表</b> — 依恋主题正式注册为第二实例</li>
+  <li><b>ontology 去 MBTI 化</b> — 内容/产品改按「母题 + 需求」打标签</li>
+</ol>
+
+<div class="footer">
+  设计文档：<a href="https://github.com/xiaokaup/OpenClaw-lab-Instance-Web-Server" target="_blank">workspace-shared-knowledge/system/</a> ·
+  数据池：<a href="../content-pool/">内容池</a> · <a href="../product-pool/">产品池</a> · <a href="../user-pool/">用户池</a> · <a href="../strategy-pool/">策略池</a>
+  <br>由大卡 🔧 维护 · 2026-08-22
+</div>
+
+</body>
+</html>
