@@ -708,5 +708,280 @@
         "大卡"
       ]
     }
-  }
+  },
+  "chains": [
+    {
+      "chain_id": "D21-B12-arm1",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "月入4万大提琴老师回应转行卖馒头(9分·自我觉醒·旗舰)",
+        "category": "反常识"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENFP",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENFP"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "反常识"
+        },
+        "channel": {
+          "value": "小红书"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "反常识batch1首触·Fi自我觉醒旗舰·放弃4万高薪转行·heat7M·9分旗舰",
+      "budget": 25,
+      "priority": "P0",
+      "status": "anti_common_sense_batch1"
+    },
+    {
+      "chain_id": "D21-B12-arm2",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "给化疗患儿外卖塞钱的蛋饼店主卖爆单(9分·暖意+社会正向反馈)",
+        "category": "社会证明"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENFJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENFJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "社会证明"
+        },
+        "channel": {
+          "value": "小红书"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "社会证明batch1首触·Fe暖意·情感共鸣batch2达上限→轮出社会证明·9分旗舰",
+      "budget": 25,
+      "priority": "P0",
+      "status": "social_proof_batch1"
+    },
+    {
+      "chain_id": "D21-B12-arm3",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "火车空位堆放零食 网友争的是什么(8分·公共规则辩论)",
+        "category": "身份认同"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENTP",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENTP"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "身份认同"
+        },
+        "channel": {
+          "value": "抖音"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "身份认同batch1首触·Ne公共规则辩论·好奇心batch2达上限→轮出身份认同·8分",
+      "budget": 25,
+      "priority": "P0",
+      "status": "identity_batch1"
+    },
+    {
+      "chain_id": "D21-B12-arm4",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "张家界天门山中外游客击掌走红(8分·社会货币+国家认同)",
+        "category": "社会货币"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "INFJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "INFJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "社会货币"
+        },
+        "channel": {
+          "value": "微博"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "社会货币batch1恢复首触·Ni-Fe国家认同·3批冷却后恢复·8分",
+      "budget": 25,
+      "priority": "P0",
+      "status": "social_currency_batch1"
+    },
+    {
+      "chain_id": "D21-B12-arm5",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "余承东官宣行业首发无网通信(7分·好奇心+科技)",
+        "category": "好奇心"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENTJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENTJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "好奇心"
+        },
+        "channel": {
+          "value": "抖音"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "好奇心batch1首触·Te科技战略·反常识batch2达上限→轮出好奇心·7分",
+      "budget": 25,
+      "priority": "P1",
+      "status": "curiosity_batch1"
+    },
+    {
+      "chain_id": "D21-B12-arm6",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "金龟子王宁补拍婚纱照(7分·情感共鸣+安全型依恋)",
+        "category": "情感共鸣"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "INFP",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "INFP"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "情感共鸣"
+        },
+        "channel": {
+          "value": "微博"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "情感共鸣batch1恢复首触·Fi安全型依恋·疲劳2.7→2.2·依恋母题连续5批·7分·质量<7则B13重新轮休",
+      "budget": 25,
+      "priority": "P1",
+      "status": "emotional_resonance_batch1_restored"
+    },
+    {
+      "chain_id": "D21-B12-arm7",
+      "batch_id": "D21-B12",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "最强厄尔尼诺事件或年底前形成(6分·气候科学)",
+        "category": "好奇心"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "INTJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "INTJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "好奇心"
+        },
+        "channel": {
+          "value": "B站"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "好奇心batch1首触·Ni气候科学制度深挖·反常识batch2达上限→轮出好奇心·6分",
+      "budget": 25,
+      "priority": "P1",
+      "status": "curiosity_batch1"
+    }
+  ]
 }
