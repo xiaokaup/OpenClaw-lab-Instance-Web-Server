@@ -8,7 +8,7 @@
     },
     "freshness_ttl_hours": 24,
     "id": "user-pool-vessel-2026-08-05T10:00:00+08:00",
-    "created_at": "2026-08-05T10:00:00+08:00",
+    "created_at": "2026-08-22T00:36:15+08:00",
     "priority": "high",
     "dependencies": [
       {
@@ -78,7 +78,7 @@
       "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
     }
   },
-  "updated_at": "2026-08-20T09:57:00+08:00",
+  "updated_at": "2026-08-22T00:36:15+08:00",
   "total_users": 8250,
   "population_estimate": {
     "xixi_estimates": 8480,
@@ -101,7 +101,7 @@
     49,
     49
   ],
-  "operator": "营营·D21-B11执行签收对齐",
+  "operator": "营营·D21-B12全链对齐+persona-themes v1.0（数据陈旧修复·大卡2026-08-22告警响应）",
   "system_status": "🔴 D21-B7 match gate 误触发已纠正(ESC-2026-08-16-1·执行层strategy_match=100%·信号命中率20.5%非gate指标)·投投自裁降级被纠偏: ENTP解扣补投·今日6臂¥150(≤日限¥200)·ENFJ冻结¥25留B8续触(D21-B7-ENFJ-1 q8.9 fresh就位)·B8四臂轮出预警(INTJ/INTP反常识+ISTJ社证+INFJ身份认同 batch2达上限)·用户运营2动作预置(ENFJ续触+INTP身份认同轮入·机动池零边际成本)",
   "system_status_detail": "D21-B7主批(09:25)¥125/5臂(INTJ/INTP/ENTJ/ISTJ/INFJ·strategy_match 5/5)·B2补投(12:07)ENTP解扣¥25(B站好奇心·D21-B7-ENTP-1 q8.8 fresh·设设12:00补产·缺口闭合)·ENFJ维持冻结留B8(D21-B7-ENFJ-1·情感共鸣·q8.9·fresh·小红书·usage0)·hook_diversity 4/6·HHI 0.278·dissent 0连续4批·内容TTL崩坏未解(3/6过期·复用3臂·ruling-015 TTL enforce逾期8天)·支付~443h盲飞(13阈值全破·非营营域)",
   "segments": {
@@ -109,278 +109,759 @@
       {
         "personality": "INTJ",
         "count": 390,
-        "avg_trust": 8.56,
+        "avg_trust": 8.53,
         "eligible": false,
-        "note": "零维护·生产级归档·自然覆盖"
+        "note": "零维护·生产级归档·自然覆盖",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTJ",
+              "confidence": 0.7286,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTJ",
         "count": 300,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖"
+        "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTJ",
+              "confidence": 0.7633,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INTP",
         "count": 330,
-        "avg_trust": 7.1,
+        "avg_trust": 7.35,
         "eligible": true,
-        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTP",
+              "confidence": 0.7457,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFP",
         "count": 270,
-        "avg_trust": 6.49,
+        "avg_trust": 6.55,
         "eligible": true,
-        "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率"
+        "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFP",
+              "confidence": 0.224,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFP",
         "count": 225,
-        "avg_trust": 6.8,
+        "avg_trust": 6.93,
         "eligible": true,
-        "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察"
+        "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFP",
+              "confidence": 0.7137,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFJ",
         "count": 155,
-        "avg_trust": 8.18,
+        "avg_trust": 8.13,
         "eligible": true,
-        "note": "首触即峰值·全系统最高信任·零维护双极候选"
+        "note": "首触即峰值·全系统最高信任·零维护双极候选",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFJ",
+              "confidence": 0.6947,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISTJ",
         "count": 155,
-        "avg_trust": 7.63,
+        "avg_trust": 7.6,
         "eligible": true,
-        "note": "D18-B2反常识首触✅·D18-B6好奇心·微博"
+        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | D18-B2反常识首触✅·D18-B6好奇心·微博",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISTJ",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISFP",
         "count": 165,
-        "avg_trust": 6.7,
+        "avg_trust": 7.52,
         "eligible": false,
-        "note": "UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估"
+        "note": "resting·无Se信号·D21后段轻触 | UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISFP",
+              "confidence": 0.7317,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFJ",
         "count": 92,
-        "avg_trust": 7.2,
+        "avg_trust": 7.07,
         "eligible": true,
-        "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07"
+        "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFJ",
+              "confidence": 0.7657,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTP",
         "count": 82,
-        "avg_trust": 6.5,
+        "avg_trust": 7.25,
         "eligible": true,
-        "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落"
+        "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTP",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       }
     ],
     "cooling": [
       {
         "personality": "INTJ",
         "count": 455,
-        "avg_trust": 8.56,
+        "avg_trust": 8.53,
         "eligible": false,
-        "note": "零维护自然回归"
+        "note": "零维护自然回归",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTJ",
+              "confidence": 0.7286,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTJ",
         "count": 285,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "决策惯性·5批gap·D19-B1覆盖"
+        "note": "决策惯性·5批gap·D19-B1覆盖",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTJ",
+              "confidence": 0.7633,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISTJ",
         "count": 285,
-        "avg_trust": 7.63,
+        "avg_trust": 7.6,
         "eligible": true,
-        "note": "零维护归档"
+        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISTJ",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INTP",
         "count": 155,
-        "avg_trust": 7.1,
+        "avg_trust": 7.35,
         "eligible": true,
-        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTP",
+              "confidence": 0.7457,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTP",
         "count": 162,
-        "avg_trust": 6.5,
+        "avg_trust": 7.25,
         "eligible": true,
-        "note": "首触后巩固中·Ne-dom弹性验证"
+        "note": "首触后巩固中·Ne-dom弹性验证",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTP",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISFP",
         "count": 162,
-        "avg_trust": 6.7,
+        "avg_trust": 7.52,
         "eligible": false,
-        "note": "感官低频·非紧急"
+        "note": "resting·无Se信号·D21后段轻触 | 感官低频·非紧急",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISFP",
+              "confidence": 0.7317,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFJ",
         "count": 122,
-        "avg_trust": 7.2,
+        "avg_trust": 7.07,
         "eligible": false,
-        "note": "窗口已闭合·观察衰减"
+        "note": "窗口已闭合·观察衰减",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFJ",
+              "confidence": 0.7657,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFP",
         "count": 10,
-        "avg_trust": 6.49,
+        "avg_trust": 6.55,
         "eligible": true,
-        "note": "社货恢复·冷却收尾"
+        "note": "社货恢复·冷却收尾",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFP",
+              "confidence": 0.224,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFP",
         "count": 112,
-        "avg_trust": 6.8,
+        "avg_trust": 6.93,
         "eligible": true,
-        "note": "恢复中·轻触不加重"
+        "note": "恢复中·轻触不加重",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFP",
+              "confidence": 0.7137,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFJ",
         "count": 102,
-        "avg_trust": 8.18,
+        "avg_trust": 8.13,
         "eligible": true,
-        "note": "低维护·高信任"
+        "note": "低维护·高信任",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFJ",
+              "confidence": 0.6947,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       }
     ],
     "dormant": [
       {
         "personality": "INTP",
         "count": 185,
-        "avg_trust": 7.1,
+        "avg_trust": 7.35,
         "eligible": true,
-        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTP",
+              "confidence": 0.7457,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFP",
         "count": 195,
-        "avg_trust": 6.49,
+        "avg_trust": 6.55,
         "eligible": true,
-        "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力"
+        "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFP",
+              "confidence": 0.224,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFJ",
         "count": 245,
-        "avg_trust": 8.18,
+        "avg_trust": 8.13,
         "eligible": true,
-        "note": "低维护·信任高"
+        "note": "低维护·信任高",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFJ",
+              "confidence": 0.6947,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INTJ",
         "count": 415,
-        "avg_trust": 8.56,
+        "avg_trust": 8.53,
         "eligible": false,
-        "note": "零维护·触达ROI低"
+        "note": "零维护·触达ROI低",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTJ",
+              "confidence": 0.7286,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTJ",
         "count": 335,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "决策惯性"
+        "note": "决策惯性",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTJ",
+              "confidence": 0.7633,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISTJ",
         "count": 275,
-        "avg_trust": 7.63,
+        "avg_trust": 7.6,
         "eligible": true,
-        "note": "零维护归档"
+        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISTJ",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISFP",
         "count": 165,
-        "avg_trust": 6.7,
+        "avg_trust": 7.52,
         "eligible": false,
-        "note": "感官低频"
+        "note": "resting·无Se信号·D21后段轻触 | 感官低频",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISFP",
+              "confidence": 0.7317,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFJ",
         "count": 162,
-        "avg_trust": 7.2,
+        "avg_trust": 7.07,
         "eligible": false,
-        "note": "窗口闭合·观察"
+        "note": "窗口闭合·观察",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFJ",
+              "confidence": 0.7657,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTP",
         "count": 155,
-        "avg_trust": 6.5,
+        "avg_trust": 7.25,
         "eligible": true,
-        "note": "D19-B1后定唤醒策略"
+        "note": "D19-B1后定唤醒策略",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTP",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFP",
         "count": 112,
-        "avg_trust": 6.8,
+        "avg_trust": 6.93,
         "eligible": true,
-        "note": "恢复中·轻触不加重"
+        "note": "恢复中·轻触不加重",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFP",
+              "confidence": 0.7137,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       }
     ],
     "lost": [
       {
         "personality": "INTJ",
         "count": 345,
-        "avg_trust": 5.8,
-        "eligible": false
+        "avg_trust": 8.53,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTJ",
+              "confidence": 0.7286,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTJ",
         "count": 215,
-        "avg_trust": 5.6,
-        "eligible": false
+        "avg_trust": 7.74,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTJ",
+              "confidence": 0.7633,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISTJ",
         "count": 200,
-        "avg_trust": 5.5,
-        "eligible": false
+        "avg_trust": 7.6,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISTJ",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INTP",
         "count": 205,
-        "avg_trust": 5.7,
-        "eligible": false
+        "avg_trust": 7.35,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INTP",
+              "confidence": 0.7457,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFJ",
         "count": 215,
-        "avg_trust": 5.9,
-        "eligible": false
+        "avg_trust": 8.13,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFJ",
+              "confidence": 0.6947,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ISFP",
         "count": 136,
-        "avg_trust": 5.5,
-        "eligible": false
+        "avg_trust": 7.52,
+        "eligible": false,
+        "note": "resting·无Se信号·D21后段轻触 | ",
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ISFP",
+              "confidence": 0.7317,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFP",
         "count": 128,
-        "avg_trust": 5.3,
-        "eligible": false
+        "avg_trust": 6.55,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFP",
+              "confidence": 0.224,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "INFP",
         "count": 101,
-        "avg_trust": 5.4,
-        "eligible": false
+        "avg_trust": 6.93,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "INFP",
+              "confidence": 0.7137,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENFJ",
         "count": 152,
-        "avg_trust": 5.5,
-        "eligible": false
+        "avg_trust": 7.07,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENFJ",
+              "confidence": 0.7657,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       },
       {
         "personality": "ENTP",
         "count": 95,
-        "avg_trust": 5.2,
-        "eligible": false
+        "avg_trust": 7.25,
+        "eligible": false,
+        "persona": {
+          "themes": [
+            {
+              "type": "mbti",
+              "value": "ENTP",
+              "confidence": null,
+              "type_label_confidence": null,
+              "source": "profiles.json"
+            }
+          ],
+          "unmet_need": null
+        }
       }
     ]
   },
@@ -388,9 +869,21 @@
     {
       "personality": "INTJ",
       "count": 390,
-      "avg_trust": 8.56,
+      "avg_trust": 8.53,
       "eligible": false,
       "note": "零维护·生产级归档·自然覆盖",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTJ",
+            "confidence": 0.7286,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
@@ -399,78 +892,198 @@
       "avg_trust": 7.74,
       "eligible": true,
       "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTJ",
+            "confidence": 0.7633,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "INTP",
       "count": 330,
-      "avg_trust": 7.1,
+      "avg_trust": 7.35,
       "eligible": true,
-      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTP",
+            "confidence": 0.7457,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "ENFP",
       "count": 270,
-      "avg_trust": 6.49,
+      "avg_trust": 6.55,
       "eligible": true,
       "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFP",
+            "confidence": 0.224,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "INFP",
       "count": 225,
-      "avg_trust": 6.8,
+      "avg_trust": 6.93,
       "eligible": true,
       "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFP",
+            "confidence": 0.7137,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "INFJ",
       "count": 155,
-      "avg_trust": 8.18,
+      "avg_trust": 8.13,
       "eligible": true,
       "note": "首触即峰值·全系统最高信任·零维护双极候选",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFJ",
+            "confidence": 0.6947,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "ISTJ",
       "count": 155,
-      "avg_trust": 7.63,
+      "avg_trust": 7.6,
       "eligible": true,
-      "note": "D18-B2反常识首触✅·D18-B6好奇心·微博",
+      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | D18-B2反常识首触✅·D18-B6好奇心·微博",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTJ",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "ISFP",
       "count": 165,
-      "avg_trust": 6.7,
+      "avg_trust": 7.52,
       "eligible": false,
-      "note": "UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+      "note": "resting·无Se信号·D21后段轻触 | UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFP",
+            "confidence": 0.7317,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "ENFJ",
       "count": 92,
-      "avg_trust": 7.2,
+      "avg_trust": 7.07,
       "eligible": true,
       "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFJ",
+            "confidence": 0.7657,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "ENTP",
       "count": 82,
-      "avg_trust": 6.5,
+      "avg_trust": 7.25,
       "eligible": true,
       "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTP",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "active"
     },
     {
       "personality": "INTJ",
       "count": 455,
-      "avg_trust": 8.56,
+      "avg_trust": 8.53,
       "eligible": false,
       "note": "零维护自然回归",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTJ",
+            "confidence": 0.7286,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
@@ -479,102 +1092,258 @@
       "avg_trust": 7.74,
       "eligible": true,
       "note": "决策惯性·5批gap·D19-B1覆盖",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTJ",
+            "confidence": 0.7633,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "ISTJ",
       "count": 285,
-      "avg_trust": 7.63,
+      "avg_trust": 7.6,
       "eligible": true,
-      "note": "零维护归档",
+      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTJ",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "INTP",
       "count": 155,
-      "avg_trust": 7.1,
+      "avg_trust": 7.35,
       "eligible": true,
-      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTP",
+            "confidence": 0.7457,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "ENTP",
       "count": 162,
-      "avg_trust": 6.5,
+      "avg_trust": 7.25,
       "eligible": true,
       "note": "首触后巩固中·Ne-dom弹性验证",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTP",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "ISFP",
       "count": 162,
-      "avg_trust": 6.7,
+      "avg_trust": 7.52,
       "eligible": false,
-      "note": "感官低频·非紧急",
+      "note": "resting·无Se信号·D21后段轻触 | 感官低频·非紧急",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFP",
+            "confidence": 0.7317,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "ENFJ",
       "count": 122,
-      "avg_trust": 7.2,
+      "avg_trust": 7.07,
       "eligible": false,
       "note": "窗口已闭合·观察衰减",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFJ",
+            "confidence": 0.7657,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "ENFP",
       "count": 10,
-      "avg_trust": 6.49,
+      "avg_trust": 6.55,
       "eligible": true,
       "note": "社货恢复·冷却收尾",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFP",
+            "confidence": 0.224,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "INFP",
       "count": 112,
-      "avg_trust": 6.8,
+      "avg_trust": 6.93,
       "eligible": true,
       "note": "恢复中·轻触不加重",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFP",
+            "confidence": 0.7137,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "INFJ",
       "count": 102,
-      "avg_trust": 8.18,
+      "avg_trust": 8.13,
       "eligible": true,
       "note": "低维护·高信任",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFJ",
+            "confidence": 0.6947,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "cooling"
     },
     {
       "personality": "INTP",
       "count": 185,
-      "avg_trust": 7.1,
+      "avg_trust": 7.35,
       "eligible": true,
-      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTP",
+            "confidence": 0.7457,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "ENFP",
       "count": 195,
-      "avg_trust": 6.49,
+      "avg_trust": 6.55,
       "eligible": true,
       "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFP",
+            "confidence": 0.224,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "INFJ",
       "count": 245,
-      "avg_trust": 8.18,
+      "avg_trust": 8.13,
       "eligible": true,
       "note": "低维护·信任高",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFJ",
+            "confidence": 0.6947,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "INTJ",
       "count": 415,
-      "avg_trust": 8.56,
+      "avg_trust": 8.53,
       "eligible": false,
       "note": "零维护·触达ROI低",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTJ",
+            "confidence": 0.7286,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
@@ -583,116 +1352,309 @@
       "avg_trust": 7.74,
       "eligible": true,
       "note": "决策惯性",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTJ",
+            "confidence": 0.7633,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "ISTJ",
       "count": 275,
-      "avg_trust": 7.63,
+      "avg_trust": 7.6,
       "eligible": true,
-      "note": "零维护归档",
+      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTJ",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "ISFP",
       "count": 165,
-      "avg_trust": 6.7,
+      "avg_trust": 7.52,
       "eligible": false,
-      "note": "感官低频",
+      "note": "resting·无Se信号·D21后段轻触 | 感官低频",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFP",
+            "confidence": 0.7317,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "ENFJ",
       "count": 162,
-      "avg_trust": 7.2,
+      "avg_trust": 7.07,
       "eligible": false,
       "note": "窗口闭合·观察",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFJ",
+            "confidence": 0.7657,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "ENTP",
       "count": 155,
-      "avg_trust": 6.5,
+      "avg_trust": 7.25,
       "eligible": true,
       "note": "D19-B1后定唤醒策略",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTP",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "INFP",
       "count": 112,
-      "avg_trust": 6.8,
+      "avg_trust": 6.93,
       "eligible": true,
       "note": "恢复中·轻触不加重",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFP",
+            "confidence": 0.7137,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "dormant"
     },
     {
       "personality": "INTJ",
       "count": 345,
-      "avg_trust": 5.8,
+      "avg_trust": 8.53,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTJ",
+            "confidence": 0.7286,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ENTJ",
       "count": 215,
-      "avg_trust": 5.6,
+      "avg_trust": 7.74,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTJ",
+            "confidence": 0.7633,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ISTJ",
       "count": 200,
-      "avg_trust": 5.5,
+      "avg_trust": 7.6,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISTJ",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "INTP",
       "count": 205,
-      "avg_trust": 5.7,
+      "avg_trust": 7.35,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INTP",
+            "confidence": 0.7457,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "INFJ",
       "count": 215,
-      "avg_trust": 5.9,
+      "avg_trust": 8.13,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFJ",
+            "confidence": 0.6947,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ISFP",
       "count": 136,
-      "avg_trust": 5.5,
+      "avg_trust": 7.52,
       "eligible": false,
+      "note": "resting·无Se信号·D21后段轻触 | ",
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ISFP",
+            "confidence": 0.7317,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ENFP",
       "count": 128,
-      "avg_trust": 5.3,
+      "avg_trust": 6.55,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFP",
+            "confidence": 0.224,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "INFP",
       "count": 101,
-      "avg_trust": 5.4,
+      "avg_trust": 6.93,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "INFP",
+            "confidence": 0.7137,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ENFJ",
       "count": 152,
-      "avg_trust": 5.5,
+      "avg_trust": 7.07,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENFJ",
+            "confidence": 0.7657,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     },
     {
       "personality": "ENTP",
       "count": 95,
-      "avg_trust": 5.2,
+      "avg_trust": 7.25,
       "eligible": false,
+      "persona": {
+        "themes": [
+          {
+            "type": "mbti",
+            "value": "ENTP",
+            "confidence": null,
+            "type_label_confidence": null,
+            "source": "profiles.json"
+          }
+        ],
+        "unmet_need": null
+      },
       "group": "lost"
     }
   ],
@@ -921,7 +1883,7 @@
         "subsystem": "平台·知识",
         "theme": "mbti"
       },
-      "created_at": "2026-08-21T18:49:45.709932+08:00",
+      "created_at": "2026-08-21T19:00:00.849920+08:00",
       "freshness_ttl_hours": 24,
       "info_contract": {
         "excludes": "persona 是运行时聚合视图·非单个用户·unmet_need 为待析析填充占位·匹配结果≠诊断",
@@ -982,6 +1944,7 @@
             "type": "mbti",
             "value": "INTJ",
             "confidence": 0.7286,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1037,6 +2000,7 @@
             "type": "mbti",
             "value": "INTP",
             "confidence": 0.7457,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1094,6 +2058,7 @@
             "type": "mbti",
             "value": "ENTJ",
             "confidence": 0.7633,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1151,6 +2116,7 @@
             "type": "mbti",
             "value": "ENTP",
             "confidence": null,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1185,6 +2151,7 @@
             "type": "mbti",
             "value": "INFJ",
             "confidence": 0.6947,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1240,6 +2207,7 @@
             "type": "mbti",
             "value": "INFP",
             "confidence": 0.7137,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1297,6 +2265,7 @@
             "type": "mbti",
             "value": "ENFJ",
             "confidence": 0.7657,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1352,6 +2321,7 @@
             "type": "mbti",
             "value": "ENFP",
             "confidence": 0.224,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1410,6 +2380,7 @@
             "type": "mbti",
             "value": "ISTJ",
             "confidence": null,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1444,6 +2415,7 @@
             "type": "mbti",
             "value": "ISFJ",
             "confidence": 0.7581,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1496,6 +2468,7 @@
             "type": "mbti",
             "value": "ESTJ",
             "confidence": null,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1525,6 +2498,7 @@
             "type": "mbti",
             "value": "ESFJ",
             "confidence": null,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1554,6 +2528,7 @@
             "type": "mbti",
             "value": "ISTP",
             "confidence": 0.7326,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1604,6 +2579,7 @@
             "type": "mbti",
             "value": "ISFP",
             "confidence": 0.7317,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1661,6 +2637,7 @@
             "type": "mbti",
             "value": "ESTP",
             "confidence": 0.7681,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1711,6 +2688,7 @@
             "type": "mbti",
             "value": "ESFP",
             "confidence": 0.2963,
+            "type_label_confidence": null,
             "source": "profiles.json"
           }
         ],
@@ -1757,5 +2735,683 @@
         ]
       }
     ]
+  },
+  "user_dimensions": {
+    "vessel": {
+      "version": "1.0",
+      "type": "user-dimension-vessel",
+      "id": "user-dimension-taxonomy-v1-20260822",
+      "source": {
+        "agent": "大卡",
+        "subsystem": "平台·知识"
+      },
+      "created_at": "2026-08-22T00:45:00+08:00",
+      "freshness_ttl_hours": 168,
+      "info_contract": {
+        "excludes": "这是「用户要素维度分类法」(taxonomy)，不是用户画像数据。当前仅定义维度和取值，不含真实人群分布(users.jsonl 无人口字段)。各维度取值尚未被任何 Agent 采集/打标签。",
+        "action_threshold": "某维度 sample<30 或覆盖率<10% → 标记 data_missing 并禁止作为投放主维度，只可作探索性参考。",
+        "expires_after": "168h(7天)或维度的取值/层级发生结构性调整时更新。"
+      },
+      "dependencies": [
+        {
+          "vessel_type": "persona-pool-vessel",
+          "vessel_id": "persona-pool-latest"
+        },
+        {
+          "vessel_type": "user-pool-vessel",
+          "vessel_id": "user-targeting-latest"
+        }
+      ]
+    },
+    "version": "1.0",
+    "theme_independent": true,
+    "semantics": {
+      "dimension_vs_theme": "「维度(dimension)」= 机制层·主题无关的用户要素切片(性别/年龄/职业…)，任何主题插件都能复用。「主题(theme)」= 插件层·某一套人设分类法(MBTI/依恋…)，通过 persona.themes[] 挂在人设上。二者正交：维度 × 主题 = 更细的人群切片。",
+      "group_meaning": {
+        "static": "静态属性——相对稳定，可自报/可推断，用于「精分」人群基线",
+        "interest": "兴趣行为——可多选交叉，价值最高，用于「选题/选品/圈层」",
+        "state": "状态——动态，需要监测刷新，用于「门槛判定/排期」",
+        "context": "场景环境——实时或周期变化，用于「投放时机/地域触发」，非用户属性而是触达环境"
+      },
+      "combination_note": "维度组合不是笛卡尔全乘。16型×2性别×6年龄×8职业×4地理=6144 静态组合，多数稀疏无意义。组合应由「信号 + 未满足需求」驱动，从主维度出发做有依据的精分，而非暴力枚举。"
+    },
+    "groups": [
+      {
+        "id": "static",
+        "name": "静态属性",
+        "icon": "📌",
+        "desc": "稳定·自报/可推断·精分基线"
+      },
+      {
+        "id": "interest",
+        "name": "兴趣行为",
+        "icon": "🎯",
+        "desc": "多选交叉·高价值·选题选品圈层"
+      },
+      {
+        "id": "state",
+        "name": "状态",
+        "icon": "🩺",
+        "desc": "动态·需监测·门槛与排期"
+      },
+      {
+        "id": "context",
+        "name": "场景环境",
+        "icon": "🌦️",
+        "desc": "实时/周期·投放时机与地域触发"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "gender",
+        "name": "性别",
+        "group": "static",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "注册问卷 / 昵称推断(低置信)",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "选题视角与文案语气(女性向/男性向/中性)",
+          "product": "产品形态与包装(如双人卡 vs 单人卡)",
+          "strategy": "渠道与素材的性别偏好分层"
+        },
+        "levels": [
+          {
+            "id": "male",
+            "label": "男"
+          },
+          {
+            "id": "female",
+            "label": "女"
+          },
+          {
+            "id": "non_binary",
+            "label": "非二元"
+          },
+          {
+            "id": "unknown",
+            "label": "未披露"
+          }
+        ]
+      },
+      {
+        "id": "age",
+        "name": "年龄",
+        "group": "static",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "注册问卷 / 行为推断",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "代际语境与平台习惯(GenZ vs 中年)",
+          "product": "定价与付费能力分层",
+          "strategy": "年龄段 × 渠道矩阵(如 18-24 偏好 B站/抖音)"
+        },
+        "levels": [
+          {
+            "id": "u18",
+            "label": "18 以下"
+          },
+          {
+            "id": "z18_24",
+            "label": "18–24"
+          },
+          {
+            "id": "y25_34",
+            "label": "25–34"
+          },
+          {
+            "id": "y35_44",
+            "label": "35–44"
+          },
+          {
+            "id": "x45_54",
+            "label": "45–54"
+          },
+          {
+            "id": "silver55",
+            "label": "55+"
+          }
+        ]
+      },
+      {
+        "id": "occupation",
+        "name": "职业",
+        "group": "static",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "注册问卷 / 行为推断",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "痛点场景(职场/育儿/副业)对应母题",
+          "product": "职业场景工具化产品(如职业匹配记分卡)",
+          "strategy": "职业 × 母题组合定向"
+        },
+        "levels": [
+          {
+            "id": "student",
+            "label": "学生"
+          },
+          {
+            "id": "white_collar",
+            "label": "白领"
+          },
+          {
+            "id": "blue_collar",
+            "label": "蓝领"
+          },
+          {
+            "id": "freelancer",
+            "label": "自由职业"
+          },
+          {
+            "id": "entrepreneur",
+            "label": "创业者"
+          },
+          {
+            "id": "homemaker",
+            "label": "全职父母"
+          },
+          {
+            "id": "retired",
+            "label": "退休"
+          },
+          {
+            "id": "other",
+            "label": "其他"
+          }
+        ]
+      },
+      {
+        "id": "geography",
+        "name": "地理",
+        "group": "static",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "IP 归属地 / 问卷",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "地域相关性选题(如一线 vs 下沉)",
+          "product": "消费力分层定价",
+          "strategy": "地域投放定向 + 地域场景触发(结合天气)"
+        },
+        "levels": [
+          {
+            "id": "tier1",
+            "label": "一线"
+          },
+          {
+            "id": "new_tier1",
+            "label": "新一线"
+          },
+          {
+            "id": "tier2",
+            "label": "二线"
+          },
+          {
+            "id": "tier3_down",
+            "label": "三线及以下"
+          },
+          {
+            "id": "overseas",
+            "label": "海外"
+          },
+          {
+            "id": "unknown",
+            "label": "未知"
+          }
+        ]
+      },
+      {
+        "id": "interests",
+        "name": "兴趣爱好",
+        "group": "interest",
+        "cardinality": "multi",
+        "priority": "core",
+        "data_source": "问卷 / 内容互动行为推断",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "兴趣圈层选题(游戏/动漫/健身…)",
+          "product": "兴趣向产品方向(兴趣卡/测评)",
+          "strategy": "兴趣 × 人设 × 渠道交叉圈层触达"
+        },
+        "levels": [
+          {
+            "id": "gaming",
+            "label": "游戏"
+          },
+          {
+            "id": "acg",
+            "label": "二次元"
+          },
+          {
+            "id": "fitness",
+            "label": "运动健身"
+          },
+          {
+            "id": "reading",
+            "label": "阅读学习"
+          },
+          {
+            "id": "travel",
+            "label": "旅行"
+          },
+          {
+            "id": "food",
+            "label": "美食"
+          },
+          {
+            "id": "tech",
+            "label": "科技数码"
+          },
+          {
+            "id": "pets",
+            "label": "宠物"
+          },
+          {
+            "id": "music",
+            "label": "音乐"
+          },
+          {
+            "id": "drama",
+            "label": "影视"
+          },
+          {
+            "id": "photo",
+            "label": "摄影"
+          },
+          {
+            "id": "investing",
+            "label": "理财投资"
+          }
+        ]
+      },
+      {
+        "id": "spending_style",
+        "name": "消费偏好",
+        "group": "interest",
+        "cardinality": "single",
+        "priority": "extension",
+        "data_source": "问卷 / 付费行为",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "卖点话术(性价比 vs 品质 vs 体验)",
+          "product": "定价锚点与产品线分层",
+          "strategy": "付费转化策略分层"
+        },
+        "levels": [
+          {
+            "id": "value",
+            "label": "性价比型"
+          },
+          {
+            "id": "quality",
+            "label": "品质型"
+          },
+          {
+            "id": "experience",
+            "label": "体验型"
+          },
+          {
+            "id": "impulsive",
+            "label": "冲动型"
+          },
+          {
+            "id": "thrifty",
+            "label": "节俭型"
+          }
+        ]
+      },
+      {
+        "id": "content_habit",
+        "name": "内容消费习惯",
+        "group": "interest",
+        "cardinality": "single",
+        "priority": "extension",
+        "data_source": "行为日志",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "内容形态选择(短视频/长文/图文/音频)",
+          "product": "交付形态匹配(可交互页 vs 电子表格 vs PDF)",
+          "strategy": "渠道与时长策略"
+        },
+        "levels": [
+          {
+            "id": "short_video",
+            "label": "短视频"
+          },
+          {
+            "id": "long_form",
+            "label": "深度长文"
+          },
+          {
+            "id": "image_text",
+            "label": "图文"
+          },
+          {
+            "id": "audio",
+            "label": "音频播客"
+          },
+          {
+            "id": "mixed",
+            "label": "混合"
+          }
+        ]
+      },
+      {
+        "id": "health",
+        "name": "健康程度",
+        "group": "state",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "问卷(自报) / 行为推断",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "健康/睡眠/减压母题(需谨慎·非医疗诊断)",
+          "product": "睡眠改善/减压/健康类产品方向",
+          "strategy": "状态门槛(如睡眠困扰 → 作息类内容)"
+        },
+        "levels": [
+          {
+            "id": "optimal",
+            "label": "健康"
+          },
+          {
+            "id": "sub_health",
+            "label": "亚健康"
+          },
+          {
+            "id": "chronic",
+            "label": "慢性病"
+          },
+          {
+            "id": "sleep_issue",
+            "label": "睡眠困扰"
+          },
+          {
+            "id": "stress_high",
+            "label": "高压焦虑"
+          },
+          {
+            "id": "unknown",
+            "label": "未知"
+          }
+        ]
+      },
+      {
+        "id": "chronotype",
+        "name": "作息习惯",
+        "group": "state",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "行为日志(活跃时段) / 问卷",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "作息相关母题(熬夜/早起/碎片)",
+          "product": "作息改善/能量管理类产品",
+          "strategy": "投放时段调度(早鸟早推/夜猫晚推)"
+        },
+        "levels": [
+          {
+            "id": "early_bird",
+            "label": "早鸟型"
+          },
+          {
+            "id": "night_owl",
+            "label": "夜猫子型"
+          },
+          {
+            "id": "regular",
+            "label": "规律型"
+          },
+          {
+            "id": "irregular",
+            "label": "紊乱型"
+          },
+          {
+            "id": "fragmented",
+            "label": "碎片化"
+          }
+        ]
+      },
+      {
+        "id": "life_stage",
+        "name": "生活阶段",
+        "group": "state",
+        "cardinality": "single",
+        "priority": "extension",
+        "data_source": "问卷 / 推断",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "人生阶段母题(求学/成家/育儿/空巢)",
+          "product": "阶段向产品(育儿/成长/退休)",
+          "strategy": "阶段 × 需求组合(如育儿期 → 关系安全感)"
+        },
+        "levels": [
+          {
+            "id": "studying",
+            "label": "求学"
+          },
+          {
+            "id": "early_career",
+            "label": "职场新人"
+          },
+          {
+            "id": "established",
+            "label": "事业稳定"
+          },
+          {
+            "id": "family_building",
+            "label": "成家"
+          },
+          {
+            "id": "parenting",
+            "label": "育儿期"
+          },
+          {
+            "id": "empty_nest",
+            "label": "空巢/退休"
+          }
+        ]
+      },
+      {
+        "id": "weather",
+        "name": "天气",
+        "group": "context",
+        "cardinality": "single",
+        "priority": "core",
+        "data_source": "实时天气 API(地域)",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "天气场景内容(雨天情绪/高温烦躁)",
+          "product": "天气相关场景化产品(季节性)",
+          "strategy": "地域 × 天气实时触发投放"
+        },
+        "levels": [
+          {
+            "id": "sunny",
+            "label": "晴"
+          },
+          {
+            "id": "rainy",
+            "label": "雨"
+          },
+          {
+            "id": "cloudy",
+            "label": "阴"
+          },
+          {
+            "id": "hot",
+            "label": "高温"
+          },
+          {
+            "id": "cold",
+            "label": "低温"
+          },
+          {
+            "id": "extreme",
+            "label": "极端天气"
+          }
+        ]
+      },
+      {
+        "id": "time_of_day",
+        "name": "触媒时段",
+        "group": "context",
+        "cardinality": "single",
+        "priority": "extension",
+        "data_source": "行为日志(活跃时段)",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "时段内容调性(深夜走心/午间轻量)",
+          "product": "—",
+          "strategy": "时段 × 作息矩阵调度(夜猫子 × 深夜)"
+        },
+        "levels": [
+          {
+            "id": "early_morning",
+            "label": "清晨"
+          },
+          {
+            "id": "morning",
+            "label": "上午"
+          },
+          {
+            "id": "noon",
+            "label": "午间"
+          },
+          {
+            "id": "evening",
+            "label": "晚间"
+          },
+          {
+            "id": "late_night",
+            "label": "深夜"
+          }
+        ]
+      },
+      {
+        "id": "season",
+        "name": "季节",
+        "group": "context",
+        "cardinality": "single",
+        "priority": "extension",
+        "data_source": "日历",
+        "population_status": "taxonomy_only",
+        "application": {
+          "content": "季节母题(换季/节日/寒暑假)",
+          "product": "季节产品线(能量日历/节日卡)",
+          "strategy": "季节营销节奏"
+        },
+        "levels": [
+          {
+            "id": "spring",
+            "label": "春"
+          },
+          {
+            "id": "summer",
+            "label": "夏"
+          },
+          {
+            "id": "autumn",
+            "label": "秋"
+          },
+          {
+            "id": "winter",
+            "label": "冬"
+          }
+        ]
+      }
+    ],
+    "combination_strategy": {
+      "primary_key": "persona themes（MBTI / 依恋…）——人群主键，决定「谁」",
+      "refine": [
+        "gender",
+        "age",
+        "occupation",
+        "geography"
+      ],
+      "cross_cut": [
+        "interests",
+        "spending_style",
+        "content_habit"
+      ],
+      "gate": [
+        "health",
+        "chronotype",
+        "life_stage"
+      ],
+      "trigger": [
+        "weather",
+        "time_of_day",
+        "season"
+      ],
+      "golden_combos": [
+        {
+          "combo": "MBTI × 职业",
+          "use": "职场痛点母题定向",
+          "example": "INTJ × 白领 → 职业转型母题"
+        },
+        {
+          "combo": "依恋 × 生活阶段",
+          "use": "关系安全感产品",
+          "example": "焦虑型依恋 × 育儿期 → 育儿关系产品"
+        },
+        {
+          "combo": "作息 × 触媒时段",
+          "use": "投放时段调度",
+          "example": "夜猫子 × 深夜 → 走心长文"
+        },
+        {
+          "combo": "地理 × 天气",
+          "use": "地域场景触发",
+          "example": "南方 × 高温 → 烦躁/解压内容"
+        },
+        {
+          "combo": "年龄 × 消费偏好",
+          "use": "定价与付费分层",
+          "example": "18–24 × 体验型 → 低价轻交付"
+        }
+      ],
+      "cardinality_governance": {
+        "rule": "禁止全维度笛卡尔枚举。组合由「信号 + 未满足需求」驱动，从主维度(persona)出发做有依据的精分。",
+        "static_cardinality": "16 persona × 2 性别 × 6 年龄 × 8 职业 × 4 地理 = 6144 静态组合(稀疏·多数无意义)",
+        "recommended": "每批次最多叠加 2–3 个维度；优先使用 golden_combos；其余维度作为过滤门槛或触发条件而非主分群键。"
+      }
+    },
+    "data_contract": {
+      "rule": "各 Agent 产出内容/产品/策略时，在保留现有标签(personality/hook/motif/need)的同时，可新增 dimensions 字段标注目标人群维度。",
+      "fields": {
+        "dimensions": "目标人群维度切片，如 {occupation:['white_collar'], age:['y25_34']}，多选维度取数组"
+      },
+      "example_content": {
+        "motif": "career",
+        "need": "be_seen",
+        "hook": "反常识",
+        "personality": [
+          "INTJ"
+        ],
+        "dimensions": {
+          "occupation": [
+            "white_collar"
+          ],
+          "age": [
+            "y25_34"
+          ]
+        }
+      },
+      "example_product": {
+        "name": "职业匹配记分卡",
+        "motif": "career",
+        "need": "self_confirm",
+        "dimensions": {
+          "occupation": [
+            "white_collar",
+            "student"
+          ]
+        }
+      },
+      "population_status": "待采集：users.jsonl 当前仅含 user_id/nickname/created_at/ip/user_agent。人口维度需通过问卷或行为推断逐步填充，由析析/营营牵头。"
+    }
   }
 }
