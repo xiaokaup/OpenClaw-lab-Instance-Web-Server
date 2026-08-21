@@ -3350,27 +3350,61 @@
         {
           "combo": "MBTI × 职业",
           "use": "职场痛点母题定向",
-          "example": "INTJ × 白领 → 职业转型母题"
+          "example": "INTJ × 白领 → 职业转型母题",
+          "preset": {
+            "occupation": [
+              "white_collar"
+            ]
+          }
         },
         {
           "combo": "依恋 × 生活阶段",
           "use": "关系安全感产品",
-          "example": "焦虑型依恋 × 育儿期 → 育儿关系产品"
+          "example": "焦虑型依恋 × 育儿期 → 育儿关系产品",
+          "preset": {
+            "life_stage": [
+              "parenting"
+            ]
+          }
         },
         {
           "combo": "作息 × 触媒时段",
           "use": "投放时段调度",
-          "example": "夜猫子 × 深夜 → 走心长文"
+          "example": "夜猫子 × 深夜 → 走心长文",
+          "preset": {
+            "chronotype": [
+              "night_owl"
+            ],
+            "time_of_day": [
+              "late_night"
+            ]
+          }
         },
         {
           "combo": "地理 × 天气",
           "use": "地域场景触发",
-          "example": "南方 × 高温 → 烦躁/解压内容"
+          "example": "南方 × 高温 → 烦躁/解压内容",
+          "preset": {
+            "geography": [
+              "tier1"
+            ],
+            "weather": [
+              "hot"
+            ]
+          }
         },
         {
           "combo": "年龄 × 消费偏好",
           "use": "定价与付费分层",
-          "example": "18–24 × 体验型 → 低价轻交付"
+          "example": "18–24 × 体验型 → 低价轻交付",
+          "preset": {
+            "age": [
+              "z18_24"
+            ],
+            "spending_style": [
+              "experience"
+            ]
+          }
         }
       ],
       "cardinality_governance": {
@@ -3380,9 +3414,22 @@
       }
     },
     "data_contract": {
-      "rule": "各 Agent 产出内容/产品/策略时，在保留现有标签(personality/hook/motif/need)的同时，可新增 dimensions 字段标注目标人群维度。",
+      "two_layers": {
+        "profile": "用户画像层(profiles.json·析析/营营)：dimensions 记用户「实际属性」——静态/状态/场景维度单值(gender:'female')，兴趣维度多选数组(interests:['gaming','acg'])·cardinality 依 taxonomy",
+        "targeting": "产出物层(内容/产品/策略)：dimensions 记「目标人群切片」(面向谁)——多选数组 {occupation:['white_collar'], age:['y25_34']}"
+      },
       "fields": {
-        "dimensions": "目标人群维度切片，如 {occupation:['white_collar'], age:['y25_34']}，多选维度取数组"
+        "profile_dimensions": "用户实际属性(单值/多选依 taxonomy cardinality)",
+        "targeting_dimensions": "目标人群切片(多选数组)"
+      },
+      "example_profile": {
+        "gender": "female",
+        "age": "y25_34",
+        "occupation": "white_collar",
+        "interests": [
+          "gaming",
+          "acg"
+        ]
       },
       "example_content": {
         "motif": "career",
@@ -3411,7 +3458,7 @@
           ]
         }
       },
-      "population_status": "待采集：users.jsonl 当前仅含 user_id/nickname/created_at/ip/user_agent。人口维度需通过问卷或行为推断逐步填充，由析析/营营牵头。"
+      "population_status": "待采集：users.jsonl 当前仅含 user_id/nickname/created_at/ip/user_agent。人口维度需通过问卷或行为推断逐步填充，由析析/营营牵头。零成本先行：ip→geography、user_agent→device、活跃时段→chronotype、内容互动→interests。"
     }
   }
 }
