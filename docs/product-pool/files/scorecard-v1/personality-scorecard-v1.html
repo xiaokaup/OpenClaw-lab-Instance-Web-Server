@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格积分卡 v1.0 · 一次性交付版</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --good:#3d7a5a; --warn:#b08a3e; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:24px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:6px 0 20px; line-height:1.6; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:18px; }
+  select { padding:10px 14px; font-size:15px; border:1px solid #d8d2c8; border-radius:8px; background:#fff; }
+  .card { background:var(--card); border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:16px; }
+  .head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .type-badge { font-size:26px; font-weight:800; color:var(--accent); }
+  .stack { font-size:14px; color:var(--muted); font-family:monospace; }
+  .grade-pill { display:inline-block; padding:4px 12px; border-radius:999px; font-size:14px; font-weight:700; }
+  .grade-S { background:#e5efe9; color:var(--good); } .grade-A { background:#e8f0f7; color:#2f6f9f; }
+  .grade-B { background:#f7f1e3; color:var(--warn); } .grade-C { background:#f6e3dd; color:#b0523c; }
+  .grade-待数据 { background:#eee; color:var(--muted); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media(max-width:720px){ .grid{ grid-template-columns:1fr; } }
+  canvas { width:100%; max-width:340px; height:auto; display:block; margin:0 auto; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th,td { padding:7px 8px; text-align:center; border-bottom:1px solid #f0ece4; }
+  th { color:var(--muted); font-weight:600; }
+  td.dim { text-align:left; color:#555; }
+  .bar { height:8px; border-radius:4px; background:#efeae1; position:relative; overflow:hidden; }
+  .bar > i { position:absolute; left:0; top:0; bottom:0; border-radius:4px; background:var(--accent); }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:2px 8px; font-size:12px; color:#7a6f5f; margin:2px; }
+  .reading { font-size:14px; line-height:1.8; color:#4a4a4a; border-left:3px solid var(--accent); padding-left:12px; }
+  .note { font-size:12px; color:var(--muted); margin-top:14px; line-height:1.7; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:24px; line-height:1.8; }
+  .badge-row { margin:10px 0; }
+  .warn-note { background:#fdf6ec; border:1px solid #ecd9b8; border-radius:8px; padding:10px 14px; font-size:12px; color:#8a6d3b; margin-top:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>人格积分卡 · Personality Scorecard</h1>
+  <div class="sub">一次性交付版 v1.0 · 基于 8 心因维度（IM 内在动机 / DA 决策架构 / AS 行动适应 / ME 内在探索 / ST 社交拓扑 / CB 认知带宽 / FM 反馈模式 / TB 稳健信任）· 数据源：析析 profiles.json 人格聚合（3,754 用户）</div>
+
+  <div class="toolbar">
+    <select id="typeSel"></select>
+    <span class="sub" id="metaLine"></span>
+  </div>
+
+  <div class="card">
+    <div class="head">
+      <span class="type-badge" id="typeBadge">INTJ</span>
+      <span class="stack" id="stack">Ni-Te-Fi-Se</span>
+      <span class="grade-pill" id="gradePill">B</span>
+    </div>
+    <div class="badge-row" id="tagRow"></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><canvas id="radar" width="340" height="300"></canvas></div>
+    <div class="card">
+      <table>
+        <thead><tr><th>维度</th><th>得分</th><th>分布</th></tr></thead>
+        <tbody id="scoreTable"></tbody>
+      </table>
+      <div class="note">维度满分 100 · 均分 = 8 维均值 · 等级：S≥75 / A≥65 / B≥55 / C<55</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sub" style="margin:0 0 8px;">内容池范式解读（设设 D21 旗舰叙事提炼）</div>
+    <div class="reading" id="reading"></div>
+  </div>
+
+  <div class="warn-note" id="warnBox" style="display:none;"></div>
+  <div class="footer">
+    人格积分卡 v1.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    策略依据：河山签发《产品开发策略 v1.0》——产品不与支付挂钩 · 产出即交付
+  </div>
+</div>
+
+<script>
+const DIMS = ['IM','DA','AS','ME','ST','CB','FM','TB'];
+const DLABEL = {"IM": "内在动机", "DA": "决策架构", "AS": "行动适应", "ME": "内在探索", "ST": "社交拓扑", "CB": "认知带宽", "FM": "反馈模式", "TB": "稳健信任"};
+const DATA = [{"type": "INTJ", "stack": "Ni-Te-Fi-Se", "scores": {"IM": 56.3, "DA": 73.1, "AS": 54.3, "ME": 75.0, "ST": 69.6, "CB": 73.1, "FM": 49.8, "TB": 54.1}, "avg": 63.2, "grade": "B", "top3": ["ME", "DA", "CB"], "bottom2": ["FM", "TB"], "reading": "Ni-Te名实脱钩解构·拆穿爆款真相·0.5秒系统纠偏", "meta": {"count": 508, "confidence": 0.729, "has_data": true}}, {"type": "INTP", "stack": "Ti-Ne-Si-Fe", "scores": {"IM": 63.2, "DA": 60.4, "AS": 63.4, "ME": 64.6, "ST": 57.4, "CB": 70.6, "FM": 49.0, "TB": 59.4}, "avg": 61.0, "grade": "B", "top3": ["CB", "ME", "AS"], "bottom2": ["FM", "ST"], "reading": "Ti-Ne系统拆解·好奇心持续活跃(组织管理信号待恢复)", "meta": {"count": 5, "confidence": 0.746, "has_data": true}}, {"type": "ENTJ", "stack": "Te-Ni-Se-Fi", "scores": {"IM": 65.7, "DA": 73.7, "AS": 68.7, "ME": 66.0, "ST": 81.0, "CB": 80.3, "FM": 42.3, "TB": 57.7}, "avg": 66.9, "grade": "A", "top3": ["ST", "CB", "DA"], "bottom2": ["FM", "TB"], "reading": "Te-Ni名单外对手解构·反常识恢复首触·王石75岁再创业旗舰", "meta": {"count": 3, "confidence": 0.763, "has_data": true}}, {"type": "ENTP", "stack": "Ne-Ti-Fe-Si", "scores": {"IM": null, "DA": null, "AS": null, "ME": null, "ST": null, "CB": null, "FM": null, "TB": null}, "avg": null, "grade": "待数据", "top3": [], "bottom2": [], "reading": "Ne-Ti可能性穷举·好奇心引擎·跳江又游回来的荒诞拆解", "meta": {"count": 0, "confidence": null, "has_data": false}}, {"type": "INFJ", "stack": "Ni-Fe-Ti-Se", "scores": {"IM": 41.6, "DA": 82.8, "AS": 41.3, "ME": 61.0, "ST": 53.2, "CB": 74.9, "FM": 60.1, "TB": 50.2}, "avg": 58.1, "grade": "B", "top3": ["DA", "CB", "ME"], "bottom2": ["AS", "IM"], "reading": "Ni-Fe文明价值转移·追科学家的星·0.3秒读到文明脉搏", "meta": {"count": 320, "confidence": 0.695, "has_data": true}}, {"type": "INFP", "stack": "Fi-Ne-Si-Te", "scores": {"IM": 55.0, "DA": 60.0, "AS": 70.0, "ME": 54.0, "ST": 55.0, "CB": 75.0, "FM": 64.0, "TB": 33.0}, "avg": 58.2, "grade": "B", "top3": ["CB", "AS", "FM"], "bottom2": ["TB", "ME"], "reading": "Fi创作身份·别把最珍贵的东西交到别人的秤上·依恋母题连续5批", "meta": {"count": 1, "confidence": 0.714, "has_data": true}}, {"type": "ENFJ", "stack": "Fe-Ni-Se-Ti", "scores": {"IM": 72.0, "DA": 75.0, "AS": 55.0, "ME": 66.0, "ST": 76.0, "CB": 66.0, "FM": 58.0, "TB": 33.0}, "avg": 62.6, "grade": "B", "top3": ["ST", "DA", "IM"], "bottom2": ["TB", "AS"], "reading": "Fe-Ni真诚稀缺·四个儿子争养95岁母亲·暖闻的重量", "meta": {"count": 903, "confidence": 0.766, "has_data": true}}, {"type": "ENFP", "stack": "Ne-Fi-Te-Si", "scores": {"IM": 57.0, "DA": 64.5, "AS": 58.0, "ME": 66.0, "ST": 85.2, "CB": 67.0, "FM": 64.5, "TB": 66.5}, "avg": 66.1, "grade": "A", "top3": ["ST", "CB", "TB"], "bottom2": ["IM", "AS"], "reading": "Fi-Ne自我觉醒·大提琴老师转行馒头9分旗舰·敢在应该和想要之间选后者", "meta": {"count": 4, "confidence": 0.224, "has_data": true}}, {"type": "ISTJ", "stack": "Si-Te-Fi-Ne", "scores": {"IM": null, "DA": null, "AS": null, "ME": null, "ST": null, "CB": null, "FM": null, "TB": null}, "avg": null, "grade": "待数据", "top3": [], "bottom2": [], "reading": "Si-Te规则手册·稳定自持·信任7.5分自持型", "meta": {"count": 0, "confidence": null, "has_data": false}}, {"type": "ISFJ", "stack": "Si-Fe-Ti-Ne", "scores": {"IM": 60.0, "DA": 75.0, "AS": 50.0, "ME": 50.0, "ST": 50.0, "CB": 50.0, "FM": 66.0, "TB": 55.0}, "avg": 57.0, "grade": "B", "top3": ["DA", "FM", "IM"], "bottom2": ["AS", "ME"], "reading": "Si-Fe守护型·样本待补", "meta": {"count": 1, "confidence": 0.758, "has_data": true}}, {"type": "ESTJ", "stack": "Te-Si-Ne-Fi", "scores": {"IM": null, "DA": null, "AS": null, "ME": null, "ST": null, "CB": null, "FM": null, "TB": null}, "avg": null, "grade": "待数据", "top3": [], "bottom2": [], "reading": "Te-Si执行系统·样本待补", "meta": {"count": 0, "confidence": null, "has_data": false}}, {"type": "ESFJ", "stack": "Fe-Si-Ne-Ti", "scores": {"IM": null, "DA": null, "AS": null, "ME": null, "ST": null, "CB": null, "FM": null, "TB": null}, "avg": null, "grade": "待数据", "top3": [], "bottom2": [], "reading": "Fe-Si社群枢纽·样本待补", "meta": {"count": 0, "confidence": null, "has_data": false}}, {"type": "ISTP", "stack": "Ti-Se-Ni-Fe", "scores": {"IM": 75.0, "DA": 57.9, "AS": 74.6, "ME": 57.7, "ST": 65.5, "CB": 55.7, "FM": 54.1, "TB": 56.6}, "avg": 62.1, "grade": "B", "top3": ["IM", "AS", "ST"], "bottom2": ["FM", "CB"], "reading": "Ti-Se机械直觉·SP象限盲区·待人类决策(ESC-08-17-1)", "meta": {"count": 1134, "confidence": 0.733, "has_data": true}}, {"type": "ISFP", "stack": "Fi-Se-Ni-Te", "scores": {"IM": 69.7, "DA": 55.7, "AS": 55.0, "ME": 59.7, "ST": 65.0, "CB": 57.0, "FM": 62.3, "TB": 67.7}, "avg": 61.5, "grade": "B", "top3": ["IM", "TB", "ST"], "bottom2": ["AS", "DA"], "reading": "Fi-Se感官叙事·样本待补", "meta": {"count": 3, "confidence": 0.732, "has_data": true}}, {"type": "ESTP", "stack": "Se-Ti-Fe-Ni", "scores": {"IM": 58.0, "DA": 63.0, "AS": 78.9, "ME": 66.0, "ST": 83.0, "CB": 58.0, "FM": 48.0, "TB": 50.0}, "avg": 63.1, "grade": "B", "top3": ["ST", "AS", "ME"], "bottom2": ["FM", "TB"], "reading": "Se-Ti行动优先·SP象限盲区·待人类决策(ESC-08-17-1)", "meta": {"count": 488, "confidence": 0.768, "has_data": true}}, {"type": "ESFP", "stack": "Se-Fi-Te-Ni", "scores": {"IM": 54.0, "DA": 60.0, "AS": 55.0, "ME": 61.0, "ST": 80.0, "CB": 55.0, "FM": 74.9, "TB": 66.0}, "avg": 63.2, "grade": "B", "top3": ["ST", "FM", "TB"], "bottom2": ["IM", "AS"], "reading": "Se-Fi现场感知·SP象限盲区·待人类决策(ESC-08-17-1)", "meta": {"count": 384, "confidence": 0.296, "has_data": true}}];
+
+const sel = document.getElementById('typeSel');
+DATA.forEach(d => { const o = document.createElement('option'); o.value = d.type; o.textContent = d.type; sel.appendChild(o); });
+
+function drawRadar(d) {
+  const cv = document.getElementById('radar');
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height, cx = W/2, cy = H/2 + 6, R = 108;
+  ctx.clearRect(0,0,W,H);
+  // rings
+  for (let ring=1; ring<=4; ring++) {
+    ctx.beginPath();
+    for (let i=0;i<=DIMS.length;i++) {
+      const a = Math.PI*2*i/DIMS.length - Math.PI/2;
+      const r = R*ring/4;
+      const x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+      i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    ctx.strokeStyle = '#e6e0d5'; ctx.lineWidth = 1; ctx.stroke();
+  }
+  // axes + labels
+  ctx.font = '13px sans-serif'; ctx.fillStyle = '#8a857d'; ctx.textAlign='center';
+  DIMS.forEach((dim,i) => {
+    const a = Math.PI*2*i/DIMS.length - Math.PI/2;
+    ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(cx+Math.cos(a)*R, cy+Math.sin(a)*R);
+    ctx.strokeStyle='#efeae1'; ctx.stroke();
+    ctx.fillText(DLABEL[dim], cx+Math.cos(a)*(R+16), cy+Math.sin(a)*(R+16)+4);
+  });
+  // data polygon
+  if (!d.meta.has_data) return;
+  ctx.beginPath();
+  DIMS.forEach((dim,i) => {
+    const a = Math.PI*2*i/DIMS.length - Math.PI/2;
+    const v = Math.max(0, Math.min(100, d.scores[dim]))/100;
+    const x = cx + Math.cos(a)*R*v, y = cy + Math.sin(a)*R*v;
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(201,111,74,.18)'; ctx.fill();
+  ctx.strokeStyle = '#c96f4a'; ctx.lineWidth = 2; ctx.stroke();
+}
+
+function render() {
+  const t = sel.value;
+  const d = DATA.find(x => x.type === t);
+  document.getElementById('typeBadge').textContent = d.type;
+  document.getElementById('stack').textContent = d.stack;
+  const gp = document.getElementById('gradePill');
+  gp.textContent = d.grade;
+  gp.className = 'grade-pill grade-' + d.grade;
+  document.getElementById('metaLine').textContent = d.meta.has_data
+    ? '样本 ' + d.meta.count + ' 人 · 置信度 ' + d.meta.confidence + ' · 均分 ' + d.avg
+    : '样本不足 · 待画像数据补录（不标人格关联）';
+  const tagRow = document.getElementById('tagRow');
+  tagRow.innerHTML = '';
+  if (d.meta.has_data) {
+    d.top3.forEach(dim => { const s=document.createElement('span'); s.className='tag'; s.textContent='强项 '+DLABEL[dim]; tagRow.appendChild(s); });
+    d.bottom2.forEach(dim => { const s=document.createElement('span'); s.className='tag'; s.textContent='弱项 '+DLABEL[dim]; tagRow.appendChild(s); });
+  } else {
+    const s=document.createElement('span'); s.className='tag'; s.textContent='置信度不足 · 仅展示认知功能栈'; tagRow.appendChild(s);
+  }
+  // table
+  const tb = document.getElementById('scoreTable');
+  tb.innerHTML = '';
+  DIMS.forEach(dim => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = '<td class="dim">'+DLABEL[dim]+'</td>';
+    const v = d.scores[dim];
+    if (v === null || v === undefined) {
+      tr.innerHTML += '<td>—</td><td><div class="bar" style="width:100%"></div></td>';
+    } else {
+      tr.innerHTML += '<td>'+v.toFixed(1)+'</td><td><div class="bar" style="width:100%"><i style="width:'+v+'%"></i></div></td>';
+    }
+    tb.appendChild(tr);
+  });
+  document.getElementById('reading').textContent = d.reading;
+  const wb = document.getElementById('warnBox');
+  wb.style.display = d.meta.has_data ? 'none' : 'block';
+  wb.textContent = '⚠ ' + t + ' 画像样本不足（' + (d.meta.count||0) + ' 人）· 本卡不标注人格关联推荐 · 数据补录后自动升级。';
+  drawRadar(d);
+}
+sel.addEventListener('change', render);
+render();
+</script>
+</body>
+</html>
