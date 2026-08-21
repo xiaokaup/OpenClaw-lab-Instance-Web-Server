@@ -2,12 +2,12 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-08-21-1800",
+    "id": "product-available-2026-08-21-1900",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D21-B16·八月D21·周五·记分卡v2.0"
+      "batch": "D21-B18·八月D21·周五·第二批交付"
     },
     "created_at": "2026-08-21T16:30:00+08:00",
     "freshness_ttl_hours": 24,
@@ -81,10 +81,16 @@
       "l3_refactored_one_time": true,
       "payment_uncoupled": true,
       "product_catalog_owner": "荐荐"
+    },
+    "containerization": {
+      "mode": "集装箱化管理（河山·策略文档第十一节）",
+      "container_format": "统一vessel：题目→计分→结果卡→案例 + 双Tab（8题+双Tab记分卡引擎=集装箱规格·复用S1引擎）",
+      "terminology": "「方向候选池」=「产品方向」（统一池·不另立名目）· 方向=待装配箱 · 成品=已发货箱",
+      "product_pool": "集装箱码头：方向（待装配）+ 成品（已发货）"
     }
   },
-  "batch": "D21-B16·记分卡v2.0·双Tab交互交付",
-  "timestamp": "2026-08-21T18:00:00+08:00",
+  "batch": "D21-B18·第二批(#4/#5/N1)交付",
+  "timestamp": "2026-08-21T19:00:00+08:00",
   "payment_status": {
     "stagnant_hours": 562,
     "thresholds_breached": [
@@ -142,7 +148,11 @@
     "delivered": [
       "S1",
       "S2",
-      "S3"
+      "S3",
+      "#4",
+      "#5",
+      "N1",
+      "L1"
     ],
     "active": [
       "L1"
@@ -157,9 +167,76 @@
     "total_products": 8,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·第一批P0已交付(S2 v1.1双人匹配卡+S3认知功能卡)·第二批P1待河山拍板"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·第一批P0已交付(S2 v1.1双人匹配卡+S3认知功能卡)·第二批P1待河山拍板",
+    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,N1,L1]·方向=待装配箱[L2,L3-A/B/C,#10,N2-N9]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
+    {
+      "name": "人格觉醒时刻卡",
+      "emoji": "🌅",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/awakening-card/awakening-card-v1.html",
+        "csv": "workspace-shared/pools/products/awakening-card/awakening-card-standards-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4觉醒类型(撕剧本/重启/和解/笃定)→觉醒宣言+行动建议·Tab B 四型标准卡+8经典案例(大提琴馒头9/王石9/41岁妈妈8.8)",
+      "content_source": "内容池自我觉醒母题(10+旗舰)·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
+      "key": "#4",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "awakening-card/awakening-card-v1.html",
+          "url": "files/awakening-card/awakening-card-v1.html"
+        },
+        {
+          "type": "csv",
+          "label": "v1.0",
+          "relpath": "awakening-card/awakening-card-standards-v1.csv",
+          "url": "files/awakening-card/awakening-card-standards-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "人格边界说明书",
+      "emoji": "📋",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/boundary-manual/boundary-manual-v1.html",
+        "csv": "workspace-shared/pools/products/boundary-manual/boundary-manual-standards-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4边界风格(守护/放养/平衡/妥协)→产品说明书格式(操作指南/注意事项/故障排除/保修条款)·Tab B 四型标准卡+6案例(女儿过夜9/争养母亲8.9/AA制9.2)",
+      "content_source": "内容池家庭/边界母题(13条)·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
+      "key": "#5",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "boundary-manual/boundary-manual-v1.html",
+          "url": "files/boundary-manual/boundary-manual-v1.html"
+        },
+        {
+          "type": "csv",
+          "label": "v1.0",
+          "relpath": "boundary-manual/boundary-manual-standards-v1.csv",
+          "url": "files/boundary-manual/boundary-manual-standards-v1.csv"
+        }
+      ]
+    },
     {
       "name": "深度人格报告",
       "price": 9.9,
@@ -189,6 +266,40 @@
       },
       "key": "L1",
       "deliverable_urls": []
+    },
+    {
+      "name": "职业匹配记分卡",
+      "emoji": "💼",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/career-match/career-match-v1.html",
+        "csv": "workspace-shared/pools/products/career-match/career-match-standards-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4职业天赋(统帅/专家/创意/关系)→职业天赋矩阵+适合/回避方向·Tab B 四型标准卡+7案例(王石9/天才少年卖玉米9/胖东来8.9)",
+      "content_source": "内容池职业母题(17条9旗舰)+web MBTI职业规划·诚实标注娱乐性(非职业决策依据)",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
+      "priority": "P0·付费主力",
+      "key": "N1",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "career-match/career-match-v1.html",
+          "url": "files/career-match/career-match-v1.html"
+        },
+        {
+          "type": "csv",
+          "label": "v1.0",
+          "relpath": "career-match/career-match-standards-v1.csv",
+          "url": "files/career-match/career-match-standards-v1.csv"
+        }
+      ]
     },
     {
       "name": "人格积分卡",
@@ -501,8 +612,8 @@
       "name": "职业匹配记分卡",
       "category": "职场线",
       "priority": "P0",
-      "status": "候选",
-      "status_note": "付费最强",
+      "status": "已交付",
+      "status_note": "",
       "form": "测一测→职业天赋矩阵",
       "fun": "职业天赋矩阵+适合/回避方向"
     },
@@ -521,8 +632,8 @@
       "name": "人格觉醒时刻卡",
       "category": "自我觉醒线",
       "priority": "P1",
-      "status": "备料完成",
-      "status_note": "待产",
+      "status": "已交付",
+      "status_note": "",
       "form": "生成式海报",
       "fun": "觉醒宣言分享卡"
     },
@@ -531,8 +642,8 @@
       "name": "人格边界说明书",
       "category": "自我觉醒线",
       "priority": "P1",
-      "status": "备料完成",
-      "status_note": "待产",
+      "status": "已交付",
+      "status_note": "",
       "form": "PDF可打印卡片集",
       "fun": "产品说明书格式"
     },
@@ -687,5 +798,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 8
+  "total": 11
 }

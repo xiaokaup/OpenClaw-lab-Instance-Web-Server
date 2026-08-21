@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格边界说明书</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --bdr:#e5ddd0; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eee8dd; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d8b8a4; }
+  .opt.sel { border-color:var(--accent); background:#fdf3ec; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:3px 9px; font-size:12px; color:#7a6f5f; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fdf6f0; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#faf7f1; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#eee8dd; color:#7a6f5f; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📋 人格边界说明书</h1>
+  <div class="sub">8 题测一测 · 找到你的边界风格（守护/放养/平衡/妥协）</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的结果是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格边界说明书 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格边界说明书", "subtitle": "8 题测一测 · 找到你的边界风格（守护/放养/平衡/妥协）", "estimated_time": "2分钟", "types": {"guard": {"name": "守护型", "emoji": "🛡️", "color": "#5a7d9a", "core": "你的边界像城墙：安全第一，底线分明。爱的方式是「我来挡住风雨」", "manual": {"product": "人格边界说明书 · 守护型", "operation": "靠近你需要先通过信任验证·重要决定需要提前告知", "caution": "别碰我的底线：安全/承诺/原则", "troubleshoot": "冲突时先给ta解释的机会·但底线不退让", "warranty": "底线之内，无限期守护"}, "strength": "安全感强·责任感重", "blind": "可能过度保护·让人喘不过气", "case": "女儿想过夜被爸爸拒绝（D21-B4·9分）·单亲妈妈扛钢管供女儿上北大（D18-B1·8.7分）", "match": "配放养型需磨合·配守护型最懂彼此", "product": "人格边界说明书 · 守护型", "operation": "靠近你需要先通过信任验证·重要决定需要提前告知", "caution": "别碰我的底线：安全/承诺/原则", "troubleshoot": "冲突时先给ta解释的机会·但底线不退让", "warranty": "底线之内，无限期守护"}, "free": {"name": "放养型", "emoji": "🪁", "color": "#7a9a5a", "core": "你的边界像草原：给足自由，相信生命力。爱的方式是「我相信你可以」", "manual": {"product": "人格边界说明书 · 放养型", "operation": "自由出入·自己负责自己的选择·信任是默认设置", "caution": "别拿我的信任当放纵·重要承诺需要兑现", "troubleshoot": "ta闯祸时先复盘而非惩罚·让后果说话", "warranty": "自由之内，永不缺席"}, "strength": "信任力强·培养独立", "blind": "可能显得不够关心·边界模糊", "case": "13岁少年夜市炒粉（D20-B4·8.8分）·两代人前后脚生娃（D21-B8·9分）", "match": "配守护型需磨合·配放养型最轻松", "product": "人格边界说明书 · 放养型", "operation": "自由出入·自己负责自己的选择·信任是默认设置", "caution": "别拿我的信任当放纵·重要承诺需要兑现", "troubleshoot": "ta闯祸时先复盘而非惩罚·让后果说话", "warranty": "自由之内，永不缺席"}, "balance": {"name": "平衡型", "emoji": "⚖️", "color": "#b08a3e", "core": "你的边界像弹性门：该守的守，该放的放，因时制宜。爱的方式是「有原则地灵活」", "manual": {"product": "人格边界说明书 · 平衡型", "operation": "大事有底线·小事可商量·边界随情境弹性调整", "caution": "别试探我的底线·也别以为我永远没底线", "troubleshoot": "冲突时先明确需求再谈方案·双赢优先", "warranty": "弹性之内，始终在场"}, "strength": "灵活有度·关系张力小", "blind": "偶尔被当「没立场」", "case": "四个儿子争着养95岁母亲（D21-B8·8.9分）·「被争着养，不是钱的问题」", "match": "与任何类型都能磨合·最省力", "product": "人格边界说明书 · 平衡型", "operation": "大事有底线·小事可商量·边界随情境弹性调整", "caution": "别试探我的底线·也别以为我永远没底线", "troubleshoot": "冲突时先明确需求再谈方案·双赢优先", "warranty": "弹性之内，始终在场"}, "yield": {"name": "妥协型", "emoji": "🤝", "color": "#b0523c", "core": "你的边界像海绵：怕冲突，先让步。爱的方式是「我多退一步没关系」", "manual": {"product": "人格边界说明书 · 妥协型", "operation": "照顾所有人情绪·冲突时我先低头·需求常往后排", "caution": "别把我的退让当理所当然·我也有底线", "troubleshoot": "练习说「不」·从小事开始守住边界", "warranty": "我的温柔需要被看见·别耗尽它"}, "strength": "包容力强·关系和谐", "blind": "自我需求被压抑·容易内耗", "case": "AA制吵40年（D21-B3·9分）·「你坚持AA，是在推开那个愿意为你亏钱的人」", "match": "需要配一个能接住你需求的类型", "product": "人格边界说明书 · 妥协型", "operation": "照顾所有人情绪·冲突时我先低头·需求常往后排", "caution": "别把我的退让当理所当然·我也有底线", "troubleshoot": "练习说「不」·从小事开始守住边界", "warranty": "我的温柔需要被看见·别耗尽它"}}, "questions": [{"id": 1, "type": "guard", "text": "孩子想去同学家过夜，你的第一反应：", "options": [{"text": "明确说不行——安全是底线，没得商量", "scores": {"guard": 3}}, {"text": "先问清楚情况，再决定", "scores": {"guard": 1}}, {"text": "看孩子多想去，尊重ta", "scores": {"guard": -1}}, {"text": "去吧，孩子总要长大的", "scores": {"guard": -2}}]}, {"id": 2, "type": "guard", "text": "家人提出你觉得不合理的要求，你：", "options": [{"text": "直接说不——我的原则不商量", "scores": {"guard": 3}}, {"text": "解释原因，尽量说服ta", "scores": {"guard": 1}}, {"text": "先答应，再想办法", "scores": {"guard": -1}}, {"text": "答应吧，家和万事兴", "scores": {"guard": -2}}]}, {"id": 3, "type": "free", "text": "孩子想选一个冷门专业/兴趣，你：", "options": [{"text": "完全支持——ta的人生ta做主", "scores": {"free": 3}}, {"text": "支持，但给点建议", "scores": {"free": 1}}, {"text": "有点担心，劝ta稳妥点", "scores": {"free": -1}}, {"text": "反对——要为将来负责", "scores": {"free": -2}}]}, {"id": 4, "type": "free", "text": "别人想按ta的方式做事，你：", "options": [{"text": "行啊，你的地盘你做主", "scores": {"free": 3}}, {"text": "可以，但错了要承担", "scores": {"free": 1}}, {"text": "忍不住想纠正", "scores": {"free": -1}}, {"text": "必须按对的方式来", "scores": {"free": -2}}]}, {"id": 5, "type": "balance", "text": "边界被试探时，你通常：", "options": [{"text": "先明确原则，再谈灵活——有底线地让步", "scores": {"balance": 3}}, {"text": "视情况定，弹性处理", "scores": {"balance": 1}}, {"text": "直接退让，避免冲突", "scores": {"balance": -1}}, {"text": "强硬顶回去，一步不让", "scores": {"balance": -2}}]}, {"id": 6, "type": "balance", "text": "家人需求 vs 自己的空间，你：", "options": [{"text": "按情况平衡——大事优先家人，小事保留自己", "scores": {"balance": 3}}, {"text": "尽量兼顾，不行再说", "scores": {"balance": 1}}, {"text": "家人优先，自己靠后", "scores": {"balance": -1}}, {"text": "自己优先，先管好自己", "scores": {"balance": -2}}]}, {"id": 7, "type": "yield", "text": "拒绝别人之后，你常：", "options": [{"text": "愧疚——怕伤了感情", "scores": {"yield": 3}}, {"text": "有点不安，但觉得合理", "scores": {"yield": 1}}, {"text": "轻松——该拒绝就拒绝", "scores": {"yield": -1}}, {"text": "完全没感觉", "scores": {"yield": -2}}]}, {"id": 8, "type": "yield", "text": "面对冲突，你更倾向：", "options": [{"text": "息事宁人——我先退一步", "scores": {"yield": 3}}, {"text": "等对方先软下来", "scores": {"yield": 1}}, {"text": "就事论事谈清楚", "scores": {"yield": -1}}, {"text": "把话说开，不怕吵", "scores": {"yield": -2}}]}], "cases": [{"type": "守护型", "id": "D21-B4-INFJ-1", "title": "女儿想过夜被爸爸拒绝", "q": 9.0, "summary": "不是「该不该过夜」，是两种爱的语言"}, {"type": "守护型", "id": "D18-B1-2", "title": "单亲妈妈扛钢管供女儿上北大", "q": 8.7, "summary": "用Ni看见终点·用Fe扛住现在"}, {"type": "放养型", "id": "D20-B4-INFJ-1", "title": "13岁少年夜市炒粉", "q": 8.8, "summary": "白天写作业·晚上炒粉·独立生长"}, {"type": "放养型", "id": "D21-B8-INFP-1", "title": "00后女儿和80后妈妈前后脚生娃", "q": 9.0, "summary": "两代人同时当妈·不是时间线的巧合"}, {"type": "平衡型", "id": "D21-B8-ENFJ-1", "title": "四个儿子争着养95岁老母亲", "q": 8.9, "summary": "被争着养，从来不是钱的问题"}, {"type": "妥协型", "id": "D21-B3-INFP-1", "title": "AA制吵了40年", "q": 9.2, "summary": "你坚持AA，是在推开那个愿意为你亏钱的人"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池家庭/边界母题（女儿过夜9/争养母亲8.9/AA制9.2等旗舰叙事）提炼的趣味风格测试，用于自我觉察，不构成心理评估。", "result_fields": [{"key": "operation", "label": "📖 操作指南", "cls": "power"}, {"key": "caution", "label": "⚠️ 注意事项", "cls": "side"}, {"key": "troubleshoot", "label": "🔧 故障排除"}, {"key": "warranty", "label": "🛡️ 保修条款"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "🚫 盲区"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+let answers = new Array(QS.length).fill(-1);
+let qi = 0;
+
+function switchTab(t) {
+  document.getElementById('tabA').classList.toggle('active', t==='A');
+  document.getElementById('tabB').classList.toggle('active', t==='B');
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+}
+
+function renderQ() {
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = '第 '+(qi+1)+'/'+QS.length+' 题 · 约 2 分钟';
+  const body = document.getElementById('qBody');
+  body.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div>';
+  q.options.forEach((o, oi) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[qi]===oi ? ' sel' : '');
+    b.textContent = o.text;
+    b.onclick = () => {
+      answers[qi] = oi;
+      body.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+      b.classList.add('sel');
+      document.getElementById('nextBtn').disabled = false;
+    };
+    body.appendChild(b);
+  });
+  document.getElementById('nextBtn').disabled = answers[qi] < 0;
+  document.getElementById('nextBtn').textContent = qi === QS.length-1 ? '✨ 查看结果' : '下一题';
+}
+document.getElementById('nextBtn').onclick = () => {
+  if (qi < QS.length-1) { qi++; renderQ(); } else { calc(); }
+};
+
+function calc() {
+  const raw = {}; TKEYS.forEach(k => raw[k]=0);
+  QS.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    for (const [k, s] of Object.entries(opt.scores)) if (k in raw) raw[k]+=s;
+  });
+  const top = TKEYS.reduce((a,b) => raw[a]>=raw[b] ? a : b);
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = t.emoji + ' ' + t.name;
+  document.getElementById('rType').style.color = t.color;
+  document.getElementById('rCore').textContent = t.core;
+  // 动态渲染字段（不同产品有不同字段）
+  const grid = document.getElementById('rGrid');
+  grid.innerHTML = '';
+  const fields = DATA.result_fields;
+  fields.forEach(f => {
+    if (!t[f.key]) return;
+    const c = document.createElement('div');
+    c.className = 'cell' + (f.cls ? ' ' + f.cls : '');
+    c.innerHTML = '<h3>'+f.label+'</h3><p>'+t[f.key]+'</p>';
+    grid.appendChild(c);
+  });
+  const tags = document.getElementById('rTags');
+  tags.innerHTML = '';
+  (DATA.tags_fn ? DATA.tags_fn(t) : []).forEach(s => {
+    const x = document.createElement('span');
+    x.className = 'tag'; x.textContent = s; tags.appendChild(x);
+  });
+  document.getElementById('rCase').textContent = '📌 内容池经典案例：' + t.case;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function retry() {
+  answers = new Array(QS.length).fill(-1); qi = 0;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('resultCard').style.display = 'none';
+  renderQ();
+}
+
+function stdHtmlFn(t) {
+  return __STD_FN__;
+}
+function renderStd() {
+  const g = document.getElementById('stdGrid');
+  g.innerHTML = '';
+  TKEYS.forEach(k => {
+    const t = TYPES[k];
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = t.color;
+    c.innerHTML = '<h3>'+t.emoji+' '+t.name+'</h3>' + stdHtmlFn(t);
+    g.appendChild(c);
+  });
+  const cl = document.getElementById('caseList');
+  cl.innerHTML = '';
+  DATA.cases.forEach(cs => {
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = '#e5ddd0';
+    c.innerHTML = '<h3>'+cs.title+'（'+cs.type+'）</h3><p>'+cs.summary+'</p><p style="color:#c96f4a;">内容池 '+cs.id+' · 质量 '+cs.q+' 分</p>';
+    cl.appendChild(c);
+  });
+}
+renderStd();
+renderQ();
+</script>
+</body>
+</html>

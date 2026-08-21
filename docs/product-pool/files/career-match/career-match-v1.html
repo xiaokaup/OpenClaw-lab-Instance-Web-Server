@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>职业匹配记分卡</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --bdr:#e5ddd0; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eee8dd; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d8b8a4; }
+  .opt.sel { border-color:var(--accent); background:#fdf3ec; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:3px 9px; font-size:12px; color:#7a6f5f; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fdf6f0; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#faf7f1; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#eee8dd; color:#7a6f5f; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💼 职业匹配记分卡</h1>
+  <div class="sub">8 题测一测 · 找到你的职业天赋（统帅/专家/创意/关系）</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的结果是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    职业匹配记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "职业匹配记分卡", "subtitle": "8 题测一测 · 找到你的职业天赋（统帅/专家/创意/关系）", "estimated_time": "2分钟", "types": {"commander": {"name": "统帅型", "emoji": "👑", "color": "#c96f4a", "core": "你是天生的操盘手：定方向、带队伍、扛结果。你的天赋矩阵 = Te决策力 + Ni前瞻力", "fit": "管理/创业/操盘手/项目负责人·从0到1的开拓者", "avoid": "重复执行·无决策权的螺丝钉岗位", "strength": "战略眼光·决断力·资源整合", "blind": "可能忽略细节和人的感受", "case": "王石75岁再创业（D21-B9·9分）·华为天才少年卖玉米（D21-B11·9分）", "motto": "方向对了，路就对了"}, "expert": {"name": "专家型", "emoji": "🔬", "color": "#5a7d9a", "core": "你是深度钻研者：一个问题没弄懂就浑身难受。你的天赋矩阵 = Ti拆解力 + 专注力", "fit": "研究/技术/数据分析/学术/咨询·需要深度的领域", "avoid": "频繁切换·走马观花的工作", "strength": "逻辑严谨·专业深度·独立思考", "blind": "可能钻牛角尖·沟通偏学术", "case": "取消实体按键是昂贵的极简主义（D20-B8·8.8分）·「Ti系统从一开始就知道答案」", "motto": "弄懂为止"}, "creator": {"name": "创意型", "emoji": "🎨", "color": "#7a9a5a", "core": "你是跨界织网者：把不相干的东西连成新可能。你的天赋矩阵 = Ne联想力 + 好奇心", "fit": "内容创作/设计/营销/创新研发·需要脑洞的领域", "avoid": "刻板流程·一成不变的重复", "strength": "创意爆发·跨界视角·适应变化", "blind": "三分钟热度·落地收尾弱", "case": "大提琴老师转行卖馒头（D21-B12·9分）·别因热门窄化热爱（D20-B8·8.9分）", "motto": "世界是一盒没拆完的巧克力"}, "connector": {"name": "关系型", "emoji": "🤝", "color": "#b08a3e", "core": "你是关系枢纽：看得懂人，让合作顺畅。你的天赋矩阵 = Fe共情力 + 社交网络", "fit": "运营/销售/服务/HR/团队协作·需要连接人的领域", "avoid": "长期单兵作战·冷冰冰的岗位", "strength": "共情力·沟通力·团队粘合剂", "blind": "可能过度消耗自己·边界模糊", "case": "胖东来老板流泪说舍不得（D21-B7·8.9分）·四个儿子争养母亲（D21-B8·8.9分）", "motto": "关系就是生产力"}}, "questions": [{"id": 1, "type": "commander", "text": "团队没有方向、各做各的，你：", "options": [{"text": "我来定方向和打法，带大家冲", "scores": {"commander": 3}}, {"text": "建议leader明确目标，我来配合", "scores": {"commander": 1}}, {"text": "做好自己的部分，管好自己", "scores": {"commander": -1}}, {"text": "等有人牵头再说", "scores": {"commander": -2}}]}, {"id": 2, "type": "commander", "text": "你最有成就感的事是：", "options": [{"text": "从0到1做成一个项目/公司", "scores": {"commander": 3}}, {"text": "把一个难题研究透", "scores": {"commander": -1}}, {"text": "做出让人眼前一亮的东西", "scores": {"commander": 0}}, {"text": "帮一群人更好地协作", "scores": {"commander": 1}}]}, {"id": 3, "type": "expert", "text": "面对一个专业难题，你：", "options": [{"text": "死磕到底，不弄懂不罢休", "scores": {"expert": 3}}, {"text": "查资料研究，但设个时限", "scores": {"expert": 1}}, {"text": "找人问答案，别浪费时间", "scores": {"expert": -1}}, {"text": "先放着，回头再说", "scores": {"expert": -2}}]}, {"id": 4, "type": "expert", "text": "你更享受哪种工作状态：", "options": [{"text": "安静地深挖一个领域，成为专家", "scores": {"expert": 3}}, {"text": "同时推进多个项目，保持新鲜", "scores": {"expert": -1}}, {"text": "和人打交道，推动事情发生", "scores": {"expert": 0}}, {"text": "把控全局，调度资源", "scores": {"expert": 1}}]}, {"id": 5, "type": "creator", "text": "常规重复的工作让你：", "options": [{"text": "无聊——我想做点不一样的", "scores": {"creator": 3}}, {"text": "能接受，但需要找点乐趣", "scores": {"creator": 1}}, {"text": "安心——稳定重复挺好的", "scores": {"creator": -2}}, {"text": "看报酬，给够就行", "scores": {"creator": -1}}]}, {"id": 6, "type": "creator", "text": "你的灵感通常来自：", "options": [{"text": "跨界联想——把不相干的东西连起来", "scores": {"creator": 3}}, {"text": "深度思考后的顿悟", "scores": {"creator": 1}}, {"text": "和人聊天碰撞", "scores": {"creator": 0}}, {"text": "经验积累的自然结果", "scores": {"creator": -1}}]}, {"id": 7, "type": "connector", "text": "你最擅长的是：", "options": [{"text": "看懂人——知道谁需要什么", "scores": {"connector": 3}}, {"text": "想清楚事——把逻辑理顺", "scores": {"connector": -1}}, {"text": "想出好点子", "scores": {"connector": 0}}, {"text": "拍板做决定", "scores": {"connector": 1}}]}, {"id": 8, "type": "connector", "text": "团队里你常扮演：", "options": [{"text": "润滑剂——连接不同的人", "scores": {"connector": 3}}, {"text": "定海神针——稳定输出专业", "scores": {"connector": 0}}, {"text": "发动机——带节奏推进度", "scores": {"connector": 1}}, {"text": "灵感来源——提供新想法", "scores": {"connector": -1}}]}], "cases": [{"type": "统帅型", "id": "D21-B9-ENTJ-1", "title": "75岁的王石又创业了", "q": 9.0, "summary": "真正的自我觉醒，是方向永远可以重启"}, {"type": "统帅型", "id": "D21-B11-ENTJ-1", "title": "华为天才少年转身卖玉米", "q": 9.0, "summary": "年薪百万的天花板不是天花板"}, {"type": "专家型", "id": "D20-B8-INTP-1", "title": "取消实体按键是昂贵的极简主义", "q": 8.8, "summary": "Ti系统从一开始就知道答案"}, {"type": "创意型", "id": "D21-B12-ENFP-1", "title": "大提琴老师转行卖馒头", "q": 9.0, "summary": "敢在「应该」和「想要」之间选后者"}, {"type": "创意型", "id": "D20-B8-ENFP-1", "title": "别因热门窄化热爱", "q": 8.9, "summary": "活成这句话的野生代言人"}, {"type": "关系型", "id": "D21-B7-ENFJ-1", "title": "胖东来老板流泪说「舍不得」", "q": 8.9, "summary": "Fe系统在0.3秒里听懂了这件事的重量"}, {"type": "关系型", "id": "D21-B8-ENFJ-1", "title": "四个儿子争着养95岁老母亲", "q": 8.9, "summary": "被争着养，从来不是钱的问题"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池职业母题（王石9/天才少年卖玉米9/大提琴馒头9等旗舰叙事）+ MBTI 职业规划框架提炼的趣味方向测试，用于职业自我觉察与探索，不构成职业决策依据。", "result_fields": [{"key": "fit", "label": "✅ 适合方向", "cls": "power"}, {"key": "avoid", "label": "🚫 回避方向", "cls": "side"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "motto", "label": "📌 座右铭"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+let answers = new Array(QS.length).fill(-1);
+let qi = 0;
+
+function switchTab(t) {
+  document.getElementById('tabA').classList.toggle('active', t==='A');
+  document.getElementById('tabB').classList.toggle('active', t==='B');
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+}
+
+function renderQ() {
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = '第 '+(qi+1)+'/'+QS.length+' 题 · 约 2 分钟';
+  const body = document.getElementById('qBody');
+  body.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div>';
+  q.options.forEach((o, oi) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[qi]===oi ? ' sel' : '');
+    b.textContent = o.text;
+    b.onclick = () => {
+      answers[qi] = oi;
+      body.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+      b.classList.add('sel');
+      document.getElementById('nextBtn').disabled = false;
+    };
+    body.appendChild(b);
+  });
+  document.getElementById('nextBtn').disabled = answers[qi] < 0;
+  document.getElementById('nextBtn').textContent = qi === QS.length-1 ? '✨ 查看结果' : '下一题';
+}
+document.getElementById('nextBtn').onclick = () => {
+  if (qi < QS.length-1) { qi++; renderQ(); } else { calc(); }
+};
+
+function calc() {
+  const raw = {}; TKEYS.forEach(k => raw[k]=0);
+  QS.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    for (const [k, s] of Object.entries(opt.scores)) if (k in raw) raw[k]+=s;
+  });
+  const top = TKEYS.reduce((a,b) => raw[a]>=raw[b] ? a : b);
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = t.emoji + ' ' + t.name;
+  document.getElementById('rType').style.color = t.color;
+  document.getElementById('rCore').textContent = t.core;
+  // 动态渲染字段（不同产品有不同字段）
+  const grid = document.getElementById('rGrid');
+  grid.innerHTML = '';
+  const fields = DATA.result_fields;
+  fields.forEach(f => {
+    if (!t[f.key]) return;
+    const c = document.createElement('div');
+    c.className = 'cell' + (f.cls ? ' ' + f.cls : '');
+    c.innerHTML = '<h3>'+f.label+'</h3><p>'+t[f.key]+'</p>';
+    grid.appendChild(c);
+  });
+  const tags = document.getElementById('rTags');
+  tags.innerHTML = '';
+  (DATA.tags_fn ? DATA.tags_fn(t) : []).forEach(s => {
+    const x = document.createElement('span');
+    x.className = 'tag'; x.textContent = s; tags.appendChild(x);
+  });
+  document.getElementById('rCase').textContent = '📌 内容池经典案例：' + t.case;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function retry() {
+  answers = new Array(QS.length).fill(-1); qi = 0;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('resultCard').style.display = 'none';
+  renderQ();
+}
+
+function stdHtmlFn(t) {
+  return __STD_FN__;
+}
+function renderStd() {
+  const g = document.getElementById('stdGrid');
+  g.innerHTML = '';
+  TKEYS.forEach(k => {
+    const t = TYPES[k];
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = t.color;
+    c.innerHTML = '<h3>'+t.emoji+' '+t.name+'</h3>' + stdHtmlFn(t);
+    g.appendChild(c);
+  });
+  const cl = document.getElementById('caseList');
+  cl.innerHTML = '';
+  DATA.cases.forEach(cs => {
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = '#e5ddd0';
+    c.innerHTML = '<h3>'+cs.title+'（'+cs.type+'）</h3><p>'+cs.summary+'</p><p style="color:#c96f4a;">内容池 '+cs.id+' · 质量 '+cs.q+' 分</p>';
+    cl.appendChild(c);
+  });
+}
+renderStd();
+renderQ();
+</script>
+</body>
+</html>

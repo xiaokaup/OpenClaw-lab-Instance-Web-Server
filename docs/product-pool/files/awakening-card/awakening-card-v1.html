@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格觉醒时刻卡</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --bdr:#e5ddd0; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eee8dd; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d8b8a4; }
+  .opt.sel { border-color:var(--accent); background:#fdf3ec; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:3px 9px; font-size:12px; color:#7a6f5f; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fdf6f0; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#faf7f1; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#eee8dd; color:#7a6f5f; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🌅 人格觉醒时刻卡</h1>
+  <div class="sub">8 题测一测 · 找到你的觉醒方式</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的结果是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格觉醒时刻卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格觉醒时刻卡", "subtitle": "8 题测一测 · 找到你的觉醒方式", "estimated_time": "2分钟", "types": {"tear": {"name": "撕剧本型", "emoji": "✂️", "color": "#c96f4a", "core": "你觉醒的方式，是撕掉别人写好的剧本——敢在「应该」和「想要」之间，坚定地选后者", "declaration": "我的觉醒宣言：我应该，从来不该大于我想要", "strength": "反叛力·自我主权", "blind": "可能让身边的人不安", "case": "大提琴老师转行卖馒头（D21-B12·9分）·华为天才少年卖玉米（D21-B11·9分）", "trigger": "当有人告诉你「你应该怎样」时", "action": "今天做一件纯粹因为「我想要」的小事"}, "restart": {"name": "重启型", "emoji": "🔄", "color": "#5a7d9a", "core": "你觉醒的方式，是永远允许自己重启——时间不是限制，方向才是", "declaration": "我的觉醒宣言：只要方向对了，什么时候开始都不晚", "strength": "勇气·反年龄焦虑", "blind": "可能被说「折腾」", "case": "王石75岁再创业（D21-B9·9分）·75岁开健身房308元/时（D21-B10·9分）", "trigger": "当有人说「来不及了」时", "action": "把搁置很久的一个想法，重新捡起来"}, "reconcile": {"name": "和解型", "emoji": "🕊️", "color": "#7a9a5a", "core": "你觉醒的方式，是和自己和解——迟到24年的「对不起」，今天说也不晚", "declaration": "我的觉醒宣言：过去不是包袱，是我长成今天的样子", "strength": "自愈力·真实", "blind": "容易沉湎过去", "case": "41岁妈妈考上985·迟到24年的对不起（D20-B4/B5·8.8×2）·雷佳音自曝功利心（D21-B5·9分）", "trigger": "当「我本可以」反复出现时", "action": "给过去的自己写一句话"}, "steady": {"name": "笃定型", "emoji": "🎯", "color": "#b08a3e", "core": "你觉醒的方式，是笃定自己的热爱——世界再吵，你知道自己要什么", "declaration": "我的觉醒宣言：热爱不是任性，是我最清醒的坚持", "strength": "定力·不随波逐流", "blind": "可能显得不合群", "case": "别因热门窄化热爱（D20-B8·8.9分）·蓝盈莹承认新恋情（D21-B9）", "trigger": "当周围都在做同一件事时", "action": "在手机上删掉一个你最不喜欢的「热门」推送"}}, "questions": [{"id": 1, "type": "tear", "text": "一份高薪但违背你热爱的工作摆在面前，你会：", "options": [{"text": "拒绝——热爱比钱重要，这是底线", "scores": {"tear": 3}}, {"text": "犹豫——先看看能不能两全", "scores": {"tear": 1}}, {"text": "接受——钱是底气，兴趣可以业余做", "scores": {"tear": -1}}, {"text": "接受——工作就是工作", "scores": {"tear": -2}}]}, {"id": 2, "type": "tear", "text": "别人说「你应该怎样怎样」，你的第一反应是：", "options": [{"text": "反问：这是谁的标准？", "scores": {"tear": 3}}, {"text": "参考，但不盲从", "scores": {"tear": 1}}, {"text": "有道理就听", "scores": {"tear": -1}}, {"text": "照做，省事", "scores": {"tear": -2}}]}, {"id": 3, "type": "restart", "text": "在一个领域做到顶了，你更倾向：", "options": [{"text": "寻找新战场，重新出发", "scores": {"restart": 3}}, {"text": "深耕现有领域，做到极致", "scores": {"restart": -1}}, {"text": "看机会，有好的就换", "scores": {"restart": 1}}, {"text": "守住成果，稳定为主", "scores": {"restart": -2}}]}, {"id": 4, "type": "restart", "text": "有人说「你这个年纪/身份，来不及了」，你会：", "options": [{"text": "时间不是限制，方向才是", "scores": {"restart": 3}}, {"text": "有点动摇，但想试试", "scores": {"restart": 1}}, {"text": "认同——确实该务实了", "scores": {"restart": -2}}, {"text": "不接话，心里不服", "scores": {"restart": 0}}]}, {"id": 5, "type": "reconcile", "text": "回想过去某个决定，你常：", "options": [{"text": "和自己和解——那时我已经尽力了", "scores": {"reconcile": 3}}, {"text": "偶尔会想「如果当时…」", "scores": {"reconcile": 1}}, {"text": "经常后悔，反复复盘", "scores": {"reconcile": -1}}, {"text": "不太回头看", "scores": {"reconcile": 0}}]}, {"id": 6, "type": "reconcile", "text": "面对「我本可以」的念头，你：", "options": [{"text": "承认，然后放下——向前看", "scores": {"reconcile": 3}}, {"text": "需要一点时间消化", "scores": {"reconcile": 1}}, {"text": "很难放下，会想很久", "scores": {"reconcile": -1}}, {"text": "用新目标覆盖它", "scores": {"reconcile": 0}}]}, {"id": 7, "type": "steady", "text": "你的热爱被说「小众/没用」，你：", "options": [{"text": "热爱本身就是理由", "scores": {"steady": 3}}, {"text": "有点受影响，但坚持", "scores": {"steady": 1}}, {"text": "会重新评估值不值", "scores": {"steady": -1}}, {"text": "放弃，转向更「有用」的", "scores": {"steady": -2}}]}, {"id": 8, "type": "steady", "text": "周围都在追同一个热点/风口，你：", "options": [{"text": "我知道我要什么，不为所动", "scores": {"steady": 3}}, {"text": "了解一下，但保持判断", "scores": {"steady": 1}}, {"text": "跟着看看，别掉队", "scores": {"steady": -1}}, {"text": "赶紧跟上，怕错过", "scores": {"steady": -2}}]}], "cases": [{"type": "撕剧本型", "id": "D21-B12-ENFP-1", "title": "大提琴老师转行卖馒头", "q": 9.0, "summary": "敢在「应该」和「想要」之间选后者"}, {"type": "撕剧本型", "id": "D21-B11-ENTJ-1", "title": "华为天才少年转身卖玉米", "q": 9.0, "summary": "年薪百万的天花板，不是人生的天花板"}, {"type": "重启型", "id": "D21-B9-ENTJ-1", "title": "75岁的王石又创业了", "q": 9.0, "summary": "真正的自我觉醒，不是「75岁还能再干一场」"}, {"type": "重启型", "id": "D21-B10-ENTJ-1", "title": "王石开健身房·每小时308元", "q": 9.0, "summary": "看穿「有钱人折腾」的反常识内核"}, {"type": "和解型", "id": "D20-B5-2", "title": "41岁妈妈考上985", "q": 8.8, "summary": "对着镜子说了一句迟到24年的「对不起」"}, {"type": "和解型", "id": "D21-B5-INFP-1", "title": "雷佳音自曝功利心演陈俊生", "q": 9.0, "summary": "诚实地说出「我当时的动机不纯」"}, {"type": "笃定型", "id": "D20-B8-ENFP-1", "title": "别因热门窄化热爱", "q": 8.9, "summary": "她们早就活成了这句话的野生代言人"}, {"type": "笃定型", "id": "D21-B9-ENFP-1", "title": "蓝盈莹承认新恋情", "q": 8.8, "summary": "一个成年人公开承认「我在爱」"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池自我觉醒母题（大提琴馒头9/王石9/41岁妈妈8.8等旗舰叙事）提炼的趣味倾向测试，用于自我觉察与分享，不构成心理评估。", "result_fields": [{"key": "declaration", "label": "💬 觉醒宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+let answers = new Array(QS.length).fill(-1);
+let qi = 0;
+
+function switchTab(t) {
+  document.getElementById('tabA').classList.toggle('active', t==='A');
+  document.getElementById('tabB').classList.toggle('active', t==='B');
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+}
+
+function renderQ() {
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = '第 '+(qi+1)+'/'+QS.length+' 题 · 约 2 分钟';
+  const body = document.getElementById('qBody');
+  body.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div>';
+  q.options.forEach((o, oi) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[qi]===oi ? ' sel' : '');
+    b.textContent = o.text;
+    b.onclick = () => {
+      answers[qi] = oi;
+      body.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+      b.classList.add('sel');
+      document.getElementById('nextBtn').disabled = false;
+    };
+    body.appendChild(b);
+  });
+  document.getElementById('nextBtn').disabled = answers[qi] < 0;
+  document.getElementById('nextBtn').textContent = qi === QS.length-1 ? '✨ 查看结果' : '下一题';
+}
+document.getElementById('nextBtn').onclick = () => {
+  if (qi < QS.length-1) { qi++; renderQ(); } else { calc(); }
+};
+
+function calc() {
+  const raw = {}; TKEYS.forEach(k => raw[k]=0);
+  QS.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    for (const [k, s] of Object.entries(opt.scores)) if (k in raw) raw[k]+=s;
+  });
+  const top = TKEYS.reduce((a,b) => raw[a]>=raw[b] ? a : b);
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = t.emoji + ' ' + t.name;
+  document.getElementById('rType').style.color = t.color;
+  document.getElementById('rCore').textContent = t.core;
+  // 动态渲染字段（不同产品有不同字段）
+  const grid = document.getElementById('rGrid');
+  grid.innerHTML = '';
+  const fields = DATA.result_fields;
+  fields.forEach(f => {
+    if (!t[f.key]) return;
+    const c = document.createElement('div');
+    c.className = 'cell' + (f.cls ? ' ' + f.cls : '');
+    c.innerHTML = '<h3>'+f.label+'</h3><p>'+t[f.key]+'</p>';
+    grid.appendChild(c);
+  });
+  const tags = document.getElementById('rTags');
+  tags.innerHTML = '';
+  (DATA.tags_fn ? DATA.tags_fn(t) : []).forEach(s => {
+    const x = document.createElement('span');
+    x.className = 'tag'; x.textContent = s; tags.appendChild(x);
+  });
+  document.getElementById('rCase').textContent = '📌 内容池经典案例：' + t.case;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function retry() {
+  answers = new Array(QS.length).fill(-1); qi = 0;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('resultCard').style.display = 'none';
+  renderQ();
+}
+
+function stdHtmlFn(t) {
+  return __STD_FN__;
+}
+function renderStd() {
+  const g = document.getElementById('stdGrid');
+  g.innerHTML = '';
+  TKEYS.forEach(k => {
+    const t = TYPES[k];
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = t.color;
+    c.innerHTML = '<h3>'+t.emoji+' '+t.name+'</h3>' + stdHtmlFn(t);
+    g.appendChild(c);
+  });
+  const cl = document.getElementById('caseList');
+  cl.innerHTML = '';
+  DATA.cases.forEach(cs => {
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = '#e5ddd0';
+    c.innerHTML = '<h3>'+cs.title+'（'+cs.type+'）</h3><p>'+cs.summary+'</p><p style="color:#c96f4a;">内容池 '+cs.id+' · 质量 '+cs.q+' 分</p>';
+    cl.appendChild(c);
+  });
+}
+renderStd();
+renderQ();
+</script>
+</body>
+</html>
