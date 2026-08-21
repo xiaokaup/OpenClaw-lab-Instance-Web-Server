@@ -70,6 +70,8 @@ a{color:var(--accent)}
 .gc-btn{display:inline-block;margin:0 6px 6px 0;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);color:var(--fg);font-size:11px;cursor:pointer}
 .gc-btn:hover{border-color:var(--accent)}
 .gc-btn.on{background:rgba(99,102,241,.18);border-color:var(--accent)}
+.rand-btn{display:inline-block;margin:0 10px 6px 0;padding:8px 16px;border-radius:8px;border:1px solid var(--accent);background:rgba(99,102,241,.16);color:#c7d2fe;font-size:12px;font-weight:600;cursor:pointer}
+.rand-btn:hover{background:rgba(99,102,241,.30)}
 .empty{grid-column:1/-1;background:var(--surface);border:1px dashed var(--border);border-radius:10px;padding:40px;text-align:center;color:var(--muted)}
 .empty .icon{font-size:40px;margin-bottom:8px}
 .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:30px;overflow-y:auto}
@@ -489,10 +491,13 @@ function renderComboBuilder(d){
   GOLDEN_COMBOS = ((d.combination_strategy||{}).golden_combos)||[];
   document.getElementById('combo-count').textContent = '('+COMBO_DIMS.length+')';
   let html = '<div class="banner warn">🎛️ 从 '+COMBO_DIMS.length+' 个维度自由组合目标人群切片——不再只按 MBTI 人设。选层级生成 dimensions 契约，供内容/产品/策略直接使用。（人群基数待采集·taxonomy_only）</div>';
+  html += '<div class="sec-title"><b>🎲 快速组合</b></div><div>';
+  html += '<button class="rand-btn" type="button" onclick="randomCombo()">🎲 随机组合</button>';
   if(GOLDEN_COMBOS.length){
-    html += '<div class="sec-title"><b>⭐ 黄金组合（一键套用）</b></div>';
-    html += '<div>'+GOLDEN_COMBOS.map((c,i)=>'<button class="gc-btn" type="button" onclick="applyGoldenCombo('+i+')">'+esc(c.combo)+'</button>').join('')+'</div>';
+    html += '<span style="color:var(--muted);font-size:11px;margin-right:6px">黄金组合：</span>';
+    html += GOLDEN_COMBOS.map((c,i)=>'<button class="gc-btn" type="button" onclick="applyGoldenCombo('+i+')">'+esc(c.combo)+'</button>').join('');
   }
+  html += '</div>';
   (d.groups||[]).forEach(g=>{
     const gm = GROUP_META[g.id]||{label:g.name,cls:''};
     const gdims = COMBO_DIMS.filter(x=>x.group===g.id);
@@ -555,6 +560,30 @@ function applyGoldenCombo(i){
   const c = GOLDEN_COMBOS[i];
   if(!c || !c.preset) return;
   SELECTED = JSON.parse(JSON.stringify(c.preset));
+  COMBO_DIMS.forEach(dim=>{
+    (dim.levels||[]).forEach(l=>{
+      const el = document.getElementById('chip-'+dim.id+'-'+l.id);
+      if(el) el.classList.toggle('on', (SELECTED[dim.id]||[]).includes(l.id));
+    });
+  });
+  renderComboPreview();
+}
+
+function randomCombo(){
+  if(!COMBO_DIMS.length) return;
+  const ndims = 2 + Math.floor(Math.random()*2); // 2 或 3 维（符合治理 ≤3）
+  const dims = COMBO_DIMS.slice();
+  for(let i=dims.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[dims[i],dims[j]]=[dims[j],dims[i]];}
+  const picked = dims.slice(0, ndims);
+  const sel = {};
+  picked.forEach(x=>{
+    const lvls = (x.levels||[]).slice();
+    if(!lvls.length) return;
+    for(let i=lvls.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[lvls[i],lvls[j]]=[lvls[j],lvls[i]];}
+    const n = (x.cardinality==='multi' && lvls.length>1 && Math.random()<0.5) ? 2 : 1;
+    sel[x.id] = lvls.slice(0, n).map(l=>l.id);
+  });
+  SELECTED = sel;
   COMBO_DIMS.forEach(dim=>{
     (dim.levels||[]).forEach(l=>{
       const el = document.getElementById('chip-'+dim.id+'-'+l.id);
