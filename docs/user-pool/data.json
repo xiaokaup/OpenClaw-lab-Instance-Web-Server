@@ -1,0 +1,915 @@
+{
+  "vessel": {
+    "version": "1.0",
+    "type": "user-pool-vessel",
+    "source": {
+      "agent": "营营",
+      "subsystem": "用户运营"
+    },
+    "freshness_ttl_hours": 24,
+    "id": "user-pool-vessel-2026-08-05T10:00:00+08:00",
+    "created_at": "2026-08-05T10:00:00+08:00",
+    "priority": "high",
+    "dependencies": [
+      {
+        "vessel_type": "direction-vessel",
+        "vessel_id": "dir-D20-B2-2026-08-04T08:15:00+08:00",
+        "status": "GO_MAINTAIN_WITH_ROTATION"
+      },
+      {
+        "vessel_type": "budget-vessel",
+        "vessel_id": "budget-vessel-2026-08-04-1001",
+        "status": "active·已刷新(10:01)·stale解除"
+      },
+      {
+        "vessel_type": "report-vessel",
+        "vessel_id": "2026-08-04-0925-ad-metrics",
+        "status": "DEPLOYED·B9 5臂¥125"
+      }
+    ],
+    "info_contract": {
+      "excludes": "已流失用户·非MBTI用户",
+      "action_threshold": "fatigue>5.0→eligible=false·信任<CS-18→紧急恢复",
+      "expires_after": "每批刷新"
+    },
+    "mandates": {
+      "intp_first_touch_deployed": "✅ B6 08:25 部署·D18-B5-1 社货·B站·8.8 fresh·8批断档恢复首触·信任7.1修复启动·B5/B6续批目标7.4·NT象限2/4→3/4",
+      "infp_batch5_deployed": "✅ B6 部署·好奇心·D17-B3-1(3rd)·信任6.9+目标达成·恢复节奏连续5批·疲劳4.5观察窗启动(24-48h)·若不松动→永久基线确认·策略转信任维护",
+      "entj_debt_cleared": "✅ B6 部署·D18-B3-2 社货·抖音 fresh·欠投¥50闭环(TTL 8/4内)·钩子降级(身份认同→社货)已记",
+      "enfp_channel_migration": "✅ B6已部署(D18-B5-2情感共鸣·B站)·D18-B3-1社货fresh(8.8·usage0)欠投→D20-B1闭环·B站主阵第2数据点",
+      "entp_content_gap": "🔴 D16-B1-2 TTL 8/3 06:15过期·B7已用usage4·ENTP第4触需设设新篇·D20-B1前确认",
+      "payment_105h_escalated": "🔴 支付105h·96h阈值已破(8/2 03:00)+5.4h·ESC-31-1升级已触发·大卡trust授权·ROI盲飞·全指标失效仅clean_roi 1.64",
+      "istj_deferred": "ISTJ B6剔除(无匹配内容)·B7候选(设设产出或复用D18-B1-4)",
+      "intp_critical_5declines": "🟡 修复中·B7社货落地·信任7.05·B8续批P0·跌破7.0即ESC级升级",
+      "sp_quadrant_degrading": "🟡 SP象限(ISFP 6.9→6.6·ISTP/ESTP/ESFP 4.0无触达)缓慢退化·建议策策评估SP内容策略·零维护状态",
+      "enfj_decay_irreversible": "🟡 ENFJ 7.5→~7.1·窗口闭合+2批自然衰减不可逆·¥75沉没·不再追加·信任7.1维持观察",
+      "intp_repair_started": "✅ B7已执行·社货·B站·¥25·信任7.05修复启动·B8续批P0(D20-B1 8/3 08:25)·目标7.4",
+      "infp_fatigue_window_deferred": "🟡 B7未触(双B站违规·集中度62.5%>60%否决)·疲劳观察窗24h决策点=8/3 08:25·D17-B3-1 TTL 8/3 18:15来得及·4.5基线验证",
+      "entp_nedom_verifying": "✅ B7第3触·好奇心·抖音·¥25·Ne-dom续批验证中·信任6.7·D16-B1-2 TTL 8/3 06:15过期·第4触需设设新篇",
+      "intp_repair_b8": "✅ D3-B1 社货·B站·3rd·信任7.05→7.4推进·续批不间断",
+      "infp_fatigue_window_broken": "✅ D3-B1 好奇心·B站·4th·TTL 18:15前触达·4.5永久基线假说验证点落地·疲劳数据待nps_detail确认",
+      "sheshe_81h_outage_content_crisis": "🟢 设设诊断闭环（方案D确立）：设设=内容设计师（出规格）·大卡=写正文·D20-B2 设设出 ENTP 规格→大卡正文 15-20min 内完成·长期待进进裁决角色·不再依赖设设自主恢复",
+      "xixi_0917_analysis_received": "✅ 析析 8/3 09:17 analysis 落盘（profiles.json 未落盘·analysis 有产出）·B8 前一刻估算：INTP 7.30-7.45（双批恢复·置信0.55·pay-blind）·INFP 7.10（第6批）·ENFJ 6.9（4批衰减·D4 必须覆盖）·ENTP 6.85·ISFP 6.5",
+      "intp_b9_fresh_option": "✅ D20-B1-1（INTP 好奇心·B站·8.7·fresh·usage0·大卡 08:40 紧急生产）B9 可用·4th 复用 D18-B5-1 社货问题解除·建议 B9 用 fresh 好奇心（钩子轮换社货→好奇心）",
+      "d4_enfj_probe_suggestion": "🟡 建议轻触 1 臂试探（D17-B3-2 好奇心·小红书·8.6·usage0 复用·¥25）·信任 6.9 未跌破健康线·验证窗口闭合后复触有效性·待策策评估（若 elastic-loop 维持则零维护）",
+      "d4_isfp_probe_suggestion": "🟡 建议轻触 1 臂（微博·UCB 历史闭环渠道）·6.6→6.5 退化·需设设/大卡内容·无 fresh 则顺延·待策策评估",
+      "sp_quadrant_content_gap": "🔴 SP 象限 75% 盲区（ISTP/ESTP/ESFP 4.0 零触达·零内容）·非运营可解·建议策策评估 SP 内容策略",
+      "profile_pipeline_fragility": "⚠️ 析析 06:30 profiles 未落盘·疑与 8/2 09:58-09:59 多 Agent LLM timeout 同源·单次错过=3h 数据窗口关闭·观察 12:33/18:33 批次恢复",
+      "b9_content_supply_matrix": "✅ B9 六臂全就绪：INTP(D20-B1-1 好奇心 8.7)·ENTP(D20-B1-2 身份认同 8.5)·ENFP(D20-B1-3 反常识 8.6)·ENFJ(D17-B3-2 好奇心 8.6 复用)·INFP(D20-B2-INFP-1 好奇心 8.6 fresh)·ISFP(无 fresh·顺延候选)·预算 ¥150/¥250 容量充分",
+      "infp_b9_only_dependency": "✅ B9 INFP 内容已交付：D20-B2-INFP-1（好奇心·B站·q8.6·fresh·TTL 至 8/6 20:00·大卡独立生产 20:00 交付）·B9 供给 6/6 全就绪（ISFP 顺延候选）·INFP 信任 7.10·疲劳 4.5·第5次触达 = 永久基线假说第二裁决数据点",
+      "xixi_1233_batch_missing": "✅ 认知修正（大卡 cron 实查）：析析 cron = 每日仅 09:00 一次（0 9 * * *）·不存在 06:30/12:33/18:33 批次·三连缺协议基于错误假设·撤销·真根因 = 09:00 cron 连续 4x error（nps_detail stale 32h 上游原因）·建议手动触发测试",
+      "d20_afternoon_signal_summary": "✅ D20 午后两条弱信号均非阻塞：析析仅影响数据新鲜度·设设规格有确定性 fallback（大卡 22:00 前独立生产）·B9 供给路径清晰",
+      "sheshe_spec_no_cron": "✅ 认知修正：设设 cron = 每日仅 08:30 一次（30 8 * * *）·规格请求不触发额外 cron·D20-B2 规格今日不会再产出·B9 INFP 依赖大卡独立生产（22:00 前·TTL 8/6 22:00）",
+      "b9_supply_66": "✅ B9 供给 6/6 全就绪预期：INTP(D20-B1-1)·ENTP(D20-B1-2)·ENFP(D20-B1-3)·ENFJ(D17-B3-2)·INFP(大卡 22:00 前独立生产)·ISFP(顺延候选)·不阻塞",
+      "b9_executed_d4_b1": "✅ B9(D4-B1·09:25) 5臂 ¥125 部署：INTP(D20-B1-1 好奇心 8.7·7.1→7.25)+INFP(D20-B2-INFP-1 好奇心 8.6·第5触·永久基线第二裁决点落地)+ENTP(D20-B1-2 身份认同)+ENFP(D20-B1-3 反常识)+ENTJ(D18-B3-2 社货)·钩子轮换合规",
+      "d4_b2_zero_block": "🔴 D4-B2(09:35) S1 首次 0 增量部署封锁：剩余 11 人格零内容·内容管道塌方实证·¥125 结转 D5·设设停产 90h+ 影响扩大化",
+      "enfj_direction_conflict": "⚠️ ENFJ 方向冲突：策策 08:18 新方向排除（elastic-loop·窗口闭合~9.5h·¥75 沉没+P0）vs 析析 KI-003「必须覆盖」·策策为权威源·营营记录不干预",
+      "mirror_split_recur": "🔴 镜像分裂复发（D17 模式）：direction/strategy 双路径 MD5 不一致·策策 08:18 写 shared·投投 09:25 消费 workspace 旧版·建议同步",
+      "budget_vessel_stale": "⚠️ budget-vessel 8/3 10:32（23h stale）·控控需刷新·D5 有 ¥125 冻结可动用",
+      "d21_b7_gate_misfire_closed": "✅ D21-B7 match gate 误触发全闭环(8/16): ESC-2026-08-16-1大卡核查·ruling-015 gate只看执行层strategy_match(100%·连续4批)·信号命中率20.5%(73→15)为环境噪声不触发·投投自裁降级被纠偏·12:07方向船明令ENTP解扣部署+ENFJ维持冻结留B8·待进进终裁",
+      "d21_b7_final_execution": "🎉 D21-B7 终局口径: 6臂¥150(主批5臂¥125+ENTP解扣¥25)·HHI 0.278·dissent 0连4批·ENTP B站好奇心缺口闭合(设设12:00补产D21-B7-ENTP-1 q8.8 fresh)·ENFJ冻结¥25留B8(D21-B7-ENFJ-1 q8.9 fresh usage0·小红书·情感共鸣)·今日消耗≤日限¥200",
+      "b8_user_ops_prestage": "🎯 B8用户运营预置(8/16 21:40): ①ENFJ恢复续触(情感共鸣·小红书·q8.9 fresh·214人·机动池第1臂) ②INTP身份认同轮入(反常识batch2达上限·D20-B4-INTP-1 q8.7或fresh·340人·机动池第2臂) ③ENFP恢复评估(P1待命·好奇心Ne接管·疲劳1.5回落·需fresh内容)·四臂轮出预警(INTJ/INTP反常识+ISTJ社证+INFJ身份认同batch2上限)",
+      "enfp_resume_conditions": "🟡 ENFP恢复条件跟踪(B8): rest1批·疲劳3.0→1.5回落·18%分享率资产·策策B7排除=情感共鸣信号源干涸·恢复需成长母题/好奇心Ne信号≥3·若设设产fresh则B8接管Ne·否则B8后段",
+      "infp_still_resting": "🟡 INFP续rest(B8): 疲劳3.8→3.0(rest2批回落)·身份认同仅2弱信号(6分)·依恋类型母题仅6分无旗舰·恢复条件=身份认同≥3且≥1个7分旗舰·疲劳回落确认后轻触·不追",
+      "ttl_crisis_warning": "🔴 内容TTL系统性崩坏持续: D21-B7 3/6过期(INTP 144.9h/INFJ 144.9h/ISTJ 192.7h)·复用3臂·ruling-015 TTL硬上限enforce逾期8天·B8四臂轮出需≥4臂fresh·内容供给为执行瓶颈·建议大卡/进进优先裁决"
+    },
+    "audit": {
+      "prior_version_id": "user-pool-vessel-2026-08-03T20:10:00+08:00",
+      "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
+    }
+  },
+  "updated_at": "2026-08-20T09:57:00+08:00",
+  "total_users": 8250,
+  "population_estimate": {
+    "xixi_estimates": 8480,
+    "confidence": 0.35,
+    "note": "析析share_pct×8480口径(INFP 37.5%·3,180人) vs 营营segment累计口径(8,050+新用户)·两口径差异大·建议析析恢复segment_snapshot统一·本池维持8,250结构口径以保持投投/策策消费一致性"
+  },
+  "nps_proxy": 49,
+  "nps_trend": [
+    42,
+    43,
+    45,
+    46,
+    48,
+    49,
+    49,
+    49,
+    49,
+    49,
+    49,
+    49,
+    49
+  ],
+  "operator": "营营·D21-B11执行签收对齐",
+  "system_status": "🔴 D21-B7 match gate 误触发已纠正(ESC-2026-08-16-1·执行层strategy_match=100%·信号命中率20.5%非gate指标)·投投自裁降级被纠偏: ENTP解扣补投·今日6臂¥150(≤日限¥200)·ENFJ冻结¥25留B8续触(D21-B7-ENFJ-1 q8.9 fresh就位)·B8四臂轮出预警(INTJ/INTP反常识+ISTJ社证+INFJ身份认同 batch2达上限)·用户运营2动作预置(ENFJ续触+INTP身份认同轮入·机动池零边际成本)",
+  "system_status_detail": "D21-B7主批(09:25)¥125/5臂(INTJ/INTP/ENTJ/ISTJ/INFJ·strategy_match 5/5)·B2补投(12:07)ENTP解扣¥25(B站好奇心·D21-B7-ENTP-1 q8.8 fresh·设设12:00补产·缺口闭合)·ENFJ维持冻结留B8(D21-B7-ENFJ-1·情感共鸣·q8.9·fresh·小红书·usage0)·hook_diversity 4/6·HHI 0.278·dissent 0连续4批·内容TTL崩坏未解(3/6过期·复用3臂·ruling-015 TTL enforce逾期8天)·支付~443h盲飞(13阈值全破·非营营域)",
+  "segments": {
+    "active": [
+      {
+        "personality": "INTJ",
+        "count": 390,
+        "avg_trust": 8.56,
+        "eligible": false,
+        "note": "零维护·生产级归档·自然覆盖"
+      },
+      {
+        "personality": "ENTJ",
+        "count": 300,
+        "avg_trust": 7.74,
+        "eligible": true,
+        "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖"
+      },
+      {
+        "personality": "INTP",
+        "count": 330,
+        "avg_trust": 7.1,
+        "eligible": true,
+        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+      },
+      {
+        "personality": "ENFP",
+        "count": 270,
+        "avg_trust": 6.49,
+        "eligible": true,
+        "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率"
+      },
+      {
+        "personality": "INFP",
+        "count": 225,
+        "avg_trust": 6.8,
+        "eligible": true,
+        "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察"
+      },
+      {
+        "personality": "INFJ",
+        "count": 155,
+        "avg_trust": 8.18,
+        "eligible": true,
+        "note": "首触即峰值·全系统最高信任·零维护双极候选"
+      },
+      {
+        "personality": "ISTJ",
+        "count": 155,
+        "avg_trust": 7.63,
+        "eligible": true,
+        "note": "D18-B2反常识首触✅·D18-B6好奇心·微博"
+      },
+      {
+        "personality": "ISFP",
+        "count": 165,
+        "avg_trust": 6.7,
+        "eligible": false,
+        "note": "UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估"
+      },
+      {
+        "personality": "ENFJ",
+        "count": 92,
+        "avg_trust": 7.2,
+        "eligible": true,
+        "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07"
+      },
+      {
+        "personality": "ENTP",
+        "count": 82,
+        "avg_trust": 6.5,
+        "eligible": true,
+        "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落"
+      }
+    ],
+    "cooling": [
+      {
+        "personality": "INTJ",
+        "count": 455,
+        "avg_trust": 8.56,
+        "eligible": false,
+        "note": "零维护自然回归"
+      },
+      {
+        "personality": "ENTJ",
+        "count": 285,
+        "avg_trust": 7.74,
+        "eligible": true,
+        "note": "决策惯性·5批gap·D19-B1覆盖"
+      },
+      {
+        "personality": "ISTJ",
+        "count": 285,
+        "avg_trust": 7.63,
+        "eligible": true,
+        "note": "零维护归档"
+      },
+      {
+        "personality": "INTP",
+        "count": 155,
+        "avg_trust": 7.1,
+        "eligible": true,
+        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+      },
+      {
+        "personality": "ENTP",
+        "count": 162,
+        "avg_trust": 6.5,
+        "eligible": true,
+        "note": "首触后巩固中·Ne-dom弹性验证"
+      },
+      {
+        "personality": "ISFP",
+        "count": 162,
+        "avg_trust": 6.7,
+        "eligible": false,
+        "note": "感官低频·非紧急"
+      },
+      {
+        "personality": "ENFJ",
+        "count": 122,
+        "avg_trust": 7.2,
+        "eligible": false,
+        "note": "窗口已闭合·观察衰减"
+      },
+      {
+        "personality": "ENFP",
+        "count": 10,
+        "avg_trust": 6.49,
+        "eligible": true,
+        "note": "社货恢复·冷却收尾"
+      },
+      {
+        "personality": "INFP",
+        "count": 112,
+        "avg_trust": 6.8,
+        "eligible": true,
+        "note": "恢复中·轻触不加重"
+      },
+      {
+        "personality": "INFJ",
+        "count": 102,
+        "avg_trust": 8.18,
+        "eligible": true,
+        "note": "低维护·高信任"
+      }
+    ],
+    "dormant": [
+      {
+        "personality": "INTP",
+        "count": 185,
+        "avg_trust": 7.1,
+        "eligible": true,
+        "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35"
+      },
+      {
+        "personality": "ENFP",
+        "count": 195,
+        "avg_trust": 6.49,
+        "eligible": true,
+        "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力"
+      },
+      {
+        "personality": "INFJ",
+        "count": 245,
+        "avg_trust": 8.18,
+        "eligible": true,
+        "note": "低维护·信任高"
+      },
+      {
+        "personality": "INTJ",
+        "count": 415,
+        "avg_trust": 8.56,
+        "eligible": false,
+        "note": "零维护·触达ROI低"
+      },
+      {
+        "personality": "ENTJ",
+        "count": 335,
+        "avg_trust": 7.74,
+        "eligible": true,
+        "note": "决策惯性"
+      },
+      {
+        "personality": "ISTJ",
+        "count": 275,
+        "avg_trust": 7.63,
+        "eligible": true,
+        "note": "零维护归档"
+      },
+      {
+        "personality": "ISFP",
+        "count": 165,
+        "avg_trust": 6.7,
+        "eligible": false,
+        "note": "感官低频"
+      },
+      {
+        "personality": "ENFJ",
+        "count": 162,
+        "avg_trust": 7.2,
+        "eligible": false,
+        "note": "窗口闭合·观察"
+      },
+      {
+        "personality": "ENTP",
+        "count": 155,
+        "avg_trust": 6.5,
+        "eligible": true,
+        "note": "D19-B1后定唤醒策略"
+      },
+      {
+        "personality": "INFP",
+        "count": 112,
+        "avg_trust": 6.8,
+        "eligible": true,
+        "note": "恢复中·轻触不加重"
+      }
+    ],
+    "lost": [
+      {
+        "personality": "INTJ",
+        "count": 345,
+        "avg_trust": 5.8,
+        "eligible": false
+      },
+      {
+        "personality": "ENTJ",
+        "count": 215,
+        "avg_trust": 5.6,
+        "eligible": false
+      },
+      {
+        "personality": "ISTJ",
+        "count": 200,
+        "avg_trust": 5.5,
+        "eligible": false
+      },
+      {
+        "personality": "INTP",
+        "count": 205,
+        "avg_trust": 5.7,
+        "eligible": false
+      },
+      {
+        "personality": "INFJ",
+        "count": 215,
+        "avg_trust": 5.9,
+        "eligible": false
+      },
+      {
+        "personality": "ISFP",
+        "count": 136,
+        "avg_trust": 5.5,
+        "eligible": false
+      },
+      {
+        "personality": "ENFP",
+        "count": 128,
+        "avg_trust": 5.3,
+        "eligible": false
+      },
+      {
+        "personality": "INFP",
+        "count": 101,
+        "avg_trust": 5.4,
+        "eligible": false
+      },
+      {
+        "personality": "ENFJ",
+        "count": 152,
+        "avg_trust": 5.5,
+        "eligible": false
+      },
+      {
+        "personality": "ENTP",
+        "count": 95,
+        "avg_trust": 5.2,
+        "eligible": false
+      }
+    ]
+  },
+  "segments_flat": [
+    {
+      "personality": "INTJ",
+      "count": 390,
+      "avg_trust": 8.56,
+      "eligible": false,
+      "note": "零维护·生产级归档·自然覆盖",
+      "group": "active"
+    },
+    {
+      "personality": "ENTJ",
+      "count": 300,
+      "avg_trust": 7.74,
+      "eligible": true,
+      "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖",
+      "group": "active"
+    },
+    {
+      "personality": "INTP",
+      "count": 330,
+      "avg_trust": 7.1,
+      "eligible": true,
+      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "group": "active"
+    },
+    {
+      "personality": "ENFP",
+      "count": 270,
+      "avg_trust": 6.49,
+      "eligible": true,
+      "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率",
+      "group": "active"
+    },
+    {
+      "personality": "INFP",
+      "count": 225,
+      "avg_trust": 6.8,
+      "eligible": true,
+      "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察",
+      "group": "active"
+    },
+    {
+      "personality": "INFJ",
+      "count": 155,
+      "avg_trust": 8.18,
+      "eligible": true,
+      "note": "首触即峰值·全系统最高信任·零维护双极候选",
+      "group": "active"
+    },
+    {
+      "personality": "ISTJ",
+      "count": 155,
+      "avg_trust": 7.63,
+      "eligible": true,
+      "note": "D18-B2反常识首触✅·D18-B6好奇心·微博",
+      "group": "active"
+    },
+    {
+      "personality": "ISFP",
+      "count": 165,
+      "avg_trust": 6.7,
+      "eligible": false,
+      "note": "UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+      "group": "active"
+    },
+    {
+      "personality": "ENFJ",
+      "count": 92,
+      "avg_trust": 7.2,
+      "eligible": true,
+      "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07",
+      "group": "active"
+    },
+    {
+      "personality": "ENTP",
+      "count": 82,
+      "avg_trust": 6.5,
+      "eligible": true,
+      "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落",
+      "group": "active"
+    },
+    {
+      "personality": "INTJ",
+      "count": 455,
+      "avg_trust": 8.56,
+      "eligible": false,
+      "note": "零维护自然回归",
+      "group": "cooling"
+    },
+    {
+      "personality": "ENTJ",
+      "count": 285,
+      "avg_trust": 7.74,
+      "eligible": true,
+      "note": "决策惯性·5批gap·D19-B1覆盖",
+      "group": "cooling"
+    },
+    {
+      "personality": "ISTJ",
+      "count": 285,
+      "avg_trust": 7.63,
+      "eligible": true,
+      "note": "零维护归档",
+      "group": "cooling"
+    },
+    {
+      "personality": "INTP",
+      "count": 155,
+      "avg_trust": 7.1,
+      "eligible": true,
+      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "group": "cooling"
+    },
+    {
+      "personality": "ENTP",
+      "count": 162,
+      "avg_trust": 6.5,
+      "eligible": true,
+      "note": "首触后巩固中·Ne-dom弹性验证",
+      "group": "cooling"
+    },
+    {
+      "personality": "ISFP",
+      "count": 162,
+      "avg_trust": 6.7,
+      "eligible": false,
+      "note": "感官低频·非紧急",
+      "group": "cooling"
+    },
+    {
+      "personality": "ENFJ",
+      "count": 122,
+      "avg_trust": 7.2,
+      "eligible": false,
+      "note": "窗口已闭合·观察衰减",
+      "group": "cooling"
+    },
+    {
+      "personality": "ENFP",
+      "count": 10,
+      "avg_trust": 6.49,
+      "eligible": true,
+      "note": "社货恢复·冷却收尾",
+      "group": "cooling"
+    },
+    {
+      "personality": "INFP",
+      "count": 112,
+      "avg_trust": 6.8,
+      "eligible": true,
+      "note": "恢复中·轻触不加重",
+      "group": "cooling"
+    },
+    {
+      "personality": "INFJ",
+      "count": 102,
+      "avg_trust": 8.18,
+      "eligible": true,
+      "note": "低维护·高信任",
+      "group": "cooling"
+    },
+    {
+      "personality": "INTP",
+      "count": 185,
+      "avg_trust": 7.1,
+      "eligible": true,
+      "note": "🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "group": "dormant"
+    },
+    {
+      "personality": "ENFP",
+      "count": 195,
+      "avg_trust": 6.49,
+      "eligible": true,
+      "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力",
+      "group": "dormant"
+    },
+    {
+      "personality": "INFJ",
+      "count": 245,
+      "avg_trust": 8.18,
+      "eligible": true,
+      "note": "低维护·信任高",
+      "group": "dormant"
+    },
+    {
+      "personality": "INTJ",
+      "count": 415,
+      "avg_trust": 8.56,
+      "eligible": false,
+      "note": "零维护·触达ROI低",
+      "group": "dormant"
+    },
+    {
+      "personality": "ENTJ",
+      "count": 335,
+      "avg_trust": 7.74,
+      "eligible": true,
+      "note": "决策惯性",
+      "group": "dormant"
+    },
+    {
+      "personality": "ISTJ",
+      "count": 275,
+      "avg_trust": 7.63,
+      "eligible": true,
+      "note": "零维护归档",
+      "group": "dormant"
+    },
+    {
+      "personality": "ISFP",
+      "count": 165,
+      "avg_trust": 6.7,
+      "eligible": false,
+      "note": "感官低频",
+      "group": "dormant"
+    },
+    {
+      "personality": "ENFJ",
+      "count": 162,
+      "avg_trust": 7.2,
+      "eligible": false,
+      "note": "窗口闭合·观察",
+      "group": "dormant"
+    },
+    {
+      "personality": "ENTP",
+      "count": 155,
+      "avg_trust": 6.5,
+      "eligible": true,
+      "note": "D19-B1后定唤醒策略",
+      "group": "dormant"
+    },
+    {
+      "personality": "INFP",
+      "count": 112,
+      "avg_trust": 6.8,
+      "eligible": true,
+      "note": "恢复中·轻触不加重",
+      "group": "dormant"
+    },
+    {
+      "personality": "INTJ",
+      "count": 345,
+      "avg_trust": 5.8,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ENTJ",
+      "count": 215,
+      "avg_trust": 5.6,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ISTJ",
+      "count": 200,
+      "avg_trust": 5.5,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "INTP",
+      "count": 205,
+      "avg_trust": 5.7,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "INFJ",
+      "count": 215,
+      "avg_trust": 5.9,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ISFP",
+      "count": 136,
+      "avg_trust": 5.5,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ENFP",
+      "count": 128,
+      "avg_trust": 5.3,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "INFP",
+      "count": 101,
+      "avg_trust": 5.4,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ENFJ",
+      "count": 152,
+      "avg_trust": 5.5,
+      "eligible": false,
+      "group": "lost"
+    },
+    {
+      "personality": "ENTP",
+      "count": 95,
+      "avg_trust": 5.2,
+      "eligible": false,
+      "group": "lost"
+    }
+  ],
+  "segment_totals": {
+    "active": 2164,
+    "cooling": 1850,
+    "dormant": 2244,
+    "lost": 1792
+  },
+  "fatigue_blacklist": [],
+  "fatigue_blacklist_reason": "ESC-25-2已resolved(大卡8/1裁定)·析析4.5新基线假说(INFP疲劳4.5持续11批·永久基线置信0.78)·INFP以信任维护为首标·疲劳不降策略不追",
+  "cooling_blacklist": [],
+  "hook_cooldown_status": {
+    "identity": {
+      "status": "🟢 可用",
+      "last_used": "D20-B3",
+      "consecutive": 1,
+      "max_allowed": 2,
+      "note": "D20-B4#1优先级·41岁妈妈985(9分)+老登(8分)双源SURGE·ENFJ轻触接入"
+    },
+    "emotion": {
+      "status": "🟢 可用·SURGE",
+      "last_used": "D20-B3 INFP",
+      "consecutive": 0,
+      "max_allowed": 2,
+      "note": "D20-B4#2优先级·13岁少年/错换37年/死刑改死缓三8分·INFJ接入"
+    },
+    "curiosity": {
+      "status": "🟢 可用",
+      "last_used": "D20-B3 INTP",
+      "consecutive": 0,
+      "max_allowed": 2,
+      "note": "D20-B4#3优先级·AI不再谈论8分+89TB删除7分·INTP/ENTJ接入·INTP条件"
+    },
+    "counter": {
+      "status": "🟢 可用",
+      "last_used": "D20-B3 INFJ",
+      "consecutive": 1,
+      "max_allowed": 2,
+      "note": "D20-B4#4优先级·传销头目8分+费大厨7分·INFP/ENTP接入·INFP第11批"
+    },
+    "social_proof": {
+      "status": "🟢 可用",
+      "last_used": "D20-B3 ISTJ",
+      "consecutive": 0,
+      "max_allowed": 2,
+      "note": "D20-B4#5优先级·带薪休假制度化·ISTJ接入"
+    },
+    "social_currency": {
+      "status": "🟢 恢复",
+      "last_used": "D20-B3 ENFP",
+      "consecutive": 0,
+      "max_allowed": 2,
+      "note": "D20-B4#6末位·弱信号·ENFP轻触恢复·如信号增强可扩大(D20-B5)"
+    }
+  },
+  "priority_targets": [
+    {
+      "personality": "ENFJ_restore_214人(active92+cooling122)",
+      "count": 214,
+      "priority": "P0",
+      "reason": "恢复窗口第3批续触(首触D21-B1·B2/B3续·B7被match gate误扣留)·D21-B7-ENFJ-1(情感共鸣·q8.9·fresh·小红书)已就位usage0·恢复验证不打断",
+      "hook": "情感共鸣",
+      "channel": "小红书",
+      "cost": 25,
+      "scheduled_batch": "D21-B8",
+      "status": "ready",
+      "signal": "胖东来流泪7(Fe共情旗舰)",
+      "note": "ESC-2026-08-16-1临时口径ENFJ解冻续触·12:07方向船维持冻结留B8·B8直接启用·机动池第1臂"
+    },
+    {
+      "personality": "INTP_recall_340人(cooling155+dormant185)",
+      "count": 340,
+      "priority": "P0",
+      "reason": "修复链第7环·反常识batch2达上限必须轮出·好奇心gate未开(≥7.4+疲劳≤1.0+进进评估·ESC-08-06)·身份认同为合规轮入项",
+      "hook": "身份认同",
+      "channel": "B站",
+      "cost": 25,
+      "scheduled_batch": "D21-B8",
+      "status": "ready",
+      "signal": "身份认同信号2条(青海拉面6·领证6)·弱信号",
+      "note": "D20-B4-INTP-1(q8.7·身份认同·B站)可复用·或设设B8 fresh·防跌穿7.0·机动池第2臂"
+    },
+    {
+      "personality": "ENFP_resume_465人(active270+cooling10+dormant195)",
+      "count": 465,
+      "priority": "P1",
+      "reason": "rest1批·疲劳3.0→1.5回落·18%分享率资产·B8可恢复接管Ne好奇心(ENTP轮出)·需成长母题/好奇心Ne信号≥3",
+      "hook": "好奇心",
+      "channel": "B站",
+      "cost": 25,
+      "scheduled_batch": "D21-B8",
+      "status": "standby",
+      "signal": "好奇心信号3条(全6分·无旗舰)·待策策方向确认",
+      "note": "需设设/大卡产ENFP新鲜内容·若供给就位则恢复首触·机动池第3臂候选"
+    }
+  ],
+  "recall_candidates": [
+    {
+      "segment": "ENFJ_restore_214人",
+      "count": 214,
+      "avg_days_inactive": 12,
+      "priority": "highest",
+      "hook": "情感共鸣(Fe-dom·胖东来流泪7)",
+      "expected_awakening": "信任7.07→7.3·恢复验证3批完整闭环·止住自然衰减",
+      "source": "营营D27日终·2026-08-16",
+      "note": "B8直接启用·D21-B7-ENFJ-1 q8.9 fresh usage0·机动池解冻第1臂"
+    },
+    {
+      "segment": "INTP_cooling+dormant_340人",
+      "count": 340,
+      "avg_days_inactive": 8,
+      "priority": "highest",
+      "hook": "身份认同(Ti-Ne解构型·好奇心gate未开)",
+      "expected_awakening": "信任7.35持稳→7.5·修复链第7环·防跌穿7.0",
+      "source": "营营D27日终·2026-08-16",
+      "note": "B8身份认同轮入·D20-B4-INTP-1(q8.7)复用或fresh·ESC-08-06 gate合规"
+    },
+    {
+      "segment": "ENFP_resume_465人",
+      "count": 465,
+      "avg_days_inactive": 1,
+      "priority": "high",
+      "hook": "好奇心Ne接管(ENTP轮出空位)·18%分享率",
+      "expected_awakening": "疲劳1.5持稳·分享回流潜力·信任6.49→6.7",
+      "source": "营营D27日终·2026-08-16",
+      "note": "rest1批后恢复评估·需设设/大卡fresh内容·策策B8方向确认"
+    },
+    {
+      "segment": "INFP_all_segments_449人",
+      "count": 449,
+      "avg_days_inactive": 0,
+      "priority": "medium",
+      "hook": "身份认同轻触(依恋类型母题·疲劳3.0)",
+      "expected_awakening": "疲劳回落确认·信任6.93持稳",
+      "source": "营营D27日终·2026-08-16",
+      "note": "策策B7排除续rest1批·恢复条件=身份认同≥3且≥1个7分旗舰·B8观察"
+    },
+    {
+      "segment": "ISFP_all_segments_327人",
+      "count": 327,
+      "avg_days_inactive": 8,
+      "priority": "low",
+      "hook": "好奇心/感官叙事·轻触",
+      "expected_awakening": "止住缓慢下滑·SP象限0/4盲区",
+      "source": "营营D27日终·2026-08-16",
+      "note": "Se感官信号未积累·D21后段轻触·SP盲区结构性·内容缺口非运营可解"
+    }
+  ],
+  "active_operations": [
+    {
+      "type": "recall",
+      "target": "ENFJ恢复续触·214人(active92+cooling122)",
+      "method": "情感共鸣·小红书·D21-B7-ENFJ-1(q8.9·fresh·usage0)·1篇内容·B8直接启用",
+      "hook": "情感共鸣",
+      "cost": 0,
+      "budget_source": "投放机动池(投投日限¥25·用户桶¥0)·零边际成本·≤¥200档",
+      "expected_effect": "信任7.07→7.3·Fe-dom恢复验证3批完整·止住自然衰减(7.5→7.2)·B7误扣留补偿",
+      "measurement": "投投ad-metrics D21-B8·析析profiles后续实测",
+      "scheduled_batch": "D21-B8(明日08:25)",
+      "priority": "P0",
+      "status": "queued_ready",
+      "dependency": "内容已就位(q8.9 fresh)·方向船12:07明令B8启用·ESC-2026-08-16-1临时口径",
+      "note": "⚠️ B7被match gate误扣留1批(ESC-2026-08-16-1·大卡核查gate误触发·执行层match_rate=100%)·B8必须续触·恢复验证3批不打断"
+    },
+    {
+      "type": "recall",
+      "target": "INTP召回续批·340人(cooling155+dormant185)",
+      "method": "身份认同·B站·D20-B4-INTP-1(q8.7·复用)或设设B8 fresh·1篇内容·ESC-08-06 gate合规",
+      "hook": "身份认同",
+      "cost": 0,
+      "budget_source": "投放机动池(投投日限¥25·用户桶¥0)·零边际成本·≤¥200档",
+      "expected_effect": "信任7.35持稳→7.5·修复链第7环·防跌穿7.0·好奇心gate不破",
+      "measurement": "析析profiles实测·nps_detail",
+      "scheduled_batch": "D21-B8(明日08:25)",
+      "priority": "P0",
+      "status": "queued_ready",
+      "dependency": "D20-B4-INTP-1可复用·B站配额确认·若策策换钩则跟进",
+      "note": "反常识batch2达上限必须轮出·身份认同为合规轮入项(好奇心需≥7.4+疲劳≤1.0+进进评估未达)"
+    }
+  ],
+  "budget_summary": {
+    "user_ops_budget_monthly": 500,
+    "user_ops_used": 0,
+    "user_ops_remaining": 1000,
+    "month": "2026-08",
+    "month_status": "🟢 active·budget-vessel 8/16 13:57确认(user_ops: monthly500+july结转500=available1000·spent0·营营全量量化运营维持)",
+    "authoritative": "pools/budget-vessel.json 2026-08-16-1357",
+    "august_available": "¥1,000(7月结转¥500+8月¥500)·spent ¥0",
+    "current_tier": "zero_marginal_cost",
+    "tier_description": "¥0-200/月：零边际成本触达(复用投放机动池)·本批2动作¥0用户桶消耗",
+    "note": "D21-B7 投放¥150来自投放日限(非用户桶)·用户桶零消耗·机动池2臂预置(ENFJ/INTP·B8)"
+  },
+  "pipeline_status": {
+    "reach_log": {
+      "status": "consumable",
+      "delivered": "2026-08-02T12:06",
+      "by": "投投",
+      "note": "17条·¥415·量化已恢复"
+    },
+    "nps_detail": {
+      "status": "consumable_proxy",
+      "delivered": "2026-08-02T12:08",
+      "by": "荐荐",
+      "note": "nps_proxy_trust代理口径·by_persona×channel×batch"
+    },
+    "complaint_unsubscribe": {
+      "status": "consumable_event_level",
+      "delivered": "2026-08-02T12:09",
+      "by": "荐荐",
+      "note": "10条事件·退订尖峰/退款/流失风险人格"
+    },
+    "segment_snapshot": {
+      "status": "structure_ok_data_stale",
+      "delivered": "2026-08-02T12:10",
+      "by": "析析",
+      "note": "v2.1.0生命周期分群·数据历史回填止7/4·析析8/4 21:00前刷新当前数据·分群人数沿用结构口径(8,250)"
+    }
+  }
+}
