@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>依恋记分卡 v2.0 · 测一测出结果</title>
+<style>
+  :root { --bg:#f7f0ea; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --bdr:#e5ddd0; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eee8dd; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d8b8a4; }
+  .opt.sel { border-color:var(--accent); background:#fdf3ec; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .axis-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .axis-grid{ grid-template-columns:1fr; } }
+  .cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:14px; line-height:1.7; }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:3px 9px; font-size:12px; color:#7a6f5f; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fdf6f0; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#faf7f1; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#eee8dd; color:#7a6f5f; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💞 依恋记分卡</h1>
+  <div class="sub">8 题测一测 · 出你的依恋类型（安全 / 焦虑 / 回避 / 恐惧）</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准记分卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的依恋类型是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;">亲密焦虑 <span id="rAnx"></span> · 亲密回避 <span id="rAvd"></span></div>
+      </div>
+      <div class="axis-grid">
+        <div class="cell"><h3>核心模式</h3><p id="cCore"></p></div>
+        <div class="cell"><h3>冲突反应</h3><p id="cConflict"></p></div>
+        <div class="cell"><h3>需求表达</h3><p id="cNeed"></p></div>
+        <div class="cell"><h3>边界形态</h3><p id="cBoundary"></p></div>
+        <div class="cell"><h3>优势</h3><p id="cStrength"></p></div>
+        <div class="cell"><h3>盲区</h3><p id="cBlind"></p></div>
+      </div>
+      <div style="margin-top:10px;">
+        <span class="tag" style="background:#e5efe9;color:var(--good);font-weight:700;" id="cMatch"></span>
+      </div>
+      <div class="case-quote" id="cCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准记分卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准记分卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    依恋记分卡 v2.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    娱乐性自评（非诊断工具）· 双人版：可配合双人依恋匹配卡使用
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "依恋记分卡 · 测一测", "estimated_time": "2分钟", "questions": [{"id": 1, "axis": "anxiety", "text": "对方回消息慢了几个小时，你第一反应是：", "options": [{"text": "ta是不是在忙？没关系，我也有自己的事", "scores": {"anxiety": -2}}, {"text": "心里开始打鼓，但先压着等ta回", "scores": {"anxiety": 0}}, {"text": "忍不住脑补各种可能，越想越不安", "scores": {"anxiety": 2}}, {"text": "直接问ta在干嘛，需要立刻确认", "scores": {"anxiety": 3}}]}, {"id": 2, "axis": "anxiety", "text": "恋爱中你多久需要一次「爱的确认」？", "options": [{"text": "几乎不需要——我确信ta在乎我", "scores": {"anxiety": -2}}, {"text": "偶尔需要，比如重要节点", "scores": {"anxiety": 0}}, {"text": "经常需要——ta的冷淡我会记很久", "scores": {"anxiety": 2}}, {"text": "每天都需要——不说爱我会怀疑", "scores": {"anxiety": 3}}]}, {"id": 3, "axis": "anxiety", "text": "对方和异性朋友单独吃饭，你会：", "options": [{"text": "完全没问题，信任是基础", "scores": {"anxiety": -2}}, {"text": "有点在意，但不会说出来", "scores": {"anxiety": 0}}, {"text": "心里不舒服，会旁敲侧击问", "scores": {"anxiety": 2}}, {"text": "会很焦虑，忍不住查ta行踪/反复确认", "scores": {"anxiety": 3}}]}, {"id": 4, "axis": "anxiety", "text": "吵架后对方说要冷静几天，你会：", "options": [{"text": "好，给彼此空间，相信会解决", "scores": {"anxiety": -2}}, {"text": "接受但会惦记着，等ta先开口", "scores": {"anxiety": 0}}, {"text": "很煎熬，会忍不住先低头找ta", "scores": {"anxiety": 2}}, {"text": "极度恐慌——担心ta要离开我", "scores": {"anxiety": 3}}]}, {"id": 5, "axis": "avoidance", "text": "关系变得特别亲密时，你本能的感觉是：", "options": [{"text": "很踏实，亲密让我更有能量", "scores": {"avoidance": -2}}, {"text": "有点不适应，但能调整", "scores": {"avoidance": 0}}, {"text": "想稍微拉开一点距离喘口气", "scores": {"avoidance": 2}}, {"text": "想逃——太近了我会不安", "scores": {"avoidance": 3}}]}, {"id": 6, "axis": "avoidance", "text": "情绪低落时，你更倾向：", "options": [{"text": "找伴侣倾诉，说出来就好多了", "scores": {"avoidance": -2}}, {"text": "看情况——有时说有时自己消化", "scores": {"avoidance": 0}}, {"text": "自己消化，不太习惯说感受", "scores": {"avoidance": 2}}, {"text": "绝对自己扛——说出来显得脆弱", "scores": {"avoidance": 3}}]}, {"id": 7, "axis": "avoidance", "text": "伴侣说「我需要你多一点陪伴」，你：", "options": [{"text": "欣然调整——我也喜欢更多相处", "scores": {"avoidance": -2}}, {"text": "尽量配合，但保留自己的节奏", "scores": {"avoidance": 0}}, {"text": "有点压力，觉得空间被挤压", "scores": {"avoidance": 2}}, {"text": "觉得ta太粘，想要更多自由", "scores": {"avoidance": 3}}]}, {"id": 8, "axis": "avoidance", "text": "「依赖别人」这件事，你的看法是：", "options": [{"text": "很正常——人是需要彼此的", "scores": {"avoidance": -2}}, {"text": "可以依赖，但要有度", "scores": {"avoidance": 0}}, {"text": "尽量不依赖——靠自己最稳", "scores": {"avoidance": 2}}, {"text": "很排斥——依赖=软弱=危险", "scores": {"avoidance": 3}}]}], "types": {"secure": {"name": "安全型", "en": "Secure", "emoji": "🟢", "color": "#3d7a5a", "core": "情感稳固支点：能靠近也能独立，冲突后能修复，信任可预期", "conflict": "就事论事·不升级·主动修复", "need": "敢直接表达·不怕被拒绝", "boundary": "亲密与独立并存", "strength": "关系续航力最强·冲突修复率高", "blind": "可能低估关系风险", "match": "相处最省力·适合任何类型长期关系", "case": "金龟子38年补拍婚纱照（D21-B12·8.7）·\"真正的爱不是证明给谁看\""}, "anxious": {"name": "焦虑型", "en": "Anxious", "emoji": "🟠", "color": "#b08a3e", "core": "需要反复确认被爱·对冷淡信号高度敏感·越怕失去越用力抓", "conflict": "容易把小事读成\"不爱了\"·情绪强度大", "need": "反复求证·需要回应速度和确定感", "boundary": "边界容易融化·过度付出换安全感", "strength": "情感投入深·对关系温度极敏感", "blind": "过度解读·自我价值过度绑定关系", "match": "配安全型最稳·配回避型最痛（追-逃循环）", "case": "AA制吵40年（D21-B3·9分）·\"你坚持AA，是在推开那个愿意为你亏钱的人\""}, "avoidant": {"name": "回避型", "en": "Avoidant", "emoji": "🔵", "color": "#5a7d9a", "core": "以独立为铠甲·亲密升温时本能后退·\"我一个人更安全\"", "conflict": "冷处理·回避对话·用忙当缓冲", "need": "空间·不需要随时回应·讨厌被捆绑", "boundary": "边界极硬·亲密需求被压很低", "strength": "情绪稳定·不粘人·大事扛得住", "blind": "压抑依恋需求·伴侣感到被推开", "match": "遇焦虑型形成追-逃循环·需刻意练习\"靠近\"", "case": "跳江又游回来（D21-B8·8分）·\"情绪洪水涨潮退潮·亲密关系的计量单位\""}, "fearful": {"name": "恐惧型", "en": "Fearful", "emoji": "🔴", "color": "#b0523c", "core": "既渴望亲密又害怕受伤·靠近-推开的循环·最消耗的关系模式", "conflict": "忽冷忽热·先推开再后悔·情绪过山车", "need": "既想要确定感又想要自由·自己也不清楚", "boundary": "边界摇摆·时融时硬", "strength": "深度洞察关系动力·最懂修复的价值", "blind": "关系模式反复·伴侣困惑疲惫", "match": "最需要先自我修复再进入关系", "case": "3孩非亲生案（D21-B9·8分）·\"最深的伤口不是被欺骗，是这些年信着的只有我\""}}, "disclaimer": "娱乐性自评工具·非心理测量：基于 Bartholomew & Horowitz 成人依恋双模型（焦虑×回避）做轻量倾向自评，不等同于专业依恋量表（ECR-R）结果。经典案例来自内容池旗舰（设设 D21 生产），用于参考共鸣。"};
+const QS = DATA.questions, TYPES = DATA.types;
+let answers = new Array(QS.length).fill(-1);
+let qi = 0;
+
+function switchTab(t) {
+  ['tabA','tabB'].forEach((id,i) => document.getElementById(id).classList.toggle('active', (t==='A')===(i===0)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+}
+
+function renderQ() {
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = '第 '+(qi+1)+'/'+QS.length+' 题 · 约 2 分钟';
+  const body = document.getElementById('qBody');
+  body.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div>';
+  q.options.forEach((o, oi) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[qi]===oi ? ' sel' : '');
+    b.textContent = o.text;
+    b.onclick = () => {
+      answers[qi] = oi;
+      body.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+      b.classList.add('sel');
+      document.getElementById('nextBtn').disabled = false;
+    };
+    body.appendChild(b);
+  });
+  document.getElementById('nextBtn').disabled = answers[qi] < 0;
+  document.getElementById('nextBtn').textContent = qi === QS.length-1 ? '✨ 查看我的记分卡' : '下一题';
+}
+document.getElementById('nextBtn').onclick = () => {
+  if (qi < QS.length-1) { qi++; renderQ(); } else { calc(); }
+};
+
+function calc() {
+  const ax = {anxiety: 0, avoidance: 0}, cnt = {anxiety: 0, avoidance: 0};
+  QS.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    for (const [k, s] of Object.entries(opt.scores)) { ax[k]+=s; cnt[k]++; }
+  });
+  const anx = ax.anxiety/cnt.anxiety, avd = ax.avoidance/cnt.avoidance;
+  let type;
+  if (anx >= 0.5 && avd >= 0.5) type = 'fearful';
+  else if (anx >= 0.5) type = 'anxious';
+  else if (avd >= 0.5) type = 'avoidant';
+  else type = 'secure';
+  const t = TYPES[type];
+  document.getElementById('rType').textContent = t.emoji + ' ' + t.name;
+  document.getElementById('rType').style.color = t.color;
+  document.getElementById('rAnx').textContent = anx.toFixed(1);
+  document.getElementById('rAvd').textContent = avd.toFixed(1);
+  document.getElementById('cCore').textContent = t.core;
+  document.getElementById('cConflict').textContent = t.conflict;
+  document.getElementById('cNeed').textContent = t.need;
+  document.getElementById('cBoundary').textContent = t.boundary;
+  document.getElementById('cStrength').textContent = t.strength;
+  document.getElementById('cBlind').textContent = t.blind;
+  document.getElementById('cMatch').textContent = '匹配建议：' + t.match;
+  document.getElementById('cCase').textContent = '📌 内容池经典案例：' + t.case;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function retry() {
+  answers = new Array(QS.length).fill(-1); qi = 0;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('resultCard').style.display = 'none';
+  renderQ();
+}
+
+function renderStd() {
+  const g = document.getElementById('stdGrid');
+  g.innerHTML = '';
+  Object.entries(TYPES).forEach(([k, t]) => {
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.style.borderTopColor = t.color;
+    c.innerHTML = '<h3>'+t.emoji+' '+t.name+'（'+t.en+'）</h3><p><b>核心：</b>'+t.core+'</p><p><b>优势：</b>'+t.strength+'</p><p><b>盲区：</b>'+t.blind+'</p><p><b>匹配：</b>'+t.match+'</p><p style="color:#b0523c;"><b>案例：</b>'+t.case+'</p>';
+    g.appendChild(c);
+  });
+}
+renderStd();
+renderQ();
+</script>
+</body>
+</html>

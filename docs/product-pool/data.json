@@ -2,12 +2,12 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-08-21-1630",
+    "id": "product-available-2026-08-21-1800",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D21-B13·八月D21·周五·策略v2.0"
+      "batch": "D21-B16·八月D21·周五·记分卡v2.0"
     },
     "created_at": "2026-08-21T16:30:00+08:00",
     "freshness_ttl_hours": 24,
@@ -83,8 +83,8 @@
       "product_catalog_owner": "荐荐"
     }
   },
-  "batch": "D21-B13·八月D21·周五·策略v2.0",
-  "timestamp": "2026-08-21T16:30:00+08:00",
+  "batch": "D21-B16·记分卡v2.0·双Tab交互交付",
+  "timestamp": "2026-08-21T18:00:00+08:00",
   "payment_status": {
     "stagnant_hours": 562,
     "thresholds_breached": [
@@ -229,17 +229,45 @@
         ]
       },
       "note": "首选旗舰·一次性交付·无支付依赖·SP象限(ISTP/ESTP/ESFP/ISFP)部分盲区标注待数据(ESC-08-17-1)",
+      "v2_scorecard": {
+        "status": "delivered_v2.0",
+        "name": "人格记分卡（8题轻量版·双Tab）",
+        "html": "workspace-shared/pools/products/scorecard-v1/personality-scorecard-v2.html",
+        "standards_csv": "workspace-shared/pools/products/scorecard-v1/scorecard-standards-v2.csv",
+        "cases_csv": "workspace-shared/pools/products/scorecard-v1/scorecard-cases-v2.csv",
+        "interaction": "Tab A 8题选择→计分(归一化0-100·五档)→认知OS/优势/盲区·Tab B 标准卡8维×5档+9经典案例",
+        "questions_source": "策策心因引擎题目（每维取1题·8题）",
+        "upgrade_reserved": "16题完整版预留为未来付费升级钩子（河山拍板·不现在做）"
+      },
       "key": "S1",
       "deliverable_urls": [
         {
+          "type": "html",
+          "label": "v2.0",
+          "relpath": "scorecard-v1/personality-scorecard-v2.html",
+          "url": "files/scorecard-v1/personality-scorecard-v2.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v2.0",
+          "relpath": "scorecard-v1/scorecard-standards-v2.csv",
+          "url": "files/scorecard-v1/scorecard-standards-v2.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v2.0",
+          "relpath": "scorecard-v1/scorecard-cases-v2.csv",
+          "url": "files/scorecard-v1/scorecard-cases-v2.csv"
+        },
+        {
           "type": "csv",
-          "label": "",
+          "label": "v1.0",
           "relpath": "scorecard-v1/personality-scorecard-v1.csv",
           "url": "files/scorecard-v1/personality-scorecard-v1.csv"
         },
         {
           "type": "html",
-          "label": "",
+          "label": "v1.0",
           "relpath": "scorecard-v1/personality-scorecard-v1.html",
           "url": "files/scorecard-v1/personality-scorecard-v1.html"
         }
@@ -270,19 +298,27 @@
       },
       "priority": "P1",
       "note": "路径契约：直接落 workspace-shared/pools/products/（大卡 2026-08-21 回执）·S2 v1.1 已随第一批 P0 交付",
+      "v2_scorecard": {
+        "status": "delivered_v2.0",
+        "name": "依恋记分卡（8题双轴·双Tab）",
+        "html": "workspace-shared/pools/products/attachment-scorecard/attachment-scorecard-v2.html",
+        "standards_csv": "workspace-shared/pools/products/attachment-scorecard/attachment-scorecard-standards-v2.csv",
+        "interaction": "Tab A 8题(焦虑4+回避4)选择→双轴计分→四型结果·Tab B 四型标准档案+经典案例",
+        "double_person": "双人版复用 couple-attachment-match（16组合矩阵·关系星座）"
+      },
       "key": "S2",
       "deliverable_urls": [
         {
-          "type": "csv",
-          "label": "",
-          "relpath": "attachment-scorecard/attachment-scorecard-v1.csv",
-          "url": "files/attachment-scorecard/attachment-scorecard-v1.csv"
+          "type": "html",
+          "label": "v2.0",
+          "relpath": "attachment-scorecard/attachment-scorecard-v2.html",
+          "url": "files/attachment-scorecard/attachment-scorecard-v2.html"
         },
         {
-          "type": "html",
-          "label": "",
-          "relpath": "attachment-scorecard/attachment-scorecard-v1.html",
-          "url": "files/attachment-scorecard/attachment-scorecard-v1.html"
+          "type": "standards_csv",
+          "label": "v2.0",
+          "relpath": "attachment-scorecard/attachment-scorecard-standards-v2.csv",
+          "url": "files/attachment-scorecard/attachment-scorecard-standards-v2.csv"
         },
         {
           "type": "csv",
@@ -295,6 +331,18 @@
           "label": "v1.1",
           "relpath": "couple-attachment-match/couple-attachment-match-v1.html",
           "url": "files/couple-attachment-match/couple-attachment-match-v1.html"
+        },
+        {
+          "type": "csv",
+          "label": "v1.0",
+          "relpath": "attachment-scorecard/attachment-scorecard-v1.csv",
+          "url": "files/attachment-scorecard/attachment-scorecard-v1.csv"
+        },
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "attachment-scorecard/attachment-scorecard-v1.html",
+          "url": "files/attachment-scorecard/attachment-scorecard-v1.html"
         }
       ]
     },
@@ -315,17 +363,37 @@
       "content": "8功能(Fi/Fe/Ti/Te/Ni/Ne/Si/Se)每卡：超能力/副作用/触发场景/盲区/座右铭 + 内容池叙事佐证 + 诚实标注（理论框架+观测·非个体测量）",
       "priority": "P2",
       "note": "河山拍板第一批P0·'超能力/副作用'游戏化解读·路径契约落 shared",
+      "v2_scorecard": {
+        "status": "delivered_v2.0",
+        "name": "认知功能记分卡（8题·双Tab）",
+        "html": "workspace-shared/pools/products/cognitive-functions-card/cognitive-functions-v2.html",
+        "standards_csv": "workspace-shared/pools/products/cognitive-functions-card/cognitive-functions-standards-v2.csv",
+        "interaction": "Tab A 8题(每功能1题)选择→8功能排序→主/副/盲区·Tab B 8功能标准档案+经典案例",
+        "honest_note": "理论框架+内容池观测·非个体心理测量·SP象限待数据"
+      },
       "key": "S3",
       "deliverable_urls": [
         {
+          "type": "html",
+          "label": "v2.0",
+          "relpath": "cognitive-functions-card/cognitive-functions-v2.html",
+          "url": "files/cognitive-functions-card/cognitive-functions-v2.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v2.0",
+          "relpath": "cognitive-functions-card/cognitive-functions-standards-v2.csv",
+          "url": "files/cognitive-functions-card/cognitive-functions-standards-v2.csv"
+        },
+        {
           "type": "csv",
-          "label": "",
+          "label": "v1.0",
           "relpath": "cognitive-functions-card/cognitive-functions-v1.csv",
           "url": "files/cognitive-functions-card/cognitive-functions-v1.csv"
         },
         {
           "type": "html",
-          "label": "",
+          "label": "v1.0",
           "relpath": "cognitive-functions-card/cognitive-functions-v1.html",
           "url": "files/cognitive-functions-card/cognitive-functions-v1.html"
         }

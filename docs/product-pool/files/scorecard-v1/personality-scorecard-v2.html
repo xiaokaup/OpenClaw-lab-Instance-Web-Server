@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格记分卡 v2.0 · 测一测出结果</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --bdr:#e5ddd0; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eee8dd; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; }
+  .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d8b8a4; }
+  .opt.sel { border-color:var(--accent); background:#fdf3ec; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .result-head .os { font-size:15px; line-height:1.9; color:#4a4a4a; background:#faf7f1; border-radius:10px; padding:14px; margin-top:10px; text-align:left; }
+  .bar-row { margin-bottom:10px; }
+  .bar-row .lbl { display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px; }
+  .bar-row .lbl .lv { font-weight:700; }
+  .bar { height:10px; border-radius:5px; background:#efeae1; overflow:hidden; }
+  .bar > i { display:block; height:100%; border-radius:5px; }
+  .tag { display:inline-block; background:#f3eee5; border-radius:6px; padding:3px 9px; font-size:12px; color:#7a6f5f; margin:3px; }
+  .cases .case { background:#faf7f1; border-radius:10px; padding:12px 14px; margin-bottom:10px; }
+  .cases .case .ct { font-size:14px; font-weight:600; }
+  .cases .case .cs { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.6; }
+  .cases .case .cq { font-size:11px; color:var(--accent); margin-top:4px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#faf7f1; border-radius:10px; padding:14px; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#eee8dd; color:#7a6f5f; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧮 人格记分卡</h1>
+  <div class="sub">8 题测一测 · 出你的个性化记分卡（认知OS / 优势 / 盲区）</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准记分卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的认知操作系统</div>
+        <div class="os" id="rOs"></div>
+      </div>
+      <div style="margin-top:14px;" id="rBars"></div>
+      <div style="margin-top:10px;">
+        <span class="tag" style="background:#e5efe9;color:var(--good);font-weight:700;" id="rTop"></span>
+        <span class="tag" style="background:#f6e3dd;color:#b0523c;font-weight:700;" id="rLow"></span>
+      </div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准记分卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准记分卡 · 8 心因维度</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card cases">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格记分卡 v2.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    8 题轻量版（完整 16 题版为未来升级预留）· 经典案例来自内容池旗舰
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格记分卡 · 测一测", "estimated_time": "2分钟", "dimensions": {"IM": {"name": "信息代谢", "icon": "🧬", "desc": "你如何接收和处理信息最有效"}, "DA": {"name": "决策架构", "icon": "⚙️", "desc": "你的选择机制是如何运作的"}, "AS": {"name": "注意力结构", "icon": "🎯", "desc": "你的注意力如何分配和持续"}, "ME": {"name": "动机引擎", "icon": "🚀", "desc": "什么真正驱动你行动"}, "ST": {"name": "社交拓扑", "icon": "🌐", "desc": "你在人际网络中的位置和模式"}, "CB": {"name": "认知带宽", "icon": "💻", "desc": "你处理复杂信息的能力边界"}, "FM": {"name": "反馈模式", "icon": "🔄", "desc": "你如何应对外界评价和反馈"}, "TB": {"name": "信任建立", "icon": "🔗", "desc": "你如何建立和验证信任"}}, "questions": [{"id": 1, "dim": "IM", "text": "给你一篇5000字的深度文章和一个5分钟的讲解视频，讲的是同一个话题。你会：", "options": [{"text": "先读文章——文字让我能按自己的节奏消化，还能随时回看重点", "scores": {"IM": 3}}, {"text": "先看视频了解框架，有兴趣再读文章深入", "scores": {"IM": 1}}, {"text": "看视频就够了——有人讲解比我自己读效率高得多", "scores": {"IM": -2}}, {"text": "取决于话题——熟悉的领域读文章，陌生的先看视频", "scores": {"IM": 0}}]}, {"id": 3, "dim": "DA", "text": "你需要做一个重要的购买决定（预算相当于你月收入的20%）。你的过程是：", "options": [{"text": "列出所有选项→建立评估矩阵→收集数据→独立分析→做决定。整个过程可能需要一周以上", "scores": {"DA": 3, "CB": 2}}, {"text": "深度研究2-3个候选方案，咨询1-2个信得过的人的意见，然后决定", "scores": {"DA": 1, "TB": 1}}, {"text": "看了几个评测，感觉某个不错就买了——相信自己的直觉", "scores": {"DA": -1, "FM": 1}}, {"text": "直接问圈子里最懂的人推荐什么，跟着买", "scores": {"DA": -2, "TB": 2, "ST": 1}}]}, {"id": 5, "dim": "AS", "text": "你在做一个需要深度专注的任务（比如写一份重要报告）。你的状态是：", "options": [{"text": "戴上耳机，屏蔽一切干扰，连续干2-3小时直到完成核心部分", "scores": {"AS": 3, "CB": 2}}, {"text": "45分钟专注+10分钟休息，循环推进", "scores": {"AS": 1, "CB": 1}}, {"text": "同时开着几个窗口，在任务和消息之间来回切换，但最后总能完成", "scores": {"AS": -1, "CB": -1}}, {"text": "很难长时间专注一件事，需要经常换换脑子才能继续", "scores": {"AS": -2, "CB": -1}}]}, {"id": 7, "dim": "ME", "text": "什么最让你有动力把一个事情坚持做下去？", "options": [{"text": "好奇心——我就是想知道如果继续做下去会发生什么，能学到什么", "scores": {"ME": 2, "CB": 1}}, {"text": "目标感——我清楚知道这件事完成后我的生活会变得更好", "scores": {"ME": 1, "DA": 1}}, {"text": "他人的认可和期待——我不想让相信我的人失望", "scores": {"ME": -1, "ST": 2, "FM": 2}}, {"text": "惯性+责任感——开始了就把它做完，半途而废会让我不舒服", "scores": {"ME": 0, "DA": 2}}]}, {"id": 9, "dim": "ST", "text": "在一个50人的陌生场合（比如行业会议）。你的自然倾向是：", "options": [{"text": "找到1-2个看起来有意思的人，进行有深度的对话", "scores": {"ST": 0, "AS": 1}}, {"text": "主动认识尽可能多的人，快速建立联系网络", "scores": {"ST": 3, "FM": 1}}, {"text": "观察人群，在脑海里分析这个场域的结构和关系", "scores": {"ST": -1, "CB": 2}}, {"text": "帮主办方做点事（引导、签到等），用角色来化解社交压力", "scores": {"ST": 1, "TB": 1}}]}, {"id": 11, "dim": "CB", "text": "面对一个你完全陌生的领域（比如让你去了解量子计算的基础原理），你偏好：", "options": [{"text": "找一本公认最好的入门书，从头到尾建立系统理解", "scores": {"CB": 3, "IM": 2, "DA": 2}}, {"text": "看几个YouTube科普视频先建立直觉，有兴趣再深入", "scores": {"CB": 1, "IM": 0}}, {"text": "直接找一个懂的人给我讲——对话中的追问比单向学习高效", "scores": {"CB": 0, "ST": 1, "TB": 1}}, {"text": "先搞清楚这个领域跟我有什么关系，有实际需要再学", "scores": {"CB": -1, "ME": 1}}]}, {"id": 13, "dim": "FM", "text": "有人对你的工作成果给出了比较尖锐的批评。你的第一反应是：", "options": [{"text": "分析批评的具体内容——如果说的对就接受，说的不对就忽略", "scores": {"FM": -1, "DA": 2}}, {"text": "感到不太舒服，但会先冷静一下，再理性评估", "scores": {"FM": 1, "DA": 1}}, {"text": "会比较在意，会反复想这个评价，甚至影响后续表现", "scores": {"FM": 3, "ME": -1}}, {"text": "本能地想反驳和辩解——我不喜欢被否定", "scores": {"FM": -2, "DA": -1}}]}, {"id": 15, "dim": "TB", "text": "你更倾向于怎么判断一个新认识的人是否值得信任？", "options": [{"text": "看ta做了什么而不是说了什么——通过行为一致性来判断，这需要时间", "scores": {"TB": 3, "DA": 1}}, {"text": "如果ta是我们共同信任的朋友推荐的，我会比较快建立信任", "scores": {"TB": 1, "ST": 2}}, {"text": "相信自己的直觉——第一次见面就大概能感觉到对方是什么人", "scores": {"TB": -1, "FM": 1}}, {"text": "先默认信任，除非对方做出了让我失望的事", "scores": {"TB": -2, "FM": 0}}]}], "level_fn": "norm>=72→极高 / >=58→偏高 / >=43→中等 / >=28→偏低 / else 极低", "hooks": {"IM": {"high": "你像一台配备高级解析器的计算机——能深度处理复杂信息，偏好文字和结构化内容。你不满足于\"知道\"，你想要\"理解\"。", "low": "你偏好高效、轻量的信息获取方式。视频、音频、对话对你来说比大段文字更有效。"}, "DA": {"high": "你的决策链路长而精密——建立评估框架，收集多源数据，充分分析后做出判断。", "low": "你信任自己的判断力，决策速度较快。你更看重行动和调整，而非在起点就做到完美。"}, "AS": {"high": "你能进入极深的专注状态，一旦沉浸其中，外界几乎消失。", "low": "你的注意力灵活而多线程。你可能同时处理多项任务，在不同上下文间切换自如。"}, "ME": {"high": "你的行动力来自内在——好奇心、自我超越、对掌控感的追求。你不需要外部的掌声来确认自己的价值。", "low": "外部的认可和关系对你的驱动力很强。他人的期待和反馈是你的重要能量来源。"}, "ST": {"high": "你在社交网络中像一个路由器——连接着不同的人和信息。高质量的关系网络是你获取信息和机会的核心通道。", "low": "你在社交网络中更偏向独立节点——靠自己获取信息和机会。社交圈不大但质量高。"}, "CB": {"high": "面对复杂度你不会退缩——你享受拆解高难度问题。\"这个太复杂了\"从来不是你放弃的理由。", "low": "你偏好把复杂问题简化。你不喜欢被过多的细节和抽象概念淹没。"}, "FM": {"high": "你对外界反馈高度敏感——别人的评价会对你产生真实的影响。这让你细腻但也需要学会保护自己的情绪边界。", "low": "你的评价体系主要来自内部——外界的声音需要经过你自己的逻辑过滤才能影响你。"}, "TB": {"high": "你的信任需要时间和证据来建立——你观察一个人的行为一致性，而非听ta说什么。一旦建立了信任，你非常忠诚。", "low": "你倾向于先给予信任。你相信大多数人都是善意的，直到对方证明不是。"}}, "strengths": {"IM": "深度信息处理能力——你能从海量信息中提取关键洞察", "DA": "系统化决策——复杂选择中不迷失，总能找到最优解", "AS": "超强专注力——能在需要深度的任务中碾压大多数人", "ME": "强大的内在驱动力——不需要外部激励就能持续前进", "ST": "优质关系网络——你的人脉是信息高速公路而非表面社交", "CB": "高复杂度舒适区——别人觉得难的事，你觉得有意思", "FM": "敏锐的反馈感知——能快速洞察他人需求和环境变化", "TB": "高信任门槛带来高质量关系——你的信任是有分量的"}, "blinds": {"IM": "可能因为信息获取效率至上而错过需要深度阅读才能发现的洞见", "DA": "快速决策有时可能漏掉关键变量。在重大决策中，给自己设一个\"冷静期\"", "AS": "频繁切换可能降低单任务深度。试试每天给自己一段\"免打扰时间\"", "ME": "过于依赖外部反馈可能让你的方向被他人左右。定期问自己：抛开别人的期待，我真正想要什么", "ST": "较少依赖社交网络可能让你错过\"弱连接\"带来的机会", "CB": "对复杂问题的不耐受可能让你过早放弃。试试在感到\"太难了\"的时候多坚持15分钟", "FM": "较少关注反馈可能让你忽略重要信号。找一个你信任的人，定期请ta给你真实的反馈", "TB": "快速信任有时可能让你遇到不值得的人。在涉及重大利益时，多观察一段时间再决定"}, "cases": [{"type": "ENFP", "id": "D21-B12-ENFP-1", "q": 9.0, "title": "大提琴老师转行卖馒头", "summary": "敢在「应该」和「想要」之间，坚定地选后者", "dim": "ME/Fi"}, {"type": "ENTJ", "id": "D21-B7-ENTJ-1", "q": 9.0, "title": "车企集体逃离新车发布会", "summary": "真正的竞争对手，从来不在你盯着的那张名单上", "dim": "ST/Te"}, {"type": "INTJ", "id": "D21-B6-INTJ-1", "q": 9.0, "title": "韩国冰奶在韩国查无此物", "summary": "我们抢的从来不是那杯奶，是「别人都在抢」本身", "dim": "CB/Ni"}, {"type": "INFP", "id": "D21-B5-INFP-1", "q": 9.0, "title": "雷佳音自曝功利心演陈俊生", "summary": "一个人能诚实地说出「我当时的动机不纯」", "dim": "FM/Fi"}, {"type": "ENTP", "id": "D21-B8-ENTP-1", "q": 8.9, "title": "吵架跳江第二天又游回来", "summary": "荒诞=情绪最诚实的出口", "dim": "CB/Ne"}, {"type": "INFJ", "id": "D21-B4-INFJ-1", "q": 9.0, "title": "女儿想过夜被爸爸拒绝", "summary": "不是「该不该过夜」，是依恋类型的操作系统", "dim": "DA/Fe"}, {"type": "ENFJ", "id": "D21-B8-ENFJ-1", "q": 8.9, "title": "四个儿子争着养95岁老母亲", "summary": "被争着养，从来不是钱的问题", "dim": "AS/Fe"}, {"type": "INTP", "id": "D20-B8-INTP-1", "q": 8.8, "title": "取消实体按键是昂贵的极简主义", "summary": "Ti系统从一开始就知道答案", "dim": "CB/Ti"}, {"type": "ISTJ", "id": "D17-B2-1", "q": 8.8, "title": "ISFJ第三次犯错的「全息录像」", "summary": "Si系统在后台自动调出前两次摔坑的记录", "dim": "TB/Si"}], "standards": {"IM": {"name": "信息代谢", "icon": "🧬", "desc": "你如何接收和处理信息最有效"}, "DA": {"name": "决策架构", "icon": "⚙️", "desc": "你的选择机制是如何运作的"}, "AS": {"name": "注意力结构", "icon": "🎯", "desc": "你的注意力如何分配和持续"}, "ME": {"name": "动机引擎", "icon": "🚀", "desc": "什么真正驱动你行动"}, "ST": {"name": "社交拓扑", "icon": "🌐", "desc": "你在人际网络中的位置和模式"}, "CB": {"name": "认知带宽", "icon": "💻", "desc": "你处理复杂信息的能力边界"}, "FM": {"name": "反馈模式", "icon": "🔄", "desc": "你如何应对外界评价和反馈"}, "TB": {"name": "信任建立", "icon": "🔗", "desc": "你如何建立和验证信任"}}, "disclaimer": "本记分卡为心因引擎 8 维模型的轻量版（8题·每维1题），结果基于你的选择计分，不等同于完整 16 题版（完整版未来升级）。经典案例来自内容池旗舰（设设 D21 生产），用于参考共鸣。"};
+const DIMS = ['IM','DA','AS','ME','ST','CB','FM','TB'];
+let answers = new Array(DATA.questions.length).fill(-1);
+let qi = 0;
+
+function switchTab(t) {
+  document.getElementById('tabA').classList.toggle('active', t==='A');
+  document.getElementById('tabB').classList.toggle('active', t==='B');
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+}
+
+function renderQ() {
+  const q = DATA.questions[qi];
+  document.getElementById('qProgress').textContent = '第 '+(qi+1)+'/'+DATA.questions.length+' 题 · 约 2 分钟';
+  const body = document.getElementById('qBody');
+  body.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div>';
+  q.options.forEach((o, oi) => {
+    const b = document.createElement('button');
+    b.className = 'opt' + (answers[qi]===oi ? ' sel' : '');
+    b.textContent = o.text;
+    b.onclick = () => {
+      answers[qi] = oi;
+      body.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
+      b.classList.add('sel');
+      document.getElementById('nextBtn').disabled = false;
+    };
+    body.appendChild(b);
+  });
+  document.getElementById('nextBtn').disabled = answers[qi] < 0;
+  document.getElementById('nextBtn').textContent = qi === DATA.questions.length-1 ? '✨ 查看我的记分卡' : '下一题';
+}
+document.getElementById('nextBtn').onclick = () => {
+  if (qi < DATA.questions.length-1) { qi++; renderQ(); }
+  else { calc(); }
+};
+
+function level(v) {
+  if (v>=72) return ['极高','#22c55e'];
+  if (v>=58) return ['偏高','#a3e635'];
+  if (v>=43) return ['中等','#eab308'];
+  if (v>=28) return ['偏低','#f97316'];
+  return ['极低','#ef4444'];
+}
+
+function calc() {
+  const raw = {}; const cnt = {};
+  DIMS.forEach(d => { raw[d]=0; cnt[d]=0; });
+  DATA.questions.forEach((q, i) => {
+    const opt = q.options[answers[i]];
+    for (const [d, s] of Object.entries(opt.scores)) { raw[d]+=s; cnt[d]++; }
+  });
+  const norm = {};
+  DIMS.forEach(d => {
+    norm[d] = cnt[d] ? Math.max(1, Math.min(99, Math.round((raw[d]/cnt[d]+3)/6*100))) : 50;
+  });
+  const top2 = [...DIMS].sort((a,b)=>norm[b]-norm[a]).slice(0,2);
+  const low2 = [...DIMS].sort((a,b)=>norm[a]-norm[b]).slice(0,2);
+  // 认知OS
+  const osParts = [];
+  const h = DATA.hooks;
+  osParts.push('你的认知操作系统以「'+DATA.dimensions[top2[0]].icon+' '+DATA.dimensions[top2[0]].name+'」为核心引擎——'+h[top2[0]].high);
+  if (norm[top2[0]]-norm[top2[1]] < 15) osParts.push('同时「'+DATA.dimensions[top2[1]].name+'」是你的副引擎——'+h[top2[1]].high);
+  osParts.push('你的「'+DATA.dimensions[low2[0]].name+'」维度偏低——'+h[low2[0]].low);
+  document.getElementById('rOs').textContent = osParts.join(' ');
+  // 条形
+  const bars = document.getElementById('rBars');
+  bars.innerHTML = '';
+  DIMS.forEach(d => {
+    const [lv, col] = level(norm[d]);
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = '<div class="lbl"><span>'+DATA.dimensions[d].icon+' '+DATA.dimensions[d].name+'</span><span class="lv" style="color:'+col+'">'+norm[d]+' · '+lv+'</span></div><div class="bar"><i style="width:'+norm[d]+'%;background:'+col+'"></i></div>';
+    bars.appendChild(row);
+  });
+  document.getElementById('rTop').textContent = '核心优势：'+top2.map(d=>DATA.strengths[d]).join(' + ');
+  document.getElementById('rLow').textContent = '盲区提醒：'+low2.map(d=>DATA.blinds[d]).join(' · ');
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function retry() {
+  answers = new Array(DATA.questions.length).fill(-1); qi = 0;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('resultCard').style.display = 'none';
+  renderQ();
+}
+
+// Tab B 渲染
+function renderStd() {
+  const g = document.getElementById('stdGrid');
+  g.innerHTML = '';
+  DIMS.forEach(d => {
+    const dm = DATA.dimensions[d];
+    const c = document.createElement('div');
+    c.className = 'std-card';
+    c.innerHTML = '<h3>'+dm.icon+' '+dm.name+'</h3><p>'+dm.desc+'</p>';
+    g.appendChild(c);
+  });
+  const cl = document.getElementById('caseList');
+  cl.innerHTML = '';
+  DATA.cases.forEach(cs => {
+    const c = document.createElement('div');
+    c.className = 'case';
+    c.innerHTML = '<div class="ct">'+cs.title+'（'+cs.type+'）</div><div class="cs">'+cs.summary+'</div><div class="cq">内容池 '+cs.id+' · 质量 '+cs.q+' 分 · 关联维度 '+cs.dim+'</div>';
+    cl.appendChild(c);
+  });
+}
+renderStd();
+renderQ();
+</script>
+</body>
+</html>
