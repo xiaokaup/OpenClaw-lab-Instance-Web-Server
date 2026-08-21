@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>双人依恋匹配卡 v1.0 · 情侣互动</title>
+<style>
+  :root { --bg:#f7f0ea; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; --good:#3d7a5a; --warn:#b0523c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:860px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:1px; text-align:center; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 22px; line-height:1.7; text-align:center; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media(max-width:680px){ .two-col{ grid-template-columns:1fr; } }
+  .panel { background:var(--card); border-radius:14px; padding:18px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
+  .panel h2 { font-size:16px; margin-bottom:4px; }
+  .panel .who { font-size:12px; color:var(--muted); margin-bottom:12px; }
+  .q { margin-bottom:14px; }
+  .q .qt { font-size:13px; line-height:1.6; margin-bottom:6px; }
+  .scale { display:flex; gap:6px; }
+  .scale button { flex:1; padding:6px 0; border-radius:8px; border:1.5px solid #e2d9cd; background:#fff; font-size:13px; cursor:pointer; transition:.12s; }
+  .scale button.sel { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .go { display:block; width:100%; margin-top:14px; padding:13px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .go:disabled { background:#d8cfc4; cursor:not-allowed; }
+  .result { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-top:16px; }
+  .result.hidden { display:none; }
+  .r-head { text-align:center; }
+  .constellation { font-size:26px; font-weight:800; color:var(--accent); margin:6px 0 2px; }
+  .r-score { font-size:15px; color:var(--muted); }
+  .score-ring { display:inline-block; width:110px; height:110px; border-radius:50%; background:conic-gradient(var(--accent) 0deg, #f0e8dd 0deg); display:flex; align-items:center; justify-content:center; margin:14px auto; }
+  .score-ring b { font-size:30px; color:var(--ink); }
+  .types-line { text-align:center; font-size:14px; margin:8px 0; }
+  .types-line .badge { display:inline-block; padding:3px 12px; border-radius:999px; background:#f3eee5; font-size:13px; margin:0 4px; }
+  .r-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+  @media(max-width:680px){ .r-grid{ grid-template-columns:1fr; } }
+  .r-cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .r-cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .r-cell p { font-size:14px; line-height:1.7; }
+  .share-box { margin-top:14px; background:#fdf6f0; border-radius:10px; padding:12px; }
+  .share-box textarea { width:100%; height:64px; border:1px solid #e6d9cc; border-radius:8px; padding:8px; font-size:12px; resize:none; background:#fff; }
+  .share-btn { margin-top:8px; padding:8px 18px; border:none; border-radius:8px; background:#3d7a5a; color:#fff; font-size:13px; cursor:pointer; }
+  .disclaimer { margin-top:14px; font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .lvl { font-size:13px; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💞 双人依恋匹配卡</h1>
+  <div class="sub">情侣各填一张 · 生成你们的「关系星座」+ 匹配度积分 + 最可能吵架的点<br>基于 Bartholomew &amp; Horowitz 成人依恋双模型（亲密焦虑 × 亲密回避）</div>
+
+  <div class="two-col" id="panels"></div>
+
+  <div class="result hidden" id="result">
+    <div class="r-head">
+      <div class="sub" style="margin:0;">你们的关系星座是</div>
+      <div class="constellation" id="rConstellation"></div>
+      <div class="types-line"><span class="badge" id="rTypeA"></span> × <span class="badge" id="rTypeB"></span></div>
+      <div class="score-ring" id="rRing"><b id="rScore">0</b></div>
+      <div class="r-score">匹配度积分 · 等级 <span class="lvl" id="rLevel"></span></div>
+    </div>
+    <div class="r-grid">
+      <div class="r-cell"><h3>核心张力</h3><p id="rTension"></p></div>
+      <div class="r-cell"><h3>相处建议</h3><p id="rAdvice"></p></div>
+    </div>
+    <div class="share-box">
+      <textarea id="shareText" readonly></textarea>
+      <button class="share-btn" onclick="copyShare()">📋 复制分享文案（可晒图/发群）</button>
+    </div>
+    <div class="disclaimer" id="disclaimer"></div>
+  </div>
+
+  <div class="footer">
+    双人依恋匹配卡 v1.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    策略依据：河山签发《产品开发策略 v1.0》+ 品质标准（精致·好玩·有趣·有创意）
+  </div>
+</div>
+
+<script>
+const DATA = {"matrix": {"secure_secure": {"score": 92, "constellation": "稳如磐石", "tension": "低·几乎无结构性摩擦", "advice": "你们的模式是关系教科书。唯一风险是太顺而停止经营——定期制造新鲜感，别让默契变成惰性。", "level": "A+"}, "secure_anxious": {"score": 78, "constellation": "港湾与浪", "tension": "中·焦虑方需要反复确认", "advice": "安全方是焦虑方最好的疗愈环境。焦虑方练习\"延迟求证\"，安全方主动给确定性（报备/回应速度），浪会慢慢靠岸。", "level": "A"}, "anxious_secure": {"score": 78, "constellation": "港湾与浪", "tension": "中·焦虑方需要反复确认", "advice": "安全方是焦虑方最好的疗愈环境。焦虑方练习\"延迟求证\"，安全方主动给确定性（报备/回应速度），浪会慢慢靠岸。", "level": "A"}, "secure_avoidant": {"score": 70, "constellation": "灯塔与孤岛", "tension": "中·回避方需要空间", "advice": "安全方别把回避方的\"需要空间\"当拒绝。给空间但不断联，回避方练习\"靠近一小步\"，孤岛会看到灯塔一直在。", "level": "A-"}, "avoidant_secure": {"score": 70, "constellation": "灯塔与孤岛", "tension": "中·回避方需要空间", "advice": "安全方别把回避方的\"需要空间\"当拒绝。给空间但不断联，回避方练习\"靠近一小步\"，孤岛会看到灯塔一直在。", "level": "A-"}, "secure_fearful": {"score": 75, "constellation": "锚与风筝", "tension": "中高·恐惧方忽近忽远", "advice": "安全方是恐惧方唯一能安全着陆的锚。恐惧方先自我修复（专业支持），安全方保持\"稳定在场不追不逼\"，风筝终会收线。", "level": "A-"}, "fearful_secure": {"score": 75, "constellation": "锚与风筝", "tension": "中高·恐惧方忽近忽远", "advice": "安全方是恐惧方唯一能安全着陆的锚。恐惧方先自我修复（专业支持），安全方保持\"稳定在场不追不逼\"，风筝终会收线。", "level": "A-"}, "anxious_anxious": {"score": 45, "constellation": "火与火", "tension": "高·双高焦虑互相点燃", "advice": "两个焦虑方会互相确认也互相消耗。先各自练习自我安抚，约定\"冲突暂停机制\"（情绪峰值时暂停30分钟再谈）。", "level": "C+"}, "anxious_avoidant": {"score": 38, "constellation": "追与逃", "tension": "极高·经典追-逃循环", "advice": "这是最痛的组合：一方越追一方越逃。打破循环需要双方同时改：焦虑方停止追问，回避方承诺\"不消失\"。建议寻求专业关系咨询。", "level": "C"}, "avoidant_anxious": {"score": 38, "constellation": "追与逃", "tension": "极高·经典追-逃循环", "advice": "这是最痛的组合：一方越追一方越逃。打破循环需要双方同时改：焦虑方停止追问，回避方承诺\"不消失\"。建议寻求专业关系咨询。", "level": "C"}, "anxious_fearful": {"score": 35, "constellation": "风暴眼", "tension": "极高·双高焦虑+恐惧叠加", "advice": "双方情绪强度都很大，容易过山车。先各自稳定情绪基线再谈关系，短期内不建议做重大关系决定。", "level": "C"}, "fearful_anxious": {"score": 35, "constellation": "风暴眼", "tension": "极高·双高焦虑+恐惧叠加", "advice": "双方情绪强度都很大，容易过山车。先各自稳定情绪基线再谈关系，短期内不建议做重大关系决定。", "level": "C"}, "avoidant_avoidant": {"score": 58, "constellation": "两座孤岛", "tension": "中·距离感互相理解但缺亲密", "advice": "你们都很独立，不会互相消耗，但也可能长期\"搭伙过日子\"。约定每周一次\"深度对话时间\"，练习把感受说出来。", "level": "B-"}, "avoidant_fearful": {"score": 42, "constellation": "冰与火", "tension": "高·回避方推开+恐惧方怕伤", "advice": "回避方越推开，恐惧方越受伤；恐惧方越靠近，回避方越想逃。双方都需要先自我成长，再决定是否继续。", "level": "C+"}, "fearful_avoidant": {"score": 42, "constellation": "冰与火", "tension": "高·回避方推开+恐惧方怕伤", "advice": "回避方越推开，恐惧方越受伤；恐惧方越靠近，回避方越想逃。双方都需要先自我成长，再决定是否继续。", "level": "C+"}, "fearful_fearful": {"score": 30, "constellation": "双面镜", "tension": "极高·双恐惧互相触发", "advice": "两个恐惧方会在彼此身上照见自己的伤口。关系短期内很难稳定，强烈建议各自先接受专业支持，重建安全基线。", "level": "C-"}}, "type_meta": {"secure": {"name": "安全型", "emoji": "🟢", "en": "Secure"}, "anxious": {"name": "焦虑型", "emoji": "🟠", "en": "Anxious"}, "avoidant": {"name": "回避型", "emoji": "🔵", "en": "Avoidant"}, "fearful": {"name": "恐惧型", "emoji": "🔴", "en": "Fearful"}}, "questions": [{"axis": "anxiety", "text": "对方回消息慢时，我容易开始胡思乱想"}, {"axis": "anxiety", "text": "我需要反复确认对方还在乎我"}, {"axis": "anxiety", "text": "我很容易把对方的冷淡读成\"不爱了\""}, {"axis": "anxiety", "text": "恋爱中我经常感到不安"}, {"axis": "avoidance", "text": "关系变得亲密时，我会本能想拉开距离"}, {"axis": "avoidance", "text": "我更习惯一个人消化情绪，不喜欢聊感受"}, {"axis": "avoidance", "text": "对方太黏时，我会想逃"}, {"axis": "avoidance", "text": "我不太需要依赖别人，独处更自在"}], "disclaimer": "娱乐性自评工具·非心理测量：本卡基于 Bartholomew & Horowitz 成人依恋双模型（焦虑×回避）做轻量倾向自评，不等同于专业依恋量表（如 ECR-R）结果。正式评估请咨询专业人士。"};
+const MATRIX = DATA.matrix, TMETA = DATA.type_meta, QS = DATA.questions;
+
+function buildPanel(idx, label) {
+  const p = document.createElement('div');
+  p.className = 'panel';
+  p.innerHTML = '<h2>'+label+'</h2><div class="who">请按真实感受打分 · 1=完全不符合 · 5=完全符合</div>';
+  const answers = {};
+  QS.forEach((q, qi) => {
+    const d = document.createElement('div');
+    d.className = 'q';
+    d.innerHTML = '<div class="qt">'+(qi+1)+'. '+q.text+'</div><div class="scale">'+
+      [1,2,3,4,5].map(v => '<button data-v="'+v+'">'+v+'</button>').join('')+'</div>';
+    d.querySelectorAll('.scale button').forEach(b => {
+      b.addEventListener('click', () => {
+        d.querySelectorAll('.scale button').forEach(x => x.classList.remove('sel'));
+        b.classList.add('sel');
+        answers[qi] = parseInt(b.dataset.v);
+        p.dataset.done = Object.keys(answers).length === QS.length ? '1' : '';
+        document.getElementById('goBtn'+(idx+1)).disabled = p.dataset.done !== '1';
+      });
+    });
+    p.appendChild(d);
+  });
+  const go = document.createElement('button');
+  go.className = 'go'; go.id = 'goBtn'+(idx+1); go.disabled = true;
+  go.textContent = '生成我的依恋倾向';
+  go.addEventListener('click', () => {
+    const ax = {anxiety: 0, avoidance: 0};
+    QS.forEach((q, qi) => { ax[q.axis] += answers[qi]; });
+    const anx = ax.anxiety / 4, avd = ax.avoidance / 4;
+    let type;
+    if (anx >= 3 && avd >= 3) type = 'fearful';
+    else if (anx >= 3) type = 'anxious';
+    else if (avd >= 3) type = 'avoidant';
+    else type = 'secure';
+    go.textContent = '我的倾向：' + TMETA[type].emoji + ' ' + TMETA[type].name + '（焦虑 '+anx.toFixed(1)+' / 回避 '+avd.toFixed(1)+'）';
+    p.dataset.type = type;
+    tryMatch();
+  });
+  p.appendChild(go);
+  return p;
+}
+
+const panelsCol = document.getElementById('panels');
+const pA = buildPanel(0, 'A · 你');
+const pB = buildPanel(1, 'B · 你的另一半');
+panelsCol.appendChild(pA); panelsCol.appendChild(pB);
+
+function tryMatch() {
+  const ta = pA.dataset.type, tb = pB.dataset.type;
+  if (!ta || !tb) return;
+  const key = ta + '_' + tb;
+  const m = MATRIX[key];
+  const r = document.getElementById('result');
+  r.classList.remove('hidden');
+  document.getElementById('rConstellation').textContent = m.constellation;
+  document.getElementById('rTypeA').textContent = TMETA[ta].emoji + ' ' + TMETA[ta].name;
+  document.getElementById('rTypeB').textContent = TMETA[tb].emoji + ' ' + TMETA[tb].name;
+  document.getElementById('rScore').textContent = m.score;
+  document.getElementById('rLevel').textContent = m.level;
+  document.getElementById('rTension').textContent = m.tension;
+  document.getElementById('rAdvice').textContent = m.advice;
+  document.getElementById('disclaimer').textContent = DATA.disclaimer;
+  const deg = m.score * 3.6;
+  const ring = document.getElementById('rRing');
+  ring.style.background = 'conic-gradient(var(--accent) '+deg+'deg, #f0e8dd '+deg+'deg)';
+  const nameA = TMETA[ta].name, nameB = TMETA[tb].name;
+  const txt = '💞 我和TA的依恋匹配卡
+星座：'+m.constellation+'（'+nameA+' × '+nameB+'）
+匹配度：'+m.score+' 分 · 等级 '+m.level+'
+最可能吵的点：'+m.tension+'
+建议：'+m.advice+'
+——来自双人依恋匹配卡';
+  document.getElementById('shareText').value = txt;
+  r.scrollIntoView({behavior:'smooth'});
+}
+
+function copyShare() {
+  const ta = document.getElementById('shareText');
+  ta.select();
+  if (navigator.clipboard) { navigator.clipboard.writeText(ta.value).then(() => flash()); }
+  else { document.execCommand('copy'); flash(); }
+}
+function flash() {
+  const b = document.querySelector('.share-btn');
+  const old = b.textContent;
+  b.textContent = '✅ 已复制！';
+  setTimeout(() => b.textContent = old, 1500);
+}
+</script>
+</body>
+</html>

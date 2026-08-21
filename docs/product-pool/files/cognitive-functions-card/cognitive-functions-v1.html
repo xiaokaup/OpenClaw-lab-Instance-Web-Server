@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>认知功能速查卡 v1.0 · 8 大功能</title>
+<style>
+  :root { --bg:#f4f2ee; --card:#fff; --ink:#2b2b2b; --accent:#5a7d9a; --muted:#8a857d; --good:#3d7a5a; --warn:#b0523c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:1px; text-align:center; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 22px; line-height:1.7; text-align:center; }
+  .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+  @media(max-width:720px){ .cards{ grid-template-columns:repeat(2,1fr); } }
+  .fcard { background:var(--card); border-radius:12px; padding:14px; text-align:center; cursor:pointer; border:2px solid transparent; transition:.15s; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+  .fcard:hover { transform:translateY(-2px); }
+  .fcard.active { border-color:var(--accent); background:#f0f4f7; }
+  .fcard .emo { font-size:26px; }
+  .fcard .fk { font-size:20px; font-weight:800; color:var(--accent); margin:4px 0 2px; }
+  .fcard .fn { font-size:12px; color:var(--muted); }
+  .detail { background:var(--card); border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
+  .d-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .d-emo { font-size:34px; }
+  .d-key { font-size:30px; font-weight:800; color:var(--accent); }
+  .d-name { font-size:16px; color:var(--muted); }
+  .d-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .d-grid{ grid-template-columns:1fr; } }
+  .d-cell { background:#f7f5f0; border-radius:10px; padding:12px 14px; }
+  .d-cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .d-cell p { font-size:14px; line-height:1.7; }
+  .d-cell.power { border-left:3px solid var(--good); }
+  .d-cell.side { border-left:3px solid var(--warn); }
+  .scene { margin-top:12px; background:#eef3f7; border-radius:10px; padding:12px 14px; font-size:13px; line-height:1.8; color:#4a5a6a; }
+  .motto { margin-top:12px; text-align:center; font-size:16px; font-weight:700; color:var(--accent); letter-spacing:1px; }
+  .disclaimer { margin-top:14px; font-size:11px; color:var(--muted); background:#faf7f1; border-radius:8px; padding:10px 12px; line-height:1.7; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧠 认知功能速查卡</h1>
+  <div class="sub">8 大认知功能 · 「超能力 / 副作用」游戏化解读 · 内容池旗舰叙事佐证</div>
+
+  <div class="cards" id="cards"></div>
+
+  <div class="detail" id="detail">
+    <div class="d-head">
+      <span class="d-emo" id="dEmo">💖</span>
+      <span class="d-key" id="dKey">Fi</span>
+      <span class="d-name" id="dName">内向情感</span>
+    </div>
+    <div class="d-grid">
+      <div class="d-cell power"><h3>⚡ 超能力</h3><p id="dPower"></p></div>
+      <div class="d-cell side"><h3>⚠️ 副作用</h3><p id="dSide"></p></div>
+      <div class="d-cell"><h3>🔍 触发场景</h3><p id="dTrigger"></p></div>
+      <div class="d-cell"><h3>🚫 盲区</h3><p id="dBlind"></p></div>
+    </div>
+    <div class="scene" id="dScene"></div>
+    <div class="motto" id="dMotto"></div>
+  </div>
+
+  <div class="disclaimer" id="dDisclaimer"></div>
+
+  <div class="footer">
+    认知功能速查卡 v1.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    内容池佐证：设设 D21 旗舰叙事提炼 · 诚实标注：理论框架（荣格认知功能）+ 内容池观测，非个体心理测量
+  </div>
+</div>
+
+<script>
+const FUNCS = [{"key": "Fi", "name": "内向情感", "emoji": "💖", "superpower": "价值雷达·0.3秒情感检测——瞬间知道\"这事对不对我的真心\"", "sideeffect": "太把感受当证据·容易内耗·对批评过度敏感", "trigger": "当一件事违背我的价值观时", "scene": "大提琴老师转行卖馒头：\"敢在应该和想要之间，坚定地选后者\"（D21-B12旗舰·9分）", "motto": "我宁愿慢，也不愿假", "blind": "回避逻辑交锋·把\"不喜欢\"说成\"不合适\""}, {"key": "Fe", "name": "外向情感", "emoji": "🤝", "superpower": "气氛雷达·0.3秒读懂全场情绪——知道谁需要被接住", "sideeffect": "过度迎合·把别人的情绪背在自己身上·失去自我边界", "trigger": "当一群人需要被照顾时", "scene": "四个儿子争着养95岁老母亲：\"被争着养，从来不是钱的问题\"（D21-B8旗舰）", "motto": "我在意我们，不只是我", "blind": "压抑自己的需求·讨好到枯竭"}, {"key": "Ti", "name": "内向思考", "emoji": "🧩", "superpower": "逻辑解剖刀·把任何混乱拆成干净的结构", "sideeffect": "过度分析·陷入\"为什么\"循环·行动瘫痪", "trigger": "当遇到逻辑矛盾时", "scene": "跳江又游回来：\"荒诞=情绪最诚实的出口\"（D21-B8·Ne-Ti拆解）", "motto": "先搞懂，再行动", "blind": "忽略情绪因素·把人都当成变量"}, {"key": "Te", "name": "外向思考", "emoji": "📊", "superpower": "效率裁判·0.3秒判断\"这事值不值得做\"·执行力引擎", "sideeffect": "目标导向到忽略人·把关系也KPI化", "trigger": "当目标不清晰时立刻建立秩序", "scene": "车企逃离发布会：\"真正的竞争对手，从来不在你盯着的那张名单上\"（D21-B7旗舰·9分）", "motto": "结果说话", "blind": "难以理解\"没有用的热爱\""}, {"key": "Ni", "name": "内向直觉", "emoji": "🔮", "superpower": "模式识别·0.3秒看穿表象背后的真相·未来预判", "sideeffect": "过度笃定自己的判断·无视反证", "trigger": "当现象与本质脱钩时", "scene": "韩国冰奶：\"在韩国查无此物——拆穿爆款真正的配方\"（D21-B6旗舰）", "motto": "表象都是障眼法", "blind": "很难解释\"我就是知道\""}, {"key": "Ne", "name": "外向直觉", "emoji": "🎲", "superpower": "可能性穷举·一个点炸出一片可能性·好奇心引擎", "sideeffect": "三分钟热度·选择困难·永远在找更好的", "trigger": "当遇到新信息时自动联想", "scene": "河南钻石把英伟达馋哭：\"拆出这句话里真正让人好奇的暗线\"（D21-B10旗舰）", "motto": "世界是一盒没拆完的巧克力", "blind": "难以落地·不擅收尾"}, {"key": "Si", "name": "内向实感", "emoji": "🗂️", "superpower": "经验数据库·规则手册·稳定可靠·细节记忆王", "sideeffect": "路径依赖·抗拒变化·把\"以前都这样\"当理由", "trigger": "当环境与熟悉模式不同时", "scene": "规则手册合上型叙事（D21系列ISTJ）·信任自持7.5分", "motto": "稳定就是力量", "blind": "对新事物本能怀疑"}, {"key": "Se", "name": "外向实感", "emoji": "⚡", "superpower": "现场雷达·0.3秒捕捉当下一切·行动反应快", "sideeffect": "冲动·难以忍受无聊·忽略长期后果", "trigger": "当眼前有刺激或机会时", "scene": "SP象限叙事（ISTP/ESTP/ESFP）·感官现场优先（D21系列·待数据标注）", "motto": "先做了再说", "blind": "难以延迟满足"}];
+const cardsEl = document.getElementById('cards');
+
+FUNCS.forEach((fn, i) => {
+  const c = document.createElement('div');
+  c.className = 'fcard' + (i === 0 ? ' active' : '');
+  c.id = 'card' + i;
+  c.innerHTML = '<div class="emo">'+fn.emoji+'</div><div class="fk">'+fn.key+'</div><div class="fn">'+fn.name+'</div>';
+  c.addEventListener('click', () => render(i));
+  cardsEl.appendChild(c);
+});
+
+function render(i) {
+  const fn = FUNCS[i];
+  document.querySelectorAll('.fcard').forEach((c, ci) => c.classList.toggle('active', ci === i));
+  document.getElementById('dEmo').textContent = fn.emoji;
+  document.getElementById('dKey').textContent = fn.key;
+  document.getElementById('dName').textContent = fn.name;
+  document.getElementById('dPower').textContent = fn.superpower;
+  document.getElementById('dSide').textContent = fn.sideeffect;
+  document.getElementById('dTrigger').textContent = fn.trigger;
+  document.getElementById('dBlind').textContent = fn.blind;
+  document.getElementById('dScene').textContent = '📌 内容池叙事：' + fn.scene;
+  document.getElementById('dMotto').textContent = '「' + fn.motto + '」';
+}
+document.getElementById('dDisclaimer').textContent = '⚠️ 诚实标注：本卡为荣格认知功能理论框架的娱乐化解读，结合内容池旗舰叙事（设设 D21·68条旗舰提炼）。不等同于个体心理测量结果，不构成人格诊断。SP 象限（ISTP/ESTP/ESFP）部分叙事待画像数据补足（ESC-08-17-1）。';
+render(0);
+</script>
+</body>
+</html>

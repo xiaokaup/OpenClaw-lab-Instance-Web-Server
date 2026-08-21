@@ -141,14 +141,13 @@
   "pipeline": {
     "delivered": [
       "S1",
-      "S2"
+      "S2",
+      "S3"
     ],
     "active": [
       "L1"
     ],
-    "design": [
-      "S3"
-    ],
+    "design": [],
     "refactored_one_time": [
       "L2",
       "L3-A",
@@ -158,7 +157,7 @@
     "total_products": 8,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·全部可产出即交付·S2依恋积分卡已交付"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·第一批P0已交付(S2 v1.1双人匹配卡+S3认知功能卡)·第二批P1待河山拍板"
   },
   "finished": [
     {
@@ -201,8 +200,8 @@
       "status": "delivered_v1.0",
       "lifecycle": "launched_one_time",
       "deliverables": {
-        "csv": "workspace-jianjian/company/data/products/scorecard-v1/personality-scorecard-v1.csv",
-        "html": "workspace-jianjian/company/data/products/scorecard-v1/personality-scorecard-v1.html"
+        "csv": "workspace-shared/pools/products/scorecard-v1/personality-scorecard-v1.csv",
+        "html": "workspace-shared/pools/products/scorecard-v1/personality-scorecard-v1.html"
       },
       "data_source": "析析 profiles.json 3,754用户·12型聚合·8心因维度(IM/DA/AS/ME/ST/CB/FM/TB)",
       "content": "16型×8维度得分·总分·均分·等级(S/A/B/C)·强项Top3·弱项Bottom2·认知功能栈·内容池范式解读",
@@ -234,11 +233,13 @@
       "deliverable_urls": [
         {
           "type": "csv",
+          "label": "",
           "relpath": "scorecard-v1/personality-scorecard-v1.csv",
           "url": "files/scorecard-v1/personality-scorecard-v1.csv"
         },
         {
           "type": "html",
+          "label": "",
           "relpath": "scorecard-v1/personality-scorecard-v1.html",
           "url": "files/scorecard-v1/personality-scorecard-v1.html"
         }
@@ -260,20 +261,73 @@
       "direction_evidence": "内容池依恋母题连续5批(金龟子婚纱照7·安全型依恋·INFP/ENFP标注)·AA制40年9分三型全映射·3孩非亲生8婚姻信任·跳江又游回8荒诞情绪诚实·女儿过夜8家庭边界·外部热点验证(安全/焦虑/回避/恐惧四型内容高热度)",
       "content": "四型(安全/焦虑/回避/恐惧)×双轴(亲密焦虑×亲密回避)+自我/他人模型·核心模式/冲突反应/需求表达/边界/优势/盲区·内容池母题佐证·MBTI映射(观测标注非全量)·匹配建议",
       "framework": "Bartholomew & Horowitz 成人依恋双模型（非诊断工具）",
-      "double_person_plan": "v1.1 双人对照形态（情侣各填一张→关系兼容积分）·待产出",
+      "v11_delivered": {
+        "product": "双人依恋匹配卡（S2 v1.1 形态升级）",
+        "key": "couple-attachment-match",
+        "csv": "workspace-shared/pools/products/couple-attachment-match/couple-match-matrix-v1.csv",
+        "html": "workspace-shared/pools/products/couple-attachment-match/couple-attachment-match-v1.html",
+        "note": "情侣各填一张(8题自评·娱乐性非测量)→生成关系星座+匹配度积分+核心张力+相处建议+可复制分享文案·4×4=16组合矩阵"
+      },
       "priority": "P1",
-      "note": "路径契约：直接落 workspace-shared/pools/products/attachment-scorecard/（大卡 2026-08-21 回执）",
+      "note": "路径契约：直接落 workspace-shared/pools/products/（大卡 2026-08-21 回执）·S2 v1.1 已随第一批 P0 交付",
       "key": "S2",
       "deliverable_urls": [
         {
           "type": "csv",
+          "label": "",
           "relpath": "attachment-scorecard/attachment-scorecard-v1.csv",
           "url": "files/attachment-scorecard/attachment-scorecard-v1.csv"
         },
         {
           "type": "html",
+          "label": "",
           "relpath": "attachment-scorecard/attachment-scorecard-v1.html",
           "url": "files/attachment-scorecard/attachment-scorecard-v1.html"
+        },
+        {
+          "type": "csv",
+          "label": "v1.1",
+          "relpath": "couple-attachment-match/couple-match-matrix-v1.csv",
+          "url": "files/couple-attachment-match/couple-match-matrix-v1.csv"
+        },
+        {
+          "type": "html",
+          "label": "v1.1",
+          "relpath": "couple-attachment-match/couple-attachment-match-v1.html",
+          "url": "files/couple-attachment-match/couple-attachment-match-v1.html"
+        }
+      ]
+    },
+    {
+      "name": "认知功能速查卡",
+      "form": [
+        "CSV电子表格",
+        "可交互静态HTML"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "csv": "workspace-shared/pools/products/cognitive-functions-card/cognitive-functions-v1.csv",
+        "html": "workspace-shared/pools/products/cognitive-functions-card/cognitive-functions-v1.html"
+      },
+      "direction_evidence": "内容池旗舰范式'X系统在0.3秒里...'叙事（设设D21·68条旗舰提炼·Fi/Fe/Ni/Te/Ne-Ti等认知功能叙事）·外部差异化验证（竞品以16型为主·8认知功能卡稀缺）",
+      "content": "8功能(Fi/Fe/Ti/Te/Ni/Ne/Si/Se)每卡：超能力/副作用/触发场景/盲区/座右铭 + 内容池叙事佐证 + 诚实标注（理论框架+观测·非个体测量）",
+      "priority": "P2",
+      "note": "河山拍板第一批P0·'超能力/副作用'游戏化解读·路径契约落 shared",
+      "key": "S3",
+      "deliverable_urls": [
+        {
+          "type": "csv",
+          "label": "",
+          "relpath": "cognitive-functions-card/cognitive-functions-v1.csv",
+          "url": "files/cognitive-functions-card/cognitive-functions-v1.csv"
+        },
+        {
+          "type": "html",
+          "label": "",
+          "relpath": "cognitive-functions-card/cognitive-functions-v1.html",
+          "url": "files/cognitive-functions-card/cognitive-functions-v1.html"
         }
       ]
     }
@@ -350,20 +404,6 @@
       "refactor_plan": "重构为30天成长打卡卡(模板·一次性交付)·对齐内容池'自我觉醒'方向(大提琴老师馒头9分旗舰)·不等待产研桶",
       "unblocked_by_strategy_v2": true,
       "key": "L3-C",
-      "deliverable_urls": []
-    },
-    {
-      "name": "认知功能速查卡",
-      "form": [
-        "可交互静态HTML"
-      ],
-      "price_note": "定价权属策策",
-      "status": "direction_verified_pending_production",
-      "lifecycle": "design",
-      "direction_evidence": "内容池旗舰范式'X系统在0.3秒里...'叙事(设设D21旗舰·Fi/Fe/Ni/Te/Ne-Ti等认知功能叙事)·外部差异化验证(竞品以16型为主·8认知功能卡稀缺)",
-      "content_plan": "8认知功能(Fi/Fe/Ti/Te/Ni/Ne/Si/Se)每功能一张速查卡·含激活场景·优势·盲区·0.3秒检测示例",
-      "priority": "P2",
-      "key": "S3",
       "deliverable_urls": []
     }
   ],
