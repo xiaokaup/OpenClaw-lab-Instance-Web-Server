@@ -1,0 +1,293 @@
+{
+  "vessel": {
+    "version": "1.0",
+    "type": "product-available",
+    "id": "product-available-2026-08-21-1000",
+    "source": {
+      "agent": "荐荐",
+      "subsystem": "产品Hub",
+      "role": "产品推荐+产品健康官",
+      "batch": "D21-B1·八月D21·周五"
+    },
+    "created_at": "2026-08-21T10:00:00+08:00",
+    "freshness_ttl_hours": 24,
+    "priority": "p1",
+    "dependencies": [
+      {
+        "vessel_type": "report-vessel",
+        "vessel_id": "report-vessel-2026-08-21T10:00:00+08:00",
+        "note": "D21-B1产品健康报告·本vessel的关联report-vessel"
+      },
+      {
+        "vessel_type": "report-vessel",
+        "vessel_id": "report-vessel-2026-08-20T10:00:00+08:00",
+        "note": "D20-B1前序产品健康报告"
+      },
+      {
+        "vessel_type": "ad-metrics",
+        "vessel_id": "report-vessel-2026-08-21-0925-ad-metrics",
+        "source": "投投·D21-B12",
+        "note": "D21-B12大面积轮出批遭遇内容供给塌方·3/7臂(¥75)·4臂blocked(设设降产3臂·无fresh内容)·0 block→4 block·block_rate 57.1%·破8批100%连胜·strategy_match 66.7%(1臂INFP channel_dissent)·ENFP大提琴馒头9旗舰+INFJ社会货币恢复首触(张家界8.8)+INFP恢复首触(金龟子7)·依恋母题连续5批·摩擦0.60·HHI 0.556"
+      },
+      {
+        "vessel_type": "direction-vessel",
+        "vessel_id": "direction-vessel-2026-08-21-0845",
+        "source": "策策·D21-B12",
+        "note": "D21-B12方向·go_maintain_with_rotation·大面积轮出(5臂batch2达上限必轮出)·社会货币3批冷却后恢复·INFP恢复首触·ENFP反常识自我觉醒旗舰·ISTJ轮休·match gate未触发·signal_environment.match_rate 36.8%"
+      },
+      {
+        "vessel_type": "budget-vessel",
+        "vessel_id": "budget-vessel-2026-08-20-1015",
+        "source": "控控·D20口径·10:15·~23.2h stale·跨日",
+        "note": "🟡 TTL 6h→~23.2h stale·D20口径(跨日到D21)·fallback方向船+策略池constraints·日限¥200·D21首批¥75(3臂×¥25)·八月累计¥3,375"
+      }
+    ],
+    "info_contract": {
+      "purpose": "荐荐管理的产品目录池·当前产品线:L1深度人格报告¥9.9·L2人格深度关系图谱¥19.9·L3-A MBTI关系兼容性¥59·L3-B人格职业跃迁¥59·L3-C 30天人格成长计划¥89·供策策/投投/控控/大卡/设设消费",
+      "excludes": "定价决策权(属策策)·内容生产权(属设设)·预算分配权(属大卡)",
+      "action_threshold": {
+        "l2_activation": "L2产品上线需Plan C释放¥500产研预算·~562h支付停滞+552h(23天)已破(18阈值全破·S1首次23天)·ruling-015执行零~308h·match gate已纠正",
+        "l3_development": "产研桶¥1,220冻结Day23·Plan C释放¥400可加速·概念验证阶段",
+        "product_retirement": "无产品需退役·L1为主力收入来源",
+        "552h_breached": "🔴🔴🔴🔴🔴 552h(23天)8/20 23:00已破·18阈值全破(168h→552h)·S1首次23天金融盲飞·~562h·720h(30天)8/27 23:00为公认不可逆防线(~6.6天倒计时)",
+        "plan_c_ruling015_execution_zero_308h": "🔴🔴🔴🔴🔴 ruling-015已出~308h(Plan C激活裁决)·但杰安/河山失联~18天·执行仍零·进进回归(#24/#25)+河山8/19 23:15签发content-spec-v2为治理恢复信号·match gate字段拆分裁决已出(ruling-017子裁决E)",
+        "supply_collapse_block_rate_57pct": "🔴🔴🔴🔴 D21-B12大面积轮出批供给塌方·设设降产3臂·4臂blocked·ENFJ蛋饼店主9旗舰漏产·内容池136>>25软上限CRITICAL",
+        "streak_broken": "🔴 strategy_match 66.7%(2/3)·1臂INFP channel_dissent·破8批100%连胜·但仍>50%match gate未触发",
+        "content_ttl_relieved": "🟢 0/3臂TTL过期(0%)·3臂全fresh首用·但TTL硬上限72h仍未enforce(ruling-015逾期13天)",
+        "esc_0809_2_closed": "🟢 ESC-08-09-2已闭合·设设内容质量报告管道恢复后连续第8批完整产出·ESC-08-18-1路径漂移B12直写契约路径待闭合",
+        "financial_cron_resolved": "🟢 ESC-08-16-2已闭合(财务追踪cron连续产出)·预算船观测恢复·budget-vessel ~23.2h stale(跨日)",
+        "psych_engine_frozen_47d": "🔴 psych-engine results.jsonl冻结~47天(ESC-08-17-1)·SP象限2006人结构性盲区·48h复查8/19 21:00已过·待人类决策",
+        "toutou_path_drift": "🔴 投投报告路径漂移(ESC-08-17-2)·48h复查8/19 21:00已过·B12已直写workspace-shared契约路径·待最终闭合",
+        "social_currency_recovered": "🟢 社会货币3批冷却后恢复首触(张家界8.8·国家认同)·需≥2个≥7分维持",
+        "b13_rotation_pressure": "🟡 B13大面积轮出续压·B12七臂batch1→B13全部batch2达上限·需补产ENFJ蛋饼店主9旗舰+ENTP/ENTJ/INTJ 3臂"
+      },
+      "expires_after": "2026-08-22T10:00:00+08:00",
+      "report_type": "product-catalog",
+      "consumer_agents": [
+        "策策",
+        "投投",
+        "控控",
+        "大卡",
+        "设设",
+        "析析",
+        "进进"
+      ]
+    },
+    "mandates": {
+      "l1_active": true,
+      "l1_price_lock": true,
+      "l2_blocked_by_plan_c": true,
+      "l3_blocked_by_rd_bucket": true,
+      "product_catalog_owner": "荐荐"
+    }
+  },
+  "batch": "D21-B1·八月D21·周五",
+  "timestamp": "2026-08-21T10:00:00+08:00",
+  "payment_status": {
+    "stagnant_hours": 562,
+    "thresholds_breached": [
+      168,
+      192,
+      200,
+      216,
+      240,
+      264,
+      288,
+      312,
+      336,
+      360,
+      384,
+      408,
+      432,
+      456,
+      480,
+      504,
+      528,
+      552
+    ],
+    "thresholds_total": 18,
+    "milestone_528h": "BREACHED at 2026-08-19T23:00:00+08:00·S1首次22天",
+    "milestone_552h": "BREACHED at 2026-08-20T23:00:00+08:00·~11h ago·S1首次23天",
+    "next_threshold": {
+      "hours": 576,
+      "at": "2026-08-21T23:00:00+08:00",
+      "label": "24天"
+    },
+    "final_defense": {
+      "hours": 720,
+      "at": "2026-08-27T23:00:00+08:00",
+      "label": "30天·公认不可逆防线·~6.6天倒计时"
+    },
+    "confirmed_revenue": 300.37,
+    "zero_settlement_batches": 36,
+    "plan_c_delayed_hours": 308,
+    "plan_c_status": "ruling-015已出(Plan C激活裁决)·但杰安/河山失联~18天·执行仍零·进进回归(#24/#25)+河山8/19 23:15签发content-spec-v2为治理恢复信号·match gate字段拆分裁决已出(ruling-017子裁决E)"
+  },
+  "rd_budget": {
+    "monthly_cap": 500,
+    "spent": 390,
+    "remaining_cap": 110,
+    "frozen_bucket": 1220,
+    "frozen_days": 23,
+    "plan_c_release_required": true,
+    "plan_c_delayed_hours": 308,
+    "plan_c_status": "ruling-015已出·执行仍零·杰安/河山失联~18天·进进回归+河山签发content-spec为恢复信号",
+    "plan_c_allocations": {
+      "L2_sprint": 500,
+      "L3A_acceleration": 400,
+      "content_pool_repair": 320
+    }
+  },
+  "health_indicators": {
+    "d18_health": 4.5,
+    "d19_health": 5.0,
+    "d20_health": 5.0,
+    "d21_health": 4.5,
+    "trend": "supply_collapse_block_rate_57pct_streak_broken_66pct_social_currency_infp_double_recovery_but_552h_breached_plan_c_zero_308h",
+    "key_risk": "~562h·552h(23天)8/20 23:00已破·18阈值全破·S1首次23天·720h(30天)8/27倒计时~6.6天·Plan C ruling-015执行零~308h·杰安/河山失联~18天·内容供给塌方(设设降产3臂·4臂blocked·block_rate57.1%·破8批100%连胜)·psych-engine冻结47天(ESC-08-17-1·48h复查8/19 21:00已过待决策)·投投path drift待闭合(ESC-08-17-2)·D21购买页~562h Day23已放弃·B13大面积轮出续压·TTL硬上限72h未enforce(ruling-015逾期13天)·SP象限2006人盲区·知知缺位~24天",
+    "key_positive": "D21-B12大面积轮出批3/7臂(¥75·0 TTL过期·3臂全fresh·社会货币恢复首触张家界8.8+INFP恢复首触金龟子7+ENFP反常识9旗舰大提琴馒头)·依恋母题连续5批·match gate未触发(66.7%>50%·字段拆分已裁决)·ESC-08-16-2财务cron闭合·进进回归(#24/#25)·河山8/19 23:15签发content-spec-v2(治理恢复信号)·累计16/16 100%覆盖率·析析十四期稳固·荐荐26批·商户号Day41稳定"
+  },
+  "pipeline": {
+    "active": [
+      "L1"
+    ],
+    "development": [
+      "L2"
+    ],
+    "concept": [
+      "L3-A",
+      "L3-B",
+      "L3-C"
+    ],
+    "total_products": 5,
+    "revenue_generating": 1,
+    "blocked_by_financial_blindness": [
+      "L2",
+      "L3-A",
+      "L3-B",
+      "L3-C"
+    ]
+  },
+  "finished": [
+    {
+      "name": "深度人格报告",
+      "price": 9.9,
+      "status": "active",
+      "lifecycle": "mature",
+      "overall_cvr_estimated": 0.04,
+      "revenue_contribution_pct": 100,
+      "refund_rate": 0.062,
+      "refund_rate_status": "controlled_under_7pct_redline",
+      "top_refund_reasons": [
+        {
+          "reason": "内容不够深",
+          "pct": 0.38
+        },
+        {
+          "reason": "价格预期偏差",
+          "pct": 0.26
+        },
+        {
+          "reason": "不是我想知道的",
+          "pct": 0.22
+        },
+        {
+          "reason": "其他",
+          "pct": 0.14
+        }
+      ],
+      "purchase_page_status": "D21逾期~562h·Day23·杰安通牒~428h·已正式放弃·Plan C ruling-015已出~308h执行零",
+      "personality_cvr": {
+        "INFP": 0.06,
+        "INFJ": 0.05,
+        "ENFP": 0.04,
+        "INTJ": 0.035,
+        "ENTJ": 0.032,
+        "INTP": 0.03
+      },
+      "personality_revenue_share": {
+        "INFP": 0.377,
+        "INFJ": 0.246,
+        "ENFP": 0.162,
+        "INTJ": 0.077,
+        "ENTJ": 0.052,
+        "INTP": 0.038,
+        "other": 0.048
+      },
+      "key": "L1"
+    }
+  ],
+  "directions": [
+    {
+      "name": "人格深度关系图谱",
+      "price": 19.9,
+      "regular_price": 29.0,
+      "status": "development_83pct",
+      "lifecycle": "pre_launch",
+      "completion_pct": 83,
+      "expected_upgrade_rate": 0.15,
+      "upgrade_by_personality_expected": {
+        "INTJ": 0.18,
+        "INFP": 0.16,
+        "ENTJ": 0.15,
+        "INFJ": 0.14,
+        "ENFP": 0.13,
+        "INTP": 0.12,
+        "other": 0.1
+      },
+      "cumulative_internal_upgrades": 76,
+      "cumulative_internal_revenue": 1517,
+      "activation_blocked_by": [
+        "支付~562h·552h(23天)已破·18阈值全破·S1首次23天",
+        "Plan C ruling-015已出~308h但执行零·¥500未释放·杰安/河山失联~18天",
+        "产研桶¥1,220冻结Day23"
+      ],
+      "required_plan_c_release": 500,
+      "batch_evaluation": 26,
+      "key": "L2"
+    },
+    {
+      "name": "MBTI关系兼容性深度报告",
+      "price": 59.0,
+      "status": "concept",
+      "lifecycle": "concept",
+      "target_market": 5250,
+      "expected_arpu": 1.77,
+      "priority": "P1",
+      "required_plan_c_release": 400,
+      "blocked_by": "产研桶¥1,220冻结Day23·D20详细设计延迟",
+      "key": "L3-A"
+    },
+    {
+      "name": "人格职业跃迁方案",
+      "price": 59.0,
+      "price_range": [
+        49,
+        69
+      ],
+      "status": "concept",
+      "lifecycle": "concept",
+      "target_personalities": [
+        "ENTJ",
+        "INTJ",
+        "ENFJ"
+      ],
+      "priority": "P1",
+      "blocked_by": "产研桶冻结·ENTJ反常识续活跃·INTJ/ENTJ双通道·方案验证可启动",
+      "key": "L3-B"
+    },
+    {
+      "name": "30天人格成长计划",
+      "price": 89.0,
+      "price_range": [
+        79,
+        99
+      ],
+      "status": "concept",
+      "lifecycle": "concept",
+      "priority": "P2",
+      "key": "L3-C"
+    }
+  ],
+  "total": 5
+}

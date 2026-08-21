@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>产品池 · 实时数据</title>
+<style>
+:root{--bg:#080b11;--surface:#111620;--surface2:#161b26;--border:#212836;--fg:#e1e4eb;--muted:#6e7687;--accent:#6366f1;--accent2:#8b5cf6;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--orange:#f97316;--cyan:#06b6d4;--blue:#60a5fa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,-apple-system,sans-serif;padding:16px;max-width:1600px;margin:0 auto}
+a{color:var(--accent)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.top h1{font-size:16px;display:flex;align-items:center;gap:8px}
+.top .sub{font-size:11px;color:var(--muted)}
+.top .live{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--green)}
+.live .dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.banner{background:#3a1d1d;border:1px solid #5c2a2a;border-radius:8px;padding:10px 14px;font-size:12px;margin-bottom:12px;color:#fca5a5;white-space:pre-wrap}
+.banner.warn{background:#3a2a1d;border-color:#5c4a2a;color:#fcd34d}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:14px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
+.stat .val{font-size:20px;font-weight:700;line-height:1.2}
+.stat .lbl{font-size:10px;color:var(--muted);margin-top:2px}
+.stat.crit .val{color:var(--red)}
+.stat.ok .val{color:var(--green)}
+.stat.warn .val{color:var(--yellow)}
+.tabs{display:flex;gap:8px;margin-bottom:14px;border-bottom:1px solid var(--border)}
+.tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);padding:10px 16px;font-size:13px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px}
+.tab:hover{color:var(--fg)}
+.tab.active{color:var(--fg);border-bottom-color:var(--accent);font-weight:600}
+.tab .tcount{font-size:10px;background:var(--surface2);color:var(--muted);border-radius:10px;padding:1px 8px}
+.tab.active .tcount{background:var(--accent);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;gap:10px}
+.card:hover{border-color:var(--accent);transform:translateY(-1px)}
+.card .pkey{font-size:10px;color:var(--muted);font-family:ui-monospace,monospace}
+.card .name{font-size:15px;font-weight:700;line-height:1.4}
+.card .price{font-size:20px;font-weight:700;color:var(--accent)}
+.card .price .reg{font-size:12px;color:var(--muted);font-weight:400;text-decoration:line-through;margin-left:6px}
+.badges{display:flex;flex-wrap:wrap;gap:4px}
+.badge{font-size:9px;padding:2px 7px;border-radius:10px;border:1px solid var(--border);color:var(--muted);white-space:nowrap}
+.badge.active{background:#0d2b16;color:var(--green);border-color:var(--green)}
+.badge.dev{background:#3a2a1d;color:var(--orange);border-color:var(--orange)}
+.badge.concept{background:#1a1f2e;color:var(--blue);border-color:var(--blue)}
+.badge.blocked{background:#3a1d1d;color:var(--red);border-color:var(--red)}
+.badge.p1{background:#3a1d1d;color:var(--red);border-color:var(--red)}
+.badge.p2{background:#3a2a1d;color:var(--orange);border-color:var(--orange)}
+.kv{display:flex;flex-wrap:wrap;gap:8px;font-size:10px;color:var(--muted)}
+.kv b{color:var(--fg);font-weight:600}
+.kv .cell{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:4px 8px}
+.progress{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden}
+.progress .bar{height:100%;background:linear-gradient(90deg,var(--orange),var(--accent));border-radius:3px}
+.blocklist{font-size:10px;color:var(--red);line-height:1.5}
+.empty{grid-column:1/-1;background:var(--surface);border:1px dashed var(--border);border-radius:10px;padding:40px;text-align:center;color:var(--muted)}
+.empty .icon{font-size:40px;margin-bottom:8px}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:flex-start;justify-content:center;z-index:100;padding:30px;overflow-y:auto}
+.modal-bg.open{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:12px;max-width:720px;width:100%;padding:20px;margin:auto}
+.modal h2{font-size:15px;margin-bottom:10px;line-height:1.5}
+.modal .field{margin-bottom:10px;font-size:12px}
+.modal .field .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.modal .field .v{white-space:pre-wrap;line-height:1.6}
+.modal .close{float:right;background:var(--surface2);border:1px solid var(--border);color:var(--fg);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px}
+table.mini{width:100%;border-collapse:collapse;font-size:11px}
+table.mini th{color:var(--muted);text-align:left;padding:4px 8px;border-bottom:1px solid var(--border);font-weight:500}
+table.mini td{padding:4px 8px;border-bottom:1px solid var(--border)}
+.sec-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin:14px 0 8px}
+</style>
+</head>
+<body>
+<div class="top">
+  <div>
+    <h1>📦 产品池 · 实时数据</h1>
+    <div class="sub">数据源 workspace-shared/pools/product-available.json · 由荐荐产出（产品Hub）</div>
+  </div>
+  <div class="live"><span class="dot"></span><span id="live-info">加载中…</span></div>
+</div>
+
+<div id="banner"></div>
+<div class="stats" id="stats"></div>
+
+<div class="tabs">
+  <button class="tab active" id="tab-finished" type="button">📦 成品产品 <span class="tcount" id="finished-count"></span></button>
+  <button class="tab" id="tab-directions" type="button">🧭 产品方向 <span class="tcount" id="directions-count"></span></button>
+</div>
+
+<div class="tab-panel" id="panel-finished">
+  <div class="sec-title">成熟在售 · 可直接售卖</div>
+  <div class="grid" id="finished-grid"></div>
+  <div class="empty" id="finished-empty" style="display:none"><div class="icon">📦</div>暂无成品产品</div>
+</div>
+
+<div class="tab-panel" id="panel-directions" style="display:none">
+  <div class="sec-title">在研 + 概念 · 尚未可售卖</div>
+  <div class="grid" id="directions-grid"></div>
+  <div class="empty" id="directions-empty" style="display:none"><div class="icon">🧭</div>暂无产品方向</div>
+</div>
+
+<div class="modal-bg" id="modal-bg">
+  <div class="modal" id="modal">
+    <button class="close" onclick="closeModal()">✕ 关闭</button>
+    <h2 id="m-title"></h2>
+    <div class="kv" id="m-badges"></div>
+    <div id="m-body"></div>
+  </div>
+</div>
+
+<script>
+const API = '/api/product-pool';
+const __DATA__ = {"vessel": {"version": "1.0", "type": "product-available", "id": "product-available-2026-08-21-1000", "source": {"agent": "荐荐", "subsystem": "产品Hub", "role": "产品推荐+产品健康官", "batch": "D21-B1·八月D21·周五"}, "created_at": "2026-08-21T10:00:00+08:00", "freshness_ttl_hours": 24, "priority": "p1", "dependencies": [{"vessel_type": "report-vessel", "vessel_id": "report-vessel-2026-08-21T10:00:00+08:00", "note": "D21-B1产品健康报告·本vessel的关联report-vessel"}, {"vessel_type": "report-vessel", "vessel_id": "report-vessel-2026-08-20T10:00:00+08:00", "note": "D20-B1前序产品健康报告"}, {"vessel_type": "ad-metrics", "vessel_id": "report-vessel-2026-08-21-0925-ad-metrics", "source": "投投·D21-B12", "note": "D21-B12大面积轮出批遭遇内容供给塌方·3/7臂(¥75)·4臂blocked(设设降产3臂·无fresh内容)·0 block→4 block·block_rate 57.1%·破8批100%连胜·strategy_match 66.7%(1臂INFP channel_dissent)·ENFP大提琴馒头9旗舰+INFJ社会货币恢复首触(张家界8.8)+INFP恢复首触(金龟子7)·依恋母题连续5批·摩擦0.60·HHI 0.556"}, {"vessel_type": "direction-vessel", "vessel_id": "direction-vessel-2026-08-21-0845", "source": "策策·D21-B12", "note": "D21-B12方向·go_maintain_with_rotation·大面积轮出(5臂batch2达上限必轮出)·社会货币3批冷却后恢复·INFP恢复首触·ENFP反常识自我觉醒旗舰·ISTJ轮休·match gate未触发·signal_environment.match_rate 36.8%"}, {"vessel_type": "budget-vessel", "vessel_id": "budget-vessel-2026-08-20-1015", "source": "控控·D20口径·10:15·~23.2h stale·跨日", "note": "🟡 TTL 6h→~23.2h stale·D20口径(跨日到D21)·fallback方向船+策略池constraints·日限¥200·D21首批¥75(3臂×¥25)·八月累计¥3,375"}], "info_contract": {"purpose": "荐荐管理的产品目录池·当前产品线:L1深度人格报告¥9.9·L2人格深度关系图谱¥19.9·L3-A MBTI关系兼容性¥59·L3-B人格职业跃迁¥59·L3-C 30天人格成长计划¥89·供策策/投投/控控/大卡/设设消费", "excludes": "定价决策权(属策策)·内容生产权(属设设)·预算分配权(属大卡)", "action_threshold": {"l2_activation": "L2产品上线需Plan C释放¥500产研预算·~562h支付停滞+552h(23天)已破(18阈值全破·S1首次23天)·ruling-015执行零~308h·match gate已纠正", "l3_development": "产研桶¥1,220冻结Day23·Plan C释放¥400可加速·概念验证阶段", "product_retirement": "无产品需退役·L1为主力收入来源", "552h_breached": "🔴🔴🔴🔴🔴 552h(23天)8/20 23:00已破·18阈值全破(168h→552h)·S1首次23天金融盲飞·~562h·720h(30天)8/27 23:00为公认不可逆防线(~6.6天倒计时)", "plan_c_ruling015_execution_zero_308h": "🔴🔴🔴🔴🔴 ruling-015已出~308h(Plan C激活裁决)·但杰安/河山失联~18天·执行仍零·进进回归(#24/#25)+河山8/19 23:15签发content-spec-v2为治理恢复信号·match gate字段拆分裁决已出(ruling-017子裁决E)", "supply_collapse_block_rate_57pct": "🔴🔴🔴🔴 D21-B12大面积轮出批供给塌方·设设降产3臂·4臂blocked·ENFJ蛋饼店主9旗舰漏产·内容池136>>25软上限CRITICAL", "streak_broken": "🔴 strategy_match 66.7%(2/3)·1臂INFP channel_dissent·破8批100%连胜·但仍>50%match gate未触发", "content_ttl_relieved": "🟢 0/3臂TTL过期(0%)·3臂全fresh首用·但TTL硬上限72h仍未enforce(ruling-015逾期13天)", "esc_0809_2_closed": "🟢 ESC-08-09-2已闭合·设设内容质量报告管道恢复后连续第8批完整产出·ESC-08-18-1路径漂移B12直写契约路径待闭合", "financial_cron_resolved": "🟢 ESC-08-16-2已闭合(财务追踪cron连续产出)·预算船观测恢复·budget-vessel ~23.2h stale(跨日)", "psych_engine_frozen_47d": "🔴 psych-engine results.jsonl冻结~47天(ESC-08-17-1)·SP象限2006人结构性盲区·48h复查8/19 21:00已过·待人类决策", "toutou_path_drift": "🔴 投投报告路径漂移(ESC-08-17-2)·48h复查8/19 21:00已过·B12已直写workspace-shared契约路径·待最终闭合", "social_currency_recovered": "🟢 社会货币3批冷却后恢复首触(张家界8.8·国家认同)·需≥2个≥7分维持", "b13_rotation_pressure": "🟡 B13大面积轮出续压·B12七臂batch1→B13全部batch2达上限·需补产ENFJ蛋饼店主9旗舰+ENTP/ENTJ/INTJ 3臂"}, "expires_after": "2026-08-22T10:00:00+08:00", "report_type": "product-catalog", "consumer_agents": ["策策", "投投", "控控", "大卡", "设设", "析析", "进进"]}, "mandates": {"l1_active": true, "l1_price_lock": true, "l2_blocked_by_plan_c": true, "l3_blocked_by_rd_bucket": true, "product_catalog_owner": "荐荐"}}, "batch": "D21-B1·八月D21·周五", "timestamp": "2026-08-21T10:00:00+08:00", "payment_status": {"stagnant_hours": 562, "thresholds_breached": [168, 192, 200, 216, 240, 264, 288, 312, 336, 360, 384, 408, 432, 456, 480, 504, 528, 552], "thresholds_total": 18, "milestone_528h": "BREACHED at 2026-08-19T23:00:00+08:00·S1首次22天", "milestone_552h": "BREACHED at 2026-08-20T23:00:00+08:00·~11h ago·S1首次23天", "next_threshold": {"hours": 576, "at": "2026-08-21T23:00:00+08:00", "label": "24天"}, "final_defense": {"hours": 720, "at": "2026-08-27T23:00:00+08:00", "label": "30天·公认不可逆防线·~6.6天倒计时"}, "confirmed_revenue": 300.37, "zero_settlement_batches": 36, "plan_c_delayed_hours": 308, "plan_c_status": "ruling-015已出(Plan C激活裁决)·但杰安/河山失联~18天·执行仍零·进进回归(#24/#25)+河山8/19 23:15签发content-spec-v2为治理恢复信号·match gate字段拆分裁决已出(ruling-017子裁决E)"}, "rd_budget": {"monthly_cap": 500, "spent": 390, "remaining_cap": 110, "frozen_bucket": 1220, "frozen_days": 23, "plan_c_release_required": true, "plan_c_delayed_hours": 308, "plan_c_status": "ruling-015已出·执行仍零·杰安/河山失联~18天·进进回归+河山签发content-spec为恢复信号", "plan_c_allocations": {"L2_sprint": 500, "L3A_acceleration": 400, "content_pool_repair": 320}}, "health_indicators": {"d18_health": 4.5, "d19_health": 5.0, "d20_health": 5.0, "d21_health": 4.5, "trend": "supply_collapse_block_rate_57pct_streak_broken_66pct_social_currency_infp_double_recovery_but_552h_breached_plan_c_zero_308h", "key_risk": "~562h·552h(23天)8/20 23:00已破·18阈值全破·S1首次23天·720h(30天)8/27倒计时~6.6天·Plan C ruling-015执行零~308h·杰安/河山失联~18天·内容供给塌方(设设降产3臂·4臂blocked·block_rate57.1%·破8批100%连胜)·psych-engine冻结47天(ESC-08-17-1·48h复查8/19 21:00已过待决策)·投投path drift待闭合(ESC-08-17-2)·D21购买页~562h Day23已放弃·B13大面积轮出续压·TTL硬上限72h未enforce(ruling-015逾期13天)·SP象限2006人盲区·知知缺位~24天", "key_positive": "D21-B12大面积轮出批3/7臂(¥75·0 TTL过期·3臂全fresh·社会货币恢复首触张家界8.8+INFP恢复首触金龟子7+ENFP反常识9旗舰大提琴馒头)·依恋母题连续5批·match gate未触发(66.7%>50%·字段拆分已裁决)·ESC-08-16-2财务cron闭合·进进回归(#24/#25)·河山8/19 23:15签发content-spec-v2(治理恢复信号)·累计16/16 100%覆盖率·析析十四期稳固·荐荐26批·商户号Day41稳定"}, "pipeline": {"active": ["L1"], "development": ["L2"], "concept": ["L3-A", "L3-B", "L3-C"], "total_products": 5, "revenue_generating": 1, "blocked_by_financial_blindness": ["L2", "L3-A", "L3-B", "L3-C"]}, "finished": [{"name": "深度人格报告", "price": 9.9, "status": "active", "lifecycle": "mature", "overall_cvr_estimated": 0.04, "revenue_contribution_pct": 100, "refund_rate": 0.062, "refund_rate_status": "controlled_under_7pct_redline", "top_refund_reasons": [{"reason": "内容不够深", "pct": 0.38}, {"reason": "价格预期偏差", "pct": 0.26}, {"reason": "不是我想知道的", "pct": 0.22}, {"reason": "其他", "pct": 0.14}], "purchase_page_status": "D21逾期~562h·Day23·杰安通牒~428h·已正式放弃·Plan C ruling-015已出~308h执行零", "personality_cvr": {"INFP": 0.06, "INFJ": 0.05, "ENFP": 0.04, "INTJ": 0.035, "ENTJ": 0.032, "INTP": 0.03}, "personality_revenue_share": {"INFP": 0.377, "INFJ": 0.246, "ENFP": 0.162, "INTJ": 0.077, "ENTJ": 0.052, "INTP": 0.038, "other": 0.048}, "key": "L1"}], "directions": [{"name": "人格深度关系图谱", "price": 19.9, "regular_price": 29.0, "status": "development_83pct", "lifecycle": "pre_launch", "completion_pct": 83, "expected_upgrade_rate": 0.15, "upgrade_by_personality_expected": {"INTJ": 0.18, "INFP": 0.16, "ENTJ": 0.15, "INFJ": 0.14, "ENFP": 0.13, "INTP": 0.12, "other": 0.1}, "cumulative_internal_upgrades": 76, "cumulative_internal_revenue": 1517, "activation_blocked_by": ["支付~562h·552h(23天)已破·18阈值全破·S1首次23天", "Plan C ruling-015已出~308h但执行零·¥500未释放·杰安/河山失联~18天", "产研桶¥1,220冻结Day23"], "required_plan_c_release": 500, "batch_evaluation": 26, "key": "L2"}, {"name": "MBTI关系兼容性深度报告", "price": 59.0, "status": "concept", "lifecycle": "concept", "target_market": 5250, "expected_arpu": 1.77, "priority": "P1", "required_plan_c_release": 400, "blocked_by": "产研桶¥1,220冻结Day23·D20详细设计延迟", "key": "L3-A"}, {"name": "人格职业跃迁方案", "price": 59.0, "price_range": [49, 69], "status": "concept", "lifecycle": "concept", "target_personalities": ["ENTJ", "INTJ", "ENFJ"], "priority": "P1", "blocked_by": "产研桶冻结·ENTJ反常识续活跃·INTJ/ENTJ双通道·方案验证可启动", "key": "L3-B"}, {"name": "30天人格成长计划", "price": 89.0, "price_range": [79, 99], "status": "concept", "lifecycle": "concept", "priority": "P2", "key": "L3-C"}], "total": 5};
+let DATA = null;
+
+function esc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function nf(v){return (v==null||v==='')?'—':v}
+function fmtHrs(h){if(h==null)return'—';const d=Math.floor(h/24);const r=h%24;return d>0?d+'天'+r+'h':r+'h'}
+function fmtPct(x){return (x==null)?'—':(x*100).toFixed(0)+'%'}
+
+function lifecycleBadge(p){
+  const lc = p.lifecycle||'';
+  if(lc==='mature') return '<span class="badge active">● 成品 · mature</span>';
+  if(lc==='pre_launch') return '<span class="badge dev">● 在研 · pre_launch</span>';
+  if(lc==='concept') return '<span class="badge concept">● 概念 · concept</span>';
+  return '<span class="badge">'+esc(lc||p.status)+'</span>';
+}
+
+function load(){
+  Promise.resolve(__DATA__).then(d=>{
+    if(d.error){document.getElementById('banner').innerHTML='<div class="banner">⚠️ '+esc(d.error)+'<br>'+esc(d.path||'')+'</div>';return}
+    DATA = d;
+    renderStats(d);
+    renderFinished(d.finished||[]);
+    renderDirections(d.directions||[]);
+  }).catch(e=>{
+    document.getElementById('banner').innerHTML='<div class="banner">⚠️ 加载失败：'+esc(e.message)+'</div>';
+  });
+}
+
+function renderStats(d){
+  const ps = d.payment_status||{};
+  const rd = d.rd_budget||{};
+  const hi = d.health_indicators||{};
+  const finished = d.finished||[];
+  const directions = d.directions||[];
+  const total = d.total||0;
+  document.getElementById('finished-count').textContent = '('+finished.length+' 个)';
+  document.getElementById('directions-count').textContent = '('+directions.length+' 个)';
+  const frozen = rd.frozen_bucket!=null?('¥'+nf(rd.frozen_bucket)):'—';
+  const stagnant = ps.stagnant_hours!=null?fmtHrs(ps.stagnant_hours):'—';
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="val">${total}</div><div class="lbl">产品总数</div></div>
+    <div class="stat ok"><div class="val">${finished.length}</div><div class="lbl">成品产品</div></div>
+    <div class="stat warn"><div class="val">${directions.length}</div><div class="lbl">产品方向</div></div>
+    <div class="stat crit"><div class="val">${frozen}</div><div class="lbl">产研桶冻结（${rd.frozen_days!=null?rd.frozen_days+'天':'—'}）</div></div>
+    <div class="stat crit"><div class="val">${stagnant}</div><div class="lbl">支付停滞</div></div>
+    <div class="stat"><div class="val" style="font-size:14px">${esc(nf(d.batch))}</div><div class="lbl">最新批次</div></div>
+    <div class="stat"><div class="val">${esc(nf(hi.d21_health!=null?hi.d21_health:hi.d18_health))}</div><div class="lbl">今日健康分</div></div>
+    <div class="stat"><div class="val" style="font-size:12px">¥${nf(ps.confirmed_revenue)}</div><div class="lbl">确认营收</div></div>
+  `;
+  document.getElementById('live-info').textContent = total+' 个产品 · '+(d.batch||'');
+  const b = document.getElementById('banner');
+  const parts=[];
+  if(ps.stagnant_hours) parts.push('🔴 支付停滞 '+fmtHrs(ps.stagnant_hours)+' · '+(ps.thresholds_breached?.length||0)+' 个阈值已破 · 不可逆防线 8/27 23:00 倒计时');
+  if(ps.plan_c_delayed_hours) parts.push('🔴 Plan C 裁决已出 ~'+fmtHrs(ps.plan_c_delayed_hours)+' 但执行零 · ¥500 未释放');
+  if(rd.frozen_bucket) parts.push('🟠 产研桶 ¥'+rd.frozen_bucket+' 冻结 '+rd.frozen_days+' 天');
+  if(hi.key_risk) parts.push('⚠️ '+hi.key_risk.slice(0,200));
+  if(parts.length){
+    b.innerHTML = '<div class="banner">'+parts.map(esc).join('\n')+'</div>';
+  } else {
+    b.innerHTML = '';
+  }
+}
+
+function renderFinished(list){
+  const grid = document.getElementById('finished-grid');
+  document.getElementById('finished-empty').style.display = list.length?'none':'block';
+  if(!list.length){grid.innerHTML='';return}
+  grid.innerHTML = list.map(p=>{
+    const cvr = p.overall_cvr_estimated;
+    const refund = p.refund_rate;
+    const share = p.personality_revenue_share||{};
+    const topShare = Object.entries(share).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,v])=>k+' '+(v*100).toFixed(0)+'%').join(' · ');
+    return `<div class="card" onclick="openModal('${esc(p.key)}')">
+      <div class="pkey">${esc(p.key)} · ${esc(p.status||'')} · 收入贡献 ${fmtPct(p.revenue_contribution_pct)}</div>
+      <div class="name">${esc(p.name)}</div>
+      <div class="price">¥${esc(p.price)}</div>
+      <div class="badges">${lifecycleBadge(p)}<span class="badge active">在售</span></div>
+      <div class="kv">
+        <span class="cell">整体CVR <b>${fmtPct(cvr)}</b></span>
+        <span class="cell">退款率 <b>${fmtPct(refund)}</b></span>
+      </div>
+      ${topShare?'<div class="kv"><span class="cell">收入主力 <b>'+esc(topShare)+'</b></span></div>':''}
+    </div>`;
+  }).join('');
+}
+
+function renderDirections(list){
+  const grid = document.getElementById('directions-grid');
+  document.getElementById('directions-empty').style.display = list.length?'none':'block';
+  if(!list.length){grid.innerHTML='';return}
+  grid.innerHTML = list.map(p=>{
+    const lc = p.lifecycle||'';
+    const price = p.price!=null?('¥'+p.price):(p.price_range?('¥'+p.price_range[0]+'–'+p.price_range[1]):'—');
+    const reg = p.regular_price?('<span class="reg">¥'+p.regular_price+'</span>'):'';
+    const pr = p.priority?('<span class="badge '+(p.priority==='P1'?'p1':'p2')+'">'+esc(p.priority)+'</span>'):'';
+    const targets = (p.target_personalities||[]).map(t=>'<span class="cell">'+esc(t)+'</span>').join('');
+    const blocked = p.blocked_by || (p.activation_blocked_by||[]);
+    let blockedHtml='';
+    if(typeof blocked==='string' && blocked){blockedHtml='<div class="blocklist">🔒 '+esc(blocked)+'</div>';}
+    else if(Array.isArray(blocked) && blocked.length){blockedHtml='<div class="blocklist">🔒 '+blocked.map(esc).join(' · ')+'</div>';}
+    const pct = p.completion_pct;
+    const progress = (pct!=null)?('<div class="progress"><div class="bar" style="width:'+pct+'%"></div></div>'):'';
+    return `<div class="card" onclick="openModal('${esc(p.key)}')">
+      <div class="pkey">${esc(p.key)} · ${esc(p.status||'')}</div>
+      <div class="name">${esc(p.name)}</div>
+      <div class="price">${price}${reg}</div>
+      <div class="badges">${lifecycleBadge(p)}${pr}${pct!=null?'<span class="badge dev">完成度 '+pct+'%</span>':''}</div>
+      ${progress}
+      ${targets?'<div class="kv">'+targets+'</div>':''}
+      ${blockedHtml}
+    </div>`;
+  }).join('');
+}
+
+function field(k,v){return '<div class="field"><div class="k">'+esc(k)+'</div><div class="v">'+esc(v)+'</div></div>'}
+function table(rows){return '<table class="mini">'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table>'}
+
+function openModal(key){
+  const p = (DATA.finished||[]).concat(DATA.directions||[]).find(x=>x.key===key);
+  if(!p) return;
+  document.getElementById('modal-bg').classList.add('open');
+  document.getElementById('m-title').textContent = (p.key||'')+' · '+(p.name||'');
+  document.getElementById('m-badges').innerHTML = lifecycleBadge(p)+
+    (p.priority?'<span class="badge '+(p.priority==='P1'?'p1':'p2')+'">'+esc(p.priority)+'</span>':'')+
+    (p.price!=null?'<span class="badge">¥'+esc(p.price)+'</span>':'');
+  const rows=[];
+  if(p.regular_price) rows.push(['原价','¥'+p.regular_price]);
+  if(p.price_range) rows.push(['价格区间','¥'+p.price_range[0]+' – ¥'+p.price_range[1]]);
+  if(p.status) rows.push(['状态',p.status]);
+  if(p.lifecycle) rows.push(['生命周期',p.lifecycle]);
+  if(p.completion_pct!=null) rows.push(['完成度',p.completion_pct+'%']);
+  if(p.overall_cvr_estimated!=null) rows.push(['整体 CVR',fmtPct(p.overall_cvr_estimated)]);
+  if(p.revenue_contribution_pct!=null) rows.push(['收入贡献',fmtPct(p.revenue_contribution_pct)]);
+  if(p.refund_rate!=null) rows.push(['退款率',fmtPct(p.refund_rate)+(p.refund_rate_status?'（'+p.refund_rate_status+'）':'')]);
+  if(p.expected_upgrade_rate!=null) rows.push(['预期升级率',fmtPct(p.expected_upgrade_rate)]);
+  if(p.cumulative_internal_upgrades!=null) rows.push(['内部升级累计',p.cumulative_internal_upgrades+' 单 / ¥'+(p.cumulative_internal_revenue||0)]);
+  if(p.target_market!=null) rows.push(['目标市场',p.target_market]);
+  if(p.expected_arpu!=null) rows.push(['预期 ARPU','¥'+p.expected_arpu]);
+  if(p.required_plan_c_release!=null) rows.push(['Plan C 需释放','¥'+p.required_plan_c_release]);
+  if(p.batch_evaluation!=null) rows.push(['批次评估','第 '+p.batch_evaluation+' 批']);
+
+  let html = rows.map(r=>field(r[0],r[1])).join('');
+
+  if(p.personality_cvr){
+    html += '<div class="sec-title">分人格 CVR</div>';
+    html += table([['人格','CVR'],...Object.entries(p.personality_cvr).map(([k,v])=>[k,fmtPct(v)])]);
+  }
+  if(p.personality_revenue_share){
+    html += '<div class="sec-title">分人格收入占比</div>';
+    html += table([['人格','占比'],...Object.entries(p.personality_revenue_share).map(([k,v])=>[k,fmtPct(v)])]);
+  }
+  if(p.upgrade_by_personality_expected){
+    html += '<div class="sec-title">分人格预期升级率</div>';
+    html += table([['人格','预期'],...Object.entries(p.upgrade_by_personality_expected).map(([k,v])=>[k,fmtPct(v)])]);
+  }
+  if(p.top_refund_reasons && p.top_refund_reasons.length){
+    html += '<div class="sec-title">Top 退款原因</div>';
+    html += table([['原因','占比'],...p.top_refund_reasons.map(r=>[r.reason,fmtPct(r.pct)])]);
+  }
+  if(p.target_personalities && p.target_personalities.length){
+    html += '<div class="sec-title">目标人格</div><div class="v">'+esc(p.target_personalities.join(' · '))+'</div>';
+  }
+  const blocked = p.blocked_by || p.activation_blocked_by;
+  if(blocked){
+    const bl = Array.isArray(blocked)?blocked:[blocked];
+    html += '<div class="sec-title">卡点 / 阻塞</div>'+bl.map(x=>'<div class="field"><div class="v" style="color:var(--red)">🔒 '+esc(x)+'</div></div>').join('');
+  }
+  if(p.purchase_page_status) html += field('购买页状态', p.purchase_page_status);
+  if(!rows.length && !p.personality_cvr) html += '<div class="field"><div class="v">（无额外字段）</div></div>';
+  document.getElementById('m-body').innerHTML = html;
+}
+
+function closeModal(){document.getElementById('modal-bg').classList.remove('open')}
+function switchTab(tab){
+  document.getElementById('tab-finished').classList.toggle('active', tab==='finished');
+  document.getElementById('tab-directions').classList.toggle('active', tab==='directions');
+  document.getElementById('panel-finished').style.display = tab==='finished'?'':'none';
+  document.getElementById('panel-directions').style.display = tab==='directions'?'':'none';
+}
+document.getElementById('modal-bg').addEventListener('click',e=>{if(e.target.id==='modal-bg')closeModal()});
+document.getElementById('tab-finished').addEventListener('click', ()=>switchTab('finished'));
+document.getElementById('tab-directions').addEventListener('click', ()=>switchTab('directions'));
+load();
+</script>
+</body>
+</html>
