@@ -140,13 +140,13 @@
   },
   "pipeline": {
     "delivered": [
-      "S1"
+      "S1",
+      "S2"
     ],
     "active": [
       "L1"
     ],
     "design": [
-      "S2",
       "S3"
     ],
     "refactored_one_time": [
@@ -158,7 +158,7 @@
     "total_products": 8,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·全部可产出即交付"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·全部可产出即交付·S2依恋积分卡已交付"
   },
   "finished": [
     {
@@ -243,6 +243,39 @@
           "url": "files/scorecard-v1/personality-scorecard-v1.html"
         }
       ]
+    },
+    {
+      "name": "依恋类型积分卡",
+      "form": [
+        "CSV电子表格",
+        "可交互静态HTML"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "csv": "workspace-shared/pools/products/attachment-scorecard/attachment-scorecard-v1.csv",
+        "html": "workspace-shared/pools/products/attachment-scorecard/attachment-scorecard-v1.html"
+      },
+      "direction_evidence": "内容池依恋母题连续5批(金龟子婚纱照7·安全型依恋·INFP/ENFP标注)·AA制40年9分三型全映射·3孩非亲生8婚姻信任·跳江又游回8荒诞情绪诚实·女儿过夜8家庭边界·外部热点验证(安全/焦虑/回避/恐惧四型内容高热度)",
+      "content": "四型(安全/焦虑/回避/恐惧)×双轴(亲密焦虑×亲密回避)+自我/他人模型·核心模式/冲突反应/需求表达/边界/优势/盲区·内容池母题佐证·MBTI映射(观测标注非全量)·匹配建议",
+      "framework": "Bartholomew & Horowitz 成人依恋双模型（非诊断工具）",
+      "double_person_plan": "v1.1 双人对照形态（情侣各填一张→关系兼容积分）·待产出",
+      "priority": "P1",
+      "note": "路径契约：直接落 workspace-shared/pools/products/attachment-scorecard/（大卡 2026-08-21 回执）",
+      "key": "S2",
+      "deliverable_urls": [
+        {
+          "type": "csv",
+          "relpath": "attachment-scorecard/attachment-scorecard-v1.csv",
+          "url": "files/attachment-scorecard/attachment-scorecard-v1.csv"
+        },
+        {
+          "type": "html",
+          "relpath": "attachment-scorecard/attachment-scorecard-v1.html",
+          "url": "files/attachment-scorecard/attachment-scorecard-v1.html"
+        }
+      ]
     }
   ],
   "directions": [
@@ -317,21 +350,6 @@
       "refactor_plan": "重构为30天成长打卡卡(模板·一次性交付)·对齐内容池'自我觉醒'方向(大提琴老师馒头9分旗舰)·不等待产研桶",
       "unblocked_by_strategy_v2": true,
       "key": "L3-C",
-      "deliverable_urls": []
-    },
-    {
-      "name": "依恋类型积分卡",
-      "form": [
-        "CSV电子表格",
-        "可交互静态HTML"
-      ],
-      "price_note": "定价权属策策",
-      "status": "direction_verified_pending_production",
-      "lifecycle": "design",
-      "direction_evidence": "内容池依恋母题连续5批(金龟子婚纱照7·安全型依恋·INFP/ENFP标注)·外部热点验证(安全/焦虑/回避/恐惧四型内容高热度·公众号/头条/B站持续出圈)",
-      "content_plan": "四型(安全/焦虑/回避/恐惧)×亲密关系维度积分卡·含双人对照卡形态(情侣各填一张·输出关系兼容积分)",
-      "priority": "P1",
-      "key": "S2",
       "deliverable_urls": []
     },
     {

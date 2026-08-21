@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>依恋类型积分卡 v1.0 · 四型对照 · 一次性交付版</title>
+<style>
+  :root { --bg:#f6f4ef; --card:#fff; --ink:#2b2b2b; --accent:#c96f4a; --muted:#8a857d; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:24px; }
+  .wrap { max-width:980px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:6px 0 20px; line-height:1.7; }
+  .toolbar { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px; align-items:center; }
+  .type-btn { padding:10px 18px; border-radius:999px; border:2px solid #ddd5c9; background:#fff; font-size:14px; cursor:pointer; transition:.15s; }
+  .type-btn.active { border-color:var(--accent); background:#f7ede6; color:var(--accent); font-weight:700; }
+  .card { background:var(--card); border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:16px; }
+  .head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .type-badge { font-size:26px; font-weight:800; color:var(--accent); }
+  .en { font-size:13px; color:var(--muted); }
+  .axis-row { display:flex; gap:20px; margin:14px 0; flex-wrap:wrap; }
+  .axis-box { flex:1; min-width:180px; background:#faf7f1; border-radius:10px; padding:14px; }
+  .axis-label { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .axis-val { font-size:18px; font-weight:700; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#faf7f1; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:14px; line-height:1.7; }
+  .pool-quote { border-left:3px solid var(--accent); padding-left:12px; font-size:13px; line-height:1.8; color:#5a5a5a; background:#fdf6f0; border-radius:0 8px 8px 0; padding:10px 12px; margin-top:14px; }
+  .warn { font-size:12px; color:#8a6d3b; background:#fdf6ec; border:1px solid #ecd9b8; border-radius:8px; padding:10px 14px; margin-top:12px; line-height:1.7; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:24px; line-height:1.8; }
+  #matrix { display:block; margin:0 auto; max-width:420px; width:100%; }
+  .matrix-wrap { text-align:center; }
+  .quad-label { font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>依恋类型积分卡 · Attachment Type Scorecard</h1>
+  <div class="sub">一次性交付版 v1.0 · 四型对照（安全 / 焦虑 / 回避 / 恐惧）· 双轴模型：亲密焦虑度 × 亲密回避度（Bartholomew &amp; Horowitz）· 内容池佐证：设设 D21 依恋母题连续 5 批</div>
+
+  <div class="toolbar" id="btns"></div>
+
+  <div class="card">
+    <div class="head">
+      <span class="type-badge" id="typeBadge">安全型</span>
+      <span class="en" id="typeEn">Secure</span>
+    </div>
+    <div class="axis-row">
+      <div class="axis-box"><div class="axis-label">亲密焦虑度</div><div class="axis-val" id="axAnx">低</div></div>
+      <div class="axis-box"><div class="axis-label">亲密回避度</div><div class="axis-val" id="axAvd">低</div></div>
+      <div class="axis-box"><div class="axis-label">自我模型</div><div class="axis-val" id="axSelf">高（值得被爱）</div></div>
+      <div class="axis-box"><div class="axis-label">他人模型</div><div class="axis-val" id="axOther">高（他人可信赖）</div></div>
+    </div>
+    <div class="matrix-wrap">
+      <canvas id="matrix" width="420" height="320"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="grid2">
+      <div class="cell"><h3>核心模式</h3><p id="cCore"></p></div>
+      <div class="cell"><h3>冲突反应</h3><p id="cConflict"></p></div>
+      <div class="cell"><h3>需求表达</h3><p id="cNeed"></p></div>
+      <div class="cell"><h3>边界形态</h3><p id="cBoundary"></p></div>
+      <div class="cell"><h3>优势</h3><p id="cStrength"></p></div>
+      <div class="cell"><h3>盲区</h3><p id="cBlind"></p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sub" style="margin:0 0 8px;">内容池母题佐证（设设 D21 依恋母题叙事提炼）</div>
+    <div class="pool-quote" id="cPool"></div>
+    <div class="warn" id="cMbti"></div>
+    <div class="sub" style="margin-top:10px;">匹配建议：<span id="cMatch"></span></div>
+  </div>
+
+  <div class="footer">
+    依恋类型积分卡 v1.0 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-21<br>
+    策略依据：河山签发《产品开发策略 v1.0》· 理论框架：成人依恋双模型（非诊断工具）· MBTI 映射为内容池观测非全量测量
+  </div>
+</div>
+
+<script>
+const TYPES = [{"key": "secure", "name": "安全型", "en": "Secure", "emoji": "🟢", "axis": {"anxiety": "低", "avoidance": "低"}, "model": {"self": "高（值得被爱）", "other": "高（他人可信赖）"}, "core": "情感稳固支点：能靠近也能独立，冲突后能修复，信任可预期", "conflict": "就事论事·不升级为人身攻击·主动修复", "need": "敢直接表达需要·不怕被拒绝", "boundary": "亲密与独立并存·不靠捆绑维持", "strength": "关系续航力最强·冲突修复率高", "blind": "可能低估关系风险·对他人恶意缺乏防御", "content_pool": "金龟子38年补拍婚纱照（D21-B12·8.7分旗舰）·四个儿子争养95岁母亲（D21-B8）·\"真正的爱不是证明给谁看，是38年后还愿意为彼此补上那个「我们」的瞬间\"", "mbti_map": "内容池观测：Fi/Fe 主导型（INFP/ENFP/INFJ/ENFJ）在安全型叙事下共鸣最强·非全量数据·仅供参考", "match": "相处最省力·适合任何类型长期关系"}, {"key": "anxious", "name": "焦虑型", "en": "Anxious (Preoccupied)", "emoji": "🟠", "axis": {"anxiety": "高", "avoidance": "低"}, "model": {"self": "低（怕不被爱）", "other": "高（渴望靠近）"}, "core": "需要反复确认被爱·对冷淡信号高度敏感·越怕失去越用力抓", "conflict": "容易把小事读成\"不爱了\"·情绪强度大·需要立刻解决", "need": "反复求证·需要回应速度和确定感", "boundary": "边界容易融化·过度付出换安全感", "strength": "情感投入深·对关系温度极敏感·愿意为修复付出", "blind": "过度解读·自我价值过度绑定关系·容易消耗对方", "content_pool": "AA制吵40年（D21-B3·9分·焦虑型映射：\"你坚持AA，到底是在保护自己，还是在推开那个愿意为你亏钱的人\"）·七夕红包520（D21-B10·被打开的不是功能是\"你在乎\"）", "mbti_map": "内容池观测：Fi 高度敏感型（INFP/ENFP）焦虑叙事共鸣强·非全量数据·仅供参考", "match": "配安全型最稳·配回避型最痛（追-逃循环）"}, {"key": "avoidant", "name": "回避型", "en": "Avoidant (Dismissive)", "emoji": "🔵", "axis": {"anxiety": "低", "avoidance": "高"}, "model": {"self": "高（过度独立）", "other": "低（他人不可靠）"}, "core": "以独立为铠甲·亲密升温时本能后退·\"我一个人更安全\"", "conflict": "冷处理·回避对话·用忙/累当缓冲带", "need": "空间·不需要随时回应·讨厌被捆绑", "boundary": "边界极硬·亲密需求被压到很低", "strength": "情绪稳定·不粘人·大事扛得住", "blind": "压抑依恋需求·伴侣感到被推开·距离越来越远", "content_pool": "跳江又游回来（D21-B8·8分旗舰·\"情绪洪水涨潮退潮\"·亲密关系计量单位=中间那一晚）·女儿过夜被拒（D21-B4·家庭边界两种爱的语言）", "mbti_map": "内容池观测：独立叙事在 T 主导/高 ST 类型共鸣（ENTP/ISTJ 相关叙事）·非全量数据·仅供参考", "match": "遇焦虑型形成追-逃循环·需刻意练习\"靠近\""}, {"key": "fearful", "name": "恐惧型", "en": "Fearful-Avoidant (Disorganized)", "emoji": "🔴", "axis": {"anxiety": "高", "avoidance": "高"}, "model": {"self": "低（怕被弃）", "other": "低（怕被伤）"}, "core": "既渴望亲密又害怕受伤·靠近-推开的循环·最消耗的关系模式", "conflict": "忽冷忽热·先推开再后悔·情绪过山车", "need": "既想要确定感又想要自由·自己也不清楚", "boundary": "边界摇摆·时融时硬", "strength": "深度洞察关系动力·经历过最痛所以最懂修复的价值", "blind": "关系模式反复·伴侣困惑疲惫·最需要专业/刻意练习", "content_pool": "3孩非亲生案（D21-B9·8分旗舰·\"最深的伤口不是被欺骗，是「这些年信着的只有我」\"·信任崩塌后\"我还能不能信\"）", "mbti_map": "内容池观测：创伤/信任主题叙事在 NF 深度解读类型共鸣·非全量数据·仅供参考", "match": "最需要先自我修复再进入关系·建议配安全型+专业支持"}];
+
+const btns = document.getElementById('btns');
+TYPES.forEach(t => {
+  const b = document.createElement('button');
+  b.className = 'type-btn'; b.textContent = t.emoji + ' ' + t.name;
+  b.dataset.key = t.key;
+  b.addEventListener('click', () => render(t.key));
+  btns.appendChild(b);
+});
+
+function drawMatrix(t) {
+  const cv = document.getElementById('matrix');
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height;
+  const ox = 90, oy = 30, w = 280, h = 230; // plot area
+  ctx.clearRect(0,0,W,H);
+  // quadrant backgrounds
+  ctx.fillStyle = '#f2efe7'; ctx.fillRect(ox, oy, w/2, h/2);          // low-low (secure)
+  ctx.fillStyle = '#f9e8de'; ctx.fillRect(ox+w/2, oy, w/2, h/2);      // high anx low avd (anxious)
+  ctx.fillStyle = '#e3e9f0'; ctx.fillRect(ox, oy+h/2, w/2, h/2);      // low anx high avd (avoidant)
+  ctx.fillStyle = '#f3e0e0'; ctx.fillRect(ox+w/2, oy+h/2, w/2, h/2);  // high-high (fearful)
+  // axes
+  ctx.strokeStyle = '#999'; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(ox, oy+h/2); ctx.lineTo(ox+w, oy+h/2); ctx.stroke(); // anxiety axis
+  ctx.beginPath(); ctx.moveTo(ox+w/2, oy); ctx.lineTo(ox+w/2, oy+h); ctx.stroke(); // avoidance axis
+  ctx.font = '12px sans-serif'; ctx.fillStyle = '#8a857d';
+  ctx.textAlign = 'center';
+  ctx.fillText('低焦虑 ← 亲密焦虑度 → 高焦虑', ox+w/2, oy+h+18);
+  ctx.save(); ctx.translate(ox-14, oy+h/2); ctx.rotate(-Math.PI/2); ctx.fillText('低回避 ← 亲密回避度 → 高回避', 0, 0); ctx.restore();
+  // quadrant labels
+  ctx.fillStyle = '#6a6a6a';
+  ctx.fillText('安全型', ox+w/4, oy+h/4);
+  ctx.fillText('焦虑型', ox+3*w/4, oy+h/4);
+  ctx.fillText('回避型', ox+w/4, oy+3*h/4);
+  ctx.fillText('恐惧型', ox+3*w/4, oy+3*h/4);
+  // marker
+  const pos = {'secure':[0.25,0.25], 'anxious':[0.75,0.25], 'avoidant':[0.25,0.75], 'fearful':[0.75,0.75]}[t.key];
+  const mx = ox + pos[0]*w, my = oy + pos[1]*h;
+  ctx.beginPath(); ctx.arc(mx, my, 9, 0, Math.PI*2);
+  ctx.fillStyle = '#c96f4a'; ctx.fill();
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 3; ctx.stroke();
+}
+
+function render(key) {
+  const t = TYPES.find(x => x.key === key);
+  document.querySelectorAll('.type-btn').forEach(b => b.classList.toggle('active', b.dataset.key === key));
+  document.getElementById('typeBadge').textContent = t.name;
+  document.getElementById('typeEn').textContent = t.en;
+  document.getElementById('axAnx').textContent = t.axis.anxiety;
+  document.getElementById('axAvd').textContent = t.axis.avoidance;
+  document.getElementById('axSelf').textContent = t.model.self;
+  document.getElementById('axOther').textContent = t.model.other;
+  document.getElementById('cCore').textContent = t.core;
+  document.getElementById('cConflict').textContent = t.conflict;
+  document.getElementById('cNeed').textContent = t.need;
+  document.getElementById('cBoundary').textContent = t.boundary;
+  document.getElementById('cStrength').textContent = t.strength;
+  document.getElementById('cBlind').textContent = t.blind;
+  document.getElementById('cPool').textContent = t.content_pool;
+  document.getElementById('cMbti').textContent = t.mbti_map;
+  document.getElementById('cMatch').textContent = t.match;
+  drawMatrix(t);
+}
+render('secure');
+</script>
+</body>
+</html>
