@@ -94,12 +94,9 @@ table.mini td{padding:4px 8px;border-bottom:1px solid var(--border)}
 </div>
 
 <div class="tab-panel" id="panel-directions" style="display:none">
-  <div class="sec-title">在研 + 重构 · 尚未可售卖</div>
+  <div class="sec-title">产品方向 · 统一池（在研 + 候选 = 同一件事）</div>
   <div class="grid" id="directions-grid"></div>
   <div class="empty" id="directions-empty" style="display:none"><div class="icon">🧭</div>暂无产品方向</div>
-  <div class="sec-title" style="margin-top:22px">🧭 方向候选池（已找到 · 待选型）</div>
-  <div class="grid" id="candidates-grid"></div>
-  <div class="empty" id="candidates-empty" style="display:none"><div class="icon">🧭</div>暂无候选</div>
 </div>
 
 <div class="modal-bg" id="modal-bg">
@@ -141,8 +138,7 @@ function load(){
     DATA = d;
     renderStats(d);
     renderFinished(d.finished||[]);
-    renderDirections(d.directions||[]);
-    renderCandidates(d.candidates||[]);
+    renderDirections(d.directions||[], d.candidates||[]);
   }).catch(e=>{
     document.getElementById('banner').innerHTML='<div class="banner">⚠️ 加载失败：'+esc(e.message)+'</div>';
   });
@@ -153,7 +149,7 @@ function renderStats(d){
   const rd = d.rd_budget||{};
   const hi = d.health_indicators||{};
   const finished = d.finished||[];
-  const directions = d.directions||[];
+  const directions = (d.directions||[]).concat(d.candidates||[]);
   const total = d.total||0;
   document.getElementById('finished-count').textContent = '('+finished.length+' 个)';
   document.getElementById('directions-count').textContent = '('+directions.length+' 个)';
@@ -212,57 +208,56 @@ function renderFinished(list){
   }).join('');
 }
 
-function renderDirections(list){
+function renderDirections(list, candidates){
   const grid = document.getElementById('directions-grid');
-  document.getElementById('directions-empty').style.display = list.length?'none':'block';
-  if(!list.length){grid.innerHTML='';return}
-  grid.innerHTML = list.map(p=>{
-    const lc = p.lifecycle||'';
-    const price = p.price!=null?('¥'+p.price):(p.price_range?('¥'+p.price_range[0]+'–'+p.price_range[1]):'—');
-    const reg = p.regular_price?('<span class="reg">¥'+p.regular_price+'</span>'):'';
-    const pr = p.priority?('<span class="badge '+(p.priority==='P1'?'p1':'p2')+'">'+esc(p.priority)+'</span>'):'';
-    const targets = (p.target_personalities||[]).map(t=>'<span class="cell">'+esc(t)+'</span>').join('');
-    const blocked = p.blocked_by || (p.activation_blocked_by||[]);
-    let blockedHtml='';
-    if(typeof blocked==='string' && blocked){blockedHtml='<div class="blocklist">🔒 '+esc(blocked)+'</div>';}
-    else if(Array.isArray(blocked) && blocked.length){blockedHtml='<div class="blocklist">🔒 '+blocked.map(esc).join(' · ')+'</div>';}
-    const pct = p.completion_pct;
-    const progress = (pct!=null)?('<div class="progress"><div class="bar" style="width:'+pct+'%"></div></div>'):'';
-    return `<div class="card" onclick="openModal('${esc(p.key)}')">
-      <div class="pkey">${esc(p.key)} · ${esc(p.status||'')}</div>
-      <div class="name">${esc(p.name)}</div>
-      <div class="price">${price}${reg}</div>
-      <div class="badges">${lifecycleBadge(p)}${pr}${pct!=null?'<span class="badge dev">完成度 '+pct+'%</span>':''}</div>
-      ${progress}
-      ${targets?'<div class="kv">'+targets+'</div>':''}
-      ${blockedHtml}
-    </div>`;
-  }).join('');
+  // 方向候选池 = 产品方向（同一件事·统一池），合并到一个 grid
+  const cand = (candidates||[]).map(c=>Object.assign({}, c, {_candidate:true}));
+  const all = (list||[]).concat(cand);
+  document.getElementById('directions-empty').style.display = all.length?'none':'block';
+  if(!all.length){grid.innerHTML='';return}
+  grid.innerHTML = all.map(item=> item._candidate ? candidateCard(item) : directionCard(item)).join('');
 }
 
-function renderCandidates(list){
-  const grid = document.getElementById('candidates-grid');
-  document.getElementById('candidates-empty').style.display = list.length?'none':'block';
-  if(!list.length){grid.innerHTML='';return}
-  grid.innerHTML = list.map(c=>{
-    const pr = c.priority;
-    const prBadge = '<span class="badge '+(pr==='P0'?'p1':pr==='P1'?'p2':'concept')+'">'+esc(pr)+'</span>';
-    const st = c.status;
-    let stBadge;
-    if(st==='已交付') stBadge='<span class="badge active">已交付</span>';
-    else if(st==='备料完成') stBadge='<span class="badge dev">备料完成</span>';
-    else if(st==='候选') stBadge='<span class="badge concept">候选</span>';
-    else if(st==='并入') stBadge='<span class="badge">并入</span>';
-    else if(st==='等数据') stBadge='<span class="badge">等数据</span>';
-    else stBadge='<span class="badge">'+esc(st)+'</span>';
-    return `<div class="card" style="cursor:default">
-      <div class="pkey">${esc(c.id)} · ${esc(c.category||'')}</div>
-      <div class="name">${esc(c.name)}</div>
-      <div class="badges">${prBadge}${stBadge}${c.status_note?'<span class="badge">'+esc(c.status_note)+'</span>':''}</div>
-      ${c.form?'<div class="kv"><span class="cell">'+esc(c.form)+'</span></div>':''}
-      ${c.fun?'<div class="kv"><span class="cell">✨ '+esc(c.fun)+'</span></div>':''}
-    </div>`;
-  }).join('');
+function directionCard(p){
+  const price = p.price!=null?('¥'+p.price):(p.price_range?('¥'+p.price_range[0]+'–'+p.price_range[1]):'—');
+  const reg = p.regular_price?('<span class="reg">¥'+p.regular_price+'</span>'):'';
+  const pr = p.priority?('<span class="badge '+(p.priority==='P1'?'p1':'p2')+'">'+esc(p.priority)+'</span>'):'';
+  const targets = (p.target_personalities||[]).map(t=>'<span class="cell">'+esc(t)+'</span>').join('');
+  const blocked = p.blocked_by || (p.activation_blocked_by||[]);
+  let blockedHtml='';
+  if(typeof blocked==='string' && blocked){blockedHtml='<div class="blocklist">🔒 '+esc(blocked)+'</div>';}
+  else if(Array.isArray(blocked) && blocked.length){blockedHtml='<div class="blocklist">🔒 '+blocked.map(esc).join(' · ')+'</div>';}
+  const pct = p.completion_pct;
+  const progress = (pct!=null)?('<div class="progress"><div class="bar" style="width:'+pct+'%"></div></div>'):'';
+  return `<div class="card" onclick="openModal('${esc(p.key)}')">
+    <div class="pkey">${esc(p.key)} · ${esc(p.status||'')}</div>
+    <div class="name">${esc(p.name)}</div>
+    <div class="price">${price}${reg}</div>
+    <div class="badges">${lifecycleBadge(p)}${pr}${pct!=null?'<span class="badge dev">完成度 '+pct+'%</span>':''}</div>
+    ${progress}
+    ${targets?'<div class="kv">'+targets+'</div>':''}
+    ${blockedHtml}
+  </div>`;
+}
+
+function candidateCard(c){
+  const pr = c.priority;
+  const prBadge = '<span class="badge '+(pr==='P0'?'p1':pr==='P1'?'p2':'concept')+'">'+esc(pr)+'</span>';
+  const st = c.status;
+  let stBadge;
+  if(st==='已交付') stBadge='<span class="badge active">已交付</span>';
+  else if(st==='备料完成') stBadge='<span class="badge dev">备料完成</span>';
+  else if(st==='候选') stBadge='<span class="badge concept">候选</span>';
+  else if(st==='并入') stBadge='<span class="badge">并入</span>';
+  else if(st==='等数据') stBadge='<span class="badge">等数据</span>';
+  else stBadge='<span class="badge">'+esc(st)+'</span>';
+  return `<div class="card" style="cursor:default">
+    <div class="pkey">${esc(c.id)} · ${esc(c.category||'')}</div>
+    <div class="name">${esc(c.name)}</div>
+    <div class="badges">${prBadge}${stBadge}${c.status_note?'<span class="badge">'+esc(c.status_note)+'</span>':''}</div>
+    ${c.form?'<div class="kv"><span class="cell">'+esc(c.form)+'</span></div>':''}
+    ${c.fun?'<div class="kv"><span class="cell">✨ '+esc(c.fun)+'</span></div>':''}
+  </div>`;
 }
 
 function field(k,v){return '<div class="field"><div class="k">'+esc(k)+'</div><div class="v">'+esc(v)+'</div></div>'}
