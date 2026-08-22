@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-08-21-1900",
+    "id": "product-available-2026-08-22-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D21-B18·八月D21·周五·第二批交付"
+      "batch": "D22-B1·八月D22·周六"
     },
-    "created_at": "2026-08-21T16:30:00+08:00",
+    "created_at": "2026-08-22T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -47,7 +47,7 @@
       "purpose": "荐荐管理的产品目录池·策略v2.0：产品与支付脱钩·全部重构为一次性交付物·优先人格积分卡类·供策策/投投/控控/大卡/设设/析析消费",
       "excludes": "定价决策权(属策策·但定价不再作为交付前置)·内容生产权(属设设)·预算分配权(属大卡)",
       "action_threshold": {
-        "payment_uncoupled": "🔴 支付停滞~562h·18阈值全破·8/27 720h不可逆防线倒计时~6.1天·策略v2.0起产品交付不再等待支付·所有产品产出即交付",
+        "payment_uncoupled": "🔴 支付停滞~586h·19阈值全破·8/27 720h不可逆防线倒计时~5.6天·策略v2.0起产品交付不再等待支付·所有产品产出即交付",
         "l1_refactored": "L1深度人格报告交付侧改为一次性交付形态·不再等待支付·购买页不再作为交付前置",
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡·不再被Plan C/产研桶阻塞",
         "l3_refactored": "L3-A/B/C重构为一次性交付物·不再等待产研桶冻结释放",
@@ -55,14 +55,14 @@
         "s2_design": "S2依恋类型积分卡·方向已验证(内容池依恋母题连续5批+外部热点安全/焦虑/回避/恐惧四型)·待产出",
         "s3_design": "S3认知功能速查卡·方向已验证(内容池旗舰范式'0.3秒系统'叙事·8认知功能)·待产出",
         "product_retirement": "无产品需退役·L1主力转一次性交付·新增S系列积分卡产品线",
-        "552h_breached": "🔴🔴🔴🔴🔴 552h(23天)已破·18阈值全破·720h(30天)8/27 23:00为公认不可逆防线(~6.1天倒计时)",
-        "plan_c_ruling015_execution_zero_308h": "🔴 ruling-015执行仍零~308h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
-        "supply_collapse_block_rate_57pct": "🔴 D21-B12供给塌方·4臂blocked·block_rate 57.1%·内容池136>>25软上限CRITICAL(产品方向不受影响)",
-        "streak_broken": "🟡 strategy_match 66.7%·破8批100%连胜·但>50% match gate未触发",
-        "psych_engine_frozen_47d": "🔴 psych-engine results.jsonl冻结~48天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策(积分卡SP型标注待数据)",
+        "576h_breached": "🔴🔴🔴🔴🔴 576h(24天)已破·19阈值全破·720h(30天)8/27 23:00为公认不可逆防线(~5.6天倒计时)",
+        "plan_c_ruling015_execution_zero_332h": "🔴 ruling-015执行仍零~332h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
+        "supply_recovered_block_rate_0pct": "🟢 D21-B13供给修复·7臂满产·block_rate 0%·strategy_match连续2批100%·产品方向不受影响",
+        "streak_restored": "🟢 strategy_match 100%·连胜恢复连续2批·>50% match gate未触发",
+        "psych_engine_frozen_48d": "🔴 psych-engine results.jsonl冻结~48天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策(积分卡SP型标注待数据)",
         "content_ttl_relieved": "🟢 D21-B12 0/3臂TTL过期·3臂全fresh首用·TTL硬上限72h仍未enforce(ruling-015逾期13天)"
       },
-      "expires_after": "2026-08-22T16:30:00+08:00",
+      "expires_after": "2026-08-23T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -87,12 +87,25 @@
       "container_format": "统一vessel：题目→计分→结果卡→案例 + 双Tab（8题+双Tab记分卡引擎=集装箱规格·复用S1引擎）",
       "terminology": "「方向候选池」=「产品方向」（统一池·不另立名目）· 方向=待装配箱 · 成品=已发货箱",
       "product_pool": "集装箱码头：方向（待装配）+ 成品（已发货）"
+    },
+    "ontology_compliance": {
+      "principle": "#16 机制+主题插件系统·ontology 去 MBTI 化",
+      "ontology": "workspace-shared-knowledge/system/motif-need-ontology.json v1.0",
+      "rule": "产品产出保留 target_personalities（兼容）·新增 motif + need 字段",
+      "applied_at": "2026-08-22T00:18:00+08:00（迁移通知后对齐）"
+    },
+    "dimension_compliance": {
+      "taxonomy": "workspace-shared/pools/user-dimension-taxonomy.json v1.0",
+      "rule": "产品产出保留 target_personalities + motif + need（兼容）·新增 dimensions 标注目标人群维度",
+      "data_contract": "dimensions: {occupation:[\"white_collar\"], age:[\"y25_34\"]} 多选取数组",
+      "population_status": "taxonomy_only·待采集（析析/营营牵头·users.jsonl 无人口字段）",
+      "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D21-B18·第二批(#4/#5/N1)交付",
-  "timestamp": "2026-08-21T19:00:00+08:00",
+  "batch": "D22-B1·八月D22·周六",
+  "timestamp": "2026-08-22T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 562,
+    "stagnant_hours": 586,
     "thresholds_breached": [
       168,
       192,
@@ -111,22 +124,24 @@
       480,
       504,
       528,
-      552
+      552,
+      576
     ],
-    "thresholds_total": 18,
+    "thresholds_total": 19,
     "milestone_552h": "BREACHED at 2026-08-20T23:00:00+08:00·S1首次23天",
+    "milestone_576h": "BREACHED at 2026-08-21T23:00:00+08:00·S1首次24天",
     "next_threshold": {
-      "hours": 576,
-      "at": "2026-08-21T23:00:00+08:00",
-      "label": "24天"
+      "hours": 600,
+      "at": "2026-08-22T23:00:00+08:00",
+      "label": "25天"
     },
     "final_defense": {
       "hours": 720,
       "at": "2026-08-27T23:00:00+08:00",
-      "label": "30天·公认不可逆防线·~6.1天倒计时"
+      "label": "30天·公认不可逆防线·~5.6天倒计时"
     },
     "confirmed_revenue": 300.37,
-    "zero_settlement_batches": 36,
+    "zero_settlement_batches": 37,
     "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品"
   },
   "rd_budget": {
@@ -135,14 +150,14 @@
     "spent": 390,
     "remaining_cap": 110,
     "frozen_bucket": 1220,
-    "frozen_days": 23,
+    "frozen_days": 24,
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "d21_health": 5.0,
-    "trend": "strategy_v2_payment_uncoupled_s1_scorecard_delivered_l2_l3_refactored_one_time",
-    "key_risk": "支付停滞~562h·720h不可逆防线8/27倒计时~6.1天·Plan C执行零~308h·内容供给塌方(block_rate 57.1%)·psych-engine冻结48天(SP象限盲区·S1已标注待数据)·TTL硬上限未enforce",
-    "key_positive": "✅ 策略v2.0落地：产品与支付脱钩·S1人格积分卡v1.0已交付(CSV+HTML双形态·3,754用户真实数据)·L2/L3-A/B/C全部重构为一次性交付物·零支付阻塞产品·外部市场验证(Excel评分卡+依恋类型+认知功能三方向)·内容池+外部双渠道方向来源已启用"
+    "d22_health": 5.0,
+    "trend": "supply_recovered_7of7_streak_restored_100pct_user_insight_reconnected_but_576h_breached_19_thresholds_plan_c_zero_332h",
+    "key_risk": "支付停滞~586h·576h(24天)已破·19阈值全破·720h不可逆防线8/27倒计时~5.6天·Plan C执行零~332h·psych-engine冻结48天(SP象限盲区·S1已标注待数据)·ENFP信任下滑6.49-6.55需核查·TTL硬上限未enforce",
+    "key_positive": "✅ 策略v2.0落地：产品与支付脱钩·S1/S2/S3+#4/#5/N1记分卡全一次性交付·B13供给塌方彻底修复(满产7臂·0 block·连胜恢复100%)·析析18天停更后重连·双8分旗舰·ISTJ/INTP恢复·外部市场验证(Excel评分卡+依恋类型+认知功能三方向)·内容池+外部双渠道方向来源已启用"
   },
   "pipeline": {
     "delivered": [
@@ -188,6 +203,28 @@
       "interaction": "Tab A 8题选择→4觉醒类型(撕剧本/重启/和解/笃定)→觉醒宣言+行动建议·Tab B 四型标准卡+8经典案例(大提琴馒头9/王石9/41岁妈妈8.8)",
       "content_source": "内容池自我觉醒母题(10+旗舰)·诚实标注娱乐性自评",
       "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
+      "motif": "self_awakening",
+      "need": "self_confirm",
+      "target_personalities": [
+        "ENFP",
+        "INFP",
+        "ENTJ",
+        "INFJ"
+      ],
+      "motif_note": "觉醒时刻·撕剧本/重启/和解/笃定·大提琴馒头母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "freelancer",
+          "entrepreneur"
+        ],
+        "age": [
+          "y25_34",
+          "y35_44"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "#4",
       "deliverable_urls": [
         {
@@ -221,6 +258,27 @@
       "interaction": "Tab A 8题选择→4边界风格(守护/放养/平衡/妥协)→产品说明书格式(操作指南/注意事项/故障排除/保修条款)·Tab B 四型标准卡+6案例(女儿过夜9/争养母亲8.9/AA制9.2)",
       "content_source": "内容池家庭/边界母题(13条)·诚实标注娱乐性自评",
       "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
+      "motif": "growth",
+      "need": "be_seen",
+      "target_personalities": [
+        "INFJ",
+        "ENFJ",
+        "INFP"
+      ],
+      "motif_note": "边界说明书·家庭边界·被看见「我的爱有形状」",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "parenting",
+          "family_building",
+          "empty_nest"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "#5",
       "deliverable_urls": [
         {
@@ -264,6 +322,30 @@
         "INTP": 0.038,
         "other": 0.048
       },
+      "motif": "cognitive_deconstruction",
+      "need": "self_confirm",
+      "target_personalities": [
+        "INFP",
+        "INFJ",
+        "ENFP",
+        "INTJ",
+        "ENTJ",
+        "INTP"
+      ],
+      "motif_note": "深度人格报告·自我确认",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34",
+          "y35_44"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "L1",
       "deliverable_urls": []
     },
@@ -285,6 +367,31 @@
       "content_source": "内容池职业母题(17条9旗舰)+web MBTI职业规划·诚实标注娱乐性(非职业决策依据)",
       "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)",
       "priority": "P0·付费主力",
+      "motif": "career",
+      "need": "self_confirm",
+      "target_personalities": [
+        "ENTJ",
+        "INTJ",
+        "INTP",
+        "ENFP",
+        "ENFJ"
+      ],
+      "motif_note": "职业匹配·天赋矩阵·适合/回避·职场母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer",
+          "entrepreneur"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34",
+          "y35_44"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "N1",
       "deliverable_urls": [
         {
@@ -350,6 +457,43 @@
         "questions_source": "策策心因引擎题目（每维取1题·8题）",
         "upgrade_reserved": "16题完整版预留为未来付费升级钩子（河山拍板·不现在做）"
       },
+      "motif": "cognitive_deconstruction",
+      "need": "self_confirm",
+      "target_personalities": [
+        "INTJ",
+        "INTP",
+        "ENTJ",
+        "ENTP",
+        "INFJ",
+        "INFP",
+        "ENFJ",
+        "ENFP",
+        "ISTJ",
+        "ISFJ",
+        "ESTJ",
+        "ESFJ",
+        "ISTP",
+        "ISFP",
+        "ESTP",
+        "ESFP"
+      ],
+      "motif_note": "8维认知记分卡·确认「我是这样的」正常·认知解构自我",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34"
+        ],
+        "content_habit": [
+          "long_form",
+          "image_text"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "S1",
       "deliverable_urls": [
         {
@@ -417,6 +561,29 @@
         "interaction": "Tab A 8题(焦虑4+回避4)选择→双轴计分→四型结果·Tab B 四型标准档案+经典案例",
         "double_person": "双人版复用 couple-attachment-match（16组合矩阵·关系星座）"
       },
+      "motif": "attachment",
+      "need": "relationship_safety",
+      "target_personalities": [
+        "INFP",
+        "ENFP",
+        "INFJ",
+        "ENFJ"
+      ],
+      "motif_note": "四型依恋·关系安全感·金龟子婚纱照母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "early_career",
+          "established",
+          "family_building",
+          "parenting"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "S2",
       "deliverable_urls": [
         {
@@ -482,6 +649,41 @@
         "interaction": "Tab A 8题(每功能1题)选择→8功能排序→主/副/盲区·Tab B 8功能标准档案+经典案例",
         "honest_note": "理论框架+内容池观测·非个体心理测量·SP象限待数据"
       },
+      "motif": "cognitive_deconstruction",
+      "need": "be_understood",
+      "target_personalities": [
+        "INTJ",
+        "INTP",
+        "ENTJ",
+        "ENTP",
+        "INFJ",
+        "INFP",
+        "ENFJ",
+        "ENFP",
+        "ISTJ",
+        "ISFJ",
+        "ESTJ",
+        "ESFJ",
+        "ISTP",
+        "ISFP",
+        "ESTP",
+        "ESFP"
+      ],
+      "motif_note": "8认知功能·超能力/副作用·被理解自己的运行方式",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer"
+        ],
+        "content_habit": [
+          "long_form",
+          "image_text",
+          "short_video"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "S3",
       "deliverable_urls": [
         {
@@ -532,11 +734,35 @@
       "cumulative_internal_upgrades": 76,
       "cumulative_internal_revenue": 1517,
       "blocked_by_old": [
-        "支付~562h·18阈值全破",
-        "Plan C ruling-015执行零~308h·¥500未释放",
-        "产研桶¥1,220冻结Day23"
+        "支付~586h·19阈值全破",
+        "Plan C ruling-015执行零~332h·¥500未释放",
+        "产研桶¥1,220冻结Day24"
       ],
       "unblocked_by_strategy_v2": true,
+      "motif": "attachment",
+      "need": "relationship_safety",
+      "target_personalities": [
+        "INTJ",
+        "INFP",
+        "ENTJ",
+        "INFJ",
+        "ENFP",
+        "INTP"
+      ],
+      "motif_note": "关系图谱·重构为双人对照卡·关系安全感",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "early_career",
+          "established",
+          "family_building"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "L2",
       "deliverable_urls": []
     },
@@ -549,6 +775,23 @@
       "target_market": 5250,
       "expected_arpu": 1.77,
       "unblocked_by_strategy_v2": true,
+      "motif": "attachment",
+      "need": "relationship_safety",
+      "target_personalities": [],
+      "motif_note": "关系兼容性·重构为S2双人形态",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "early_career",
+          "established",
+          "family_building"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "L3-A",
       "deliverable_urls": []
     },
@@ -568,6 +811,22 @@
         "ENFJ"
       ],
       "unblocked_by_strategy_v2": true,
+      "motif": "career",
+      "need": "self_confirm",
+      "motif_note": "职业跃迁·重构为职业评分卡",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "entrepreneur",
+          "freelancer"
+        ],
+        "age": [
+          "y25_34",
+          "y35_44"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "L3-B",
       "deliverable_urls": []
     },
@@ -582,6 +841,23 @@
       "lifecycle": "refactored",
       "refactor_plan": "重构为30天成长打卡卡(模板·一次性交付)·对齐内容池'自我觉醒'方向(大提琴老师馒头9分旗舰)·不等待产研桶",
       "unblocked_by_strategy_v2": true,
+      "motif": "growth",
+      "need": "belonging",
+      "target_personalities": [],
+      "motif_note": "30天成长·重构为打卡卡·归属感",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
       "key": "L3-C",
       "deliverable_urls": []
     }
