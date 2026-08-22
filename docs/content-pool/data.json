@@ -1,32 +1,33 @@
 {
   "pool_status": {
-    "level": 136,
+    "level": 147,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池136>>25软上限·投投零部署为根因·非内容过剩·D21-B12大面积轮出批降产3臂fresh(ENFP反常识9+INFJ社会货币恢复+INFP恢复)·4臂待策略池B12·购买页~540h+·720h(8/27)倒计时~7天",
-    "last_creation": "2026-08-21T08:35:00+08:00",
-    "last_creation_batch": "D21-B12",
-    "last_deployment": "2026-08-21T09:25:00+08:00",
-    "last_deployment_batch": "D21-B12",
-    "net_change_this_batch": 3,
+    "warning": "🔴🔴 池147>>25软上限·投投零部署为根因·非内容过剩·D21-B13第二波轮出批满产7臂fresh(ENFP反常识8.8/INFJ情感共鸣9.0双旗舰+ISTJ/INTP双恢复+ENTP/ENTJ/INTJ)·方向船B13明令7臂全fresh(轮出必需)·豁免池水位降产·对冲走清stale并行",
+    "last_creation": "2026-08-22T08:30:00+08:00",
+    "last_creation_batch": "D21-B13",
+    "last_deployment": "2026-08-22T09:25:00+08:00",
+    "last_deployment_batch": "D21-B13",
+    "net_change_this_batch": 7,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 136,
+    "total_items": 147,
     "active_items": 84,
     "hook_conflict_items": 1,
-    "last_deployment_arms": 3,
-    "sheshe_supplement": "设设D21-B12大面积轮出批·降产3臂fresh(ENFP反常识9自我觉醒旗舰+INFJ社会货币恢复首触+INFP情感共鸣恢复首触)·direction-vessel/strategy-pool B12未生成·基于fresh direction-pool B12+signal-pool B12重建·社会货币3批冷却后恢复(张家界8)·INFP轮休2批后恢复(金龟子7)·4臂待策略池B12(ENTP身份认同/ENTJ好奇心/INTJ好奇心/ENFJ社会证明)·小红书post成品2条(ENFP+INFP)·平均q8.83",
-    "fresh_arms_this_batch": 3,
+    "last_deployment_arms": 7,
+    "sheshe_supplement": "设设D21-B12补产4臂fresh(ENFJ社会证明9蛋饼店主旗舰+ENTP身份认同8.8+ENTJ好奇心8.6+INTJ好奇心8.5)·补全大面积轮出批7臂矩阵·小红书post成品1条(ENFJ)·brief 4条全填实·修复INFJ/INFP臂序+INFP渠道对齐微博",
+    "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 15,
-      "brief_added": 21,
+      "posts_added": 16,
+      "brief_added": 25,
       "xhs_active_posts_completed": 11,
       "xhs_b10_posts_completed": 2,
-      "xhs_b12_posts_completed": 2,
-      "note": "小红书成品帖子v2.0持续落地·B12新增2条post(ENFP反常识+INFP情感共鸣)+3条brief·累计15post/21brief·body均为完整可发布正文·五字段全填实"
-    }
+      "xhs_b12_posts_completed": 3,
+      "note": "小红书成品帖子v2.0持续落地·B12累计3条post(ENFP反常识+INFP情感共鸣+ENFJ社会证明)+7条brief·body均为完整可发布正文·五字段全填实"
+    },
+    "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
   "items": [
     {
@@ -3875,7 +3876,7 @@
       "direction_hook": "社会货币",
       "batch": "D21-B12",
       "producer": "设设",
-      "arm_id": 3,
+      "arm_id": 4,
       "batch_num": 1,
       "flagship": false,
       "attachment_theory_resonance": false,
@@ -3907,7 +3908,7 @@
       "targets": [
         "INFP"
       ],
-      "channel": "小红书",
+      "channel": "微博",
       "quality": 8.7,
       "created": "2026-08-21T08:35:00+08:00",
       "ttl_hours": 72,
@@ -3922,7 +3923,7 @@
       "direction_hook": "情感共鸣",
       "batch": "D21-B12",
       "producer": "设设",
-      "arm_id": 7,
+      "arm_id": 6,
       "batch_num": 1,
       "flagship": false,
       "attachment_theory_resonance": true,
@@ -3959,11 +3960,582 @@
       "deployed_arm": 6,
       "actual_ctr": null,
       "actual_roi": null,
-      "writeback_note": "B12恢复首触fresh(金龟子7安全型依恋)·channel_dissent方向微博→内容小红书",
+      "writeback_note": "B12恢复首触fresh(金龟子7安全型依恋)·渠道已对齐方向船微博(原channel_dissent已修复)",
       "has_post": true
+    },
+    {
+      "id": "D21-B12-ENFJ-1",
+      "title": "给化疗患儿外卖里塞100块的蛋饼店主，被全网买到爆单——ENFJ没有把这当成一条\"好人好报\"的新闻。她的Fe系统在0.3秒里读懂了它为什么能刷屏：善良最稀缺的不是大小，是被看见、被接力，是一个人的善意在千万人手里滚成了一场温柔的雪崩",
+      "hook": "社会证明",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "created": "2026-08-21T10:08:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-ENFJ-1.json",
+      "paradigm": "社会证明·Fe暖意社会正向反馈型(ENFJ情感共鸣batch2达上限→轮出社会证明首触·蛋饼店主9旗舰·Fe共情:一个人匿名的善意被全网看见并接力=善良的社会证明·不judge不道德绑架·暖意母题轻量化解·蛋饼店主9分旗舰)",
+      "role": "P0·ENFJ社会证明batch1首触(情感共鸣batch2达上限→轮出社会证明)·蛋饼店主9旗舰·小红书Fe位·方向船key_decision'ENFJ社会证明(蛋饼店主9·暖意)'",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFJ的Fe最需要确认'善良会被看见、会被回应'——他们习惯默默付出、把别人的需求放前面，最怕'善意没有回声'；蛋饼店主偷偷塞钱给化疗患儿、被全网爆单支持，恰好补足ENFJ最渴望的信念：好人会有好报，善意会被社会接力。",
+        "hook_first3": "第一行'他往患儿外卖里塞了100块'抛善意悬念；第二行'然后，全网把他的店买爆了'点穿社会证明反转；第三行'ENFJ看到的不只是暖，是善良终于被回应'切人格视角。",
+        "emotion_curve": "心疼(化疗患儿) → 感动(偷偷塞钱) → 意外(被网友发现) → 温暖(全网爆单接力) → 信念(善良会有回声)。",
+        "structure": [
+          "钩子·善意悬念",
+          "现象·塞钱+爆单",
+          "洞察·善良被看见=社会证明",
+          "升华·一个人的善意会滚成温柔的雪崩",
+          "CTA·你最近一次被陌生人暖到"
+        ],
+        "differentiation": "别人写蛋饼店主讲'正能量/感动中国/好人好报'，我们讲'一次匿名善意被全网接力=善良的社会证明·善良有回声'；不做道德绑架('不接力就是冷漠')，不消费患儿苦难，不judge他人善意大小，落点'善良会被看见'。"
+      },
+      "last_used": "2026-08-21T12:00:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 2,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12b补部署·ENFJ社会证明batch1首触fresh(蛋饼店主9旗舰·晨间漏产补齐)",
+      "post": {
+        "cover_title": "他往患儿外卖塞了100块",
+        "body": "他往患儿的外卖里，塞了100块。\n\n没留名，没拍照，没声张。\n就是一个蛋饼店主，\n在送餐时，悄悄做的。\n\n后来被人发现，\n大家才知道，他一直在默默做。\n\n于是，全网把他的店买爆了。🔥\n\n很多人说：好人好报。\n\n但ENFJ看到的，是另一件事——\n\n善良最稀缺的，\n从来不是大小，\n是被看见。\n\n是一个人的善意，\n在千万人手里，\n滚成了一场温柔的雪崩。\n\n你没有义务做惊天动地的大事，\n但你的每一份善意，\n都可能在某一天，\n被这个世界温柔地接住。\n\n善良不是付出没有回声，\n它只是在等一个时机。💛\n\n你最近一次，\n被陌生人暖到，\n是什么时候？\n\n评论区，说说那个瞬间。👇",
+        "hashtags": [
+          "#ENFJ",
+          "#社会证明",
+          "#善良有回声",
+          "#正能量",
+          "#MBTI"
+        ],
+        "cover_visual": "一只外卖袋里露出一张100元钞票的一角，暖黄色调，旁边蒸腾的蛋饼热气与柔和晨光，画面配细字'善良会有回声'，温暖不煽情",
+        "cta": "你最近一次被陌生人暖到，是什么时候？评论区说说那个瞬间。",
+        "post_time": "18:00-20:00（社会正向/情感类·晚高峰温暖流量）",
+        "avoid": "不道德绑架('不接力就是冷漠')、不消费化疗患儿苦难细节、不judge他人善意大小、聚焦'善良被看见·善良有回声'"
+      },
+      "has_post": true
+    },
+    {
+      "id": "D21-B12-ENTP-1",
+      "title": "火车空位堆放零食，网友到底在争什么？——ENTP没有把这当成一条占座新闻。他的Ne-Ti系统在0.5秒里把它拆成了一个公共空间的规则命题：大家争的根本不是那几包零食，是\"在公共空间里，规则到底由谁来定义\"",
+      "hook": "身份认同",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "抖音",
+      "quality": 8.8,
+      "created": "2026-08-21T10:08:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-ENTP-1.json",
+      "paradigm": "身份认同·Ne公共规则辩论型(ENTP好奇心batch2达上限→轮出身份认同首触·火车空位8·Ne天然辩题:三张硬座票堆零食·网友争的不是零食·是'公共空间规则谁说了算'·Ti拆解规则边界·heat7.7M高争议)",
+      "role": "P0·ENTP身份认同batch1首触(好奇心batch2达上限→轮出身份认同)·火车空位8(公共规则辩论)·抖音Ne位·方向船key_decision'ENTP身份认同(火车空位8·公共规则辩论)'",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTP的Ne-Ti最享受'规则边界'的智力博弈——火车空位堆零食的争议，本质是'私人权利vs公共规则'的身份认同之争，正中ENTP爱拆解规则、爱辩题、爱'这背后到底是什么'的天性。",
+        "hook_first3": "第一行'三张硬座票，堆满零食'抛具体场景；第二行'网友争的到底是什么？'抛出辩题悬念；第三行'不是零食，是'谁有资格定义规则''切ENTP的Ne-Ti。",
+        "emotion_curve": "好奇(凭什么争) → 思辨(权利vs规则) → 会心(原来辩的是身份) → 兴奋(规则边界真有意思) → 参与(我也想说两句)。",
+        "structure": [
+          "钩子·场景悬念",
+          "现象·两派观点",
+          "洞察·争的是规则定义权",
+          "升华·公共空间的边界",
+          "CTA·你觉得座位能不能堆东西"
+        ],
+        "differentiation": "别人写火车空位讲'素质/占座/规则意识'，我们讲'一场全民辩论=身份认同的投射·每个人都在定义我是守规矩还是被欺负'；不做站队judge，不贩卖对立，落点'规则边界的思辨乐趣'。"
+      },
+      "last_used": "2026-08-21T12:00:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 3,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12b补部署·ENTP身份认同batch1首触fresh(火车空位8公共规则辩论)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B12-ENTJ-1",
+      "title": "余承东官宣\"无网通信\"行业首发——ENTJ没有把这当成一条科技快讯。他的Te系统在0.5秒里把它读成了一个战略信号：行业首发从来不是\"发布一个功能\"，是抢下一次技术标准的定义权，是先手者给后手者画好的棋盘",
+      "hook": "好奇心",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.6,
+      "created": "2026-08-21T10:08:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-ENTJ-1.json",
+      "paradigm": "好奇心·Te科技战略型(ENTJ反常识batch2达上限→轮出好奇心首触·余承东无网通信7·Te:行业首发=技术标准卡位·heat73M科技富集·Ni:无网通信背后是'离线连接'底层范式转移)",
+      "role": "P1·ENTJ好奇心batch1首触(反常识batch2达上限→轮出好奇心)·余承东无网通信7(科技战略)·抖音Te位·方向船key_decision'ENTJ好奇心(余承东7·科技)'",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ的Te最关注'谁在定义规则/谁抢到先手'——华为行业首发无网通信，本质是技术标准与战略卡位之争，正中ENTJ对'领先、卡位、先手'的敏感；他们想知道的不只是'这技术是什么'，更是'这步棋意味着什么'。",
+        "hook_first3": "第一行'没网，也能发消息'抛反常识悬念；第二行'华为首发无网通信'点穿主体；第三行'ENTJ看到的不是新闻，是一次卡位'切人格视角。",
+        "emotion_curve": "好奇(没网怎么通信) → 兴奋(技术突破) → 战略(卡位/标准) → 前瞻(范式转移) → 掌控(先手就是优势)。",
+        "structure": [
+          "钩子·反常识悬念",
+          "现象·无网通信是什么",
+          "洞察·行业首发=标准卡位",
+          "升华·离线连接的范式转移",
+          "CTA·你敢把信号交给无网吗"
+        ],
+        "differentiation": "别人写余承东讲'黑科技/华为牛/国产突破'，我们讲'行业首发=战略卡位·抢的是技术标准的定义权'；不做华为无脑吹/黑，不贩卖科技焦虑，落点'先手思维与标准卡位'。"
+      },
+      "last_used": "2026-08-21T12:00:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 5,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12b补部署·ENTJ好奇心batch1首触fresh(余承东7科技战略卡位)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B12-INTJ-1",
+      "title": "最强厄尔尼诺，或年底前形成——INTJ没有把这当成一条天气预警。他的Ni系统在0.5秒里把它读成了一张系统图：厄尔尼诺不是一场天气，是地球气候这个复杂系统的一次\"制度级\"震荡，看懂变量如何联动，才不会被情绪裹挟",
+      "hook": "好奇心",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-08-21T10:08:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B12-INTJ-1.json",
+      "paradigm": "好奇心·Ni制度深挖型(INTJ反常识batch2达上限→轮出好奇心首触·最强厄尔尼诺6·Ni:气候是复杂系统·厄尔尼诺=地球的'制度级'震荡·B站深度分析单一强臂·规避恐惧按钮/灾难贩卖)",
+      "role": "P1·INTJ好奇心batch1首触(反常识batch2达上限→轮出好奇心)·最强厄尔尼诺6(气候科学)·B站Ni位·方向船key_decision'INTJ好奇心(厄尔尼诺6·气候科学)'",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B12",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ的Ni最享受'复杂系统背后的底层机制'——厄尔尼诺不是一条天气新闻，是地球气候系统的周期性震荡，正中INTJ想看清'系统如何运转、变量如何联动'的深度需求；他们反感的不是灾害本身，是被情绪化叙事裹挟。",
+        "hook_first3": "第一行'最强厄尔尼诺，年底前可能形成'抛事实；第二行'它不是一场天气，是地球系统的震荡'点穿深度；第三行'INTJ看的是变量如何联动'切人格视角。",
+        "emotion_curve": "警觉(最强/年底) → 好奇(到底怎么形成) → 深挖(系统机制) → 洞察(变量联动) → 掌控(理解了就不慌)。",
+        "structure": [
+          "钩子·事实悬念",
+          "现象·厄尔尼诺是什么",
+          "洞察·复杂系统的周期性震荡",
+          "升华·看懂变量才不被情绪裹挟",
+          "CTA·你更关心哪个变量"
+        ],
+        "differentiation": "别人写厄尔尼诺讲'天气预警/高温洪水/恐慌'，我们讲'厄尔尼诺=地球气候系统的制度级震荡·看懂变量联动'；不做灾难贩卖(恐惧按钮规避)，不做气候焦虑，落点'系统思维与变量理解'。"
+      },
+      "last_used": "2026-08-21T12:00:00+08:00",
+      "deployed_batch": "D21-B12",
+      "deployed_arm": 7,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B12b补部署·INTJ好奇心batch1首触fresh(厄尔尼诺6气候科学)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B13-ENFP-1",
+      "title": "62岁，她生下了一个6斤的健康男婴——ENFP没有把这当成一条「高龄生育奇迹」的猎奇新闻。她的Fi系统读懂了这件事真正反常识的地方：所谓生命边界从来不是年龄，而是一个人还敢不敢对「可能」两个字点头",
+      "hook": "反常识",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.8,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-ENFP-1.json",
+      "paradigm": "反常识·Fi生命边界/母性光辉型(ENFP反常识batch2达上限·62岁孕妇8分旗舰·Fi生命奇迹:生命边界不是年龄是相信可能·反常识破'什么年龄该做什么事'的隐性规训·母性光辉温柔视角·严禁焦虑贩卖/高龄生育风险猎奇)",
+      "role": "P0·ENFP反常识batch2(达上限·B14必轮出)·62岁孕妇8旗舰·小红书Fi位·方向船key_decision'ENFP反常识batch2(62岁孕妇8·生命边界旗舰)'",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFP的Fi渴望确认'人生的可能性不该被年龄/社会时钟锁死'，最怕被'什么年纪该干什么事'的规训困住；62岁产妇挑战了所有人对'生命边界'的默认假设，恰好击中ENFP对'可能'的信仰。",
+        "hook_first3": "第一行'62岁，她生下了6斤的健康男婴'直接抛反常识事实；第二行'产科主任说，从没接诊过这个年纪的产妇'用权威口吻强化反差；第三行'但真正反常识的，不是年龄'切入Fi生命哲学。",
+        "emotion_curve": "惊讶(62岁生子) → 柔软(生命降临) → 触动(边界的重新定义) → 坚定(相信'可能') → 温暖(母性光辉)。",
+        "structure": [
+          "钩子·反常识事实",
+          "反差·医生从未接诊",
+          "洞察·边界是敢相信可能",
+          "升华·母性光辉与生命奇迹",
+          "CTA·你生命里最'不可能'的一次"
+        ],
+        "differentiation": "别人写高龄生育讲'风险/医学极限/猎奇'，我们讲'生命边界不是年龄，是一个人还敢不敢相信可能'；Fi温柔视角落点'生命奇迹与母性光辉'，绝不贩卖年龄焦虑、绝不渲染生育风险。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 1,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13第二波轮出批·ENFP反常识batch2续触fresh(62岁孕妇8旗舰·生命边界·达上限B14必轮出)",
+      "post": {
+        "cover_title": "62岁，她生下了健康男婴",
+        "body": "62岁。\n\n她生下了一个6斤的健康男婴。👶\n\n产科主任说，\n自己从没接诊过这个年纪的产妇。\n\n很多人第一反应是：\n「这不可能吧？」\n\n但ENFP看到的，\n是另一层东西——\n\n所谓「生命边界」，\n从来不是年龄那一栏数字，\n而是一个人，\n还敢不敢对「可能」两个字点头。\n\n我们总被一种声音追着跑：\n「什么年纪，就该做什么事」。\n\n好像过了某个点，\n人生的可能性就自动关机了。\n\n可这个孩子用第一声啼哭告诉你：\n生命这件事，\n从来不认时钟。🕊️\n\n它认的，\n是一个人对生命的渴望，\n和一个妈妈敢相信「我能」的勇气。\n\n所以别急着用年龄给自己设限。\n\n你生命里那些「不可能」，\n也许差的，\n只是你敢不敢点头。\n\n💬 你人生里，最「不可能」却做到了的事，\n是哪一件？\n评论区，说给我听。",
+        "hashtags": [
+          "#反常识",
+          "#生命奇迹",
+          "#MBTI",
+          "#ENFP",
+          "#自我成长"
+        ],
+        "cover_visual": "柔和晨光里，一双略显苍老却稳稳托着新生婴儿的手，暖调、安静、有母性光辉；画面留白，配大字『生命不认时钟』，治愈不煽情",
+        "cta": "你人生里最『不可能』却做到了的事，是哪一件？评论区说给我听。",
+        "post_time": "12:00-13:00（午间情绪高峰·治愈类）",
+        "avoid": "不渲染高龄生育医学风险、不做'高龄产子=危险'的焦虑暗示、不猎奇产妇年龄细节、不judge个人生育选择；聚焦'生命边界是敢相信可能'的生命奇迹与母性光辉"
+      },
+      "post_spec_version": "v2.0",
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B13-INFJ-1",
+      "title": "妻子怀着二胎，他偷刷了300万打赏女主播——INFJ没有把这当成一条「渣男该骂」的爽文。她的Ni-Fe系统读懂了这件事真正让人心寒的地方：背叛最残忍的从来不是钱，而是一个人在你最脆弱的孕期，把信任一点一点抽空",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 9.0,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe依恋背叛型(INFJ情感共鸣batch1首触·妻子300万8分旗舰·依恋类型引擎·Ni洞察:背叛的残忍不在钱在信任抽空·Fe共情受害者脆弱期·依恋母题连续6批·严禁道德审判受害者/渣男爽文猎奇)",
+      "role": "P0·INFJ情感共鸣batch1首触(社会货币batch1后轮出)·妻子300万8旗舰·微博公共舆论位·方向船key_decision'INFJ情感共鸣batch1(妻子300万8·依恋背叛·依恋类型引擎)'",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "INFJ对亲密关系中的'信任与依恋'极度敏感，最怕的不是失去，而是'在毫无防备时被最亲近的人一点点抽空'；妻子怀二胎期间被丈夫偷刷300万，正是INFJ最恐惧的依恋背叛样本——伤害发生在最该被保护的脆弱期。",
+        "hook_first3": "第一行'妻子怀着二胎，丈夫偷刷了300万'抛背叛事实；第二行'不是一笔钱的事'先安抚猎奇预期；第三行'是一个人在你最脆弱的时候，把信任一点点抽空'切入Ni-Fe依恋本质。",
+        "emotion_curve": "愤怒(背叛) → 心疼(孕期脆弱) → 心寒(信任抽空) → 共情(依恋的脆弱性) → 自省(你的关系里谁在透支信任)。",
+        "structure": [
+          "钩子·背叛事实",
+          "反转·不是钱的事",
+          "洞察·脆弱期抽空信任",
+          "升华·依恋的脆弱与边界",
+          "CTA·你如何识别关系里的信任透支"
+        ],
+        "differentiation": "别人写300万打赏讲'渣男/婚姻破裂/防骗'，我们讲'背叛的残忍不在钱，在脆弱期抽空信任'；Ni-Fe落到依恋类型心理母题，绝不道德审判受害者、绝不把受害者写成'没管住丈夫'、绝不渲染女主播对立。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 2,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13第二波轮出批·INFJ情感共鸣batch1首触fresh(妻子300万8旗舰·依恋背叛·依恋类型引擎)",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B13-ISTJ-1",
+      "title": "欢子被批「摆烂」，「老实人」们豁出去了——ISTJ没有把这当成一档综艺的抓马。他的Si系统读懂了这件事真正难受的地方：一个人被贴上「老实」「摆烂」的标签时，最刺痛的从来不是被骂，而是「我到底是谁」被别人的嘴定义了",
+      "hook": "身份认同",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-ISTJ-1.json",
+      "paradigm": "身份认同·Si人格标签与自我定位冲突型(ISTJ身份认同恢复首触·欢子/披哥7分·SJ象限0/4→1/4硬约束·Si:人格标签与自我定位冲突·老实人标签的反抗=自我重新定义·严禁judge艺人/站队粉丝)",
+      "role": "P0·ISTJ身份认同batch1恢复首触(欢子7·人格呈现)·小红书Si位·SJ象限0/4→1/4硬约束·方向船key_decision'ISTJ恢复·身份认同(欢子/披哥7·人格呈现)'",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ISTJ最需要'稳定、可预期、被准确理解'的自我定位，最怕被外界用标签草率定义——'老实人''摆烂'这类标签会直接刺痛他们对'我是谁'的秩序感；欢子被批摆烂、老实人豁出去，正是ISTJ最熟悉的'标签vs自我'冲突。",
+        "hook_first3": "第一行''老实人豁出去了''引综艺热词；第二行'欢子被骂摆烂，弹幕刷屏'摆冲突现场；第三行'但ISTJ看到的不是抓马，是标签如何定义一个人'切人格视角。",
+        "emotion_curve": "不解(为什么被骂) → 共鸣(被标签定义的不适) → 坚定(自我定位由自己定) → 释然(标签不等于我)。",
+        "structure": [
+          "钩子·标签冲突",
+          "现象·摆烂与老实人",
+          "洞察·标签定义自我",
+          "升华·自我定位由自己写",
+          "CTA·你被哪个标签误读过"
+        ],
+        "differentiation": "别人写披哥讲'综艺效果/人设翻车/吃瓜'，我们讲'标签如何偷走一个人的自我定义'；Si视角落到'被准确理解'的渴望，绝不judge艺人表现、绝不站队粉丝、不消费争议细节。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 3,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13·ISTJ身份认同batch1恢复首触fresh(欢子7·人格呈现·SJ象限0/4→1/4硬约束)",
+      "post": {
+        "cover_title": "老实人不是标签，是选择",
+        "body": "《披哥》舞台上，\n欢子被批「摆烂」，\n张彬彬、曹骏这些「老实人」，\n豁出去了。\n\n弹幕吵成一片。\n\n但ISTJ看到的，\n不是抓马——\n\n是一个人被贴上「老实」「摆烂」的标签时，\n最难受的，\n从来不是被骂，\n而是「我到底是谁」，\n被别人的嘴给定义了。\n\n「老实人」这个词，\n用久了就变成一张标签，\n贴在你身上，\n替你回答一切：\n你会不会拒绝、你敢不敢出头、\n你能不能赢。\n\n可它从来不是你的全部。\n\n一个人可以话不多，\n但心里有数；\n可以慢半拍，\n但每一步都算数。\n\n「老实」不是认怂，\n是你在喧嚣里，\n选择了按自己的节奏活。\n\n你被哪个标签误读过？\n评论区，\n说说那个标签，\n和真正的你。",
+        "hashtags": [
+          "#身份认同",
+          "#MBTI",
+          "#ISTJ",
+          "#老实人",
+          "#自我成长"
+        ],
+        "cover_visual": "冷色舞台光与暖色侧脸剪影的对比，一个安静、不抢镜头却坚定的身影，配大字『标签不能定义你』，克制、有力量感",
+        "cta": "你被哪个标签误读过？评论区说说那个标签和真正的你。",
+        "post_time": "18:00-20:00（晚间共鸣高峰·身份认同类）",
+        "avoid": "不judge欢子/披哥艺人表现、不站队粉丝阵营、不消费争议细节、不把'老实人'写成贬义或抬高；聚焦'标签不能定义你'的自我定位"
+      },
+      "post_spec_version": "v2.0",
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B13-ENTP-1",
+      "title": "她花55块捡漏了一条一万四的项链，商家说「系统错了」要退款——ENTP没有把这当成一条「占便宜」的新闻。他的Ne系统读懂了这件事真正的辩题：当规则出现漏洞，到底该保护「看得见的标价」，还是「看不见的公平」？",
+      "hook": "反常识",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "抖音",
+      "quality": 8.7,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-ENTP-1.json",
+      "paradigm": "反常识·Ne规则博弈天然辩题型(ENTP反常识batch1首触·55元项链6分·Ne-Ti:规则漏洞谁说了算·标价即承诺vs系统错误可撤销·天然辩题·身份认同batch1后轮出·严禁站队/引战消费者权益对立)",
+      "role": "P1·ENTP反常识batch1首触(55元项链6·规则博弈)·抖音Ne位·身份认同batch1(B12)后轮出→反常识·方向船key_decision'ENTP反常识batch1(55元项链6·规则博弈天然辩题)'",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTP天然对'规则漏洞、逻辑矛盾'上头，最享受把一件事拆成两个对立命题来回辩；55元买到1.4万项链被要求退款，本质是'契约精神vs意思表示错误'的经典法理辩题，正中ENTP的Ne-Ti爽点。",
+        "hook_first3": "第一行'55块，她买到了一万四的项链'抛极端反差；第二行'商家说系统错了，要她退'点出规则冲突；第三行'问题来了：这到底算谁的？'把观众拉进辩题。",
+        "emotion_curve": "惊讶(捡漏) → 好奇(谁有理) → 思辨(契约vs错误) → 爽感(规则拆解) → 追问(你站哪边)。",
+        "structure": [
+          "钩子·极端反差",
+          "冲突·商家要求退款",
+          "拆解·两种规则逻辑",
+          "升华·漏洞暴露的规则本质",
+          "CTA·你站哪边"
+        ],
+        "differentiation": "别人写捡漏讲'薅羊毛/商家玩不起/消费维权'，我们讲'规则漏洞暴露的契约本质'；Ne-Ti做双向拆解不下结论，绝不站队消费者或商家、不煽动对立、不教唆薅羊毛。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 4,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13·ENTP反常识batch1首触fresh(55元项链6·规则博弈天然辩题·身份认同batch1后轮出)",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B13-INTJ-1",
+      "title": "这些高颜值的「人」，竟然全是机器人——INTJ没有把这当成一条科技猎奇的短视频。他的Ni系统读懂了这件事真正值得深挖的地方：当机器人的脸开始骗过你的眼睛，我们该重新定义的从来不是机器像不像人，而是「人」这个身份到底还剩下什么不可替代",
+      "hook": "好奇心",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-INTJ-1.json",
+      "paradigm": "好奇心·Ni人机边界哲学深挖型(INTJ好奇心batch2达上限·机器人7分·Ni:人机边界模糊→重新定义'人'的身份·B站深度位·2026世界机器人大会·严禁猎奇/恐怖谷焦虑)",
+      "role": "P1·INTJ好奇心batch2(达上限·B14必轮出)·机器人7·B站深度位·方向船key_decision'INTJ好奇心batch2(机器人7·人机边界·B站)'",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ对'边界、定义、系统规则'有近乎强迫的追问欲，最想搞清楚的从来不是现象，而是现象背后的第一性原理；高颜值仿生机器人骗过眼睛，直接逼问INTJ最核心的哲学命题——'人'的定义边界在哪。",
+        "hook_first3": "第一行'这些高颜值的「人」，其实都是机器人'抛身份反转；第二行'2026世界机器人大会上，它们陪你聊天、当前台'补细节；第三行'真正的问题不是机器像不像人，是人还剩什么不可替代'切入Ni哲学。",
+        "emotion_curve": "好奇(像人) → 惊叹(技术) → 冷思(边界模糊) → 深挖(人的不可替代性) → 开放(留给未来的问题)。",
+        "structure": [
+          "钩子·身份反转",
+          "现象·仿生机器人应用",
+          "洞察·人机边界模糊",
+          "升华·人的不可替代性",
+          "CTA·你觉得人不可替代的是什么"
+        ],
+        "differentiation": "别人写机器人讲'科技炫酷/替代焦虑/猎奇'，我们讲'人机边界模糊逼我们重新定义人'；Ni第一性原理深挖身份本质，绝不渲染替代恐慌、不搞恐怖谷猎奇、不贩卖焦虑。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 5,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13·INTJ好奇心batch2续触fresh(机器人7·人机边界·B站深度位·达上限B14必轮出)",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B13-ENTJ-1",
+      "title": "让于东来狠心关店的那个房东，是「恶人」吗——ENTJ没有把这当成一条站队的口水战。他的Te系统读懂了这件事真正有价值的地方：当公众急着给一个人贴「好人」「恶人」的标签时，真正被忽略的是商业决策背后的伦理灰度与代价",
+      "hook": "社会证明",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.6,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-ENTJ-1.json",
+      "paradigm": "社会证明·Te商业伦理道德评判型(ENTJ社会证明batch1首触·于东来6分heat90全榜最高·Te:商业决策的伦理灰度·公众站队vs成本理性·好奇心batch1后轮出·严禁站队引战)",
+      "role": "P1·ENTJ社会证明batch1首触(于东来6·heat90全榜最高)·抖音Te位·好奇心batch1(B12)后轮出→社会证明·方向船key_decision'ENTJ社会证明batch1(于东来6·heat90全榜最高)'",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ最反感'情绪化站队、非黑即白的道德评判'，最想看到的是复杂决策背后的逻辑与代价；于东来关店引发全网'房东是不是恶人'的站队，正中ENTJ对'公众情绪化道德审判'的警惕与对理性决策的偏好。",
+        "hook_first3": "第一行'让于东来关店的那个房东，是恶人吗'直接抛公众辩题；第二行'全网都在站队'点出现象；第三行'但ENTJ想问的是：标签之下，决策的代价谁在算'切入Te理性。",
+        "emotion_curve": "好奇(谁对谁错) → 警觉(情绪化站队) → 理性(决策的灰度) → 清醒(成本与伦理) → 思辨(你的判断标准)。",
+        "structure": [
+          "钩子·公众辩题",
+          "现象·全网站队",
+          "洞察·道德评判的情绪化",
+          "升华·商业决策的伦理灰度",
+          "CTA·你判断对错的标准是什么"
+        ],
+        "differentiation": "别人写于东来讲'支持胖东来/骂房东/站队'，我们讲'公众急着贴标签时被忽略的伦理灰度与决策成本'；Te理性拆解不下结论，绝不站队引战、不judge房东或于东来、不煽动对立情绪。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 6,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13·ENTJ社会证明batch1首触fresh(于东来6·商业伦理·heat90全榜最高·好奇心batch1后轮出)",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B13-INTP-1",
+      "title": "李光洁说「演员哪敢随便改剧本」——INTP没有把这当成一句行业的谦虚。他的Ti系统读懂了这句话真正的分量：它不是卑微，而是一个人在自己的位置上，终于想明白了「敬畏」与「自我」从来不是对立的",
+      "hook": "身份认同",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-08-22T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B13-INTP-1.json",
+      "paradigm": "身份认同·Ti自我觉醒型(INTP身份认同恢复首触·李光洁6分·Ti:敬畏与自我的和解·演员对剧本的敬畏=职业身份的自我定位·B站¥25轻触·trust7.35修复链P0·防15批螺旋·严禁judge演员/行业内幕)",
+      "role": "P1·INTP身份认同batch1恢复首触(李光洁6·自我觉醒)·B站¥25轻触·trust7.35修复链P0·方向船key_decision'INTP恢复落地·身份认同(李光洁6·自我觉醒)'",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B13",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTP长期在'坚持自我'与'适应规则'之间拉扯，最困惑的是'我到底该忠于自己，还是忠于体系'；李光洁一句'演员哪敢随便改剧本'，恰好给出一个INTP渴望的答案：敬畏与自我不是对立，敬畏本身就是一种成熟的自我定位。",
+        "hook_first3": "第一行''演员哪敢随便改剧本''引李光洁金句；第二行'很多人以为是谦虚'摆大众误读；第三行'但INTP听到的是：敬畏和「自我」，从来不是对立的'切入Ti洞察。",
+        "emotion_curve": "好奇(为什么不敢改) → 误读(以为是谦虚) → 顿悟(敬畏=成熟自我) → 释然(自我与体系的解) → 自省(你的位置上的敬畏)。",
+        "structure": [
+          "钩子·金句",
+          "误读·谦虚表象",
+          "洞察·敬畏与自我的和解",
+          "升华·成熟的自我定位",
+          "CTA·你如何平衡自我与体系"
+        ],
+        "differentiation": "别人写李光洁讲'老戏骨敬业/行业潜规则'，我们讲'敬畏与自我的和解=成熟的身份认同'；Ti视角落到职业身份与自我觉醒，绝不judge演员、不挖行业内幕、不八卦。"
+      },
+      "last_used": "2026-08-22T09:25:00+08:00",
+      "deployed_batch": "D21-B13",
+      "deployed_arm": 7,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B13·INTP身份认同batch1恢复首触fresh(李光洁6·自我觉醒·B站¥25轻触·trust7.35修复链P0)",
+      "deployed_budget": 25,
+      "has_post": false
     }
   ],
-  "total": 136,
+  "total": 147,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -4407,6 +4979,61 @@
       }
     },
     {
+      "id": "D21-B12-ENFJ-1",
+      "title": "给化疗患儿外卖里塞100块的蛋饼店主，被全网买到爆单——ENFJ没有把这当成一条\"好人好报\"的新闻。她的Fe系统在0.3秒里读懂了它为什么能刷屏：善良最稀缺的不是大小，是被看见、被接力，是一个人的善意在千万人手里滚成了一场温柔的雪崩",
+      "hook": "社会证明",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "arm_id": 2,
+      "batch_num": 1,
+      "signals": [
+        "给化疗患儿外卖塞钱的蛋饼店主卖爆单(9分·情感共鸣+社会证明·暖意+社会正向反馈)"
+      ],
+      "paradigm": "社会证明·Fe暖意社会正向反馈型(ENFJ情感共鸣batch2达上限→轮出社会证明首触·蛋饼店主9旗舰·Fe共情:一个人匿名的善意被全网看见并接力=善良的社会证明·不judge不道德绑架·暖意母题轻量化解·蛋饼店主9分旗舰)",
+      "role": "P0·ENFJ社会证明batch1首触(情感共鸣batch2达上限→轮出社会证明)·蛋饼店主9旗舰·小红书Fe位·方向船key_decision'ENFJ社会证明(蛋饼店主9·暖意)'",
+      "direction_compliance": "D21-B12 direction-vessel key_decision'ENFJ社会证明(蛋饼店主9旗舰·暖意+社会正向反馈)'100%对齐·ENFJ×社会证明×小红书·channel_mix小红书28.6%(ENFP+ENFJ)",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ENFJ情感共鸣batch2→社会证明batch1新hook首触)·蛋饼店主9旗舰·善良被全网接力·小红书v2.0成品post落地·注意规避道德绑架表述",
+      "brief": {
+        "pain_point": "ENFJ的Fe最需要确认'善良会被看见、会被回应'——他们习惯默默付出、把别人的需求放前面，最怕'善意没有回声'；蛋饼店主偷偷塞钱给化疗患儿、被全网爆单支持，恰好补足ENFJ最渴望的信念：好人会有好报，善意会被社会接力。",
+        "hook_first3": "第一行'他往患儿外卖里塞了100块'抛善意悬念；第二行'然后，全网把他的店买爆了'点穿社会证明反转；第三行'ENFJ看到的不只是暖，是善良终于被回应'切人格视角。",
+        "emotion_curve": "心疼(化疗患儿) → 感动(偷偷塞钱) → 意外(被网友发现) → 温暖(全网爆单接力) → 信念(善良会有回声)。",
+        "structure": [
+          "钩子·善意悬念",
+          "现象·塞钱+爆单",
+          "洞察·善良被看见=社会证明",
+          "升华·一个人的善意会滚成温柔的雪崩",
+          "CTA·你最近一次被陌生人暖到"
+        ],
+        "differentiation": "别人写蛋饼店主讲'正能量/感动中国/好人好报'，我们讲'一次匿名善意被全网接力=善良的社会证明·善良有回声'；不做道德绑架('不接力就是冷漠')，不消费患儿苦难，不judge他人善意大小，落点'善良会被看见'。"
+      },
+      "post": {
+        "cover_title": "他往患儿外卖塞了100块",
+        "body": "他往患儿的外卖里，塞了100块。\n\n没留名，没拍照，没声张。\n就是一个蛋饼店主，\n在送餐时，悄悄做的。\n\n后来被人发现，\n大家才知道，他一直在默默做。\n\n于是，全网把他的店买爆了。🔥\n\n很多人说：好人好报。\n\n但ENFJ看到的，是另一件事——\n\n善良最稀缺的，\n从来不是大小，\n是被看见。\n\n是一个人的善意，\n在千万人手里，\n滚成了一场温柔的雪崩。\n\n你没有义务做惊天动地的大事，\n但你的每一份善意，\n都可能在某一天，\n被这个世界温柔地接住。\n\n善良不是付出没有回声，\n它只是在等一个时机。💛\n\n你最近一次，\n被陌生人暖到，\n是什么时候？\n\n评论区，说说那个瞬间。👇",
+        "hashtags": [
+          "#ENFJ",
+          "#社会证明",
+          "#善良有回声",
+          "#正能量",
+          "#MBTI"
+        ],
+        "cover_visual": "一只外卖袋里露出一张100元钞票的一角，暖黄色调，旁边蒸腾的蛋饼热气与柔和晨光，画面配细字'善良会有回声'，温暖不煽情",
+        "cta": "你最近一次被陌生人暖到，是什么时候？评论区说说那个瞬间。",
+        "post_time": "18:00-20:00（社会正向/情感类·晚高峰温暖流量）",
+        "avoid": "不道德绑架('不接力就是冷漠')、不消费化疗患儿苦难细节、不judge他人善意大小、聚焦'善良被看见·善良有回声'"
+      }
+    },
+    {
       "id": "D21-B12-ENFP-1",
       "title": "月入4万的大提琴老师，转身去卖馒头——ENFP没有把这当成一条\"职业降级\"的八卦。她的Fi系统在0.3秒里听懂了这个选择真正的重量：一个人最难的不是赚到别人眼里的\"好\"，是敢在\"应该\"和\"想要\"之间，坚定地选后者",
       "hook": "反常识",
@@ -4462,59 +5089,116 @@
       }
     },
     {
-      "id": "D21-B12-INFP-1",
-      "title": "结婚38年，他们才补拍婚纱照——INFP没有把这当成一条怀旧新闻。她的Fi系统在0.3秒里认出了这张照片真正的样子：真正的爱不是年轻时证明给谁看，是38年后还愿意为彼此，补上那个\"我们\"的瞬间",
-      "hook": "情感共鸣",
+      "id": "D21-B13-ENFP-1",
+      "title": "62岁，她生下了一个6斤的健康男婴——ENFP没有把这当成一条「高龄生育奇迹」的猎奇新闻。她的Fi系统读懂了这件事真正反常识的地方：所谓生命边界从来不是年龄，而是一个人还敢不敢对「可能」两个字点头",
+      "hook": "反常识",
       "targets": [
-        "INFP"
+        "ENFP"
       ],
       "channel": "小红书",
-      "quality": 8.7,
+      "quality": 8.8,
       "budget": 25,
       "status": "active",
       "usage_count": 0,
-      "priority": "P1",
-      "consecutive_hook": 1,
-      "direction_hook": "情感共鸣",
-      "arm_id": 7,
-      "batch_num": 1,
+      "priority": "P0",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "arm_id": 1,
+      "batch_num": 2,
       "signals": [
-        "金龟子王宁补拍婚纱照(7分·情感共鸣/安全型依恋·依恋母题连续5批)"
+        "62岁超高龄孕妇诞下6斤重男婴(8分·反常识·生命边界·旗舰·heat88)"
       ],
-      "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记:质量<7则B13重新轮休·本臂q8.7达标)",
-      "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·小红书Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
-      "direction_compliance": "D21-B12 direction-pool key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'100%对齐·INFP×情感共鸣×小红书",
-      "flagship": false,
-      "attachment_theory_resonance": true,
-      "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·小红书v2.0成品post落地",
+      "paradigm": "反常识·Fi生命边界/母性光辉型(ENFP反常识batch2达上限·62岁孕妇8分旗舰·Fi生命奇迹:生命边界不是年龄是相信可能·反常识破'什么年龄该做什么事'的隐性规训·母性光辉温柔视角·严禁焦虑贩卖/高龄生育风险猎奇)",
+      "role": "P0·ENFP反常识batch2(达上限·B14必轮出)·62岁孕妇8旗舰·小红书Fi位·方向船key_decision'ENFP反常识batch2(62岁孕妇8·生命边界旗舰)'",
+      "direction_compliance": "D21-B13 direction-vessel key_decision'ENFP反常识batch2(62岁孕妇8·生命边界旗舰·注意避免焦虑贩卖)'100%对齐·ENFP×反常识×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ENFP反常识batch2续触·达上限B14必轮出)·62岁孕妇8旗舰·Fi生命边界·小红书v2.0成品post落地·严禁高龄生育焦虑(用生命奇迹/母性光辉角度)",
       "brief": {
-        "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
-        "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
-        "emotion_curve": "好奇(38年才拍) → 柔软(补拍的瞬间) → 被治愈(安全型依恋) → 相信(爱可以这么稳) → 向往(我也想被这样爱)。",
+        "pain_point": "ENFP的Fi渴望确认'人生的可能性不该被年龄/社会时钟锁死'，最怕被'什么年纪该干什么事'的规训困住；62岁产妇挑战了所有人对'生命边界'的默认假设，恰好击中ENFP对'可能'的信仰。",
+        "hook_first3": "第一行'62岁，她生下了6斤的健康男婴'直接抛反常识事实；第二行'产科主任说，从没接诊过这个年纪的产妇'用权威口吻强化反差；第三行'但真正反常识的，不是年龄'切入Fi生命哲学。",
+        "emotion_curve": "惊讶(62岁生子) → 柔软(生命降临) → 触动(边界的重新定义) → 坚定(相信'可能') → 温暖(母性光辉)。",
         "structure": [
-          "钩子·反差题",
-          "现象·38年补拍",
-          "洞察·安全型依恋不用秀",
-          "升华·爱是'我们一直在'",
-          "CTA·你信哪种爱"
+          "钩子·反常识事实",
+          "反差·医生从未接诊",
+          "洞察·边界是敢相信可能",
+          "升华·母性光辉与生命奇迹",
+          "CTA·你生命里最'不可能'的一次"
         ],
-        "differentiation": "别人写金龟子讲'童年回忆杀/不老女神/补拍婚纱照好甜'，我们讲'38年补拍=安全型依恋的具象·爱不是证明是陪伴'；不做催婚/婚恋焦虑，不做'别人家的爱情'judge，落点'安全型依恋可以长什么样'。"
+        "differentiation": "别人写高龄生育讲'风险/医学极限/猎奇'，我们讲'生命边界不是年龄，是一个人还敢不敢相信可能'；Fi温柔视角落点'生命奇迹与母性光辉'，绝不贩卖年龄焦虑、绝不渲染生育风险。"
       },
       "post": {
-        "cover_title": "结婚38年，才补拍婚纱照",
-        "body": "结婚38年，他们才补拍婚纱照。\n\n不是补办婚礼，\n是两个人，安安静静地，\n把迟到了38年的那张照片补上。📷\n\n很多人羡慕的是：\n原来爱情可以这么长。\n\n但INFP看到的，是另一件事——\n\n38年，不用每天说\"我爱你\"，\n不用秀给谁看，\n就是平平淡淡地，一起变老。\n\n这在心理学上，\n叫\"安全型依恋\"。\n\n不是离不开，\n是\"我们一直在\"。\n不是轰轰烈烈，\n是笃定。\n\n年轻时我们总以为，\n爱要够用力、够惊天动地。\n\n后来才懂，\n最奢侈的爱，是38年后，\n还愿意为对方补一张婚纱照。🤍\n\n你更信哪一种爱？\n是轰轰烈烈，还是细水长流？\n\n评论区，聊聊你的答案。👇",
+        "cover_title": "62岁，她生下了健康男婴",
+        "body": "62岁。\n\n她生下了一个6斤的健康男婴。👶\n\n产科主任说，\n自己从没接诊过这个年纪的产妇。\n\n很多人第一反应是：\n「这不可能吧？」\n\n但ENFP看到的，\n是另一层东西——\n\n所谓「生命边界」，\n从来不是年龄那一栏数字，\n而是一个人，\n还敢不敢对「可能」两个字点头。\n\n我们总被一种声音追着跑：\n「什么年纪，就该做什么事」。\n\n好像过了某个点，\n人生的可能性就自动关机了。\n\n可这个孩子用第一声啼哭告诉你：\n生命这件事，\n从来不认时钟。🕊️\n\n它认的，\n是一个人对生命的渴望，\n和一个妈妈敢相信「我能」的勇气。\n\n所以别急着用年龄给自己设限。\n\n你生命里那些「不可能」，\n也许差的，\n只是你敢不敢点头。\n\n💬 你人生里，最「不可能」却做到了的事，\n是哪一件？\n评论区，说给我听。",
         "hashtags": [
-          "#INFP",
-          "#安全型依恋",
-          "#亲密关系",
-          "#情感共鸣",
-          "#MBTI"
+          "#反常识",
+          "#生命奇迹",
+          "#MBTI",
+          "#ENFP",
+          "#自我成长"
         ],
-        "cover_visual": "一张泛黄的旧婚纱照旁放着崭新的婚纱照，暖白柔光，岁月感与温柔并置，配细字'38年·我们一直在'",
-        "cta": "你更信哪一种爱？是轰轰烈烈，还是细水长流？评论区聊聊你的答案。",
-        "post_time": "20:00-22:00（情感/依恋类·深夜情感流量高峰）",
-        "avoid": "不催婚、不制造'没结婚/没仪式就是遗憾'的焦虑、不judge任何关系形态、聚焦'安全型依恋的陪伴本质'"
-      }
+        "cover_visual": "柔和晨光里，一双略显苍老却稳稳托着新生婴儿的手，暖调、安静、有母性光辉；画面留白，配大字『生命不认时钟』，治愈不煽情",
+        "cta": "你人生里最『不可能』却做到了的事，是哪一件？评论区说给我听。",
+        "post_time": "12:00-13:00（午间情绪高峰·治愈类）",
+        "avoid": "不渲染高龄生育医学风险、不做'高龄产子=危险'的焦虑暗示、不猎奇产妇年龄细节、不judge个人生育选择；聚焦'生命边界是敢相信可能'的生命奇迹与母性光辉"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B13-ISTJ-1",
+      "title": "欢子被批「摆烂」，「老实人」们豁出去了——ISTJ没有把这当成一档综艺的抓马。他的Si系统读懂了这件事真正难受的地方：一个人被贴上「老实」「摆烂」的标签时，最刺痛的从来不是被骂，而是「我到底是谁」被别人的嘴定义了",
+      "hook": "身份认同",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "arm_id": 3,
+      "batch_num": 1,
+      "signals": [
+        "欢子被批摆烂/披哥老实人豁出去了(7分·身份认同·人格呈现·SJ象限恢复·heat82)"
+      ],
+      "paradigm": "身份认同·Si人格标签与自我定位冲突型(ISTJ身份认同恢复首触·欢子/披哥7分·SJ象限0/4→1/4硬约束·Si:人格标签与自我定位冲突·老实人标签的反抗=自我重新定义·严禁judge艺人/站队粉丝)",
+      "role": "P0·ISTJ身份认同batch1恢复首触(欢子7·人格呈现)·小红书Si位·SJ象限0/4→1/4硬约束·方向船key_decision'ISTJ恢复·身份认同(欢子/披哥7·人格呈现)'",
+      "direction_compliance": "D21-B13 direction-vessel key_decision'ISTJ恢复·身份认同(欢子/披哥7·人格呈现)·SJ象限0/4→1/4'100%对齐·ISTJ×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ISTJ身份认同batch1恢复首触·B9-B11连续3批部署后B12轮休→B13恢复)·欢子7·Si人格标签与自我定位·小红书v2.0成品post落地·SJ象限0/4→1/4",
+      "brief": {
+        "pain_point": "ISTJ最需要'稳定、可预期、被准确理解'的自我定位，最怕被外界用标签草率定义——'老实人''摆烂'这类标签会直接刺痛他们对'我是谁'的秩序感；欢子被批摆烂、老实人豁出去，正是ISTJ最熟悉的'标签vs自我'冲突。",
+        "hook_first3": "第一行''老实人豁出去了''引综艺热词；第二行'欢子被骂摆烂，弹幕刷屏'摆冲突现场；第三行'但ISTJ看到的不是抓马，是标签如何定义一个人'切人格视角。",
+        "emotion_curve": "不解(为什么被骂) → 共鸣(被标签定义的不适) → 坚定(自我定位由自己定) → 释然(标签不等于我)。",
+        "structure": [
+          "钩子·标签冲突",
+          "现象·摆烂与老实人",
+          "洞察·标签定义自我",
+          "升华·自我定位由自己写",
+          "CTA·你被哪个标签误读过"
+        ],
+        "differentiation": "别人写披哥讲'综艺效果/人设翻车/吃瓜'，我们讲'标签如何偷走一个人的自我定义'；Si视角落到'被准确理解'的渴望，绝不judge艺人表现、绝不站队粉丝、不消费争议细节。"
+      },
+      "post": {
+        "cover_title": "老实人不是标签，是选择",
+        "body": "《披哥》舞台上，\n欢子被批「摆烂」，\n张彬彬、曹骏这些「老实人」，\n豁出去了。\n\n弹幕吵成一片。\n\n但ISTJ看到的，\n不是抓马——\n\n是一个人被贴上「老实」「摆烂」的标签时，\n最难受的，\n从来不是被骂，\n而是「我到底是谁」，\n被别人的嘴给定义了。\n\n「老实人」这个词，\n用久了就变成一张标签，\n贴在你身上，\n替你回答一切：\n你会不会拒绝、你敢不敢出头、\n你能不能赢。\n\n可它从来不是你的全部。\n\n一个人可以话不多，\n但心里有数；\n可以慢半拍，\n但每一步都算数。\n\n「老实」不是认怂，\n是你在喧嚣里，\n选择了按自己的节奏活。\n\n你被哪个标签误读过？\n评论区，\n说说那个标签，\n和真正的你。",
+        "hashtags": [
+          "#身份认同",
+          "#MBTI",
+          "#ISTJ",
+          "#老实人",
+          "#自我成长"
+        ],
+        "cover_visual": "冷色舞台光与暖色侧脸剪影的对比，一个安静、不抢镜头却坚定的身影，配大字『标签不能定义你』，克制、有力量感",
+        "cta": "你被哪个标签误读过？评论区说说那个标签和真正的你。",
+        "post_time": "18:00-20:00（晚间共鸣高峰·身份认同类）",
+        "avoid": "不judge欢子/披哥艺人表现、不站队粉丝阵营、不消费争议细节、不把'老实人'写成贬义或抬高；聚焦'标签不能定义你'的自我定位"
+      },
+      "post_spec_version": "v2.0"
     },
     {
       "id": "D21-B3-INFJ-1",
@@ -5368,6 +6052,61 @@
         ],
         "differentiation": "从「海报」这个小切口，引出「价值排序」的大命题，符合 INFJ 的 Ni 深度"
       }
+    },
+    {
+      "id": "D21-B12-INFP-1",
+      "title": "结婚38年，他们才补拍婚纱照——INFP没有把这当成一条怀旧新闻。她的Fi系统在0.3秒里认出了这张照片真正的样子：真正的爱不是年轻时证明给谁看，是38年后还愿意为彼此，补上那个\"我们\"的瞬间",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFP"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "arm_id": 6,
+      "batch_num": 1,
+      "signals": [
+        "金龟子王宁补拍婚纱照(7分·情感共鸣/安全型依恋·依恋母题连续5批)"
+      ],
+      "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记:质量<7则B13重新轮休·本臂q8.7达标)",
+      "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·微博Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
+      "direction_compliance": "D21-B12 direction-pool key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'100%对齐·INFP×情感共鸣×小红书",
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·微博部署(方向船)·post成品已备(可选小红书交叉发布)",
+      "brief": {
+        "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
+        "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
+        "emotion_curve": "好奇(38年才拍) → 柔软(补拍的瞬间) → 被治愈(安全型依恋) → 相信(爱可以这么稳) → 向往(我也想被这样爱)。",
+        "structure": [
+          "钩子·反差题",
+          "现象·38年补拍",
+          "洞察·安全型依恋不用秀",
+          "升华·爱是'我们一直在'",
+          "CTA·你信哪种爱"
+        ],
+        "differentiation": "别人写金龟子讲'童年回忆杀/不老女神/补拍婚纱照好甜'，我们讲'38年补拍=安全型依恋的具象·爱不是证明是陪伴'；不做催婚/婚恋焦虑，不做'别人家的爱情'judge，落点'安全型依恋可以长什么样'。"
+      },
+      "post": {
+        "cover_title": "结婚38年，才补拍婚纱照",
+        "body": "结婚38年，他们才补拍婚纱照。\n\n不是补办婚礼，\n是两个人，安安静静地，\n把迟到了38年的那张照片补上。📷\n\n很多人羡慕的是：\n原来爱情可以这么长。\n\n但INFP看到的，是另一件事——\n\n38年，不用每天说\"我爱你\"，\n不用秀给谁看，\n就是平平淡淡地，一起变老。\n\n这在心理学上，\n叫\"安全型依恋\"。\n\n不是离不开，\n是\"我们一直在\"。\n不是轰轰烈烈，\n是笃定。\n\n年轻时我们总以为，\n爱要够用力、够惊天动地。\n\n后来才懂，\n最奢侈的爱，是38年后，\n还愿意为对方补一张婚纱照。🤍\n\n你更信哪一种爱？\n是轰轰烈烈，还是细水长流？\n\n评论区，聊聊你的答案。👇",
+        "hashtags": [
+          "#INFP",
+          "#安全型依恋",
+          "#亲密关系",
+          "#情感共鸣",
+          "#MBTI"
+        ],
+        "cover_visual": "一张泛黄的旧婚纱照旁放着崭新的婚纱照，暖白柔光，岁月感与温柔并置，配细字'38年·我们一直在'",
+        "cta": "你更信哪一种爱？是轰轰烈烈，还是细水长流？评论区聊聊你的答案。",
+        "post_time": "20:00-22:00（情感/依恋类·深夜情感流量高峰）",
+        "avoid": "不催婚、不制造'没结婚/没仪式就是遗憾'的焦虑、不judge任何关系形态、聚焦'安全型依恋的陪伴本质'"
+      }
     }
   ],
   "vessels": {
@@ -6077,6 +6816,75 @@
         }
       }
     },
+    "D21-B13-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-ENTJ-1",
+        "title": "让于东来狠心关店的那个房东，是「恶人」吗——ENTJ没有把这当成一条站队的口水战。他的Te系统读懂了这件事真正有价值的地方：当公众急着给一个人贴「好人」「恶人」的标签时，真正被忽略的是商业决策背后的伦理灰度与代价",
+        "hook": "社会证明",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 6,
+        "batch_num": 1,
+        "signals": [
+          "让于东来狠心关店的房东是恶人吗(6分·社会证明·商业伦理·heat90全榜最高)"
+        ],
+        "paradigm": "社会证明·Te商业伦理道德评判型(ENTJ社会证明batch1首触·于东来6分heat90全榜最高·Te:商业决策的伦理灰度·公众站队vs成本理性·好奇心batch1后轮出·严禁站队引战)",
+        "role": "P1·ENTJ社会证明batch1首触(于东来6·heat90全榜最高)·抖音Te位·好奇心batch1(B12)后轮出→社会证明·方向船key_decision'ENTJ社会证明batch1(于东来6·heat90全榜最高)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'ENTJ社会证明batch1(于东来6·商业伦理·heat90全榜最高)'100%对齐·ENTJ×社会证明×抖音·channel_mix抖音28.6%(ENTP+ENTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTJ社会证明batch1首触·好奇心batch1后轮出)·于东来6·heat90全榜最高·Te商业伦理·严禁站队引战(用商业伦理思辨角度)",
+        "brief": {
+          "pain_point": "ENTJ最反感'情绪化站队、非黑即白的道德评判'，最想看到的是复杂决策背后的逻辑与代价；于东来关店引发全网'房东是不是恶人'的站队，正中ENTJ对'公众情绪化道德审判'的警惕与对理性决策的偏好。",
+          "hook_first3": "第一行'让于东来关店的那个房东，是恶人吗'直接抛公众辩题；第二行'全网都在站队'点出现象；第三行'但ENTJ想问的是：标签之下，决策的代价谁在算'切入Te理性。",
+          "emotion_curve": "好奇(谁对谁错) → 警觉(情绪化站队) → 理性(决策的灰度) → 清醒(成本与伦理) → 思辨(你的判断标准)。",
+          "structure": [
+            "钩子·公众辩题",
+            "现象·全网站队",
+            "洞察·道德评判的情绪化",
+            "升华·商业决策的伦理灰度",
+            "CTA·你判断对错的标准是什么"
+          ],
+          "differentiation": "别人写于东来讲'支持胖东来/骂房东/站队'，我们讲'公众急着贴标签时被忽略的伦理灰度与决策成本'；Te理性拆解不下结论，绝不站队引战、不judge房东或于东来、不煽动对立情绪。"
+        }
+      }
+    },
     "D21-B12-ENFP-1": {
       "vessel": {
         "version": "1.0",
@@ -6756,6 +7564,90 @@
         "cooling_note": "社会货币DEEP COOLING中·本内容标记active但需等≥2个≥7分信号恢复才可部署"
       }
     },
+    "D21-B12-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T10:08:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0845"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-ENFJ-1",
+        "title": "给化疗患儿外卖里塞100块的蛋饼店主，被全网买到爆单——ENFJ没有把这当成一条\"好人好报\"的新闻。她的Fe系统在0.3秒里读懂了它为什么能刷屏：善良最稀缺的不是大小，是被看见、被接力，是一个人的善意在千万人手里滚成了一场温柔的雪崩",
+        "hook": "社会证明",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "小红书",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "给化疗患儿外卖塞钱的蛋饼店主卖爆单(9分·情感共鸣+社会证明·暖意+社会正向反馈)"
+        ],
+        "paradigm": "社会证明·Fe暖意社会正向反馈型(ENFJ情感共鸣batch2达上限→轮出社会证明首触·蛋饼店主9旗舰·Fe共情:一个人匿名的善意被全网看见并接力=善良的社会证明·不judge不道德绑架·暖意母题轻量化解·蛋饼店主9分旗舰)",
+        "role": "P0·ENFJ社会证明batch1首触(情感共鸣batch2达上限→轮出社会证明)·蛋饼店主9旗舰·小红书Fe位·方向船key_decision'ENFJ社会证明(蛋饼店主9·暖意)'",
+        "direction_compliance": "D21-B12 direction-vessel key_decision'ENFJ社会证明(蛋饼店主9旗舰·暖意+社会正向反馈)'100%对齐·ENFJ×社会证明×小红书·channel_mix小红书28.6%(ENFP+ENFJ)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFJ情感共鸣batch2→社会证明batch1新hook首触)·蛋饼店主9旗舰·善良被全网接力·小红书v2.0成品post落地·注意规避道德绑架表述",
+        "brief": {
+          "pain_point": "ENFJ的Fe最需要确认'善良会被看见、会被回应'——他们习惯默默付出、把别人的需求放前面，最怕'善意没有回声'；蛋饼店主偷偷塞钱给化疗患儿、被全网爆单支持，恰好补足ENFJ最渴望的信念：好人会有好报，善意会被社会接力。",
+          "hook_first3": "第一行'他往患儿外卖里塞了100块'抛善意悬念；第二行'然后，全网把他的店买爆了'点穿社会证明反转；第三行'ENFJ看到的不只是暖，是善良终于被回应'切人格视角。",
+          "emotion_curve": "心疼(化疗患儿) → 感动(偷偷塞钱) → 意外(被网友发现) → 温暖(全网爆单接力) → 信念(善良会有回声)。",
+          "structure": [
+            "钩子·善意悬念",
+            "现象·塞钱+爆单",
+            "洞察·善良被看见=社会证明",
+            "升华·一个人的善意会滚成温柔的雪崩",
+            "CTA·你最近一次被陌生人暖到"
+          ],
+          "differentiation": "别人写蛋饼店主讲'正能量/感动中国/好人好报'，我们讲'一次匿名善意被全网接力=善良的社会证明·善良有回声'；不做道德绑架('不接力就是冷漠')，不消费患儿苦难，不judge他人善意大小，落点'善良会被看见'。"
+        },
+        "post": {
+          "cover_title": "他往患儿外卖塞了100块",
+          "body": "他往患儿的外卖里，塞了100块。\n\n没留名，没拍照，没声张。\n就是一个蛋饼店主，\n在送餐时，悄悄做的。\n\n后来被人发现，\n大家才知道，他一直在默默做。\n\n于是，全网把他的店买爆了。🔥\n\n很多人说：好人好报。\n\n但ENFJ看到的，是另一件事——\n\n善良最稀缺的，\n从来不是大小，\n是被看见。\n\n是一个人的善意，\n在千万人手里，\n滚成了一场温柔的雪崩。\n\n你没有义务做惊天动地的大事，\n但你的每一份善意，\n都可能在某一天，\n被这个世界温柔地接住。\n\n善良不是付出没有回声，\n它只是在等一个时机。💛\n\n你最近一次，\n被陌生人暖到，\n是什么时候？\n\n评论区，说说那个瞬间。👇",
+          "hashtags": [
+            "#ENFJ",
+            "#社会证明",
+            "#善良有回声",
+            "#正能量",
+            "#MBTI"
+          ],
+          "cover_visual": "一只外卖袋里露出一张100元钞票的一角，暖黄色调，旁边蒸腾的蛋饼热气与柔和晨光，画面配细字'善良会有回声'，温暖不煽情",
+          "cta": "你最近一次被陌生人暖到，是什么时候？评论区说说那个瞬间。",
+          "post_time": "18:00-20:00（社会正向/情感类·晚高峰温暖流量）",
+          "avoid": "不道德绑架('不接力就是冷漠')、不消费化疗患儿苦难细节、不judge他人善意大小、聚焦'善良被看见·善良有回声'"
+        }
+      }
+    },
     "D18-B2-2": {
       "vessel": {
         "version": "1.0",
@@ -6970,6 +7862,75 @@
             "真正的会说话"
           ],
           "differentiation": "把「会说话」拆解成可理解的 Fe-Ni 机制，给 ENFJ 提供方法论认同"
+        }
+      }
+    },
+    "D21-B13-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-ENTP-1",
+        "title": "她花55块捡漏了一条一万四的项链，商家说「系统错了」要退款——ENTP没有把这当成一条「占便宜」的新闻。他的Ne系统读懂了这件事真正的辩题：当规则出现漏洞，到底该保护「看得见的标价」，还是「看不见的公平」？",
+        "hook": "反常识",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "抖音",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "女子55元捡漏一万四项链被要求退款(6分·反常识·规则博弈·heat85)"
+        ],
+        "paradigm": "反常识·Ne规则博弈天然辩题型(ENTP反常识batch1首触·55元项链6分·Ne-Ti:规则漏洞谁说了算·标价即承诺vs系统错误可撤销·天然辩题·身份认同batch1后轮出·严禁站队/引战消费者权益对立)",
+        "role": "P1·ENTP反常识batch1首触(55元项链6·规则博弈)·抖音Ne位·身份认同batch1(B12)后轮出→反常识·方向船key_decision'ENTP反常识batch1(55元项链6·规则博弈天然辩题)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'ENTP反常识batch1(55元项链6·规则博弈天然辩题)'100%对齐·ENTP×反常识×抖音·channel_mix抖音28.6%(ENTP+ENTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTP反常识batch1首触·身份认同batch1后轮出)·55元项链6·Ne规则博弈·严禁站队引战(用规则博弈思辨角度)",
+        "brief": {
+          "pain_point": "ENTP天然对'规则漏洞、逻辑矛盾'上头，最享受把一件事拆成两个对立命题来回辩；55元买到1.4万项链被要求退款，本质是'契约精神vs意思表示错误'的经典法理辩题，正中ENTP的Ne-Ti爽点。",
+          "hook_first3": "第一行'55块，她买到了一万四的项链'抛极端反差；第二行'商家说系统错了，要她退'点出规则冲突；第三行'问题来了：这到底算谁的？'把观众拉进辩题。",
+          "emotion_curve": "惊讶(捡漏) → 好奇(谁有理) → 思辨(契约vs错误) → 爽感(规则拆解) → 追问(你站哪边)。",
+          "structure": [
+            "钩子·极端反差",
+            "冲突·商家要求退款",
+            "拆解·两种规则逻辑",
+            "升华·漏洞暴露的规则本质",
+            "CTA·你站哪边"
+          ],
+          "differentiation": "别人写捡漏讲'薅羊毛/商家玩不起/消费维权'，我们讲'规则漏洞暴露的契约本质'；Ne-Ti做双向拆解不下结论，绝不站队消费者或商家、不煽动对立、不教唆薅羊毛。"
         }
       }
     },
@@ -7559,7 +8520,7 @@
         "targets": [
           "INFP"
         ],
-        "channel": "小红书",
+        "channel": "微博",
         "quality": 8.7,
         "budget": 25,
         "status": "active",
@@ -7567,17 +8528,17 @@
         "priority": "P1",
         "consecutive_hook": 1,
         "direction_hook": "情感共鸣",
-        "arm_id": 7,
+        "arm_id": 6,
         "batch_num": 1,
         "signals": [
           "金龟子王宁补拍婚纱照(7分·情感共鸣/安全型依恋·依恋母题连续5批)"
         ],
         "paradigm": "情感共鸣·Fi安全型依恋型(INFP恢复首触·金龟子婚纱照7·安全型依恋母题连续5批·Fi亲密关系:38年补拍婚纱照不是迟到的仪式·是安全型依恋的具象·红队标记:质量<7则B13重新轮休·本臂q8.7达标)",
-        "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·小红书Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
+        "role": "P1·INFP恢复首触(情感共鸣batch1)·金龟子婚纱照7(安全型依恋)·微博Fi位·方向船key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'",
         "direction_compliance": "D21-B12 direction-pool key_decision'INFP恢复首触·情感共鸣(金龟子婚纱照7·安全型依恋母题)'100%对齐·INFP×情感共鸣×小红书",
         "flagship": false,
         "attachment_theory_resonance": true,
-        "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·小红书v2.0成品post落地",
+        "note": "🟢 fresh(INFP轮休2批后恢复首触·情感共鸣batch1)·金龟子婚纱照7·安全型依恋母题·红队标记已过(q8.7≥7)·微博部署(方向船)·post成品已备(可选小红书交叉发布)",
         "brief": {
           "pain_point": "INFP的Fi对'真实的爱/长久的陪伴'极度渴望，也最容易被'38年才补拍婚纱照'这种不张扬却笃定的爱打动；背后的情感需求不是羡慕婚礼，是相信'有人愿意和我一起走到老'。",
           "hook_first3": "第一行'结婚38年，他们才补拍婚纱照'抛反差；第二行'不是迟到的仪式，是安全型依恋的样子'点穿母题；第三行'INFP看到的不是新闻，是我们一直在'切人格。",
@@ -8301,6 +9262,75 @@
         ]
       }
     },
+    "D21-B13-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-INTJ-1",
+        "title": "这些高颜值的「人」，竟然全是机器人——INTJ没有把这当成一条科技猎奇的短视频。他的Ni系统读懂了这件事真正值得深挖的地方：当机器人的脸开始骗过你的眼睛，我们该重新定义的从来不是机器像不像人，而是「人」这个身份到底还剩下什么不可替代",
+        "hook": "好奇心",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "好奇心",
+        "arm_id": 5,
+        "batch_num": 2,
+        "signals": [
+          "这些美女帅哥竟然是机器人(7分·好奇心·人机边界·2026世界机器人大会·heat78)"
+        ],
+        "paradigm": "好奇心·Ni人机边界哲学深挖型(INTJ好奇心batch2达上限·机器人7分·Ni:人机边界模糊→重新定义'人'的身份·B站深度位·2026世界机器人大会·严禁猎奇/恐怖谷焦虑)",
+        "role": "P1·INTJ好奇心batch2(达上限·B14必轮出)·机器人7·B站深度位·方向船key_decision'INTJ好奇心batch2(机器人7·人机边界·B站)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'INTJ好奇心batch2(机器人7·人机边界·B站)·B站升至28.6%修复单臂偏弱'100%对齐·INTJ×好奇心×B站·channel_mix B站28.6%(INTJ+INTP)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTJ好奇心batch2续触·达上限B14必轮出)·机器人7·Ni人机边界·B站深度位·严禁猎奇/恐怖谷焦虑",
+        "brief": {
+          "pain_point": "INTJ对'边界、定义、系统规则'有近乎强迫的追问欲，最想搞清楚的从来不是现象，而是现象背后的第一性原理；高颜值仿生机器人骗过眼睛，直接逼问INTJ最核心的哲学命题——'人'的定义边界在哪。",
+          "hook_first3": "第一行'这些高颜值的「人」，其实都是机器人'抛身份反转；第二行'2026世界机器人大会上，它们陪你聊天、当前台'补细节；第三行'真正的问题不是机器像不像人，是人还剩什么不可替代'切入Ni哲学。",
+          "emotion_curve": "好奇(像人) → 惊叹(技术) → 冷思(边界模糊) → 深挖(人的不可替代性) → 开放(留给未来的问题)。",
+          "structure": [
+            "钩子·身份反转",
+            "现象·仿生机器人应用",
+            "洞察·人机边界模糊",
+            "升华·人的不可替代性",
+            "CTA·你觉得人不可替代的是什么"
+          ],
+          "differentiation": "别人写机器人讲'科技炫酷/替代焦虑/猎奇'，我们讲'人机边界模糊逼我们重新定义人'；Ni第一性原理深挖身份本质，绝不渲染替代恐慌、不搞恐怖谷猎奇、不贩卖焦虑。"
+        }
+      }
+    },
     "D16-B1-2": {
       "vessel": {
         "version": "1.0",
@@ -8661,6 +9691,75 @@
           "析析KI-reinforced-008·钩子-人格三层映射·INTJ好奇心9.5/10",
           "strategy-pool·D15-B3 next_batch·INTJ培养·好奇心·B站"
         ]
+      }
+    },
+    "D21-B13-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-INTP-1",
+        "title": "李光洁说「演员哪敢随便改剧本」——INTP没有把这当成一句行业的谦虚。他的Ti系统读懂了这句话真正的分量：它不是卑微，而是一个人在自己的位置上，终于想明白了「敬畏」与「自我」从来不是对立的",
+        "hook": "身份认同",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "李光洁：演员哪敢随便改剧本(6分·身份认同+自我觉醒·INTP恢复落地·heat75)"
+        ],
+        "paradigm": "身份认同·Ti自我觉醒型(INTP身份认同恢复首触·李光洁6分·Ti:敬畏与自我的和解·演员对剧本的敬畏=职业身份的自我定位·B站¥25轻触·trust7.35修复链P0·防15批螺旋·严禁judge演员/行业内幕)",
+        "role": "P1·INTP身份认同batch1恢复首触(李光洁6·自我觉醒)·B站¥25轻触·trust7.35修复链P0·方向船key_decision'INTP恢复落地·身份认同(李光洁6·自我觉醒)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'INTP恢复落地·身份认同(李光洁6·自我觉醒)·B站¥25轻触·trust7.35修复链P0'100%对齐·INTP×身份认同×B站·channel_mix B站28.6%(INTJ+INTP)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTP身份认同batch1恢复首触·trust7.35修复链P0·防15批螺旋)·李光洁6·Ti演员自我觉醒·B站¥25轻触·B14观察质量",
+        "brief": {
+          "pain_point": "INTP长期在'坚持自我'与'适应规则'之间拉扯，最困惑的是'我到底该忠于自己，还是忠于体系'；李光洁一句'演员哪敢随便改剧本'，恰好给出一个INTP渴望的答案：敬畏与自我不是对立，敬畏本身就是一种成熟的自我定位。",
+          "hook_first3": "第一行''演员哪敢随便改剧本''引李光洁金句；第二行'很多人以为是谦虚'摆大众误读；第三行'但INTP听到的是：敬畏和「自我」，从来不是对立的'切入Ti洞察。",
+          "emotion_curve": "好奇(为什么不敢改) → 误读(以为是谦虚) → 顿悟(敬畏=成熟自我) → 释然(自我与体系的解) → 自省(你的位置上的敬畏)。",
+          "structure": [
+            "钩子·金句",
+            "误读·谦虚表象",
+            "洞察·敬畏与自我的和解",
+            "升华·成熟的自我定位",
+            "CTA·你如何平衡自我与体系"
+          ],
+          "differentiation": "别人写李光洁讲'老戏骨敬业/行业潜规则'，我们讲'敬畏与自我的和解=成熟的身份认同'；Ti视角落到职业身份与自我觉醒，绝不judge演员、不挖行业内幕、不八卦。"
+        }
       }
     },
     "D20-B9-INFP-1": {
@@ -9673,7 +10772,7 @@
         "priority": "P1",
         "consecutive_hook": 1,
         "direction_hook": "社会货币",
-        "arm_id": 3,
+        "arm_id": 4,
         "batch_num": 1,
         "signals": [
           "张家界天门山中外游客击掌走红(8分·社会货币/国家认同·社会货币恢复信号1/2)"
@@ -10140,6 +11239,75 @@
             "提醒珍惜"
           ],
           "differentiation": "从「被共情者」视角转向「共情者的疲惫」，给 INFJ 被看见的感觉"
+        }
+      }
+    },
+    "D21-B12-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T10:08:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0845"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-ENTP-1",
+        "title": "火车空位堆放零食，网友到底在争什么？——ENTP没有把这当成一条占座新闻。他的Ne-Ti系统在0.5秒里把它拆成了一个公共空间的规则命题：大家争的根本不是那几包零食，是\"在公共空间里，规则到底由谁来定义\"",
+        "hook": "身份认同",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "抖音",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "火车空位堆放零食 网友争的是什么(8分·身份认同/社会证明·公共规则辩论)"
+        ],
+        "paradigm": "身份认同·Ne公共规则辩论型(ENTP好奇心batch2达上限→轮出身份认同首触·火车空位8·Ne天然辩题:三张硬座票堆零食·网友争的不是零食·是'公共空间规则谁说了算'·Ti拆解规则边界·heat7.7M高争议)",
+        "role": "P0·ENTP身份认同batch1首触(好奇心batch2达上限→轮出身份认同)·火车空位8(公共规则辩论)·抖音Ne位·方向船key_decision'ENTP身份认同(火车空位8·公共规则辩论)'",
+        "direction_compliance": "D21-B12 direction-vessel key_decision'ENTP身份认同(火车空位8·公共规则辩论)'100%对齐·ENTP×身份认同×抖音·channel_mix抖音28.6%(ENTP+ENTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTP好奇心batch2→身份认同batch1新hook首触)·火车空位8·公共规则辩论·抖音无需post成品(仅brief)·不做站队judge·不贩卖对立",
+        "brief": {
+          "pain_point": "ENTP的Ne-Ti最享受'规则边界'的智力博弈——火车空位堆零食的争议，本质是'私人权利vs公共规则'的身份认同之争，正中ENTP爱拆解规则、爱辩题、爱'这背后到底是什么'的天性。",
+          "hook_first3": "第一行'三张硬座票，堆满零食'抛具体场景；第二行'网友争的到底是什么？'抛出辩题悬念；第三行'不是零食，是'谁有资格定义规则''切ENTP的Ne-Ti。",
+          "emotion_curve": "好奇(凭什么争) → 思辨(权利vs规则) → 会心(原来辩的是身份) → 兴奋(规则边界真有意思) → 参与(我也想说两句)。",
+          "structure": [
+            "钩子·场景悬念",
+            "现象·两派观点",
+            "洞察·争的是规则定义权",
+            "升华·公共空间的边界",
+            "CTA·你觉得座位能不能堆东西"
+          ],
+          "differentiation": "别人写火车空位讲'素质/占座/规则意识'，我们讲'一场全民辩论=身份认同的投射·每个人都在定义我是守规矩还是被欺负'；不做站队judge，不贩卖对立，落点'规则边界的思辨乐趣'。"
         }
       }
     },
@@ -11453,6 +12621,91 @@
         "note": "🆕 rest1批后恢复首触·反常识回登顶#1·韩国冰奶消费去魅8旗舰·零维护信任8.53全池最高·D21-B7评估续触batch2"
       }
     },
+    "D21-B13-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-ENFP-1",
+        "title": "62岁，她生下了一个6斤的健康男婴——ENFP没有把这当成一条「高龄生育奇迹」的猎奇新闻。她的Fi系统读懂了这件事真正反常识的地方：所谓生命边界从来不是年龄，而是一个人还敢不敢对「可能」两个字点头",
+        "hook": "反常识",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "62岁超高龄孕妇诞下6斤重男婴(8分·反常识·生命边界·旗舰·heat88)"
+        ],
+        "paradigm": "反常识·Fi生命边界/母性光辉型(ENFP反常识batch2达上限·62岁孕妇8分旗舰·Fi生命奇迹:生命边界不是年龄是相信可能·反常识破'什么年龄该做什么事'的隐性规训·母性光辉温柔视角·严禁焦虑贩卖/高龄生育风险猎奇)",
+        "role": "P0·ENFP反常识batch2(达上限·B14必轮出)·62岁孕妇8旗舰·小红书Fi位·方向船key_decision'ENFP反常识batch2(62岁孕妇8·生命边界旗舰)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'ENFP反常识batch2(62岁孕妇8·生命边界旗舰·注意避免焦虑贩卖)'100%对齐·ENFP×反常识×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFP反常识batch2续触·达上限B14必轮出)·62岁孕妇8旗舰·Fi生命边界·小红书v2.0成品post落地·严禁高龄生育焦虑(用生命奇迹/母性光辉角度)",
+        "brief": {
+          "pain_point": "ENFP的Fi渴望确认'人生的可能性不该被年龄/社会时钟锁死'，最怕被'什么年纪该干什么事'的规训困住；62岁产妇挑战了所有人对'生命边界'的默认假设，恰好击中ENFP对'可能'的信仰。",
+          "hook_first3": "第一行'62岁，她生下了6斤的健康男婴'直接抛反常识事实；第二行'产科主任说，从没接诊过这个年纪的产妇'用权威口吻强化反差；第三行'但真正反常识的，不是年龄'切入Fi生命哲学。",
+          "emotion_curve": "惊讶(62岁生子) → 柔软(生命降临) → 触动(边界的重新定义) → 坚定(相信'可能') → 温暖(母性光辉)。",
+          "structure": [
+            "钩子·反常识事实",
+            "反差·医生从未接诊",
+            "洞察·边界是敢相信可能",
+            "升华·母性光辉与生命奇迹",
+            "CTA·你生命里最'不可能'的一次"
+          ],
+          "differentiation": "别人写高龄生育讲'风险/医学极限/猎奇'，我们讲'生命边界不是年龄，是一个人还敢不敢相信可能'；Fi温柔视角落点'生命奇迹与母性光辉'，绝不贩卖年龄焦虑、绝不渲染生育风险。"
+        },
+        "post": {
+          "cover_title": "62岁，她生下了健康男婴",
+          "body": "62岁。\n\n她生下了一个6斤的健康男婴。👶\n\n产科主任说，\n自己从没接诊过这个年纪的产妇。\n\n很多人第一反应是：\n「这不可能吧？」\n\n但ENFP看到的，\n是另一层东西——\n\n所谓「生命边界」，\n从来不是年龄那一栏数字，\n而是一个人，\n还敢不敢对「可能」两个字点头。\n\n我们总被一种声音追着跑：\n「什么年纪，就该做什么事」。\n\n好像过了某个点，\n人生的可能性就自动关机了。\n\n可这个孩子用第一声啼哭告诉你：\n生命这件事，\n从来不认时钟。🕊️\n\n它认的，\n是一个人对生命的渴望，\n和一个妈妈敢相信「我能」的勇气。\n\n所以别急着用年龄给自己设限。\n\n你生命里那些「不可能」，\n也许差的，\n只是你敢不敢点头。\n\n💬 你人生里，最「不可能」却做到了的事，\n是哪一件？\n评论区，说给我听。",
+          "hashtags": [
+            "#反常识",
+            "#生命奇迹",
+            "#MBTI",
+            "#ENFP",
+            "#自我成长"
+          ],
+          "cover_visual": "柔和晨光里，一双略显苍老却稳稳托着新生婴儿的手，暖调、安静、有母性光辉；画面留白，配大字『生命不认时钟』，治愈不煽情",
+          "cta": "你人生里最『不可能』却做到了的事，是哪一件？评论区说给我听。",
+          "post_time": "12:00-13:00（午间情绪高峰·治愈类）",
+          "avoid": "不渲染高龄生育医学风险、不做'高龄产子=危险'的焦虑暗示、不猎奇产妇年龄细节、不judge个人生育选择；聚焦'生命边界是敢相信可能'的生命奇迹与母性光辉"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D20-B6-1": {
       "vessel": {
         "version": "1.0",
@@ -11948,6 +13201,75 @@
         "ttl_hours": 72
       }
     },
+    "D21-B12-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T10:08:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0845"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-ENTJ-1",
+        "title": "余承东官宣\"无网通信\"行业首发——ENTJ没有把这当成一条科技快讯。他的Te系统在0.5秒里把它读成了一个战略信号：行业首发从来不是\"发布一个功能\"，是抢下一次技术标准的定义权，是先手者给后手者画好的棋盘",
+        "hook": "好奇心",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "余承东官宣行业首发无网通信(7分·好奇心/科技·Te科技战略·heat73M)"
+        ],
+        "paradigm": "好奇心·Te科技战略型(ENTJ反常识batch2达上限→轮出好奇心首触·余承东无网通信7·Te:行业首发=技术标准卡位·heat73M科技富集·Ni:无网通信背后是'离线连接'底层范式转移)",
+        "role": "P1·ENTJ好奇心batch1首触(反常识batch2达上限→轮出好奇心)·余承东无网通信7(科技战略)·抖音Te位·方向船key_decision'ENTJ好奇心(余承东7·科技)'",
+        "direction_compliance": "D21-B12 direction-vessel key_decision'ENTJ好奇心(余承东7·科技战略)'100%对齐·ENTJ×好奇心×抖音·channel_mix抖音28.6%(ENTP+ENTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTJ反常识batch2→好奇心batch1新hook首触)·余承东无网通信7·科技战略·抖音无需post成品(仅brief)·不做华为无脑吹/黑",
+        "brief": {
+          "pain_point": "ENTJ的Te最关注'谁在定义规则/谁抢到先手'——华为行业首发无网通信，本质是技术标准与战略卡位之争，正中ENTJ对'领先、卡位、先手'的敏感；他们想知道的不只是'这技术是什么'，更是'这步棋意味着什么'。",
+          "hook_first3": "第一行'没网，也能发消息'抛反常识悬念；第二行'华为首发无网通信'点穿主体；第三行'ENTJ看到的不是新闻，是一次卡位'切人格视角。",
+          "emotion_curve": "好奇(没网怎么通信) → 兴奋(技术突破) → 战略(卡位/标准) → 前瞻(范式转移) → 掌控(先手就是优势)。",
+          "structure": [
+            "钩子·反常识悬念",
+            "现象·无网通信是什么",
+            "洞察·行业首发=标准卡位",
+            "升华·离线连接的范式转移",
+            "CTA·你敢把信号交给无网吗"
+          ],
+          "differentiation": "别人写余承东讲'黑科技/华为牛/国产突破'，我们讲'行业首发=战略卡位·抢的是技术标准的定义权'；不做华为无脑吹/黑，不贩卖科技焦虑，落点'先手思维与标准卡位'。"
+        }
+      }
+    },
     "D17-B2-2": {
       "vessel": {
         "version": "1.0",
@@ -12411,6 +13733,75 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B13-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-INFJ-1",
+        "title": "妻子怀着二胎，他偷刷了300万打赏女主播——INFJ没有把这当成一条「渣男该骂」的爽文。她的Ni-Fe系统读懂了这件事真正让人心寒的地方：背叛最残忍的从来不是钱，而是一个人在你最脆弱的孕期，把信任一点一点抽空",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "妻子怀二胎丈夫偷刷300万打赏女主播(8分·情感共鸣·依恋背叛·依恋类型引擎·heat62)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe依恋背叛型(INFJ情感共鸣batch1首触·妻子300万8分旗舰·依恋类型引擎·Ni洞察:背叛的残忍不在钱在信任抽空·Fe共情受害者脆弱期·依恋母题连续6批·严禁道德审判受害者/渣男爽文猎奇)",
+        "role": "P0·INFJ情感共鸣batch1首触(社会货币batch1后轮出)·妻子300万8旗舰·微博公共舆论位·方向船key_decision'INFJ情感共鸣batch1(妻子300万8·依恋背叛·依恋类型引擎)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'INFJ情感共鸣batch1(妻子300万8·依恋背叛·依恋类型引擎·8分旗舰)'100%对齐·INFJ×情感共鸣×微博·channel_mix微博14.3%(INFJ)",
+        "flagship": true,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(INFJ情感共鸣batch1首触·社会货币batch1后轮出)·妻子300万8旗舰·依恋背叛母题·Ni-Fe·严禁道德审判受害者(用依恋背叛心理母题)",
+        "brief": {
+          "pain_point": "INFJ对亲密关系中的'信任与依恋'极度敏感，最怕的不是失去，而是'在毫无防备时被最亲近的人一点点抽空'；妻子怀二胎期间被丈夫偷刷300万，正是INFJ最恐惧的依恋背叛样本——伤害发生在最该被保护的脆弱期。",
+          "hook_first3": "第一行'妻子怀着二胎，丈夫偷刷了300万'抛背叛事实；第二行'不是一笔钱的事'先安抚猎奇预期；第三行'是一个人在你最脆弱的时候，把信任一点点抽空'切入Ni-Fe依恋本质。",
+          "emotion_curve": "愤怒(背叛) → 心疼(孕期脆弱) → 心寒(信任抽空) → 共情(依恋的脆弱性) → 自省(你的关系里谁在透支信任)。",
+          "structure": [
+            "钩子·背叛事实",
+            "反转·不是钱的事",
+            "洞察·脆弱期抽空信任",
+            "升华·依恋的脆弱与边界",
+            "CTA·你如何识别关系里的信任透支"
+          ],
+          "differentiation": "别人写300万打赏讲'渣男/婚姻破裂/防骗'，我们讲'背叛的残忍不在钱，在脆弱期抽空信任'；Ni-Fe落到依恋类型心理母题，绝不道德审判受害者、绝不把受害者写成'没管住丈夫'、绝不渲染女主播对立。"
+        }
       }
     },
     "D20-B2-1": {
@@ -13021,6 +14412,91 @@
         "usage_count": 0
       }
     },
+    "D21-B13-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B13-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B13"
+        },
+        "created_at": "2026-08-22T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-22-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-22-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B13-ISTJ-1",
+        "title": "欢子被批「摆烂」，「老实人」们豁出去了——ISTJ没有把这当成一档综艺的抓马。他的Si系统读懂了这件事真正难受的地方：一个人被贴上「老实」「摆烂」的标签时，最刺痛的从来不是被骂，而是「我到底是谁」被别人的嘴定义了",
+        "hook": "身份认同",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "欢子被批摆烂/披哥老实人豁出去了(7分·身份认同·人格呈现·SJ象限恢复·heat82)"
+        ],
+        "paradigm": "身份认同·Si人格标签与自我定位冲突型(ISTJ身份认同恢复首触·欢子/披哥7分·SJ象限0/4→1/4硬约束·Si:人格标签与自我定位冲突·老实人标签的反抗=自我重新定义·严禁judge艺人/站队粉丝)",
+        "role": "P0·ISTJ身份认同batch1恢复首触(欢子7·人格呈现)·小红书Si位·SJ象限0/4→1/4硬约束·方向船key_decision'ISTJ恢复·身份认同(欢子/披哥7·人格呈现)'",
+        "direction_compliance": "D21-B13 direction-vessel key_decision'ISTJ恢复·身份认同(欢子/披哥7·人格呈现)·SJ象限0/4→1/4'100%对齐·ISTJ×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ISTJ身份认同batch1恢复首触·B9-B11连续3批部署后B12轮休→B13恢复)·欢子7·Si人格标签与自我定位·小红书v2.0成品post落地·SJ象限0/4→1/4",
+        "brief": {
+          "pain_point": "ISTJ最需要'稳定、可预期、被准确理解'的自我定位，最怕被外界用标签草率定义——'老实人''摆烂'这类标签会直接刺痛他们对'我是谁'的秩序感；欢子被批摆烂、老实人豁出去，正是ISTJ最熟悉的'标签vs自我'冲突。",
+          "hook_first3": "第一行''老实人豁出去了''引综艺热词；第二行'欢子被骂摆烂，弹幕刷屏'摆冲突现场；第三行'但ISTJ看到的不是抓马，是标签如何定义一个人'切人格视角。",
+          "emotion_curve": "不解(为什么被骂) → 共鸣(被标签定义的不适) → 坚定(自我定位由自己定) → 释然(标签不等于我)。",
+          "structure": [
+            "钩子·标签冲突",
+            "现象·摆烂与老实人",
+            "洞察·标签定义自我",
+            "升华·自我定位由自己写",
+            "CTA·你被哪个标签误读过"
+          ],
+          "differentiation": "别人写披哥讲'综艺效果/人设翻车/吃瓜'，我们讲'标签如何偷走一个人的自我定义'；Si视角落到'被准确理解'的渴望，绝不judge艺人表现、绝不站队粉丝、不消费争议细节。"
+        },
+        "post": {
+          "cover_title": "老实人不是标签，是选择",
+          "body": "《披哥》舞台上，\n欢子被批「摆烂」，\n张彬彬、曹骏这些「老实人」，\n豁出去了。\n\n弹幕吵成一片。\n\n但ISTJ看到的，\n不是抓马——\n\n是一个人被贴上「老实」「摆烂」的标签时，\n最难受的，\n从来不是被骂，\n而是「我到底是谁」，\n被别人的嘴给定义了。\n\n「老实人」这个词，\n用久了就变成一张标签，\n贴在你身上，\n替你回答一切：\n你会不会拒绝、你敢不敢出头、\n你能不能赢。\n\n可它从来不是你的全部。\n\n一个人可以话不多，\n但心里有数；\n可以慢半拍，\n但每一步都算数。\n\n「老实」不是认怂，\n是你在喧嚣里，\n选择了按自己的节奏活。\n\n你被哪个标签误读过？\n评论区，\n说说那个标签，\n和真正的你。",
+          "hashtags": [
+            "#身份认同",
+            "#MBTI",
+            "#ISTJ",
+            "#老实人",
+            "#自我成长"
+          ],
+          "cover_visual": "冷色舞台光与暖色侧脸剪影的对比，一个安静、不抢镜头却坚定的身影，配大字『标签不能定义你』，克制、有力量感",
+          "cta": "你被哪个标签误读过？评论区说说那个标签和真正的你。",
+          "post_time": "18:00-20:00（晚间共鸣高峰·身份认同类）",
+          "avoid": "不judge欢子/披哥艺人表现、不站队粉丝阵营、不消费争议细节、不把'老实人'写成贬义或抬高；聚焦'标签不能定义你'的自我定位"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D21-B10-ENFP-1": {
       "vessel": {
         "version": "1.0",
@@ -13499,6 +14975,75 @@
             "落点·审慎地相信科学"
           ],
           "differentiation": "别人写抗癌疫苗讲'炒股/暴富/神药'，我们讲'Si逐条核查后的审慎振奋：防癌第一次可复制'；不贩卖医疗焦虑(禁恐惧按钮)，落到事实与科学进程。"
+        }
+      }
+    },
+    "D21-B12-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B12-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B12"
+        },
+        "created_at": "2026-08-21T10:08:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-21-0845"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-21-0845"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B12-INTJ-1",
+        "title": "最强厄尔尼诺，或年底前形成——INTJ没有把这当成一条天气预警。他的Ni系统在0.5秒里把它读成了一张系统图：厄尔尼诺不是一场天气，是地球气候这个复杂系统的一次\"制度级\"震荡，看懂变量如何联动，才不会被情绪裹挟",
+        "hook": "好奇心",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "最强厄尔尼诺事件或年底前形成(6分·气候科学·Ni制度深挖)"
+        ],
+        "paradigm": "好奇心·Ni制度深挖型(INTJ反常识batch2达上限→轮出好奇心首触·最强厄尔尼诺6·Ni:气候是复杂系统·厄尔尼诺=地球的'制度级'震荡·B站深度分析单一强臂·规避恐惧按钮/灾难贩卖)",
+        "role": "P1·INTJ好奇心batch1首触(反常识batch2达上限→轮出好奇心)·最强厄尔尼诺6(气候科学)·B站Ni位·方向船key_decision'INTJ好奇心(厄尔尼诺6·气候科学)'",
+        "direction_compliance": "D21-B12 direction-vessel key_decision'INTJ好奇心(厄尔尼诺6·气候科学制度深挖)'100%对齐·INTJ×好奇心×B站·channel_mix B站14.3%(INTJ单一强臂)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTJ反常识batch2→好奇心batch1新hook首触)·最强厄尔尼诺6·气候科学·B站无需post成品(仅brief)·规避恐惧按钮/灾难贩卖",
+        "brief": {
+          "pain_point": "INTJ的Ni最享受'复杂系统背后的底层机制'——厄尔尼诺不是一条天气新闻，是地球气候系统的周期性震荡，正中INTJ想看清'系统如何运转、变量如何联动'的深度需求；他们反感的不是灾害本身，是被情绪化叙事裹挟。",
+          "hook_first3": "第一行'最强厄尔尼诺，年底前可能形成'抛事实；第二行'它不是一场天气，是地球系统的震荡'点穿深度；第三行'INTJ看的是变量如何联动'切人格视角。",
+          "emotion_curve": "警觉(最强/年底) → 好奇(到底怎么形成) → 深挖(系统机制) → 洞察(变量联动) → 掌控(理解了就不慌)。",
+          "structure": [
+            "钩子·事实悬念",
+            "现象·厄尔尼诺是什么",
+            "洞察·复杂系统的周期性震荡",
+            "升华·看懂变量才不被情绪裹挟",
+            "CTA·你更关心哪个变量"
+          ],
+          "differentiation": "别人写厄尔尼诺讲'天气预警/高温洪水/恐慌'，我们讲'厄尔尼诺=地球气候系统的制度级震荡·看懂变量联动'；不做灾难贩卖(恐惧按钮规避)，不做气候焦虑，落点'系统思维与变量理解'。"
         }
       }
     },
