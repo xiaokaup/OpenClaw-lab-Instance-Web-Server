@@ -8,7 +8,7 @@
     },
     "freshness_ttl_hours": 24,
     "id": "user-pool-vessel-2026-08-05T10:00:00+08:00",
-    "created_at": "2026-08-22T00:36:15+08:00",
+    "created_at": "2026-08-23T10:07:13+08:00",
     "priority": "high",
     "dependencies": [
       {
@@ -78,7 +78,7 @@
       "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
     }
   },
-  "updated_at": "2026-08-22T00:36:15+08:00",
+  "updated_at": "2026-08-23T10:07:13+08:00",
   "total_users": 8250,
   "population_estimate": {
     "xixi_estimates": 8480,
@@ -101,7 +101,7 @@
     49,
     49
   ],
-  "operator": "营营·D21-B12全链对齐+persona-themes v1.0（数据陈旧修复·大卡2026-08-22告警响应）",
+  "operator": "营营·B14对齐(2026-08-23 10:00 cron)",
   "system_status": "🔴 D21-B7 match gate 误触发已纠正(ESC-2026-08-16-1·执行层strategy_match=100%·信号命中率20.5%非gate指标)·投投自裁降级被纠偏: ENTP解扣补投·今日6臂¥150(≤日限¥200)·ENFJ冻结¥25留B8续触(D21-B7-ENFJ-1 q8.9 fresh就位)·B8四臂轮出预警(INTJ/INTP反常识+ISTJ社证+INFJ身份认同 batch2达上限)·用户运营2动作预置(ENFJ续触+INTP身份认同轮入·机动池零边际成本)",
   "system_status_detail": "D21-B7主批(09:25)¥125/5臂(INTJ/INTP/ENTJ/ISTJ/INFJ·strategy_match 5/5)·B2补投(12:07)ENTP解扣¥25(B站好奇心·D21-B7-ENTP-1 q8.8 fresh·设设12:00补产·缺口闭合)·ENFJ维持冻结留B8(D21-B7-ENFJ-1·情感共鸣·q8.9·fresh·小红书·usage0)·hook_diversity 4/6·HHI 0.278·dissent 0连续4批·内容TTL崩坏未解(3/6过期·复用3臂·ruling-015 TTL enforce逾期8天)·支付~443h盲飞(13阈值全破·非营营域)",
   "segments": {
@@ -110,8 +110,8 @@
         "personality": "INTJ",
         "count": 390,
         "avg_trust": 8.53,
-        "eligible": false,
-        "note": "零维护·生产级归档·自然覆盖",
+        "eligible": true,
+        "note": "B14反常识batch1首触(55元项链7·规则博弈·B站)·好奇心batch2(B13达上限)已轮出→反常识·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -130,7 +130,7 @@
         "count": 300,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖",
+        "note": "B14反常识batch1首触(男子被骗8·人性反差/认知防骗·抖音)·社会证明batch1(B13)轮出→反常识·信任7.74·⚠️避免恐惧按钮(用认知防骗/人性反差角度)",
         "persona": {
           "themes": [
             {
@@ -149,7 +149,7 @@
         "count": 330,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "note": "B14好奇心batch1轻触(36kr AI·认知·B站·¥25)·身份认同batch1(B13)轮出→好奇心·信任7.08-7.35·防15批螺旋·修复链P0",
         "persona": {
           "themes": [
             {
@@ -168,7 +168,7 @@
         "count": 270,
         "avg_trust": 6.55,
         "eligible": true,
-        "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率",
+        "note": "B14身份认同batch1首触(女兵7·人生选择/自我觉醒·小红书)·反常识batch2(B13达上限)轮出→身份认同·信任6.49-6.55下滑待核查(B15衰减vs口径重估)·⚠️用正面信号避衰减",
         "persona": {
           "themes": [
             {
@@ -186,8 +186,8 @@
         "personality": "INFP",
         "count": 225,
         "avg_trust": 6.93,
-        "eligible": true,
-        "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察",
+        "eligible": false,
+        "note": "复评轮休·疲劳2.2仍>2.0(阈值)·依恋母题连续5批(B8-B12)已降载·狼孩9/女孩8为B15恢复候选(≥7分信号已具备·待疲劳≤2.0)·信任6.93",
         "persona": {
           "themes": [
             {
@@ -206,7 +206,7 @@
         "count": 155,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "首触即峰值·全系统最高信任·零维护双极候选",
+        "note": "B14身份认同batch1首触(狼孩9旗舰·依恋剥夺+身份认同+自我觉醒三合一·母题桥接·微博)·情感共鸣batch1(B13)轮出→身份认同·信任8.13·⚠️严禁恐惧按钮(用身份/依恋/生命意义角度)",
         "persona": {
           "themes": [
             {
@@ -225,7 +225,7 @@
         "count": 155,
         "avg_trust": 7.6,
         "eligible": true,
-        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | D18-B2反常识首触✅·D18-B6好奇心·微博",
+        "note": "B14好奇心batch1首触(总犯困6·健康认知·小红书)·身份认同batch1(B13)轮出→好奇心·信任7.60·SJ象限维持1/4",
         "persona": {
           "themes": [
             {
@@ -244,7 +244,7 @@
         "count": 165,
         "avg_trust": 7.52,
         "eligible": false,
-        "note": "resting·无Se信号·D21后段轻触 | UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+        "note": "resting·无Se信号·D21后段轻触·信任7.52",
         "persona": {
           "themes": [
             {
@@ -263,7 +263,7 @@
         "count": 92,
         "avg_trust": 7.07,
         "eligible": true,
-        "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07",
+        "note": "B14恢复·社会证明batch1首触(零食占座7·公德辩论·微博)·休1批结束(蛋饼店主9旗舰已交付)·信任7.07·⚠️避免站队引战(用公德思辨角度)",
         "persona": {
           "themes": [
             {
@@ -281,8 +281,8 @@
         "personality": "ENTP",
         "count": 82,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落",
+        "eligible": false,
+        "note": "休1批(非排除)·反常识batch1(B13·55元项链6)无clean新hook信号·NT象限3/4(INTJ/ENTJ/INTP)仍足·B15恢复·信任7.25",
         "persona": {
           "themes": [
             {
@@ -302,8 +302,8 @@
         "personality": "INTJ",
         "count": 455,
         "avg_trust": 8.53,
-        "eligible": false,
-        "note": "零维护自然回归",
+        "eligible": true,
+        "note": "B14反常识batch1首触·好奇心batch2(B13达上限)轮出→反常识·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -322,7 +322,7 @@
         "count": 285,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "决策惯性·5批gap·D19-B1覆盖",
+        "note": "B14反常识batch1首触·Te认知防骗/人性反差·信任7.74",
         "persona": {
           "themes": [
             {
@@ -341,7 +341,7 @@
         "count": 285,
         "avg_trust": 7.6,
         "eligible": true,
-        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+        "note": "B14好奇心batch1首触·Si健康认知·SJ象限维持1/4·信任7.60",
         "persona": {
           "themes": [
             {
@@ -360,7 +360,7 @@
         "count": 155,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "note": "B14好奇心batch1轻触·修复链P0·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -378,8 +378,8 @@
         "personality": "ENTP",
         "count": 162,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "首触后巩固中·Ne-dom弹性验证",
+        "eligible": false,
+        "note": "休1批(非排除)·B15恢复·NT象限3/4仍足·信任7.25",
         "persona": {
           "themes": [
             {
@@ -398,7 +398,7 @@
         "count": 162,
         "avg_trust": 7.52,
         "eligible": false,
-        "note": "resting·无Se信号·D21后段轻触 | 感官低频·非紧急",
+        "note": "resting·无Se信号·D21后段轻触·信任7.52",
         "persona": {
           "themes": [
             {
@@ -416,8 +416,8 @@
         "personality": "ENFJ",
         "count": 122,
         "avg_trust": 7.07,
-        "eligible": false,
-        "note": "窗口已闭合·观察衰减",
+        "eligible": true,
+        "note": "B14恢复·社会证明batch1首触(公德辩论)·信任7.07",
         "persona": {
           "themes": [
             {
@@ -436,7 +436,7 @@
         "count": 10,
         "avg_trust": 6.55,
         "eligible": true,
-        "note": "社货恢复·冷却收尾",
+        "note": "B14身份认同batch1首触·反常识batch2(B13达上限)轮出·冷却组观察·信任6.49-6.55下滑待核查",
         "persona": {
           "themes": [
             {
@@ -454,8 +454,8 @@
         "personality": "INFP",
         "count": 112,
         "avg_trust": 6.93,
-        "eligible": true,
-        "note": "恢复中·轻触不加重",
+        "eligible": false,
+        "note": "复评轮休·疲劳2.2>2.0·B15复评(疲劳≤2.0且≥7分信号)·信任6.93",
         "persona": {
           "themes": [
             {
@@ -474,7 +474,7 @@
         "count": 102,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "低维护·高信任",
+        "note": "B14身份认同batch1首触·母题桥接旗舰·信任8.13",
         "persona": {
           "themes": [
             {
@@ -495,7 +495,7 @@
         "count": 185,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+        "note": "召回候选·B14好奇心batch1轻触(36kr AI)·信任7.35修复链P0",
         "persona": {
           "themes": [
             {
@@ -514,7 +514,7 @@
         "count": 195,
         "avg_trust": 6.55,
         "eligible": true,
-        "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力",
+        "note": "召回候选·B14身份认同batch1(女兵7·正面信号)·18%分享率回流潜力·信任6.49-6.55",
         "persona": {
           "themes": [
             {
@@ -533,7 +533,7 @@
         "count": 245,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "低维护·信任高",
+        "note": "召回候选·高信任8.13·B14身份认同(狼孩9旗舰·母题桥接)",
         "persona": {
           "themes": [
             {
@@ -551,8 +551,8 @@
         "personality": "INTJ",
         "count": 415,
         "avg_trust": 8.53,
-        "eligible": false,
-        "note": "零维护·触达ROI低",
+        "eligible": true,
+        "note": "召回候选·B14反常识batch1(55元项链7·规则博弈)·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -571,7 +571,7 @@
         "count": 335,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "决策惯性",
+        "note": "召回候选·B14反常识batch1(男子被骗8)·信任7.74",
         "persona": {
           "themes": [
             {
@@ -590,7 +590,7 @@
         "count": 275,
         "avg_trust": 7.6,
         "eligible": true,
-        "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+        "note": "召回候选·B14好奇心batch1(总犯困6)·信任7.60",
         "persona": {
           "themes": [
             {
@@ -609,7 +609,7 @@
         "count": 165,
         "avg_trust": 7.52,
         "eligible": false,
-        "note": "resting·无Se信号·D21后段轻触 | 感官低频",
+        "note": "resting·无Se信号·召回暂停·D21后段轻触·信任7.52",
         "persona": {
           "themes": [
             {
@@ -627,8 +627,8 @@
         "personality": "ENFJ",
         "count": 162,
         "avg_trust": 7.07,
-        "eligible": false,
-        "note": "窗口闭合·观察",
+        "eligible": true,
+        "note": "召回候选·B14恢复·社会证明batch1(零食占座7)·信任7.07",
         "persona": {
           "themes": [
             {
@@ -646,8 +646,8 @@
         "personality": "ENTP",
         "count": 155,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "D19-B1后定唤醒策略",
+        "eligible": false,
+        "note": "休1批(非排除)·召回暂停·B15恢复·信任7.25",
         "persona": {
           "themes": [
             {
@@ -665,8 +665,8 @@
         "personality": "INFP",
         "count": 112,
         "avg_trust": 6.93,
-        "eligible": true,
-        "note": "恢复中·轻触不加重",
+        "eligible": false,
+        "note": "复评轮休·疲劳2.2>2.0·召回暂停·B15复评·信任6.93",
         "persona": {
           "themes": [
             {
@@ -777,7 +777,6 @@
         "count": 136,
         "avg_trust": 7.52,
         "eligible": false,
-        "note": "resting·无Se信号·D21后段轻触 | ",
         "persona": {
           "themes": [
             {
@@ -870,8 +869,8 @@
       "personality": "INTJ",
       "count": 390,
       "avg_trust": 8.53,
-      "eligible": false,
-      "note": "零维护·生产级归档·自然覆盖",
+      "eligible": true,
+      "note": "B14反常识batch1首触(55元项链7·规则博弈·B站)·好奇心batch2(B13达上限)已轮出→反常识·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -891,7 +890,7 @@
       "count": 300,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "D18-B3-2 fresh(社货·抖音·8.7)欠投·D19-B1优先覆盖",
+      "note": "B14反常识batch1首触(男子被骗8·人性反差/认知防骗·抖音)·社会证明batch1(B13)轮出→反常识·信任7.74·⚠️避免恐惧按钮(用认知防骗/人性反差角度)",
       "persona": {
         "themes": [
           {
@@ -911,7 +910,7 @@
       "count": 330,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "B14好奇心batch1轻触(36kr AI·认知·B站·¥25)·身份认同batch1(B13)轮出→好奇心·信任7.08-7.35·防15批螺旋·修复链P0",
       "persona": {
         "themes": [
           {
@@ -931,7 +930,7 @@
       "count": 270,
       "avg_trust": 6.55,
       "eligible": true,
-      "note": "D18-B3-1 fresh(社货·B站·8.8·usage=0)欠投·18%分享率",
+      "note": "B14身份认同batch1首触(女兵7·人生选择/自我觉醒·小红书)·反常识batch2(B13达上限)轮出→身份认同·信任6.49-6.55下滑待核查(B15衰减vs口径重估)·⚠️用正面信号避衰减",
       "persona": {
         "themes": [
           {
@@ -950,8 +949,8 @@
       "personality": "INFP",
       "count": 225,
       "avg_trust": 6.93,
-      "eligible": true,
-      "note": "🔴 恢复第4批完成·信任6.5→6.8·D18-B6好奇心续触第6批·疲劳4.5基线观察",
+      "eligible": false,
+      "note": "复评轮休·疲劳2.2仍>2.0(阈值)·依恋母题连续5批(B8-B12)已降载·狼孩9/女孩8为B15恢复候选(≥7分信号已具备·待疲劳≤2.0)·信任6.93",
       "persona": {
         "themes": [
           {
@@ -971,7 +970,7 @@
       "count": 155,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "首触即峰值·全系统最高信任·零维护双极候选",
+      "note": "B14身份认同batch1首触(狼孩9旗舰·依恋剥夺+身份认同+自我觉醒三合一·母题桥接·微博)·情感共鸣batch1(B13)轮出→身份认同·信任8.13·⚠️严禁恐惧按钮(用身份/依恋/生命意义角度)",
       "persona": {
         "themes": [
           {
@@ -991,7 +990,7 @@
       "count": 155,
       "avg_trust": 7.6,
       "eligible": true,
-      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | D18-B2反常识首触✅·D18-B6好奇心·微博",
+      "note": "B14好奇心batch1首触(总犯困6·健康认知·小红书)·身份认同batch1(B13)轮出→好奇心·信任7.60·SJ象限维持1/4",
       "persona": {
         "themes": [
           {
@@ -1011,7 +1010,7 @@
       "count": 165,
       "avg_trust": 7.52,
       "eligible": false,
-      "note": "resting·无Se信号·D21后段轻触 | UCB闭环·resting·信任缓慢下滑6.9→6.7·D19可轻触评估",
+      "note": "resting·无Se信号·D21后段轻触·信任7.52",
       "persona": {
         "themes": [
           {
@@ -1031,7 +1030,7 @@
       "count": 92,
       "avg_trust": 7.07,
       "eligible": true,
-      "note": "🎯 B8恢复续触就绪·D21-B7-ENFJ-1(q8.9 fresh·情感共鸣·小红书)·恢复验证3批不打断·信任7.07",
+      "note": "B14恢复·社会证明batch1首触(零食占座7·公德辩论·微博)·休1批结束(蛋饼店主9旗舰已交付)·信任7.07·⚠️避免站队引战(用公德思辨角度)",
       "persona": {
         "themes": [
           {
@@ -1050,8 +1049,8 @@
       "personality": "ENTP",
       "count": 82,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "🎯 首触+第2触完成·Ne-dom验证·D18-B6反常识·抖音·防回落",
+      "eligible": false,
+      "note": "休1批(非排除)·反常识batch1(B13·55元项链6)无clean新hook信号·NT象限3/4(INTJ/ENTJ/INTP)仍足·B15恢复·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1070,8 +1069,8 @@
       "personality": "INTJ",
       "count": 455,
       "avg_trust": 8.53,
-      "eligible": false,
-      "note": "零维护自然回归",
+      "eligible": true,
+      "note": "B14反常识batch1首触·好奇心batch2(B13达上限)轮出→反常识·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -1091,7 +1090,7 @@
       "count": 285,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "决策惯性·5批gap·D19-B1覆盖",
+      "note": "B14反常识batch1首触·Te认知防骗/人性反差·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1111,7 +1110,7 @@
       "count": 285,
       "avg_trust": 7.6,
       "eligible": true,
-      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+      "note": "B14好奇心batch1首触·Si健康认知·SJ象限维持1/4·信任7.60",
       "persona": {
         "themes": [
           {
@@ -1131,7 +1130,7 @@
       "count": 155,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "B14好奇心batch1轻触·修复链P0·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -1150,8 +1149,8 @@
       "personality": "ENTP",
       "count": 162,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "首触后巩固中·Ne-dom弹性验证",
+      "eligible": false,
+      "note": "休1批(非排除)·B15恢复·NT象限3/4仍足·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1171,7 +1170,7 @@
       "count": 162,
       "avg_trust": 7.52,
       "eligible": false,
-      "note": "resting·无Se信号·D21后段轻触 | 感官低频·非紧急",
+      "note": "resting·无Se信号·D21后段轻触·信任7.52",
       "persona": {
         "themes": [
           {
@@ -1190,8 +1189,8 @@
       "personality": "ENFJ",
       "count": 122,
       "avg_trust": 7.07,
-      "eligible": false,
-      "note": "窗口已闭合·观察衰减",
+      "eligible": true,
+      "note": "B14恢复·社会证明batch1首触(公德辩论)·信任7.07",
       "persona": {
         "themes": [
           {
@@ -1211,7 +1210,7 @@
       "count": 10,
       "avg_trust": 6.55,
       "eligible": true,
-      "note": "社货恢复·冷却收尾",
+      "note": "B14身份认同batch1首触·反常识batch2(B13达上限)轮出·冷却组观察·信任6.49-6.55下滑待核查",
       "persona": {
         "themes": [
           {
@@ -1230,8 +1229,8 @@
       "personality": "INFP",
       "count": 112,
       "avg_trust": 6.93,
-      "eligible": true,
-      "note": "恢复中·轻触不加重",
+      "eligible": false,
+      "note": "复评轮休·疲劳2.2>2.0·B15复评(疲劳≤2.0且≥7分信号)·信任6.93",
       "persona": {
         "themes": [
           {
@@ -1251,7 +1250,7 @@
       "count": 102,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "低维护·高信任",
+      "note": "B14身份认同batch1首触·母题桥接旗舰·信任8.13",
       "persona": {
         "themes": [
           {
@@ -1271,7 +1270,7 @@
       "count": 185,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "B13轻触恢复(身份认同·B站·¥25·策策决策2026-08-21显式留痕·修复链P0) | 🔴 P0·修复链第7环预置·B8身份认同轮入(反常识batch2达上限·好奇心gate未开≥7.4+疲劳≤1.0)·信任7.08-7.35",
+      "note": "召回候选·B14好奇心batch1轻触(36kr AI)·信任7.35修复链P0",
       "persona": {
         "themes": [
           {
@@ -1291,7 +1290,7 @@
       "count": 195,
       "avg_trust": 6.55,
       "eligible": true,
-      "note": "社货唤醒·D18-B3-1 fresh欠投·18%分享回流潜力",
+      "note": "召回候选·B14身份认同batch1(女兵7·正面信号)·18%分享率回流潜力·信任6.49-6.55",
       "persona": {
         "themes": [
           {
@@ -1311,7 +1310,7 @@
       "count": 245,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "低维护·信任高",
+      "note": "召回候选·高信任8.13·B14身份认同(狼孩9旗舰·母题桥接)",
       "persona": {
         "themes": [
           {
@@ -1330,8 +1329,8 @@
       "personality": "INTJ",
       "count": 415,
       "avg_trust": 8.53,
-      "eligible": false,
-      "note": "零维护·触达ROI低",
+      "eligible": true,
+      "note": "召回候选·B14反常识batch1(55元项链7·规则博弈)·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -1351,7 +1350,7 @@
       "count": 335,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "决策惯性",
+      "note": "召回候选·B14反常识batch1(男子被骗8)·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1371,7 +1370,7 @@
       "count": 275,
       "avg_trust": 7.6,
       "eligible": true,
-      "note": "B13恢复(SJ象限平衡·连续3批部署后轮休结束) | 零维护归档",
+      "note": "召回候选·B14好奇心batch1(总犯困6)·信任7.60",
       "persona": {
         "themes": [
           {
@@ -1391,7 +1390,7 @@
       "count": 165,
       "avg_trust": 7.52,
       "eligible": false,
-      "note": "resting·无Se信号·D21后段轻触 | 感官低频",
+      "note": "resting·无Se信号·召回暂停·D21后段轻触·信任7.52",
       "persona": {
         "themes": [
           {
@@ -1410,8 +1409,8 @@
       "personality": "ENFJ",
       "count": 162,
       "avg_trust": 7.07,
-      "eligible": false,
-      "note": "窗口闭合·观察",
+      "eligible": true,
+      "note": "召回候选·B14恢复·社会证明batch1(零食占座7)·信任7.07",
       "persona": {
         "themes": [
           {
@@ -1430,8 +1429,8 @@
       "personality": "ENTP",
       "count": 155,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "D19-B1后定唤醒策略",
+      "eligible": false,
+      "note": "休1批(非排除)·召回暂停·B15恢复·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1450,8 +1449,8 @@
       "personality": "INFP",
       "count": 112,
       "avg_trust": 6.93,
-      "eligible": true,
-      "note": "恢复中·轻触不加重",
+      "eligible": false,
+      "note": "复评轮休·疲劳2.2>2.0·召回暂停·B15复评·信任6.93",
       "persona": {
         "themes": [
           {
@@ -1566,7 +1565,6 @@
       "count": 136,
       "avg_trust": 7.52,
       "eligible": false,
-      "note": "resting·无Se信号·D21后段轻触 | ",
       "persona": {
         "themes": [
           {
