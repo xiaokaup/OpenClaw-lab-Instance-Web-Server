@@ -1,18 +1,18 @@
 {
   "pool_status": {
-    "level": 147,
+    "level": 154,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池147>>25软上限·投投零部署为根因·非内容过剩·D21-B13第二波轮出批满产7臂fresh(ENFP反常识8.8/INFJ情感共鸣9.0双旗舰+ISTJ/INTP双恢复+ENTP/ENTJ/INTJ)·方向船B13明令7臂全fresh(轮出必需)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-22T08:30:00+08:00",
-    "last_creation_batch": "D21-B13",
-    "last_deployment": "2026-08-22T09:25:00+08:00",
-    "last_deployment_batch": "D21-B13",
+    "warning": "🔴🔴 池154>>25软上限·投投零部署为根因·非内容过剩·D21-B14第三波轮出批满产7臂fresh(INFJ身份认同9.0狼孩旗舰+ENTJ反常识8.7+ENFP身份认同8.8女兵+ENFJ社会证明8.6恢复+ISTJ好奇心8.6+INTJ反常识8.7+INTP好奇心8.5轻触)·方向船B14明令7臂全fresh(第三波轮出必需)·豁免池水位降产·对冲走清stale并行",
+    "last_creation": "2026-08-23T08:35:00+08:00",
+    "last_creation_batch": "D21-B14",
+    "last_deployment": "2026-08-23T09:25:00+08:00",
+    "last_deployment_batch": "D21-B14",
     "net_change_this_batch": 7,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 147,
-    "active_items": 84,
+    "total_items": 154,
+    "active_items": 91,
     "hook_conflict_items": 1,
     "last_deployment_arms": 7,
     "sheshe_supplement": "设设D21-B12补产4臂fresh(ENFJ社会证明9蛋饼店主旗舰+ENTP身份认同8.8+ENTJ好奇心8.6+INTJ好奇心8.5)·补全大面积轮出批7臂矩阵·小红书post成品1条(ENFJ)·brief 4条全填实·修复INFJ/INFP臂序+INFP渠道对齐微博",
@@ -20,12 +20,13 @@
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 16,
-      "brief_added": 25,
-      "xhs_active_posts_completed": 11,
+      "posts_added": 18,
+      "brief_added": 32,
+      "xhs_active_posts_completed": 13,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B12累计3条post(ENFP反常识+INFP情感共鸣+ENFJ社会证明)+7条brief·body均为完整可发布正文·五字段全填实"
+      "note": "小红书成品帖子v2.0持续落地·B14新增2条post(ENFP女兵身份认同+ISTJ总犯困好奇心)+7条brief·body均为完整可发布正文·五字段全填实·母题轮换依恋→身份/觉醒",
+      "b14_posts_completed": 2
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
@@ -4533,9 +4534,377 @@
       "writeback_note": "B13·INTP身份认同batch1恢复首触fresh(李光洁6·自我觉醒·B站¥25轻触·trust7.35修复链P0)",
       "deployed_budget": 25,
       "has_post": false
+    },
+    {
+      "id": "D21-B14-INFJ-1",
+      "title": "被狼群抚养了12年的西班牙狼孩去世——INFJ没有把这当成一条离奇的讣闻。他的Ni-Fe系统读懂了这件事真正沉重的命题：一个从未被「当人」爱过的人，要用整整一生去回答「我到底是谁」",
+      "hook": "身份认同",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 9.0,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-INFJ-1.json",
+      "paradigm": "身份认同·Ni-Fe依恋剥夺+自我觉醒型(INFJ身份认同batch1首触·狼孩9分母题桥接旗舰·依恋母题→身份/觉醒轮换·Ni:身份是被依恋喂养出来的·Fe:人如何成为人的共情·严禁恐惧按钮/死亡渲染·用身份/依恋/生命意义角度)",
+      "role": "P0·INFJ身份认同batch1首触(狼孩9·依恋剥夺+身份认同+自我觉醒三合一旗舰)·微博Ni-Fe位·方向船key_decision「母题轮换依恋→身份/觉醒(狼孩9桥接旗舰)」",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "INFJ的Ni-Fe对「人如何成为人」有本能的追问，最被「身份从何而来」这类命题击中；狼孩的一生是「依恋如何塑造身份」的极端样本，恰好点燃INFJ对人性深处的共情与哲学探索。",
+        "hook_first3": "第一行「一个被狼群养大的孩子，12岁才第一次踏进人类的世界」抛反常识事实；第二行「他学会了四条腿走路，却一辈子没学会『如何做人』」制造哲学反差；第三行「我们，究竟是被什么『养』成一个『人』的」切入Ni-Fe命题。",
+        "emotion_curve": "猎奇惊讶 → 心酸(依恋剥夺) → 追问(身份如何形成) → 共情(「我是谁」的重量) → 落点(每个人都在回答我是谁)。",
+        "structure": [
+          "钩子·狼孩事实",
+          "反差·依恋剥夺",
+          "洞察·身份是被爱喂养的",
+          "升华·自我觉醒是一生的功课",
+          "CTA·你第一次问「我是谁」是什么时候"
+        ],
+        "differentiation": "别人写狼孩是猎奇/悲剧/医学标本，我们讲「身份是被依恋一点点喂养出来的」；Ni-Fe落点「人如何成为人」，绝不渲染死亡、绝不消费苦难。"
+      },
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 1,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14第三波轮出批·INFJ身份认同batch1首触fresh(狼孩9旗舰·依恋剥夺+身份认同+自我觉醒三合一·母题桥接依恋→身份/觉醒·情感共鸣batch1后轮出)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B14-ENTJ-1",
+      "title": "20年省吃俭用攒下789万，6天被骗得精光——ENTJ看到的反常识不是骗子有多高明，而是：最极致的自律，和最容易被撬动的贪念，竟然住在同一个人身体里",
+      "hook": "反常识",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.7,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-ENTJ-1.json",
+      "paradigm": "反常识·Te认知防骗/人性反差型(ENTJ反常识batch1首触·男子被骗8分·Te:自律≠对贪念免疫·Ni模式识别:骗局利用的是认知盲区而非智商·严禁恐惧按钮/钱财损失角度·用认知防骗/人性反差角度)",
+      "role": "P0·ENTJ反常识batch1首触(男子被骗8·人性反差/认知防骗)·抖音Te位·方向船key_decision「ENTJ反常识(男子被骗8·人性反差/认知防骗)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ的Te以效率与掌控为荣，最恐惧「聪明人也会栽跟头」的认知盲区；「20年极致自律 vs 6天瞬间归零」的反差，直接动摇ENTJ对「理性人」的默认假设。",
+        "hook_first3": "第一行「他用了20年，把每一分钱都省下来，攒到了789万」；第二行「然后只用了6天，全部归零」制造极致反差；第三行「骗他的，不是高明的局，是他自己」切入Te认知盲区。",
+        "emotion_curve": "敬佩(20年自律) → 震惊(6天归零) → 后怕(认知盲区) → 警醒(自律≠免疫) → 行动(认知防骗清单)。",
+        "structure": [
+          "钩子·20年vs6天",
+          "拆解·骗局撬动什么",
+          "洞察·自律不等于免疫贪念",
+          "警醒·理性人的认知盲区",
+          "CTA·你的钱最容易被什么撬动"
+        ],
+        "differentiation": "别人写被骗是「骗子可恨/受害者可怜/反诈说教」，我们讲「极度自律与瞬间失控并存于同一灵魂」；Te落点「理性人的认知盲区」，绝不贩卖钱财焦虑、绝不羞辱受害者。"
+      },
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 2,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14第三波轮出批·ENTJ反常识batch1首触fresh(男子被骗8·人性反差/认知防骗·社会证明batch1后轮出)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B14-ENFP-1",
+      "title": "她放弃本科去当兵，8年后又回来专升本——ENFP看到的不只是一个励志故事：真正的自我觉醒，从来不是一次就选对，而是每一个岔路口都敢对自己诚实",
+      "hook": "身份认同",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.8,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-ENFP-1.json",
+      "paradigm": "身份认同·Fi正面励志/自我觉醒型(ENFP身份认同batch1首触·女兵7分·反常识batch2达上限后轮出→身份认同·Fi:人生不是直线是对自己诚实·信任下滑核查用正面信号·严禁焦虑贩卖)",
+      "role": "P0·ENFP身份认同batch1首触(女兵7·人生选择/自我觉醒)·小红书Fi位·方向船key_decision「ENFP反常识batch2达上限→身份认同女兵7(信任下滑核查用正面信号)」",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFP的Fi渴望「忠于自己」的自由，最怕被「读大学才是正路」「年龄到了该怎样」的规训困住；女兵「先当兵、再专升本」的折返路径，恰好证明「忠于自己」可以发生在人生的每个岔路口。",
+        "hook_first3": "第一行「她做了一个让全家都反对的决定——放弃本科，去当兵」抛冲突；第二行「8年后，她又做了一个『回头』的决定，回来读书」制造折返反差；第三行「看起来绕了一大圈，其实是她在一步步走近自己」切入Fi自我觉醒。",
+        "emotion_curve": "好奇(为什么放弃) → 佩服(敢选) → 触动(回头也需要勇气) → 共鸣(忠于自己) → 温暖(每个选择都算数)。",
+        "structure": [
+          "钩子·放弃本科去当兵",
+          "折返·8年后回来读书",
+          "洞察·人生不是直线",
+          "升华·自我觉醒是每次诚实",
+          "CTA·你不后悔的一次选择"
+        ],
+        "differentiation": "别人写女兵讲「军旅励志/学历逆袭/女强人」，我们讲「自我觉醒不是一次选对，是每次岔路都敢对自己诚实」；Fi落点「每个选择都是走向自己」，正面励志、绝不judge学历与人生路径。"
+      },
+      "post": {
+        "cover_title": "她放弃本科，8年后回来专升本",
+        "body": "她做了一个让全家都反对的决定。\n\n放弃本科，去当兵。\n\n很多人说：\n「好好的大学不读，图什么？」\n\n8年后，\n她又做了一个「回头」的决定——\n军士专升本，重新读书。\n\n看起来，\n她好像绕了一个大圈。\n\n但ENFP看到的，\n是另一件事：\n\n人生从来不是一条直线。\n\n真正的「自我觉醒」，\n不是一次就选对，\n而是每一个岔路口，\n都敢停下来问自己：\n「我到底想要什么？」\n\n18岁选当兵，\n是她忠于那时的自己。\n26岁回来读书，\n是她忠于现在的自己。\n\n两个选择都不「错」，\n因为选择本身，\n就是在一步步走近自己。💛\n\n别怕走弯路。\n\n那些你以为的弯路，\n其实都是，\n你走向自己的必经之路。\n\n💬 你有没有一个，\n「当时没人理解，但我不后悔」的选择？\n评论区，说给我听。",
+        "hashtags": [
+          "#自我觉醒",
+          "#MBTI",
+          "#ENFP",
+          "#人生选择",
+          "#自我成长"
+        ],
+        "cover_visual": "身穿军装的女兵侧影，与书桌前伏案的女生背影，中间一条折返的光带路径；暖色调、坚定不煽情；大字『人生不是直线』",
+        "cta": "你有没有一个「当时没人理解，但我不后悔」的选择？评论区说给我听。",
+        "post_time": "12:00-13:00（午间励志情绪高峰）",
+        "avoid": "不judge学历选择、不贬低任何人生路径、不制造「读本科无用」对立；聚焦「每个选择都是走向自己」的自我觉醒正面能量"
+      },
+      "post_spec_version": "v2.0",
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 3,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14第三波轮出批·ENFP身份认同batch1首触fresh(女兵7·人生选择/自我觉醒·反常识batch2达上限轮出·信任下滑核查用正面信号)",
+      "has_post": true
+    },
+    {
+      "id": "D21-B14-ENFJ-1",
+      "title": "「座位是给人坐的，不是来放零食的」——ENFJ看到的不只是一次争吵：一个社会的体面，是在「我的方便」和「我们的秩序」之间，还能不能找到那个公约数",
+      "hook": "社会证明",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.6,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-ENFJ-1.json",
+      "paradigm": "社会证明·Fe公德思辨型(ENFJ社会证明batch1恢复首触·休1批结束·零食占座7分·Fe社会规范:公共空间的公约数·严禁站队引战·用公德思辨角度)",
+      "role": "P1·ENFJ社会证明batch1恢复首触(零食占座7·公德辩论)·微博Fe位·方向船key_decision「ENFJ恢复·社会证明(零食占座7·公德·Fe社会规范)」",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFJ的Fe天然关心「人与人如何和谐共处」，最被「公共空间里谁该让谁」的拉扯触动；「座位是给人坐的」看似小事，实则是社会规范如何在「我的方便」与「我们的秩序」间找平衡的缩影。",
+        "hook_first3": "第一行「『座位是给人坐的，不是来放零食的』」直接抛出金句；第二行「一句话，把地铁里、高铁上、医院里所有的心照不宣都挑明了」放大共鸣；第三行「但ENFJ想问的是：我们争的，到底是座位，还是规则里的体面」切入Fe公德思辨。",
+        "emotion_curve": "会心(太常见了) → 争论(谁对谁错) → 反思(规则与体面) → 共情(每个人都有自己的难) → 落点(公约数靠理解不靠胜负)。",
+        "structure": [
+          "钩子·金句",
+          "放大·公共空间的暗涌",
+          "洞察·争的不是座位是规则",
+          "思辨·方便与秩序的分寸",
+          "CTA·你遇到过最纠结的占座"
+        ],
+        "differentiation": "别人写占座是「道德绑架/站队骂架/教做人」，我们讲「公共空间的公约数，靠理解不靠胜负」；Fe落点「体面社会的分寸感」，绝不站队、不引战、不羞辱任何一方。"
+      },
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 4,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14·ENFJ社会证明batch1恢复首触fresh(零食占座7·公德辩论·休1批结束恢复)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B14-ISTJ-1",
+      "title": "总犯困、代谢慢？可能不是上班累的——ISTJ看到的是一个被忽略的健康信号：身体不会说话，但它会用「累」提醒你，你缺的可能不是休息，是蛋白质",
+      "hook": "好奇心",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-ISTJ-1.json",
+      "paradigm": "好奇心·Si健康认知反转/实用型(ISTJ好奇心batch1首触·身份认同B13后轮出→好奇心·总犯困6分·Si健康规律实用:犯困≠懒是身体信号·42%优质蛋白不足·严禁健康焦虑贩卖)",
+      "role": "P1·ISTJ好奇心batch1首触(总犯困6·健康认知反转)·小红书Si位·方向船key_decision「ISTJ好奇心(总犯困6·健康认知反转·Si健康规律实用)」",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ISTJ的Si重视身体的规律与秩序，最烦「明明休息够了还是累」的失控感；「犯困可能不是累，是缺蛋白质」给出了一个可执行、可验证的答案，正中ISTJ对「找到原因就解决它」的偏好。",
+        "hook_first3": "第一行「你最近是不是，动不动就犯困」直接戳日常；第二行「你的第一反应是『上班太累了』」点破惯性归因；第三行「但身体想告诉你：不是累，是缺了东西」制造认知反转。",
+        "emotion_curve": "共鸣(真的老犯困) → 意外(不是累) → 恍然(是缺蛋白质) → 踏实(有解) → 行动(调整饮食)。",
+        "structure": [
+          "钩子·犯困日常",
+          "反转·不是累是缺蛋白",
+          "科普·42%优质蛋白不足",
+          "落地·早餐加点蛋奶",
+          "CTA·你的早餐吃蛋白吗"
+        ],
+        "differentiation": "别人写犯困是「贩卖焦虑/吓唬你生病/推销保健品」，我们讲「把『累』当身体的信号，用一顿早餐解决」；Si落点「规律不是苦行，是听懂身体的语言」，实用科普、不恐吓、不替代医疗建议。"
+      },
+      "post": {
+        "cover_title": "总犯困？可能不是上班累的",
+        "body": "你最近是不是，\n动不动就犯困？\n\n早上起不来，\n下午像被抽干，\n代谢也感觉变慢了。\n\n你的第一反应是：\n「哎，就是上班太累了。」\n\n但身体可能想告诉你，\n不是累，\n是缺了东西。🔍\n\n数据显示，\n我国有42%的人，\n优质蛋白质摄入不足。\n\n蛋白质不够，\n人就会容易累、\n容易犯困、\n代谢也跟着慢下来。\n\n身体不会说话，\n但它会用「累」，\n给你发信号。\n\n所以下次犯困，\n先别急着怪工作，\n问问自己：\n「今天的蛋白质，吃够了吗？」\n\n早餐加个鸡蛋，\n午餐多吃点肉蛋奶，\n把「累」当成身体的提醒，\n而不是你的错。💪\n\n规律不是苦行，\n是听懂身体的语言。\n\n💬 你每天早上的第一顿，\n会吃蛋白质吗？\n评论区，晒出你的早餐。",
+        "hashtags": [
+          "#健康认知",
+          "#蛋白质",
+          "#MBTI",
+          "#ISTJ",
+          "#健康科普"
+        ],
+        "cover_visual": "一张清爽的早餐图（鸡蛋+牛奶+全麦面包），旁边一行大字『犯困≠懒』；简洁实用风、低饱和配色、留白",
+        "cta": "你每天早上的第一顿会吃蛋白质吗？评论区晒出你的早餐。",
+        "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+        "avoid": "不做疾病诊断暗示、不夸大「缺蛋白=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+      },
+      "post_spec_version": "v2.0",
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 5,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14·ISTJ好奇心batch1首触fresh(总犯困6·健康认知反转·身份认同batch1后轮出)",
+      "has_post": true
+    },
+    {
+      "id": "D21-B14-INTJ-1",
+      "title": "55元买到1.4万的项链，最后只赔了5元——INTJ看到的反常识不是价格差，而是：规则对「公平」的定价，永远比我们以为的更冷",
+      "hook": "反常识",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.7,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-INTJ-1.json",
+      "paradigm": "反常识·Ni-Te规则博弈解构型(INTJ反常识batch1首触·好奇心batch2达上限后轮出→反常识·55元项链7分·Ni规则解构:规则对公平的定价·Te逻辑拆解不站队·严禁站队/教唆薅羊毛)",
+      "role": "P1·INTJ反常识batch1首触(55元项链7·捡漏反差/规则博弈)·B站Ni位·方向船key_decision「INTJ好奇心batch2达上限→反常识55元项链7(Ni-Te规则解构)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ的Ni-Te痴迷「规则背后的真实逻辑」，最被「法律/平台规则如何给一件离谱的事定价」吸引；「55元捡漏最后只赔5元」看似荒诞，实则是规则系统如何权衡「程序正义」与「实质公平」的绝佳样本。",
+        "hook_first3": "第一行「55元，买到了一串标价1.4万的项链」抛极致反差；第二行「最后商家只赔了5元」把反差推向荒诞；第三行「INTJ看到的不是价格差，是规则对『公平』的定价逻辑」切入Ni-Te解构。",
+        "emotion_curve": "惊讶(捡漏) → 荒诞(只赔5元) → 冷思考(规则如何定价) → 顿悟(程序与实质的张力) → 落点(公平的灰度)。",
+        "structure": [
+          "钩子·55元捡漏1.4万",
+          "反差·只赔5元",
+          "解构·规则对公平的定价",
+          "洞察·程序正义vs实质公平",
+          "CTA·你觉得这5元合理吗"
+        ],
+        "differentiation": "别人写捡漏是「薅羊毛教程/站队骂商家/情绪化吃瓜」，我们讲「规则对公平的定价，永远比我们以为的更冷」；Ni-Te落点「程序正义与实质公平的灰度」，不站队、不教唆薅羊毛。"
+      },
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 6,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14·INTJ反常识batch1首触fresh(55元项链7·规则博弈/捡漏反差·好奇心batch2达上限轮出)",
+      "has_post": false
+    },
+    {
+      "id": "D21-B14-INTP-1",
+      "title": "「越会用AI的人，学习能力退化得越快」——INTP看到的是一个关于工具的悖论：当你把「想」外包出去，你的「想」就会开始生锈",
+      "hook": "好奇心",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-08-23T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B14-INTP-1.json",
+      "paradigm": "好奇心·Ti认知悖论型(INTP好奇心batch1首触·身份认同B13后轮出→好奇心·36kr AI信号·Ti:工具依赖与能力退化悖论·B站¥25轻触·防15批螺旋·B14观察质量)",
+      "role": "P1·INTP好奇心batch1首触(36kr AI·Ti认知)·B站¥25轻触·方向船key_decision「INTP轻触观察(36kr AI信号·防螺旋)·B站¥25」",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B14",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTP的Ti以「独立思考」为身份核心，最警惕「依赖工具导致能力退化」的悖论；「越会用AI越不会学」恰好戳中INTP对「外包思考」的本能警觉，同时满足其对认知机制的好奇。",
+        "hook_first3": "第一行「越会用AI的人，学习能力退化得越快」直接抛出悖论；第二行「听起来反直觉，但INTP知道这是真的」亮态度；第三行「因为当你把『想』外包出去，你的『想』就会开始生锈」切入Ti机制拆解。",
+        "emotion_curve": "警觉(悖论) → 认同(外包思考) → 拆解(用进废退) → 自省(我依赖了吗) → 落点(工具是杠杆不是拐杖)。",
+        "structure": [
+          "钩子·悖论",
+          "机制·外包思考=用进废退",
+          "洞察·工具是杠杆不是拐杖",
+          "自省·警惕能力生锈",
+          "CTA·你现在最依赖哪个AI"
+        ],
+        "differentiation": "别人写AI是「焦虑贩卖/恐吓被取代/鸡汤自律」，我们讲「工具是杠杆不是拐杖，关键是保留自己『想』的能力」；Ti落点「用进废退的认知机制」，理性、不贩卖焦虑、不反技术。"
+      },
+      "last_used": "2026-08-23T09:25:00+08:00",
+      "deployed_batch": "D21-B14",
+      "deployed_arm": 7,
+      "deployed_budget": 25,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B14·INTP好奇心batch1轻触fresh(36kr AI 5·认知反噬·身份认同batch1后轮出·B站¥25轻触·防15批螺旋)",
+      "has_post": false
     }
   ],
-  "total": 147,
+  "total": 154,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -5197,6 +5566,118 @@
         "cta": "你被哪个标签误读过？评论区说说那个标签和真正的你。",
         "post_time": "18:00-20:00（晚间共鸣高峰·身份认同类）",
         "avoid": "不judge欢子/披哥艺人表现、不站队粉丝阵营、不消费争议细节、不把'老实人'写成贬义或抬高；聚焦'标签不能定义你'的自我定位"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B14-ENFP-1",
+      "title": "她放弃本科去当兵，8年后又回来专升本——ENFP看到的不只是一个励志故事：真正的自我觉醒，从来不是一次就选对，而是每一个岔路口都敢对自己诚实",
+      "hook": "身份认同",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.8,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "arm_id": 3,
+      "batch_num": 1,
+      "signals": [
+        "女兵放弃本科从军8年后军士专升本(7分·身份认同·人生选择/自我觉醒·heat7040715)"
+      ],
+      "paradigm": "身份认同·Fi正面励志/自我觉醒型(ENFP身份认同batch1首触·女兵7分·反常识batch2达上限后轮出→身份认同·Fi:人生不是直线是对自己诚实·信任下滑核查用正面信号·严禁焦虑贩卖)",
+      "role": "P0·ENFP身份认同batch1首触(女兵7·人生选择/自我觉醒)·小红书Fi位·方向船key_decision「ENFP反常识batch2达上限→身份认同女兵7(信任下滑核查用正面信号)」",
+      "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ENFP×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ENFP身份认同batch1·反常识batch2达上限后轮出)·女兵7分·Fi正面励志·信任下滑核查(6.49-6.55·-1.3)用正面信号·小红书v2.0 post成品落地",
+      "brief": {
+        "pain_point": "ENFP的Fi渴望「忠于自己」的自由，最怕被「读大学才是正路」「年龄到了该怎样」的规训困住；女兵「先当兵、再专升本」的折返路径，恰好证明「忠于自己」可以发生在人生的每个岔路口。",
+        "hook_first3": "第一行「她做了一个让全家都反对的决定——放弃本科，去当兵」抛冲突；第二行「8年后，她又做了一个『回头』的决定，回来读书」制造折返反差；第三行「看起来绕了一大圈，其实是她在一步步走近自己」切入Fi自我觉醒。",
+        "emotion_curve": "好奇(为什么放弃) → 佩服(敢选) → 触动(回头也需要勇气) → 共鸣(忠于自己) → 温暖(每个选择都算数)。",
+        "structure": [
+          "钩子·放弃本科去当兵",
+          "折返·8年后回来读书",
+          "洞察·人生不是直线",
+          "升华·自我觉醒是每次诚实",
+          "CTA·你不后悔的一次选择"
+        ],
+        "differentiation": "别人写女兵讲「军旅励志/学历逆袭/女强人」，我们讲「自我觉醒不是一次选对，是每次岔路都敢对自己诚实」；Fi落点「每个选择都是走向自己」，正面励志、绝不judge学历与人生路径。"
+      },
+      "post": {
+        "cover_title": "她放弃本科，8年后回来专升本",
+        "body": "她做了一个让全家都反对的决定。\n\n放弃本科，去当兵。\n\n很多人说：\n「好好的大学不读，图什么？」\n\n8年后，\n她又做了一个「回头」的决定——\n军士专升本，重新读书。\n\n看起来，\n她好像绕了一个大圈。\n\n但ENFP看到的，\n是另一件事：\n\n人生从来不是一条直线。\n\n真正的「自我觉醒」，\n不是一次就选对，\n而是每一个岔路口，\n都敢停下来问自己：\n「我到底想要什么？」\n\n18岁选当兵，\n是她忠于那时的自己。\n26岁回来读书，\n是她忠于现在的自己。\n\n两个选择都不「错」，\n因为选择本身，\n就是在一步步走近自己。💛\n\n别怕走弯路。\n\n那些你以为的弯路，\n其实都是，\n你走向自己的必经之路。\n\n💬 你有没有一个，\n「当时没人理解，但我不后悔」的选择？\n评论区，说给我听。",
+        "hashtags": [
+          "#自我觉醒",
+          "#MBTI",
+          "#ENFP",
+          "#人生选择",
+          "#自我成长"
+        ],
+        "cover_visual": "身穿军装的女兵侧影，与书桌前伏案的女生背影，中间一条折返的光带路径；暖色调、坚定不煽情；大字『人生不是直线』",
+        "cta": "你有没有一个「当时没人理解，但我不后悔」的选择？评论区说给我听。",
+        "post_time": "12:00-13:00（午间励志情绪高峰）",
+        "avoid": "不judge学历选择、不贬低任何人生路径、不制造「读本科无用」对立；聚焦「每个选择都是走向自己」的自我觉醒正面能量"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B14-ISTJ-1",
+      "title": "总犯困、代谢慢？可能不是上班累的——ISTJ看到的是一个被忽略的健康信号：身体不会说话，但它会用「累」提醒你，你缺的可能不是休息，是蛋白质",
+      "hook": "好奇心",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "arm_id": 5,
+      "batch_num": 1,
+      "signals": [
+        "总犯困、代谢慢？可能不是上班累的(6分·好奇心·健康认知反转·42%居民优质蛋白不足)"
+      ],
+      "paradigm": "好奇心·Si健康认知反转/实用型(ISTJ好奇心batch1首触·身份认同B13后轮出→好奇心·总犯困6分·Si健康规律实用:犯困≠懒是身体信号·42%优质蛋白不足·严禁健康焦虑贩卖)",
+      "role": "P1·ISTJ好奇心batch1首触(总犯困6·健康认知反转)·小红书Si位·方向船key_decision「ISTJ好奇心(总犯困6·健康认知反转·Si健康规律实用)」",
+      "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ISTJ×好奇心×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ISTJ好奇心batch1·身份认同B13后轮出)·总犯困6分·Si健康认知反转·小红书v2.0 post成品落地·严禁健康焦虑(用实用科普角度)",
+      "brief": {
+        "pain_point": "ISTJ的Si重视身体的规律与秩序，最烦「明明休息够了还是累」的失控感；「犯困可能不是累，是缺蛋白质」给出了一个可执行、可验证的答案，正中ISTJ对「找到原因就解决它」的偏好。",
+        "hook_first3": "第一行「你最近是不是，动不动就犯困」直接戳日常；第二行「你的第一反应是『上班太累了』」点破惯性归因；第三行「但身体想告诉你：不是累，是缺了东西」制造认知反转。",
+        "emotion_curve": "共鸣(真的老犯困) → 意外(不是累) → 恍然(是缺蛋白质) → 踏实(有解) → 行动(调整饮食)。",
+        "structure": [
+          "钩子·犯困日常",
+          "反转·不是累是缺蛋白",
+          "科普·42%优质蛋白不足",
+          "落地·早餐加点蛋奶",
+          "CTA·你的早餐吃蛋白吗"
+        ],
+        "differentiation": "别人写犯困是「贩卖焦虑/吓唬你生病/推销保健品」，我们讲「把『累』当身体的信号，用一顿早餐解决」；Si落点「规律不是苦行，是听懂身体的语言」，实用科普、不恐吓、不替代医疗建议。"
+      },
+      "post": {
+        "cover_title": "总犯困？可能不是上班累的",
+        "body": "你最近是不是，\n动不动就犯困？\n\n早上起不来，\n下午像被抽干，\n代谢也感觉变慢了。\n\n你的第一反应是：\n「哎，就是上班太累了。」\n\n但身体可能想告诉你，\n不是累，\n是缺了东西。🔍\n\n数据显示，\n我国有42%的人，\n优质蛋白质摄入不足。\n\n蛋白质不够，\n人就会容易累、\n容易犯困、\n代谢也跟着慢下来。\n\n身体不会说话，\n但它会用「累」，\n给你发信号。\n\n所以下次犯困，\n先别急着怪工作，\n问问自己：\n「今天的蛋白质，吃够了吗？」\n\n早餐加个鸡蛋，\n午餐多吃点肉蛋奶，\n把「累」当成身体的提醒，\n而不是你的错。💪\n\n规律不是苦行，\n是听懂身体的语言。\n\n💬 你每天早上的第一顿，\n会吃蛋白质吗？\n评论区，晒出你的早餐。",
+        "hashtags": [
+          "#健康认知",
+          "#蛋白质",
+          "#MBTI",
+          "#ISTJ",
+          "#健康科普"
+        ],
+        "cover_visual": "一张清爽的早餐图（鸡蛋+牛奶+全麦面包），旁边一行大字『犯困≠懒』；简洁实用风、低饱和配色、留白",
+        "cta": "你每天早上的第一顿会吃蛋白质吗？评论区晒出你的早餐。",
+        "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+        "avoid": "不做疾病诊断暗示、不夸大「缺蛋白=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
       },
       "post_spec_version": "v2.0"
     },
@@ -7472,6 +7953,91 @@
         }
       }
     },
+    "D21-B14-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-ISTJ-1",
+        "title": "总犯困、代谢慢？可能不是上班累的——ISTJ看到的是一个被忽略的健康信号：身体不会说话，但它会用「累」提醒你，你缺的可能不是休息，是蛋白质",
+        "hook": "好奇心",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "总犯困、代谢慢？可能不是上班累的(6分·好奇心·健康认知反转·42%居民优质蛋白不足)"
+        ],
+        "paradigm": "好奇心·Si健康认知反转/实用型(ISTJ好奇心batch1首触·身份认同B13后轮出→好奇心·总犯困6分·Si健康规律实用:犯困≠懒是身体信号·42%优质蛋白不足·严禁健康焦虑贩卖)",
+        "role": "P1·ISTJ好奇心batch1首触(总犯困6·健康认知反转)·小红书Si位·方向船key_decision「ISTJ好奇心(总犯困6·健康认知反转·Si健康规律实用)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ISTJ×好奇心×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ISTJ好奇心batch1·身份认同B13后轮出)·总犯困6分·Si健康认知反转·小红书v2.0 post成品落地·严禁健康焦虑(用实用科普角度)",
+        "brief": {
+          "pain_point": "ISTJ的Si重视身体的规律与秩序，最烦「明明休息够了还是累」的失控感；「犯困可能不是累，是缺蛋白质」给出了一个可执行、可验证的答案，正中ISTJ对「找到原因就解决它」的偏好。",
+          "hook_first3": "第一行「你最近是不是，动不动就犯困」直接戳日常；第二行「你的第一反应是『上班太累了』」点破惯性归因；第三行「但身体想告诉你：不是累，是缺了东西」制造认知反转。",
+          "emotion_curve": "共鸣(真的老犯困) → 意外(不是累) → 恍然(是缺蛋白质) → 踏实(有解) → 行动(调整饮食)。",
+          "structure": [
+            "钩子·犯困日常",
+            "反转·不是累是缺蛋白",
+            "科普·42%优质蛋白不足",
+            "落地·早餐加点蛋奶",
+            "CTA·你的早餐吃蛋白吗"
+          ],
+          "differentiation": "别人写犯困是「贩卖焦虑/吓唬你生病/推销保健品」，我们讲「把『累』当身体的信号，用一顿早餐解决」；Si落点「规律不是苦行，是听懂身体的语言」，实用科普、不恐吓、不替代医疗建议。"
+        },
+        "post": {
+          "cover_title": "总犯困？可能不是上班累的",
+          "body": "你最近是不是，\n动不动就犯困？\n\n早上起不来，\n下午像被抽干，\n代谢也感觉变慢了。\n\n你的第一反应是：\n「哎，就是上班太累了。」\n\n但身体可能想告诉你，\n不是累，\n是缺了东西。🔍\n\n数据显示，\n我国有42%的人，\n优质蛋白质摄入不足。\n\n蛋白质不够，\n人就会容易累、\n容易犯困、\n代谢也跟着慢下来。\n\n身体不会说话，\n但它会用「累」，\n给你发信号。\n\n所以下次犯困，\n先别急着怪工作，\n问问自己：\n「今天的蛋白质，吃够了吗？」\n\n早餐加个鸡蛋，\n午餐多吃点肉蛋奶，\n把「累」当成身体的提醒，\n而不是你的错。💪\n\n规律不是苦行，\n是听懂身体的语言。\n\n💬 你每天早上的第一顿，\n会吃蛋白质吗？\n评论区，晒出你的早餐。",
+          "hashtags": [
+            "#健康认知",
+            "#蛋白质",
+            "#MBTI",
+            "#ISTJ",
+            "#健康科普"
+          ],
+          "cover_visual": "一张清爽的早餐图（鸡蛋+牛奶+全麦面包），旁边一行大字『犯困≠懒』；简洁实用风、低饱和配色、留白",
+          "cta": "你每天早上的第一顿会吃蛋白质吗？评论区晒出你的早餐。",
+          "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+          "avoid": "不做疾病诊断暗示、不夸大「缺蛋白=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D20-B2-INTP-1": {
       "id": "D20-B2-INTP-1",
       "title": "中国移动多收了你3块钱，每个月，连续11年——INTP不是在想「我的钱呢」，他脑子里跑的是另一套程序：一个每月自动扣款3元的系统，为什么11年里没有任何一层校验触发？",
@@ -7931,6 +8497,75 @@
             "CTA·你站哪边"
           ],
           "differentiation": "别人写捡漏讲'薅羊毛/商家玩不起/消费维权'，我们讲'规则漏洞暴露的契约本质'；Ne-Ti做双向拆解不下结论，绝不站队消费者或商家、不煽动对立、不教唆薅羊毛。"
+        }
+      }
+    },
+    "D21-B14-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-INFJ-1",
+        "title": "被狼群抚养了12年的西班牙狼孩去世——INFJ没有把这当成一条离奇的讣闻。他的Ni-Fe系统读懂了这件事真正沉重的命题：一个从未被「当人」爱过的人，要用整整一生去回答「我到底是谁」",
+        "hook": "身份认同",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "曾被狼群抚养12年的西班牙狼孩去世(9分·身份认同·依恋剥夺+自我觉醒三合一旗舰·heat7522554)"
+        ],
+        "paradigm": "身份认同·Ni-Fe依恋剥夺+自我觉醒型(INFJ身份认同batch1首触·狼孩9分母题桥接旗舰·依恋母题→身份/觉醒轮换·Ni:身份是被依恋喂养出来的·Fe:人如何成为人的共情·严禁恐惧按钮/死亡渲染·用身份/依恋/生命意义角度)",
+        "role": "P0·INFJ身份认同batch1首触(狼孩9·依恋剥夺+身份认同+自我觉醒三合一旗舰)·微博Ni-Fe位·方向船key_decision「母题轮换依恋→身份/觉醒(狼孩9桥接旗舰)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision「母题轮换·依恋母题连续6批→B14转身份认同/自我觉醒(狼孩9三合一桥接旗舰)」100%对齐·INFJ×身份认同×微博·channel_mix微博28.6%(INFJ+ENFJ)",
+        "flagship": true,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(INFJ身份认同batch1·母题桥接旗舰)·狼孩9分·依恋剥夺+身份认同+自我觉醒·微博无post(公共舆论位)·严禁恐惧按钮/死亡渲染",
+        "brief": {
+          "pain_point": "INFJ的Ni-Fe对「人如何成为人」有本能的追问，最被「身份从何而来」这类命题击中；狼孩的一生是「依恋如何塑造身份」的极端样本，恰好点燃INFJ对人性深处的共情与哲学探索。",
+          "hook_first3": "第一行「一个被狼群养大的孩子，12岁才第一次踏进人类的世界」抛反常识事实；第二行「他学会了四条腿走路，却一辈子没学会『如何做人』」制造哲学反差；第三行「我们，究竟是被什么『养』成一个『人』的」切入Ni-Fe命题。",
+          "emotion_curve": "猎奇惊讶 → 心酸(依恋剥夺) → 追问(身份如何形成) → 共情(「我是谁」的重量) → 落点(每个人都在回答我是谁)。",
+          "structure": [
+            "钩子·狼孩事实",
+            "反差·依恋剥夺",
+            "洞察·身份是被爱喂养的",
+            "升华·自我觉醒是一生的功课",
+            "CTA·你第一次问「我是谁」是什么时候"
+          ],
+          "differentiation": "别人写狼孩是猎奇/悲剧/医学标本，我们讲「身份是被依恋一点点喂养出来的」；Ni-Fe落点「人如何成为人」，绝不渲染死亡、绝不消费苦难。"
         }
       }
     },
@@ -9262,6 +9897,91 @@
         ]
       }
     },
+    "D21-B14-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-ENFP-1",
+        "title": "她放弃本科去当兵，8年后又回来专升本——ENFP看到的不只是一个励志故事：真正的自我觉醒，从来不是一次就选对，而是每一个岔路口都敢对自己诚实",
+        "hook": "身份认同",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "女兵放弃本科从军8年后军士专升本(7分·身份认同·人生选择/自我觉醒·heat7040715)"
+        ],
+        "paradigm": "身份认同·Fi正面励志/自我觉醒型(ENFP身份认同batch1首触·女兵7分·反常识batch2达上限后轮出→身份认同·Fi:人生不是直线是对自己诚实·信任下滑核查用正面信号·严禁焦虑贩卖)",
+        "role": "P0·ENFP身份认同batch1首触(女兵7·人生选择/自我觉醒)·小红书Fi位·方向船key_decision「ENFP反常识batch2达上限→身份认同女兵7(信任下滑核查用正面信号)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ENFP×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFP身份认同batch1·反常识batch2达上限后轮出)·女兵7分·Fi正面励志·信任下滑核查(6.49-6.55·-1.3)用正面信号·小红书v2.0 post成品落地",
+        "brief": {
+          "pain_point": "ENFP的Fi渴望「忠于自己」的自由，最怕被「读大学才是正路」「年龄到了该怎样」的规训困住；女兵「先当兵、再专升本」的折返路径，恰好证明「忠于自己」可以发生在人生的每个岔路口。",
+          "hook_first3": "第一行「她做了一个让全家都反对的决定——放弃本科，去当兵」抛冲突；第二行「8年后，她又做了一个『回头』的决定，回来读书」制造折返反差；第三行「看起来绕了一大圈，其实是她在一步步走近自己」切入Fi自我觉醒。",
+          "emotion_curve": "好奇(为什么放弃) → 佩服(敢选) → 触动(回头也需要勇气) → 共鸣(忠于自己) → 温暖(每个选择都算数)。",
+          "structure": [
+            "钩子·放弃本科去当兵",
+            "折返·8年后回来读书",
+            "洞察·人生不是直线",
+            "升华·自我觉醒是每次诚实",
+            "CTA·你不后悔的一次选择"
+          ],
+          "differentiation": "别人写女兵讲「军旅励志/学历逆袭/女强人」，我们讲「自我觉醒不是一次选对，是每次岔路都敢对自己诚实」；Fi落点「每个选择都是走向自己」，正面励志、绝不judge学历与人生路径。"
+        },
+        "post": {
+          "cover_title": "她放弃本科，8年后回来专升本",
+          "body": "她做了一个让全家都反对的决定。\n\n放弃本科，去当兵。\n\n很多人说：\n「好好的大学不读，图什么？」\n\n8年后，\n她又做了一个「回头」的决定——\n军士专升本，重新读书。\n\n看起来，\n她好像绕了一个大圈。\n\n但ENFP看到的，\n是另一件事：\n\n人生从来不是一条直线。\n\n真正的「自我觉醒」，\n不是一次就选对，\n而是每一个岔路口，\n都敢停下来问自己：\n「我到底想要什么？」\n\n18岁选当兵，\n是她忠于那时的自己。\n26岁回来读书，\n是她忠于现在的自己。\n\n两个选择都不「错」，\n因为选择本身，\n就是在一步步走近自己。💛\n\n别怕走弯路。\n\n那些你以为的弯路，\n其实都是，\n你走向自己的必经之路。\n\n💬 你有没有一个，\n「当时没人理解，但我不后悔」的选择？\n评论区，说给我听。",
+          "hashtags": [
+            "#自我觉醒",
+            "#MBTI",
+            "#ENFP",
+            "#人生选择",
+            "#自我成长"
+          ],
+          "cover_visual": "身穿军装的女兵侧影，与书桌前伏案的女生背影，中间一条折返的光带路径；暖色调、坚定不煽情；大字『人生不是直线』",
+          "cta": "你有没有一个「当时没人理解，但我不后悔」的选择？评论区说给我听。",
+          "post_time": "12:00-13:00（午间励志情绪高峰）",
+          "avoid": "不judge学历选择、不贬低任何人生路径、不制造「读本科无用」对立；聚焦「每个选择都是走向自己」的自我觉醒正面能量"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D21-B13-INTJ-1": {
       "vessel": {
         "version": "1.0",
@@ -9469,6 +10189,75 @@
         "flagship": false,
         "attachment_theory_resonance": false,
         "note": "🆕 rest1批后恢复首触·情感共鸣成长母题·疲劳3.0→回落·分享率18%资产·D21-B7评估续触batch2"
+      }
+    },
+    "D21-B14-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-ENFJ-1",
+        "title": "「座位是给人坐的，不是来放零食的」——ENFJ看到的不只是一次争吵：一个社会的体面，是在「我的方便」和「我们的秩序」之间，还能不能找到那个公约数",
+        "hook": "社会证明",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "「座位是给人坐的 不是来放零食的」(7分·社会证明·公德辩论·heat7808185)"
+        ],
+        "paradigm": "社会证明·Fe公德思辨型(ENFJ社会证明batch1恢复首触·休1批结束·零食占座7分·Fe社会规范:公共空间的公约数·严禁站队引战·用公德思辨角度)",
+        "role": "P1·ENFJ社会证明batch1恢复首触(零食占座7·公德辩论)·微博Fe位·方向船key_decision「ENFJ恢复·社会证明(零食占座7·公德·Fe社会规范)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ENFJ×社会证明×微博·channel_mix微博28.6%(INFJ+ENFJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFJ社会证明batch1恢复·休1批结束·蛋饼店主9后回归)·零食占座7分·Fe公德思辨·严禁站队引战",
+        "brief": {
+          "pain_point": "ENFJ的Fe天然关心「人与人如何和谐共处」，最被「公共空间里谁该让谁」的拉扯触动；「座位是给人坐的」看似小事，实则是社会规范如何在「我的方便」与「我们的秩序」间找平衡的缩影。",
+          "hook_first3": "第一行「『座位是给人坐的，不是来放零食的』」直接抛出金句；第二行「一句话，把地铁里、高铁上、医院里所有的心照不宣都挑明了」放大共鸣；第三行「但ENFJ想问的是：我们争的，到底是座位，还是规则里的体面」切入Fe公德思辨。",
+          "emotion_curve": "会心(太常见了) → 争论(谁对谁错) → 反思(规则与体面) → 共情(每个人都有自己的难) → 落点(公约数靠理解不靠胜负)。",
+          "structure": [
+            "钩子·金句",
+            "放大·公共空间的暗涌",
+            "洞察·争的不是座位是规则",
+            "思辨·方便与秩序的分寸",
+            "CTA·你遇到过最纠结的占座"
+          ],
+          "differentiation": "别人写占座是「道德绑架/站队骂架/教做人」，我们讲「公共空间的公约数，靠理解不靠胜负」；Fe落点「体面社会的分寸感」，绝不站队、不引战、不羞辱任何一方。"
+        }
       }
     },
     "D15-B1-1": {
@@ -11522,6 +12311,75 @@
         "full_content": "ENFJ在看Chinamaxxing的时候，眼睛里没有一个字在说「我们赢了」。\n\n你们在看另一件事——那些说「中国很强」的人的脸。\n\n不是说这句话的人。是那些听到这句话终于松了一口气的人。\n\n这才是ENFJ的天赋：你们不是在读「信息」，你们在读「信息背后的那个人需要什么」。\n\nChinamaxxing 9分的热度里，藏着一条只有ENFJ能看见的暗线：这不是一场关于「中国」的讨论。这是一场关于「被看见」的集体疗愈。\n\n一百七十年前，我们被列强的炮舰打开国门。不是「输了」的问题——是被迫意识到「我可能不够好」。\n\n从那一天起，中国人一直在做一件事：证明自己。\n\n证明我们也能造铁路。证明我们也能造原子弹。证明我们也能办奥运会。证明我们也能有航母、有空间站、有AI大模型。\n\n一百七十年的证明。每一代人都在对世界说：你看，我们也可以。\n\nENFJ最懂这种心态有多累。因为你们自己就是最容易陷入「证明模式」的人——Fe功能让你下意识地想让所有人满意，让你觉得「如果大家不开心，一定是我的问题」。\n\n你一辈子都在试图证明自己是一个好人、一个好伙伴、一个好领导者。\n\n然后有一天你突然发现：等一下，我为什么需要证明？\n\nChinamaxxing的底层心理转折就在这里——从「你看我也可以」变成了「我看我自己就可以了」。\n\nENFJ在D10到D20休息了整整十批。Fe弹性模型说：ENFJ需要至少三批的间隔，让那个一直在照顾别人的系统有机会照顾一下自己。\n\n你们回来了。在D21-B1。\n\n带着信任7.07的基线，带着十批静默中重新长出来的能量。\n\n而你们回来的第一天，迎接你们的恰好是这个信号——Chinamaxxing 9分。不是关于「强」的信号。是关于「够了」的信号。\n\n够了。证明够了。\n\n微博上有一个帖子，转发两万条，只有一句话：「我爷爷一辈子都觉得中国人不如外国人，如果他活到今天，不知道会说什么。」\n\nENFJ在这个帖子里看到的不是「扬眉吐气」——是「如果他能活到今天，他会允许自己开心吗？」\n\n这才是Fe-Ni视角下Chinamaxxing真正的意义：不是集体自尊的崛起，是集体焦虑的释放。\n\n一百七十年的证明终于可以停了。不是因为证明完了——是因为我们发现，不需要证明也可以活得很好。\n\nENFJ在这个时刻回归，不是巧合。\n\n你们天生就知道怎么照顾一个刚刚从漫长的「证明期」里走出来的人。\n\n现在，中国就是那个人。\n\nENFJ不需要喊「我们很强」。你们只需要做你们最擅长的事——拍拍那个累了一百七十年的人的肩膀，说一句：「不用证明了，坐会儿吧」"
       }
     },
+    "D21-B14-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-INTP-1",
+        "title": "「越会用AI的人，学习能力退化得越快」——INTP看到的是一个关于工具的悖论：当你把「想」外包出去，你的「想」就会开始生锈",
+        "hook": "好奇心",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "越会用AI的人，学习能力退化得越快(36kr·好奇心·认知·heat91·Ti认知)"
+        ],
+        "paradigm": "好奇心·Ti认知悖论型(INTP好奇心batch1首触·身份认同B13后轮出→好奇心·36kr AI信号·Ti:工具依赖与能力退化悖论·B站¥25轻触·防15批螺旋·B14观察质量)",
+        "role": "P1·INTP好奇心batch1首触(36kr AI·Ti认知)·B站¥25轻触·方向船key_decision「INTP轻触观察(36kr AI信号·防螺旋)·B站¥25」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·INTP×好奇心×B站·channel_mix B站28.6%(INTJ+INTP)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTP好奇心batch1·身份认同B13后轮出)·36kr AI信号·Ti认知悖论·B站¥25轻触·防15批螺旋·B14观察质量",
+        "brief": {
+          "pain_point": "INTP的Ti以「独立思考」为身份核心，最警惕「依赖工具导致能力退化」的悖论；「越会用AI越不会学」恰好戳中INTP对「外包思考」的本能警觉，同时满足其对认知机制的好奇。",
+          "hook_first3": "第一行「越会用AI的人，学习能力退化得越快」直接抛出悖论；第二行「听起来反直觉，但INTP知道这是真的」亮态度；第三行「因为当你把『想』外包出去，你的『想』就会开始生锈」切入Ti机制拆解。",
+          "emotion_curve": "警觉(悖论) → 认同(外包思考) → 拆解(用进废退) → 自省(我依赖了吗) → 落点(工具是杠杆不是拐杖)。",
+          "structure": [
+            "钩子·悖论",
+            "机制·外包思考=用进废退",
+            "洞察·工具是杠杆不是拐杖",
+            "自省·警惕能力生锈",
+            "CTA·你现在最依赖哪个AI"
+          ],
+          "differentiation": "别人写AI是「焦虑贩卖/恐吓被取代/鸡汤自律」，我们讲「工具是杠杆不是拐杖，关键是保留自己『想』的能力」；Ti落点「用进废退的认知机制」，理性、不贩卖焦虑、不反技术。"
+        }
+      }
+    },
     "D20-B2-ISTJ-1": {
       "id": "D20-B2-ISTJ-1",
       "title": "一个员工泡在水里2小时捞公司手机，换来一张表扬状——ISTJ看到这条新闻的时候没有说话，但他的Si系统已经在后台调出了你公司里那个做了最多事、拿最少钱的人的脸",
@@ -12760,6 +13618,75 @@
             "vessel_id": "strategy-pool-2026-08-07-0815 (stale)"
           }
         ]
+      }
+    },
+    "D21-B14-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-INTJ-1",
+        "title": "55元买到1.4万的项链，最后只赔了5元——INTJ看到的反常识不是价格差，而是：规则对「公平」的定价，永远比我们以为的更冷",
+        "hook": "反常识",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 6,
+        "batch_num": 1,
+        "signals": [
+          "55元捡漏1.41万项链女子获5元补偿(7分·反常识·捡漏反差/规则博弈·heat3905653)"
+        ],
+        "paradigm": "反常识·Ni-Te规则博弈解构型(INTJ反常识batch1首触·好奇心batch2达上限后轮出→反常识·55元项链7分·Ni规则解构:规则对公平的定价·Te逻辑拆解不站队·严禁站队/教唆薅羊毛)",
+        "role": "P1·INTJ反常识batch1首触(55元项链7·捡漏反差/规则博弈)·B站Ni位·方向船key_decision「INTJ好奇心batch2达上限→反常识55元项链7(Ni-Te规则解构)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·INTJ×反常识×B站·channel_mix B站28.6%(INTJ+INTP)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTJ反常识batch1·好奇心batch2达上限后轮出)·55元项链7分·Ni-Te规则博弈·严禁站队/教唆薅羊毛",
+        "brief": {
+          "pain_point": "INTJ的Ni-Te痴迷「规则背后的真实逻辑」，最被「法律/平台规则如何给一件离谱的事定价」吸引；「55元捡漏最后只赔5元」看似荒诞，实则是规则系统如何权衡「程序正义」与「实质公平」的绝佳样本。",
+          "hook_first3": "第一行「55元，买到了一串标价1.4万的项链」抛极致反差；第二行「最后商家只赔了5元」把反差推向荒诞；第三行「INTJ看到的不是价格差，是规则对『公平』的定价逻辑」切入Ni-Te解构。",
+          "emotion_curve": "惊讶(捡漏) → 荒诞(只赔5元) → 冷思考(规则如何定价) → 顿悟(程序与实质的张力) → 落点(公平的灰度)。",
+          "structure": [
+            "钩子·55元捡漏1.4万",
+            "反差·只赔5元",
+            "解构·规则对公平的定价",
+            "洞察·程序正义vs实质公平",
+            "CTA·你觉得这5元合理吗"
+          ],
+          "differentiation": "别人写捡漏是「薅羊毛教程/站队骂商家/情绪化吃瓜」，我们讲「规则对公平的定价，永远比我们以为的更冷」；Ni-Te落点「程序正义与实质公平的灰度」，不站队、不教唆薅羊毛。"
+        }
       }
     },
     "D20-B3-2": {
@@ -15972,6 +16899,75 @@
             "CTA"
           ],
           "differentiation": "不写「该不该过夜」的站队争论，写「边界是爱的语言」，从亲子争吵升维到关系理解"
+        }
+      }
+    },
+    "D21-B14-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B14-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B14"
+        },
+        "created_at": "2026-08-23T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-23-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-23-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B14-ENTJ-1",
+        "title": "20年省吃俭用攒下789万，6天被骗得精光——ENTJ看到的反常识不是骗子有多高明，而是：最极致的自律，和最容易被撬动的贪念，竟然住在同一个人身体里",
+        "hook": "反常识",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "男子20年省吃俭用攒789万6天被骗光(8分·反常识·人性反差/金钱观·heat5826550)"
+        ],
+        "paradigm": "反常识·Te认知防骗/人性反差型(ENTJ反常识batch1首触·男子被骗8分·Te:自律≠对贪念免疫·Ni模式识别:骗局利用的是认知盲区而非智商·严禁恐惧按钮/钱财损失角度·用认知防骗/人性反差角度)",
+        "role": "P0·ENTJ反常识batch1首触(男子被骗8·人性反差/认知防骗)·抖音Te位·方向船key_decision「ENTJ反常识(男子被骗8·人性反差/认知防骗)」",
+        "direction_compliance": "D21-B14 direction-vessel key_decision对齐·ENTJ×反常识×抖音·channel_mix抖音14.3%(ENTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTJ反常识batch1·社会证明B13后轮出)·男子被骗8分·Te认知防骗·严禁恐惧按钮(钱财损失角度)",
+        "brief": {
+          "pain_point": "ENTJ的Te以效率与掌控为荣，最恐惧「聪明人也会栽跟头」的认知盲区；「20年极致自律 vs 6天瞬间归零」的反差，直接动摇ENTJ对「理性人」的默认假设。",
+          "hook_first3": "第一行「他用了20年，把每一分钱都省下来，攒到了789万」；第二行「然后只用了6天，全部归零」制造极致反差；第三行「骗他的，不是高明的局，是他自己」切入Te认知盲区。",
+          "emotion_curve": "敬佩(20年自律) → 震惊(6天归零) → 后怕(认知盲区) → 警醒(自律≠免疫) → 行动(认知防骗清单)。",
+          "structure": [
+            "钩子·20年vs6天",
+            "拆解·骗局撬动什么",
+            "洞察·自律不等于免疫贪念",
+            "警醒·理性人的认知盲区",
+            "CTA·你的钱最容易被什么撬动"
+          ],
+          "differentiation": "别人写被骗是「骗子可恨/受害者可怜/反诈说教」，我们讲「极度自律与瞬间失控并存于同一灵魂」；Te落点「理性人的认知盲区」，绝不贩卖钱财焦虑、绝不羞辱受害者。"
         }
       }
     },
