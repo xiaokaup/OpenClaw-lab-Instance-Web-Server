@@ -1,32 +1,33 @@
 {
   "pool_status": {
-    "level": 154,
+    "level": 161,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池154>>25软上限·投投零部署为根因·非内容过剩·D21-B14第三波轮出批满产7臂fresh(INFJ身份认同9.0狼孩旗舰+ENTJ反常识8.7+ENFP身份认同8.8女兵+ENFJ社会证明8.6恢复+ISTJ好奇心8.6+INTJ反常识8.7+INTP好奇心8.5轻触)·方向船B14明令7臂全fresh(第三波轮出必需)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-23T08:35:00+08:00",
-    "last_creation_batch": "D21-B14",
-    "last_deployment": "2026-08-23T09:25:00+08:00",
-    "last_deployment_batch": "D21-B14",
+    "warning": "🔴🔴 池161>>25软上限·投投零部署为根因·非内容过剩·D21-B15第二波续触+双恢复批满产7臂fresh(ENFP身份认同9.0 38岁考大学旗舰+INFJ情感共鸣8.8我的前半生恢复+ENTJ反常识8.7+INTJ好奇心8.7+ENTP反常识8.6恢复+ENFJ社会证明8.6+ISTJ好奇心8.6)·方向船B15明令7臂全fresh(batch2达上限+双恢复必需)·豁免池水位降产·对冲走清stale并行",
+    "last_creation": "2026-08-24T08:30:00+08:00",
+    "last_creation_batch": "D21-B15",
+    "last_deployment": "2026-08-24T09:25:00+08:00",
+    "last_deployment_batch": "D21-B15",
     "net_change_this_batch": 7,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 154,
-    "active_items": 91,
+    "total_items": 161,
+    "active_items": 98,
     "hook_conflict_items": 1,
     "last_deployment_arms": 7,
-    "sheshe_supplement": "设设D21-B12补产4臂fresh(ENFJ社会证明9蛋饼店主旗舰+ENTP身份认同8.8+ENTJ好奇心8.6+INTJ好奇心8.5)·补全大面积轮出批7臂矩阵·小红书post成品1条(ENFJ)·brief 4条全填实·修复INFJ/INFP臂序+INFP渠道对齐微博",
+    "sheshe_supplement": "设设D21-B15满产7臂fresh(ENFP身份认同9.0旗舰/INFJ情感共鸣8.8恢复/ENTJ反常识8.7/INTJ好奇心8.7/ENTP反常识8.6恢复/ENFJ社会证明8.6/ISTJ好奇心8.6)·第二波续触+双恢复批·小红书post成品2条(ENFP+ISTJ)·brief 7条全填实·社会货币0臂(连续3批冷却·禁止强推)·AI集群避恐慌渲染(认知/边界角度)",
     "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 18,
-      "brief_added": 32,
-      "xhs_active_posts_completed": 13,
+      "posts_added": 20,
+      "brief_added": 39,
+      "xhs_active_posts_completed": 15,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B14新增2条post(ENFP女兵身份认同+ISTJ总犯困好奇心)+7条brief·body均为完整可发布正文·五字段全填实·母题轮换依恋→身份/觉醒",
-      "b14_posts_completed": 2
+      "note": "小红书成品帖子v2.0持续落地·B15新增2条post(ENFP 38岁考大学身份认同+ISTJ秋乏好奇心)+7条brief·body均为完整可发布正文·五字段全填实·第二波续触+双恢复批·社会货币0臂(连续3批冷却)",
+      "b14_posts_completed": 2,
+      "b15_posts_completed": 2
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
@@ -4902,9 +4903,377 @@
       "actual_roi": null,
       "writeback_note": "B14·INTP好奇心batch1轻触fresh(36kr AI 5·认知反噬·身份认同batch1后轮出·B站¥25轻触·防15批螺旋)",
       "has_post": false
+    },
+    {
+      "id": "D21-B15-ENFP-1",
+      "title": "38岁去考大学，39岁他考了年级第一——ENFP看到的不是「大器晚成」的鸡汤：真正的自我觉醒，是永远不对自己说「太晚了」",
+      "hook": "身份认同",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-ENFP-1.json",
+      "paradigm": "身份认同·Fi自我觉醒/不设限型(ENFP身份认同batch2续触·38岁考大学9分旗舰·Fi正面自我实现:人生不设限·信任下滑对冲·严禁年龄焦虑贩卖)",
+      "role": "P0·ENFP身份认同batch2续触(38岁考大学9·自我觉醒/逆袭·年级第一)·小红书Fi位·方向船key_decision「ENFP身份认同batch2(38岁考大学9·自我实现·信任下滑对冲·confidence_low 0.224口径重估)」",
+      "consecutive_hook": 2,
+      "direction_hook": "身份认同",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFP的Fi最怕被「年龄/阶段」的规训困住——「这个年纪该稳定了」「来不及了」；38岁考大学、39岁年级第一，证明「忠于自己」从不受年龄设限。",
+        "hook_first3": "第一行「38岁，他去考了大学」抛反差；第二行「39岁，他考了年级第一」再翻一层；第三行「很多人说太晚了，但他用一年证明：太晚是假的，太早放弃才是真的」切入Fi自我觉醒。",
+        "emotion_curve": "惊讶(38岁考大学) → 佩服(年级第一) → 反思(年龄规训) → 共鸣(忠于自己) → 热血(不设限)。",
+        "structure": [
+          "钩子·38岁考大学",
+          "反差·39岁年级第一",
+          "洞察·年龄规训是幻觉",
+          "升华·自我觉醒=不对自己说太晚",
+          "CTA·你被「太晚了」拦住过吗"
+        ],
+        "differentiation": "别人写「大器晚成/励志鸡汤/逆天改命」，我们写Fi自我觉醒——「不设限不是鸡汤，是每一次都不对自己说『太晚』」；正面励志、绝不judge年龄与人生节奏。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15第二波续触批·ENFP身份认同batch2续触fresh(38岁考大学9旗舰·自我觉醒/逆袭·年级第一·Fi正面自我实现·信任下滑对冲)·P0",
+      "post": {
+        "cover_title": "38岁考大学，39岁年级第一",
+        "body": "38岁，他去考了大学。🎓\n\n身边很多人不理解：\n「这个年纪了，折腾什么？」\n\n39岁，\n他考了年级第一。\n\n一年时间，\n从「门外汉」到「第一名」，\n他不是天才，\n只是比任何人都想证明一件事——\n\n人生，从来没有太晚的开始。\n\n我们总爱给自己设限：\n「25岁该稳定了」\n「30岁该结婚了」\n「35岁来不及了」……\n\n但这些「该」，\n是谁定的呢？\n\nENFP知道，\n真正的自我觉醒，\n不是等到万事俱备，\n而是永远不对自己说\n「太晚了」。\n\n38岁去考大学，\n不是任性，\n是他忠于自己。\n39岁考第一，\n不是奇迹，\n是他从未放弃自己。💛\n\n年龄只是一个数字，\n它拦不住真正想活出自己的人。\n\n别让「太晚了」，\n成为你唯一的人生答案。\n\n💬 你有没有一个\n「别人都说太晚了，但你还是去做了」的决定？\n评论区，说给我听。",
+        "hashtags": [
+          "#自我觉醒",
+          "#MBTI",
+          "#ENFP",
+          "#人生不设限",
+          "#自我成长"
+        ],
+        "cover_visual": "中年男人伏案读书的背影 + 成绩单「年级第一」特写，暖金色调、坚定不煽情，大字『人生没有太晚』",
+        "cta": "你有没有一个「别人都说太晚了，但你还是去做了」的决定？评论区讲给我听。",
+        "post_time": "12:00-13:00（午间励志情绪高峰）",
+        "avoid": "不贩卖年龄焦虑、不贬低年轻/早慧路径、不渲染「逆天改命」夸张情绪；聚焦「不设限」的自我觉醒正面能量"
+      },
+      "post_spec_version": "v2.0",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 1,
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B15-ENTJ-1",
+      "title": "都在喊「机器人抢饭碗」，但真相是机器人只做人类不爱做、做不好的事——ENTJ的Te系统0.5秒拆穿「AI取代人类」的恐慌：机器抢走的不是人，是你本来就不该被困住的那部分",
+      "hook": "反常识",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.7,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-ENTJ-1.json",
+      "paradigm": "反常识·Te认知边界/焦虑反转型(ENTJ反常识batch2续触·机器人只做人类不爱做7分·Te解构:AI边界=人不想做/做不好·严禁失业恐慌渲染·用认知/边界角度)",
+      "role": "P0·ENTJ反常识batch2续触(机器人只做人类不爱做7·AI/职业焦虑反转)·抖音Te位·方向船key_decision「ENTJ反常识batch2(机器人只做人类不爱做7·避免失业恐慌·认知/边界角度)」",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ的Te最反感「AI取代一切」的低信息量恐慌；真相是机器人接的是人类不爱做/做不好的活，边界清晰，焦虑自然消解。",
+        "hook_first3": "第一行「所有人都在喊：机器人要抢饭碗了」摆恐慌；第二行「但很少有人把后半句念完：机器人只做人类不爱做、做不好的事」反常识；第三行「所以真正的问题不是被取代，是你有没有把自己升级到机器够不着的位置」切入Te掌控。",
+        "emotion_curve": "紧张(AI焦虑) → 松一口气(反转) → 清醒(边界清晰) → 掌控(升级自己) → 行动(找到不可替代点)。",
+        "structure": [
+          "钩子·抢饭碗恐慌",
+          "反转·只做不爱做/做不好的",
+          "洞察·焦虑源于边界不清",
+          "行动·把自己升级到机器够不着",
+          "CTA·你工作中最不可替代的是什么"
+        ],
+        "differentiation": "别人贩卖「AI取代」焦虑，我们做Te认知解构——「焦虑来自边界不清，掌控来自看清边界」；不反技术、不恐慌、理性拆解。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·ENTJ反常识batch2续触fresh(机器人只做人类不爱做7·AI/职业焦虑反转·Te认知解构·避免失业恐慌渲染)·P0",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 2,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B15-INFJ-1",
+      "title": "《我的前半生》9年后突然又火了——INFJ看懂的从来不是「罗子君逆袭」的爽：一个女人真正的重建，是把「被谁爱」换成「我是谁」",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.8,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe身份重建/命运洞察型(INFJ情感共鸣batch1恢复·我的前半生8分·Ni-Fe命运洞察:身份重建=被谁爱→我是谁·母题轮换后回归)",
+      "role": "P0·INFJ情感共鸣batch1恢复(我的前半生8·女性成长/身份重建)·微博Ni-Fe位·方向船key_decision「INFJ情感共鸣batch1恢复(我的前半生8·身份重建·身份认同B14后换hook·母题轮换后回归)」",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INFJ的Ni-Fe对「命运/身份重建」极度共鸣；罗子君的「前半生依附、后半生重建自我」，是每个曾在关系里找过自己的人的镜像。",
+        "hook_first3": "第一行「《我的前半生》9年后，突然又火了」点现象；第二行「很多人说，当年没看懂，现在哭着看懂」摆延迟共鸣；第三行「因为它讲的从来不是婚姻，是一个女人把『被谁爱』换成『我是谁』的重建」立论。",
+        "emotion_curve": "怀旧(剧集重火) → 恍然(当年没看懂) → 共鸣(身份重建) → 释然(我是谁) → 力量(重建自己)。",
+        "structure": [
+          "钩子·9年后爆火",
+          "延迟共鸣·当年没看懂",
+          "洞察·讲的是身份重建",
+          "升华·被谁爱→我是谁",
+          "CTA·你的前半生教会了你什么"
+        ],
+        "differentiation": "别人写「爽剧/小三/婚姻狗血」，我们写Ni-Fe命运洞察——「前半生依附、后半生重建」，落点从「被谁爱」转向「我是谁」；不judge角色、不消费狗血。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·INFJ情感共鸣batch1恢复fresh(我的前半生8·女性成长/身份重建·Ni-Fe命运洞察·身份认同B14后换hook)·P0",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 3,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B15-ENTP-1",
+      "title": "机器人开始「自己拿主意」了，可怕吗？——ENTP的Ne-Ti反而兴奋：这不是失控的开始，而是「工具」和「代理」第一次被分开的边界时刻",
+      "hook": "反常识",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-ENTP-1.json",
+      "paradigm": "反常识·Ne-Ti认知边界/代理觉醒型(ENTP反常识batch1恢复首触·机器人自己拿主意6分·Ne-Ti概念拆解:工具vs代理边界·休1批结束恢复·严禁AI恐慌渲染)",
+      "role": "P1·ENTP反常识batch1恢复首触(机器人自己拿主意6·AI自主性/科技)·B站Ne-Ti位·方向船key_decision「ENTP恢复(机器人自己拿主意6·AI自主性·Ne-Ti认知边界·NT象限3/4)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTP的Ne-Ti最受不了「AI要失控」的情绪化恐慌；真正有趣的是「自主性」的边界——机器从「执行指令」到「生成目标」的质变。",
+        "hook_first3": "第一行「机器人，要开始自己拿主意了」抛变化；第二行「你的第一反应，是不是有点害怕？」承认情绪；第三行「但ENTP反而兴奋：这是『工具』和『代理』第一次被分开」切入认知边界。",
+        "emotion_curve": "好奇(拿主意) → 警惕(失控?) → 兴奋(边界质变) → 思辨(代理vs工具) → 前瞻(人机分工)。",
+        "structure": [
+          "钩子·机器人拿主意",
+          "情绪承认·害怕正常",
+          "拆解·工具vs代理边界",
+          "思辨·自主性=从执行到生成",
+          "CTA·你愿意把什么决定交给机器"
+        ],
+        "differentiation": "别人写「AI觉醒恐怖片/失控焦虑」，我们做Ne-Ti概念拆解——「自主性=从执行到生成目标」，兴奋多于恐惧；不渲染恐慌、不反技术。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·ENTP反常识batch1恢复首触fresh(机器人自己拿主意6·AI自主性·Ne-Ti认知边界·休1批结束恢复)·P1",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 4,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B15-ENFJ-1",
+      "title": "一个治沙的普通女人，被美国记者称为「超级英雄」——ENFJ看到的社会证明：真正的英雄没有披风，只有几十年把沙漠一点一点种回绿洲的坚持",
+      "hook": "社会证明",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.6,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-ENFJ-1.json",
+      "paradigm": "社会证明·Fe社会认同/英雄叙事型(ENFJ社会证明batch2续触·殷玉珍超级英雄7分·Fe社会认同:普通人的长期主义被看见·heat1270万全榜最高)",
+      "role": "P1·ENFJ社会证明batch2续触(殷玉珍超级英雄7·英雄叙事/社会认同)·微博Fe位·方向船key_decision「ENFJ社会证明batch2(殷玉珍超级英雄7·heat1270万全榜最高)」",
+      "consecutive_hook": 2,
+      "direction_hook": "社会证明",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFJ的Fe渴望「被看见/被认同」的正向力量；殷玉珍治沙几十年被跨文化认同为「超级英雄」，证明「普通人的坚持」能获得最高规格的社会认可。",
+        "hook_first3": "第一行「一个中国女人，被美国记者称为『超级英雄』」点反差；第二行「她做了什么？治沙」摆朴素答案；第三行「没有披风，只有几十年把沙漠一点一点种回绿洲」立论。",
+        "emotion_curve": "好奇(超级英雄) → 震撼(治沙) → 敬佩(几十年坚持) → 共鸣(被看见) → 温暖(普通人也伟大)。",
+        "structure": [
+          "钩子·超级英雄",
+          "反差·她是治沙人",
+          "洞察·长期主义的力量",
+          "升华·被看见的社会认同",
+          "CTA·你身边有「隐形英雄」吗"
+        ],
+        "differentiation": "别人写「感动中国/环保模范/励志」，我们写Fe社会认同——「超级英雄=普通人的长期主义被看见」；不煽情、不道德绑架、聚焦正向认同。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·ENFJ社会证明batch2续触fresh(殷玉珍超级英雄7·英雄叙事/社会认同·Fe·heat1270万全榜最高)·P1",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 5,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B15-ISTJ-1",
+      "title": "最近总觉得累？可能不是懒，是秋乏——ISTJ用Si看到的是：身体有它自己的节律，你缺的可能不是「再坚持一下」，而是一次顺应节律的调整",
+      "hook": "好奇心",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-ISTJ-1.json",
+      "paradigm": "好奇心·Si健康节律/自我关怀型(ISTJ好奇心batch2续触·秋乏6分·Si健康规律:累=身体节律信号非意志失败·健康认知主线延续·严禁健康焦虑贩卖)",
+      "role": "P1·ISTJ好奇心batch2续触(秋乏6·健康/自我关怀)·小红书Si位·方向船key_decision「ISTJ好奇心batch2(秋乏6·Si健康规律·健康认知主线延续)」",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ISTJ的Si最依赖「规律/节律」，「总累」会打破TA的掌控感；「秋乏=换季节律」的解释让TA重新拿回身体的规律感。",
+        "hook_first3": "第一行「最近总觉得累，做什么都提不起劲」点共鸣；第二行「先别急着怪自己懒」摆自judge；第三行「可能是秋乏，身体在换季」给Si节律解释。",
+        "emotion_curve": "疲惫(共鸣) → 松一口气(不是懒) → 掌控(节律解释) → 调整(顺应换季) → 踏实(照顾自己)。",
+        "structure": [
+          "钩子·总累共鸣",
+          "去自责·不是懒",
+          "节律·秋乏=换季",
+          "落地·顺应节律调整",
+          "CTA·你秋天最容易累吗"
+        ],
+        "differentiation": "别人写「养生偏方/补品/吓唬你生病」，我们写Si节律认知——「累是身体的信号，不是意志的失败」；实用科普、不恐吓、不替代医疗建议。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·ISTJ好奇心batch2续触fresh(秋乏6·健康/自我关怀·Si健康规律·健康认知主线延续)·P1",
+      "post": {
+        "cover_title": "总觉得累？可能是秋乏",
+        "body": "最近总觉得累，🚶\n做什么都提不起劲。\n\n早上起不来，\n下午昏昏沉沉，\n连平时喜欢的事都懒得碰。\n\n你的第一反应，\n是不是又在心里骂自己：\n「我是不是太懒了？」\n\n先别急着怪自己。\n\n这个季节的累，\n大概率是——秋乏。🍂\n\n入秋之后，\n气温下降、昼短夜长，\n身体在悄悄「换季」，\n新陈代谢也在调整节奏。\n\n这种时候，\n累不是你的意志问题，\n是身体在按它的节律走。\n\n所以，\n别再用「再坚持一下」硬撑，\n而是顺着节律，\n早睡一点，\n动一动，\n给自己一点缓冲的时间。\n\nISTJ会告诉你：\n规律不是苦行，\n是听懂身体的语言。💛\n\n累是身体的信号，\n不是意志的失败。\n\n照顾好自己的节奏，\n比硬扛更重要。\n\n💬 你最近也总觉得累吗？\n评论区说说，\n是秋乏，还是没睡够？",
+        "hashtags": [
+          "#秋乏",
+          "#健康科普",
+          "#MBTI",
+          "#ISTJ",
+          "#自我关怀"
+        ],
+        "cover_visual": "秋日窗边一杯温水 + 一本翻开的书，暖棕色调、松弛感，大字『累≠懒，是身体在换季』",
+        "cta": "你最近也总觉得累吗？评论区说说，是秋乏还是没睡够。",
+        "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+        "avoid": "不做疾病诊断暗示、不夸大「秋乏=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+      },
+      "post_spec_version": "v2.0",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 6,
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B15-INTJ-1",
+      "title": "星巴克为什么突然「不受宠」了？——INTJ的Ni-Te看到的不只是咖啡：当「第三空间」的光环褪去，打败它的从来不是瑞幸，是人们对「空间」价值的重新定价",
+      "hook": "好奇心",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.7,
+      "created": "2026-08-24T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B15-INTJ-1.json",
+      "paradigm": "好奇心·Ni-Te商业洞察/价值重估型(INTJ好奇心batch1换hook·星巴克6分·Ni-Te模式识别:第三空间价值被重新定价·反常识B14后换hook·零维护信任8.53)",
+      "role": "P1·INTJ好奇心batch1换hook(星巴克6·消费趋势/品牌迭代)·B站Ni-Te位·方向船key_decision「INTJ反常识→好奇心(星巴克6·消费趋势·反常识INTJ信号弱仅7.48元598 5分)」",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B15",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ的Ni-Te喜欢拆解「为什么」背后的底层逻辑；星巴克失宠不是口味问题，是「第三空间」价值被咖啡平价化重新定价。",
+        "hook_first3": "第一行「星巴克为什么不受宠了」直接抛问题；第二行「是咖啡不好喝了吗？」摆常见答案；第三行「不是，是它当年最值钱的『第三空间』，现在被人重新定价了」切入Ni-Te洞察。",
+        "emotion_curve": "好奇(为什么) → 追问(咖啡?) → 洞察(空间价值) → 通透(重新定价) → 迁移(看懂商业)。",
+        "structure": [
+          "钩子·星巴克失宠",
+          "排除法·不是咖啡",
+          "洞察·第三空间被重新定价",
+          "迁移·商业价值的生命周期",
+          "CTA·你还会为「空间」买单吗"
+        ],
+        "differentiation": "别人写「瑞幸赢了/性价比/消费降级」，我们写Ni-Te商业模式拆解——「星巴克输的不是咖啡，是空间价值被重新定价」；理性、不站队、不情绪化。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B15·INTJ好奇心batch1换hook fresh(星巴克6·消费趋势/品牌迭代·Ni-Te商业洞察·反常识B14后换hook)·P1",
+      "last_used": "2026-08-24T09:25:00+08:00",
+      "deployed_batch": "D21-B15",
+      "deployed_arm": 7,
+      "deployed_budget": 25,
+      "has_post": false
     }
   ],
-  "total": 154,
+  "total": 161,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -5678,6 +6047,118 @@
         "cta": "你每天早上的第一顿会吃蛋白质吗？评论区晒出你的早餐。",
         "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
         "avoid": "不做疾病诊断暗示、不夸大「缺蛋白=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B15-ENFP-1",
+      "title": "38岁去考大学，39岁他考了年级第一——ENFP看到的不是「大器晚成」的鸡汤：真正的自我觉醒，是永远不对自己说「太晚了」",
+      "hook": "身份认同",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 2,
+      "direction_hook": "身份认同",
+      "arm_id": 1,
+      "batch_num": 2,
+      "signals": [
+        "38岁考大学 39岁的他成绩年级第一(9分·身份认同·自我觉醒/逆袭·年级第一·heat4272625)"
+      ],
+      "paradigm": "身份认同·Fi自我觉醒/不设限型(ENFP身份认同batch2续触·38岁考大学9分旗舰·Fi正面自我实现:人生不设限·信任下滑对冲·严禁年龄焦虑贩卖)",
+      "role": "P0·ENFP身份认同batch2续触(38岁考大学9·自我觉醒/逆袭·年级第一)·小红书Fi位·方向船key_decision「ENFP身份认同batch2(38岁考大学9·自我实现·信任下滑对冲·confidence_low 0.224口径重估)」",
+      "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ENFP×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ENFP身份认同batch2续触·38岁考大学9旗舰)·Fi正面自我实现/不设限·信任下滑用强正面信号对冲·小红书v2.0 post成品落地·严禁年龄焦虑贩卖",
+      "brief": {
+        "pain_point": "ENFP的Fi最怕被「年龄/阶段」的规训困住——「这个年纪该稳定了」「来不及了」；38岁考大学、39岁年级第一，证明「忠于自己」从不受年龄设限。",
+        "hook_first3": "第一行「38岁，他去考了大学」抛反差；第二行「39岁，他考了年级第一」再翻一层；第三行「很多人说太晚了，但他用一年证明：太晚是假的，太早放弃才是真的」切入Fi自我觉醒。",
+        "emotion_curve": "惊讶(38岁考大学) → 佩服(年级第一) → 反思(年龄规训) → 共鸣(忠于自己) → 热血(不设限)。",
+        "structure": [
+          "钩子·38岁考大学",
+          "反差·39岁年级第一",
+          "洞察·年龄规训是幻觉",
+          "升华·自我觉醒=不对自己说太晚",
+          "CTA·你被「太晚了」拦住过吗"
+        ],
+        "differentiation": "别人写「大器晚成/励志鸡汤/逆天改命」，我们写Fi自我觉醒——「不设限不是鸡汤，是每一次都不对自己说『太晚』」；正面励志、绝不judge年龄与人生节奏。"
+      },
+      "post": {
+        "cover_title": "38岁考大学，39岁年级第一",
+        "body": "38岁，他去考了大学。🎓\n\n身边很多人不理解：\n「这个年纪了，折腾什么？」\n\n39岁，\n他考了年级第一。\n\n一年时间，\n从「门外汉」到「第一名」，\n他不是天才，\n只是比任何人都想证明一件事——\n\n人生，从来没有太晚的开始。\n\n我们总爱给自己设限：\n「25岁该稳定了」\n「30岁该结婚了」\n「35岁来不及了」……\n\n但这些「该」，\n是谁定的呢？\n\nENFP知道，\n真正的自我觉醒，\n不是等到万事俱备，\n而是永远不对自己说\n「太晚了」。\n\n38岁去考大学，\n不是任性，\n是他忠于自己。\n39岁考第一，\n不是奇迹，\n是他从未放弃自己。💛\n\n年龄只是一个数字，\n它拦不住真正想活出自己的人。\n\n别让「太晚了」，\n成为你唯一的人生答案。\n\n💬 你有没有一个\n「别人都说太晚了，但你还是去做了」的决定？\n评论区，说给我听。",
+        "hashtags": [
+          "#自我觉醒",
+          "#MBTI",
+          "#ENFP",
+          "#人生不设限",
+          "#自我成长"
+        ],
+        "cover_visual": "中年男人伏案读书的背影 + 成绩单「年级第一」特写，暖金色调、坚定不煽情，大字『人生没有太晚』",
+        "cta": "你有没有一个「别人都说太晚了，但你还是去做了」的决定？评论区讲给我听。",
+        "post_time": "12:00-13:00（午间励志情绪高峰）",
+        "avoid": "不贩卖年龄焦虑、不贬低年轻/早慧路径、不渲染「逆天改命」夸张情绪；聚焦「不设限」的自我觉醒正面能量"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B15-ISTJ-1",
+      "title": "最近总觉得累？可能不是懒，是秋乏——ISTJ用Si看到的是：身体有它自己的节律，你缺的可能不是「再坚持一下」，而是一次顺应节律的调整",
+      "hook": "好奇心",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.6,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "arm_id": 6,
+      "batch_num": 2,
+      "signals": [
+        "最近总觉得累大概率是秋乏(6分·好奇心·健康/自我关怀·heat3511850)"
+      ],
+      "paradigm": "好奇心·Si健康节律/自我关怀型(ISTJ好奇心batch2续触·秋乏6分·Si健康规律:累=身体节律信号非意志失败·健康认知主线延续·严禁健康焦虑贩卖)",
+      "role": "P1·ISTJ好奇心batch2续触(秋乏6·健康/自我关怀)·小红书Si位·方向船key_decision「ISTJ好奇心batch2(秋乏6·Si健康规律·健康认知主线延续)」",
+      "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ISTJ×好奇心×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(ISTJ好奇心batch2续触·秋乏6)·Si健康节律·健康认知主线延续·小红书v2.0 post成品落地·严禁健康焦虑(实用科普角度)",
+      "brief": {
+        "pain_point": "ISTJ的Si最依赖「规律/节律」，「总累」会打破TA的掌控感；「秋乏=换季节律」的解释让TA重新拿回身体的规律感。",
+        "hook_first3": "第一行「最近总觉得累，做什么都提不起劲」点共鸣；第二行「先别急着怪自己懒」摆自judge；第三行「可能是秋乏，身体在换季」给Si节律解释。",
+        "emotion_curve": "疲惫(共鸣) → 松一口气(不是懒) → 掌控(节律解释) → 调整(顺应换季) → 踏实(照顾自己)。",
+        "structure": [
+          "钩子·总累共鸣",
+          "去自责·不是懒",
+          "节律·秋乏=换季",
+          "落地·顺应节律调整",
+          "CTA·你秋天最容易累吗"
+        ],
+        "differentiation": "别人写「养生偏方/补品/吓唬你生病」，我们写Si节律认知——「累是身体的信号，不是意志的失败」；实用科普、不恐吓、不替代医疗建议。"
+      },
+      "post": {
+        "cover_title": "总觉得累？可能是秋乏",
+        "body": "最近总觉得累，🚶\n做什么都提不起劲。\n\n早上起不来，\n下午昏昏沉沉，\n连平时喜欢的事都懒得碰。\n\n你的第一反应，\n是不是又在心里骂自己：\n「我是不是太懒了？」\n\n先别急着怪自己。\n\n这个季节的累，\n大概率是——秋乏。🍂\n\n入秋之后，\n气温下降、昼短夜长，\n身体在悄悄「换季」，\n新陈代谢也在调整节奏。\n\n这种时候，\n累不是你的意志问题，\n是身体在按它的节律走。\n\n所以，\n别再用「再坚持一下」硬撑，\n而是顺着节律，\n早睡一点，\n动一动，\n给自己一点缓冲的时间。\n\nISTJ会告诉你：\n规律不是苦行，\n是听懂身体的语言。💛\n\n累是身体的信号，\n不是意志的失败。\n\n照顾好自己的节奏，\n比硬扛更重要。\n\n💬 你最近也总觉得累吗？\n评论区说说，\n是秋乏，还是没睡够？",
+        "hashtags": [
+          "#秋乏",
+          "#健康科普",
+          "#MBTI",
+          "#ISTJ",
+          "#自我关怀"
+        ],
+        "cover_visual": "秋日窗边一杯温水 + 一本翻开的书，暖棕色调、松弛感，大字『累≠懒，是身体在换季』",
+        "cta": "你最近也总觉得累吗？评论区说说，是秋乏还是没睡够。",
+        "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+        "avoid": "不做疾病诊断暗示、不夸大「秋乏=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
       },
       "post_spec_version": "v2.0"
     },
@@ -7507,6 +7988,75 @@
         }
       }
     },
+    "D21-B15-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-INTJ-1",
+        "title": "星巴克为什么突然「不受宠」了？——INTJ的Ni-Te看到的不只是咖啡：当「第三空间」的光环褪去，打败它的从来不是瑞幸，是人们对「空间」价值的重新定价",
+        "hook": "好奇心",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "星巴克为什么不受宠了(6分·好奇心·消费趋势/品牌迭代·heat4755507)"
+        ],
+        "paradigm": "好奇心·Ni-Te商业洞察/价值重估型(INTJ好奇心batch1换hook·星巴克6分·Ni-Te模式识别:第三空间价值被重新定价·反常识B14后换hook·零维护信任8.53)",
+        "role": "P1·INTJ好奇心batch1换hook(星巴克6·消费趋势/品牌迭代)·B站Ni-Te位·方向船key_decision「INTJ反常识→好奇心(星巴克6·消费趋势·反常识INTJ信号弱仅7.48元598 5分)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·INTJ×好奇心×B站·channel_mix B站28.6%(ENTP+INTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INTJ好奇心batch1换hook·星巴克6·消费趋势)·Ni-Te商业洞察·反常识B14后换hook·零维护信任8.53全池最高",
+        "brief": {
+          "pain_point": "INTJ的Ni-Te喜欢拆解「为什么」背后的底层逻辑；星巴克失宠不是口味问题，是「第三空间」价值被咖啡平价化重新定价。",
+          "hook_first3": "第一行「星巴克为什么不受宠了」直接抛问题；第二行「是咖啡不好喝了吗？」摆常见答案；第三行「不是，是它当年最值钱的『第三空间』，现在被人重新定价了」切入Ni-Te洞察。",
+          "emotion_curve": "好奇(为什么) → 追问(咖啡?) → 洞察(空间价值) → 通透(重新定价) → 迁移(看懂商业)。",
+          "structure": [
+            "钩子·星巴克失宠",
+            "排除法·不是咖啡",
+            "洞察·第三空间被重新定价",
+            "迁移·商业价值的生命周期",
+            "CTA·你还会为「空间」买单吗"
+          ],
+          "differentiation": "别人写「瑞幸赢了/性价比/消费降级」，我们写Ni-Te商业模式拆解——「星巴克输的不是咖啡，是空间价值被重新定价」；理性、不站队、不情绪化。"
+        }
+      }
+    },
     "D21-B3-ISTJ-1": {
       "id": "D21-B3-ISTJ-1",
       "batch": "D21-B3",
@@ -9064,6 +9614,75 @@
         "rotate_from": "身份认同",
         "signal": "雪佛兰退场(7.3M·Baidu实时·2026-08-11)",
         "rotation_note": "ISTJ身份认同batch1·策略P0要求身份认同3臂→2臂收缩·INFJ/ISTJ轮出身份认同"
+      }
+    },
+    "D21-B15-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-ENTJ-1",
+        "title": "都在喊「机器人抢饭碗」，但真相是机器人只做人类不爱做、做不好的事——ENTJ的Te系统0.5秒拆穿「AI取代人类」的恐慌：机器抢走的不是人，是你本来就不该被困住的那部分",
+        "hook": "反常识",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 2,
+        "batch_num": 2,
+        "signals": [
+          "机器人只做人类不爱做、做不好的事(7分·反常识·AI/职业焦虑反转·heat6561707)"
+        ],
+        "paradigm": "反常识·Te认知边界/焦虑反转型(ENTJ反常识batch2续触·机器人只做人类不爱做7分·Te解构:AI边界=人不想做/做不好·严禁失业恐慌渲染·用认知/边界角度)",
+        "role": "P0·ENTJ反常识batch2续触(机器人只做人类不爱做7·AI/职业焦虑反转)·抖音Te位·方向船key_decision「ENTJ反常识batch2(机器人只做人类不爱做7·避免失业恐慌·认知/边界角度)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ENTJ×反常识×抖音·channel_mix抖音14.3%(ENTJ单臂)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTJ反常识batch2续触·机器人只做人类不爱做7)·Te认知解构·严禁失业恐慌渲染(用认知/边界角度非恐慌)",
+        "brief": {
+          "pain_point": "ENTJ的Te最反感「AI取代一切」的低信息量恐慌；真相是机器人接的是人类不爱做/做不好的活，边界清晰，焦虑自然消解。",
+          "hook_first3": "第一行「所有人都在喊：机器人要抢饭碗了」摆恐慌；第二行「但很少有人把后半句念完：机器人只做人类不爱做、做不好的事」反常识；第三行「所以真正的问题不是被取代，是你有没有把自己升级到机器够不着的位置」切入Te掌控。",
+          "emotion_curve": "紧张(AI焦虑) → 松一口气(反转) → 清醒(边界清晰) → 掌控(升级自己) → 行动(找到不可替代点)。",
+          "structure": [
+            "钩子·抢饭碗恐慌",
+            "反转·只做不爱做/做不好的",
+            "洞察·焦虑源于边界不清",
+            "行动·把自己升级到机器够不着",
+            "CTA·你工作中最不可替代的是什么"
+          ],
+          "differentiation": "别人贩卖「AI取代」焦虑，我们做Te认知解构——「焦虑来自边界不清，掌控来自看清边界」；不反技术、不恐慌、理性拆解。"
+        }
       }
     },
     "D17-B2-1": {
@@ -11427,6 +12046,75 @@
         "note": "🟢 fresh·rest1批后社会证明恢复首触·7分社会价值·Si-Te社会价值·q8.9·B10可续batch2(需社会证明信号≥7)"
       }
     },
+    "D21-B15-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-ENTP-1",
+        "title": "机器人开始「自己拿主意」了，可怕吗？——ENTP的Ne-Ti反而兴奋：这不是失控的开始，而是「工具」和「代理」第一次被分开的边界时刻",
+        "hook": "反常识",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "机器人要开始自己拿主意了(6分·反常识·AI自主性/科技·heat9411338)"
+        ],
+        "paradigm": "反常识·Ne-Ti认知边界/代理觉醒型(ENTP反常识batch1恢复首触·机器人自己拿主意6分·Ne-Ti概念拆解:工具vs代理边界·休1批结束恢复·严禁AI恐慌渲染)",
+        "role": "P1·ENTP反常识batch1恢复首触(机器人自己拿主意6·AI自主性/科技)·B站Ne-Ti位·方向船key_decision「ENTP恢复(机器人自己拿主意6·AI自主性·Ne-Ti认知边界·NT象限3/4)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ENTP×反常识×B站·channel_mix B站28.6%(ENTP+INTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENTP反常识batch1恢复首触·机器人自己拿主意6)·Ne-Ti概念拆解·休1批结束恢复·严禁AI恐慌渲染(兴奋多于恐惧)",
+        "brief": {
+          "pain_point": "ENTP的Ne-Ti最受不了「AI要失控」的情绪化恐慌；真正有趣的是「自主性」的边界——机器从「执行指令」到「生成目标」的质变。",
+          "hook_first3": "第一行「机器人，要开始自己拿主意了」抛变化；第二行「你的第一反应，是不是有点害怕？」承认情绪；第三行「但ENTP反而兴奋：这是『工具』和『代理』第一次被分开」切入认知边界。",
+          "emotion_curve": "好奇(拿主意) → 警惕(失控?) → 兴奋(边界质变) → 思辨(代理vs工具) → 前瞻(人机分工)。",
+          "structure": [
+            "钩子·机器人拿主意",
+            "情绪承认·害怕正常",
+            "拆解·工具vs代理边界",
+            "思辨·自主性=从执行到生成",
+            "CTA·你愿意把什么决定交给机器"
+          ],
+          "differentiation": "别人写「AI觉醒恐怖片/失控焦虑」，我们做Ne-Ti概念拆解——「自主性=从执行到生成目标」，兴奋多于恐惧；不渲染恐慌、不反技术。"
+        }
+      }
+    },
     "D21-B7-ENTP-1": {
       "vessel": {
         "version": "1.0",
@@ -12151,6 +12839,75 @@
             "vessel_id": "D20-B7"
           }
         ]
+      }
+    },
+    "D21-B15-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-INFJ-1",
+        "title": "《我的前半生》9年后突然又火了——INFJ看懂的从来不是「罗子君逆袭」的爽：一个女人真正的重建，是把「被谁爱」换成「我是谁」",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "《我的前半生》凭什么9年后爆火(8分·情感共鸣·女性成长/身份重建·heat2099953)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe身份重建/命运洞察型(INFJ情感共鸣batch1恢复·我的前半生8分·Ni-Fe命运洞察:身份重建=被谁爱→我是谁·母题轮换后回归)",
+        "role": "P0·INFJ情感共鸣batch1恢复(我的前半生8·女性成长/身份重建)·微博Ni-Fe位·方向船key_decision「INFJ情感共鸣batch1恢复(我的前半生8·身份重建·身份认同B14后换hook·母题轮换后回归)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·INFJ×情感共鸣×微博·channel_mix微博28.6%(INFJ+ENFJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(INFJ情感共鸣batch1恢复·我的前半生8·身份重建)·Ni-Fe命运洞察·母题轮换后自然回归·情感共鸣恢复首触",
+        "brief": {
+          "pain_point": "INFJ的Ni-Fe对「命运/身份重建」极度共鸣；罗子君的「前半生依附、后半生重建自我」，是每个曾在关系里找过自己的人的镜像。",
+          "hook_first3": "第一行「《我的前半生》9年后，突然又火了」点现象；第二行「很多人说，当年没看懂，现在哭着看懂」摆延迟共鸣；第三行「因为它讲的从来不是婚姻，是一个女人把『被谁爱』换成『我是谁』的重建」立论。",
+          "emotion_curve": "怀旧(剧集重火) → 恍然(当年没看懂) → 共鸣(身份重建) → 释然(我是谁) → 力量(重建自己)。",
+          "structure": [
+            "钩子·9年后爆火",
+            "延迟共鸣·当年没看懂",
+            "洞察·讲的是身份重建",
+            "升华·被谁爱→我是谁",
+            "CTA·你的前半生教会了你什么"
+          ],
+          "differentiation": "别人写「爽剧/小三/婚姻狗血」，我们写Ni-Fe命运洞察——「前半生依附、后半生重建」，落点从「被谁爱」转向「我是谁」；不judge角色、不消费狗血。"
+        }
       }
     },
     "D15-B1-2": {
@@ -12946,6 +13703,91 @@
         "paradigm": "身份认同·系统建筑师型(ESTJ巩固·范式跃迁:秩序守护者正名型→系统建筑师型·Te从防御性执行到建设性架构·Si从存档过去到预制未来·身份认同从维权到赋能·identity 0→4入列2/4)",
         "role": "consolidation·P1_HIGH·identity入列加速·ESTJ信任维护(D18-B2后3批未触)·SJ象限巩固",
         "full_text_ref": "workspace-shared/reports/content-quality/2026-08-06-0830-content.md#D20-B4-1"
+      }
+    },
+    "D21-B15-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-ISTJ-1",
+        "title": "最近总觉得累？可能不是懒，是秋乏——ISTJ用Si看到的是：身体有它自己的节律，你缺的可能不是「再坚持一下」，而是一次顺应节律的调整",
+        "hook": "好奇心",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "好奇心",
+        "arm_id": 6,
+        "batch_num": 2,
+        "signals": [
+          "最近总觉得累大概率是秋乏(6分·好奇心·健康/自我关怀·heat3511850)"
+        ],
+        "paradigm": "好奇心·Si健康节律/自我关怀型(ISTJ好奇心batch2续触·秋乏6分·Si健康规律:累=身体节律信号非意志失败·健康认知主线延续·严禁健康焦虑贩卖)",
+        "role": "P1·ISTJ好奇心batch2续触(秋乏6·健康/自我关怀)·小红书Si位·方向船key_decision「ISTJ好奇心batch2(秋乏6·Si健康规律·健康认知主线延续)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ISTJ×好奇心×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ISTJ好奇心batch2续触·秋乏6)·Si健康节律·健康认知主线延续·小红书v2.0 post成品落地·严禁健康焦虑(实用科普角度)",
+        "brief": {
+          "pain_point": "ISTJ的Si最依赖「规律/节律」，「总累」会打破TA的掌控感；「秋乏=换季节律」的解释让TA重新拿回身体的规律感。",
+          "hook_first3": "第一行「最近总觉得累，做什么都提不起劲」点共鸣；第二行「先别急着怪自己懒」摆自judge；第三行「可能是秋乏，身体在换季」给Si节律解释。",
+          "emotion_curve": "疲惫(共鸣) → 松一口气(不是懒) → 掌控(节律解释) → 调整(顺应换季) → 踏实(照顾自己)。",
+          "structure": [
+            "钩子·总累共鸣",
+            "去自责·不是懒",
+            "节律·秋乏=换季",
+            "落地·顺应节律调整",
+            "CTA·你秋天最容易累吗"
+          ],
+          "differentiation": "别人写「养生偏方/补品/吓唬你生病」，我们写Si节律认知——「累是身体的信号，不是意志的失败」；实用科普、不恐吓、不替代医疗建议。"
+        },
+        "post": {
+          "cover_title": "总觉得累？可能是秋乏",
+          "body": "最近总觉得累，🚶\n做什么都提不起劲。\n\n早上起不来，\n下午昏昏沉沉，\n连平时喜欢的事都懒得碰。\n\n你的第一反应，\n是不是又在心里骂自己：\n「我是不是太懒了？」\n\n先别急着怪自己。\n\n这个季节的累，\n大概率是——秋乏。🍂\n\n入秋之后，\n气温下降、昼短夜长，\n身体在悄悄「换季」，\n新陈代谢也在调整节奏。\n\n这种时候，\n累不是你的意志问题，\n是身体在按它的节律走。\n\n所以，\n别再用「再坚持一下」硬撑，\n而是顺着节律，\n早睡一点，\n动一动，\n给自己一点缓冲的时间。\n\nISTJ会告诉你：\n规律不是苦行，\n是听懂身体的语言。💛\n\n累是身体的信号，\n不是意志的失败。\n\n照顾好自己的节奏，\n比硬扛更重要。\n\n💬 你最近也总觉得累吗？\n评论区说说，\n是秋乏，还是没睡够？",
+          "hashtags": [
+            "#秋乏",
+            "#健康科普",
+            "#MBTI",
+            "#ISTJ",
+            "#自我关怀"
+          ],
+          "cover_visual": "秋日窗边一杯温水 + 一本翻开的书，暖棕色调、松弛感，大字『累≠懒，是身体在换季』",
+          "cta": "你最近也总觉得累吗？评论区说说，是秋乏还是没睡够。",
+          "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
+          "avoid": "不做疾病诊断暗示、不夸大「秋乏=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+        },
+        "post_spec_version": "v2.0"
       }
     },
     "D21-B9-ENTP-1": {
@@ -15501,6 +16343,75 @@
         "post_spec_version": "v2.0"
       }
     },
+    "D21-B15-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-ENFJ-1",
+        "title": "一个治沙的普通女人，被美国记者称为「超级英雄」——ENFJ看到的社会证明：真正的英雄没有披风，只有几十年把沙漠一点一点种回绿洲的坚持",
+        "hook": "社会证明",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "社会证明",
+        "arm_id": 5,
+        "batch_num": 2,
+        "signals": [
+          "美国记者激动称赞殷玉珍是超级英雄(7分·社会证明·英雄叙事/社会认同·heat12703978全榜最高)"
+        ],
+        "paradigm": "社会证明·Fe社会认同/英雄叙事型(ENFJ社会证明batch2续触·殷玉珍超级英雄7分·Fe社会认同:普通人的长期主义被看见·heat1270万全榜最高)",
+        "role": "P1·ENFJ社会证明batch2续触(殷玉珍超级英雄7·英雄叙事/社会认同)·微博Fe位·方向船key_decision「ENFJ社会证明batch2(殷玉珍超级英雄7·heat1270万全榜最高)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ENFJ×社会证明×微博·channel_mix微博28.6%(INFJ+ENFJ)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFJ社会证明batch2续触·殷玉珍超级英雄7)·Fe社会认同/英雄叙事·heat1270万全榜最高·社会证明batch1(B14零食占座7)续触",
+        "brief": {
+          "pain_point": "ENFJ的Fe渴望「被看见/被认同」的正向力量；殷玉珍治沙几十年被跨文化认同为「超级英雄」，证明「普通人的坚持」能获得最高规格的社会认可。",
+          "hook_first3": "第一行「一个中国女人，被美国记者称为『超级英雄』」点反差；第二行「她做了什么？治沙」摆朴素答案；第三行「没有披风，只有几十年把沙漠一点一点种回绿洲」立论。",
+          "emotion_curve": "好奇(超级英雄) → 震撼(治沙) → 敬佩(几十年坚持) → 共鸣(被看见) → 温暖(普通人也伟大)。",
+          "structure": [
+            "钩子·超级英雄",
+            "反差·她是治沙人",
+            "洞察·长期主义的力量",
+            "升华·被看见的社会认同",
+            "CTA·你身边有「隐形英雄」吗"
+          ],
+          "differentiation": "别人写「感动中国/环保模范/励志」，我们写Fe社会认同——「超级英雄=普通人的长期主义被看见」；不煽情、不道德绑架、聚焦正向认同。"
+        }
+      }
+    },
     "D18-B2-1": {
       "vessel": {
         "version": "1.0",
@@ -15842,6 +16753,91 @@
             "vessel_id": "D20-B7"
           }
         ]
+      }
+    },
+    "D21-B15-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B15-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B15"
+        },
+        "created_at": "2026-08-24T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-24-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-24-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B15-ENFP-1",
+        "title": "38岁去考大学，39岁他考了年级第一——ENFP看到的不是「大器晚成」的鸡汤：真正的自我觉醒，是永远不对自己说「太晚了」",
+        "hook": "身份认同",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "身份认同",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "38岁考大学 39岁的他成绩年级第一(9分·身份认同·自我觉醒/逆袭·年级第一·heat4272625)"
+        ],
+        "paradigm": "身份认同·Fi自我觉醒/不设限型(ENFP身份认同batch2续触·38岁考大学9分旗舰·Fi正面自我实现:人生不设限·信任下滑对冲·严禁年龄焦虑贩卖)",
+        "role": "P0·ENFP身份认同batch2续触(38岁考大学9·自我觉醒/逆袭·年级第一)·小红书Fi位·方向船key_decision「ENFP身份认同batch2(38岁考大学9·自我实现·信任下滑对冲·confidence_low 0.224口径重估)」",
+        "direction_compliance": "D21-B15 direction-vessel key_decision对齐·ENFP×身份认同×小红书·channel_mix小红书28.6%(ENFP+ISTJ)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(ENFP身份认同batch2续触·38岁考大学9旗舰)·Fi正面自我实现/不设限·信任下滑用强正面信号对冲·小红书v2.0 post成品落地·严禁年龄焦虑贩卖",
+        "brief": {
+          "pain_point": "ENFP的Fi最怕被「年龄/阶段」的规训困住——「这个年纪该稳定了」「来不及了」；38岁考大学、39岁年级第一，证明「忠于自己」从不受年龄设限。",
+          "hook_first3": "第一行「38岁，他去考了大学」抛反差；第二行「39岁，他考了年级第一」再翻一层；第三行「很多人说太晚了，但他用一年证明：太晚是假的，太早放弃才是真的」切入Fi自我觉醒。",
+          "emotion_curve": "惊讶(38岁考大学) → 佩服(年级第一) → 反思(年龄规训) → 共鸣(忠于自己) → 热血(不设限)。",
+          "structure": [
+            "钩子·38岁考大学",
+            "反差·39岁年级第一",
+            "洞察·年龄规训是幻觉",
+            "升华·自我觉醒=不对自己说太晚",
+            "CTA·你被「太晚了」拦住过吗"
+          ],
+          "differentiation": "别人写「大器晚成/励志鸡汤/逆天改命」，我们写Fi自我觉醒——「不设限不是鸡汤，是每一次都不对自己说『太晚』」；正面励志、绝不judge年龄与人生节奏。"
+        },
+        "post": {
+          "cover_title": "38岁考大学，39岁年级第一",
+          "body": "38岁，他去考了大学。🎓\n\n身边很多人不理解：\n「这个年纪了，折腾什么？」\n\n39岁，\n他考了年级第一。\n\n一年时间，\n从「门外汉」到「第一名」，\n他不是天才，\n只是比任何人都想证明一件事——\n\n人生，从来没有太晚的开始。\n\n我们总爱给自己设限：\n「25岁该稳定了」\n「30岁该结婚了」\n「35岁来不及了」……\n\n但这些「该」，\n是谁定的呢？\n\nENFP知道，\n真正的自我觉醒，\n不是等到万事俱备，\n而是永远不对自己说\n「太晚了」。\n\n38岁去考大学，\n不是任性，\n是他忠于自己。\n39岁考第一，\n不是奇迹，\n是他从未放弃自己。💛\n\n年龄只是一个数字，\n它拦不住真正想活出自己的人。\n\n别让「太晚了」，\n成为你唯一的人生答案。\n\n💬 你有没有一个\n「别人都说太晚了，但你还是去做了」的决定？\n评论区，说给我听。",
+          "hashtags": [
+            "#自我觉醒",
+            "#MBTI",
+            "#ENFP",
+            "#人生不设限",
+            "#自我成长"
+          ],
+          "cover_visual": "中年男人伏案读书的背影 + 成绩单「年级第一」特写，暖金色调、坚定不煽情，大字『人生没有太晚』",
+          "cta": "你有没有一个「别人都说太晚了，但你还是去做了」的决定？评论区讲给我听。",
+          "post_time": "12:00-13:00（午间励志情绪高峰）",
+          "avoid": "不贩卖年龄焦虑、不贬低年轻/早慧路径、不渲染「逆天改命」夸张情绪；聚焦「不设限」的自我觉醒正面能量"
+        },
+        "post_spec_version": "v2.0"
       }
     },
     "D21-B11-ISTJ-2": {
