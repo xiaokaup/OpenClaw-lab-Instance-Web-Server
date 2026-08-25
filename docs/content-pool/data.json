@@ -1,33 +1,34 @@
 {
   "pool_status": {
-    "level": 161,
+    "level": 168,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池161>>25软上限·投投零部署为根因·非内容过剩·D21-B15第二波续触+双恢复批满产7臂fresh(ENFP身份认同9.0 38岁考大学旗舰+INFJ情感共鸣8.8我的前半生恢复+ENTJ反常识8.7+INTJ好奇心8.7+ENTP反常识8.6恢复+ENFJ社会证明8.6+ISTJ好奇心8.6)·方向船B15明令7臂全fresh(batch2达上限+双恢复必需)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-24T08:30:00+08:00",
-    "last_creation_batch": "D21-B15",
-    "last_deployment": "2026-08-24T09:25:00+08:00",
-    "last_deployment_batch": "D21-B15",
+    "warning": "🔴🔴 池168>>25软上限·投投零部署为根因·非内容过剩·D21-B16大面积轮出批满产7臂fresh(INFJ婚礼指纹9.0旗舰+INTP印度乞丐8.8恢复+ENTJ硕士打螺丝8.8换hook+ENFJ失联船员8.7换hook+ISTJ官方确认8.7换hook+INTJ 23点睡8.6+ENTP AI短剧8.6)·方向船B16明令7臂全fresh·豁免池水位降产·对冲走清stale并行",
+    "last_creation": "2026-08-25T08:30:00+08:00",
+    "last_creation_batch": "D21-B16",
+    "last_deployment": "2026-08-25T09:25:00+08:00",
+    "last_deployment_batch": "D21-B16",
     "net_change_this_batch": 7,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 161,
-    "active_items": 98,
+    "total_items": 168,
+    "active_items": 105,
     "hook_conflict_items": 1,
     "last_deployment_arms": 7,
-    "sheshe_supplement": "设设D21-B15满产7臂fresh(ENFP身份认同9.0旗舰/INFJ情感共鸣8.8恢复/ENTJ反常识8.7/INTJ好奇心8.7/ENTP反常识8.6恢复/ENFJ社会证明8.6/ISTJ好奇心8.6)·第二波续触+双恢复批·小红书post成品2条(ENFP+ISTJ)·brief 7条全填实·社会货币0臂(连续3批冷却·禁止强推)·AI集群避恐慌渲染(认知/边界角度)",
+    "sheshe_supplement": "设设D21-B16满产7臂fresh(INFJ情感共鸣9.0旗舰/INTP反常识8.8恢复/ENTJ身份认同8.8换hook/ENFJ情感共鸣8.7换hook/ISTJ社会证明8.7换hook/INTJ好奇心8.6/ENTP反常识8.6)·大面积轮出批(4臂batch2轮出+INTP恢复+4臂换hook)·小红书post成品1条(ISTJ社会证明)·brief 7条全填实·社会货币0臂(连续4批冷却·禁止强推)·失联船员死亡信号用亲情角度·硕士打螺丝避免渲染职场绝望·AI短剧避免AI恐慌渲染",
     "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 20,
-      "brief_added": 39,
+      "posts_added": 21,
+      "brief_added": 46,
       "xhs_active_posts_completed": 15,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B15新增2条post(ENFP 38岁考大学身份认同+ISTJ秋乏好奇心)+7条brief·body均为完整可发布正文·五字段全填实·第二波续触+双恢复批·社会货币0臂(连续3批冷却)",
+      "note": "小红书成品帖子v2.0持续落地·B16新增1条post(ISTJ社会证明)+7条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续4批冷却)",
       "b14_posts_completed": 2,
-      "b15_posts_completed": 2
+      "b15_posts_completed": 2,
+      "b16_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
@@ -5271,9 +5272,345 @@
       "deployed_arm": 7,
       "deployed_budget": 25,
       "has_post": false
+    },
+    {
+      "id": "D21-B16-INFJ-1",
+      "title": "婚礼第二天，新娘的指纹被爸爸从门锁里删掉了——INFJ没有把这当成一条家庭八卦。她的Ni-Fe系统在0.5秒里读懂了这份疼痛真正的形状：有些父母的爱，只存在于「你需要我」，却缺席于「你已是独立的人」",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 9.0,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe家庭依恋/边界感型(依恋母题回归旗舰·婚礼指纹9分·Ni洞察:爱有两种形状——共生与边界·Fe共情:被删指纹=「独立成人」身份被否认·严禁渲染父女对立/原生家庭创伤·用依恋与边界的成长课题角度)",
+      "role": "P0·INFJ情感共鸣batch2续触(婚礼指纹9旗舰·依恋母题回归)·微博Fe/Ni位·方向船key_decision「INFJ情感共鸣batch2(婚礼指纹9·家庭依恋边界感·依恋母题回归旗舰)」",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "INFJ的Ni-Fe对「关系里的真实」极度敏感，尤其痛在「爱以控制/占有的形式出现」；被删指纹击中的是「我长大了，却仍被当作需要被管的孩子」这种身份否认。",
+        "hook_first3": "第一行「婚礼第二天，新娘的人脸指纹被爸爸从门锁里删了」摆事实；第二行「不是吵架，是安静地、用『删除』表达失望」点情绪细节；第三行「INFJ读到的不是一次家庭矛盾，是爱里最隐蔽的伤口：共生，还是边界」切入Ni-Fe洞察。",
+        "emotion_curve": "困惑(被删) → 心疼(安静删除) → 洞察(共生vs边界) → 释然(爱有两种形状) → 和解(成长课题)。",
+        "structure": [
+          "钩子·婚礼指纹被删",
+          "细节·安静的删除",
+          "洞察·爱=共生还是边界",
+          "迁移·依恋与独立是成长课题",
+          "CTA·你会为谁保留边界"
+        ],
+        "differentiation": "别人写「原生家庭创伤/父母控制欲/情感绑架」，我们写Ni-Fe依恋母题——「爱不是占有，是送你独立」；不judge父亲、不贩卖创伤、落点成长课题。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16大面积轮出批·INFJ情感共鸣batch2续触fresh(婚礼指纹9旗舰·家庭依恋边界感·依恋母题回归·Ni-Fe洞察)·P0·flagship",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 1,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B16-INTP-1",
+      "title": "印度一位去世的乞丐，家里翻出30多麻袋现金——INTP的Ti系统没有把这当成一条猎奇新闻。它在0.5秒里拆出一个更冷的真相：人给自己套的「身份」壳，往往比真相更会骗人",
+      "hook": "反常识",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.8,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-INTP-1.json",
+      "paradigm": "反常识·Ti-Ne身份错位/表里反差解构型(INTP恢复首触·印度乞丐8分·Ti解构:身份标签≠真实·Ne联想:表里反差·严禁猎奇/贫富羞辱·用认知解构角度)",
+      "role": "P0·INTP反常识batch1恢复首触(印度乞丐8·身份错位·Ti-Ne解构)·B站Ti位·方向船key_decision「INTP恢复(印度乞丐8·身份错位表里反差·NT象限4/4全满)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTP的Ti痴迷「表里是否一致」；「乞丐」与「现金」的反差是一个完美的认知样本，勾起TA拆解「身份标签如何骗过所有人」的冲动。",
+        "hook_first3": "第一行「印度一位乞丐去世，家里翻出30多麻袋现金」抛反差；第二行「全网第一反应：他到底是谁？」点身份谜题；第三行「但INTP想拆的不是钱，是『身份』这个壳怎么骗过了所有人」切入Ti-Ne解构。",
+        "emotion_curve": "猎奇(反差) → 疑问(他是谁) → 拆解(身份≠真实) → 冷思考(标签如何骗人) → 通透(别急着给人贴标签)。",
+        "structure": [
+          "钩子·乞丐与现金反差",
+          "谜题·他到底是谁",
+          "解构·身份标签如何骗人",
+          "迁移·我们对人贴了多少标签",
+          "CTA·你还被哪个『身份』骗过"
+        ],
+        "differentiation": "别人写「猎奇/八卦/贫富差距」，我们写Ti-Ne认知解构——「身份是壳，不是真相」；不消费苦难、不羞辱、落点认知边界。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·INTP反常识batch1恢复首触fresh(印度乞丐8·身份错位表里反差·Ti-Ne解构·休1批结束恢复·NT象限4/4)·P0",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 2,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B16-ENTJ-1",
+      "title": "硕士被安排去打螺丝，300人被迫离职——ENTJ的Te系统没有把这当成一条职场惨案。它看到的是一个更本质的问题：当你的价值不被看见时，最该做的不是抱怨环境，而是重新定义自己的战场",
+      "hook": "身份认同",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.8,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-ENTJ-1.json",
+      "paradigm": "身份认同·Te职场尊严/自我觉醒型(ENTJ身份认同batch1换hook·硕士打螺丝8分·Te解构:尊严=价值被看见·自我觉醒主线·严禁渲染职场绝望·用尊严/觉醒角度)",
+      "role": "P0·ENTJ身份认同batch1换hook(硕士打螺丝8·职场尊严自我觉醒)·抖音Te位·方向船key_decision「ENTJ身份认同(硕士打螺丝8·反常识batch2达上限换hook·自我觉醒主线)」",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ的Te以「价值被看见」为存在感来源；「硕士打螺丝」击中TA最深的恐惧——能力与位置错配、价值被系统性忽视。",
+        "hook_first3": "第一行「硕士被安排去打螺丝，300人被迫离职」摆冲突；第二行「第一反应可能是：这不公平」点情绪；第三行「但ENTJ看到的是另一个问题：你的价值，是不是只被『位置』定义」切入Te自我觉醒。",
+        "emotion_curve": "不平(错配) → 愤怒(价值被忽视) → 清醒(尊严≠位置) → 觉醒(重新定义战场) → 行动(价值自己定价)。",
+        "structure": [
+          "钩子·硕士打螺丝",
+          "冲突·能力与位置错配",
+          "洞察·尊严不是位置给的",
+          "觉醒·价值由自己定义",
+          "CTA·你的价值被看见了吗"
+        ],
+        "differentiation": "别人写「学历贬值/职场惨状/劝退」，我们写Te自我觉醒——「尊严不是位置给的，是价值自己定价」；不渲染绝望、不煽动对立、落点行动。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·ENTJ身份认同batch1换hook fresh(硕士打螺丝8·职场尊严自我觉醒·Te解构·反常识batch2达上限换hook·避免渲染职场绝望)·P0",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 3,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B16-ENFJ-1",
+      "title": "26岁的中国船员失联了，他原本的计划是：这次出海回来就回乡成家——ENFJ的Fe没有把这当成一条灾难新闻。她读到的是一个普通人对「家」最朴素的向往：人这一生最重的行李，从来不是货物，是「回得去的家」",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-ENFJ-1.json",
+      "paradigm": "情感共鸣·Fe人生遗憾/亲情型(ENFJ情感共鸣batch1换hook·失联船员8分·Fe共情:平凡人对家的向往·严禁灾难/死亡渲染·用亲情/人生规划角度)",
+      "role": "P1·ENFJ情感共鸣batch1换hook(失联船员8·人生遗憾亲情)·微博Fe位·方向船key_decision「ENFJ情感共鸣(失联船员8·社会证明batch2达上限换hook·死亡信号用亲情角度)」",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENFJ的Fe对「平凡人的牵挂」毫无抵抗力；「原计划回乡成家」这种朴素人生规划，是最能击中TA共情神经的人间细节。",
+        "hook_first3": "第一行「26岁的中国船员失联了」摆事实（克制，不渲染）；第二行「他原本的计划是：这次回来就回乡成家」点亲情细节；第三行「ENFJ读到的是每个普通人对『家』最朴素的向往」切入Fe共情。",
+        "emotion_curve": "揪心(失联) → 柔软(回乡成家) → 共情(普通人的家) → 珍惜(眼前人) → 温暖(回得去的家)。",
+        "structure": [
+          "钩子·船员失联(克制)",
+          "细节·原计划回乡成家",
+          "共情·普通人对家的向往",
+          "迁移·珍惜眼前人",
+          "CTA·你有多久没给家里打电话"
+        ],
+        "differentiation": "别人写「灾难/遇难/猎奇」，我们写Fe人间亲情——「最重的行李是回得去的家」；不渲染死亡、不消费苦难、落点珍惜。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·ENFJ情感共鸣batch1换hook fresh(失联船员8·人生遗憾亲情·Fe共情·社会证明batch2达上限换hook·死亡信号用亲情角度非灾难渲染)·P1",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 4,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B16-INTJ-1",
+      "title": "「23点后睡的人，亏大了」——INTJ的Ni-Te没有把这当成一句养生口号。它拆出的是背后的系统逻辑：睡眠不是意志力的战场，是一场关于「身体成本」的长期复利计算",
+      "hook": "好奇心",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-INTJ-1.json",
+      "paradigm": "好奇心·Ni-Te健康作息认知/自我优化型(INTJ好奇心batch2·23点睡6分·Ni-Te系统:睡眠=身体成本复利·严禁健康焦虑贩卖·用自我优化角度)",
+      "role": "P1·INTJ好奇心batch2续触(23点睡6·健康作息·Ni-Te自我优化)·B站Ni位·方向船key_decision「INTJ好奇心batch2(23点睡6·健康作息认知·零维护信任8.53)」",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ的Ni-Te把身体当成可优化的系统；「熬夜亏」的吸引力不在恐吓，而在「睡眠是一笔可计算的长期投资」这个认知模型。",
+        "hook_first3": "第一行「23点后睡的人，亏大了」抛结论；第二行「不是玄学，是一笔可计算的账」去玄学化；第三行「INTJ把它拆成：睡眠是身体成本的长期复利」切入Ni-Te系统。",
+        "emotion_curve": "好奇(亏在哪) → 清醒(不是玄学) → 系统(成本复利) → 掌控(可优化) → 行动(睡个好觉)。",
+        "structure": [
+          "钩子·23点后睡亏大了",
+          "去玄学·可计算的账",
+          "系统·睡眠=成本复利",
+          "优化·把睡眠当投资",
+          "CTA·你的入睡时间几点"
+        ],
+        "differentiation": "别人写「熬夜猝死/吓唬/养生偏方」，我们写Ni-Te系统优化——「睡眠是长期复利，不是意志力苦行」；不恐吓、不焦虑、落点自我优化。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·INTJ好奇心batch2续触fresh(23点睡6·健康作息·Ni-Te自我优化·零维护信任8.53)·P1",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 5,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B16-ISTJ-1",
+      "title": "帮扶老人的店主，官方确认不担责——ISTJ的Si没有把这当成一条孤立的新闻。它看到的是社会运行最朴素的逻辑：好人好事不该被辜负，公道是这个社会最硬的秩序",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-ISTJ-1.json",
+      "paradigm": "社会证明·Si秩序/公道闭环型(ISTJ社会证明batch1换hook·官方确认不担责7分·Si秩序:公道=社会底线·社会证明闭环叙事·严禁道德绑架·用公道/秩序角度)",
+      "role": "P1·ISTJ社会证明batch1换hook(官方确认不担责7·公道·好人好事不被辜负)·小红书Si位·方向船key_decision「ISTJ社会证明(官方确认不担责7·好奇心batch2达上限换hook·SJ象限)」",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ISTJ的Si依赖「秩序与规则」带来安全感；「做好事反被讹」会动摇TA对社会底线的信任，「官方确认不担责」恰好修复这份秩序感。",
+        "hook_first3": "第一行「帮扶老人的店主，官方确认不担责」摆结论；第二行「这句确认，比任何安慰都重」点社会意义；第三行「ISTJ看到的是：好人好事不该被辜负，公道是最硬的秩序」切入Si秩序感。",
+        "emotion_curve": "担忧(会被讹吗) → 安心(官方确认) → 笃定(公道闭环) → 秩序(社会底线) → 行动(敢做好事)。",
+        "structure": [
+          "钩子·官方确认不担责",
+          "背景·帮扶老人被讹",
+          "洞察·公道是社会的秩序",
+          "迁移·好人好事不该被辜负",
+          "CTA·你还敢扶吗"
+        ],
+        "differentiation": "别人写「扶老人被讹/法律争议/情绪对立」，我们写Si秩序闭环——「公道不是口号，是社会运行的底线」；不煽动对立、不道德绑架、落点秩序感。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·ISTJ社会证明batch1换hook fresh(官方确认不担责7·公道·Si秩序闭环·好奇心batch2达上限换hook·SJ象限维持)·P1",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 6,
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B16-ENTP-1",
+      "title": "一部AI短剧，导演说1集成本只要1万——ENTP的Ne系统没有把这当成一条科技新闻。它看到的是门槛崩塌后的新世界：内容生产的天花板，第一次不是由「你认识谁」决定，而是由「你想表达什么」决定",
+      "hook": "反常识",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "抖音",
+      "quality": 8.6,
+      "created": "2026-08-25T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B16-ENTP-1.json",
+      "paradigm": "反常识·Ne-Ti技术颠覆/内容生产门槛型(ENTP反常识batch2·AI短剧6分·Ne认知:内容生产门槛拉低·严禁AI恐慌渲染·用认知/边界角度)",
+      "role": "P1·ENTP反常识batch2续触(AI短剧6·技术颠覆·Ne-Ti认知边界)·抖音Ne位·方向船key_decision「ENTP反常识batch2(AI短剧6·技术颠覆·避免AI恐慌渲染)」",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B16",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTP的Ne对『旧规则被打破』天然兴奋；「1集成本1万」意味着内容生产的天花板被掀开，勾起TA『新玩法出现了』的探索欲。",
+        "hook_first3": "第一行「一部AI短剧，1集成本只要1万」抛颠覆数字；第二行「这在过去，是拍不出来的」摆旧规则；第三行「ENTP看到的是：内容生产的天花板，第一次被掀开了」切入Ne认知边界。",
+        "emotion_curve": "惊讶(1万?) → 兴奋(门槛崩了) → 洞见(表达自由) → 探索(新玩法) → 行动(你也可以做)。",
+        "structure": [
+          "钩子·1集成本1万",
+          "反差·过去拍不出",
+          "洞察·门槛崩塌=表达自由",
+          "迁移·创意重新定价",
+          "CTA·你想表达什么"
+        ],
+        "differentiation": "别人写「AI要取代创作者/焦虑」，我们写Ne认知边界——「门槛越低，创意越值钱」；不恐慌、不反技术、落点表达自由。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B16·ENTP反常识batch2续触fresh(AI短剧6·技术颠覆·Ne-Ti认知边界·避免AI恐慌渲染)·P1",
+      "last_used": "2026-08-25T09:25:00+08:00",
+      "deployed_batch": "D21-B16",
+      "deployed_arm": 7,
+      "deployed_budget": 25,
+      "has_post": false
     }
   ],
-  "total": 161,
+  "total": 168,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -6159,6 +6496,62 @@
         "cta": "你最近也总觉得累吗？评论区说说，是秋乏还是没睡够。",
         "post_time": "12:00-13:00 或 18:00-20:00（实用科普·午间/晚间阅读高峰）",
         "avoid": "不做疾病诊断暗示、不夸大「秋乏=重病」、不贩卖健康焦虑、不替代专业医疗建议；用「身体的信号」实用科普角度"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B16-ISTJ-1",
+      "title": "帮扶老人的店主，官方确认不担责——ISTJ的Si没有把这当成一条孤立的新闻。它看到的是社会运行最朴素的逻辑：好人好事不该被辜负，公道是这个社会最硬的秩序",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "arm_id": 6,
+      "batch_num": 1,
+      "signals": [
+        "官方确认帮扶老人店主不担责(7分·社会证明·社会道德·公道·heat90)"
+      ],
+      "paradigm": "社会证明·Si秩序/公道闭环型(ISTJ社会证明batch1换hook·官方确认不担责7分·Si秩序:公道=社会底线·社会证明闭环叙事·严禁道德绑架·用公道/秩序角度)",
+      "role": "P1·ISTJ社会证明batch1换hook(官方确认不担责7·公道·好人好事不被辜负)·小红书Si位·方向船key_decision「ISTJ社会证明(官方确认不担责7·好奇心batch2达上限换hook·SJ象限)」",
+      "direction_compliance": "D21-B16 direction-vessel key_decision对齐·ISTJ×社会证明×小红书",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(B16大面积轮出批·ISTJ社会证明batch1)·方向船mandates合规",
+      "brief": {
+        "pain_point": "ISTJ的Si依赖「秩序与规则」带来安全感；「做好事反被讹」会动摇TA对社会底线的信任，「官方确认不担责」恰好修复这份秩序感。",
+        "hook_first3": "第一行「帮扶老人的店主，官方确认不担责」摆结论；第二行「这句确认，比任何安慰都重」点社会意义；第三行「ISTJ看到的是：好人好事不该被辜负，公道是最硬的秩序」切入Si秩序感。",
+        "emotion_curve": "担忧(会被讹吗) → 安心(官方确认) → 笃定(公道闭环) → 秩序(社会底线) → 行动(敢做好事)。",
+        "structure": [
+          "钩子·官方确认不担责",
+          "背景·帮扶老人被讹",
+          "洞察·公道是社会的秩序",
+          "迁移·好人好事不该被辜负",
+          "CTA·你还敢扶吗"
+        ],
+        "differentiation": "别人写「扶老人被讹/法律争议/情绪对立」，我们写Si秩序闭环——「公道不是口号，是社会运行的底线」；不煽动对立、不道德绑架、落点秩序感。"
+      },
+      "post": {
+        "cover_title": "扶老人不担责，公道到了",
+        "body": "前几天那个新闻，\n你刷到了吗？\n\n店主好心帮扶老人，\n结果被卷进纠纷。\n\n很多人第一反应是：\n「以后谁还敢做好事？」😔\n\n直到官方出来确认——\n店主不担责。\n\n这句话，\n比任何安慰都重。\n\n因为它守住的，\n不是一个人，\n是一条社会底线：\n好人好事，不该被辜负。\n\nISTJ会告诉你：\n公道不是口号，\n是这个社会最硬的秩序。🧭\n\n规则存在的意义，\n就是让对的人，\n不必寒心；\n让守规矩的人，\n永远有底气。\n\n这个结果，\n不是给一个人的交代，\n是给所有「想做好人」的人，\n一颗定心丸。\n\n💬 如果是你，\n现在还敢扶吗？\n评论区聊聊。",
+        "hashtags": [
+          "#社会公道",
+          "#好人好事",
+          "#MBTI",
+          "#ISTJ",
+          "#正能量"
+        ],
+        "cover_visual": "暖色系·普通店主搀扶老人的侧影剪影 + 大字『公道到了，好人不怕』；干净、有温度、正向感",
+        "cta": "如果是你，现在还敢扶吗？评论区聊聊你的答案。",
+        "post_time": "18:00-20:00（社会议题·晚间情感共鸣高峰）",
+        "avoid": "不放大『扶老人被讹』的对立情绪、不消费涉事双方、不渲染负面；用『公道闭环』正向角度，规避『碰瓷/讹诈』等敏感词"
       },
       "post_spec_version": "v2.0"
     },
@@ -7399,6 +7792,75 @@
             "给陪伴方式"
           ],
           "differentiation": "把「社恐」重新定义为「审美守护」，给 ISFP 提供身份骄傲"
+        }
+      }
+    },
+    "D21-B16-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-ENTP-1",
+        "title": "一部AI短剧，导演说1集成本只要1万——ENTP的Ne系统没有把这当成一条科技新闻。它看到的是门槛崩塌后的新世界：内容生产的天花板，第一次不是由「你认识谁」决定，而是由「你想表达什么」决定",
+        "hook": "反常识",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "抖音",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 7,
+        "batch_num": 2,
+        "signals": [
+          "AI短剧《非妖哉》导演:1集成本1万(6分·反常识·技术颠覆·内容生产·heat61)"
+        ],
+        "paradigm": "反常识·Ne-Ti技术颠覆/内容生产门槛型(ENTP反常识batch2·AI短剧6分·Ne认知:内容生产门槛拉低·严禁AI恐慌渲染·用认知/边界角度)",
+        "role": "P1·ENTP反常识batch2续触(AI短剧6·技术颠覆·Ne-Ti认知边界)·抖音Ne位·方向船key_decision「ENTP反常识batch2(AI短剧6·技术颠覆·避免AI恐慌渲染)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·ENTP×反常识×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·ENTP反常识batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENTP的Ne对『旧规则被打破』天然兴奋；「1集成本1万」意味着内容生产的天花板被掀开，勾起TA『新玩法出现了』的探索欲。",
+          "hook_first3": "第一行「一部AI短剧，1集成本只要1万」抛颠覆数字；第二行「这在过去，是拍不出来的」摆旧规则；第三行「ENTP看到的是：内容生产的天花板，第一次被掀开了」切入Ne认知边界。",
+          "emotion_curve": "惊讶(1万?) → 兴奋(门槛崩了) → 洞见(表达自由) → 探索(新玩法) → 行动(你也可以做)。",
+          "structure": [
+            "钩子·1集成本1万",
+            "反差·过去拍不出",
+            "洞察·门槛崩塌=表达自由",
+            "迁移·创意重新定价",
+            "CTA·你想表达什么"
+          ],
+          "differentiation": "别人写「AI要取代创作者/焦虑」，我们写Ne认知边界——「门槛越低，创意越值钱」；不恐慌、不反技术、落点表达自由。"
         }
       }
     },
@@ -9539,6 +10001,75 @@
         }
       }
     },
+    "D21-B16-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-ENTJ-1",
+        "title": "硕士被安排去打螺丝，300人被迫离职——ENTJ的Te系统没有把这当成一条职场惨案。它看到的是一个更本质的问题：当你的价值不被看见时，最该做的不是抱怨环境，而是重新定义自己的战场",
+        "hook": "身份认同",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "硕士被安排打螺丝300人被迫离职(8分·身份认同·职场尊严·自我觉醒·heat69)"
+        ],
+        "paradigm": "身份认同·Te职场尊严/自我觉醒型(ENTJ身份认同batch1换hook·硕士打螺丝8分·Te解构:尊严=价值被看见·自我觉醒主线·严禁渲染职场绝望·用尊严/觉醒角度)",
+        "role": "P0·ENTJ身份认同batch1换hook(硕士打螺丝8·职场尊严自我觉醒)·抖音Te位·方向船key_decision「ENTJ身份认同(硕士打螺丝8·反常识batch2达上限换hook·自我觉醒主线)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·ENTJ×身份认同×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·ENTJ身份认同batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENTJ的Te以「价值被看见」为存在感来源；「硕士打螺丝」击中TA最深的恐惧——能力与位置错配、价值被系统性忽视。",
+          "hook_first3": "第一行「硕士被安排去打螺丝，300人被迫离职」摆冲突；第二行「第一反应可能是：这不公平」点情绪；第三行「但ENTJ看到的是另一个问题：你的价值，是不是只被『位置』定义」切入Te自我觉醒。",
+          "emotion_curve": "不平(错配) → 愤怒(价值被忽视) → 清醒(尊严≠位置) → 觉醒(重新定义战场) → 行动(价值自己定价)。",
+          "structure": [
+            "钩子·硕士打螺丝",
+            "冲突·能力与位置错配",
+            "洞察·尊严不是位置给的",
+            "觉醒·价值由自己定义",
+            "CTA·你的价值被看见了吗"
+          ],
+          "differentiation": "别人写「学历贬值/职场惨状/劝退」，我们写Te自我觉醒——「尊严不是位置给的，是价值自己定价」；不渲染绝望、不煽动对立、落点行动。"
+        }
+      }
+    },
     "D18-B6-2": {
       "vessel": {
         "version": "1.0",
@@ -10215,6 +10746,75 @@
             "落点·技术掀翻旧体系"
           ],
           "differentiation": "别人写河南钻石讲'便宜/智商税'，我们讲'稀缺被量产→整个靠稀缺定价的商业逻辑塌方'；Ne解构到商业本质，不消费不猎奇。"
+        }
+      }
+    },
+    "D21-B16-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-INTP-1",
+        "title": "印度一位去世的乞丐，家里翻出30多麻袋现金——INTP的Ti系统没有把这当成一条猎奇新闻。它在0.5秒里拆出一个更冷的真相：人给自己套的「身份」壳，往往比真相更会骗人",
+        "hook": "反常识",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "印度去世乞丐家中发现30多麻袋现金(8分·反常识·身份错位·表里反差·heat85)"
+        ],
+        "paradigm": "反常识·Ti-Ne身份错位/表里反差解构型(INTP恢复首触·印度乞丐8分·Ti解构:身份标签≠真实·Ne联想:表里反差·严禁猎奇/贫富羞辱·用认知解构角度)",
+        "role": "P0·INTP反常识batch1恢复首触(印度乞丐8·身份错位·Ti-Ne解构)·B站Ti位·方向船key_decision「INTP恢复(印度乞丐8·身份错位表里反差·NT象限4/4全满)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·INTP×反常识×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·INTP反常识batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INTP的Ti痴迷「表里是否一致」；「乞丐」与「现金」的反差是一个完美的认知样本，勾起TA拆解「身份标签如何骗过所有人」的冲动。",
+          "hook_first3": "第一行「印度一位乞丐去世，家里翻出30多麻袋现金」抛反差；第二行「全网第一反应：他到底是谁？」点身份谜题；第三行「但INTP想拆的不是钱，是『身份』这个壳怎么骗过了所有人」切入Ti-Ne解构。",
+          "emotion_curve": "猎奇(反差) → 疑问(他是谁) → 拆解(身份≠真实) → 冷思考(标签如何骗人) → 通透(别急着给人贴标签)。",
+          "structure": [
+            "钩子·乞丐与现金反差",
+            "谜题·他到底是谁",
+            "解构·身份标签如何骗人",
+            "迁移·我们对人贴了多少标签",
+            "CTA·你还被哪个『身份』骗过"
+          ],
+          "differentiation": "别人写「猎奇/八卦/贫富差距」，我们写Ti-Ne认知解构——「身份是壳，不是真相」；不消费苦难、不羞辱、落点认知边界。"
         }
       }
     },
@@ -11289,6 +11889,75 @@
         "flagship": true,
         "attachment_theory_resonance": true,
         "note": "🟢 fresh·情感共鸣batch2达上限(2/2合规)·B10必轮出·8分旗舰·依恋母题·q9.0·已按do_not_use约束婚姻信任轻量化解(无婚变/家庭冲突极端表述)"
+      }
+    },
+    "D21-B16-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-INTJ-1",
+        "title": "「23点后睡的人，亏大了」——INTJ的Ni-Te没有把这当成一句养生口号。它拆出的是背后的系统逻辑：睡眠不是意志力的战场，是一场关于「身体成本」的长期复利计算",
+        "hook": "好奇心",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "好奇心",
+        "arm_id": 5,
+        "batch_num": 2,
+        "signals": [
+          "23点后睡的人亏大了(6分·好奇心·健康·作息认知·heat84)"
+        ],
+        "paradigm": "好奇心·Ni-Te健康作息认知/自我优化型(INTJ好奇心batch2·23点睡6分·Ni-Te系统:睡眠=身体成本复利·严禁健康焦虑贩卖·用自我优化角度)",
+        "role": "P1·INTJ好奇心batch2续触(23点睡6·健康作息·Ni-Te自我优化)·B站Ni位·方向船key_decision「INTJ好奇心batch2(23点睡6·健康作息认知·零维护信任8.53)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·INTJ×好奇心×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·INTJ好奇心batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INTJ的Ni-Te把身体当成可优化的系统；「熬夜亏」的吸引力不在恐吓，而在「睡眠是一笔可计算的长期投资」这个认知模型。",
+          "hook_first3": "第一行「23点后睡的人，亏大了」抛结论；第二行「不是玄学，是一笔可计算的账」去玄学化；第三行「INTJ把它拆成：睡眠是身体成本的长期复利」切入Ni-Te系统。",
+          "emotion_curve": "好奇(亏在哪) → 清醒(不是玄学) → 系统(成本复利) → 掌控(可优化) → 行动(睡个好觉)。",
+          "structure": [
+            "钩子·23点后睡亏大了",
+            "去玄学·可计算的账",
+            "系统·睡眠=成本复利",
+            "优化·把睡眠当投资",
+            "CTA·你的入睡时间几点"
+          ],
+          "differentiation": "别人写「熬夜猝死/吓唬/养生偏方」，我们写Ni-Te系统优化——「睡眠是长期复利，不是意志力苦行」；不恐吓、不焦虑、落点自我优化。"
+        }
       }
     },
     "D16-B3-2": {
@@ -14147,6 +14816,75 @@
         "note": "🟢 fresh·反常识batch2达上限强制轮出身份认同首触·8分旗舰·Te-Ni自我觉醒·q9.0·B10可续batch2(需身份认同信号持续)"
       }
     },
+    "D21-B16-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-ENFJ-1",
+        "title": "26岁的中国船员失联了，他原本的计划是：这次出海回来就回乡成家——ENFJ的Fe没有把这当成一条灾难新闻。她读到的是一个普通人对「家」最朴素的向往：人这一生最重的行李，从来不是货物，是「回得去的家」",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "26岁中国失联船员原计划回乡成家(8分·情感共鸣·人生遗憾·亲情·heat100)"
+        ],
+        "paradigm": "情感共鸣·Fe人生遗憾/亲情型(ENFJ情感共鸣batch1换hook·失联船员8分·Fe共情:平凡人对家的向往·严禁灾难/死亡渲染·用亲情/人生规划角度)",
+        "role": "P1·ENFJ情感共鸣batch1换hook(失联船员8·人生遗憾亲情)·微博Fe位·方向船key_decision「ENFJ情感共鸣(失联船员8·社会证明batch2达上限换hook·死亡信号用亲情角度)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·ENFJ×情感共鸣×微博",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·ENFJ情感共鸣batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENFJ的Fe对「平凡人的牵挂」毫无抵抗力；「原计划回乡成家」这种朴素人生规划，是最能击中TA共情神经的人间细节。",
+          "hook_first3": "第一行「26岁的中国船员失联了」摆事实（克制，不渲染）；第二行「他原本的计划是：这次回来就回乡成家」点亲情细节；第三行「ENFJ读到的是每个普通人对『家』最朴素的向往」切入Fe共情。",
+          "emotion_curve": "揪心(失联) → 柔软(回乡成家) → 共情(普通人的家) → 珍惜(眼前人) → 温暖(回得去的家)。",
+          "structure": [
+            "钩子·船员失联(克制)",
+            "细节·原计划回乡成家",
+            "共情·普通人对家的向往",
+            "迁移·珍惜眼前人",
+            "CTA·你有多久没给家里打电话"
+          ],
+          "differentiation": "别人写「灾难/遇难/猎奇」，我们写Fe人间亲情——「最重的行李是回得去的家」；不渲染死亡、不消费苦难、落点珍惜。"
+        }
+      }
+    },
     "D15-B3-2": {
       "vessel": {
         "version": "1.0",
@@ -16840,6 +17578,91 @@
         "post_spec_version": "v2.0"
       }
     },
+    "D21-B16-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-ISTJ-1",
+        "title": "帮扶老人的店主，官方确认不担责——ISTJ的Si没有把这当成一条孤立的新闻。它看到的是社会运行最朴素的逻辑：好人好事不该被辜负，公道是这个社会最硬的秩序",
+        "hook": "社会证明",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 6,
+        "batch_num": 1,
+        "signals": [
+          "官方确认帮扶老人店主不担责(7分·社会证明·社会道德·公道·heat90)"
+        ],
+        "paradigm": "社会证明·Si秩序/公道闭环型(ISTJ社会证明batch1换hook·官方确认不担责7分·Si秩序:公道=社会底线·社会证明闭环叙事·严禁道德绑架·用公道/秩序角度)",
+        "role": "P1·ISTJ社会证明batch1换hook(官方确认不担责7·公道·好人好事不被辜负)·小红书Si位·方向船key_decision「ISTJ社会证明(官方确认不担责7·好奇心batch2达上限换hook·SJ象限)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·ISTJ×社会证明×小红书",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B16大面积轮出批·ISTJ社会证明batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ISTJ的Si依赖「秩序与规则」带来安全感；「做好事反被讹」会动摇TA对社会底线的信任，「官方确认不担责」恰好修复这份秩序感。",
+          "hook_first3": "第一行「帮扶老人的店主，官方确认不担责」摆结论；第二行「这句确认，比任何安慰都重」点社会意义；第三行「ISTJ看到的是：好人好事不该被辜负，公道是最硬的秩序」切入Si秩序感。",
+          "emotion_curve": "担忧(会被讹吗) → 安心(官方确认) → 笃定(公道闭环) → 秩序(社会底线) → 行动(敢做好事)。",
+          "structure": [
+            "钩子·官方确认不担责",
+            "背景·帮扶老人被讹",
+            "洞察·公道是社会的秩序",
+            "迁移·好人好事不该被辜负",
+            "CTA·你还敢扶吗"
+          ],
+          "differentiation": "别人写「扶老人被讹/法律争议/情绪对立」，我们写Si秩序闭环——「公道不是口号，是社会运行的底线」；不煽动对立、不道德绑架、落点秩序感。"
+        },
+        "post": {
+          "cover_title": "扶老人不担责，公道到了",
+          "body": "前几天那个新闻，\n你刷到了吗？\n\n店主好心帮扶老人，\n结果被卷进纠纷。\n\n很多人第一反应是：\n「以后谁还敢做好事？」😔\n\n直到官方出来确认——\n店主不担责。\n\n这句话，\n比任何安慰都重。\n\n因为它守住的，\n不是一个人，\n是一条社会底线：\n好人好事，不该被辜负。\n\nISTJ会告诉你：\n公道不是口号，\n是这个社会最硬的秩序。🧭\n\n规则存在的意义，\n就是让对的人，\n不必寒心；\n让守规矩的人，\n永远有底气。\n\n这个结果，\n不是给一个人的交代，\n是给所有「想做好人」的人，\n一颗定心丸。\n\n💬 如果是你，\n现在还敢扶吗？\n评论区聊聊。",
+          "hashtags": [
+            "#社会公道",
+            "#好人好事",
+            "#MBTI",
+            "#ISTJ",
+            "#正能量"
+          ],
+          "cover_visual": "暖色系·普通店主搀扶老人的侧影剪影 + 大字『公道到了，好人不怕』；干净、有温度、正向感",
+          "cta": "如果是你，现在还敢扶吗？评论区聊聊你的答案。",
+          "post_time": "18:00-20:00（社会议题·晚间情感共鸣高峰）",
+          "avoid": "不放大『扶老人被讹』的对立情绪、不消费涉事双方、不渲染负面；用『公道闭环』正向角度，规避『碰瓷/讹诈』等敏感词"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D21-B11-ISTJ-2": {
       "vessel": {
         "version": "1.0",
@@ -17603,6 +18426,75 @@
         "flagship": false,
         "attachment_theory_resonance": false,
         "note": "🟢 fresh·好奇心batch2达上限(2/2合规)·B10必轮出·q8.9·Ni-Te隐私感知"
+      }
+    },
+    "D21-B16-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B16-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B16"
+        },
+        "created_at": "2026-08-25T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-25-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B16-INFJ-1",
+        "title": "婚礼第二天，新娘的指纹被爸爸从门锁里删掉了——INFJ没有把这当成一条家庭八卦。她的Ni-Fe系统在0.5秒里读懂了这份疼痛真正的形状：有些父母的爱，只存在于「你需要我」，却缺席于「你已是独立的人」",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "情感共鸣",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "婚礼第二天新娘指纹被爸爸删掉(9分·情感共鸣·家庭依恋·边界感·heat92·依恋母题回归)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe家庭依恋/边界感型(依恋母题回归旗舰·婚礼指纹9分·Ni洞察:爱有两种形状——共生与边界·Fe共情:被删指纹=「独立成人」身份被否认·严禁渲染父女对立/原生家庭创伤·用依恋与边界的成长课题角度)",
+        "role": "P0·INFJ情感共鸣batch2续触(婚礼指纹9旗舰·依恋母题回归)·微博Fe/Ni位·方向船key_decision「INFJ情感共鸣batch2(婚礼指纹9·家庭依恋边界感·依恋母题回归旗舰)」",
+        "direction_compliance": "D21-B16 direction-vessel key_decision对齐·INFJ×情感共鸣×微博",
+        "flagship": true,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(B16大面积轮出批·INFJ情感共鸣batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INFJ的Ni-Fe对「关系里的真实」极度敏感，尤其痛在「爱以控制/占有的形式出现」；被删指纹击中的是「我长大了，却仍被当作需要被管的孩子」这种身份否认。",
+          "hook_first3": "第一行「婚礼第二天，新娘的人脸指纹被爸爸从门锁里删了」摆事实；第二行「不是吵架，是安静地、用『删除』表达失望」点情绪细节；第三行「INFJ读到的不是一次家庭矛盾，是爱里最隐蔽的伤口：共生，还是边界」切入Ni-Fe洞察。",
+          "emotion_curve": "困惑(被删) → 心疼(安静删除) → 洞察(共生vs边界) → 释然(爱有两种形状) → 和解(成长课题)。",
+          "structure": [
+            "钩子·婚礼指纹被删",
+            "细节·安静的删除",
+            "洞察·爱=共生还是边界",
+            "迁移·依恋与独立是成长课题",
+            "CTA·你会为谁保留边界"
+          ],
+          "differentiation": "别人写「原生家庭创伤/父母控制欲/情感绑架」，我们写Ni-Fe依恋母题——「爱不是占有，是送你独立」；不judge父亲、不贩卖创伤、落点成长课题。"
+        }
       }
     },
     "D21-B11-ENTP-1": {
