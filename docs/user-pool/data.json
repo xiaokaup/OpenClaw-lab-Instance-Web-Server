@@ -8,7 +8,7 @@
     },
     "freshness_ttl_hours": 24,
     "id": "user-pool-vessel-2026-08-05T10:00:00+08:00",
-    "created_at": "2026-08-24T10:09:59+08:00",
+    "created_at": "2026-08-25T10:07:03+08:00",
     "priority": "high",
     "dependencies": [
       {
@@ -78,7 +78,7 @@
       "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
     }
   },
-  "updated_at": "2026-08-24T10:09:59+08:00",
+  "updated_at": "2026-08-25T10:07:03+08:00",
   "total_users": 8250,
   "population_estimate": {
     "xixi_estimates": 8480,
@@ -101,9 +101,9 @@
     49,
     49
   ],
-  "operator": "营营·B15对齐(2026-08-24 10:00 cron)",
-  "system_status": "🟢 B15第二波续触+双恢复批满产7臂(¥175·0 block·0 dissent·strategy_match 100%连续4批)·ENFP身份认同batch2(38岁考大学9旗舰·信任对冲)+ENTJ反常识batch2+INFJ情感共鸣恢复+ENTP反常识恢复+ENFJ社会证明batch2+ISTJ好奇心batch2+INTJ好奇心换hook·INTP休1批·INFP复评轮休·社会货币连续3批冷却·营营B15对齐刷新",
-  "system_status_detail": "B14(09:25)7/7臂部署¥175: INFJ狼孩9旗舰(微博)/ENTJ男子被骗8(抖音)/ENFP女兵7(小红书)/ENFJ零食占座7(微博)/ISTJ总犯困6(小红书)/INTJ55元项链7(B站)/INTP36kr AI 8.5(B站¥25轻触)·HHI 0.265四渠道2-2-2-1·friction 0.08·社会货币连续2批冷却(需≥2个≥7分信号)·B15轮出续压(B14七臂batch1→B15 batch2·B16大面积轮出·需提前备新人格新Hook信号)",
+  "operator": "营营·B16对齐(2026-08-25 10:00 cron)",
+  "system_status": "🟢 B16大面积轮出批满产7臂(¥175·0 block·0 dissent·strategy_match 100%连续5批)·INFJ情感共鸣batch2(婚礼指纹9旗舰·依恋母题回归)+INTP恢复反常识batch1(印度乞丐8)+ENTJ身份认同换hook(硕士打螺丝8)+ENFJ情感共鸣换hook(失联船员8)+INTJ好奇心batch2+ISTJ社会证明换hook+ENTP反常识batch2·ENFP轮休1批·INFP复评轮休·社会货币连续4批冷却·NT象限4/4全满·营营B16对齐刷新",
+  "system_status_detail": "B16(09:25)7/7臂部署¥175: INFJ情感共鸣batch2(婚礼指纹9·微博)/INTP反常识恢复(印度乞丐8·B站)/ENTJ身份认同换hook(硕士打螺丝8·抖音)/ENFJ情感共鸣换hook(失联船员8·微博)/INTJ好奇心batch2(23点睡6·B站)/ISTJ社会证明换hook(官方确认不担责7·小红书)/ENTP反常识batch2(AI短剧6·抖音)·HHI 0.265四渠道2-2-2-1·情感共鸣回登顶#1(依恋母题回归)·社会货币连续4批冷却(需≥2个≥7分信号)·B17局部轮出预警(INFJ/ENTP/INTJ达batch2)",
   "segments": {
     "active": [
       {
@@ -111,7 +111,7 @@
         "count": 390,
         "avg_trust": 8.53,
         "eligible": true,
-        "note": "B15好奇心batch1换hook(星巴克6·消费趋势/品牌迭代·B站·P1)·反常识batch1(B14)换hook→好奇心·信任8.53全池最高",
+        "note": "B16好奇心batch2(23点睡6·健康作息·B站·P1)·好奇心batch1(B15星巴克6)续触·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -130,7 +130,7 @@
         "count": 300,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "B15反常识batch2(机器人只做人类不爱做7·AI/职业焦虑反转·抖音·P0)·反常识batch1(B14男子被骗8)续触·信任7.74·⚠️避免失业恐慌渲染(用认知/边界角度)",
+        "note": "B16身份认同batch1换hook(硕士打螺丝8·职场尊严自我觉醒·抖音·P0)·反常识batch2(B15机器人只做人类不爱做7)达上限换hook·信任7.74·⚠️避免渲染职场绝望(用尊严/觉醒角度)",
         "persona": {
           "themes": [
             {
@@ -148,8 +148,8 @@
         "personality": "INTP",
         "count": 330,
         "avg_trust": 7.35,
-        "eligible": false,
-        "note": "休1批(非排除)·B14好奇心batch1(36kr AI 5分)轻触质量不足·NT象限3/4(ENTJ/ENTP/INTJ)仍足·36kr好奇心集群13条为B16备选·信任7.08-7.35",
+        "eligible": true,
+        "note": "B16恢复·反常识batch1首触(印度乞丐8·身份错位表里反差·B站·P0)·休1批结束·NT象限4/4全满·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -167,8 +167,8 @@
         "personality": "ENFP",
         "count": 270,
         "avg_trust": 6.6,
-        "eligible": true,
-        "note": "B15身份认同batch2(38岁考大学9旗舰·自我觉醒/逆袭·小红书·P0)·身份认同batch1(B14女兵7)续触·信任6.5-6.6下滑用强正面信号对冲(倾向口径重估·confidence_low 0.224)·B16定论衰减vs口径重估",
+        "eligible": false,
+        "note": "B16轮休1批·B15身份认同batch2达上限·信任下滑倾向口径重估(confidence_low 0.224)·B17定论衰减vs口径重估·信任6.5-6.6",
         "persona": {
           "themes": [
             {
@@ -187,7 +187,7 @@
         "count": 225,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "复评轮休·疲劳~2.1仍>2.0(阈值)·依恋母题连续5批已降载·38岁考大学9/狼孩9/女孩8为B16恢复候选(≥7分信号已就位·待疲劳≤2.0)·信任6.93",
+        "note": "B16复评轮休·疲劳~2.1仍>2.0(阈值)·38岁考大学9/狼孩9/女孩8为恢复候选(≥7分信号已就位·待疲劳≤2.0)·信任6.93",
         "persona": {
           "themes": [
             {
@@ -206,7 +206,7 @@
         "count": 155,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "B15情感共鸣batch1恢复(我的前半生8·女性成长/身份重建·微博·P0)·身份认同batch1(B14狼孩9)换hook→情感共鸣·母题轮换后回归·信任8.13",
+        "note": "B16情感共鸣batch2(婚礼指纹9·家庭依恋边界感·微博·P0)·依恋母题回归·情感共鸣batch1(B15我的前半生8)续触·信任8.13",
         "persona": {
           "themes": [
             {
@@ -225,7 +225,7 @@
         "count": 155,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "B15好奇心batch2(秋乏6·健康/自我关怀·小红书·P1)·好奇心batch1(B14总犯困6)续触·SJ象限维持1/4·信任7.62",
+        "note": "B16社会证明batch1换hook(官方确认不担责7·公道·小红书·P1)·好奇心batch2(B15秋乏6)达上限换hook·SJ象限维持1/4·信任7.62",
         "persona": {
           "themes": [
             {
@@ -263,7 +263,7 @@
         "count": 92,
         "avg_trust": 7.1,
         "eligible": true,
-        "note": "B15社会证明batch2(殷玉珍超级英雄7·英雄叙事/社会认同·微博·P1)·社会证明batch1(B14零食占座7)续触·heat1270万全榜最高·信任7.10",
+        "note": "B16情感共鸣batch1换hook(失联船员8·人生遗憾亲情·微博·P1)·社会证明batch2(B15殷玉珍超级英雄7)达上限换hook·信任7.10·⚠️死亡信号用亲情/人生规划角度",
         "persona": {
           "themes": [
             {
@@ -282,7 +282,7 @@
         "count": 82,
         "avg_trust": 7.25,
         "eligible": true,
-        "note": "B15反常识batch1恢复首触(机器人自己拿主意6·AI自主性·B站·P1)·休1批结束恢复·NT象限3/4·信任7.25+·⚠️避免AI恐慌渲染",
+        "note": "B16反常识batch2(AI短剧6·技术颠覆·抖音·P1)·反常识batch1(B15机器人自己拿主意6)续触·信任7.25·⚠️避免AI恐慌渲染",
         "persona": {
           "themes": [
             {
@@ -303,7 +303,7 @@
         "count": 455,
         "avg_trust": 8.53,
         "eligible": true,
-        "note": "B15好奇心batch1换hook(星巴克6)·信任8.53全池最高",
+        "note": "B16好奇心batch2(23点睡6)·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -322,7 +322,7 @@
         "count": 285,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "B15反常识batch2(机器人只做人类不爱做7)·信任7.74",
+        "note": "B16身份认同batch1换hook(硕士打螺丝8)·信任7.74",
         "persona": {
           "themes": [
             {
@@ -341,7 +341,7 @@
         "count": 285,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "B15好奇心batch2(秋乏6)·SJ象限维持1/4·信任7.62",
+        "note": "B16社会证明batch1换hook(官方确认不担责7)·信任7.62",
         "persona": {
           "themes": [
             {
@@ -359,8 +359,8 @@
         "personality": "INTP",
         "count": 155,
         "avg_trust": 7.35,
-        "eligible": false,
-        "note": "休1批(非排除)·B16评估·NT象限3/4仍足·信任7.08-7.35",
+        "eligible": true,
+        "note": "B16恢复·反常识batch1首触(印度乞丐8)·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -379,7 +379,7 @@
         "count": 162,
         "avg_trust": 7.25,
         "eligible": true,
-        "note": "B15反常识batch1恢复(机器人自己拿主意6)·休1批结束·信任7.25",
+        "note": "B16反常识batch2(AI短剧6)·信任7.25",
         "persona": {
           "themes": [
             {
@@ -417,7 +417,7 @@
         "count": 122,
         "avg_trust": 7.1,
         "eligible": true,
-        "note": "B15社会证明batch2(殷玉珍超级英雄7)·信任7.10",
+        "note": "B16情感共鸣batch1换hook(失联船员8)·信任7.10",
         "persona": {
           "themes": [
             {
@@ -435,8 +435,8 @@
         "personality": "ENFP",
         "count": 10,
         "avg_trust": 6.6,
-        "eligible": true,
-        "note": "B15身份认同batch2(38岁考大学9旗舰)·信任6.5-6.6下滑用强正面信号对冲",
+        "eligible": false,
+        "note": "B16轮休1批·信任6.5-6.6下滑口径重估",
         "persona": {
           "themes": [
             {
@@ -455,7 +455,7 @@
         "count": 112,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "复评轮休·疲劳~2.1>2.0·B16恢复候选(38岁考大学9/狼孩9/女孩8)·信任6.93",
+        "note": "B16复评轮休·疲劳~2.1>2.0·信任6.93",
         "persona": {
           "themes": [
             {
@@ -474,7 +474,7 @@
         "count": 102,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "B15情感共鸣batch1恢复(我的前半生8)·信任8.13",
+        "note": "B16情感共鸣batch2(婚礼指纹9)·信任8.13",
         "persona": {
           "themes": [
             {
@@ -494,8 +494,8 @@
         "personality": "INTP",
         "count": 185,
         "avg_trust": 7.35,
-        "eligible": false,
-        "note": "休1批(非排除)·召回暂停·B16评估·信任7.08-7.35",
+        "eligible": true,
+        "note": "召回候选·B16恢复(印度乞丐8反常识)·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -513,8 +513,8 @@
         "personality": "ENFP",
         "count": 195,
         "avg_trust": 6.6,
-        "eligible": true,
-        "note": "召回候选·B15身份认同batch2(38岁考大学9·正面信号)·18%分享率回流潜力·信任6.5-6.6",
+        "eligible": false,
+        "note": "轮休·召回暂停·B16歇1批·信任6.5-6.6",
         "persona": {
           "themes": [
             {
@@ -533,7 +533,7 @@
         "count": 245,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "召回候选·高信任8.13·B15情感共鸣batch1恢复(我的前半生8)",
+        "note": "召回候选·B16情感共鸣batch2(婚礼指纹9)·信任8.13",
         "persona": {
           "themes": [
             {
@@ -552,7 +552,7 @@
         "count": 415,
         "avg_trust": 8.53,
         "eligible": true,
-        "note": "召回候选·B15好奇心batch1换hook(星巴克6)·信任8.53全池最高",
+        "note": "召回候选·B16好奇心batch2(23点睡6)·信任8.53全池最高",
         "persona": {
           "themes": [
             {
@@ -571,7 +571,7 @@
         "count": 335,
         "avg_trust": 7.74,
         "eligible": true,
-        "note": "召回候选·B15反常识batch2(机器人只做人类不爱做7)·信任7.74",
+        "note": "召回候选·B16身份认同batch1换hook(硕士打螺丝8)·信任7.74",
         "persona": {
           "themes": [
             {
@@ -590,7 +590,7 @@
         "count": 275,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "召回候选·B15好奇心batch2(秋乏6)·信任7.62",
+        "note": "召回候选·B16社会证明batch1换hook(官方确认不担责7)·信任7.62",
         "persona": {
           "themes": [
             {
@@ -628,7 +628,7 @@
         "count": 162,
         "avg_trust": 7.1,
         "eligible": true,
-        "note": "召回候选·B15社会证明batch2(殷玉珍超级英雄7)·信任7.10",
+        "note": "召回候选·B16情感共鸣batch1换hook(失联船员8)·信任7.10",
         "persona": {
           "themes": [
             {
@@ -647,7 +647,7 @@
         "count": 155,
         "avg_trust": 7.25,
         "eligible": true,
-        "note": "召回候选·B15反常识batch1恢复(机器人自己拿主意6)·信任7.25",
+        "note": "召回候选·B16反常识batch2(AI短剧6)·信任7.25",
         "persona": {
           "themes": [
             {
@@ -666,7 +666,7 @@
         "count": 112,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "复评轮休·召回暂停·疲劳~2.1>2.0·B16复评·信任6.93",
+        "note": "复评轮休·召回暂停·疲劳~2.1>2.0·B17复评·信任6.93",
         "persona": {
           "themes": [
             {
@@ -788,7 +788,8 @@
             }
           ],
           "unmet_need": null
-        }
+        },
+        "note": "resting·无Se信号·D21后段轻触 | "
       },
       {
         "personality": "ENFP",
@@ -870,7 +871,7 @@
       "count": 390,
       "avg_trust": 8.53,
       "eligible": true,
-      "note": "B15好奇心batch1换hook(星巴克6·消费趋势/品牌迭代·B站·P1)·反常识batch1(B14)换hook→好奇心·信任8.53全池最高",
+      "note": "B16好奇心batch2(23点睡6·健康作息·B站·P1)·好奇心batch1(B15星巴克6)续触·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -890,7 +891,7 @@
       "count": 300,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "B15反常识batch2(机器人只做人类不爱做7·AI/职业焦虑反转·抖音·P0)·反常识batch1(B14男子被骗8)续触·信任7.74·⚠️避免失业恐慌渲染(用认知/边界角度)",
+      "note": "B16身份认同batch1换hook(硕士打螺丝8·职场尊严自我觉醒·抖音·P0)·反常识batch2(B15机器人只做人类不爱做7)达上限换hook·信任7.74·⚠️避免渲染职场绝望(用尊严/觉醒角度)",
       "persona": {
         "themes": [
           {
@@ -909,8 +910,8 @@
       "personality": "INTP",
       "count": 330,
       "avg_trust": 7.35,
-      "eligible": false,
-      "note": "休1批(非排除)·B14好奇心batch1(36kr AI 5分)轻触质量不足·NT象限3/4(ENTJ/ENTP/INTJ)仍足·36kr好奇心集群13条为B16备选·信任7.08-7.35",
+      "eligible": true,
+      "note": "B16恢复·反常识batch1首触(印度乞丐8·身份错位表里反差·B站·P0)·休1批结束·NT象限4/4全满·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -929,8 +930,8 @@
       "personality": "ENFP",
       "count": 270,
       "avg_trust": 6.6,
-      "eligible": true,
-      "note": "B15身份认同batch2(38岁考大学9旗舰·自我觉醒/逆袭·小红书·P0)·身份认同batch1(B14女兵7)续触·信任6.5-6.6下滑用强正面信号对冲(倾向口径重估·confidence_low 0.224)·B16定论衰减vs口径重估",
+      "eligible": false,
+      "note": "B16轮休1批·B15身份认同batch2达上限·信任下滑倾向口径重估(confidence_low 0.224)·B17定论衰减vs口径重估·信任6.5-6.6",
       "persona": {
         "themes": [
           {
@@ -950,7 +951,7 @@
       "count": 225,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "复评轮休·疲劳~2.1仍>2.0(阈值)·依恋母题连续5批已降载·38岁考大学9/狼孩9/女孩8为B16恢复候选(≥7分信号已就位·待疲劳≤2.0)·信任6.93",
+      "note": "B16复评轮休·疲劳~2.1仍>2.0(阈值)·38岁考大学9/狼孩9/女孩8为恢复候选(≥7分信号已就位·待疲劳≤2.0)·信任6.93",
       "persona": {
         "themes": [
           {
@@ -970,7 +971,7 @@
       "count": 155,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "B15情感共鸣batch1恢复(我的前半生8·女性成长/身份重建·微博·P0)·身份认同batch1(B14狼孩9)换hook→情感共鸣·母题轮换后回归·信任8.13",
+      "note": "B16情感共鸣batch2(婚礼指纹9·家庭依恋边界感·微博·P0)·依恋母题回归·情感共鸣batch1(B15我的前半生8)续触·信任8.13",
       "persona": {
         "themes": [
           {
@@ -990,7 +991,7 @@
       "count": 155,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "B15好奇心batch2(秋乏6·健康/自我关怀·小红书·P1)·好奇心batch1(B14总犯困6)续触·SJ象限维持1/4·信任7.62",
+      "note": "B16社会证明batch1换hook(官方确认不担责7·公道·小红书·P1)·好奇心batch2(B15秋乏6)达上限换hook·SJ象限维持1/4·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1030,7 +1031,7 @@
       "count": 92,
       "avg_trust": 7.1,
       "eligible": true,
-      "note": "B15社会证明batch2(殷玉珍超级英雄7·英雄叙事/社会认同·微博·P1)·社会证明batch1(B14零食占座7)续触·heat1270万全榜最高·信任7.10",
+      "note": "B16情感共鸣batch1换hook(失联船员8·人生遗憾亲情·微博·P1)·社会证明batch2(B15殷玉珍超级英雄7)达上限换hook·信任7.10·⚠️死亡信号用亲情/人生规划角度",
       "persona": {
         "themes": [
           {
@@ -1050,7 +1051,7 @@
       "count": 82,
       "avg_trust": 7.25,
       "eligible": true,
-      "note": "B15反常识batch1恢复首触(机器人自己拿主意6·AI自主性·B站·P1)·休1批结束恢复·NT象限3/4·信任7.25+·⚠️避免AI恐慌渲染",
+      "note": "B16反常识batch2(AI短剧6·技术颠覆·抖音·P1)·反常识batch1(B15机器人自己拿主意6)续触·信任7.25·⚠️避免AI恐慌渲染",
       "persona": {
         "themes": [
           {
@@ -1070,7 +1071,7 @@
       "count": 455,
       "avg_trust": 8.53,
       "eligible": true,
-      "note": "B15好奇心batch1换hook(星巴克6)·信任8.53全池最高",
+      "note": "B16好奇心batch2(23点睡6)·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -1090,7 +1091,7 @@
       "count": 285,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "B15反常识batch2(机器人只做人类不爱做7)·信任7.74",
+      "note": "B16身份认同batch1换hook(硕士打螺丝8)·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1110,7 +1111,7 @@
       "count": 285,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "B15好奇心batch2(秋乏6)·SJ象限维持1/4·信任7.62",
+      "note": "B16社会证明batch1换hook(官方确认不担责7)·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1129,8 +1130,8 @@
       "personality": "INTP",
       "count": 155,
       "avg_trust": 7.35,
-      "eligible": false,
-      "note": "休1批(非排除)·B16评估·NT象限3/4仍足·信任7.08-7.35",
+      "eligible": true,
+      "note": "B16恢复·反常识batch1首触(印度乞丐8)·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -1150,7 +1151,7 @@
       "count": 162,
       "avg_trust": 7.25,
       "eligible": true,
-      "note": "B15反常识batch1恢复(机器人自己拿主意6)·休1批结束·信任7.25",
+      "note": "B16反常识batch2(AI短剧6)·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1190,7 +1191,7 @@
       "count": 122,
       "avg_trust": 7.1,
       "eligible": true,
-      "note": "B15社会证明batch2(殷玉珍超级英雄7)·信任7.10",
+      "note": "B16情感共鸣batch1换hook(失联船员8)·信任7.10",
       "persona": {
         "themes": [
           {
@@ -1209,8 +1210,8 @@
       "personality": "ENFP",
       "count": 10,
       "avg_trust": 6.6,
-      "eligible": true,
-      "note": "B15身份认同batch2(38岁考大学9旗舰)·信任6.5-6.6下滑用强正面信号对冲",
+      "eligible": false,
+      "note": "B16轮休1批·信任6.5-6.6下滑口径重估",
       "persona": {
         "themes": [
           {
@@ -1230,7 +1231,7 @@
       "count": 112,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "复评轮休·疲劳~2.1>2.0·B16恢复候选(38岁考大学9/狼孩9/女孩8)·信任6.93",
+      "note": "B16复评轮休·疲劳~2.1>2.0·信任6.93",
       "persona": {
         "themes": [
           {
@@ -1250,7 +1251,7 @@
       "count": 102,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "B15情感共鸣batch1恢复(我的前半生8)·信任8.13",
+      "note": "B16情感共鸣batch2(婚礼指纹9)·信任8.13",
       "persona": {
         "themes": [
           {
@@ -1269,8 +1270,8 @@
       "personality": "INTP",
       "count": 185,
       "avg_trust": 7.35,
-      "eligible": false,
-      "note": "休1批(非排除)·召回暂停·B16评估·信任7.08-7.35",
+      "eligible": true,
+      "note": "召回候选·B16恢复(印度乞丐8反常识)·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -1289,8 +1290,8 @@
       "personality": "ENFP",
       "count": 195,
       "avg_trust": 6.6,
-      "eligible": true,
-      "note": "召回候选·B15身份认同batch2(38岁考大学9·正面信号)·18%分享率回流潜力·信任6.5-6.6",
+      "eligible": false,
+      "note": "轮休·召回暂停·B16歇1批·信任6.5-6.6",
       "persona": {
         "themes": [
           {
@@ -1310,7 +1311,7 @@
       "count": 245,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "召回候选·高信任8.13·B15情感共鸣batch1恢复(我的前半生8)",
+      "note": "召回候选·B16情感共鸣batch2(婚礼指纹9)·信任8.13",
       "persona": {
         "themes": [
           {
@@ -1330,7 +1331,7 @@
       "count": 415,
       "avg_trust": 8.53,
       "eligible": true,
-      "note": "召回候选·B15好奇心batch1换hook(星巴克6)·信任8.53全池最高",
+      "note": "召回候选·B16好奇心batch2(23点睡6)·信任8.53全池最高",
       "persona": {
         "themes": [
           {
@@ -1350,7 +1351,7 @@
       "count": 335,
       "avg_trust": 7.74,
       "eligible": true,
-      "note": "召回候选·B15反常识batch2(机器人只做人类不爱做7)·信任7.74",
+      "note": "召回候选·B16身份认同batch1换hook(硕士打螺丝8)·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1370,7 +1371,7 @@
       "count": 275,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "召回候选·B15好奇心batch2(秋乏6)·信任7.62",
+      "note": "召回候选·B16社会证明batch1换hook(官方确认不担责7)·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1410,7 +1411,7 @@
       "count": 162,
       "avg_trust": 7.1,
       "eligible": true,
-      "note": "召回候选·B15社会证明batch2(殷玉珍超级英雄7)·信任7.10",
+      "note": "召回候选·B16情感共鸣batch1换hook(失联船员8)·信任7.10",
       "persona": {
         "themes": [
           {
@@ -1430,7 +1431,7 @@
       "count": 155,
       "avg_trust": 7.25,
       "eligible": true,
-      "note": "召回候选·B15反常识batch1恢复(机器人自己拿主意6)·信任7.25",
+      "note": "召回候选·B16反常识batch2(AI短剧6)·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1450,7 +1451,7 @@
       "count": 112,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "复评轮休·召回暂停·疲劳~2.1>2.0·B16复评·信任6.93",
+      "note": "复评轮休·召回暂停·疲劳~2.1>2.0·B17复评·信任6.93",
       "persona": {
         "themes": [
           {
@@ -1577,6 +1578,7 @@
         ],
         "unmet_need": null
       },
+      "note": "resting·无Se信号·D21后段轻触 | ",
       "group": "lost"
     },
     {
