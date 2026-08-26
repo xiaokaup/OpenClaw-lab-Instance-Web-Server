@@ -1,22 +1,22 @@
 {
   "pool_status": {
-    "level": 168,
+    "level": 173,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池168>>25软上限·投投零部署为根因·非内容过剩·D21-B16大面积轮出批满产7臂fresh(INFJ婚礼指纹9.0旗舰+INTP印度乞丐8.8恢复+ENTJ硕士打螺丝8.8换hook+ENFJ失联船员8.7换hook+ISTJ官方确认8.7换hook+INTJ 23点睡8.6+ENTP AI短剧8.6)·方向船B16明令7臂全fresh·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-25T08:30:00+08:00",
-    "last_creation_batch": "D21-B16",
-    "last_deployment": "2026-08-25T09:25:00+08:00",
-    "last_deployment_batch": "D21-B16",
-    "net_change_this_batch": 7,
+    "last_creation": "2026-08-26T08:35:00+08:00",
+    "last_creation_batch": "D21-B17",
+    "last_deployment": "2026-08-26T09:25:00+08:00",
+    "last_deployment_batch": "D21-B17",
+    "net_change_this_batch": 5,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 168,
+    "total_items": 173,
     "active_items": 105,
     "hook_conflict_items": 1,
-    "last_deployment_arms": 7,
-    "sheshe_supplement": "设设D21-B16满产7臂fresh(INFJ情感共鸣9.0旗舰/INTP反常识8.8恢复/ENTJ身份认同8.8换hook/ENFJ情感共鸣8.7换hook/ISTJ社会证明8.7换hook/INTJ好奇心8.6/ENTP反常识8.6)·大面积轮出批(4臂batch2轮出+INTP恢复+4臂换hook)·小红书post成品1条(ISTJ社会证明)·brief 7条全填实·社会货币0臂(连续4批冷却·禁止强推)·失联船员死亡信号用亲情角度·硕士打螺丝避免渲染职场绝望·AI短剧避免AI恐慌渲染",
-    "fresh_arms_this_batch": 7,
+    "last_deployment_arms": 5,
+    "sheshe_supplement": "设设D21-B17局部轮出批5臂fresh(ISTJ情感共鸣9.0旗舰/ENFJ情感共鸣8.7/INTP反常识8.6/INTJ反常识8.5/ENTJ身份认同8.5)·INFJ+ENTP轮休1批·ENFP/INFP/ISFP/SP象限excluded·社会货币0臂(连续5批冷却·禁止强推)·小红书post成品1条(ISTJ)+brief 5条全填实·方向船降为5臂(从7臂)·池168>>25豁免进一步降产(轮出批fresh必需)",
+    "fresh_arms_this_batch": 5,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
@@ -28,7 +28,8 @@
       "note": "小红书成品帖子v2.0持续落地·B16新增1条post(ISTJ社会证明)+7条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续4批冷却)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
-      "b16_posts_completed": 1
+      "b16_posts_completed": 1,
+      "b17_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
@@ -5608,9 +5609,265 @@
       "deployed_arm": 7,
       "deployed_budget": 25,
       "has_post": false
+    },
+    {
+      "id": "D21-B17-ISTJ-1",
+      "title": "少年『自学』考上上海交大，姐姐哽咽着说『他自己熬过来的』——ISTJ的Si没有把这当成一条逆袭爽文。它看到的是这背后最硬核的真相：真正的自律，是没人看着你的时候，你依然按自己的秩序走",
+      "hook": "情感共鸣",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "created": "2026-08-26T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B17-ISTJ-1.json",
+      "paradigm": "情感共鸣·Si自我秩序/自律坚持型(ISTJ情感共鸣batch1换hook·少年自学9分旗舰·Si秩序:自律=没人看着时的自我秩序·姐姐哽咽亲情锚点·依恋母题桥接自我觉醒·严禁渲染寒门悲情/教育焦虑)",
+      "role": "P0·ISTJ情感共鸣batch1换hook(少年自学9旗舰·自律坚持+姐姐哽咽亲情)·小红书Si位·方向船key_decision「ISTJ情感共鸣(少年自学9·自我觉醒/教育逆袭·社会证明batch1换hook·SJ象限)」",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B17",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "ISTJ的Si依赖「可预期的秩序」带来安全感；「没人管的孩子自学考上交大」击中的是「在无序环境里，一个人如何靠自己建立秩序」——这正是Si最敬佩、也最需要的确定性。",
+        "hook_first3": "第一行「少年『自学』考上上海交大，姐姐当场哽咽」摆事实；第二行「没有补习班、没有家长盯，全靠自己熬」点反差；第三行「ISTJ看到的不是爽文，是自律背后最硬核的秩序：没人看着，你依然按自己的节奏走」切入Si。",
+        "emotion_curve": "惊叹(自学逆袭) → 心疼(姐姐哽咽/没人管) → 敬佩(自律秩序) → 笃定(靠自己建立秩序) → 行动(我也能守住自己的节奏)。",
+        "structure": [
+          "钩子·自学考上交大",
+          "细节·姐姐哽咽的亲情锚点",
+          "洞察·自律=自己管自己的秩序",
+          "迁移·没人监督时的自我秩序",
+          "CTA·你靠什么撑过低谷"
+        ],
+        "differentiation": "别人写「寒门逆袭/教育焦虑/鸡娃对照」，我们写Si秩序感——「自律不是苦情，是把没人管的日子过成自己说了算的秩序」；不贩卖教育焦虑、不渲染寒门悲情、落点「自我秩序」这条ISTJ最信的东西。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B17局部轮出批·ISTJ情感共鸣batch1换hook fresh(少年自学9旗舰·自我觉醒/教育逆袭·自律坚持+姐姐哽咽亲情·Si秩序感·社会证明batch1换hook·SJ象限维持)·P0·flagship",
+      "post": {
+        "cover_title": "自学考进交大，他靠什么",
+        "body": "刷到这条新闻的时候，\n我停了三秒。\n\n一个少年，没人看着，\n自己把自己送进了上海交大。\n\n姐姐在镜头前哽咽，\n说「他自己熬过来的」。\n\n没有补习班，\n没有家长天天盯，\n全靠自己。😭\n\nISTJ会告诉你：\n这从来不是一条爽文。\n\n真正的自律，\n不是有人管才努力，\n是没人看的时候，\n你依然按自己的秩序走。🧭\n\n把日子过成清单，\n把目标拆成每天一点点，\n把「我该」变成「我想」。\n\n这就是最硬核的底气。\n\n他不是天才，\n他只是把「没人管」\n过成了「自己说了算」。\n\n💬 你靠什么，\n撑过没人看着你的那段日子？\n评论区聊聊。",
+        "hashtags": [
+          "#自学逆袭",
+          "#自律",
+          "#MBTI",
+          "#ISTJ",
+          "#自我成长"
+        ],
+        "cover_visual": "深夜台灯下伏案学习的少年剪影 + 姐姐哽咽的虚化侧影；大字『没人管，才见真自律』；蓝灰冷调 + 一点暖黄灯光",
+        "cta": "你靠什么，撑过没人看着你的那段日子？评论区聊聊你的答案。",
+        "post_time": "12:00-13:00（教育/成长类·午间学习场景高峰）",
+        "avoid": "不渲染寒门悲情、不制造教育焦虑、不贬低应试/鸡娃；落点「自我秩序/自律」，规避「逆袭神话」夸大"
+      },
+      "post_spec_version": "v2.0",
+      "last_used": "2026-08-26T09:25:00+08:00",
+      "deployed_batch": "D21-B17",
+      "deployed_arm": 1,
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B17-ENFJ-1",
+      "title": "本想拍繁星，镜头一转却拍到妈妈的繁忙——ENFJ的Fe没有把这当成一条生活vlog。它在0.3秒里读懂了这一幕真正的分量：妈妈的爱，从来不挂在嘴上，全藏在『你不在场』的忙碌里",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "created": "2026-08-26T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B17-ENFJ-1.json",
+      "paradigm": "情感共鸣·Fe沉默付出/依恋母题型(ENFJ情感共鸣batch2·拍繁星妈妈8分·Fe共情:爱=无数个你不在场的忙碌瞬间·Ni洞察:回头看见身边人·依恋母题延续·严禁牺牲绑架/道德绑架)",
+      "role": "P0·ENFJ情感共鸣batch2续触(拍繁星妈妈8·亲情/家庭·Fe共情·依恋母题延续)·微博Fe公共舆论位·方向船key_decision「ENFJ情感共鸣(拍繁星8·亲情/家庭·依恋母题延续·情感共鸣batch1→batch2)」",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B17",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "brief": {
+        "pain_point": "ENFJ的Fe对「他人的付出」极度敏感，尤其痛在「爱以沉默的忙碌表达」；「拍繁星拍到妈妈的繁忙」击中的是「我总在追逐远方，却忽略了身边那个一直为我忙碌的人」。",
+        "hook_first3": "第一行「本想拍繁星，镜头一转却拍到妈妈的繁忙」摆反差；第二行「她没说什么，只是一直在忙」点细节；第三行「ENFJ读到的不是一条vlog，是妈妈爱你的方式：从来不挂在嘴上，全藏在忙碌里」切入Fe共情。",
+        "emotion_curve": "期待(拍繁星) → 意外(拍到妈妈) → 心酸(沉默的忙碌) → 洞察(爱藏在忙碌里) → 感恩(回头看见她)。",
+        "structure": [
+          "钩子·拍繁星拍到妈妈",
+          "细节·妈妈一直在忙",
+          "洞察·爱=沉默的付出",
+          "迁移·回头看见身边人",
+          "CTA·你多久没认真看妈妈了"
+        ],
+        "differentiation": "别人写「母爱伟大/牺牲奉献/亲情鸡汤」，我们写Fe共情——「爱不是一场盛大的表白，是无数个你不在场的忙碌瞬间」；不煽情、不道德绑架、落点「看见与被看见」。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B17·ENFJ情感共鸣batch2续触 fresh(拍繁星8·亲情/家庭·Fe共情·依恋母题延续·情感共鸣batch1续触)·P0",
+      "last_used": "2026-08-26T09:25:00+08:00",
+      "deployed_batch": "D21-B17",
+      "deployed_arm": 2,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B17-INTP-1",
+      "title": "店门口写着『禁止殴打顾客，除非忍不住』——INTP的Ti没有把这当成一句搞笑文案。它在0.5秒里拆出了这背后的真相：最高级的服务警示，从来不是恐吓，是把规则反着说给人听",
+      "hook": "反常识",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-08-26T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B17-INTP-1.json",
+      "paradigm": "反常识·Ti-Ne反讽逻辑/表里反差型(INTP反常识batch2·禁止殴打7分·Ti解构:反讽>恐吓·规则反向表达·幽默背后的逻辑·严禁暴力渲染·用反常识营销幽默角度)",
+      "role": "P0·INTP反常识batch2续触(禁止殴打7·营销反差·Ti-Ne解构)·B站深度位·方向船key_decision「INTP反常识(禁止殴打7·反常识营销表里反差·反常识batch1→batch2巩固·NT象限)」",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B17",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTP的Ti对「逻辑自洽」极度敏感，尤其享受「规则被反着说却依然成立」的智力快感；「禁止殴打顾客 除非忍不住」击中的是「幽默反讽背后，藏着比直白警告更有效的说服逻辑」。",
+        "hook_first3": "第一行「店门口写着：禁止殴打顾客，除非忍不住」摆反常识；第二行「没人会真的动手，但每个人都会笑」点反差效果；第三行「INTP拆出的是：最高级的规则，不是恐吓，是把底线反着说，让人自己笑完自己记住」切入Ti解构。",
+        "emotion_curve": "错愕(这也能写?) → 会心一笑(幽默) → 洞察(反讽>恐吓) → 顿悟(规则反向表达) → 迁移(沟通里的幽默)。",
+        "structure": [
+          "钩子·禁止殴打顾客",
+          "反常识·反着说的规则",
+          "洞察·幽默比恐吓有效",
+          "迁移·表达的门道",
+          "CTA·你见过最妙的反讽是什么"
+        ],
+        "differentiation": "别人写「商家神文案/搞笑合集」，我们写Ti-Ne解构——「反讽不是抖机灵，是让规则在笑里完成传达」；不渲染暴力、不低俗化、落点「幽默背后的逻辑」。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B17·INTP反常识batch2续触 fresh(禁止殴打7·反常识营销表里反差·Ti-Ne解构·避免暴力渲染用幽默角度·NT象限维持)·P0",
+      "last_used": "2026-08-26T09:25:00+08:00",
+      "deployed_batch": "D21-B17",
+      "deployed_arm": 3,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B17-INTJ-1",
+      "title": "人民日报评『大学生家长群』——INTJ的Ni没有把这当成一条教育新闻。它看到的是一个更普遍的问题：当『为你好』变成『替你活着』，边界感才是成年人的第一课",
+      "hook": "反常识",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-08-26T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B17-INTJ-1.json",
+      "paradigm": "反常识·Ni-Te边界感/独立性型(INTJ反常识batch1换hook·人民日报家长群6分·Ni洞察:为你好vs替你活·边界感=成年第一课·严禁渲染代际对立·用独立性/边界角度)",
+      "role": "P1·INTJ反常识batch1换hook(人民日报家长群6·代际边界/教育·Ni-Te独立性)·B站深度位·方向船key_decision「INTJ反常识(人民日报评家长群6·代际边界·好奇心batch2换hook·零维护信任8.56)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B17",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "INTJ的Ni对「系统性问题」敏感，尤其在意「独立性被外部干预侵蚀」；「人民日报评大学生家长群」击中的是「从大学开始的过度监护，正在剥夺一个人真正成年的机会」。",
+        "hook_first3": "第一行「人民日报评『大学生家长群』」摆权威信号；第二行「大学还建家长群，老师@家长报作业」点荒诞；第三行「INTJ看到的是一个更普遍的问题：当『为你好』变成『替你活着』，边界感才是成年人的第一课」切入Ni洞察。",
+        "emotion_curve": "意外(权威媒体评论) → 荒诞(大学家长群) → 洞察(过度监护) → 独立(边界感) → 行动(学会对自己负责)。",
+        "structure": [
+          "钩子·人民日报评家长群",
+          "现象·大学还建家长群",
+          "洞察·为你好vs替你活",
+          "迁移·边界感=成年第一课",
+          "CTA·你什么时候开始自己做决定"
+        ],
+        "differentiation": "别人写「代际对立/家长控制欲/教育吐槽」，我们写Ni-Te独立性——「真正的独立，不是反抗父母，是学会为自己的选择负责」；不渲染代际对立、不judge家长、落点「边界感与独立」。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B17·INTJ反常识batch1换hook fresh(人民日报家长群6·代际边界/教育·Ni-Te独立性·好奇心batch2达上限换hook·避免代际对立用独立性角度·零维护信任8.56全池最高)·P1",
+      "last_used": "2026-08-26T09:25:00+08:00",
+      "deployed_batch": "D21-B17",
+      "deployed_arm": 4,
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B17-ENTJ-1",
+      "title": "演员陈明求职上热搜后，热度一直没退——ENTJ的Te没有把这当成一条八卦。它看到的是中年转型最真实的命题：身份不是职位给的，是价值自己重新定价的",
+      "hook": "身份认同",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.5,
+      "created": "2026-08-26T08:35:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B17-ENTJ-1.json",
+      "paradigm": "身份认同·Te价值重估/自我觉醒型(ENTJ身份认同batch2·陈明求职5分·Te洞察:身份≠价值·价值重新定价·自我觉醒主线延续·严禁渲染中年焦虑·用自我觉醒/转型角度)",
+      "role": "P1·ENTJ身份认同batch2续触(陈明求职5·中年转型/自我觉醒·Te成就重估)·抖音Te执行位·方向船key_decision「ENTJ身份认同(陈明求职5·中年转型自我觉醒·身份认同batch1→batch2·自我觉醒主线延续)」",
+      "consecutive_hook": 2,
+      "direction_hook": "身份认同",
+      "batch": "D21-B17",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "brief": {
+        "pain_point": "ENTJ的Te对「成就与价值」敏感，尤其在意「身份标签被外界定义」；「演员陈明中年求职上热搜」击中的是「当旧身份失效，一个人如何重新定义自己的价值」。",
+        "hook_first3": "第一行「演员陈明求职上热搜后，热度一直没退」摆事实；第二行「曾经的舞台身份，现在要从零开始找工作」点反差；第三行「ENTJ看到的是中年转型最真实的命题：身份不是职位给的，是价值自己重新定价的」切入Te重估。",
+        "emotion_curve": "意外(演员求职) → 共鸣(中年转型) → 洞察(身份≠价值) → 觉醒(重新定价) → 行动(敢重来)。",
+        "structure": [
+          "钩子·演员求职热搜",
+          "反差·旧身份失效",
+          "洞察·身份vs价值",
+          "迁移·自我觉醒主线",
+          "CTA·你敢不敢重新开始"
+        ],
+        "differentiation": "别人写「中年危机/明星落魄/职场焦虑」，我们写Te自我觉醒——「转型不是掉价，是把价值从职位里解绑出来」；不渲染中年焦虑、不消费落魄、落点「价值重新定价」。"
+      },
+      "actual_ctr": null,
+      "actual_roi": null,
+      "writeback_note": "B17·ENTJ身份认同batch2续触 fresh(陈明求职5·中年转型/自我觉醒·Te成就重估·身份认同batch1续触·避免中年焦虑用自我觉醒/转型角度)·P1",
+      "last_used": "2026-08-26T09:25:00+08:00",
+      "deployed_batch": "D21-B17",
+      "deployed_arm": 5,
+      "deployed_budget": 25,
+      "has_post": false
     }
   ],
-  "total": 168,
+  "total": 173,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -6552,6 +6809,62 @@
         "cta": "如果是你，现在还敢扶吗？评论区聊聊你的答案。",
         "post_time": "18:00-20:00（社会议题·晚间情感共鸣高峰）",
         "avoid": "不放大『扶老人被讹』的对立情绪、不消费涉事双方、不渲染负面；用『公道闭环』正向角度，规避『碰瓷/讹诈』等敏感词"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B17-ISTJ-1",
+      "title": "少年『自学』考上上海交大，姐姐哽咽着说『他自己熬过来的』——ISTJ的Si没有把这当成一条逆袭爽文。它看到的是这背后最硬核的真相：真正的自律，是没人看着你的时候，你依然按自己的秩序走",
+      "hook": "情感共鸣",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "arm_id": 1,
+      "batch_num": 1,
+      "signals": [
+        "少年『自学』考上上海交大姐姐哽咽(9分·情感共鸣·自我觉醒/教育逆袭·自律坚持+姐姐哽咽亲情·heat90)"
+      ],
+      "paradigm": "情感共鸣·Si自我秩序/自律坚持型(ISTJ情感共鸣batch1换hook·少年自学9分旗舰·Si秩序:自律=没人看着时的自我秩序·姐姐哽咽亲情锚点·依恋母题桥接自我觉醒·严禁渲染寒门悲情/教育焦虑)",
+      "role": "P0·ISTJ情感共鸣batch1换hook(少年自学9旗舰·自律坚持+姐姐哽咽亲情)·小红书Si位·方向船key_decision「ISTJ情感共鸣(少年自学9·自我觉醒/教育逆袭·社会证明batch1换hook·SJ象限)」",
+      "direction_compliance": "D21-B17 direction-vessel key_decision对齐·ISTJ×情感共鸣×小红书",
+      "flagship": true,
+      "attachment_theory_resonance": true,
+      "note": "🟢 fresh(B17局部轮出批·ISTJ社会证明→情感共鸣换hook·少年自学9旗舰)·方向船mandates合规·避开INFP疲劳(2.1>2.0)映射ISTJ",
+      "brief": {
+        "pain_point": "ISTJ的Si依赖「可预期的秩序」带来安全感；「没人管的孩子自学考上交大」击中的是「在无序环境里，一个人如何靠自己建立秩序」——这正是Si最敬佩、也最需要的确定性。",
+        "hook_first3": "第一行「少年『自学』考上上海交大，姐姐当场哽咽」摆事实；第二行「没有补习班、没有家长盯，全靠自己熬」点反差；第三行「ISTJ看到的不是爽文，是自律背后最硬核的秩序：没人看着，你依然按自己的节奏走」切入Si。",
+        "emotion_curve": "惊叹(自学逆袭) → 心疼(姐姐哽咽/没人管) → 敬佩(自律秩序) → 笃定(靠自己建立秩序) → 行动(我也能守住自己的节奏)。",
+        "structure": [
+          "钩子·自学考上交大",
+          "细节·姐姐哽咽的亲情锚点",
+          "洞察·自律=自己管自己的秩序",
+          "迁移·没人监督时的自我秩序",
+          "CTA·你靠什么撑过低谷"
+        ],
+        "differentiation": "别人写「寒门逆袭/教育焦虑/鸡娃对照」，我们写Si秩序感——「自律不是苦情，是把没人管的日子过成自己说了算的秩序」；不贩卖教育焦虑、不渲染寒门悲情、落点「自我秩序」这条ISTJ最信的东西。"
+      },
+      "post": {
+        "cover_title": "自学考进交大，他靠什么",
+        "body": "刷到这条新闻的时候，\n我停了三秒。\n\n一个少年，没人看着，\n自己把自己送进了上海交大。\n\n姐姐在镜头前哽咽，\n说「他自己熬过来的」。\n\n没有补习班，\n没有家长天天盯，\n全靠自己。😭\n\nISTJ会告诉你：\n这从来不是一条爽文。\n\n真正的自律，\n不是有人管才努力，\n是没人看的时候，\n你依然按自己的秩序走。🧭\n\n把日子过成清单，\n把目标拆成每天一点点，\n把「我该」变成「我想」。\n\n这就是最硬核的底气。\n\n他不是天才，\n他只是把「没人管」\n过成了「自己说了算」。\n\n💬 你靠什么，\n撑过没人看着你的那段日子？\n评论区聊聊。",
+        "hashtags": [
+          "#自学逆袭",
+          "#自律",
+          "#MBTI",
+          "#ISTJ",
+          "#自我成长"
+        ],
+        "cover_visual": "深夜台灯下伏案学习的少年剪影 + 姐姐哽咽的虚化侧影；大字『没人管，才见真自律』；蓝灰冷调 + 一点暖黄灯光",
+        "cta": "你靠什么，撑过没人看着你的那段日子？评论区聊聊你的答案。",
+        "post_time": "12:00-13:00（教育/成长类·午间学习场景高峰）",
+        "avoid": "不渲染寒门悲情、不制造教育焦虑、不贬低应试/鸡娃；落点「自我秩序/自律」，规避「逆袭神话」夸大"
       },
       "post_spec_version": "v2.0"
     },
@@ -8762,6 +9075,75 @@
         "signal": "美颜主任医师12.4M",
         "created_at": "2026-08-02T06:15:00+08:00",
         "ttl_hours": 72
+      }
+    },
+    "D21-B17-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B17-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B17"
+        },
+        "created_at": "2026-08-26T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-26-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-26-0800"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B17-ENFJ-1",
+        "title": "本想拍繁星，镜头一转却拍到妈妈的繁忙——ENFJ的Fe没有把这当成一条生活vlog。它在0.3秒里读懂了这一幕真正的分量：妈妈的爱，从来不挂在嘴上，全藏在『你不在场』的忙碌里",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "情感共鸣",
+        "arm_id": 2,
+        "batch_num": 2,
+        "signals": [
+          "本想拍繁星却拍到妈妈的繁忙(8分·情感共鸣·亲情/家庭·Fe共情·依恋母题延续·heat33)"
+        ],
+        "paradigm": "情感共鸣·Fe沉默付出/依恋母题型(ENFJ情感共鸣batch2·拍繁星妈妈8分·Fe共情:爱=无数个你不在场的忙碌瞬间·Ni洞察:回头看见身边人·依恋母题延续·严禁牺牲绑架/道德绑架)",
+        "role": "P0·ENFJ情感共鸣batch2续触(拍繁星妈妈8·亲情/家庭·Fe共情·依恋母题延续)·微博Fe公共舆论位·方向船key_decision「ENFJ情感共鸣(拍繁星8·亲情/家庭·依恋母题延续·情感共鸣batch1→batch2)」",
+        "direction_compliance": "D21-B17 direction-vessel key_decision对齐·ENFJ×情感共鸣×微博",
+        "flagship": false,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(B17局部轮出批·ENFJ情感共鸣batch2达上限·B18必轮出)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENFJ的Fe对「他人的付出」极度敏感，尤其痛在「爱以沉默的忙碌表达」；「拍繁星拍到妈妈的繁忙」击中的是「我总在追逐远方，却忽略了身边那个一直为我忙碌的人」。",
+          "hook_first3": "第一行「本想拍繁星，镜头一转却拍到妈妈的繁忙」摆反差；第二行「她没说什么，只是一直在忙」点细节；第三行「ENFJ读到的不是一条vlog，是妈妈爱你的方式：从来不挂在嘴上，全藏在忙碌里」切入Fe共情。",
+          "emotion_curve": "期待(拍繁星) → 意外(拍到妈妈) → 心酸(沉默的忙碌) → 洞察(爱藏在忙碌里) → 感恩(回头看见她)。",
+          "structure": [
+            "钩子·拍繁星拍到妈妈",
+            "细节·妈妈一直在忙",
+            "洞察·爱=沉默的付出",
+            "迁移·回头看见身边人",
+            "CTA·你多久没认真看妈妈了"
+          ],
+          "differentiation": "别人写「母爱伟大/牺牲奉献/亲情鸡汤」，我们写Fe共情——「爱不是一场盛大的表白，是无数个你不在场的忙碌瞬间」；不煽情、不道德绑架、落点「看见与被看见」。"
+        }
       }
     },
     "D20-B8-ENTP-1": {
@@ -11061,6 +11443,91 @@
         }
       }
     },
+    "D21-B17-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B17-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B17"
+        },
+        "created_at": "2026-08-26T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-26-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-26-0800"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B17-ISTJ-1",
+        "title": "少年『自学』考上上海交大，姐姐哽咽着说『他自己熬过来的』——ISTJ的Si没有把这当成一条逆袭爽文。它看到的是这背后最硬核的真相：真正的自律，是没人看着你的时候，你依然按自己的秩序走",
+        "hook": "情感共鸣",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "少年『自学』考上上海交大姐姐哽咽(9分·情感共鸣·自我觉醒/教育逆袭·自律坚持+姐姐哽咽亲情·heat90)"
+        ],
+        "paradigm": "情感共鸣·Si自我秩序/自律坚持型(ISTJ情感共鸣batch1换hook·少年自学9分旗舰·Si秩序:自律=没人看着时的自我秩序·姐姐哽咽亲情锚点·依恋母题桥接自我觉醒·严禁渲染寒门悲情/教育焦虑)",
+        "role": "P0·ISTJ情感共鸣batch1换hook(少年自学9旗舰·自律坚持+姐姐哽咽亲情)·小红书Si位·方向船key_decision「ISTJ情感共鸣(少年自学9·自我觉醒/教育逆袭·社会证明batch1换hook·SJ象限)」",
+        "direction_compliance": "D21-B17 direction-vessel key_decision对齐·ISTJ×情感共鸣×小红书",
+        "flagship": true,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(B17局部轮出批·ISTJ社会证明→情感共鸣换hook·少年自学9旗舰)·方向船mandates合规·避开INFP疲劳(2.1>2.0)映射ISTJ",
+        "brief": {
+          "pain_point": "ISTJ的Si依赖「可预期的秩序」带来安全感；「没人管的孩子自学考上交大」击中的是「在无序环境里，一个人如何靠自己建立秩序」——这正是Si最敬佩、也最需要的确定性。",
+          "hook_first3": "第一行「少年『自学』考上上海交大，姐姐当场哽咽」摆事实；第二行「没有补习班、没有家长盯，全靠自己熬」点反差；第三行「ISTJ看到的不是爽文，是自律背后最硬核的秩序：没人看着，你依然按自己的节奏走」切入Si。",
+          "emotion_curve": "惊叹(自学逆袭) → 心疼(姐姐哽咽/没人管) → 敬佩(自律秩序) → 笃定(靠自己建立秩序) → 行动(我也能守住自己的节奏)。",
+          "structure": [
+            "钩子·自学考上交大",
+            "细节·姐姐哽咽的亲情锚点",
+            "洞察·自律=自己管自己的秩序",
+            "迁移·没人监督时的自我秩序",
+            "CTA·你靠什么撑过低谷"
+          ],
+          "differentiation": "别人写「寒门逆袭/教育焦虑/鸡娃对照」，我们写Si秩序感——「自律不是苦情，是把没人管的日子过成自己说了算的秩序」；不贩卖教育焦虑、不渲染寒门悲情、落点「自我秩序」这条ISTJ最信的东西。"
+        },
+        "post": {
+          "cover_title": "自学考进交大，他靠什么",
+          "body": "刷到这条新闻的时候，\n我停了三秒。\n\n一个少年，没人看着，\n自己把自己送进了上海交大。\n\n姐姐在镜头前哽咽，\n说「他自己熬过来的」。\n\n没有补习班，\n没有家长天天盯，\n全靠自己。😭\n\nISTJ会告诉你：\n这从来不是一条爽文。\n\n真正的自律，\n不是有人管才努力，\n是没人看的时候，\n你依然按自己的秩序走。🧭\n\n把日子过成清单，\n把目标拆成每天一点点，\n把「我该」变成「我想」。\n\n这就是最硬核的底气。\n\n他不是天才，\n他只是把「没人管」\n过成了「自己说了算」。\n\n💬 你靠什么，\n撑过没人看着你的那段日子？\n评论区聊聊。",
+          "hashtags": [
+            "#自学逆袭",
+            "#自律",
+            "#MBTI",
+            "#ISTJ",
+            "#自我成长"
+          ],
+          "cover_visual": "深夜台灯下伏案学习的少年剪影 + 姐姐哽咽的虚化侧影；大字『没人管，才见真自律』；蓝灰冷调 + 一点暖黄灯光",
+          "cta": "你靠什么，撑过没人看着你的那段日子？评论区聊聊你的答案。",
+          "post_time": "12:00-13:00（教育/成长类·午间学习场景高峰）",
+          "avoid": "不渲染寒门悲情、不制造教育焦虑、不贬低应试/鸡娃；落点「自我秩序/自律」，规避「逆袭神话」夸大"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D20-B6-2": {
       "vessel": {
         "version": "1.0",
@@ -13070,6 +13537,75 @@
             "共鸣收尾"
           ],
           "differentiation": "把「苦情」重新定义为「信念」，符合 INFJ 的 Ni 长期主义视角"
+        }
+      }
+    },
+    "D21-B17-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B17-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B17"
+        },
+        "created_at": "2026-08-26T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-26-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-26-0800"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B17-ENTJ-1",
+        "title": "演员陈明求职上热搜后，热度一直没退——ENTJ的Te没有把这当成一条八卦。它看到的是中年转型最真实的命题：身份不是职位给的，是价值自己重新定价的",
+        "hook": "身份认同",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "身份认同",
+        "arm_id": 5,
+        "batch_num": 2,
+        "signals": [
+          "演员陈明求职上热搜后热度不减(5分·身份认同·中年转型/自我觉醒·Te成就重估·自我觉醒主线·heat25)"
+        ],
+        "paradigm": "身份认同·Te价值重估/自我觉醒型(ENTJ身份认同batch2·陈明求职5分·Te洞察:身份≠价值·价值重新定价·自我觉醒主线延续·严禁渲染中年焦虑·用自我觉醒/转型角度)",
+        "role": "P1·ENTJ身份认同batch2续触(陈明求职5·中年转型/自我觉醒·Te成就重估)·抖音Te执行位·方向船key_decision「ENTJ身份认同(陈明求职5·中年转型自我觉醒·身份认同batch1→batch2·自我觉醒主线延续)」",
+        "direction_compliance": "D21-B17 direction-vessel key_decision对齐·ENTJ×身份认同×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B17局部轮出批·ENTJ身份认同batch2达上限·B18必轮出·5分弱信号但延续主线)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENTJ的Te对「成就与价值」敏感，尤其在意「身份标签被外界定义」；「演员陈明中年求职上热搜」击中的是「当旧身份失效，一个人如何重新定义自己的价值」。",
+          "hook_first3": "第一行「演员陈明求职上热搜后，热度一直没退」摆事实；第二行「曾经的舞台身份，现在要从零开始找工作」点反差；第三行「ENTJ看到的是中年转型最真实的命题：身份不是职位给的，是价值自己重新定价的」切入Te重估。",
+          "emotion_curve": "意外(演员求职) → 共鸣(中年转型) → 洞察(身份≠价值) → 觉醒(重新定价) → 行动(敢重来)。",
+          "structure": [
+            "钩子·演员求职热搜",
+            "反差·旧身份失效",
+            "洞察·身份vs价值",
+            "迁移·自我觉醒主线",
+            "CTA·你敢不敢重新开始"
+          ],
+          "differentiation": "别人写「中年危机/明星落魄/职场焦虑」，我们写Te自我觉醒——「转型不是掉价，是把价值从职位里解绑出来」；不渲染中年焦虑、不消费落魄、落点「价值重新定价」。"
         }
       }
     },
@@ -16799,6 +17335,75 @@
         "status": "active"
       }
     },
+    "D21-B17-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B17-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B17"
+        },
+        "created_at": "2026-08-26T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-26-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-26-0800"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B17-INTJ-1",
+        "title": "人民日报评『大学生家长群』——INTJ的Ni没有把这当成一条教育新闻。它看到的是一个更普遍的问题：当『为你好』变成『替你活着』，边界感才是成年人的第一课",
+        "hook": "反常识",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "人民日报评『大学生家长群』(6分·反常识·代际边界/教育·官方媒体质疑常态化做法·Ni-Te独立性·heat36)"
+        ],
+        "paradigm": "反常识·Ni-Te边界感/独立性型(INTJ反常识batch1换hook·人民日报家长群6分·Ni洞察:为你好vs替你活·边界感=成年第一课·严禁渲染代际对立·用独立性/边界角度)",
+        "role": "P1·INTJ反常识batch1换hook(人民日报家长群6·代际边界/教育·Ni-Te独立性)·B站深度位·方向船key_decision「INTJ反常识(人民日报评家长群6·代际边界·好奇心batch2换hook·零维护信任8.56)」",
+        "direction_compliance": "D21-B17 direction-vessel key_decision对齐·INTJ×反常识×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B17局部轮出批·INTJ好奇心→反常识换hook·零维护信任8.56全池最高)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INTJ的Ni对「系统性问题」敏感，尤其在意「独立性被外部干预侵蚀」；「人民日报评大学生家长群」击中的是「从大学开始的过度监护，正在剥夺一个人真正成年的机会」。",
+          "hook_first3": "第一行「人民日报评『大学生家长群』」摆权威信号；第二行「大学还建家长群，老师@家长报作业」点荒诞；第三行「INTJ看到的是一个更普遍的问题：当『为你好』变成『替你活着』，边界感才是成年人的第一课」切入Ni洞察。",
+          "emotion_curve": "意外(权威媒体评论) → 荒诞(大学家长群) → 洞察(过度监护) → 独立(边界感) → 行动(学会对自己负责)。",
+          "structure": [
+            "钩子·人民日报评家长群",
+            "现象·大学还建家长群",
+            "洞察·为你好vs替你活",
+            "迁移·边界感=成年第一课",
+            "CTA·你什么时候开始自己做决定"
+          ],
+          "differentiation": "别人写「代际对立/家长控制欲/教育吐槽」，我们写Ni-Te独立性——「真正的独立，不是反抗父母，是学会为自己的选择负责」；不渲染代际对立、不judge家长、落点「边界感与独立」。"
+        }
+      }
+    },
     "D21-B8-INFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -18077,6 +18682,75 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B17-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B17-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B17"
+        },
+        "created_at": "2026-08-26T08:35:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-26-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-25-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-26-0800"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B17-INTP-1",
+        "title": "店门口写着『禁止殴打顾客，除非忍不住』——INTP的Ti没有把这当成一句搞笑文案。它在0.5秒里拆出了这背后的真相：最高级的服务警示，从来不是恐吓，是把规则反着说给人听",
+        "hook": "反常识",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 3,
+        "batch_num": 2,
+        "signals": [
+          "禁止殴打顾客 除非忍不住(7分·反常识·反常识营销/表里反差·Ti-Ne解构·heat31)"
+        ],
+        "paradigm": "反常识·Ti-Ne反讽逻辑/表里反差型(INTP反常识batch2·禁止殴打7分·Ti解构:反讽>恐吓·规则反向表达·幽默背后的逻辑·严禁暴力渲染·用反常识营销幽默角度)",
+        "role": "P0·INTP反常识batch2续触(禁止殴打7·营销反差·Ti-Ne解构)·B站深度位·方向船key_decision「INTP反常识(禁止殴打7·反常识营销表里反差·反常识batch1→batch2巩固·NT象限)」",
+        "direction_compliance": "D21-B17 direction-vessel key_decision对齐·INTP×反常识×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B17局部轮出批·INTP反常识batch2达上限·B18必轮出)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INTP的Ti对「逻辑自洽」极度敏感，尤其享受「规则被反着说却依然成立」的智力快感；「禁止殴打顾客 除非忍不住」击中的是「幽默反讽背后，藏着比直白警告更有效的说服逻辑」。",
+          "hook_first3": "第一行「店门口写着：禁止殴打顾客，除非忍不住」摆反常识；第二行「没人会真的动手，但每个人都会笑」点反差效果；第三行「INTP拆出的是：最高级的规则，不是恐吓，是把底线反着说，让人自己笑完自己记住」切入Ti解构。",
+          "emotion_curve": "错愕(这也能写?) → 会心一笑(幽默) → 洞察(反讽>恐吓) → 顿悟(规则反向表达) → 迁移(沟通里的幽默)。",
+          "structure": [
+            "钩子·禁止殴打顾客",
+            "反常识·反着说的规则",
+            "洞察·幽默比恐吓有效",
+            "迁移·表达的门道",
+            "CTA·你见过最妙的反讽是什么"
+          ],
+          "differentiation": "别人写「商家神文案/搞笑合集」，我们写Ti-Ne解构——「反讽不是抖机灵，是让规则在笑里完成传达」；不渲染暴力、不低俗化、落点「幽默背后的逻辑」。"
+        }
       }
     },
     "D21-B10-ENFJ-1": {
