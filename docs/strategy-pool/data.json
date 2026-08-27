@@ -798,6 +798,33 @@
       "strategy_match_score": "✅ 100% > 0.4·方向保持",
       "mbti_coverage": "✅ 5 ≥ 3·无单一人格垄断",
       "hook_diversity": "✅ 0.5 > 0.3·无钩子同质化(社会货币连续5批冷却)"
+    },
+    "d21_b18_execution": {
+      "strategy_match": "100% (5/5·hook+channel全匹配·0 dissent)",
+      "strategy_match_delta": "0 vs D21-B17 1.0 (连续7批100%对齐)",
+      "cash_roi": "null (支付~706h·696h已破·24阈值全破·38批零结算·全ROI永久作废)",
+      "mbti_coverage": 5,
+      "hook_diversity": 0.5,
+      "hook_diversity_delta": "0 vs D21-B17 0.5 (3/6钩活跃·情感共鸣2+社会证明1+反常识2·好奇心双降产·finance降产5臂)",
+      "hhi": 0.28,
+      "hhi_delta": "0 vs D21-B17 0.28 (四渠道2-1-1-1·小红书40%·微博/B站/抖音各20%)",
+      "ttl_expired": 0,
+      "ttl_expired_pct": 0.0,
+      "dissent_count": 0,
+      "content_reused": 0,
+      "block_rate": 0.0,
+      "blocked_arms": 0,
+      "strategy_stale": false,
+      "finance_reduction": "7臂¥175→5臂¥125(分发桶91.6%距95%¥4,460差¥160·7臂¥175将破95%熔断线¥4,475·budget-vessel D26 recommendation≤¥125/日审慎·INTP好奇心+ENTJ好奇心双降产保留active供B19)",
+      "match_gate": "✅ 未触发(执行层strategy_match=100%>50%·信号命中率28.3%为环境噪声不进入gate·字段拆分ruling-017子裁决E)",
+      "executed_at": "2026-08-27T09:25:00+08:00",
+      "note": "D21-B18大面积轮出批·finance降产5臂(¥125·原方向7臂¥175)·ENFP情感共鸣batch1恢复触达(82岁跨栏9旗舰)+ISTJ社会证明batch1换hook(扶老人获退款7)+INTJ反常识batch2续触(AI真人脸8)+INFJ情感共鸣batch1重启(孩子装病7)+ENTP反常识batch1重启(13岁AI8)·100%完美匹配0 dissent·四渠道2-1-1-1(小红书2/微博1/B站1/抖音1)·HHI 0.28·3钩活跃(情感共鸣2+社会证明1+反常识2)·INTP/ENTJ好奇心双降产(分发桶95%熔断线)·4恢复候选落地3个(ENFP/INFJ/ENTP)+INFP继续轮休"
+    },
+    "three_question_test_d21_b18": {
+      "cash_roi": "⛔ 支付盲(null·~706h·24阈值全破)·不触发方向切换",
+      "strategy_match_score": "✅ 100% > 0.4·方向保持",
+      "mbti_coverage": "✅ 5 ≥ 3·无单一人格垄断",
+      "hook_diversity": "✅ 0.5 > 0.3·无钩子同质化(社会货币连续6批冷却·好奇心finance降产)"
     }
   },
   "vessel": {
