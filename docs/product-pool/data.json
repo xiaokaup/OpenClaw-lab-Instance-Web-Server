@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-08-26-1000",
+    "id": "product-available-2026-08-27-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D26-B1·八月D26·周三"
+      "batch": "D27-B1·八月D27·周四"
     },
-    "created_at": "2026-08-26T10:00:00+08:00",
+    "created_at": "2026-08-27T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -26,15 +26,15 @@
     "dependencies": [
       {
         "vessel_type": "direction-vessel",
-        "vessel_id": "direction-pool-2026-08-26-0842",
-        "source": "策策·D21-B17",
-        "note": "方向：B17局部轮出批降5臂(¥125)·B16三臂达batch2必轮出(INFJ情感共鸣/ENTP反常识/INTJ好奇心)·ENFP/INFP/ISFP恢复条件未满足降5臂·INTP修复链第10环(禁止殴打7)·情感共鸣#1连续3批登顶(少年自学9+拍繁星8)·社会货币连续5批冷却·match gate未触发(执行层strategy_match=100%·连续6批)·B18大面积轮出预警"
+        "vessel_id": "direction-vessel-2026-08-27-0815",
+        "source": "策策·D21-B18",
+        "note": "方向：B18大面积轮出批·4恢复候选落地3个(ENFP自我觉醒恢复/INFJ情感共鸣重启/ENTP反常识重启)+INFP继续轮休(疲劳~2.0≥2.0)·INTP修复链第11环(好奇心换hook)·社会货币连续6批冷却结构性停用坐实(ESC-08-26-1)·match gate未触发(执行层strategy_match=100%·连续7批)·strategy-pool stale第4次·B19大面积轮出预警"
       },
       {
         "vessel_type": "content-pool",
         "vessel_id": "content-active.json",
         "source": "设设·内容池",
-        "note": "173条目·16型覆盖·B17局部轮出批满产5臂fresh(ISTJ少年自学9.0旗舰+ENFJ拍繁星8.7+INTP禁止殴打8.6+INTJ人民日报家长群8.5+ENTJ陈明求职8.5)·内容池173>>25软上限CRITICAL"
+        "note": "180条目·16型覆盖·B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·avg8.73·内容池180>>25软上限CRITICAL·AI题材4/7集中"
       },
       {
         "vessel_type": "profiles-pipeline",
@@ -47,7 +47,7 @@
       "purpose": "荐荐管理的产品目录池·策略v2.0：产品与支付脱钩·全部重构为一次性交付物·优先人格积分卡类·供策策/投投/控控/大卡/设设/析析消费",
       "excludes": "定价决策权(属策策·但定价不再作为交付前置)·内容生产权(属设设)·预算分配权(属大卡)",
       "action_threshold": {
-        "payment_uncoupled": "🔴 支付停滞~682h·23阈值全破·8/27 720h不可逆防线倒计时~1.6天(~37h终局)·策略v2.0起产品交付不再等待支付·所有产品产出即交付",
+        "payment_uncoupled": "🔴 支付停滞~707h·24阈值全破·8/27 720h不可逆防线倒计时~13h(今天即最后一天)·策略v2.0起产品交付不再等待支付·所有产品产出即交付",
         "l1_refactored": "L1深度人格报告交付侧改为一次性交付形态·不再等待支付·购买页不再作为交付前置",
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡·不再被Plan C/产研桶阻塞",
         "l3_refactored": "L3-A/B/C重构为一次性交付物·不再等待产研桶冻结释放",
@@ -55,15 +55,15 @@
         "s2_delivered": "✅ S2依恋类型积分卡已交付(CSV+HTML+v2.0双Tab·依恋母题连续5批+外部热点验证)·S2 v1.1双人匹配卡随P0交付",
         "s3_delivered": "✅ S3认知功能速查卡已交付(CSV+HTML+v2.0双Tab·8认知功能·'超能力/副作用'游戏化解读)",
         "product_retirement": "无产品需退役·L1主力转一次性交付·新增S系列积分卡产品线",
-        "supply_rotation_batch_full": "🟢 D21-B17局部轮出批满产5臂·block_rate 0%·strategy_match连续6批100%·INTP修复链第10环(禁止殴打7)·情感共鸣#1连续3批登顶(少年自学9旗舰)·产品方向不受影响",
-        "streak_restored": "🟢 strategy_match 100%·连胜恢复连续6批·>50% match gate未触发",
-        "content_ttl_relieved": "🟢 D21-B17 0/5臂TTL过期·5臂全fresh首用·TTL硬上限72h仍未enforce(ruling-015逾期18天)",
-        "672h_breached": "🔴🔴🔴🔴🔴 672h(28天)已破·23阈值全破·720h(30天)8/27 23:00为公认不可逆防线(~1.6天·~37h终局倒计时)",
-        "plan_c_ruling015_execution_zero_426h": "🔴 ruling-015执行仍零~426h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
-        "psych_engine_frozen_52d": "🔴 psych-engine results.jsonl冻结~52天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策(积分卡SP型标注待数据)",
-        "ruling_027_pointer_closed": "🟢 direction-batch-current指针已atomic_commit→B17(08:59:30)·stale本批闭环·但B14/B16/B17三次反复未固化"
+        "supply_rotation_batch_full": "🟢 D21-B18大面积轮出批5臂部署(7臂fresh满产·2臂finance降产)·block_rate 0%·strategy_match连续7批100%·INTP修复链第11环(好奇心换hook)·ENFP恢复触达82岁跨栏9旗舰·产品方向不受影响",
+        "streak_restored": "🟢 strategy_match 100%·连胜恢复连续7批·>50% match gate未触发",
+        "content_ttl_relieved": "🟢 D21-B18 0/7臂TTL过期·7臂全fresh首用·TTL硬上限72h仍未enforce(ruling-015逾期19天)",
+        "696h_breached": "🔴🔴🔴🔴🔴 696h(29天)已破·24阈值全破·720h(30天)8/27 23:00为公认不可逆防线(~13h·今天即最后一天)",
+        "plan_c_ruling015_execution_zero_438h": "🔴 ruling-015执行仍零~438h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
+        "psych_engine_frozen_53d": "🔴 psych-engine results.jsonl冻结~53.45天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策(积分卡SP型标注待数据)",
+        "ruling_027_pointer_stale_4th": "🟡 direction-batch-current指针仍B17·strategy-pool仍B17·live三文件已B18·stale第4次反复(B14/B16/B17/B18)·策策须原子提交固化"
       },
-      "expires_after": "2026-08-27T10:00:00+08:00",
+      "expires_after": "2026-08-28T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -103,10 +103,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D26-B1·八月D26·周三",
-  "timestamp": "2026-08-26T10:00:00+08:00",
+  "batch": "D27-B1·八月D27·周四",
+  "timestamp": "2026-08-27T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 682,
+    "stagnant_hours": 707,
     "thresholds_breached": [
       168,
       192,
@@ -130,22 +130,24 @@
       600,
       624,
       648,
-      672
+      672,
+      696
     ],
-    "thresholds_total": 23,
+    "thresholds_total": 24,
     "milestone_600h": "BREACHED at 2026-08-22T23:00:00+08:00·S1首次25天",
     "milestone_624h": "BREACHED at 2026-08-23T23:00:00+08:00·S1首次26天",
     "milestone_648h": "BREACHED at 2026-08-24T23:00:00+08:00·S1首次27天",
     "milestone_672h": "BREACHED at 2026-08-25T23:00:00+08:00·S1首次28天",
+    "milestone_696h": "BREACHED at 2026-08-26T23:00:00+08:00·S1首次29天",
     "next_threshold": {
-      "hours": 696,
-      "at": "2026-08-26T23:00:00+08:00",
-      "label": "29天"
+      "hours": 720,
+      "at": "2026-08-27T23:00:00+08:00",
+      "label": "30天·公认不可逆最终防线·~13h倒计时"
     },
     "final_defense": {
       "hours": 720,
       "at": "2026-08-27T23:00:00+08:00",
-      "label": "30天·公认不可逆防线·~1.6天倒计时(~37h终局)"
+      "label": "30天·公认不可逆防线·~13h倒计时(今天即最后一天)"
     },
     "confirmed_revenue": 300.37,
     "zero_settlement_batches": 38,
@@ -157,14 +159,14 @@
     "spent": 390,
     "remaining_cap": 110,
     "frozen_bucket": 1220,
-    "frozen_days": 28,
+    "frozen_days": 29,
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "local_rotation_batch_5of5_streak_6batch_100pct_emotional_resonance_top1_3batch_intp_ring10_user_insight_reconnected_pointer_closed_but_672h_breached_23_thresholds_720h_terminal_37h_distribution_91pct_jinjin_audit_4d",
-    "key_risk": "支付停滞~682h·672h(28天)已破·23阈值全破·720h不可逆防线8/27倒计时~1.6天(~37h终局)·Plan C执行零~426h·psych-engine冻结52天(SP象限盲区·S1已标注待数据)·分发桶91.6%触黄色线·社会货币连续5批冷却·TTL硬上限未enforce(逾期18天)·进进审计真空4天·B18大面积轮出预警",
-    "key_positive": "✅ 策略v2.0落地：产品与支付脱钩·S1/S2/S3+#4/#5/N1记分卡全一次性交付(7箱已发货)·B17局部轮出批5臂(0 block·连续6批100%)·INTP修复链第10环(禁止殴打7·从9批断档彻底走出)·情感共鸣#1连续3批登顶(少年自学9旗舰+拍繁星8·依恋母题+自我觉醒双线)·析析重连+direction指针atomic_commit闭环·ISTJ/INTJ双换hook·外部市场验证(Excel评分卡+依恋类型+认知功能三方向)·内容池+外部双渠道方向来源已启用",
-    "d26_health": 5.4
+    "trend": "mass_rotation_batch_5of7_streak_7batch_100pct_enfp_restored_82跨栏9_intp_ring11_but_696h_breached_24_thresholds_720h_terminal_13h_distribution_94pct_social_currency_structural_stop_jinjin_audit_5d",
+    "key_risk": "支付停滞~707h·696h(29天)已破·24阈值全破·720h不可逆防线8/27倒计时~13h(今天即最后一天)·Plan C执行零~438h·psych-engine冻结53.45天(SP象限盲区·S1已标注待数据)·分发桶94.25%逼近95%熔断线·社会货币连续6批冷却结构性停用坐实·strategy-pool stale第4次·进进审计真空5天·B18七臂4臂AI题材集中·B19大面积轮出预警",
+    "key_positive": "✅ 策略v2.0落地：产品与支付脱钩·S1/S2/S3+#4/#5/N1记分卡全一次性交付(7箱已发货)·B18大面积轮出批5臂(0 block·连续7批100%)·ENFP恢复触达(82岁跨栏9旗舰·自我觉醒)+INTP修复链第11环(好奇心换hook)·ISTJ社会证明换hook(扶老人7)·INFJ/ENTP重启(4恢复候选落地3个)·外部市场验证(Excel评分卡+依恋类型+认知功能三方向)·内容池+外部双渠道方向来源已启用",
+    "d27_health": 5.2
   },
   "pipeline": {
     "delivered": [
