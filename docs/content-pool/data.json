@@ -1,35 +1,36 @@
 {
   "pool_status": {
-    "level": 173,
+    "level": 180,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
-    "warning": "🔴🔴 池168>>25软上限·投投零部署为根因·非内容过剩·D21-B16大面积轮出批满产7臂fresh(INFJ婚礼指纹9.0旗舰+INTP印度乞丐8.8恢复+ENTJ硕士打螺丝8.8换hook+ENFJ失联船员8.7换hook+ISTJ官方确认8.7换hook+INTJ 23点睡8.6+ENTP AI短剧8.6)·方向船B16明令7臂全fresh·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-26T08:35:00+08:00",
-    "last_creation_batch": "D21-B17",
-    "last_deployment": "2026-08-26T09:25:00+08:00",
-    "last_deployment_batch": "D21-B17",
-    "net_change_this_batch": 5,
+    "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
+    "last_creation": "2026-08-27T08:30:00+08:00",
+    "last_creation_batch": "D21-B18",
+    "last_deployment": "2026-08-27T09:25:00+08:00",
+    "last_deployment_batch": "D21-B18",
+    "net_change_this_batch": 7,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 173,
-    "active_items": 105,
+    "total_items": 180,
+    "active_items": 84,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B17局部轮出批5臂fresh(ISTJ情感共鸣9.0旗舰/ENFJ情感共鸣8.7/INTP反常识8.6/INTJ反常识8.5/ENTJ身份认同8.5)·INFJ+ENTP轮休1批·ENFP/INFP/ISFP/SP象限excluded·社会货币0臂(连续5批冷却·禁止强推)·小红书post成品1条(ISTJ)+brief 5条全填实·方向船降为5臂(从7臂)·池168>>25豁免进一步降产(轮出批fresh必需)",
-    "fresh_arms_this_batch": 5,
+    "sheshe_supplement": "设设D21-B18大面积轮出批7臂fresh(ENFP情感共鸣9.0旗舰82岁跨栏/ISTJ社会证明8.8扶老人/INTJ反常识8.8 AI真人脸/INTP好奇心8.6比尔盖茨/INFJ情感共鸣8.7孩子装病/ENTP反常识8.7 13岁AI/ENTJ好奇心8.5英伟达)·4恢复候选落地3个(INFJ/ENTP/ENFP)+INFP继续轮休·ENFJ/ISFP/SP象限excluded·社会货币0臂(连续6批冷却结构性停用·禁止强推)·小红书post成品2条(ENFP+ISTJ)+brief 7条全填实·恢复满产7臂¥175",
+    "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 21,
-      "brief_added": 46,
-      "xhs_active_posts_completed": 15,
+      "posts_added": 23,
+      "brief_added": 53,
+      "xhs_active_posts_completed": 17,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B16新增1条post(ISTJ社会证明)+7条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续4批冷却)",
+      "note": "小红书成品帖子v2.0持续落地·B18新增2条post(ENFP情感共鸣+ISTJ社会证明)+7条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续6批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
-      "b17_posts_completed": 1
+      "b17_posts_completed": 1,
+      "b18_posts_completed": 2
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
   },
@@ -5865,9 +5866,252 @@
       "deployed_arm": 5,
       "deployed_budget": 25,
       "has_post": false
+    },
+    {
+      "id": "D21-B18-ENFP-1",
+      "title": "82岁中国老人在韩国夺得跨栏世界冠军——ENFP没有把它当成一条「不服老」的鸡汤。它的Ne-Fi看到的是：年龄只是日历上的数字，不是人生赛道的终点线；你心里那团没灭的火，才是你真实的年龄",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-ENFP-1.json",
+      "paradigm": "情感共鸣·Ne-Fi可能性解放型(ENFP情感共鸣batch1恢复触达·82岁跨栏9分自我觉醒母题旗舰·Ne:可能性不因年龄封印·Fi:活成真实自我·轮休2批后恢复·9分旗舰对冲信任6.49·confidence_low 0.224不确定性·严禁渲染年龄焦虑/悲情)",
+      "role": "P0·ENFP情感共鸣batch1恢复触达(82岁跨栏9旗舰·自我觉醒母题旗舰·年龄突破+生命不息追梦)·小红书NF位·方向船key_decision「ENFP自我觉醒恢复触达(82岁跨栏9·9分旗舰对冲信任不确定性)」",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "last_used": "2026-08-27T09:25:00+08:00",
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": "D21-B18",
+      "deployed_arm": 1,
+      "writeback_note": "B18大面积轮出批·ENFP情感共鸣batch1恢复触达 fresh(82岁跨栏9旗舰·自我觉醒/年龄突破·Ne-Fi追梦/真实自我·轮休2批后恢复·9分旗舰对冲信任6.49 confidence_low 0.224)·P0·flagship·严禁渲染年龄焦虑/悲情",
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B18-ISTJ-1",
+      "title": "店主扶起摔倒老人反被索赔1.9万，最终收到全额退款——ISTJ的Si没有把这当成一条「好人有好报」的爽文。它看到的是更深的东西：善意或许会迟到被误解，但规则和证据，最终会把公道还给你",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.8,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-ISTJ-1.json",
+      "paradigm": "社会证明·Si规则正义型(ISTJ社会证明batch1换hook·扶老人获退款7分社会公正反转·Si:规则/证据是善意最后的护栏·情感共鸣batch1(B17少年自学9)换hook到社会证明·SJ象限维持·heat3157万本批最高·严禁渲染扶不扶对立焦虑)",
+      "role": "P0·ISTJ社会证明batch1换hook(扶老人获退款7·社会公正反转·heat31.5M本批最高)·小红书SJ位·方向船key_decision「ISTJ社会证明(扶老人获退款7·社会公正反转·情感共鸣batch1换hook·SJ象限维持)」",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "last_used": "2026-08-27T09:25:00+08:00",
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": "D21-B18",
+      "deployed_arm": 2,
+      "writeback_note": "B18·ISTJ社会证明batch1换hook fresh(扶老人获退款7·社会公正反转·heat31.5M本批最高·Si规则/正义·情感共鸣batch1换hook·SJ象限维持)·P0·严禁渲染扶不扶对立焦虑",
+      "deployed_budget": 25,
+      "has_post": true
+    },
+    {
+      "id": "D21-B18-INTJ-1",
+      "title": "AI越发达，真人脸越值钱——INTJ的Ni-Te没有把这当成一句营销噱头。它看到的是一个正在发生的稀缺性反转：当合成可以无限复制，「真实」就从免费品变成了硬通货",
+      "hook": "反常识",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.8,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-INTJ-1.json",
+      "paradigm": "反常识·Ni-Te稀缺性反转型(INTJ反常识batch2续触·AI真人脸更值钱8分认知反转·Ni:预判稀缺性反转·Te:价值=不可复制性·反常识batch1(B17人民日报家长群6)续触batch2·零维护信任8.56全池最高·严禁渲染AI恐慌)",
+      "role": "P1·INTJ反常识batch2续触(AI真人脸8·认知反转/稀缺性反转·B19必轮出预警)·B站NT位·方向船key_decision「INTJ反常识batch2续触(AI真人脸8·认知反转·Ni-Te解构)」",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "last_used": "2026-08-27T09:25:00+08:00",
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": "D21-B18",
+      "deployed_arm": 3,
+      "writeback_note": "B18·INTJ反常识batch2续触 fresh(AI真人脸8·认知反转/稀缺性反转·Ni-Te解构·反常识batch1续触batch2·零维护信任8.56全池最高·B19必轮出预警)·P1·严禁渲染AI恐慌",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B18-INTP-1",
+      "title": "比尔盖茨罕见发长文警告AI——INTP的Ti-Ne没有把它当成又一轮「狼来了」。它真正好奇的是：一个见过技术周期的人，为什么偏偏在「系统层面」停下来提醒全人类",
+      "hook": "好奇心",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-INTP-1.json",
+      "paradigm": "好奇心·Ti-Ne系统思考型(INTP好奇心batch1换hook·比尔盖茨AI警告7分系统性远见·Ti:系统级风险拆解·Ne:技术vs治理多维可能·反常识batch2(B17禁止殴打7)达上限换hook到好奇心·NT象限维持·严禁渲染AI恐慌)",
+      "role": "P1·INTP好奇心batch1换hook(比尔盖茨AI警告7·系统性远见/系统思考)·B站NT位·方向船key_decision「INTP好奇心(比尔盖茨AI警告7·Ti-Ne系统思考·反常识batch2达上限换hook)」",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "last_used": null,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": null,
+      "deployed_arm": null,
+      "writeback_note": "finance_cut·好奇心batch1换hook(比尔盖茨AI警告7)·因分发桶95%熔断线降产未部署·保留active供B19复用",
+      "has_post": false
+    },
+    {
+      "id": "D21-B18-INFJ-1",
+      "title": "孩子一提上学就「装病」，头晕肚子疼——INFJ的Ni-Fe没有把这当成一句「小孩不想上学」的抱怨。它听到的是：那些说不出口的情绪，正在用身体替你喊出来",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe情绪觉察型(INFJ情感共鸣batch1重启·孩子装病7分情绪躯体化·Ni:洞察未言之义·Fe:共情情绪诉求·轮休1批(B17)后恢复·情感共鸣batch1重启(间隔1批)·严禁焦虑贩卖·用情绪觉察/亲子共情角度)",
+      "role": "P1·INFJ情感共鸣batch1重启(孩子装病7·情绪觉察/亲子共情·Ni-Fe共情)·微博NF位·方向船key_decision「INFJ情感共鸣batch1重启(孩子装病7·情绪觉察·间隔1批·NF象限恢复)」",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": true,
+      "last_used": "2026-08-27T09:25:00+08:00",
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": "D21-B18",
+      "deployed_arm": 4,
+      "writeback_note": "B18·INFJ情感共鸣batch1重启 fresh(孩子装病7·情绪觉察/亲子共情·Ni-Fe·轮休1批后恢复·间隔1批·attachment_theory_resonance)·P1·严禁焦虑贩卖·用情绪觉察/亲子共情角度",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B18-ENTP-1",
+      "title": "13岁女孩三天靠AI赚1.8万——ENTP的Ne没有把这当成「别人家孩子」的焦虑。它看到的是：这一代孩子的创造力，正在用大人看不懂的方式重新定义「会赚钱」",
+      "hook": "反常识",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "抖音",
+      "quality": 8.7,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "deployed",
+      "usage_count": 1,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-ENTP-1.json",
+      "paradigm": "反常识·Ne创造力解放型(ENTP反常识batch1重启·13岁AI赚钱8分青少年创造力·Ne:创意无年龄门槛·Ti:AI当创意工具·轮休1批(B17)后恢复·反常识batch1重启(间隔1批)·⚠️未成年敏感·用青少年创造力/自我觉醒正面角度·避免鸡娃焦虑/诱导未成年赚钱)",
+      "role": "P1·ENTP反常识batch1重启(13岁AI赚钱8·青少年创造力/自我觉醒·Ne探索)·抖音NT位·方向船key_decision「ENTP反常识batch1重启(13岁AI赚钱8·青少年创造力·间隔1批·⚠️未成年正面角度)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 6,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "last_used": "2026-08-27T09:25:00+08:00",
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": "D21-B18",
+      "deployed_arm": 5,
+      "writeback_note": "B18·ENTP反常识batch1重启 fresh(13岁AI赚钱8·青少年创造力/自我觉醒·Ne探索·轮休1批后恢复·间隔1批)·P1·⚠️未成年敏感·用青少年创造力正面角度·避免鸡娃焦虑/诱导未成年赚钱",
+      "deployed_budget": 25,
+      "has_post": false
+    },
+    {
+      "id": "D21-B18-ENTJ-1",
+      "title": "英伟达Q2营收利润双双翻倍——ENTJ的Te没有把这当成一条普通财报。它看到的是：在AI这场牌局里，有人已经押对了最大的一张牌，而真正的赢家永远是「提前看懂并执行」的人",
+      "hook": "好奇心",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.5,
+      "created": "2026-08-27T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B18-ENTJ-1.json",
+      "paradigm": "好奇心·Te-Ni执行叙事型(ENTJ好奇心batch1换hook·英伟达Q2翻倍6分商业成就·Te:执行=赢家通吃·Ni:趋势预判·身份认同batch2(B17陈明求职5)达上限换hook到好奇心·⚠️弱信号续科技主线·严禁诱导投资/渲染焦虑)",
+      "role": "P1·ENTJ好奇心batch1换hook(英伟达Q2翻倍6·商业成就/Te执行叙事)·抖音NT位·方向船key_decision「ENTJ好奇心(英伟达Q2翻倍6·Te执行叙事·身份认同batch2达上限换hook·⚠️弱信号续科技主线)」",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B18",
+      "producer": "设设",
+      "arm_id": 7,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "last_used": null,
+      "actual_ctr": null,
+      "actual_roi": null,
+      "deployed_batch": null,
+      "deployed_arm": null,
+      "writeback_note": "finance_cut·好奇心batch1换hook(英伟达Q2翻倍6·弱信号)·因分发桶95%熔断线降产未部署·保留active供B19复用",
+      "has_post": false
     }
   ],
-  "total": 173,
+  "total": 180,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -6869,6 +7113,118 @@
       "post_spec_version": "v2.0"
     },
     {
+      "id": "D21-B18-ENFP-1",
+      "title": "82岁中国老人在韩国夺得跨栏世界冠军——ENFP没有把它当成一条「不服老」的鸡汤。它的Ne-Fi看到的是：年龄只是日历上的数字，不是人生赛道的终点线；你心里那团没灭的火，才是你真实的年龄",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 9.0,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "arm_id": 1,
+      "batch_num": 1,
+      "signals": [
+        "82岁中国老人在韩国夺得跨栏世界冠军(9分·情感共鸣·自我觉醒/年龄突破·heat723万)"
+      ],
+      "paradigm": "情感共鸣·Ne-Fi可能性解放型(ENFP情感共鸣batch1恢复触达·82岁跨栏9分自我觉醒母题旗舰·Ne:可能性不因年龄封印·Fi:活成真实自我·轮休2批后恢复·9分旗舰对冲信任6.49·confidence_low 0.224不确定性·严禁渲染年龄焦虑/悲情)",
+      "role": "P0·ENFP情感共鸣batch1恢复触达(82岁跨栏9旗舰·自我觉醒母题旗舰·年龄突破+生命不息追梦)·小红书NF位·方向船key_decision「ENFP自我觉醒恢复触达(82岁跨栏9·9分旗舰对冲信任不确定性)」",
+      "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ENFP×情感共鸣×小红书",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(B18大面积轮出批·ENFP轮休2批后恢复触达·82岁跨栏9旗舰·自我觉醒母题最强实证)·方向船mandates合规·9分旗舰对冲信任口径未定论",
+      "brief": {
+        "pain_point": "ENFP的Ne渴望可能性、Fi渴望「活成真实的自己」，但现实里总被「什么年纪该做什么事」的框架束缚。82岁跨栏夺冠击中的是「可能性不该被年龄封印」——这正是ENFP最痛、也最渴望挣脱的枷锁。",
+        "hook_first3": "第一行「82岁，中国老人，在韩国拿下跨栏世界冠军」摆事实；第二行「82岁该干嘛？有人说该安享晚年，他选择了起跑线」点反差；第三行「ENFP看到的不只是励志，是『真实的你，从来不该被年龄定义』」切入Ne-Fi。",
+        "emotion_curve": "震撼(82岁夺冠) → 反常识(年龄vs可能) → 热血(心里那团火) → 笃定(活成真实自我) → 行动(现在就去做那件『不敢』的事)。",
+        "structure": [
+          "钩子·82岁夺冠",
+          "反差·年龄≠终点线",
+          "洞察·没灭的火才是真实年龄",
+          "迁移·你被什么封印了",
+          "CTA·那件你一直想做没做的事"
+        ],
+        "differentiation": "别人写「不服老鸡汤/养生励志」，我们写Ne-Fi的可能性解放——「年龄是日历的刻度，不是灵魂的边界」；不贩卖年龄焦虑、不渲染悲情，落点「真实的自我永远有资格出发」。"
+      },
+      "post": {
+        "cover_title": "82岁拿下世界冠军，年龄只是数字",
+        "body": "刷到这条新闻的时候，\n我盯着「82岁」看了很久。\n\n一个中国老人，\n在韩国的赛道上，\n拿下了跨栏世界冠军。🏅\n\n有人会说：\n82岁了，还折腾什么？\n安享晚年不好吗？\n\n可他的起跑线告诉你：\n年龄是日历上的数字，\n不是人生赛道的终点线。🚩\n\nENFP太懂这种痛了：\n从小到大，\n总有人告诉你「这个年纪该干嘛」。\n\n25岁该稳定，\n30岁该结婚，\n40岁该认命……\n\n可你心里那团没灭的火，\n才是你真实的年龄。🔥\n\n想做的事，\n从来不需要等到「合适的年纪」。\n\n你现在心里惦记的那件，\n「等我准备好了再说」的事，\n就是你还活着的最好证明。\n\n💬 那件你一直想做、\n却总觉得「来不及了」的事，\n是什么？\n评论区说出来，\n我们一起出发。",
+        "hashtags": [
+          "#82岁跨栏冠军",
+          "#自我成长",
+          "#MBTI",
+          "#ENFP",
+          "#别被年龄定义"
+        ],
+        "cover_visual": "跑道上白发老人跨栏冲刺剪影 + 金色晨光逆光；大字『82岁，照样起跑』；暖金+深蓝高对比",
+        "cta": "那件你一直想做却总说「来不及了」的事是什么？评论区说出来，我们一起出发。",
+        "post_time": "12:00-13:00（自我成长类·午间情绪高峰）",
+        "avoid": "不贩卖年龄焦虑、不渲染悲情、不贬低「按部就班」的人生选择；落点「可能性/真实自我」，规避「不服老」鸡汤套路化"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B18-ISTJ-1",
+      "title": "店主扶起摔倒老人反被索赔1.9万，最终收到全额退款——ISTJ的Si没有把这当成一条「好人有好报」的爽文。它看到的是更深的东西：善意或许会迟到被误解，但规则和证据，最终会把公道还给你",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.8,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "arm_id": 2,
+      "batch_num": 1,
+      "signals": [
+        "扶老人被索赔1.9万店主收到全额退款(7分·社会证明·社会公正反转·heat3157万本批最高)"
+      ],
+      "paradigm": "社会证明·Si规则正义型(ISTJ社会证明batch1换hook·扶老人获退款7分社会公正反转·Si:规则/证据是善意最后的护栏·情感共鸣batch1(B17少年自学9)换hook到社会证明·SJ象限维持·heat3157万本批最高·严禁渲染扶不扶对立焦虑)",
+      "role": "P0·ISTJ社会证明batch1换hook(扶老人获退款7·社会公正反转·heat31.5M本批最高)·小红书SJ位·方向船key_decision「ISTJ社会证明(扶老人获退款7·社会公正反转·情感共鸣batch1换hook·SJ象限维持)」",
+      "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ISTJ×社会证明×小红书",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(B18·ISTJ情感共鸣→社会证明换hook·扶老人获退款7·heat31.5M本批最高)·社会公正反转正面角度·Si规则/正义",
+      "brief": {
+        "pain_point": "ISTJ的Si依赖规则、秩序和「做了正确的事就该有正确的结果」。扶老人反被索赔击中的是「做好事却被规则反噬」的恐惧——而最终全额退款，正是ISTJ最渴望的「规则终将主持公道」。",
+        "hook_first3": "第一行「扶起摔倒的老人，反被索赔1.9万」摆冲突；第二行「店里的监控，最后帮他还了清白」点反转；第三行「ISTJ看到的不是鸡汤，是『规则和证据，是善意最后的护栏』」切入Si。",
+        "emotion_curve": "愤怒(好人被讹) → 憋屈(百口莫辩) → 反转(监控+全额退款) → 笃定(规则主持公道) → 安心(该做的事还是要做)。",
+        "structure": [
+          "钩子·扶老人被索赔",
+          "冲突·善意被误解",
+          "反转·监控+全额退款",
+          "洞察·规则是善意的护栏",
+          "CTA·你遇到过善意被误解吗"
+        ],
+        "differentiation": "别人写「好人有好报/社会道德」，我们写Si的规则感——「善意不该靠运气，该靠规则和证据托底」；不贩卖对立、不渲染「扶不扶」焦虑，落点「规则终将主持公道」。"
+      },
+      "post": {
+        "cover_title": "扶老人被讹1.9万，监控还他清白",
+        "body": "这事看得我血压都上来了。\n\n一个店主，\n看到老人摔倒，\n上去扶了一把。\n\n结果反手被索赔1.9万。😤\n\n「不是你撞的，你为什么要扶？」\n\n这句最伤人的话，\n差点让他百口莫辩。\n\n好在，店里的监控，\n完整记下了全过程。\n\n最终，\n他收到了全额退款，\n也等来了清白。\n\nISTJ会告诉你：\n这不是「好人有好报」的鸡汤。\n\n这是规则和证据，\n在关键时刻，\n替善意兜了底。🧭\n\n善意不该靠运气，\n该靠规则托底。\n\n该做的事，\n从来不会因为被误解，\n就变成错的。\n\n💬 你遇到过\n「做了好事却被误解」的时候吗？\n后来，\n公道还给你了吗？\n评论区说说。",
+        "hashtags": [
+          "#社会正能量",
+          "#扶不扶",
+          "#MBTI",
+          "#ISTJ",
+          "#规则与正义"
+        ],
+        "cover_visual": "便利店监控画面构图 + 老人与店主对视的暖色场景；大字『善意，有规则托底』；冷灰监控框 + 暖色人物",
+        "cta": "你遇到过「做了好事却被误解」的时候吗？后来公道还给你了吗？评论区说说。",
+        "post_time": "18:00-20:00（社会话题类·晚间讨论高峰）",
+        "avoid": "不渲染「扶不扶」对立焦虑、不道德绑架、不做「好人没好报」负面暗示；落点「规则与证据托底善意」"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
       "id": "D21-B3-INFJ-1",
       "title": "当热搜从「追星塌房」变成「追科学家的星」，INFJ没有在刷屏——她的Ni-Fe系统在0.3秒内检测到了一个文明的脉搏正在换频",
       "hook": "身份认同",
@@ -7833,6 +8189,91 @@
         ]
       }
     },
+    "D21-B18-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-ISTJ-1",
+        "title": "店主扶起摔倒老人反被索赔1.9万，最终收到全额退款——ISTJ的Si没有把这当成一条「好人有好报」的爽文。它看到的是更深的东西：善意或许会迟到被误解，但规则和证据，最终会把公道还给你",
+        "hook": "社会证明",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "扶老人被索赔1.9万店主收到全额退款(7分·社会证明·社会公正反转·heat3157万本批最高)"
+        ],
+        "paradigm": "社会证明·Si规则正义型(ISTJ社会证明batch1换hook·扶老人获退款7分社会公正反转·Si:规则/证据是善意最后的护栏·情感共鸣batch1(B17少年自学9)换hook到社会证明·SJ象限维持·heat3157万本批最高·严禁渲染扶不扶对立焦虑)",
+        "role": "P0·ISTJ社会证明batch1换hook(扶老人获退款7·社会公正反转·heat31.5M本批最高)·小红书SJ位·方向船key_decision「ISTJ社会证明(扶老人获退款7·社会公正反转·情感共鸣batch1换hook·SJ象限维持)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ISTJ×社会证明×小红书",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18·ISTJ情感共鸣→社会证明换hook·扶老人获退款7·heat31.5M本批最高)·社会公正反转正面角度·Si规则/正义",
+        "brief": {
+          "pain_point": "ISTJ的Si依赖规则、秩序和「做了正确的事就该有正确的结果」。扶老人反被索赔击中的是「做好事却被规则反噬」的恐惧——而最终全额退款，正是ISTJ最渴望的「规则终将主持公道」。",
+          "hook_first3": "第一行「扶起摔倒的老人，反被索赔1.9万」摆冲突；第二行「店里的监控，最后帮他还了清白」点反转；第三行「ISTJ看到的不是鸡汤，是『规则和证据，是善意最后的护栏』」切入Si。",
+          "emotion_curve": "愤怒(好人被讹) → 憋屈(百口莫辩) → 反转(监控+全额退款) → 笃定(规则主持公道) → 安心(该做的事还是要做)。",
+          "structure": [
+            "钩子·扶老人被索赔",
+            "冲突·善意被误解",
+            "反转·监控+全额退款",
+            "洞察·规则是善意的护栏",
+            "CTA·你遇到过善意被误解吗"
+          ],
+          "differentiation": "别人写「好人有好报/社会道德」，我们写Si的规则感——「善意不该靠运气，该靠规则和证据托底」；不贩卖对立、不渲染「扶不扶」焦虑，落点「规则终将主持公道」。"
+        },
+        "post": {
+          "cover_title": "扶老人被讹1.9万，监控还他清白",
+          "body": "这事看得我血压都上来了。\n\n一个店主，\n看到老人摔倒，\n上去扶了一把。\n\n结果反手被索赔1.9万。😤\n\n「不是你撞的，你为什么要扶？」\n\n这句最伤人的话，\n差点让他百口莫辩。\n\n好在，店里的监控，\n完整记下了全过程。\n\n最终，\n他收到了全额退款，\n也等来了清白。\n\nISTJ会告诉你：\n这不是「好人有好报」的鸡汤。\n\n这是规则和证据，\n在关键时刻，\n替善意兜了底。🧭\n\n善意不该靠运气，\n该靠规则托底。\n\n该做的事，\n从来不会因为被误解，\n就变成错的。\n\n💬 你遇到过\n「做了好事却被误解」的时候吗？\n后来，\n公道还给你了吗？\n评论区说说。",
+          "hashtags": [
+            "#社会正能量",
+            "#扶不扶",
+            "#MBTI",
+            "#ISTJ",
+            "#规则与正义"
+          ],
+          "cover_visual": "便利店监控画面构图 + 老人与店主对视的暖色场景；大字『善意，有规则托底』；冷灰监控框 + 暖色人物",
+          "cta": "你遇到过「做了好事却被误解」的时候吗？后来公道还给你了吗？评论区说说。",
+          "post_time": "18:00-20:00（社会话题类·晚间讨论高峰）",
+          "avoid": "不渲染「扶不扶」对立焦虑、不道德绑架、不做「好人没好报」负面暗示；落点「规则与证据托底善意」"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D16-B2-1": {
       "vessel": {
         "version": "1.0",
@@ -8699,6 +9140,84 @@
           "cta": "你现在走的路，是'应该'还是'想要'？评论区说说你的那个'想要'。",
           "post_time": "18:00-20:00（自我觉醒/职业类·晚高峰情感+职场流量）",
           "avoid": "不鼓吹裸辞、不贬低稳定高薪职业、不贩卖'不转行就是没活明白'的焦虑、聚焦'选择权在自己'"
+        }
+      }
+    },
+    "D21-B18-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-INFJ-1",
+        "title": "孩子一提上学就「装病」，头晕肚子疼——INFJ的Ni-Fe没有把这当成一句「小孩不想上学」的抱怨。它听到的是：那些说不出口的情绪，正在用身体替你喊出来",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "孩子一提上学就「装病」头晕肚子疼(7分·情感共鸣·情绪觉察/亲子共情·Ni-Fe·heat475万)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe情绪觉察型(INFJ情感共鸣batch1重启·孩子装病7分情绪躯体化·Ni:洞察未言之义·Fe:共情情绪诉求·轮休1批(B17)后恢复·情感共鸣batch1重启(间隔1批)·严禁焦虑贩卖·用情绪觉察/亲子共情角度)",
+        "role": "P1·INFJ情感共鸣batch1重启(孩子装病7·情绪觉察/亲子共情·Ni-Fe共情)·微博NF位·方向船key_decision「INFJ情感共鸣batch1重启(孩子装病7·情绪觉察·间隔1批·NF象限恢复)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·INFJ×情感共鸣×微博",
+        "flagship": false,
+        "attachment_theory_resonance": true,
+        "note": "🟢 fresh(B18·INFJ轮休1批后恢复·孩子装病7·Ni-Fe情绪觉察)·⚠️避免焦虑贩卖·用情绪觉察/亲子共情角度",
+        "brief": {
+          "pain_point": "INFJ的Ni能洞察未言之义、Fe能共情他人。孩子「装病」击中的是「情绪被忽视后只能躯体化表达」——INFJ最懂那种「说不出口的话，最后变成身体信号」的隐痛。",
+          "hook_first3": "第一行「孩子一提上学就『装病』，头晕肚子疼」摆现象；第二行「不是孩子撒谎，是情绪在找出口」点本质；第三行「INFJ看到的不是『不想上学』，是『有话说不出来』」切入Ni-Fe。",
+          "emotion_curve": "心疼(孩子装病) → 洞察(情绪躯体化) → 共情(说不出口的话) → 温暖(先接住情绪) → 行动(问问孩子真正怕什么)。",
+          "structure": [
+            "钩子·孩子装病",
+            "洞察·情绪躯体化",
+            "共情·说不出口的诉求",
+            "方法·先接情绪再谈事",
+            "CTA·你家孩子有过吗"
+          ],
+          "differentiation": "别人写「开学焦虑/鸡娃对策」，我们写Ni-Fe的情绪觉察——「孩子的身体不会说谎，它在替心里的话喊疼」；不贩卖开学焦虑、不judge家长，落点「先看见情绪，再解决问题」。"
+        },
+        "adapters": {
+          "微博": {
+            "format": "话题短文",
+            "length_words": 300,
+            "style": "话题引爆+情绪共情",
+            "body": "#孩子一提上学就装病# 不是孩子撒谎，是情绪在找出口。\n\n「头晕、肚子疼」——\n很多孩子一说上学就犯，\n一回家就好。\n\n别急着骂「装病」。\n\nINFJ会告诉你：\n孩子的身体不会说谎，\n它在替心里那些说不出口的话，\n喊疼。\n\n开学焦虑、\n被同学孤立、\n怕考不好、\n怕让爸妈失望……\n\n这些情绪，\n孩子说不出来，\n就只能变成身体信号。\n\n先别问「你到底想不想上学」，\n先接住那句没说出口的「我害怕」。\n\n情绪被看见的那一刻，\n「病」往往就好了。\n\n#情绪觉察# #亲子共情# #开学季#\n\n你家孩子有没有过「一到学校就喊不舒服」的时候？评论区聊聊。",
+            "cta": "你家孩子有没有过「一到学校就喊不舒服」的时候？评论区聊聊。"
+          }
         }
       }
     },
@@ -13346,6 +13865,91 @@
         ]
       }
     },
+    "D21-B18-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-ENFP-1",
+        "title": "82岁中国老人在韩国夺得跨栏世界冠军——ENFP没有把它当成一条「不服老」的鸡汤。它的Ne-Fi看到的是：年龄只是日历上的数字，不是人生赛道的终点线；你心里那团没灭的火，才是你真实的年龄",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "82岁中国老人在韩国夺得跨栏世界冠军(9分·情感共鸣·自我觉醒/年龄突破·heat723万)"
+        ],
+        "paradigm": "情感共鸣·Ne-Fi可能性解放型(ENFP情感共鸣batch1恢复触达·82岁跨栏9分自我觉醒母题旗舰·Ne:可能性不因年龄封印·Fi:活成真实自我·轮休2批后恢复·9分旗舰对冲信任6.49·confidence_low 0.224不确定性·严禁渲染年龄焦虑/悲情)",
+        "role": "P0·ENFP情感共鸣batch1恢复触达(82岁跨栏9旗舰·自我觉醒母题旗舰·年龄突破+生命不息追梦)·小红书NF位·方向船key_decision「ENFP自我觉醒恢复触达(82岁跨栏9·9分旗舰对冲信任不确定性)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ENFP×情感共鸣×小红书",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18大面积轮出批·ENFP轮休2批后恢复触达·82岁跨栏9旗舰·自我觉醒母题最强实证)·方向船mandates合规·9分旗舰对冲信任口径未定论",
+        "brief": {
+          "pain_point": "ENFP的Ne渴望可能性、Fi渴望「活成真实的自己」，但现实里总被「什么年纪该做什么事」的框架束缚。82岁跨栏夺冠击中的是「可能性不该被年龄封印」——这正是ENFP最痛、也最渴望挣脱的枷锁。",
+          "hook_first3": "第一行「82岁，中国老人，在韩国拿下跨栏世界冠军」摆事实；第二行「82岁该干嘛？有人说该安享晚年，他选择了起跑线」点反差；第三行「ENFP看到的不只是励志，是『真实的你，从来不该被年龄定义』」切入Ne-Fi。",
+          "emotion_curve": "震撼(82岁夺冠) → 反常识(年龄vs可能) → 热血(心里那团火) → 笃定(活成真实自我) → 行动(现在就去做那件『不敢』的事)。",
+          "structure": [
+            "钩子·82岁夺冠",
+            "反差·年龄≠终点线",
+            "洞察·没灭的火才是真实年龄",
+            "迁移·你被什么封印了",
+            "CTA·那件你一直想做没做的事"
+          ],
+          "differentiation": "别人写「不服老鸡汤/养生励志」，我们写Ne-Fi的可能性解放——「年龄是日历的刻度，不是灵魂的边界」；不贩卖年龄焦虑、不渲染悲情，落点「真实的自我永远有资格出发」。"
+        },
+        "post": {
+          "cover_title": "82岁拿下世界冠军，年龄只是数字",
+          "body": "刷到这条新闻的时候，\n我盯着「82岁」看了很久。\n\n一个中国老人，\n在韩国的赛道上，\n拿下了跨栏世界冠军。🏅\n\n有人会说：\n82岁了，还折腾什么？\n安享晚年不好吗？\n\n可他的起跑线告诉你：\n年龄是日历上的数字，\n不是人生赛道的终点线。🚩\n\nENFP太懂这种痛了：\n从小到大，\n总有人告诉你「这个年纪该干嘛」。\n\n25岁该稳定，\n30岁该结婚，\n40岁该认命……\n\n可你心里那团没灭的火，\n才是你真实的年龄。🔥\n\n想做的事，\n从来不需要等到「合适的年纪」。\n\n你现在心里惦记的那件，\n「等我准备好了再说」的事，\n就是你还活着的最好证明。\n\n💬 那件你一直想做、\n却总觉得「来不及了」的事，\n是什么？\n评论区说出来，\n我们一起出发。",
+          "hashtags": [
+            "#82岁跨栏冠军",
+            "#自我成长",
+            "#MBTI",
+            "#ENFP",
+            "#别被年龄定义"
+          ],
+          "cover_visual": "跑道上白发老人跨栏冲刺剪影 + 金色晨光逆光；大字『82岁，照样起跑』；暖金+深蓝高对比",
+          "cta": "那件你一直想做却总说「来不及了」的事是什么？评论区说出来，我们一起出发。",
+          "post_time": "12:00-13:00（自我成长类·午间情绪高峰）",
+          "avoid": "不贩卖年龄焦虑、不渲染悲情、不贬低「按部就班」的人生选择；落点「可能性/真实自我」，规避「不服老」鸡汤套路化"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
     "D21-B12-INFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -13990,6 +14594,84 @@
             "CTA·你觉得座位能不能堆东西"
           ],
           "differentiation": "别人写火车空位讲'素质/占座/规则意识'，我们讲'一场全民辩论=身份认同的投射·每个人都在定义我是守规矩还是被欺负'；不做站队judge，不贩卖对立，落点'规则边界的思辨乐趣'。"
+        }
+      }
+    },
+    "D21-B18-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-INTJ-1",
+        "title": "AI越发达，真人脸越值钱——INTJ的Ni-Te没有把这当成一句营销噱头。它看到的是一个正在发生的稀缺性反转：当合成可以无限复制，「真实」就从免费品变成了硬通货",
+        "hook": "反常识",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "AI时代 真人脸更值钱了(8分·反常识·认知反转/肖像授权·Ni-Te解构·heat589万)"
+        ],
+        "paradigm": "反常识·Ni-Te稀缺性反转型(INTJ反常识batch2续触·AI真人脸更值钱8分认知反转·Ni:预判稀缺性反转·Te:价值=不可复制性·反常识batch1(B17人民日报家长群6)续触batch2·零维护信任8.56全池最高·严禁渲染AI恐慌)",
+        "role": "P1·INTJ反常识batch2续触(AI真人脸8·认知反转/稀缺性反转·B19必轮出预警)·B站NT位·方向船key_decision「INTJ反常识batch2续触(AI真人脸8·认知反转·Ni-Te解构)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·INTJ×反常识×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18·INTJ反常识batch2续触·AI真人脸8·Ni-Te稀缺性反转·零维护信任8.56全池最高)·⚠️B19必轮出预警",
+        "brief": {
+          "pain_point": "INTJ的Ni喜欢预判趋势、Te喜欢把认知变成可执行的判断。「AI越强真人越值钱」击中的是「稀缺性会反转」的深层认知——当人人都在追逐AI时，INTJ想的是「下一步什么会变稀缺」。",
+          "hook_first3": "第一行「AI时代，真人脸更值钱了」直接抛反常识结论；第二行「当一张脸可以无限合成，真实就成了稀缺品」点逻辑；第三行「INTJ看到的不是新闻，是一次稀缺性的彻底反转」切入Ni-Te。",
+          "emotion_curve": "反常识(真人脸更值钱) → 解构(合成无限vs真实稀缺) → 洞见(价值=稀缺性反转) → 远见(下一步什么变稀缺) → 行动(你手上的『真实』如何定价)。",
+          "structure": [
+            "钩子·真人脸更值钱",
+            "反差·AI越强真人越稀缺",
+            "解构·稀缺性反转逻辑",
+            "远见·下一步稀缺什么",
+            "CTA·你身边什么正在变稀缺"
+          ],
+          "differentiation": "别人写「AI焦虑/换脸恐慌」，我们写Ni-Te的稀缺性反转——「价值不取决于技术多强，取决于什么不可复制」；不渲染AI恐慌，落点「真实=新的硬通货」。"
+        },
+        "adapters": {
+          "B站": {
+            "format": "深度图文",
+            "length_words": 1200,
+            "style": "深度分析+逻辑解构",
+            "body": "## AI越发达，真人脸越值钱\n\n先别急着把这条当成营销噱头。\n\n**结论先放这：当「合成」可以无限复制，「真实」就从免费品，变成了硬通货。**\n\n### 一、稀缺性正在反转\n\nAI能生成的脸，边际成本趋近于零——要多少有多少，要像谁就像谁。\n\n当一个东西可以被无限复制，它就不再值钱。\n\n而反过来，「一张真实的、无法伪造的脸」，反而成了稀缺资产：\n\n- 肖像授权开始被重新定价\n- 真人出镜的信任溢价在上升\n- 「可验证的真实」成了新的信用凭证\n\n### 二、INTJ的Ni在看什么\n\n不是「AI多厉害」，而是**下一步什么会变稀缺**。\n\n技术永远在把「曾经稀缺」变成「泛滥」。\n\n过去：稀缺的是信息。\n现在：稀缺的是注意力。\n未来：稀缺的是**不可复制的真实性**。\n\n### 三、价值 = 不可复制性\n\n一条铁律：\n\n> 你的价值，不取决于你有多能干，取决于你有多「不可被复制」。\n\n真人脸值钱，不是因为脸本身，是因为它「不可合成」。\n\n同理——你的经验、判断、关系、信用，这些AI抄不走的东西，才是你真正的资产。\n\n### 结尾\n\n别再问「AI会不会取代我」。\n\n问自己：**我身上，哪一部分是不可复制的？**\n\n那个答案，就是你在AI时代的价格。\n\n---\n\n👉 测测你的认知防御力 → 免费MBTI深度报告（评论区链接）",
+            "cta": "你身上哪一部分是AI抄不走的？评论区聊聊你的「不可复制性」。"
+          }
         }
       }
     },
@@ -16313,6 +16995,84 @@
         }
       }
     },
+    "D21-B18-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-INTP-1",
+        "title": "比尔盖茨罕见发长文警告AI——INTP的Ti-Ne没有把它当成又一轮「狼来了」。它真正好奇的是：一个见过技术周期的人，为什么偏偏在「系统层面」停下来提醒全人类",
+        "hook": "好奇心",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "比尔盖茨罕见发长文警告人类注意AI(7分·好奇心·系统性远见·Ti-Ne系统思考·heat638万)"
+        ],
+        "paradigm": "好奇心·Ti-Ne系统思考型(INTP好奇心batch1换hook·比尔盖茨AI警告7分系统性远见·Ti:系统级风险拆解·Ne:技术vs治理多维可能·反常识batch2(B17禁止殴打7)达上限换hook到好奇心·NT象限维持·严禁渲染AI恐慌)",
+        "role": "P1·INTP好奇心batch1换hook(比尔盖茨AI警告7·系统性远见/系统思考)·B站NT位·方向船key_decision「INTP好奇心(比尔盖茨AI警告7·Ti-Ne系统思考·反常识batch2达上限换hook)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·INTP×好奇心×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18·INTP反常识→好奇心换hook·比尔盖茨AI警告7·Ti-Ne系统思考)·⚠️避免AI恐慌渲染",
+        "brief": {
+          "pain_point": "INTP的Ti追求系统性理解、Ne追求多维可能性。盖茨「发长文警告」击中的是「系统级风险往往被逐利掩盖」——INTP想弄明白的从来不是「AI会不会毁灭」，而是「这个系统在哪个环节可能失序」。",
+          "hook_first3": "第一行「比尔盖茨罕见发长文，警告人类注意AI」摆事件；第二行「他警告的不是『AI杀人』，是『我们还没准备好』」点层次；第三行「INTP好奇的不是恐慌，是系统到底哪里会失序」切入Ti-Ne。",
+          "emotion_curve": "好奇(盖茨为何长文) → 审视(系统风险) → 思辨(技术vs治理) → 清醒(不是恐惧是准备) → 行动(建立自己的判断框架)。",
+          "structure": [
+            "钩子·盖茨罕见长文",
+            "层次·警告的不是末日",
+            "解构·系统哪里会失序",
+            "洞察·恐惧无用准备有用",
+            "CTA·你的AI判断框架是什么"
+          ],
+          "differentiation": "别人写「AI要毁灭人类/失业恐慌」，我们写Ti-Ne的系统思考——「真正的风险不是技术本身，是治理跑不赢技术」；不渲染AI恐慌，落点「系统性准备而非情绪性恐惧」。"
+        },
+        "adapters": {
+          "B站": {
+            "format": "深度图文",
+            "length_words": 1200,
+            "style": "深度分析+逻辑解构",
+            "body": "## 比尔盖茨罕见长文警告AI：真正该听的，不是「狼来了」\n\n盖茨这种人，\n不会为了流量发长文。\n\n**他停下来，一定是因为看到了「系统层面」的问题。**\n\n### 一、他警告的不是「AI杀人」\n\n不是末日论。\n\n是一个更冷静的判断：\n**「技术跑得太快，人类还没准备好。」**\n\n- AI在改变劳动力市场，而教育没跟上\n- AI在放大真假信息的混乱，而治理没跟上\n- AI在重塑权力结构，而制度没跟上\n\n### 二、INTP在好奇什么\n\n不是「AI会不会毁灭我们」。\n\n而是：\n\n> 一个系统的失序，往往不是「坏掉」，是「跑得太快，方向盘跟不上」。\n\n技术是引擎，治理是刹车，认知是方向盘。\n\n现在的情况是：\n引擎已经飙到300，\n刹车和方向盘还在原地。\n\n### 三、恐惧无用，准备有用\n\nINTP的结论很清醒：\n\n- 恐惧不解决任何问题\n- 但「看懂系统的边界」，能让你不被恐慌带着走\n\n**真正该做的，不是害怕AI，是建立自己的判断框架。**\n\n### 结尾\n\nAI不会因为你害怕就停下。\n\n但一个能看清「系统哪里会失序」的人，\n永远比只会喊「狼来了」的人，\n多一条活路。\n\n---\n\n👉 你的AI判断框架是什么？→ 免费MBTI深度报告（评论区链接）",
+            "cta": "你的AI判断框架是什么？评论区聊聊你的「系统视角」。"
+          }
+        }
+      }
+    },
     "D17-B2-2": {
       "vessel": {
         "version": "1.0",
@@ -17900,6 +18660,84 @@
         ]
       }
     },
+    "D21-B18-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-ENTJ-1",
+        "title": "英伟达Q2营收利润双双翻倍——ENTJ的Te没有把这当成一条普通财报。它看到的是：在AI这场牌局里，有人已经押对了最大的一张牌，而真正的赢家永远是「提前看懂并执行」的人",
+        "hook": "好奇心",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 7,
+        "batch_num": 1,
+        "signals": [
+          "英伟达业绩大超预期 Q2营收利润翻倍(6分·好奇心·AI芯片商业成就·Te执行叙事·heat3856万)"
+        ],
+        "paradigm": "好奇心·Te-Ni执行叙事型(ENTJ好奇心batch1换hook·英伟达Q2翻倍6分商业成就·Te:执行=赢家通吃·Ni:趋势预判·身份认同batch2(B17陈明求职5)达上限换hook到好奇心·⚠️弱信号续科技主线·严禁诱导投资/渲染焦虑)",
+        "role": "P1·ENTJ好奇心batch1换hook(英伟达Q2翻倍6·商业成就/Te执行叙事)·抖音NT位·方向船key_decision「ENTJ好奇心(英伟达Q2翻倍6·Te执行叙事·身份认同batch2达上限换hook·⚠️弱信号续科技主线)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ENTJ×好奇心×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18·ENTJ身份认同→好奇心换hook·英伟达Q2翻倍6·Te-Ni执行叙事)·⚠️弱信号续科技主线·不诱导投资",
+        "brief": {
+          "pain_point": "ENTJ的Te追求效率与成就、Ni追求战略预判。「英伟达业绩翻倍」击中的是「看准趋势并执行到底的人拿走最大红利」——ENTJ最在意的不是英伟达赚多少，是「我有没有站在对的趋势上」。",
+          "hook_first3": "第一行「英伟达Q2，营收利润双双翻倍」摆事实；第二行「这背后是AI算力的军备竞赛」点趋势；第三行「ENTJ看到的不是财报，是『提前看懂趋势并执行的人，赢家通吃』」切入Te-Ni。",
+          "emotion_curve": "关注(财报翻倍) → 判断(AI算力趋势) → 锐利(执行=赢家通吃) → 野心(我站在趋势上吗) → 行动(把趋势变成你的动作)。",
+          "structure": [
+            "钩子·英伟达翻倍",
+            "趋势·AI算力军备",
+            "洞察·看懂+执行=通吃",
+            "迁移·你的赛道趋势是什么",
+            "CTA·你押注的下一个趋势"
+          ],
+          "differentiation": "别人写「炒股追热点/业绩数字」，我们写Te-Ni的执行叙事——「财报只是结果，趋势判断和执行力才是原因」；不诱导投资、不渲染焦虑，落点「看懂趋势并执行」。"
+        },
+        "adapters": {
+          "抖音": {
+            "format": "短视频脚本",
+            "length_words": 450,
+            "style": "冲击力开场+反转节奏",
+            "body": "【0-3s】英伟达Q2，营收利润双双翻倍。\n\n【3-12s】很多人只看到「又一家公司赚麻了」。\n但ENTJ看到的是：\nAI算力，正在打一场军备竞赛。\n而英伟达，提前押对了最大的一张牌。\n\n【12-22s】财报只是结果。\n真正的赢家，\n永远是「提前看懂趋势、\n并且敢all in执行」的人。\n\n【22-30s】别只盯着别人赚了多少。\n问自己一句：\n我的赛道上，\n下一个趋势是什么？\n我看懂了，敢执行吗？\n\n【30-35s】你押注的下一个趋势是什么？\n评论区聊聊，\n看谁看得最准。\n\n#MBTI #ENTJ #AI趋势 #商业思维",
+            "cta": "你押注的下一个趋势是什么？评论区聊聊，看谁看得最准。"
+          }
+        }
+      }
+    },
     "D21-B7-ENFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -18326,6 +19164,84 @@
             "落点·审慎地相信科学"
           ],
           "differentiation": "别人写抗癌疫苗讲'炒股/暴富/神药'，我们讲'Si逐条核查后的审慎振奋：防癌第一次可复制'；不贩卖医疗焦虑(禁恐惧按钮)，落到事实与科学进程。"
+        }
+      }
+    },
+    "D21-B18-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B18-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B18"
+        },
+        "created_at": "2026-08-27T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-27-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-27-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B18-ENTP-1",
+        "title": "13岁女孩三天靠AI赚1.8万——ENTP的Ne没有把这当成「别人家孩子」的焦虑。它看到的是：这一代孩子的创造力，正在用大人看不懂的方式重新定义「会赚钱」",
+        "hook": "反常识",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "抖音",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 6,
+        "batch_num": 1,
+        "signals": [
+          "13岁女孩三天靠AI赚1.8万(8分·反常识·青少年AI创造力/自我觉醒·Ne探索·heat1284万)"
+        ],
+        "paradigm": "反常识·Ne创造力解放型(ENTP反常识batch1重启·13岁AI赚钱8分青少年创造力·Ne:创意无年龄门槛·Ti:AI当创意工具·轮休1批(B17)后恢复·反常识batch1重启(间隔1批)·⚠️未成年敏感·用青少年创造力/自我觉醒正面角度·避免鸡娃焦虑/诱导未成年赚钱)",
+        "role": "P1·ENTP反常识batch1重启(13岁AI赚钱8·青少年创造力/自我觉醒·Ne探索)·抖音NT位·方向船key_decision「ENTP反常识batch1重启(13岁AI赚钱8·青少年创造力·间隔1批·⚠️未成年正面角度)」",
+        "direction_compliance": "D21-B18 direction-vessel key_decision对齐·ENTP×反常识×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(B18·ENTP轮休1批后恢复·13岁AI赚钱8·青少年创造力正面角度)·⚠️未成年敏感·避免鸡娃焦虑/诱导未成年赚钱",
+        "brief": {
+          "pain_point": "ENTP的Ne渴望新玩法、Ti喜欢拆解机制。「13岁靠AI赚钱」击中的是「创造力不受年龄和资历限制」——ENTP最兴奋的不是赚多少，而是「原来可以这么玩」。",
+          "hook_first3": "第一行「13岁女孩，三天靠AI赚了1.8万」抛反差；第二行「不是天赋，是她把AI当成了创意工具」点本质；第三行「ENTP看到的不是『别人家孩子』，是『创造力根本没有年龄门槛』」切入Ne。",
+          "emotion_curve": "惊讶(13岁赚1.8万) → 好奇(怎么做到的) → 兴奋(创意玩法) → 顿悟(创造力无年龄门槛) → 行动(你的创意能怎么用AI放大)。",
+          "structure": [
+            "钩子·13岁赚1.8万",
+            "反差·不是鸡娃是创意",
+            "解构·AI当创意工具",
+            "洞察·创造力无门槛",
+            "CTA·你会用AI做什么创意"
+          ],
+          "differentiation": "别人写「鸡娃焦虑/未成年赚钱诱导」，我们写Ne的创造力解放——「重要的不是她赚了多少，是她证明了创意可以无视年龄」；不渲染鸡娃焦虑、不诱导未成年赚钱，落点「创造力/自我觉醒正面角度」。"
+        },
+        "adapters": {
+          "抖音": {
+            "format": "短视频脚本",
+            "length_words": 450,
+            "style": "冲击力开场+反转节奏",
+            "body": "【0-3s】13岁，三天，靠AI赚了1.8万。\n\n【3-10s】不是天才，也不是鸡娃。\n是她把AI，当成了创意工具。\n别人用AI写作业，她用AI做产品。\n\n【10-20s】ENTP看到的是：\n创造力，根本没有年龄门槛。\n真正限制你的，\n从来不是「你才几岁」，\n是「你以为自己只能这样」。\n\n【20-28s】这个时代，\nAI把创意的门槛，拉到了地板。\n剩下的，\n就看你敢不敢玩。\n\n【28-35s】你的创意，能被AI放大多少？\n评论区告诉我，下条视频就聊你的玩法。\n\n#MBTI #ENTP #AI赚钱 #创造力",
+            "cta": "你会用AI做什么创意？评论区说说，下条视频聊你的玩法。"
+          }
         }
       }
     },
