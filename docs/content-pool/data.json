@@ -1,38 +1,41 @@
 {
   "pool_status": {
-    "level": 180,
+    "level": 185,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-27T08:30:00+08:00",
-    "last_creation_batch": "D21-B18",
+    "last_creation": "2026-08-28T08:30:00+08:00",
+    "last_creation_batch": "D21-B19",
     "last_deployment": "2026-08-27T09:25:00+08:00",
     "last_deployment_batch": "D21-B18",
-    "net_change_this_batch": 7,
+    "net_change_this_batch": 5,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 180,
-    "active_items": 84,
+    "total_items": 185,
+    "active_items": 89,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B18大面积轮出批7臂fresh(ENFP情感共鸣9.0旗舰82岁跨栏/ISTJ社会证明8.8扶老人/INTJ反常识8.8 AI真人脸/INTP好奇心8.6比尔盖茨/INFJ情感共鸣8.7孩子装病/ENTP反常识8.7 13岁AI/ENTJ好奇心8.5英伟达)·4恢复候选落地3个(INFJ/ENTP/ENFP)+INFP继续轮休·ENFJ/ISFP/SP象限excluded·社会货币0臂(连续6批冷却结构性停用·禁止强推)·小红书post成品2条(ENFP+ISTJ)+brief 7条全填实·恢复满产7臂¥175",
+    "sheshe_supplement": "设设D21-B19局部轮出+恢复批5臂fresh(ENFP情感共鸣8.9旗舰救援群像/INFJ情感共鸣8.7抗癌博主/ENFJ身份认同8.6何炅断交观/INTP反常识8.7手机卖不动/ISTJ社会证明8.5赵心童)·4恢复候选落地1个(ENFJ身份认同)+INTJ/ENTP/ENTJ轮休+INFP继续轮休第7批·社会货币0臂(连续7批冷却结构性停用·禁止强推)·小红书post成品1条(ENFP)+brief 5条全填实·finance审慎5臂¥125",
     "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 23,
-      "brief_added": 53,
+      "posts_added": 24,
+      "brief_added": 58,
       "xhs_active_posts_completed": 17,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B18新增2条post(ENFP情感共鸣+ISTJ社会证明)+7条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续6批冷却结构性停用)",
+      "note": "小红书成品帖子v2.0持续落地·B19新增1条post(ENFP情感共鸣)+5条brief·body完整可发布正文·五字段全填实·局部轮出+恢复批·社会货币0臂(连续7批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
       "b17_posts_completed": 1,
-      "b18_posts_completed": 2
+      "b18_posts_completed": 2,
+      "b19_posts_completed": 1
     },
-    "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复"
+    "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复",
+    "last_freeze_batch": "D21-B19",
+    "last_freeze_at": "2026-08-28T09:25:00+08:00"
   },
   "items": [
     {
@@ -6109,9 +6112,149 @@
       "deployed_arm": null,
       "writeback_note": "finance_cut·好奇心batch1换hook(英伟达Q2翻倍6·弱信号)·因分发桶95%熔断线降产未部署·保留active供B19复用",
       "has_post": false
+    },
+    {
+      "id": "D21-B19-ENFP-1",
+      "title": "「他们也是孩子，却为我们冲锋陷阵」——ENFP的Ne-Fi看到的不是悲壮的英雄叙事。它看到的是：每一个穿上那身衣服的年轻人，都是在害怕与责任之间选择了向前一步；而这份「明知害怕依然向前」的担当，才是自我觉醒最滚烫的样子",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.9,
+      "created": "2026-08-28T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B19-ENFP-1.json",
+      "paradigm": "情感共鸣·Ne-Fi平凡人担当型(ENFP情感共鸣batch2续触·救援群像8旗舰·Ne:平凡人也能成为别人的光·Fi:害怕却仍选择的真实担当·自我觉醒母题延续·正面安全·严禁渲染悲情/消费英雄/制造牺牲焦虑)",
+      "role": "P0·ENFP情感共鸣batch2续触(救援群像8旗舰·强情绪觉察线·自我觉醒母题延续)·小红书NF位·方向船key_decision「ENFP情感共鸣batch1→batch2(救援群像8·强情绪觉察·达上限2·B20必轮出)」",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B19",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "has_post": true
+    },
+    {
+      "id": "D21-B19-INFJ-1",
+      "title": "抗癌博主卢明霞去世，刚过完17岁生日——INFJ的Ni-Fe没有把它当成一条「年轻生命凋零」的悲伤新闻。它看到的是：她把抗癌的日子拍成视频，不是为了卖惨，是为了认真记录「活着」本身；我们无法决定生命的长短，但能决定每一个当下要不要认真",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.7,
+      "created": "2026-08-28T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B19-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe生命教育型(INFJ情感共鸣batch2续触·抗癌博主7·Ni:看见生命本来的重量·Fe:共情而非恐吓·年轻生命凋零→生命教育/珍惜当下·严禁恐惧按钮/焦虑贩卖渲染·克制尊重不消费逝者)",
+      "role": "P1·INFJ情感共鸣batch2续触(抗癌博主7·生命共情/珍惜当下)·微博Fe位·方向船key_decision「INFJ情感共鸣batch1→batch2(抗癌博主7·Ni-Fe情绪觉察/生命教育·达上限2·B20必轮出)」",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B19",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B19-ENFJ-1",
+      "title": "何炅自曝断交的人不超过4个——ENFJ的Fe没有把这当成一条「人缘好」的八卦。它看到的是：这不是人缘好，而是一种成熟的关系观——不轻易放弃一段关系，但也绝不被关系绑架；真正的成熟，是既珍视连接，又守住边界",
+      "hook": "身份认同",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.6,
+      "created": "2026-08-28T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B19-ENFJ-1.json",
+      "paradigm": "身份认同·Fe关系边界型(ENFJ身份认同batch1恢复·何炅断交观7·Fe:珍视连接也守住边界·成熟关系观·轮休1批后恢复·非情感共鸣信号触发·严禁渲染社交焦虑/judge他人社交方式)",
+      "role": "P1·ENFJ身份认同batch1恢复(何炅断交观7·人际断交观/关系边界)·微博Fe位·方向船key_decision「ENFJ轮休1批后恢复(何炅断交观7身份认同·非情感共鸣信号触发恢复)」",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B19",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B19-INTP-1",
+      "title": "手机卖不动，价格却涨了——INTP的Ti-Ne没有把这当成「厂商割韭菜」的抱怨。它一眼看穿这背后的结构：当蛋糕不再变大，市场就不再比谁卖得多，而改比谁留得住、谁卖得贵；这不是反常，是增量竞争切换成存量精耕的理性选择",
+      "hook": "反常识",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.7,
+      "created": "2026-08-28T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B19-INTP-1.json",
+      "paradigm": "反常识·Ti-Ne消费悖论解构型(INTP反常识batch1换hook·手机卖不动7·Ti:存量博弈的理性选择·Ne:增量竞争→存量精耕·从好奇心finance降产未部署→反常识·非AI题材冷却对冲·严禁渲染经济焦虑/唱衰)",
+      "role": "P1·INTP反常识batch1换hook(手机卖不动7·消费悖论/结构性解构·非AI题材)·B站NT位·方向船key_decision「INTP从好奇心finance降产未部署→反常识batch1换hook(手机卖不动7·非AI冷却对冲)」",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B19",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B19-ISTJ-1",
+      "title": "赵心童登顶斯诺克世界第一——ISTJ的Si没有把这当成「天才少年」的爽文。它看到的是：这个「第一」不是灵光一现，是一杆一杆打出来的秩序与积累；真正的成就，藏在日复一日的规范里，长期主义终有回响",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.5,
+      "created": "2026-08-28T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B19-ISTJ-1.json",
+      "paradigm": "社会证明·Si积累成就型(ISTJ社会证明batch2续触·赵心童6·Si:一杆一杆打出来的秩序·成就叙事的长期主义·社会证明batch1(B18扶老人7)→batch2·6分弱信号但clean·严禁成功学鸡汤/贬低未成功者)",
+      "role": "P1·ISTJ社会证明batch2续触(赵心童登顶世界第一6·体育成就/长期主义)·抖音SJ位·方向船key_decision「ISTJ社会证明batch1→batch2(赵心童6·Si秩序感+成就叙事·SJ象限维持)」",
+      "consecutive_hook": 2,
+      "direction_hook": "社会证明",
+      "batch": "D21-B19",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 2,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
     }
   ],
-  "total": 180,
+  "total": 185,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -7221,6 +7364,62 @@
         "cta": "你遇到过「做了好事却被误解」的时候吗？后来公道还给你了吗？评论区说说。",
         "post_time": "18:00-20:00（社会话题类·晚间讨论高峰）",
         "avoid": "不渲染「扶不扶」对立焦虑、不道德绑架、不做「好人没好报」负面暗示；落点「规则与证据托底善意」"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B19-ENFP-1",
+      "title": "「他们也是孩子，却为我们冲锋陷阵」——ENFP的Ne-Fi看到的不是悲壮的英雄叙事。它看到的是：每一个穿上那身衣服的年轻人，都是在害怕与责任之间选择了向前一步；而这份「明知害怕依然向前」的担当，才是自我觉醒最滚烫的样子",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.9,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "arm_id": 1,
+      "batch_num": 2,
+      "signals": [
+        "\"他们也是孩子 却为我们冲锋陷阵\"(8分·情感共鸣·救援群像/强情绪觉察·heat96)"
+      ],
+      "paradigm": "情感共鸣·Ne-Fi平凡人担当型(ENFP情感共鸣batch2续触·救援群像8旗舰·Ne:平凡人也能成为别人的光·Fi:害怕却仍选择的真实担当·自我觉醒母题延续·正面安全·严禁渲染悲情/消费英雄/制造牺牲焦虑)",
+      "role": "P0·ENFP情感共鸣batch2续触(救援群像8旗舰·强情绪觉察线·自我觉醒母题延续)·小红书NF位·方向船key_decision「ENFP情感共鸣batch1→batch2(救援群像8·强情绪觉察·达上限2·B20必轮出)」",
+      "direction_compliance": "D21-B19 direction-vessel key_decision对齐·ENFP×情感共鸣×小红书",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(D21-B19局部轮出+恢复批·ENFP 情感共鸣 batch2)·方向船mandates合规",
+      "brief": {
+        "pain_point": "ENFP的Fi渴望确认「我的人生有意义、我的选择有价值」，但在宏大叙事里总觉得自己渺小、觉得「英雄」离自己很远。救援群像击中的是：英雄不是天生的超人，是普通人在关键时刻选择了向前——这正是ENFP内心深处最渴望确认的「平凡人的力量」。",
+        "hook_first3": "第一行「他们也是孩子，却为我们冲锋陷阵」直接引用群众送行时的哽咽原话；第二行「脱下那身衣服，他们和你的弟弟、同学、朋友没什么两样」拉近距离；第三行「ENFP看到的不只是感动，是『害怕和勇敢从来不是反义词』」切入Ne-Fi。",
+        "emotion_curve": "心疼(他们也是孩子) → 敬畏(依然选择向前) → 共鸣(平凡人的担当) → 热血(我也可以成为别人的光) → 行动(认出自己那份没被喊出的勇气)。",
+        "structure": [
+          "钩子·他们也是孩子",
+          "反差·英雄是普通人",
+          "洞察·害怕与勇敢并存",
+          "迁移·你生命里的冲锋时刻",
+          "CTA·说出你曾经「害怕却做了」的事"
+        ],
+        "differentiation": "别人写「致敬英雄/煽情泪点」，我们写Ne-Fi的「平凡人担当」——不消费苦难、不渲染牺牲的悲壮，落点「真正的勇敢是带着害怕向前」；把「英雄」还原成「也会害怕的普通人」，让ENFP看见自己身上同样有那份光。"
+      },
+      "post": {
+        "cover_title": "他们也是孩子，却选择了向前",
+        "body": "刷到这条新闻的时候，\n我眼眶一下子热了。\n\n一群群众，哽咽着送别救援人员。\n有人喊出那句：\n「他们也是孩子，\n却为我们冲锋陷阵。」🥹\n\n脱下那身衣服，\n他们和你的弟弟、同学、朋友，\n没什么两样。\n也会怕，也会想家，\n也会在深夜偷偷掉眼泪。\n\n可到了那一刻，\n害怕和勇敢，\n从来不是反义词。\n\n真正的勇敢，\n是心里装着怕，\n腿却还是迈了出去。🚶‍♂️\n\nENFP太懂这种感觉了：\n你心里也有一个\n「想冲上去」的瞬间，\n只是还没被喊出来。\n\n那不是渺小，\n那是你还没认领的光。✨\n\n💬 你生命里有没有过\n「害怕却依然做了」的时刻？\n评论区说出来，\n那是你真实的力量。",
+        "hashtags": [
+          "#致敬救援人员",
+          "#平凡人的力量",
+          "#MBTI",
+          "#ENFP",
+          "#自我成长"
+        ],
+        "cover_visual": "救援人员背影与人群送行剪影 + 逆光暖色调；大字「他们也是孩子」；橙色+深蓝高对比",
+        "cta": "你生命里有没有过「害怕却依然做了」的时刻？评论区说出来，那是你真实的力量。",
+        "post_time": "18:00-20:00（正能量/共鸣类·晚间情绪高峰）",
+        "avoid": "不消费苦难、不渲染悲壮牺牲、不贬低未参与救援的人；落点「平凡人的担当/害怕与勇敢并存」，规避「英雄神话」套路化"
       },
       "post_spec_version": "v2.0"
     },
@@ -9060,6 +9259,79 @@
             "CTA·你判断对错的标准是什么"
           ],
           "differentiation": "别人写于东来讲'支持胖东来/骂房东/站队'，我们讲'公众急着贴标签时被忽略的伦理灰度与决策成本'；Te理性拆解不下结论，绝不站队引战、不judge房东或于东来、不煽动对立情绪。"
+        }
+      }
+    },
+    "D21-B19-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B19-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B19"
+        },
+        "created_at": "2026-08-28T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-28-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B19-INTP-1",
+        "title": "手机卖不动，价格却涨了——INTP的Ti-Ne没有把这当成「厂商割韭菜」的抱怨。它一眼看穿这背后的结构：当蛋糕不再变大，市场就不再比谁卖得多，而改比谁留得住、谁卖得贵；这不是反常，是增量竞争切换成存量精耕的理性选择",
+        "hook": "反常识",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "手机卖不动 价格却涨了(7分·反常识·消费经济/消费悖论·heat85)"
+        ],
+        "paradigm": "反常识·Ti-Ne消费悖论解构型(INTP反常识batch1换hook·手机卖不动7·Ti:存量博弈的理性选择·Ne:增量竞争→存量精耕·从好奇心finance降产未部署→反常识·非AI题材冷却对冲·严禁渲染经济焦虑/唱衰)",
+        "role": "P1·INTP反常识batch1换hook(手机卖不动7·消费悖论/结构性解构·非AI题材)·B站NT位·方向船key_decision「INTP从好奇心finance降产未部署→反常识batch1换hook(手机卖不动7·非AI冷却对冲)」",
+        "direction_compliance": "D21-B19 direction-vessel key_decision对齐·INTP×反常识×B站",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B19局部轮出+恢复批·INTP 反常识 batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INTP的Ti-Ne对「表面矛盾背后的结构」有本能的兴趣，看到「手机卖不动却更贵了」这种反直觉现象会忍不住想拆开看。它击中的不是「消费要完了」的焦虑，而是「当增长逻辑失效，系统会如何自我调整」的智力好奇——这是INTP最纯粹的认知快感。",
+          "hook_first3": "第一行「手机卖不动了，价格却涨了」直接摆出悖论；第二行「出货量跌16.7%，均价却涨27.6%——这不对劲」用数据强化反差；第三行「INTP一眼看穿：市场不再比谁卖得多，改比谁留得住」切入Ti-Ne解构。",
+          "emotion_curve": "困惑(卖不动还涨价) → 好奇(数据反常) → 顿悟(存量博弈) → 冷静(结构切换) → 通透(看懂规则)。",
+          "structure": [
+            "钩子·悖论",
+            "数据·反常",
+            "解构·存量博弈",
+            "延展·增长逻辑切换",
+            "CTA·你还看到哪些反直觉现象"
+          ],
+          "differentiation": "别人写「手机涨价割韭菜/消费降级焦虑」，我们写Ti-Ne的「结构性解构」——不唱衰、不鼓吹、不渲染经济焦虑；落点「看懂规则比焦虑更重要」；用「存量精耕 vs 增量竞争」的框架把一条财经新闻变成一堂思维课。"
         }
       }
     },
@@ -16362,6 +16634,79 @@
         "post_spec_version": "v2.0"
       }
     },
+    "D21-B19-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B19-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B19"
+        },
+        "created_at": "2026-08-28T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-28-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B19-INFJ-1",
+        "title": "抗癌博主卢明霞去世，刚过完17岁生日——INFJ的Ni-Fe没有把它当成一条「年轻生命凋零」的悲伤新闻。它看到的是：她把抗癌的日子拍成视频，不是为了卖惨，是为了认真记录「活着」本身；我们无法决定生命的长短，但能决定每一个当下要不要认真",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "情感共鸣",
+        "arm_id": 2,
+        "batch_num": 2,
+        "signals": [
+          "抗癌博主卢明霞去世 刚过完17岁生日(7分·情感共鸣·生命/情感·heat78)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe生命教育型(INFJ情感共鸣batch2续触·抗癌博主7·Ni:看见生命本来的重量·Fe:共情而非恐吓·年轻生命凋零→生命教育/珍惜当下·严禁恐惧按钮/焦虑贩卖渲染·克制尊重不消费逝者)",
+        "role": "P1·INFJ情感共鸣batch2续触(抗癌博主7·生命共情/珍惜当下)·微博Fe位·方向船key_decision「INFJ情感共鸣batch1→batch2(抗癌博主7·Ni-Fe情绪觉察/生命教育·达上限2·B20必轮出)」",
+        "direction_compliance": "D21-B19 direction-vessel key_decision对齐·INFJ×情感共鸣×微博",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B19局部轮出+恢复批·INFJ 情感共鸣 batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "INFJ的Ni-Fe对「生命的脆弱与意义」天生敏感，容易被「死亡」话题击中却又害怕被恐惧裹挟。抗癌博主17岁离世，触动的不是「我会不会也这样」的恐慌，而是「我有没有认真活好每一个当下」的觉察——这是INFJ最深的生命叩问。",
+          "hook_first3": "第一行「她刚过完17岁生日，就走了」平静克制地陈述；第二行「她把自己抗癌的日子拍成视频，不是为了卖惨，是为了记录活着」点破意义；第三行「INFJ看到的不只是惋惜，是『我们无法决定生命的长短，但能决定每一刻要不要认真』」切入Ni-Fe。",
+          "emotion_curve": "静默(年轻生命凋零) → 克制(她不卖惨) → 共情(活着的重量) → 觉察(珍惜当下) → 平静(认真活着)。",
+          "structure": [
+            "钩子·17岁生日后离开",
+            "意义·记录活着",
+            "洞察·生命长短不由己",
+            "迁移·你的当下",
+            "CTA·今天最想认真做的一件事"
+          ],
+          "differentiation": "别人写「抗癌悲剧/健康焦虑」，我们写Ni-Fe的生命教育——不制造死亡恐惧、不贩卖健康焦虑、不规训「别等病了才后悔」；落点「珍惜当下是温柔的觉察，不是恐惧的催促」；对逝者保持尊重，把话题引向「活着的人如何活」。"
+        }
+      }
+    },
     "D20-B6-1": {
       "vessel": {
         "version": "1.0",
@@ -17266,6 +17611,79 @@
         }
       }
     },
+    "D21-B19-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B19-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B19"
+        },
+        "created_at": "2026-08-28T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-28-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B19-ISTJ-1",
+        "title": "赵心童登顶斯诺克世界第一——ISTJ的Si没有把这当成「天才少年」的爽文。它看到的是：这个「第一」不是灵光一现，是一杆一杆打出来的秩序与积累；真正的成就，藏在日复一日的规范里，长期主义终有回响",
+        "hook": "社会证明",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "社会证明",
+        "arm_id": 5,
+        "batch_num": 2,
+        "signals": [
+          "赵心童登顶世界第一(6分·社会证明·体育/斯诺克·heat94)"
+        ],
+        "paradigm": "社会证明·Si积累成就型(ISTJ社会证明batch2续触·赵心童6·Si:一杆一杆打出来的秩序·成就叙事的长期主义·社会证明batch1(B18扶老人7)→batch2·6分弱信号但clean·严禁成功学鸡汤/贬低未成功者)",
+        "role": "P1·ISTJ社会证明batch2续触(赵心童登顶世界第一6·体育成就/长期主义)·抖音SJ位·方向船key_decision「ISTJ社会证明batch1→batch2(赵心童6·Si秩序感+成就叙事·SJ象限维持)」",
+        "direction_compliance": "D21-B19 direction-vessel key_decision对齐·ISTJ×社会证明×抖音",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B19局部轮出+恢复批·ISTJ 社会证明 batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ISTJ的Si相信「稳定、规范、日复一日的积累」，最反感「一夜成名」的浮夸叙事。赵心童登顶世界第一，击中的是：这个「第一」不是灵光一现，是长期训练、一杆一杆打出来的——这正是ISTJ最认同也最需要被确认的「长期主义终有回响」。",
+          "hook_first3": "第一行「赵心童，登顶斯诺克世界第一」直接报结果；第二行「继丁俊晖之后，第二位做到这件事的中国球员」给历史坐标；第三行「ISTJ看到的不只是冠军，是『真正的第一，藏在日复一日的规范里』」切入Si。",
+          "emotion_curve": "振奋(登顶第一) → 认同(历史坐标) → 笃定(长期主义) → 平静(积累的力量) → 行动(守住自己的节奏)。",
+          "structure": [
+            "钩子·登顶第一",
+            "坐标·第二位中国球员",
+            "洞察·一杆一杆打出来",
+            "迁移·你的长期主义",
+            "CTA·你坚持最久的一件事"
+          ],
+          "differentiation": "别人写「天才少年/励志鸡汤」，我们写Si的「积累与秩序」——不渲染一夜成名、不贩卖成功焦虑、不贬低仍在路上的普通人；落点「长期主义不是口号，是每天重复的正确动作」；把体育新闻变成给「踏实的人」的一次正名。"
+        }
+      }
+    },
     "D21-B8-ENFP-1": {
       "vessel": {
         "version": "1.0",
@@ -17536,6 +17954,95 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B19-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B19-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B19"
+        },
+        "created_at": "2026-08-28T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-28-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B19-ENFP-1",
+        "title": "「他们也是孩子，却为我们冲锋陷阵」——ENFP的Ne-Fi看到的不是悲壮的英雄叙事。它看到的是：每一个穿上那身衣服的年轻人，都是在害怕与责任之间选择了向前一步；而这份「明知害怕依然向前」的担当，才是自我觉醒最滚烫的样子",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.9,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "情感共鸣",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "\"他们也是孩子 却为我们冲锋陷阵\"(8分·情感共鸣·救援群像/强情绪觉察·heat96)"
+        ],
+        "paradigm": "情感共鸣·Ne-Fi平凡人担当型(ENFP情感共鸣batch2续触·救援群像8旗舰·Ne:平凡人也能成为别人的光·Fi:害怕却仍选择的真实担当·自我觉醒母题延续·正面安全·严禁渲染悲情/消费英雄/制造牺牲焦虑)",
+        "role": "P0·ENFP情感共鸣batch2续触(救援群像8旗舰·强情绪觉察线·自我觉醒母题延续)·小红书NF位·方向船key_decision「ENFP情感共鸣batch1→batch2(救援群像8·强情绪觉察·达上限2·B20必轮出)」",
+        "direction_compliance": "D21-B19 direction-vessel key_decision对齐·ENFP×情感共鸣×小红书",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B19局部轮出+恢复批·ENFP 情感共鸣 batch2)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENFP的Fi渴望确认「我的人生有意义、我的选择有价值」，但在宏大叙事里总觉得自己渺小、觉得「英雄」离自己很远。救援群像击中的是：英雄不是天生的超人，是普通人在关键时刻选择了向前——这正是ENFP内心深处最渴望确认的「平凡人的力量」。",
+          "hook_first3": "第一行「他们也是孩子，却为我们冲锋陷阵」直接引用群众送行时的哽咽原话；第二行「脱下那身衣服，他们和你的弟弟、同学、朋友没什么两样」拉近距离；第三行「ENFP看到的不只是感动，是『害怕和勇敢从来不是反义词』」切入Ne-Fi。",
+          "emotion_curve": "心疼(他们也是孩子) → 敬畏(依然选择向前) → 共鸣(平凡人的担当) → 热血(我也可以成为别人的光) → 行动(认出自己那份没被喊出的勇气)。",
+          "structure": [
+            "钩子·他们也是孩子",
+            "反差·英雄是普通人",
+            "洞察·害怕与勇敢并存",
+            "迁移·你生命里的冲锋时刻",
+            "CTA·说出你曾经「害怕却做了」的事"
+          ],
+          "differentiation": "别人写「致敬英雄/煽情泪点」，我们写Ne-Fi的「平凡人担当」——不消费苦难、不渲染牺牲的悲壮，落点「真正的勇敢是带着害怕向前」；把「英雄」还原成「也会害怕的普通人」，让ENFP看见自己身上同样有那份光。"
+        },
+        "post": {
+          "cover_title": "他们也是孩子，却选择了向前",
+          "body": "刷到这条新闻的时候，\n我眼眶一下子热了。\n\n一群群众，哽咽着送别救援人员。\n有人喊出那句：\n「他们也是孩子，\n却为我们冲锋陷阵。」🥹\n\n脱下那身衣服，\n他们和你的弟弟、同学、朋友，\n没什么两样。\n也会怕，也会想家，\n也会在深夜偷偷掉眼泪。\n\n可到了那一刻，\n害怕和勇敢，\n从来不是反义词。\n\n真正的勇敢，\n是心里装着怕，\n腿却还是迈了出去。🚶‍♂️\n\nENFP太懂这种感觉了：\n你心里也有一个\n「想冲上去」的瞬间，\n只是还没被喊出来。\n\n那不是渺小，\n那是你还没认领的光。✨\n\n💬 你生命里有没有过\n「害怕却依然做了」的时刻？\n评论区说出来，\n那是你真实的力量。",
+          "hashtags": [
+            "#致敬救援人员",
+            "#平凡人的力量",
+            "#MBTI",
+            "#ENFP",
+            "#自我成长"
+          ],
+          "cover_visual": "救援人员背影与人群送行剪影 + 逆光暖色调；大字「他们也是孩子」；橙色+深蓝高对比",
+          "cta": "你生命里有没有过「害怕却依然做了」的时刻？评论区说出来，那是你真实的力量。",
+          "post_time": "18:00-20:00（正能量/共鸣类·晚间情绪高峰）",
+          "avoid": "不消费苦难、不渲染悲壮牺牲、不贬低未参与救援的人；落点「平凡人的担当/害怕与勇敢并存」，规避「英雄神话」套路化"
+        },
+        "post_spec_version": "v2.0"
       }
     },
     "D21-B13-INFJ-1": {
@@ -20487,6 +20994,79 @@
         "usage_count": 0,
         "social_proof_alternative": true,
         "alternative_note": "社会证明0信号→身份认同替代·Si学术传统视角·信任7.60零维护"
+      }
+    },
+    "D21-B19-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B19-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B19"
+        },
+        "created_at": "2026-08-28T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-28-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B19-ENFJ-1",
+        "title": "何炅自曝断交的人不超过4个——ENFJ的Fe没有把这当成一条「人缘好」的八卦。它看到的是：这不是人缘好，而是一种成熟的关系观——不轻易放弃一段关系，但也绝不被关系绑架；真正的成熟，是既珍视连接，又守住边界",
+        "hook": "身份认同",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "何炅自曝断交的人不超过4个(7分·身份认同·人际关系/关系边界·heat80)"
+        ],
+        "paradigm": "身份认同·Fe关系边界型(ENFJ身份认同batch1恢复·何炅断交观7·Fe:珍视连接也守住边界·成熟关系观·轮休1批后恢复·非情感共鸣信号触发·严禁渲染社交焦虑/judge他人社交方式)",
+        "role": "P1·ENFJ身份认同batch1恢复(何炅断交观7·人际断交观/关系边界)·微博Fe位·方向船key_decision「ENFJ轮休1批后恢复(何炅断交观7身份认同·非情感共鸣信号触发恢复)」",
+        "direction_compliance": "D21-B19 direction-vessel key_decision对齐·ENFJ×身份认同×微博",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B19局部轮出+恢复批·ENFJ 身份认同 batch1)·方向船mandates合规",
+        "brief": {
+          "pain_point": "ENFJ的Fe把「关系」看得很重，常常为了维系和谐而过度付出、不敢拒绝，甚至害怕「断交」这个词。何炅「主动断交的人不超过4个」击中的是：成熟的关系观不是「人缘好到从不断交」，而是「既珍视连接，也有边界」——这正是ENFJ最需要被点醒的「关系不是越多越好，是越真越好」。",
+          "hook_first3": "第一行「何炅说：我主动断交的人，不超过4个」直接引金句；第二行「这不是人缘好，是一种我们很少聊的关系观」设悬念；第三行「ENFJ最懂关系的分量——真正的成熟，是既愿意为关系付出，也敢给关系划边界」切入Fe。",
+          "emotion_curve": "好奇(4个断交) → 恍然(不是人缘好) → 共鸣(关系太重了) → 释然(边界也是爱) → 笃定(真诚连接)。",
+          "structure": [
+            "钩子·不超过4个",
+            "反差·不是人缘好是边界",
+            "洞察·关系不是越多越好",
+            "迁移·你不敢划的边界",
+            "CTA·说说你最近想通的一段关系"
+          ],
+          "differentiation": "别人写「何炅情商高/人缘好」，我们写Fe的关系边界观——不贩卖社交焦虑、不规训「你该断舍离」、不judge任何社交方式；落点「珍视连接与守住边界并不矛盾」；给ENFJ一个「拒绝也可以很温柔」的身份确认。"
+        }
       }
     }
   }
