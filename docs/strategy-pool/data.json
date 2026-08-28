@@ -825,6 +825,33 @@
       "strategy_match_score": "✅ 100% > 0.4·方向保持",
       "mbti_coverage": "✅ 5 ≥ 3·无单一人格垄断",
       "hook_diversity": "✅ 0.5 > 0.3·无钩子同质化(社会货币连续6批冷却·好奇心finance降产)"
+    },
+    "d21_b19_execution": {
+      "strategy_match": "n/a (冻结·0臂未部署·720h防线已破+95%熔断线差¥35)",
+      "strategy_match_delta": "n/a (无执行·冻结批次)",
+      "cash_roi": "null (支付~730h·720h于8/27 23:00已破·30天不可逆防线突破·全ROI永久作废)",
+      "mbti_coverage": 0,
+      "hook_diversity": null,
+      "hook_diversity_delta": "n/a (冻结0臂)",
+      "hhi": null,
+      "hhi_delta": "n/a (冻结0臂·无渠道集中度)",
+      "ttl_expired": 0,
+      "ttl_expired_pct": 0.0,
+      "dissent_count": 0,
+      "content_reused": 0,
+      "block_rate": 1.0,
+      "blocked_arms": 5,
+      "strategy_stale": true,
+      "freeze_reason": "冻结投放·双红线重叠: ①720h(2026-08-27 23:00)支付不可逆防线已破~10.4h(30天全系统公认防线突破)·②分发桶94.25%(¥4,425/¥4,695)距95%熔断线(¥4,460)仅差¥35·任一批次(≥¥35)即破95%·控控budget-vessel明令'若触及95%熔断线或720h突破则冻结投放'·策策B19方向船仍在.staging-direction未atomic_commit·live方向船B18已stale~25h·冻结vs继续须控控/大卡/进进裁决",
+      "match_gate": "n/a (冻结未部署·0臂无执行层匹配率)",
+      "executed_at": "2026-08-28T09:25:00+08:00",
+      "note": "D21-B19冻结(0臂¥0)·720h(8/27 23:00)支付不可逆防线已破~10.4h+分发桶94.25%距95%(¥4,460)仅差¥35双红线重叠·控控budget-vessel明令冻结·策策B19方向船(.staging-direction·5臂¥125:ENFP救援群像8/INFJ抗癌博主7/ENFJ何炅7/INTP手机卖不动7/ISTJ赵心童6)未atomic_commit·设设08:30已产5臂fresh未部署·冻结vs继续须控控/大卡/进进裁决·strategy-pool仍B17 stale第4次反复"
+    },
+    "three_question_test_d21_b19": {
+      "cash_roi": "⛔ 支付盲·720h已破(30天不可逆防线)·冻结投放",
+      "strategy_match_score": "⛔ n/a (0臂·冻结未部署)",
+      "mbti_coverage": "⛔ 0 (冻结0臂)",
+      "hook_diversity": "⛔ n/a (冻结0臂)"
     }
   },
   "vessel": {
