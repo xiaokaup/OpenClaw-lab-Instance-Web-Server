@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格反常识解构卡</title>
+<style>
+  :root { --bg:#f4f2ee; --card:#fff; --ink:#2b2b2b; --accent:#4a6fa5; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#e8e4da; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#a8bcd8; }
+  .opt.sel { border-color:var(--accent); background:#eef3fa; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f2f5fa; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧩 人格反常识解构卡</h1>
+  <div class="sub">8 题测一测 · 找到你拆穿世界的方式</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的反常识解构方式是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格反常识解构卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-08-29<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · #10 已发货箱
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格反常识解构卡", "subtitle": "8 题测一测 · 找到你拆穿世界的方式", "estimated_time": "2分钟", "types": {"structure": {"name": "系统拆解型", "emoji": "🧩", "color": "#4a6fa5", "core": "你看世界的方式，是拆系统——别人看见现象，你看见现象背后那台机器怎么运转", "declaration": "我的解构宣言：真正的对手，不在你盯着的名单上", "strength": "结构洞察·归因准确", "blind": "容易显得冷血/算计", "case": "车企逃离发布会（D21-B7·9分）·银行能办结婚证（D21-B4·8.8分）", "trigger": "当所有人盯着同一个「靶子」时", "action": "下次刷到爆款，先拆一遍它的系统结构"}, "hype": {"name": "热度透视型", "emoji": "🔍", "color": "#b08a3e", "core": "你看世界的方式，是透视热度——爆款背后不是运气，是需求的结构", "declaration": "我的解构宣言：我们抢的从来不是奶，是稀缺", "strength": "需求嗅觉·趋势判断", "blind": "容易对流行祛魅、扫兴", "case": "韩国冰奶查无此物（D21-B6·9分）·华为天才少年卖玉米（D21-B11·9分）", "trigger": "当一件事突然「全网都在抢」时", "action": "写下一个爆款背后的真实需求结构"}, "rule": {"name": "规则破译型", "emoji": "📜", "color": "#7a9a5a", "core": "你看世界的方式，是破译规则——规则存在的意义，从来不是你以为的那个", "declaration": "我的解构宣言：规则不是限制，是别人写好的剧本", "strength": "规则嗅觉·边界感强", "blind": "容易被当刺头/不服管", "case": "豪华厕所被强拆（D21-B9·8.9分）·取消实体按键是昂贵的极简主义（D20-B8·8.8分）", "trigger": "当一条规则「人人都遵守但没人解释」时", "action": "找出你身边一条规则，问它到底在保护谁"}, "absurd": {"name": "荒诞共情型", "emoji": "🎭", "color": "#c96f4a", "core": "你看世界的方式，是接住荒诞——荒诞不是滑稽，是情绪最诚实的出口", "declaration": "我的解构宣言：荒诞之下，全是人话", "strength": "情绪洞察·共情真实", "blind": "容易情绪卷入、内耗", "case": "跳江又游回来（D21-B8·8.9分）·ISFJ第三次犯错的「全息录像」（D17-B2·8.8分）", "trigger": "当一件事「离谱到没法解释」时", "action": "把一件荒诞小事，翻译成它真正想说的话"}}, "questions": [{"id": 1, "type": "structure", "text": "一个行业集体「逃离发布会」，你的第一反应是：", "options": [{"text": "他们在躲谁？背后的权力结构变了", "scores": {"structure": 3}}, {"text": "有意思，看看具体发生了什么", "scores": {"structure": 1}}, {"text": "车企不开发布会，那钱花哪了？", "scores": {"structure": -1}}, {"text": "不关注，发布会本来就无聊", "scores": {"structure": -2}}]}, {"id": 2, "type": "structure", "text": "当一件「不该」的机构做了「不该」的事（比如银行办结婚证），你：", "options": [{"text": "立刻想：它为什么要跨界？系统在重组", "scores": {"structure": 3}}, {"text": "觉得挺新鲜，关注一下", "scores": {"structure": 1}}, {"text": "不理解，各干各的不好吗", "scores": {"structure": -1}}, {"text": "没注意过这种事", "scores": {"structure": -2}}]}, {"id": 3, "type": "hype", "text": "一款「查无此物」的冰奶突然爆火，你会：", "options": [{"text": "拆它的需求结构——大家抢的是稀缺不是奶", "scores": {"hype": 3}}, {"text": "好奇，想尝尝到底多好喝", "scores": {"hype": 1}}, {"text": "炒作吧，过两天就凉", "scores": {"hype": -1}}, {"text": "大家都买，我也跟一个", "scores": {"hype": -2}}]}, {"id": 4, "type": "hype", "text": "年薪百万的天才少年去卖玉米，你的判断是：", "options": [{"text": "他在撕掉天花板——真正的选择自由", "scores": {"hype": 3}}, {"text": "佩服，但有点可惜", "scores": {"hype": 1}}, {"text": "想不通，赚不到钱图什么", "scores": {"hype": -1}}, {"text": "营销吧，反正我不信", "scores": {"hype": -2}}]}, {"id": 5, "type": "rule", "text": "一座豪华公厕被强拆，你会怎么想：", "options": [{"text": "规则在告诉所有人：这里不欢迎「例外」", "scores": {"rule": 3}}, {"text": "有点可惜，建得挺好看", "scores": {"rule": 1}}, {"text": "拆就拆了，浪费纳税人的钱", "scores": {"rule": -1}}, {"text": "没想法，跟我没关系", "scores": {"rule": -2}}]}, {"id": 6, "type": "rule", "text": "有人告诉你「取消实体按键是极简主义」，你：", "options": [{"text": "这是昂贵的极简——真正的原因是成本结构", "scores": {"rule": 3}}, {"text": "有道理，确实更简洁", "scores": {"rule": 1}}, {"text": "还是实体按键好用", "scores": {"rule": -1}}, {"text": "不关心产品设计", "scores": {"rule": -2}}]}, {"id": 7, "type": "absurd", "text": "一个人跳江又自己游回来了，你最先感受到的是：", "options": [{"text": "他那一刻的崩溃和求生，荒诞又真实", "scores": {"absurd": 3}}, {"text": "哭笑不得，但心里有点堵", "scores": {"absurd": 1}}, {"text": "这人真离谱，纯搞笑", "scores": {"absurd": -1}}, {"text": "刷到就划走，不评论", "scores": {"absurd": -2}}]}, {"id": 8, "type": "absurd", "text": "一个人第三次犯同一个错，你更愿意怎么理解：", "options": [{"text": "他的系统在自动调取前两次的坑——这是模式不是愚蠢", "scores": {"absurd": 3}}, {"text": "可能有什么难言之隐", "scores": {"absurd": 1}}, {"text": "记吃不记打，没救了", "scores": {"absurd": -1}}, {"text": "跟我无关，懒得想", "scores": {"absurd": -2}}]}], "cases": [{"type": "系统拆解型", "id": "D21-B7-ENTJ-1", "title": "车企集体逃离发布会", "q": 9.0, "summary": "真正的对手，不在你盯着的名单上"}, {"type": "系统拆解型", "id": "D21-B4-INTJ-1", "title": "银行能办结婚证", "q": 8.8, "summary": "当最「不该」的机构，做最「不该」的事"}, {"type": "热度透视型", "id": "D21-B6-INTJ-1", "title": "韩国冰奶查无此物", "q": 9.0, "summary": "爆款的结构：我们抢的不是奶，是稀缺"}, {"type": "热度透视型", "id": "D21-B11-ENTJ-1", "title": "华为天才少年转身卖玉米", "q": 9.0, "summary": "撕掉年薪百万的天花板，是更大的选择自由"}, {"type": "规则破译型", "id": "D21-B9-ENTP-1", "title": "豪华公厕被强拆", "q": 8.9, "summary": "规则存在的意义，不是你以为的那个"}, {"type": "规则破译型", "id": "D20-B8-INTP-1", "title": "取消实体按键是昂贵的极简主义", "q": 8.8, "summary": "Ti 系统一开始就知道答案"}, {"type": "荒诞共情型", "id": "D21-B8-ENTP-1", "title": "跳江又游回来", "q": 8.9, "summary": "荒诞=情绪最诚实的出口"}, {"type": "荒诞共情型", "id": "D17-B2-1", "title": "ISFJ 第三次犯错的「全息录像」", "q": 8.8, "summary": "Si 系统后台自动调取前两次的坑"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池反常识旗舰 16 条 + 好奇心 27 条（车企逃离发布会 9 / 韩国冰奶 9 / 跳江又游回 8.9 等）提炼的趣味倾向测试，用于自我觉察与分享，不构成心理评估。", "result_fields": [{"key": "declaration", "label": "💬 解构宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
