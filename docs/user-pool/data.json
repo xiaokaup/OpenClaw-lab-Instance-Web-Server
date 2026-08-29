@@ -7,8 +7,8 @@
       "subsystem": "用户运营"
     },
     "freshness_ttl_hours": 24,
-    "id": "user-pool-vessel-2026-08-28T10:18:45+08:00",
-    "created_at": "2026-08-28T10:18:45+08:00",
+    "id": "user-pool-vessel-2026-08-29T10:08:49+08:00",
+    "created_at": "2026-08-29T10:08:49+08:00",
     "priority": "high",
     "dependencies": [
       {
@@ -78,7 +78,7 @@
       "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
     }
   },
-  "updated_at": "2026-08-28T10:18:45+08:00",
+  "updated_at": "2026-08-29T10:08:49+08:00",
   "total_users": 8250,
   "population_estimate": {
     "xixi_estimates": 8480,
@@ -101,17 +101,17 @@
     49,
     49
   ],
-  "operator": "营营·D21-B19对齐(2026-08-28 10:00 cron·冻结批次)",
-  "system_status": "🔴 D21-B19冻结(0臂¥0·2026-08-28 09:25投投冻结投放)·双红线重叠: ①720h支付不可逆防线已破(8/27 23:00·~10.4h) ②分发桶94.25%(¥4,425/¥4,695)距95%熔断线(¥4,460)仅差¥35·控控budget-vessel明令冻结·策策B19方向船(.staging·5臂¥125:ENFP/INFJ/ENFJ/INTP/ISTJ)未atomic_commit·live方向船B18已stale~25h·冻结vs继续须控控/大卡/进进裁决·营营10:00对齐刷新(eligible维持B18基线·count/trust/theme确定性刷新)",
-  "system_status_detail": "B19(08-28 09:25)冻结0臂¥0: 720h(8/27 23:00)支付不可逆防线已破~10.4h + 分发桶94.25%距95%(¥4,460)仅差¥35双红线重叠·控控budget-vessel明令'触及95%熔断线或720h突破则冻结投放'·策策B19方向船(.staging-direction·5臂¥125:ENFP救援群像8/INFJ抗癌博主7/ENFJ何炅7/INTP手机卖不动7/ISTJ赵心童6)未atomic_commit·设设08:30已产5臂fresh未部署·live方向船B18已stale~25h·strategy-pool仍B17 stale第4次反复·冻结vs继续须控控/大卡/进进裁决·⚠️persona-pool stale(08-21·上游profiles.json冻结ESC-2026-08-17-1)·count保持原值·trust源=B17 fatigue_management(INTJ 8.56/ENFJ 7.10/INTP 7.35上端)",
+  "operator": "营营·D29-B1对齐(2026-08-29 10:00 cron·冻结延续)",
+  "system_status": "🔴 D29-B1冻结延续(0臂¥0·2026-08-29 09:25投投冻结投放)·双红线未解除: ①720h(8/27 23:00)支付不可逆防线已破~34.4h+744h(31天·8/28 23:00)已破~10.4h ②分发桶94.25%(¥4,425/¥4,695)距95%熔断线(¥4,460)仅差¥35·B20方向船未产出(direction-vessel仍B19·.staging-direction空)·live方向B19已atomic_commit(8/28 21:22)·设设B20已产5臂fresh(avg8.62)保留active未部署·冻结vs继续须控控/大卡/进进裁决·营营10:00对齐刷新(eligible按B19方向船·count/trust/theme确定性刷新)",
+  "system_status_detail": "D29-B1(08-29 09:25)冻结延续0臂¥0: 720h已破~34.4h + 744h(31天)已破~10.4h + 分发桶94.25%距95%(¥4,460)仅差¥35双红线未解除·控控budget-vessel明令'触及95%熔断线或720h突破则冻结投放'·B20方向船未产出(direction-vessel仍B19·.staging-direction空)·strategy-pool仍B17 stale(~3天·第5次反复)·设设B20已产5臂fresh(INTP反常识8.8旗舰/INTJ身份认同8.7/ENTJ身份认同8.6/ENTP好奇心8.5/ENFJ社会证明8.5·avg8.62)保留active未部署·live方向船B19(8/28 21:22 atomic_commit·priority=ENFP/INFJ/ENFJ/INTP/ISTJ·excluded=INTJ/ENTP/ENTJ/INFP/ISFP)·冻结vs继续须控控/大卡/进进裁决·768h(8/29 23:00·32天)下一阈值·⚠️persona-pool stale(08-21·上游profiles.json冻结ESC-2026-08-17-1)·count保持原值·trust源=B17 fatigue_management(INTJ 8.56/ENFJ 7.10/INTP 7.35上端)",
   "segments": {
     "active": [
       {
         "personality": "INTJ",
         "count": 390,
         "avg_trust": 8.56,
-        "eligible": true,
-        "note": "B18反常识batch2续触(AI真人脸8·认知反转·B站·P1)·反常识batch1(B17人民日报家长群6)续触·零维护信任8.56全池最高·B19需换hook·信任8.56",
+        "eligible": false,
+        "note": "B19轮休1批·反常识batch2达上限(B17人民日报家长群6+B18 AI真人脸8)·无非反常识INTJ信号·强制轮出·零维护信任8.56全池最高·B20恢复候选",
         "persona": {
           "themes": [
             {
@@ -129,8 +129,8 @@
         "personality": "ENTJ",
         "count": 300,
         "avg_trust": 7.74,
-        "eligible": true,
-        "note": "B18好奇心batch1换hook(英伟达Q2翻倍6·商业成就·抖音·P1)·身份认同batch2(B17陈明求职5)达上限换hook·finance降产保留active·信任7.74",
+        "eligible": false,
+        "note": "B19轮休·好奇心batch1(B18英伟达Q2 6)finance降产未部署·AI题材冷却对冲·B20恢复候选·信任7.74",
         "persona": {
           "themes": [
             {
@@ -149,7 +149,7 @@
         "count": 330,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "B18好奇心batch1换hook(比尔盖茨AI警告7·系统思考·B站·P0)·反常识batch2(B17禁止殴打7)达上限换hook·NT象限维持·finance降产保留active·信任7.08-7.35",
+        "note": "B19反常识batch1换hook(手机卖不动7·消费悖论·B站·P0)·从好奇心finance降产未部署→反常识·非AI题材(冷却对冲)·NT象限维持·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -168,7 +168,7 @@
         "count": 270,
         "avg_trust": 6.49,
         "eligible": true,
-        "note": "B18情感共鸣batch1恢复触达(82岁跨栏9旗舰·自我觉醒·小红书·P0)·轮休2批后恢复·信任口径待定论(6.49·confidence_low 0.224)·信任6.49",
+        "note": "B19情感共鸣batch2续触(救援群像8旗舰·强情绪觉察·小红书·P0)·情感共鸣batch1(B18 82岁跨栏9)续触·达上限2·⚠️B20必轮出·信任6.49(口径待定论·confidence_low 0.224)",
         "persona": {
           "themes": [
             {
@@ -187,7 +187,7 @@
         "count": 225,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "B18复评轮休第6批·疲劳~2.0仍≥2.0(阈值纪律)·82岁跨栏9/孩子装病7为候选但疲劳未达标·B19复评·信任6.93",
+        "note": "B19复评轮休第7批·疲劳~2.0仍≥2.0(阈值纪律·INFP疲劳曾被忽略7/11历史教训)·抗癌博主7为候选但疲劳未达标·B20复评·信任6.93",
         "persona": {
           "themes": [
             {
@@ -206,7 +206,7 @@
         "count": 155,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "B18情感共鸣batch1重启(孩子装病7·情绪觉察·微博·P1)·轮休1批(B17)后恢复·信任8.13",
+        "note": "B19情感共鸣batch2续触(抗癌博主7·生命共情·微博·P0)·情感共鸣batch1(B18孩子装病7)续触·达上限2·⚠️避免恐惧渲染(共情/珍惜角度)·信任8.13",
         "persona": {
           "themes": [
             {
@@ -225,7 +225,7 @@
         "count": 155,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "B18社会证明batch1换hook(扶老人获退款7·社会公正反转·小红书·P0)·情感共鸣batch1(B17少年自学9)换hook·SJ象限维持·信任7.62",
+        "note": "B19社会证明batch2续触(赵心童登顶世界第一6·体育成就·抖音·P0)·社会证明batch1(B18扶老人获退款7)续触·SJ象限维持·信任7.62",
         "persona": {
           "themes": [
             {
@@ -262,8 +262,8 @@
         "personality": "ENFJ",
         "count": 92,
         "avg_trust": 7.1,
-        "eligible": false,
-        "note": "B18轮休1批·情感共鸣batch2达上限(B16失联船员8+B17拍繁星8)·无非情感共鸣信号·强制轮出·B19恢复候选·信任7.10",
+        "eligible": true,
+        "note": "B19身份认同batch1恢复(何炅断交观7·关系边界·微博·P0)·轮休1批(B18)后恢复·非情感共鸣信号触发恢复·信任7.10",
         "persona": {
           "themes": [
             {
@@ -281,8 +281,8 @@
         "personality": "ENTP",
         "count": 82,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "B18反常识batch1重启(13岁AI赚钱8·青少年创造力·抖音·P1)·轮休1批(B17)后恢复·⚠️未成年正面角度·信任7.25",
+        "eligible": false,
+        "note": "B19轮休1批·反常识batch1(B18 13岁AI赚钱8)后让位·AI题材冷却对冲·B20恢复候选·信任7.25",
         "persona": {
           "themes": [
             {
@@ -302,8 +302,8 @@
         "personality": "INTJ",
         "count": 455,
         "avg_trust": 8.56,
-        "eligible": true,
-        "note": "B18反常识batch2续触(AI真人脸8·B站)·信任8.56",
+        "eligible": false,
+        "note": "B19轮休1批·反常识batch2达上限·B20恢复候选·信任8.56",
         "persona": {
           "themes": [
             {
@@ -321,8 +321,8 @@
         "personality": "ENTJ",
         "count": 285,
         "avg_trust": 7.74,
-        "eligible": true,
-        "note": "B18好奇心batch1换hook(英伟达Q2 6·抖音)·信任7.74",
+        "eligible": false,
+        "note": "B19轮休·好奇心batch1 finance降产·B20恢复候选·信任7.74",
         "persona": {
           "themes": [
             {
@@ -341,7 +341,7 @@
         "count": 285,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "B18社会证明batch1换hook(扶老人获退款7·小红书)·信任7.62",
+        "note": "B19社会证明batch2续触(赵心童6·抖音)·信任7.62",
         "persona": {
           "themes": [
             {
@@ -360,7 +360,7 @@
         "count": 155,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "B18好奇心batch1换hook(比尔盖茨AI警告7·B站)·信任7.08-7.35",
+        "note": "B19反常识batch1换hook(手机卖不动7·B站)·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -378,8 +378,8 @@
         "personality": "ENTP",
         "count": 162,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "B18反常识batch1重启(13岁AI赚钱8·抖音)·信任7.25",
+        "eligible": false,
+        "note": "B19轮休1批·反常识batch1后让位·B20恢复候选·信任7.25",
         "persona": {
           "themes": [
             {
@@ -416,8 +416,8 @@
         "personality": "ENFJ",
         "count": 122,
         "avg_trust": 7.1,
-        "eligible": false,
-        "note": "B18轮休1批·情感共鸣batch2达上限·B19恢复候选·信任7.10",
+        "eligible": true,
+        "note": "B19身份认同batch1恢复(何炅断交观7·微博)·信任7.10",
         "persona": {
           "themes": [
             {
@@ -436,7 +436,7 @@
         "count": 10,
         "avg_trust": 6.49,
         "eligible": true,
-        "note": "B18情感共鸣batch1恢复触达(82岁跨栏9·小红书)·信任6.49",
+        "note": "B19情感共鸣batch2续触(救援群像8·小红书)·信任6.49",
         "persona": {
           "themes": [
             {
@@ -455,7 +455,7 @@
         "count": 112,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "B18复评轮休第6批·疲劳~2.0≥2.0·B19复评·信任6.93",
+        "note": "B19复评轮休第7批·疲劳~2.0≥2.0·B20复评·信任6.93",
         "persona": {
           "themes": [
             {
@@ -474,7 +474,7 @@
         "count": 102,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "B18情感共鸣batch1重启(孩子装病7·微博)·信任8.13",
+        "note": "B19情感共鸣batch2续触(抗癌博主7·微博)·信任8.13",
         "persona": {
           "themes": [
             {
@@ -495,7 +495,7 @@
         "count": 185,
         "avg_trust": 7.35,
         "eligible": true,
-        "note": "召回候选·B18好奇心换hook(比尔盖茨AI警告7)·信任7.08-7.35",
+        "note": "召回候选·B19反常识换hook(手机卖不动7)·信任7.08-7.35",
         "persona": {
           "themes": [
             {
@@ -514,7 +514,7 @@
         "count": 195,
         "avg_trust": 6.49,
         "eligible": true,
-        "note": "召回候选·B18情感共鸣恢复触达(82岁跨栏9)·信任6.49",
+        "note": "召回候选·B19情感共鸣batch2续触(救援群像8)·信任6.49",
         "persona": {
           "themes": [
             {
@@ -533,7 +533,7 @@
         "count": 245,
         "avg_trust": 8.13,
         "eligible": true,
-        "note": "召回候选·B18情感共鸣重启(孩子装病7)·信任8.13",
+        "note": "召回候选·B19情感共鸣batch2续触(抗癌博主7)·信任8.13",
         "persona": {
           "themes": [
             {
@@ -551,8 +551,8 @@
         "personality": "INTJ",
         "count": 415,
         "avg_trust": 8.56,
-        "eligible": true,
-        "note": "召回候选·B18反常识batch2续触(AI真人脸8)·信任8.56",
+        "eligible": false,
+        "note": "轮休·召回暂停·B19轮休1批·B20恢复候选·信任8.56",
         "persona": {
           "themes": [
             {
@@ -570,8 +570,8 @@
         "personality": "ENTJ",
         "count": 335,
         "avg_trust": 7.74,
-        "eligible": true,
-        "note": "召回候选·B18好奇心换hook(英伟达Q2 6)·信任7.74",
+        "eligible": false,
+        "note": "轮休·召回暂停·B19轮休·B20恢复候选·信任7.74",
         "persona": {
           "themes": [
             {
@@ -590,7 +590,7 @@
         "count": 275,
         "avg_trust": 7.62,
         "eligible": true,
-        "note": "召回候选·B18社会证明换hook(扶老人获退款7)·信任7.62",
+        "note": "召回候选·B19社会证明batch2(赵心童6)·信任7.62",
         "persona": {
           "themes": [
             {
@@ -627,8 +627,8 @@
         "personality": "ENFJ",
         "count": 162,
         "avg_trust": 7.1,
-        "eligible": false,
-        "note": "轮休·召回暂停·B18轮休1批·B19恢复候选·信任7.10",
+        "eligible": true,
+        "note": "召回候选恢复·B19身份认同batch1(何炅断交观7)·信任7.10",
         "persona": {
           "themes": [
             {
@@ -646,8 +646,8 @@
         "personality": "ENTP",
         "count": 155,
         "avg_trust": 7.25,
-        "eligible": true,
-        "note": "召回候选·B18反常识重启(13岁AI赚钱8)·信任7.25",
+        "eligible": false,
+        "note": "轮休·召回暂停·B19轮休1批·B20恢复候选·信任7.25",
         "persona": {
           "themes": [
             {
@@ -666,7 +666,7 @@
         "count": 112,
         "avg_trust": 6.93,
         "eligible": false,
-        "note": "复评轮休·召回暂停·B18轮休第6批·B19复评·信任6.93",
+        "note": "复评轮休·召回暂停·B19轮休第7批·B20复评·信任6.93",
         "persona": {
           "themes": [
             {
@@ -869,8 +869,8 @@
       "personality": "INTJ",
       "count": 390,
       "avg_trust": 8.56,
-      "eligible": true,
-      "note": "B18反常识batch2续触(AI真人脸8·认知反转·B站·P1)·反常识batch1(B17人民日报家长群6)续触·零维护信任8.56全池最高·B19需换hook·信任8.56",
+      "eligible": false,
+      "note": "B19轮休1批·反常识batch2达上限(B17人民日报家长群6+B18 AI真人脸8)·无非反常识INTJ信号·强制轮出·零维护信任8.56全池最高·B20恢复候选",
       "persona": {
         "themes": [
           {
@@ -889,8 +889,8 @@
       "personality": "ENTJ",
       "count": 300,
       "avg_trust": 7.74,
-      "eligible": true,
-      "note": "B18好奇心batch1换hook(英伟达Q2翻倍6·商业成就·抖音·P1)·身份认同batch2(B17陈明求职5)达上限换hook·finance降产保留active·信任7.74",
+      "eligible": false,
+      "note": "B19轮休·好奇心batch1(B18英伟达Q2 6)finance降产未部署·AI题材冷却对冲·B20恢复候选·信任7.74",
       "persona": {
         "themes": [
           {
@@ -910,7 +910,7 @@
       "count": 330,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "B18好奇心batch1换hook(比尔盖茨AI警告7·系统思考·B站·P0)·反常识batch2(B17禁止殴打7)达上限换hook·NT象限维持·finance降产保留active·信任7.08-7.35",
+      "note": "B19反常识batch1换hook(手机卖不动7·消费悖论·B站·P0)·从好奇心finance降产未部署→反常识·非AI题材(冷却对冲)·NT象限维持·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -930,7 +930,7 @@
       "count": 270,
       "avg_trust": 6.49,
       "eligible": true,
-      "note": "B18情感共鸣batch1恢复触达(82岁跨栏9旗舰·自我觉醒·小红书·P0)·轮休2批后恢复·信任口径待定论(6.49·confidence_low 0.224)·信任6.49",
+      "note": "B19情感共鸣batch2续触(救援群像8旗舰·强情绪觉察·小红书·P0)·情感共鸣batch1(B18 82岁跨栏9)续触·达上限2·⚠️B20必轮出·信任6.49(口径待定论·confidence_low 0.224)",
       "persona": {
         "themes": [
           {
@@ -950,7 +950,7 @@
       "count": 225,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "B18复评轮休第6批·疲劳~2.0仍≥2.0(阈值纪律)·82岁跨栏9/孩子装病7为候选但疲劳未达标·B19复评·信任6.93",
+      "note": "B19复评轮休第7批·疲劳~2.0仍≥2.0(阈值纪律·INFP疲劳曾被忽略7/11历史教训)·抗癌博主7为候选但疲劳未达标·B20复评·信任6.93",
       "persona": {
         "themes": [
           {
@@ -970,7 +970,7 @@
       "count": 155,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "B18情感共鸣batch1重启(孩子装病7·情绪觉察·微博·P1)·轮休1批(B17)后恢复·信任8.13",
+      "note": "B19情感共鸣batch2续触(抗癌博主7·生命共情·微博·P0)·情感共鸣batch1(B18孩子装病7)续触·达上限2·⚠️避免恐惧渲染(共情/珍惜角度)·信任8.13",
       "persona": {
         "themes": [
           {
@@ -990,7 +990,7 @@
       "count": 155,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "B18社会证明batch1换hook(扶老人获退款7·社会公正反转·小红书·P0)·情感共鸣batch1(B17少年自学9)换hook·SJ象限维持·信任7.62",
+      "note": "B19社会证明batch2续触(赵心童登顶世界第一6·体育成就·抖音·P0)·社会证明batch1(B18扶老人获退款7)续触·SJ象限维持·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1029,8 +1029,8 @@
       "personality": "ENFJ",
       "count": 92,
       "avg_trust": 7.1,
-      "eligible": false,
-      "note": "B18轮休1批·情感共鸣batch2达上限(B16失联船员8+B17拍繁星8)·无非情感共鸣信号·强制轮出·B19恢复候选·信任7.10",
+      "eligible": true,
+      "note": "B19身份认同batch1恢复(何炅断交观7·关系边界·微博·P0)·轮休1批(B18)后恢复·非情感共鸣信号触发恢复·信任7.10",
       "persona": {
         "themes": [
           {
@@ -1049,8 +1049,8 @@
       "personality": "ENTP",
       "count": 82,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "B18反常识batch1重启(13岁AI赚钱8·青少年创造力·抖音·P1)·轮休1批(B17)后恢复·⚠️未成年正面角度·信任7.25",
+      "eligible": false,
+      "note": "B19轮休1批·反常识batch1(B18 13岁AI赚钱8)后让位·AI题材冷却对冲·B20恢复候选·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1069,8 +1069,8 @@
       "personality": "INTJ",
       "count": 455,
       "avg_trust": 8.56,
-      "eligible": true,
-      "note": "B18反常识batch2续触(AI真人脸8·B站)·信任8.56",
+      "eligible": false,
+      "note": "B19轮休1批·反常识batch2达上限·B20恢复候选·信任8.56",
       "persona": {
         "themes": [
           {
@@ -1089,8 +1089,8 @@
       "personality": "ENTJ",
       "count": 285,
       "avg_trust": 7.74,
-      "eligible": true,
-      "note": "B18好奇心batch1换hook(英伟达Q2 6·抖音)·信任7.74",
+      "eligible": false,
+      "note": "B19轮休·好奇心batch1 finance降产·B20恢复候选·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1110,7 +1110,7 @@
       "count": 285,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "B18社会证明batch1换hook(扶老人获退款7·小红书)·信任7.62",
+      "note": "B19社会证明batch2续触(赵心童6·抖音)·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1130,7 +1130,7 @@
       "count": 155,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "B18好奇心batch1换hook(比尔盖茨AI警告7·B站)·信任7.08-7.35",
+      "note": "B19反常识batch1换hook(手机卖不动7·B站)·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -1149,8 +1149,8 @@
       "personality": "ENTP",
       "count": 162,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "B18反常识batch1重启(13岁AI赚钱8·抖音)·信任7.25",
+      "eligible": false,
+      "note": "B19轮休1批·反常识batch1后让位·B20恢复候选·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1189,8 +1189,8 @@
       "personality": "ENFJ",
       "count": 122,
       "avg_trust": 7.1,
-      "eligible": false,
-      "note": "B18轮休1批·情感共鸣batch2达上限·B19恢复候选·信任7.10",
+      "eligible": true,
+      "note": "B19身份认同batch1恢复(何炅断交观7·微博)·信任7.10",
       "persona": {
         "themes": [
           {
@@ -1210,7 +1210,7 @@
       "count": 10,
       "avg_trust": 6.49,
       "eligible": true,
-      "note": "B18情感共鸣batch1恢复触达(82岁跨栏9·小红书)·信任6.49",
+      "note": "B19情感共鸣batch2续触(救援群像8·小红书)·信任6.49",
       "persona": {
         "themes": [
           {
@@ -1230,7 +1230,7 @@
       "count": 112,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "B18复评轮休第6批·疲劳~2.0≥2.0·B19复评·信任6.93",
+      "note": "B19复评轮休第7批·疲劳~2.0≥2.0·B20复评·信任6.93",
       "persona": {
         "themes": [
           {
@@ -1250,7 +1250,7 @@
       "count": 102,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "B18情感共鸣batch1重启(孩子装病7·微博)·信任8.13",
+      "note": "B19情感共鸣batch2续触(抗癌博主7·微博)·信任8.13",
       "persona": {
         "themes": [
           {
@@ -1270,7 +1270,7 @@
       "count": 185,
       "avg_trust": 7.35,
       "eligible": true,
-      "note": "召回候选·B18好奇心换hook(比尔盖茨AI警告7)·信任7.08-7.35",
+      "note": "召回候选·B19反常识换hook(手机卖不动7)·信任7.08-7.35",
       "persona": {
         "themes": [
           {
@@ -1290,7 +1290,7 @@
       "count": 195,
       "avg_trust": 6.49,
       "eligible": true,
-      "note": "召回候选·B18情感共鸣恢复触达(82岁跨栏9)·信任6.49",
+      "note": "召回候选·B19情感共鸣batch2续触(救援群像8)·信任6.49",
       "persona": {
         "themes": [
           {
@@ -1310,7 +1310,7 @@
       "count": 245,
       "avg_trust": 8.13,
       "eligible": true,
-      "note": "召回候选·B18情感共鸣重启(孩子装病7)·信任8.13",
+      "note": "召回候选·B19情感共鸣batch2续触(抗癌博主7)·信任8.13",
       "persona": {
         "themes": [
           {
@@ -1329,8 +1329,8 @@
       "personality": "INTJ",
       "count": 415,
       "avg_trust": 8.56,
-      "eligible": true,
-      "note": "召回候选·B18反常识batch2续触(AI真人脸8)·信任8.56",
+      "eligible": false,
+      "note": "轮休·召回暂停·B19轮休1批·B20恢复候选·信任8.56",
       "persona": {
         "themes": [
           {
@@ -1349,8 +1349,8 @@
       "personality": "ENTJ",
       "count": 335,
       "avg_trust": 7.74,
-      "eligible": true,
-      "note": "召回候选·B18好奇心换hook(英伟达Q2 6)·信任7.74",
+      "eligible": false,
+      "note": "轮休·召回暂停·B19轮休·B20恢复候选·信任7.74",
       "persona": {
         "themes": [
           {
@@ -1370,7 +1370,7 @@
       "count": 275,
       "avg_trust": 7.62,
       "eligible": true,
-      "note": "召回候选·B18社会证明换hook(扶老人获退款7)·信任7.62",
+      "note": "召回候选·B19社会证明batch2(赵心童6)·信任7.62",
       "persona": {
         "themes": [
           {
@@ -1409,8 +1409,8 @@
       "personality": "ENFJ",
       "count": 162,
       "avg_trust": 7.1,
-      "eligible": false,
-      "note": "轮休·召回暂停·B18轮休1批·B19恢复候选·信任7.10",
+      "eligible": true,
+      "note": "召回候选恢复·B19身份认同batch1(何炅断交观7)·信任7.10",
       "persona": {
         "themes": [
           {
@@ -1429,8 +1429,8 @@
       "personality": "ENTP",
       "count": 155,
       "avg_trust": 7.25,
-      "eligible": true,
-      "note": "召回候选·B18反常识重启(13岁AI赚钱8)·信任7.25",
+      "eligible": false,
+      "note": "轮休·召回暂停·B19轮休1批·B20恢复候选·信任7.25",
       "persona": {
         "themes": [
           {
@@ -1450,7 +1450,7 @@
       "count": 112,
       "avg_trust": 6.93,
       "eligible": false,
-      "note": "复评轮休·召回暂停·B18轮休第6批·B19复评·信任6.93",
+      "note": "复评轮休·召回暂停·B19轮休第7批·B20复评·信任6.93",
       "persona": {
         "themes": [
           {
