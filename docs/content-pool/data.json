@@ -1,41 +1,42 @@
 {
   "pool_status": {
-    "level": 185,
+    "level": 190,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-28T08:30:00+08:00",
-    "last_creation_batch": "D21-B19",
+    "last_creation": "2026-08-29T08:30:00+08:00",
+    "last_creation_batch": "D21-B20",
     "last_deployment": "2026-08-27T09:25:00+08:00",
     "last_deployment_batch": "D21-B18",
     "net_change_this_batch": 5,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 185,
-    "active_items": 89,
+    "total_items": 190,
+    "active_items": 94,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B19局部轮出+恢复批5臂fresh(ENFP情感共鸣8.9旗舰救援群像/INFJ情感共鸣8.7抗癌博主/ENFJ身份认同8.6何炅断交观/INTP反常识8.7手机卖不动/ISTJ社会证明8.5赵心童)·4恢复候选落地1个(ENFJ身份认同)+INTJ/ENTP/ENTJ轮休+INFP继续轮休第7批·社会货币0臂(连续7批冷却结构性停用·禁止强推)·小红书post成品1条(ENFP)+brief 5条全填实·finance审慎5臂¥125",
+    "sheshe_supplement": "设设D21-B20大面积轮出批5臂fresh(INTP反常识8.8旗舰30岁双985重新高考/INTJ身份认同8.7不被分数定义/ENTJ身份认同8.6不插管不抢救/ENTP好奇心8.5吉隆泥石流逆流/ENFJ社会证明8.5面试被拒1000元)·INTJ/ENTP/ENTJ三恢复落地+INTP续触batch2+ENFJ换hook·情感共鸣轮出冷却(连续4批登顶后0臂)·社会货币0臂(连续8批冷却结构性停用·禁止强推)·小红书post成品1条(INTJ)+brief 5条全填实·finance审慎5臂¥125(B19冻结延续)",
     "fresh_arms_this_batch": 7,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 24,
-      "brief_added": 58,
+      "posts_added": 25,
+      "brief_added": 63,
       "xhs_active_posts_completed": 17,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B19新增1条post(ENFP情感共鸣)+5条brief·body完整可发布正文·五字段全填实·局部轮出+恢复批·社会货币0臂(连续7批冷却结构性停用)",
+      "note": "小红书成品帖子v2.0持续落地·B20新增1条post(INTJ身份认同)+5条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续8批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
       "b17_posts_completed": 1,
       "b18_posts_completed": 2,
-      "b19_posts_completed": 1
+      "b19_posts_completed": 1,
+      "b20_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复",
-    "last_freeze_batch": "D21-B19",
-    "last_freeze_at": "2026-08-28T09:25:00+08:00"
+    "last_freeze_batch": "D29-B1",
+    "last_freeze_at": "2026-08-29T09:25:00+08:00"
   },
   "items": [
     {
@@ -6252,9 +6253,149 @@
       "flagship": false,
       "attachment_theory_resonance": false,
       "has_post": false
+    },
+    {
+      "id": "D21-B20-INTP-1",
+      "title": "「30岁双985硕士重新高考」——INTP的Ti-Ne看到的不是「白读十几年」的浪费。它看到的是：人生不是一条只能向上叠加的学历赛道，而是一个可以随时重新校准方向的自定义系统；真正的「高配」，是敢在别人眼中的顶点上，重新出发",
+      "hook": "反常识",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "B站",
+      "quality": 8.8,
+      "created": "2026-08-29T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B20-INTP-1.json",
+      "paradigm": "反常识·Ti-Ne人生系统解构型(INTP反常识batch2续触·30岁双985重新高考9旗舰·Ti:解构学历线性公式·Ne:人生是可校准的自定义系统·自我觉醒母题桥接·非AI·严禁渲染学历贬值/中年焦虑)",
+      "role": "P0·INTP反常识batch2续触(30岁双985重新高考9旗舰·自我觉醒/人生选择)·B站深度位·方向船resume/hook轮换「INTP反常识batch1→batch2·NT象限维持」",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B20",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 2,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B20-INTJ-1",
+      "title": "「这届年轻人不被分数定义人生」——INTJ的Ni-Te看到的不是「反学历」的口号。它看到的是：把评价自己的标尺从别人手里拿回来，才是真正的独立；分数只是人生的一次计量，不是你的定义",
+      "hook": "身份认同",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "created": "2026-08-29T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B20-INTJ-1.json",
+      "paradigm": "身份认同·Ni-Te评价权独立型(INTJ恢复batch1·这届年轻人不被分数定义9·Ni:长远独立·Te:把评价标尺拿回来·自我觉醒主线·零维护信任8.56全池最高·严禁渲染分数无用论/贬低考试)",
+      "role": "P0·INTJ身份认同恢复batch1(这届年轻人不被分数定义9·自我觉醒/评价权独立)·小红书自我成长位·方向船resume_condition「B20·≥7分非反常识INTJ信号(好奇心/身份认同)」命中",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B20",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": true
+    },
+    {
+      "id": "D21-B20-ENTJ-1",
+      "title": "「不插管不抢救 最后一刻自己说了算」——ENTJ的Te看到的不是谈论死亡的沉重。它看到的是：把人生每一个关键决定（包括最后一刻）都提前握在自己手里、写清楚说清楚，才是最高级的掌控感",
+      "hook": "身份认同",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.6,
+      "created": "2026-08-29T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B20-ENTJ-1.json",
+      "paradigm": "身份认同·Te掌控自主权型(ENTJ恢复batch1·不插管不抢救7·Te:把决定权握在自己手里·生死自主权=掌控最高形态·非AI·⚠️死亡题材必须用自主权/提前规划角度·严禁恐惧按钮/焦虑贩卖)",
+      "role": "P1·ENTJ身份认同恢复batch1(不插管不抢救7·生死自主权/预立医疗指示)·抖音执行位·方向船resume_condition「B20·≥7分非AI身份认同/好奇心ENTJ信号」命中",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B20",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B20-ENTP-1",
+      "title": "「吉隆泥石流曾逆流而上又回流」——ENTP的Ne-Ti看到的不是一句反常的自然现象。它看到的是：世界最迷人的地方，是常识的裂缝里藏着复杂的规律；好奇心，是打开这些裂缝的第一把钥匙",
+      "hook": "好奇心",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-08-29T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B20-ENTP-1.json",
+      "paradigm": "好奇心·Ne-Ti反常解谜型(ENTP恢复batch1·吉隆泥石流逆流7·Ne:常识裂缝里的复杂·Ti:流体力学与地形博弈·非AI好奇心(冷却对冲)·纯科普·严禁渲染灾害恐惧)",
+      "role": "P1·ENTP好奇心恢复batch1(吉隆泥石流逆流7·自然现象科普·非AI)·B站深度位·方向船resume_condition「B20·≥7分非AI反常识或好奇心ENTP信号」命中",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B20",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B20-ENFJ-1",
+      "title": "「男子面试被拒收到1000元茶水费」——ENFJ的Fe看到的不是一次失败的求职。它看到的是：被拒绝不一定是被否定，一个企业用1000元证明了一件事——尊重可以被具体地表达，善意才是社会的底色",
+      "hook": "社会证明",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.5,
+      "created": "2026-08-29T08:30:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B20-ENFJ-1.json",
+      "paradigm": "社会证明·Fe具体尊重型(ENFJ换hook batch1·面试被拒收1000元茶水费7·Fe:尊重可被具体表达·善意是社会的底色·社会证明(自B15殷玉珍后·非连续)·严禁渲染求职焦虑/面试失败焦虑)",
+      "role": "P1·ENFJ社会证明换hook batch1(面试被拒1000元茶水费7·职场善意)·微博Fe舆论位·方向船「身份认同batch1(何炅7)→本批换hook社会证明」·ENFJ延续(非batch2达上限)",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B20",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
     }
   ],
-  "total": 185,
+  "total": 190,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -7420,6 +7561,62 @@
         "cta": "你生命里有没有过「害怕却依然做了」的时刻？评论区说出来，那是你真实的力量。",
         "post_time": "18:00-20:00（正能量/共鸣类·晚间情绪高峰）",
         "avoid": "不消费苦难、不渲染悲壮牺牲、不贬低未参与救援的人；落点「平凡人的担当/害怕与勇敢并存」，规避「英雄神话」套路化"
+      },
+      "post_spec_version": "v2.0"
+    },
+    {
+      "id": "D21-B20-INTJ-1",
+      "title": "「这届年轻人不被分数定义人生」——INTJ的Ni-Te看到的不是「反学历」的口号。它看到的是：把评价自己的标尺从别人手里拿回来，才是真正的独立；分数只是人生的一次计量，不是你的定义",
+      "hook": "身份认同",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.7,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "arm_id": 2,
+      "batch_num": 1,
+      "signals": [
+        "这届年轻人不被分数定义人生(9分·身份认同·自我觉醒/职业选择·heat65)"
+      ],
+      "paradigm": "身份认同·Ni-Te评价权独立型(INTJ恢复batch1·这届年轻人不被分数定义9·Ni:长远独立·Te:把评价标尺拿回来·自我觉醒主线·零维护信任8.56全池最高·严禁渲染分数无用论/贬低考试)",
+      "role": "P0·INTJ身份认同恢复batch1(这届年轻人不被分数定义9·自我觉醒/评价权独立)·小红书自我成长位·方向船resume_condition「B20·≥7分非反常识INTJ信号(好奇心/身份认同)」命中",
+      "direction_compliance": "D21-B20 rotation对齐·INTJ×身份认同×小红书·恢复batch1·resume_condition(身份认同9≥7)命中",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag",
+      "brief": {
+        "pain_point": "INTJ的Ni追求「长远的掌控与独立」，但从小被分数/排名这套外部评价体系规训，内心始终在「我要做到最优」和「这标准到底是谁定的」之间拉扯。这届年轻人不被分数定义人生，击中的是INTJ最深的渴望——把评价权拿回自己手里。",
+        "hook_first3": "第一行「这届年轻人说：不被分数定义人生」直接点题；第二行「很多人以为这是躺平，其实恰恰相反」破除误读；第三行「INTJ看到的不是反学历，是『独立』这个词的真正含义」切入Ni-Te。",
+        "emotion_curve": "共鸣(被分数规训过) → 松动(标准是别人定的) → 清醒(独立=拿回评价权) → 笃定(我自己定义价值) → 行动(写下你的定义)。",
+        "structure": [
+          "钩子·不被分数定义",
+          "误读·这不是躺平",
+          "洞察·独立=拿回评价权",
+          "迁移·你也被什么标尺困住",
+          "CTA·你如何定义自己"
+        ],
+        "differentiation": "别人写「分数无用论」或「高考逆袭」，我们写Ni-Te的「评价权独立」——不贬低考试的价值，落点「把标尺从别人手里拿回来」；把「不被定义」还原成「自主定义」，让INTJ看见掌控感其实在自己手里。"
+      },
+      "post": {
+        "cover_title": "分数，从来不是你的定义",
+        "body": "你是不是也曾经，\n用一次考试、一个分数，\n给自己判过刑？\n\n「我考砸了，所以我完蛋了」\n「我没进名校，所以我不行」\n\n但这届年轻人说：\n分数，只是人生的一次计量。\n它衡量的是那一次，\n不是你整个人。📏\n\nINTJ太懂这种拧巴了：\n你想把一切做到最优，\n于是把别人的标尺，\n当成了自己的标准。\n\n可真正的独立，\n不是考得比谁都高，\n而是把评价自己的权利，\n从别人手里拿回来。\n\n你的价值，\n不该由一张成绩单盖章。\n它该由你自己定义。✨\n\n💬 你有没有被一个分数\n「定义」过的瞬间？\n评论区聊聊，\n你后来是怎么拿回主动权的。",
+        "hashtags": [
+          "#不被分数定义",
+          "#MBTI",
+          "#INTJ",
+          "#自我成长",
+          "#人生选择"
+        ],
+        "cover_visual": "一张被撕开一角的成绩单 + 留白处手写体「你自己定义」；冷调蓝白 + 一点暖黄高对比",
+        "cta": "你有没有被一个分数「定义」过的瞬间？评论区聊聊你后来是怎么拿回主动权的。",
+        "post_time": "18:00-20:00（自我成长/身份认同类·晚间深度阅读时段）",
+        "avoid": "不贬低考试/学历/名校的价值（避免「读书无用论」对立）；不渲染分数焦虑；落点「自主定义/边界」，规避成功学鸡汤"
       },
       "post_spec_version": "v2.0"
     },
@@ -10032,6 +10229,83 @@
             "落点·求证能力比防腐剂重要"
           ],
           "differentiation": "别人写泡面讲'能不能吃'，我们讲'谣言是恐惧的产物，失去求证能力比防腐剂更该警惕'；Ni-Te解构到认知习惯层。"
+        }
+      }
+    },
+    "D21-B20-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B20-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B20"
+        },
+        "created_at": "2026-08-29T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-29-0800"
+          },
+          {
+            "vessel_type": "current-direction",
+            "vessel_id": "current-direction-2026-08-28-2335"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B20-ENFJ-1",
+        "title": "「男子面试被拒收到1000元茶水费」——ENFJ的Fe看到的不是一次失败的求职。它看到的是：被拒绝不一定是被否定，一个企业用1000元证明了一件事——尊重可以被具体地表达，善意才是社会的底色",
+        "hook": "社会证明",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "男子面试被拒收到1000元茶水费(7分·社会证明·职场善意·heat55)"
+        ],
+        "paradigm": "社会证明·Fe具体尊重型(ENFJ换hook batch1·面试被拒收1000元茶水费7·Fe:尊重可被具体表达·善意是社会的底色·社会证明(自B15殷玉珍后·非连续)·严禁渲染求职焦虑/面试失败焦虑)",
+        "role": "P1·ENFJ社会证明换hook batch1(面试被拒1000元茶水费7·职场善意)·微博Fe舆论位·方向船「身份认同batch1(何炅7)→本批换hook社会证明」·ENFJ延续(非batch2达上限)",
+        "direction_compliance": "D21-B20 rotation对齐·ENFJ×社会证明×微博·换hook batch1·非连续hook(身份认同→社会证明)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENFJ社会证明换hook batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·ENFJ身份认同batch1→本批换hook(无强身份认同信号·用社会证明7)·B20方向船尚未产出已flag",
+        "brief": {
+          "pain_point": "ENFJ的Fe渴望「被看见、被尊重、被温柔以待」，但职场与社会的冷漠常常让Fe受伤——努力了没被录用，仿佛整个人都被否定。男子面试被拒却收到1000元茶水费，击中的是ENFJ对「尊重可以被具体表达」的确认——善意是社会的底色。",
+          "hook_first3": "第一行「面试被拒了，却收到了1000元茶水费」抛出反差；第二行「很多人第一反应是『这公司图什么』」点出怀疑；第三行「但ENFJ看到的，是『尊重』这件事原来可以这么具体」切入Fe。",
+          "emotion_curve": "意外(被拒还送钱) → 疑惑(图什么) → 温暖(尊重被具体表达) → 笃定(善意是社会的底色) → 传递(我也要做那个表达尊重的人)。",
+          "structure": [
+            "钩子·被拒却收钱",
+            "反差·这公司图什么",
+            "洞察·尊重可以具体",
+            "迁移·你被温柔对待的瞬间",
+            "CTA·分享你的善意时刻"
+          ],
+          "differentiation": "别人写「职场套路/企业营销」，我们写Fe的「具体化的尊重」——不渲染求职焦虑，落点「被拒绝不等于被否定」；把「1000元茶水费」还原成「尊重的最小可执行单位」，让ENFJ重新相信善意值得被传递。"
         }
       }
     },
@@ -14416,6 +14690,83 @@
         }
       }
     },
+    "D21-B20-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B20-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B20"
+        },
+        "created_at": "2026-08-29T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-29-0800"
+          },
+          {
+            "vessel_type": "current-direction",
+            "vessel_id": "current-direction-2026-08-28-2335"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B20-ENTP-1",
+        "title": "「吉隆泥石流曾逆流而上又回流」——ENTP的Ne-Ti看到的不是一句反常的自然现象。它看到的是：世界最迷人的地方，是常识的裂缝里藏着复杂的规律；好奇心，是打开这些裂缝的第一把钥匙",
+        "hook": "好奇心",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "吉隆泥石流曾逆流而上又回流(7分·好奇心·自然现象科普·heat62)"
+        ],
+        "paradigm": "好奇心·Ne-Ti反常解谜型(ENTP恢复batch1·吉隆泥石流逆流7·Ne:常识裂缝里的复杂·Ti:流体力学与地形博弈·非AI好奇心(冷却对冲)·纯科普·严禁渲染灾害恐惧)",
+        "role": "P1·ENTP好奇心恢复batch1(吉隆泥石流逆流7·自然现象科普·非AI)·B站深度位·方向船resume_condition「B20·≥7分非AI反常识或好奇心ENTP信号」命中",
+        "direction_compliance": "D21-B20 rotation对齐·ENTP×好奇心×B站·恢复batch1·resume_condition(好奇心7≥7非AI)命中",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENTP好奇心恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·非AI题材(冷却对冲)·B20方向船尚未产出已flag",
+        "brief": {
+          "pain_point": "ENTP的Ne渴望「新鲜与可能」，但日常信息的重复让Ne陷入「没什么新鲜的」的倦怠。吉隆泥石流逆流而上又回流，击中的是ENTP对「反常现象背后的规律」的本能好奇——常识的裂缝里，藏着最迷人的复杂。",
+          "hook_first3": "第一行「泥石流，居然会逆流而上，还会自己回流」抛出反常；第二行「这和『水往低处流』的常识完全相反」制造认知冲突；第三行「ENTP的第一反应不是害怕，是『等等，这背后的机制是什么』」切入Ne-Ti。",
+          "emotion_curve": "意外(反常现象) → 好奇(机制是什么) → 解谜(流体力学与地形博弈) → 惊叹(复杂系统的魅力) → 探索(还有什么反常值得追问)。",
+          "structure": [
+            "钩子·反常现象",
+            "冲突·违背常识",
+            "解谜·背后的机制",
+            "洞察·好奇心打开裂缝",
+            "CTA·你还见过什么反常现象"
+          ],
+          "differentiation": "别人写「灾害警示/科普罗列」，我们写Ne-Ti的「反常现象解谜」——不渲染灾害恐惧，落点「好奇心是最好的老师」；把「逆流泥石流」还原成「复杂系统的剖面」，让ENTP重拾探索的乐趣。"
+        }
+      }
+    },
     "D21-B17-ENTJ-1": {
       "vessel": {
         "version": "1.0",
@@ -17551,6 +17902,83 @@
         "status": "active"
       }
     },
+    "D21-B20-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B20-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B20"
+        },
+        "created_at": "2026-08-29T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-29-0800"
+          },
+          {
+            "vessel_type": "current-direction",
+            "vessel_id": "current-direction-2026-08-28-2335"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B20-ENTJ-1",
+        "title": "「不插管不抢救 最后一刻自己说了算」——ENTJ的Te看到的不是谈论死亡的沉重。它看到的是：把人生每一个关键决定（包括最后一刻）都提前握在自己手里、写清楚说清楚，才是最高级的掌控感",
+        "hook": "身份认同",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "不插管不抢救 最后一刻自己说了算(7分·身份认同·生死自主权/预立医疗指示·heat70)"
+        ],
+        "paradigm": "身份认同·Te掌控自主权型(ENTJ恢复batch1·不插管不抢救7·Te:把决定权握在自己手里·生死自主权=掌控最高形态·非AI·⚠️死亡题材必须用自主权/提前规划角度·严禁恐惧按钮/焦虑贩卖)",
+        "role": "P1·ENTJ身份认同恢复batch1(不插管不抢救7·生死自主权/预立医疗指示)·抖音执行位·方向船resume_condition「B20·≥7分非AI身份认同/好奇心ENTJ信号」命中",
+        "direction_compliance": "D21-B20 rotation对齐·ENTJ×身份认同×抖音·恢复batch1·resume_condition(身份认同7≥7非AI)命中",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·⚠️死亡题材红队规避(自主权/掌控角度·非恐惧)·B20方向船尚未产出已flag",
+        "brief": {
+          "pain_point": "ENTJ的Te追求「对结果的掌控」，但面对「生死」这种终极不可控，内心会有隐秘的无力感。不插管不抢救、最后一刻自己说了算，击中的是ENTJ最核心的需求——把掌控感延伸到人生最后的边界，提前规划、亲自拍板。",
+          "hook_first3": "第一行「不插管，不抢救，最后一刻自己说了算」直接抛出这个关于生死的自主权命题；第二行「有人觉得这是忌讳，有人觉得这是沉重」点出话题的敏感；第三行「但ENTJ看到的，是『掌控』这个词的最高级形态」切入Te。",
+          "emotion_curve": "严肃(谈论生死) → 清醒(最后一刻的主动权) → 掌控(提前规划=把决定权握在手里) → 释然(掌控不是对抗死亡，是定义自己的终局) → 行动(把重要决定提前说清楚)。",
+          "structure": [
+            "钩子·生死自主权命题",
+            "敏感·为什么少有人谈",
+            "洞察·掌控的最高形态",
+            "迁移·你的人生关键决定",
+            "CTA·你会提前规划什么"
+          ],
+          "differentiation": "别人写「死亡恐惧/催泪」或「医疗伦理争论」，我们写Te的「掌控与规划」——不渲染死亡焦虑，落点「提前说清楚是最高级的掌控」；把「不抢救」还原成「自己的终局自己定义」，让ENTJ看见掌控感可以延伸到人生最后一刻。"
+        }
+      }
+    },
     "D21-B10-INFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -18953,6 +19381,83 @@
         "post_spec_version": "v2.0"
       }
     },
+    "D21-B20-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B20-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B20"
+        },
+        "created_at": "2026-08-29T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-29-0800"
+          },
+          {
+            "vessel_type": "current-direction",
+            "vessel_id": "current-direction-2026-08-28-2335"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B20-INTP-1",
+        "title": "「30岁双985硕士重新高考」——INTP的Ti-Ne看到的不是「白读十几年」的浪费。它看到的是：人生不是一条只能向上叠加的学历赛道，而是一个可以随时重新校准方向的自定义系统；真正的「高配」，是敢在别人眼中的顶点上，重新出发",
+        "hook": "反常识",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "B站",
+        "quality": 8.8,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 2,
+        "signals": [
+          "30岁双985硕士重新高考(9分·反常识·自我觉醒/人生选择·heat92)"
+        ],
+        "paradigm": "反常识·Ti-Ne人生系统解构型(INTP反常识batch2续触·30岁双985重新高考9旗舰·Ti:解构学历线性公式·Ne:人生是可校准的自定义系统·自我觉醒母题桥接·非AI·严禁渲染学历贬值/中年焦虑)",
+        "role": "P0·INTP反常识batch2续触(30岁双985重新高考9旗舰·自我觉醒/人生选择)·B站深度位·方向船resume/hook轮换「INTP反常识batch1(手机卖不动7)→batch2·NT象限维持」",
+        "direction_compliance": "D21-B20 rotation对齐·INTP×反常识×B站·续触batch2(≤max_consecutive=2)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B20大面积轮出批·INTP反常识batch2续触)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·B20方向船尚未产出已flag",
+        "brief": {
+          "pain_point": "INTP的Ti追求「逻辑自洽的系统」，但社会主流叙事把人生简化成「学历越叠越高=越成功」的线性公式。30岁双985硕士重新高考击中的是：这套线性公式的荒谬——当一个人已经站在「学历顶点」却选择归零重来，INTP的Ti-Ne立刻想解构「人生的最优解到底是谁定义的」。",
+          "hook_first3": "第一行「30岁，双985硕士，决定重新高考」直接抛出反差；第二行「在所有人眼里，这是把一手好牌打烂」点出主流判断；第三行「但INTP想问的，是那个没人问的问题——『最优』到底是谁定义的？」切入Ti-Ne。",
+          "emotion_curve": "错愕(顶级学历重来) → 好奇(为什么) → 解构(线性公式的荒谬) → 释然(人生是自定义系统) → 启发(你也可以重新校准)。",
+          "structure": [
+            "钩子·反差开局",
+            "主流判断·学历线性公式",
+            "解构·最优解是谁定义",
+            "洞察·人生是可校准系统",
+            "CTA·你人生的重开键"
+          ],
+          "differentiation": "别人写「学历贬值/中年危机的焦虑」或「励志逆袭」，我们写Ti-Ne的「解构线性公式」——不贩卖学历焦虑，落点「重新出发是权利不是浪费」；把「重新高考」还原成「人生系统的重新校准」，让INTP看见理性的自由。"
+        }
+      }
+    },
     "D21-B15-ENFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -20249,6 +20754,99 @@
           "cta": "你是在哪部电影里，第一次看懂周星驰的？评论区聊聊。",
           "post_time": "20:00-22:00（深夜情绪高峰，怀旧内容共鸣强）",
           "avoid": "不消费明星隐私、不做\"过气\"等负面定性；避免\"江郎才尽\"式贬损（仅作反面引子，正文明确反转）；不引导粉丝打投。"
+        },
+        "post_spec_version": "v2.0"
+      }
+    },
+    "D21-B20-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B20-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B20"
+        },
+        "created_at": "2026-08-29T08:30:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-08-28-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-08-26-0842"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-08-29-0800"
+          },
+          {
+            "vessel_type": "current-direction",
+            "vessel_id": "current-direction-2026-08-28-2335"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B20-INTJ-1",
+        "title": "「这届年轻人不被分数定义人生」——INTJ的Ni-Te看到的不是「反学历」的口号。它看到的是：把评价自己的标尺从别人手里拿回来，才是真正的独立；分数只是人生的一次计量，不是你的定义",
+        "hook": "身份认同",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.7,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "这届年轻人不被分数定义人生(9分·身份认同·自我觉醒/职业选择·heat65)"
+        ],
+        "paradigm": "身份认同·Ni-Te评价权独立型(INTJ恢复batch1·这届年轻人不被分数定义9·Ni:长远独立·Te:把评价标尺拿回来·自我觉醒主线·零维护信任8.56全池最高·严禁渲染分数无用论/贬低考试)",
+        "role": "P0·INTJ身份认同恢复batch1(这届年轻人不被分数定义9·自我觉醒/评价权独立)·小红书自我成长位·方向船resume_condition「B20·≥7分非反常识INTJ信号(好奇心/身份认同)」命中",
+        "direction_compliance": "D21-B20 rotation对齐·INTJ×身份认同×小红书·恢复batch1·resume_condition(身份认同9≥7)命中",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag",
+        "brief": {
+          "pain_point": "INTJ的Ni追求「长远的掌控与独立」，但从小被分数/排名这套外部评价体系规训，内心始终在「我要做到最优」和「这标准到底是谁定的」之间拉扯。这届年轻人不被分数定义人生，击中的是INTJ最深的渴望——把评价权拿回自己手里。",
+          "hook_first3": "第一行「这届年轻人说：不被分数定义人生」直接点题；第二行「很多人以为这是躺平，其实恰恰相反」破除误读；第三行「INTJ看到的不是反学历，是『独立』这个词的真正含义」切入Ni-Te。",
+          "emotion_curve": "共鸣(被分数规训过) → 松动(标准是别人定的) → 清醒(独立=拿回评价权) → 笃定(我自己定义价值) → 行动(写下你的定义)。",
+          "structure": [
+            "钩子·不被分数定义",
+            "误读·这不是躺平",
+            "洞察·独立=拿回评价权",
+            "迁移·你也被什么标尺困住",
+            "CTA·你如何定义自己"
+          ],
+          "differentiation": "别人写「分数无用论」或「高考逆袭」，我们写Ni-Te的「评价权独立」——不贬低考试的价值，落点「把标尺从别人手里拿回来」；把「不被定义」还原成「自主定义」，让INTJ看见掌控感其实在自己手里。"
+        },
+        "post": {
+          "cover_title": "分数，从来不是你的定义",
+          "body": "你是不是也曾经，\n用一次考试、一个分数，\n给自己判过刑？\n\n「我考砸了，所以我完蛋了」\n「我没进名校，所以我不行」\n\n但这届年轻人说：\n分数，只是人生的一次计量。\n它衡量的是那一次，\n不是你整个人。📏\n\nINTJ太懂这种拧巴了：\n你想把一切做到最优，\n于是把别人的标尺，\n当成了自己的标准。\n\n可真正的独立，\n不是考得比谁都高，\n而是把评价自己的权利，\n从别人手里拿回来。\n\n你的价值，\n不该由一张成绩单盖章。\n它该由你自己定义。✨\n\n💬 你有没有被一个分数\n「定义」过的瞬间？\n评论区聊聊，\n你后来是怎么拿回主动权的。",
+          "hashtags": [
+            "#不被分数定义",
+            "#MBTI",
+            "#INTJ",
+            "#自我成长",
+            "#人生选择"
+          ],
+          "cover_visual": "一张被撕开一角的成绩单 + 留白处手写体「你自己定义」；冷调蓝白 + 一点暖黄高对比",
+          "cta": "你有没有被一个分数「定义」过的瞬间？评论区聊聊你后来是怎么拿回主动权的。",
+          "post_time": "18:00-20:00（自我成长/身份认同类·晚间深度阅读时段）",
+          "avoid": "不贬低考试/学历/名校的价值（避免「读书无用论」对立）；不渲染分数焦虑；落点「自主定义/边界」，规避成功学鸡汤"
         },
         "post_spec_version": "v2.0"
       }
