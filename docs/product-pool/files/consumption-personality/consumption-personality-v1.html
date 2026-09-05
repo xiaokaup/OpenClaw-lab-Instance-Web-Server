@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消费人格记分卡</title>
+<style>
+  :root { --bg:#f4f2ee; --card:#fff; --ink:#2b2b2b; --accent:#b07d3e; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#e8e4da; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d5b98a; }
+  .opt.sel { border-color:var(--accent); background:#f7f0e4; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f7f2e8; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💳 消费人格记分卡</h1>
+  <div class="sub">8 题测一测 · 找到你花钱的底层逻辑</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的消费人格是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    消费人格记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-05<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · N3 已发货箱
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "消费人格记分卡", "subtitle": "8 题测一测 · 找到你花钱的底层逻辑", "estimated_time": "2分钟", "types": {"calculator": {"name": "反常识精算型", "emoji": "🧮", "color": "#b07d3e", "core": "你消费前先拆结构——看得到价格标签背后，那台成本与套路的机器", "declaration": "我的消费宣言：我买的不是商品，是它背后的逻辑", "strength": "决策理性·防割韭菜", "blind": "过度分析·容易错过体验本身", "case": "手机涨价最先扛不住的是经销商（D21-B21-INTP·8.5）· 取消实体按键是昂贵的极简主义（D20-B8-INTP·8.8）", "trigger": "当一个商品突然全网喊「划算」时", "action": "下单前，先拆一遍它的价格结构"}, "value": {"name": "长期价值型", "emoji": "🏦", "color": "#8a6d3b", "core": "你消费看复利——愿意为长期价值放弃即时满足，钱要花在未来会增值的地方", "declaration": "我的消费宣言：我买的是复利，不是快感", "strength": "延迟满足·复利思维", "blind": "对自己太抠·容易错过当下的幸福", "case": "98岁老人25年捐款近6000万（D21-B21-ISTJ·8.6）· 华为天才少年卖玉米（D21-B11-ENTJ·9）", "trigger": "当一笔钱可以「现在爽」或「未来值」二选一时", "action": "给一笔大额消费，算一笔三年的复利账"}, "minimalist": {"name": "极简清醒型", "emoji": "🍃", "color": "#7a9a5a", "core": "你消费做减法——低物欲、不被消费主义裹挟，少一点拥有，多一点自由", "declaration": "我的消费宣言：我不需要那么多东西来证明我是谁", "strength": "自洽·抗营销洗脑", "blind": "社交场合显得疏离·难被理解", "case": "纯过日子人（信号·8）· 豪华公厕被强拆（D21-B9-ENTP·8.9）", "trigger": "当「别人都有」的焦虑涌上来时", "action": "清点一件你其实用不上的东西，放它走"}, "scarcity": {"name": "稀缺追逐型", "emoji": "🎯", "color": "#c96f4a", "core": "你消费追稀缺——对「限量/限时/爆款」天然敏感，稀缺就是你的兴奋点", "declaration": "我的消费宣言：我要的不是商品，是「抢到」的感觉", "strength": "潮流敏感·决策快", "blind": "易被稀缺营销收割·冲动消费", "case": "韩国冰奶查无此物（D21-B6-INTJ·9）· 车企集体逃离发布会（D21-B7-ENTJ·9）", "trigger": "当「最后一件/限时秒杀」出现时", "action": "抢购前先问自己：我是想要它，还是想要「抢到它」"}}, "questions": [{"id": 1, "type": "calculator", "text": "手机涨价，最先扛不住的竟是经销商，你的第一反应是：", "options": [{"text": "价格背后有成本链，经销商被两头挤压了", "scores": {"calculator": 3}}, {"text": "有意思，看看具体怎么回事", "scores": {"calculator": 1}}, {"text": "涨价就涨价，反正我不急着换", "scores": {"calculator": -1}}, {"text": "不关注，跟我没关系", "scores": {"calculator": -2}}]}, {"id": 2, "type": "calculator", "text": "有人告诉你「取消实体按键是极简主义」，你：", "options": [{"text": "这是昂贵的极简——本质是成本结构变了", "scores": {"calculator": 3}}, {"text": "有道理，确实更简洁", "scores": {"calculator": 1}}, {"text": "还是实体按键好用", "scores": {"calculator": -1}}, {"text": "不关心产品设计", "scores": {"calculator": -2}}]}, {"id": 3, "type": "value", "text": "一笔闲钱可以「现在爽」或「未来值」，你更倾向：", "options": [{"text": "放长线，为未来那笔更大的价值", "scores": {"value": 3}}, {"text": "大部分存着，小部分犒劳自己", "scores": {"value": 1}}, {"text": "人生苦短，先花了再说", "scores": {"value": -1}}, {"text": "没想过，随缘", "scores": {"value": -2}}]}, {"id": 4, "type": "value", "text": "年薪百万的天才少年去卖玉米，你的判断是：", "options": [{"text": "他在买更大的选择自由——长期最值", "scores": {"value": 3}}, {"text": "佩服，但有点可惜", "scores": {"value": 1}}, {"text": "想不通，赚不到钱图什么", "scores": {"value": -1}}, {"text": "营销吧，反正我不信", "scores": {"value": -2}}]}, {"id": 5, "type": "minimalist", "text": "「别人都有」的焦虑涌上来时，你通常会：", "options": [{"text": "问自己：我真的需要吗？", "scores": {"minimalist": 3}}, {"text": "看看有没有用，有用的才买", "scores": {"minimalist": 1}}, {"text": "大家都买，我也不能落下", "scores": {"minimalist": -1}}, {"text": "看到就买，买完就后悔", "scores": {"minimalist": -2}}]}, {"id": 6, "type": "minimalist", "text": "一座豪华公厕被强拆，你会怎么想：", "options": [{"text": "资源不是被用坏的，是被浪费掉的", "scores": {"minimalist": 3}}, {"text": "有点可惜，建得挺好", "scores": {"minimalist": 1}}, {"text": "拆就拆了，浪费纳税人的钱", "scores": {"minimalist": -1}}, {"text": "没想法，跟我没关系", "scores": {"minimalist": -2}}]}, {"id": 7, "type": "scarcity", "text": "一款「查无此物」的冰奶突然爆火，你会：", "options": [{"text": "拆它的结构——大家抢的不是奶，是稀缺", "scores": {"scarcity": 3}}, {"text": "好奇，想尝尝到底多好喝", "scores": {"scarcity": 1}}, {"text": "大家都买，我也跟一个", "scores": {"scarcity": -1}}, {"text": "炒作吧，过两天就凉", "scores": {"scarcity": -2}}]}, {"id": 8, "type": "scarcity", "text": "「最后一件 / 限时秒杀」出现在眼前时，你：", "options": [{"text": "先问：我是想要它，还是想要「抢到它」", "scores": {"scarcity": 3}}, {"text": "看是不是真的需要，需要才下手", "scores": {"scarcity": 1}}, {"text": "手快有手慢无，先抢了再说", "scores": {"scarcity": -1}}, {"text": "逢限量必买，囤起来", "scores": {"scarcity": -2}}]}], "cases": [{"type": "反常识精算型", "id": "D21-B21-INTP-1", "title": "手机涨价 最先扛不住的竟是经销商", "q": 8.5, "summary": "涨价潮里最先受伤的不是消费者，是中间商"}, {"type": "反常识精算型", "id": "D20-B8-INTP-1", "title": "取消实体按键是昂贵的极简主义", "q": 8.8, "summary": "少一个按键，多一份看不见的账单"}, {"type": "长期价值型", "id": "D21-B21-ISTJ-1", "title": "98岁老人25年捐款近6000万元", "q": 8.6, "summary": "25年不间断的复利，是时间给出的答案"}, {"type": "长期价值型", "id": "D21-B11-ENTJ-1", "title": "华为天才少年转身卖玉米", "q": 9.0, "summary": "撕掉年薪百万的天花板，是更大的选择自由"}, {"type": "极简清醒型", "id": "sig-20260905-006", "title": "纯过日子人", "q": 8.0, "summary": "低物欲不是穷，是选择了不被消费定义"}, {"type": "极简清醒型", "id": "D21-B9-ENTP-1", "title": "豪华公厕被强拆", "q": 8.9, "summary": "资源不是被用坏的，是被浪费掉的"}, {"type": "稀缺追逐型", "id": "D21-B6-INTJ-1", "title": "韩国冰奶查无此物", "q": 9.0, "summary": "爆款的结构：我们抢的不是奶，是稀缺"}, {"type": "稀缺追逐型", "id": "D21-B7-ENTJ-1", "title": "车企集体逃离发布会", "q": 9.0, "summary": "真正的对手，不在你盯着的名单上"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池消费母题（手机涨价经销商 8.5 / 98岁老人25年捐款 8.6 / 韩国冰奶 9 / 纯过日子人 8 等）提炼的趣味倾向测试，用于自我觉察与分享，不构成消费建议或心理评估。", "result_fields": [{"key": "declaration", "label": "💬 消费宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
