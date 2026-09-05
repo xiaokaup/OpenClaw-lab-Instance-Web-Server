@@ -1,38 +1,39 @@
 {
   "pool_status": {
-    "level": 190,
+    "level": 195,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-08-29T08:30:00+08:00",
-    "last_creation_batch": "D21-B20",
+    "last_creation": "2026-09-05T08:55:00+08:00",
+    "last_creation_batch": "D21-B21",
     "last_deployment": "2026-08-27T09:25:00+08:00",
     "last_deployment_batch": "D21-B18",
     "net_change_this_batch": 5,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 190,
-    "active_items": 94,
+    "total_items": 195,
+    "active_items": 99,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B20大面积轮出批5臂fresh(INTP反常识8.8旗舰30岁双985重新高考/INTJ身份认同8.7不被分数定义/ENTJ身份认同8.6不插管不抢救/ENTP好奇心8.5吉隆泥石流逆流/ENFJ社会证明8.5面试被拒1000元)·INTJ/ENTP/ENTJ三恢复落地+INTP续触batch2+ENFJ换hook·情感共鸣轮出冷却(连续4批登顶后0臂)·社会货币0臂(连续8批冷却结构性停用·禁止强推)·小红书post成品1条(INTJ)+brief 5条全填实·finance审慎5臂¥125(B19冻结延续)",
-    "fresh_arms_this_batch": 7,
+    "sheshe_supplement": "设设D21-B21停摆后首恢复+大面积轮出批5臂fresh(INFJ情感共鸣8.9旗舰抗癌博主小詹去世/ISTJ社会证明8.6 98岁老人25年捐款/INTJ反常识8.5福建老城墙/ENFJ身份认同8.4员工拒坐硬座/ENFP情感共鸣8.5子弟兵请战)·INFJ/ISTJ/ENFP三恢复+INTJ反常识换hook+ENFJ身份认同换hook·情感共鸣#1登顶(2臂·触达重建主线)·社会货币0臂(连续9批冷却结构性停用·禁止强推)·小红书post成品1条(INFJ)+brief 5条全填实·finance审慎5臂¥125(投投冻结延续)",
+    "fresh_arms_this_batch": 5,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 25,
-      "brief_added": 63,
+      "posts_added": 26,
+      "brief_added": 68,
       "xhs_active_posts_completed": 17,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B20新增1条post(INTJ身份认同)+5条brief·body完整可发布正文·五字段全填实·大面积轮出批·社会货币0臂(连续8批冷却结构性停用)",
+      "note": "小红书成品帖子v2.0持续落地·B21新增1条post(INFJ情感共鸣·生命意义)+5条brief·body完整可发布正文·五字段全填实·停摆后首恢复+大面积轮出批·社会货币0臂(连续9批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
       "b17_posts_completed": 1,
       "b18_posts_completed": 2,
       "b19_posts_completed": 1,
-      "b20_posts_completed": 1
+      "b20_posts_completed": 1,
+      "b21_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复",
     "last_freeze_batch": "D29-B1",
@@ -6393,9 +6394,149 @@
       "flagship": false,
       "attachment_theory_resonance": false,
       "has_post": false
+    },
+    {
+      "id": "D21-B21-INFJ-1",
+      "title": "「抗癌博主小詹去世，年仅24岁」——INFJ的Ni-Fe看到的不是死亡的可怕。它看到的是：一个人明知结局，却把剩下的每一天都活成了光；生命的意义，从来不在长度，而在密度",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.9,
+      "created": "2026-09-05T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B21-INFJ-1.json",
+      "paradigm": "情感共鸣·Ni-Fe生命意义建构型(INFJ恢复batch1·抗癌博主小詹去世9旗舰·Ni:向死而生的意义追问·Fe:对他人苦难的深度共情·珍惜当下/生命的力量·自我觉醒母题延续·⚠️死亡题材用生命意义/珍惜当下角度·严禁恐惧按钮/焦虑贩卖/消费逝者)",
+      "role": "P0·INFJ情感共鸣恢复batch1(抗癌博主小詹去世9旗舰·生命共情/向死而生)·小红书生命成长位·方向船恢复batch1(B19/B20情感共鸣batch2达上限轮出→B21恢复)·9分旗舰·触达重建主线",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B21",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "has_post": true
+    },
+    {
+      "id": "D21-B21-ISTJ-1",
+      "title": "「98岁老人25年捐款近6000万元」——ISTJ的Si-Te看到的不是一串天文数字。它看到的是：把一件对的事，25年、每一天都做下去——真正的责任感，从不需要高调，它只是一次次微小的坚持",
+      "hook": "社会证明",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "微博",
+      "quality": 8.6,
+      "created": "2026-09-05T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B21-ISTJ-1.json",
+      "paradigm": "社会证明·Si-Te长期一致性型(ISTJ恢复batch1·98岁老人25年捐款近6000万7·Si:25年不间断的持续·Te:把责任感落实到每一年每一天·长期主义/一致性的具象化·温暖正向·适合触达重建)",
+      "role": "P1·ISTJ社会证明恢复batch1(98岁老人25年捐款近6000万7·长期坚持/公益)·微博社会证明舆论位·方向船恢复batch1(B18/B19社会证明batch2达上限轮出→B21恢复)·SJ象限0→1·温暖正向适合触达重建",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B21",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B21-INTJ-1",
+      "title": "「福建老城墙秒变防洪堤，隔开40公分洪水」——INTJ的Ni-Te看到的不是『古人运气好』。它看到的是：一座城墙从来不只是城墙，它是一个被设计好的系统性防灾方案——真正的智慧，是把答案提前写进结构里",
+      "hook": "反常识",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.5,
+      "created": "2026-09-05T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B21-INTJ-1.json",
+      "paradigm": "反常识·Ni-Te系统解构型(INTJ换hook·福建老城墙秒变防洪堤6·Ni:古人系统性的防灾设计·Te:被现代人忽略的工程智慧·身份认同(B20)→反常识换hook·非AI·⚠️灾害题材用古建智慧/工程博弈角度·严禁渲染灾害恐惧)",
+      "role": "P1·INTJ反常识换hook batch1(福建老城墙秒变防洪堤6·古建智慧/系统思维)·B站深度位·方向船身份认同(B20)→反常识换hook·非AI·⚠️灾害题材严禁渲染恐惧",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B21",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B21-ENFJ-1",
+      "title": "「员工拒坐硬座通宵出差被开除」——ENFJ的Fe看到的不是『矫情』。它看到的是：一个人敢为自己的尊严和边界说『不』，是成年人最体面的勇敢——守住底线，不是对抗，是自我尊重",
+      "hook": "身份认同",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.4,
+      "created": "2026-09-05T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B21-ENFJ-1.json",
+      "paradigm": "身份认同·Fe尊严边界型(ENFJ换hook·员工拒坐硬座6·Fe:对具体尊严与边界的守护·社会证明(B20)→身份认同换hook·⚠️用尊严/边界意识角度·严禁渲染职场对立/求职焦虑)",
+      "role": "P1·ENFJ身份认同换hook batch1(员工拒坐硬座6·职场权益/尊严边界)·微博Fe舆论位·方向船社会证明(B20)→身份认同换hook·⚠️严禁渲染职场对立",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B21",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B21-ENFP-1",
+      "title": "「本该退伍的22名子弟兵，主动请战」——ENFP的Ne-Fi看到的不是『热血上头』。它看到的是：当内心认定的价值召唤时，人会超越个人利益，选择站出来——理想主义，从来不是幼稚，是最稀缺的勇敢",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "抖音",
+      "quality": 8.5,
+      "created": "2026-09-05T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B21-ENFP-1.json",
+      "paradigm": "情感共鸣·Ne-Fi热血担当型(ENFP恢复batch1·子弟兵主动请战6·Ne:理想主义的可能性·Fi:内心深处的价值与担当·正能量/集体担当·温暖正向·适合触达重建)",
+      "role": "P1·ENFP情感共鸣恢复batch1(子弟兵主动请战6·正能量/担当)·抖音触达重建位·方向船恢复batch1(B18/B19情感共鸣batch2达上限轮出→B21恢复)·温暖正向·触达重建",
+      "consecutive_hook": 2,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B21",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
     }
   ],
-  "total": 190,
+  "total": 195,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -7574,7 +7715,7 @@
       "channel": "小红书",
       "quality": 8.7,
       "budget": 25,
-      "status": "active",
+      "status": "reserve-frozen",
       "usage_count": 0,
       "priority": "P0",
       "consecutive_hook": 1,
@@ -7589,7 +7730,7 @@
       "direction_compliance": "D21-B20 rotation对齐·INTJ×身份认同×小红书·恢复batch1·resume_condition(身份认同9≥7)命中",
       "flagship": false,
       "attachment_theory_resonance": false,
-      "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag",
+      "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
       "brief": {
         "pain_point": "INTJ的Ni追求「长远的掌控与独立」，但从小被分数/排名这套外部评价体系规训，内心始终在「我要做到最优」和「这标准到底是谁定的」之间拉扯。这届年轻人不被分数定义人生，击中的是INTJ最深的渴望——把评价权拿回自己手里。",
         "hook_first3": "第一行「这届年轻人说：不被分数定义人生」直接点题；第二行「很多人以为这是躺平，其实恰恰相反」破除误读；第三行「INTJ看到的不是反学历，是『独立』这个词的真正含义」切入Ni-Te。",
@@ -7618,7 +7759,79 @@
         "post_time": "18:00-20:00（自我成长/身份认同类·晚间深度阅读时段）",
         "avoid": "不贬低考试/学历/名校的价值（避免「读书无用论」对立）；不渲染分数焦虑；落点「自主定义/边界」，规避成功学鸡汤"
       },
-      "post_spec_version": "v2.0"
+      "post_spec_version": "v2.0",
+      "deployment": {
+        "allowed": false,
+        "state": "frozen-reserve",
+        "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+        "frozen_at": "2026-08-29T10:30:00+08:00",
+        "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+        "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+      },
+      "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+    },
+    {
+      "id": "D21-B21-INFJ-1",
+      "title": "「抗癌博主小詹去世，年仅24岁」——INFJ的Ni-Fe看到的不是死亡的可怕。它看到的是：一个人明知结局，却把剩下的每一天都活成了光；生命的意义，从来不在长度，而在密度",
+      "hook": "情感共鸣",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "小红书",
+      "quality": 8.9,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "arm_id": 1,
+      "batch_num": 1,
+      "signals": [
+        "抗癌博主小詹去世 年仅24岁(9分·情感共鸣·生命共情/向死而生·heat704万)"
+      ],
+      "paradigm": "情感共鸣·Ni-Fe生命意义建构型(INFJ恢复batch1·抗癌博主小詹去世9旗舰·Ni:向死而生的意义追问·Fe:对他人苦难的深度共情·珍惜当下/生命的力量·自我觉醒母题延续·⚠️死亡题材用生命意义/珍惜当下角度·严禁恐惧按钮/焦虑贩卖/消费逝者)",
+      "role": "P0·INFJ情感共鸣恢复batch1(抗癌博主小詹去世9旗舰·生命共情/向死而生)·小红书生命成长位·方向船恢复batch1(B19/B20情感共鸣batch2达上限轮出→B21恢复)·9分旗舰·触达重建主线",
+      "direction_compliance": "D21-B21 rotation对齐·INFJ×情感共鸣×小红书·恢复batch1·情感共鸣#1登顶·触达重建主线",
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(D21-B21停摆后首恢复+大面积轮出批·INFJ情感共鸣恢复batch1)·依据B21方向船mandates+priority_types+signal-pool·小红书post成品v2.0·⚠️死亡题材严禁恐惧渲染/消费逝者(用生命意义/珍惜当下/向死而生)·触达重建第一优先·投投冻结延续·解冻后按方向船部署",
+      "brief": {
+        "pain_point": "INFJ对生命意义有天然的深度追问(Ni)，同时对他人苦难有极强的共情(Fe)。一个24岁抗癌博主的离世，会同时击中INFJ的两个软肋——对『生命如此短暂』的虚无感，和对『这个年轻人曾如何用力活过』的心疼。INFJ停留，不是因为这是一条新闻，而是一次关于『我们该如何活着』的叩问。",
+        "hook_first3": "第一行『24岁，抗癌博主小詹，走了』直接陈述事实；第二行『不是一条新闻，是一个年轻人认真活过的证据』点出视角；第三行『INFJ会忍不住想——如果生命的长度不由我，那意义的密度呢？』切入Ni-Fe。",
+        "emotion_curve": "心疼(那么年轻) → 敬意(她用力活过) → 沉思(生命的意义不在长度) → 温柔(珍惜当下) → 行动(把今天活成光)。",
+        "structure": [
+          "钩子·事实开场",
+          "反叙事·不是新闻是证据",
+          "洞察·意义在密度不在长度",
+          "迁移·珍惜当下",
+          "CTA·你如何珍惜今天"
+        ],
+        "differentiation": "别人写死亡博眼球/渲染悲伤/消费逝者，我们写Ni-Fe的『向死而生』——不渲染恐惧，落点『生命的意义不在长度而在密度』；把『离世』还原成『她如何用力活过』，让INFJ看见的不是死亡，而是活着的方式。"
+      },
+      "post": {
+        "cover_title": "24岁抗癌博主走了，却教会我活",
+        "body": "小詹走了，年仅24岁。🕯️\n\n不是一条新闻，\n是一个年轻人认真活过的证据。\n\n她生病的时候，\n没有躲起来，\n而是把每一天都拍下来、写下来，\n告诉陌生人：要好好吃饭，要好好活。\n\nINFJ会忍不住想：\n如果生命的长度不由我，\n那意义的密度呢？🌱\n\n我们总以为来日方长，\n把想做的事、想说的话，\n都推到「以后」。\n\n可她用24年告诉我们：\n生命的意义，\n从来不在长度，\n而在密度。\n\n把今天活成光，\n就是对「以后」最好的回答。✨\n\n💬 如果你知道生命有时限，\n你最想先做的那件事是什么？\n评论区告诉我，我们互相提醒。",
+        "hashtags": [
+          "#抗癌博主",
+          "#INFJ",
+          "#生命的意义",
+          "#珍惜当下",
+          "#自我成长"
+        ],
+        "cover_visual": "温柔暖色调(浅米白+一点暖黄光)，画面留白处手写体『把今天活成光』，主视觉是一束照进房间的晨光或一株向上生长的植物，避免任何悲伤压抑的死亡意象",
+        "cta": "如果你知道生命有时限，你最想先做的那件事是什么？评论区告诉我，我们互相提醒。",
+        "post_time": "20:00-22:00（生命/自我成长类·晚间情绪共鸣时段）",
+        "avoid": "不消费逝者(不晒病情细节/不渲染死亡过程)、不用『可怕/惋惜』式恐惧标题、不贩卖健康焦虑、不引导『及时行乐』极端消费；落点『生命意义/珍惜当下/向死而生』"
+      },
+      "post_spec_version": "v2.0",
+      "deployment": {
+        "allowed": true,
+        "state": "active-ready",
+        "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+        "authorization": "B21方向船已授权·投投解冻后部署"
+      },
+      "deployment_authorization": "B21方向船已授权·投投解冻后部署"
     },
     {
       "id": "D21-B3-INFJ-1",
@@ -10278,7 +10491,7 @@
         "channel": "微博",
         "quality": 8.5,
         "budget": 25,
-        "status": "active",
+        "status": "reserve-frozen",
         "usage_count": 0,
         "priority": "P1",
         "consecutive_hook": 1,
@@ -10293,7 +10506,7 @@
         "direction_compliance": "D21-B20 rotation对齐·ENFJ×社会证明×微博·换hook batch1·非连续hook(身份认同→社会证明)",
         "flagship": false,
         "attachment_theory_resonance": false,
-        "note": "🟢 fresh(D21-B20大面积轮出批·ENFJ社会证明换hook batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·ENFJ身份认同batch1→本批换hook(无强身份认同信号·用社会证明7)·B20方向船尚未产出已flag",
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENFJ社会证明换hook batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·ENFJ身份认同batch1→本批换hook(无强身份认同信号·用社会证明7)·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
         "brief": {
           "pain_point": "ENFJ的Fe渴望「被看见、被尊重、被温柔以待」，但职场与社会的冷漠常常让Fe受伤——努力了没被录用，仿佛整个人都被否定。男子面试被拒却收到1000元茶水费，击中的是ENFJ对「尊重可以被具体表达」的确认——善意是社会的底色。",
           "hook_first3": "第一行「面试被拒了，却收到了1000元茶水费」抛出反差；第二行「很多人第一反应是『这公司图什么』」点出怀疑；第三行「但ENFJ看到的，是『尊重』这件事原来可以这么具体」切入Fe。",
@@ -10306,7 +10519,16 @@
             "CTA·分享你的善意时刻"
           ],
           "differentiation": "别人写「职场套路/企业营销」，我们写Fe的「具体化的尊重」——不渲染求职焦虑，落点「被拒绝不等于被否定」；把「1000元茶水费」还原成「尊重的最小可执行单位」，让ENFJ重新相信善意值得被传递。"
-        }
+        },
+        "deployment": {
+          "allowed": false,
+          "state": "frozen-reserve",
+          "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+          "frozen_at": "2026-08-29T10:30:00+08:00",
+          "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+          "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+        },
+        "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
       }
     },
     "D21-B8-ENTP-1": {
@@ -12506,6 +12728,86 @@
           ],
           "differentiation": "不贩卖焦虑，结尾给「被治愈」的具体行动，符合 ENFJ 需要被回应的心理"
         }
+      }
+    },
+    "D21-B21-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B21-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B21"
+        },
+        "created_at": "2026-09-05T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-05-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B21-INTJ-1",
+        "title": "「福建老城墙秒变防洪堤，隔开40公分洪水」——INTJ的Ni-Te看到的不是『古人运气好』。它看到的是：一座城墙从来不只是城墙，它是一个被设计好的系统性防灾方案——真正的智慧，是把答案提前写进结构里",
+        "hook": "反常识",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "福建老城墙秒变防洪堤隔40公分洪水(6分·反常识·古建智慧/系统思维·heat890万)"
+        ],
+        "paradigm": "反常识·Ni-Te系统解构型(INTJ换hook·福建老城墙秒变防洪堤6·Ni:古人系统性的防灾设计·Te:被现代人忽略的工程智慧·身份认同(B20)→反常识换hook·非AI·⚠️灾害题材用古建智慧/工程博弈角度·严禁渲染灾害恐惧)",
+        "role": "P1·INTJ反常识换hook batch1(福建老城墙秒变防洪堤6·古建智慧/系统思维)·B站深度位·方向船身份认同(B20)→反常识换hook·非AI·⚠️灾害题材严禁渲染恐惧",
+        "direction_compliance": "D21-B21 rotation对齐·INTJ×反常识×B站·换hook batch1·反常识#3·身份认同(B20)→反常识",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B21停摆后首恢复·INTJ反常识换hook batch1)·依据B21方向船mandates+priority_types+signal-pool·⚠️灾害题材用古建智慧/工程博弈角度·严禁渲染灾害恐惧·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INTJ的Ni-Te痴迷于『系统性解决方案』。现代人遇灾害想到的是临时抢险、事后补救，而一座600年的老城墙却『秒变防洪堤』，击中的是INTJ对『把答案提前写进系统』的深层敬佩——最顶级的智慧，是设计而非应急。",
+          "hook_first3": "第一行『福建老城墙，秒变防洪堤，隔开40公分洪水』抛出反常识事实；第二行『不是运气好，是600年前就把答案写进去了』点破；第三行『INTJ看到的是一个被忽略的系统性设计』切入Ni-Te。",
+          "emotion_curve": "惊异(古建秒变防洪堤) → 好奇(怎么做到的) → 解构(系统性设计) → 敬佩(答案提前写进结构) → 启发(你的系统呢)。",
+          "structure": [
+            "钩子·反常识事实",
+            "拆解·古建的系统设计",
+            "洞察·智慧=把答案提前写进结构",
+            "迁移·应急vs设计",
+            "CTA·你系统里的防洪堤"
+          ],
+          "differentiation": "别人写灾害的惊险/感动，我们写Ni-Te的『系统性防灾设计』——不渲染灾害恐惧，落点『最顶级的智慧是把答案提前写进结构』；把『老城墙』还原成『古代工程师的系统思维』，让INTJ看见设计的价值。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B21方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B21方向船已授权·投投解冻后部署"
       }
     },
     "D21-B17-ISTJ-1": {
@@ -14736,7 +15038,7 @@
         "channel": "B站",
         "quality": 8.5,
         "budget": 25,
-        "status": "active",
+        "status": "reserve-frozen",
         "usage_count": 0,
         "priority": "P1",
         "consecutive_hook": 1,
@@ -14751,7 +15053,7 @@
         "direction_compliance": "D21-B20 rotation对齐·ENTP×好奇心×B站·恢复batch1·resume_condition(好奇心7≥7非AI)命中",
         "flagship": false,
         "attachment_theory_resonance": false,
-        "note": "🟢 fresh(D21-B20大面积轮出批·ENTP好奇心恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·非AI题材(冷却对冲)·B20方向船尚未产出已flag",
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENTP好奇心恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·非AI题材(冷却对冲)·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
         "brief": {
           "pain_point": "ENTP的Ne渴望「新鲜与可能」，但日常信息的重复让Ne陷入「没什么新鲜的」的倦怠。吉隆泥石流逆流而上又回流，击中的是ENTP对「反常现象背后的规律」的本能好奇——常识的裂缝里，藏着最迷人的复杂。",
           "hook_first3": "第一行「泥石流，居然会逆流而上，还会自己回流」抛出反常；第二行「这和『水往低处流』的常识完全相反」制造认知冲突；第三行「ENTP的第一反应不是害怕，是『等等，这背后的机制是什么』」切入Ne-Ti。",
@@ -14764,7 +15066,16 @@
             "CTA·你还见过什么反常现象"
           ],
           "differentiation": "别人写「灾害警示/科普罗列」，我们写Ne-Ti的「反常现象解谜」——不渲染灾害恐惧，落点「好奇心是最好的老师」；把「逆流泥石流」还原成「复杂系统的剖面」，让ENTP重拾探索的乐趣。"
-        }
+        },
+        "deployment": {
+          "allowed": false,
+          "state": "frozen-reserve",
+          "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+          "frozen_at": "2026-08-29T10:30:00+08:00",
+          "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+          "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+        },
+        "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
       }
     },
     "D21-B17-ENTJ-1": {
@@ -15880,6 +16191,86 @@
         "paradigm_note": "Si-Te负重范式新创·ISTJ(D15-B1-2=体面被辜负)+ESTJ(D15-B3-3=责任不被看见)共享'不被看见的系统性负重'母题·可扩展至ISFJ(付出不被记住)"
       }
     },
+    "D21-B21-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B21-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B21"
+        },
+        "created_at": "2026-09-05T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-05-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B21-ENFJ-1",
+        "title": "「员工拒坐硬座通宵出差被开除」——ENFJ的Fe看到的不是『矫情』。它看到的是：一个人敢为自己的尊严和边界说『不』，是成年人最体面的勇敢——守住底线，不是对抗，是自我尊重",
+        "hook": "身份认同",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.4,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "员工拒坐硬座通宵出差被开除(6分·身份认同·职场权益/尊严边界·heat617万)"
+        ],
+        "paradigm": "身份认同·Fe尊严边界型(ENFJ换hook·员工拒坐硬座6·Fe:对具体尊严与边界的守护·社会证明(B20)→身份认同换hook·⚠️用尊严/边界意识角度·严禁渲染职场对立/求职焦虑)",
+        "role": "P1·ENFJ身份认同换hook batch1(员工拒坐硬座6·职场权益/尊严边界)·微博Fe舆论位·方向船社会证明(B20)→身份认同换hook·⚠️严禁渲染职场对立",
+        "direction_compliance": "D21-B21 rotation对齐·ENFJ×身份认同×微博·换hook batch1·身份认同#4·社会证明(B20)→身份认同",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B21停摆后首恢复·ENFJ身份认同换hook batch1)·依据B21方向船mandates+priority_types+signal-pool·⚠️用尊严/边界意识角度·严禁渲染职场对立/求职焦虑·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENFJ的Fe最擅长照顾别人，却常常忽略自己的边界。一个员工拒绝『硬座通宵出差』这种透支身体的安排，击中的是ENFJ对『边界感』的共鸣——为他人付出是美德，但守住自己的底线，同样是自我尊重。",
+          "hook_first3": "第一行『员工拒坐硬座通宵出差，被开除』抛出争议事实；第二行『很多人说他矫情，但ENFJ看到的恰恰相反』点出视角；第三行『守住底线，不是对抗，是一个人最体面的自我尊重』切入Fe。",
+          "emotion_curve": "不平(被开除) → 理解(边界意识) → 认同(守住底线=自我尊重) → 释然(善意≠透支自己) → 坚定(学会说不)。",
+          "structure": [
+            "钩子·争议事实",
+            "主流误读·矫情",
+            "洞察·尊严与边界",
+            "迁移·ENFJ也要学会说不",
+            "CTA·你守住过什么底线"
+          ],
+          "differentiation": "别人写职场对立/骂公司/贩卖求职焦虑，我们写Fe的『尊严边界意识』——不渲染对立，落点『守住底线是自我尊重不是对抗』；把『拒坐硬座』还原成『边界意识』，让ENFJ看见照顾自己也是照顾他人。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B21方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B21方向船已授权·投投解冻后部署"
+      }
+    },
     "D21-B11-INTJ-1": {
       "vessel": {
         "version": "1.0",
@@ -16358,6 +16749,86 @@
       "content_preview": "7月燃油车销量榜单揭晓，全市场仅1款燃油车月销破万——曾经年销百万的合资神车集体熄火。这不是暂时的淡季，是中国汽车工业的范式转移。燃油车的终局不是电动车，是「中国制造」对「合资信仰」的彻底替代。我们用30年走完了别人100年的路，现在轮到他们来抄我们作业了。",
       "signal_ref": "7月燃油车仅1款(7分)·3万买房(8分)",
       "angle": "产业权力结构反转·INTJ Ni-Te系统级洞察"
+    },
+    "D21-B21-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B21-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B21"
+        },
+        "created_at": "2026-09-05T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-05-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B21-ENFP-1",
+        "title": "「本该退伍的22名子弟兵，主动请战」——ENFP的Ne-Fi看到的不是『热血上头』。它看到的是：当内心认定的价值召唤时，人会超越个人利益，选择站出来——理想主义，从来不是幼稚，是最稀缺的勇敢",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "抖音",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "情感共鸣",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "本该退伍的22名子弟兵主动请战(6分·情感共鸣·正能量/担当·heat495万)"
+        ],
+        "paradigm": "情感共鸣·Ne-Fi热血担当型(ENFP恢复batch1·子弟兵主动请战6·Ne:理想主义的可能性·Fi:内心深处的价值与担当·正能量/集体担当·温暖正向·适合触达重建)",
+        "role": "P1·ENFP情感共鸣恢复batch1(子弟兵主动请战6·正能量/担当)·抖音触达重建位·方向船恢复batch1(B18/B19情感共鸣batch2达上限轮出→B21恢复)·温暖正向·触达重建",
+        "direction_compliance": "D21-B21 rotation对齐·ENFP×情感共鸣×抖音·恢复batch1·情感共鸣#1登顶·触达重建主线",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B21停摆后首恢复·ENFP情感共鸣恢复batch1)·依据B21方向船mandates+priority_types+signal-pool·温暖正向·适合沉睡用户触达重建·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENFP的Ne-Fi天生被『理想主义与价值感』驱动，却又常被现实泼冷水、被说『太天真』。22名子弟兵在本可退伍时主动请战，击中的是ENFP内心最深处对『价值驱动选择』的共鸣——当价值召唤，人会超越个人利益。",
+          "hook_first3": "第一行『本该退伍的22名子弟兵，主动请战』抛出反差；第二行『很多人说他们傻，但ENFP看到的是另一种东西』点出视角；第三行『当内心认定的价值召唤，人会选择站出来』切入Ne-Fi。",
+          "emotion_curve": "意外(本该退伍却请战) → 热血(担当) → 共鸣(价值驱动) → 骄傲(理想主义不幼稚) → 行动(你的价值召唤是什么)。",
+          "structure": [
+            "钩子·反差开场",
+            "反误读·不是傻",
+            "洞察·价值驱动选择",
+            "共鸣·理想主义是勇敢",
+            "CTA·你为价值站出来的瞬间"
+          ],
+          "differentiation": "别人写口号式正能量/煽情，我们写Ne-Fi的『价值驱动选择』——不空洞歌颂，落点『理想主义是最稀缺的勇敢』；把『请战』还原成『价值召唤下的选择』，让ENFP看见自己理想主义的价值。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B21方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B21方向船已授权·投投解冻后部署"
+      }
     },
     "D20-B7-ISTJ-1": {
       "vessel": {
@@ -17948,7 +18419,7 @@
         "channel": "抖音",
         "quality": 8.6,
         "budget": 25,
-        "status": "active",
+        "status": "reserve-frozen",
         "usage_count": 0,
         "priority": "P1",
         "consecutive_hook": 1,
@@ -17963,7 +18434,7 @@
         "direction_compliance": "D21-B20 rotation对齐·ENTJ×身份认同×抖音·恢复batch1·resume_condition(身份认同7≥7非AI)命中",
         "flagship": false,
         "attachment_theory_resonance": false,
-        "note": "🟢 fresh(D21-B20大面积轮出批·ENTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·⚠️死亡题材红队规避(自主权/掌控角度·非恐惧)·B20方向船尚未产出已flag",
+        "note": "🟢 fresh(D21-B20大面积轮出批·ENTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·⚠️死亡题材红队规避(自主权/掌控角度·非恐惧)·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
         "brief": {
           "pain_point": "ENTJ的Te追求「对结果的掌控」，但面对「生死」这种终极不可控，内心会有隐秘的无力感。不插管不抢救、最后一刻自己说了算，击中的是ENTJ最核心的需求——把掌控感延伸到人生最后的边界，提前规划、亲自拍板。",
           "hook_first3": "第一行「不插管，不抢救，最后一刻自己说了算」直接抛出这个关于生死的自主权命题；第二行「有人觉得这是忌讳，有人觉得这是沉重」点出话题的敏感；第三行「但ENTJ看到的，是『掌控』这个词的最高级形态」切入Te。",
@@ -17976,7 +18447,16 @@
             "CTA·你会提前规划什么"
           ],
           "differentiation": "别人写「死亡恐惧/催泪」或「医疗伦理争论」，我们写Te的「掌控与规划」——不渲染死亡焦虑，落点「提前说清楚是最高级的掌控」；把「不抢救」还原成「自己的终局自己定义」，让ENTJ看见掌控感可以延伸到人生最后一刻。"
-        }
+        },
+        "deployment": {
+          "allowed": false,
+          "state": "frozen-reserve",
+          "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+          "frozen_at": "2026-08-29T10:30:00+08:00",
+          "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+          "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+        },
+        "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
       }
     },
     "D21-B10-INFJ-1": {
@@ -18959,6 +19439,102 @@
         }
       }
     },
+    "D21-B21-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B21-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B21"
+        },
+        "created_at": "2026-09-05T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-05-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B21-INFJ-1",
+        "title": "「抗癌博主小詹去世，年仅24岁」——INFJ的Ni-Fe看到的不是死亡的可怕。它看到的是：一个人明知结局，却把剩下的每一天都活成了光；生命的意义，从来不在长度，而在密度",
+        "hook": "情感共鸣",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "小红书",
+        "quality": 8.9,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "抗癌博主小詹去世 年仅24岁(9分·情感共鸣·生命共情/向死而生·heat704万)"
+        ],
+        "paradigm": "情感共鸣·Ni-Fe生命意义建构型(INFJ恢复batch1·抗癌博主小詹去世9旗舰·Ni:向死而生的意义追问·Fe:对他人苦难的深度共情·珍惜当下/生命的力量·自我觉醒母题延续·⚠️死亡题材用生命意义/珍惜当下角度·严禁恐惧按钮/焦虑贩卖/消费逝者)",
+        "role": "P0·INFJ情感共鸣恢复batch1(抗癌博主小詹去世9旗舰·生命共情/向死而生)·小红书生命成长位·方向船恢复batch1(B19/B20情感共鸣batch2达上限轮出→B21恢复)·9分旗舰·触达重建主线",
+        "direction_compliance": "D21-B21 rotation对齐·INFJ×情感共鸣×小红书·恢复batch1·情感共鸣#1登顶·触达重建主线",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B21停摆后首恢复+大面积轮出批·INFJ情感共鸣恢复batch1)·依据B21方向船mandates+priority_types+signal-pool·小红书post成品v2.0·⚠️死亡题材严禁恐惧渲染/消费逝者(用生命意义/珍惜当下/向死而生)·触达重建第一优先·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INFJ对生命意义有天然的深度追问(Ni)，同时对他人苦难有极强的共情(Fe)。一个24岁抗癌博主的离世，会同时击中INFJ的两个软肋——对『生命如此短暂』的虚无感，和对『这个年轻人曾如何用力活过』的心疼。INFJ停留，不是因为这是一条新闻，而是一次关于『我们该如何活着』的叩问。",
+          "hook_first3": "第一行『24岁，抗癌博主小詹，走了』直接陈述事实；第二行『不是一条新闻，是一个年轻人认真活过的证据』点出视角；第三行『INFJ会忍不住想——如果生命的长度不由我，那意义的密度呢？』切入Ni-Fe。",
+          "emotion_curve": "心疼(那么年轻) → 敬意(她用力活过) → 沉思(生命的意义不在长度) → 温柔(珍惜当下) → 行动(把今天活成光)。",
+          "structure": [
+            "钩子·事实开场",
+            "反叙事·不是新闻是证据",
+            "洞察·意义在密度不在长度",
+            "迁移·珍惜当下",
+            "CTA·你如何珍惜今天"
+          ],
+          "differentiation": "别人写死亡博眼球/渲染悲伤/消费逝者，我们写Ni-Fe的『向死而生』——不渲染恐惧，落点『生命的意义不在长度而在密度』；把『离世』还原成『她如何用力活过』，让INFJ看见的不是死亡，而是活着的方式。"
+        },
+        "post": {
+          "cover_title": "24岁抗癌博主走了，却教会我活",
+          "body": "小詹走了，年仅24岁。🕯️\n\n不是一条新闻，\n是一个年轻人认真活过的证据。\n\n她生病的时候，\n没有躲起来，\n而是把每一天都拍下来、写下来，\n告诉陌生人：要好好吃饭，要好好活。\n\nINFJ会忍不住想：\n如果生命的长度不由我，\n那意义的密度呢？🌱\n\n我们总以为来日方长，\n把想做的事、想说的话，\n都推到「以后」。\n\n可她用24年告诉我们：\n生命的意义，\n从来不在长度，\n而在密度。\n\n把今天活成光，\n就是对「以后」最好的回答。✨\n\n💬 如果你知道生命有时限，\n你最想先做的那件事是什么？\n评论区告诉我，我们互相提醒。",
+          "hashtags": [
+            "#抗癌博主",
+            "#INFJ",
+            "#生命的意义",
+            "#珍惜当下",
+            "#自我成长"
+          ],
+          "cover_visual": "温柔暖色调(浅米白+一点暖黄光)，画面留白处手写体『把今天活成光』，主视觉是一束照进房间的晨光或一株向上生长的植物，避免任何悲伤压抑的死亡意象",
+          "cta": "如果你知道生命有时限，你最想先做的那件事是什么？评论区告诉我，我们互相提醒。",
+          "post_time": "20:00-22:00（生命/自我成长类·晚间情绪共鸣时段）",
+          "avoid": "不消费逝者(不晒病情细节/不渲染死亡过程)、不用『可怕/惋惜』式恐惧标题、不贩卖健康焦虑、不引导『及时行乐』极端消费；落点『生命意义/珍惜当下/向死而生』"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B21方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B21方向船已授权·投投解冻后部署"
+      }
+    },
     "D18-B1-4": {
       "vessel": {
         "version": "1.0",
@@ -19427,7 +20003,7 @@
         "channel": "B站",
         "quality": 8.8,
         "budget": 25,
-        "status": "active",
+        "status": "reserve-frozen",
         "usage_count": 0,
         "priority": "P0",
         "consecutive_hook": 2,
@@ -19442,7 +20018,7 @@
         "direction_compliance": "D21-B20 rotation对齐·INTP×反常识×B站·续触batch2(≤max_consecutive=2)",
         "flagship": true,
         "attachment_theory_resonance": false,
-        "note": "🟢 fresh(D21-B20大面积轮出批·INTP反常识batch2续触)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·B20方向船尚未产出已flag",
+        "note": "🟢 fresh(D21-B20大面积轮出批·INTP反常识batch2续触)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
         "brief": {
           "pain_point": "INTP的Ti追求「逻辑自洽的系统」，但社会主流叙事把人生简化成「学历越叠越高=越成功」的线性公式。30岁双985硕士重新高考击中的是：这套线性公式的荒谬——当一个人已经站在「学历顶点」却选择归零重来，INTP的Ti-Ne立刻想解构「人生的最优解到底是谁定义的」。",
           "hook_first3": "第一行「30岁，双985硕士，决定重新高考」直接抛出反差；第二行「在所有人眼里，这是把一手好牌打烂」点出主流判断；第三行「但INTP想问的，是那个没人问的问题——『最优』到底是谁定义的？」切入Ti-Ne。",
@@ -19455,7 +20031,16 @@
             "CTA·你人生的重开键"
           ],
           "differentiation": "别人写「学历贬值/中年危机的焦虑」或「励志逆袭」，我们写Ti-Ne的「解构线性公式」——不贩卖学历焦虑，落点「重新出发是权利不是浪费」；把「重新高考」还原成「人生系统的重新校准」，让INTP看见理性的自由。"
-        }
+        },
+        "deployment": {
+          "allowed": false,
+          "state": "frozen-reserve",
+          "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+          "frozen_at": "2026-08-29T10:30:00+08:00",
+          "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+          "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+        },
+        "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
       }
     },
     "D21-B15-ENFJ-1": {
@@ -19819,6 +20404,86 @@
           "avoid": "不神化企业、不引战其他商超、不做软文式吹捧；避免\"良心企业\"等绝对化表述被判定营销。"
         },
         "post_spec_version": "v2.0"
+      }
+    },
+    "D21-B21-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B21-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B21"
+        },
+        "created_at": "2026-09-05T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-05-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-05-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B21-ISTJ-1",
+        "title": "「98岁老人25年捐款近6000万元」——ISTJ的Si-Te看到的不是一串天文数字。它看到的是：把一件对的事，25年、每一天都做下去——真正的责任感，从不需要高调，它只是一次次微小的坚持",
+        "hook": "社会证明",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "微博",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "98岁老人25年捐款近6000万元(7分·社会证明·长期坚持/公益·heat655万)"
+        ],
+        "paradigm": "社会证明·Si-Te长期一致性型(ISTJ恢复batch1·98岁老人25年捐款近6000万7·Si:25年不间断的持续·Te:把责任感落实到每一年每一天·长期主义/一致性的具象化·温暖正向·适合触达重建)",
+        "role": "P1·ISTJ社会证明恢复batch1(98岁老人25年捐款近6000万7·长期坚持/公益)·微博社会证明舆论位·方向船恢复batch1(B18/B19社会证明batch2达上限轮出→B21恢复)·SJ象限0→1·温暖正向适合触达重建",
+        "direction_compliance": "D21-B21 rotation对齐·ISTJ×社会证明×微博·恢复batch1·社会证明#2·SJ象限0→1",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B21停摆后首恢复·ISTJ社会证明恢复batch1)·依据B21方向船mandates+priority_types+signal-pool·温暖正向·适合沉睡用户触达重建·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ISTJ以Si-Te为根基，最看重『说到做到、长期一致』。当社会充斥着『三分钟热度』和『高调作秀』，一个98岁老人25年默默捐款，击中的是ISTJ内心对『坚守』的最高敬意——真正的责任，是用时间丈量的。",
+          "hook_first3": "第一行『98岁，25年，近6000万』三个数字并置；第二行『没有热搜常驻，也没有人设包装』点出低调；第三行『ISTJ看到的不是数字，是25年不间断的说到做到』切入Si-Te。",
+          "emotion_curve": "震撼(数字) → 敬意(25年坚持) → 共鸣(责任=长期一致) → 笃定(我也在坚守) → 温暖(微小坚持有意义)。",
+          "structure": [
+            "钩子·三数字开场",
+            "反差·低调无包装",
+            "洞察·责任=长期一致",
+            "共鸣·你的坚守",
+            "CTA·你坚持最久的事"
+          ],
+          "differentiation": "别人写『感动中国』式煽情，我们写Si-Te的『长期一致性』——不渲染泪点，落点『把一件对的事做25年就是最大的责任感』；把『捐款』还原成『时间的复利』，让ISTJ看见自己坚守的价值。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B21方向授权已获取(gate PASS·ESC-2026-09-05-1 resolved)·投投冻结延续(控控budget-vessel明令·支付~899h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B21方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B21方向船已授权·投投解冻后部署"
       }
     },
     "D17-B3-1": {
@@ -20804,7 +21469,7 @@
         "channel": "小红书",
         "quality": 8.7,
         "budget": 25,
-        "status": "active",
+        "status": "reserve-frozen",
         "usage_count": 0,
         "priority": "P0",
         "consecutive_hook": 1,
@@ -20819,7 +21484,7 @@
         "direction_compliance": "D21-B20 rotation对齐·INTJ×身份认同×小红书·恢复batch1·resume_condition(身份认同9≥7)命中",
         "flagship": false,
         "attachment_theory_resonance": false,
-        "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag",
+        "note": "🟢 fresh(D21-B20大面积轮出批·INTJ身份认同恢复batch1)·依据B19方向船resume_conditions+daily-review rotation+signal-pool 08-29·小红书post成品v2.0·B20方向船尚未产出已flag · ⛔冻结：未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署（#27-C 进进审计裁定 08-29 10:30）",
         "brief": {
           "pain_point": "INTJ的Ni追求「长远的掌控与独立」，但从小被分数/排名这套外部评价体系规训，内心始终在「我要做到最优」和「这标准到底是谁定的」之间拉扯。这届年轻人不被分数定义人生，击中的是INTJ最深的渴望——把评价权拿回自己手里。",
           "hook_first3": "第一行「这届年轻人说：不被分数定义人生」直接点题；第二行「很多人以为这是躺平，其实恰恰相反」破除误读；第三行「INTJ看到的不是反学历，是『独立』这个词的真正含义」切入Ni-Te。",
@@ -20848,7 +21513,16 @@
           "post_time": "18:00-20:00（自我成长/身份认同类·晚间深度阅读时段）",
           "avoid": "不贬低考试/学历/名校的价值（避免「读书无用论」对立）；不渲染分数焦虑；落点「自主定义/边界」，规避成功学鸡汤"
         },
-        "post_spec_version": "v2.0"
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": false,
+          "state": "frozen-reserve",
+          "reason": "未获 B20 方向授权 · 冻结期间仅储备不部署 · 待策策产 B20 方向 + 冻结解除后再部署",
+          "frozen_at": "2026-08-29T10:30:00+08:00",
+          "ruling": "#27-C 进进审计裁定 (2026-08-29) · 储备批保留不浪费，冻结期间不部署",
+          "authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
+        },
+        "deployment_authorization": "未获 B20 方向授权 · 冻结期间仅储备不部署"
       }
     },
     "D18-B5-2": {
