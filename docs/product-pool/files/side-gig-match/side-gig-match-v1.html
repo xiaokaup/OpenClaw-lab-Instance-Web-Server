@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>副业匹配记分卡</title>
+<style>
+  :root { --bg:#f4f2ee; --card:#fff; --ink:#2b2b2b; --accent:#2f6f6f; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#e8e4da; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#9ac7c2; }
+  .opt.sel { border-color:var(--accent); background:#eaf4f2; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#eef5f4; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💼 副业匹配记分卡</h1>
+  <div class="sub">8 题测一测 · 找到最适合你的副业打开方式</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的副业天赋是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    副业匹配记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-06<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · N2 已发货箱
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "副业匹配记分卡", "subtitle": "8 题测一测 · 找到最适合你的副业打开方式", "estimated_time": "2分钟", "types": {"skill": {"name": "技能杠杆型", "emoji": "💻", "color": "#2f6f6f", "core": "你靠一门硬技能撬动副业——技能是杠杆，一次投入，多次变现", "declaration": "我的副业宣言：我用一门手艺，换一份不被定义的收入", "strength": "边际成本低·可复制·护城河深", "blind": "容易陷进「只做不说」·缺获客渠道", "case": "13岁女孩三天靠AI赚1.8万（D21-B18-ENTP·8.7）", "trigger": "当你想副业却不知道「卖什么」时", "action": "盘点一门你已经熟练、别人愿意付费的技能，先接第一单"}, "content": {"name": "内容流量型", "emoji": "🎬", "color": "#c96f4a", "core": "你靠内容与注意力变现——把表达变成流量，把流量变成信任", "declaration": "我的副业宣言：我的表达本身就是资产", "strength": "表达欲强·长尾效应·可积累", "blind": "三分钟热度·数据焦虑·易被流量裹挟", "case": "月入4万的大提琴老师卖馒头（D21-B12-ENFP·9.0）· 眼镜店老板用AI做视频火遍海外（D20-B6·8.7）", "trigger": "当你想分享点什么却怕没人看时", "action": "选一个你停不下来的话题，先连更三篇，再看数据"}, "pivot": {"name": "转型创业型", "emoji": "🚀", "color": "#8a6d3b", "core": "你靠判断与热爱做第二曲线——押注一个别人看不懂的机会", "declaration": "我的副业宣言：我不怕从零开始，我怕从没开始", "strength": "战略眼光·敢押注·复利空间大", "blind": "启动期压力大·可能长时间没正反馈", "case": "华为天才少年卖玉米（D21-B11-ENTJ·9.0）· 75岁王石再创业（D21-B9-ENTJ·9.0）", "trigger": "当稳定与热爱二选一时", "action": "把你最想做的第二曲线，写成一页纸的「最小可验证版本」"}, "service": {"name": "服务口碑型", "emoji": "🤝", "color": "#7a9a5a", "core": "你靠善意与信任复利——把服务做好，口碑自然来", "declaration": "我的副业宣言：我的口碑，就是我最好的获客", "strength": "信任资产·复购率高·越做越顺", "blind": "边界模糊·容易过度消耗自己", "case": "大学生帮脑瘫少年卖出万斤西瓜（D18-B1·8.8）· 蛋饼店主被全网买到爆单（D21-B12-ENFJ·9.0）", "trigger": "当你想帮别人却怕吃亏时", "action": "把你最会照顾人的那件事，变成一项别人愿意付费的服务"}}, "questions": [{"id": 1, "type": "skill", "text": "「13岁女孩三天靠AI赚1.8万」刷屏，你的第一反应是：", "options": [{"text": "她掌握了杠杆——工具时代技能更值钱了", "scores": {"skill": 3}}, {"text": "我也想学，看看能不能用起来", "scores": {"skill": 1}}, {"text": "厉害，但跟我没关系", "scores": {"skill": -1}}, {"text": "炒作吧，不相信", "scores": {"skill": -2}}]}, {"id": 2, "type": "skill", "text": "说到副业，你更愿意先做什么准备：", "options": [{"text": "先把一门技能练到能接单", "scores": {"skill": 3}}, {"text": "边学边做，接点小单练手", "scores": {"skill": 1}}, {"text": "看看哪个方向来钱快", "scores": {"skill": -1}}, {"text": "还没想好，先观望", "scores": {"skill": -2}}]}, {"id": 3, "type": "content", "text": "「月入4万的大提琴老师去卖馒头」，你怎么看：", "options": [{"text": "她选的不是馒头，是「想要」——内容就是她的表达", "scores": {"content": 3}}, {"text": "有勇气，我也想记录我的生活", "scores": {"content": 1}}, {"text": "职业降级，有点可惜", "scores": {"content": -1}}, {"text": "博眼球罢了", "scores": {"content": -2}}]}, {"id": 4, "type": "content", "text": "如果做内容副业，你更倾向哪种：", "options": [{"text": "持续分享我真正热爱的，等长尾", "scores": {"content": 3}}, {"text": "什么火做什么，先跑通流量", "scores": {"content": 1}}, {"text": "做点干货，有人看就看", "scores": {"content": -1}}, {"text": "我不适合做内容", "scores": {"content": -2}}]}, {"id": 5, "type": "pivot", "text": "「年薪百万的天才少年去卖玉米」，你的判断是：", "options": [{"text": "他在买更大的选择自由——判断力才是资产", "scores": {"pivot": 3}}, {"text": "佩服，敢放弃才敢开始", "scores": {"pivot": 1}}, {"text": "想不通，稳赚的不香吗", "scores": {"pivot": -1}}, {"text": "炒作，卖玉米能赚几个钱", "scores": {"pivot": -2}}]}, {"id": 6, "type": "pivot", "text": "「75岁的王石又创业了」，你心里想的是：", "options": [{"text": "人不该被年龄定义——想干就干", "scores": {"pivot": 3}}, {"text": "有底气真好，希望我老了也这样", "scores": {"pivot": 1}}, {"text": "都75了，折腾什么", "scores": {"pivot": -1}}, {"text": "成功人士的凡尔赛", "scores": {"pivot": -2}}]}, {"id": 7, "type": "service", "text": "「大学生帮脑瘫少年卖出万斤西瓜」，你觉得值钱的是：", "options": [{"text": "那份把别人的难处放心上的善意", "scores": {"service": 3}}, {"text": "善意被看见、被接力了", "scores": {"service": 1}}, {"text": "营销做得好而已", "scores": {"service": -1}}, {"text": "一桩生意，不必拔高", "scores": {"service": -2}}]}, {"id": 8, "type": "service", "text": "一家小店因为一个善意举动被全网买爆，你会：", "options": [{"text": "这才是生意该有的样子——口碑会自己长腿", "scores": {"service": 3}}, {"text": "被暖到，想支持一下", "scores": {"service": 1}}, {"text": "跟风买买，凑个热闹", "scores": {"service": -1}}, {"text": "营销套路，不买", "scores": {"service": -2}}]}], "cases": [{"type": "技能杠杆型", "id": "D21-B18-ENTP-1", "title": "13岁女孩三天靠AI赚1.8万", "q": 8.7, "summary": "这一代孩子的创造力，正在用大人看不懂的方式重新定义「会赚钱」"}, {"type": "内容流量型", "id": "D21-B12-ENFP-1", "title": "月入4万的大提琴老师转身去卖馒头", "q": 9.0, "summary": "最难的不是赚到别人眼里的「好」，是敢在「应该」和「想要」之间选后者"}, {"type": "内容流量型", "id": "D20-B6-1", "title": "眼镜店老板用AI做的视频火遍海外", "q": 8.7, "summary": "他调试了三千次，找到了一个不需要开口解释「我是谁」的表达方式"}, {"type": "转型创业型", "id": "D21-B11-ENTJ-1", "title": "华为「天才少年」转身去卖玉米", "q": 9.0, "summary": "最顶级的觉醒不是爬到最高处，是敢在最高处说「这座山，我不爬了」"}, {"type": "转型创业型", "id": "D21-B9-ENTJ-1", "title": "75岁的王石又创业了", "q": 9.0, "summary": "真正的觉醒不是「75岁还能再干一场」，是「不再需要任何人批准，才敢承认我想干」"}, {"type": "服务口碑型", "id": "D18-B1-1", "title": "大学生帮14岁脑瘫少年卖出一万斤西瓜", "q": 8.8, "summary": "他不是善良，是他的系统自动生成了「我希望世界怎么对我」的平行世界"}, {"type": "服务口碑型", "id": "D21-B12-ENFJ-1", "title": "给化疗患儿塞100块蛋饼的店主被买到爆单", "q": 9.0, "summary": "善良最稀缺的不是大小，是被看见、被接力，滚成一场温柔的雪崩"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池副业母题（华为天才少年卖玉米 9.0 / 大提琴老师卖馒头 9.0 / 王石再创业 9.0 / 13岁女孩AI赚1.8万 8.7 / 大学生卖西瓜 8.8 等）提炼的趣味倾向测试，用于自我觉察与分享，不构成职业建议或心理评估。", "result_fields": [{"key": "declaration", "label": "💬 副业宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
