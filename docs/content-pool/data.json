@@ -1,31 +1,31 @@
 {
   "pool_status": {
-    "level": 195,
+    "level": 199,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-09-05T08:55:00+08:00",
-    "last_creation_batch": "D21-B21",
+    "last_creation": "2026-09-06T08:55:00+08:00",
+    "last_creation_batch": "D21-B23",
     "last_deployment": "2026-08-27T09:25:00+08:00",
     "last_deployment_batch": "D21-B18",
-    "net_change_this_batch": 5,
+    "net_change_this_batch": 4,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 195,
-    "active_items": 99,
+    "total_items": 199,
+    "active_items": 103,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B21停摆后首恢复+大面积轮出批5臂fresh(INFJ情感共鸣8.9旗舰抗癌博主小詹去世/ISTJ社会证明8.6 98岁老人25年捐款/INTJ反常识8.5福建老城墙/ENFJ身份认同8.4员工拒坐硬座/ENFP情感共鸣8.5子弟兵请战)·INFJ/ISTJ/ENFP三恢复+INTJ反常识换hook+ENFJ身份认同换hook·情感共鸣#1登顶(2臂·触达重建主线)·社会货币0臂(连续9批冷却结构性停用·禁止强推)·小红书post成品1条(INFJ)+brief 5条全填实·finance审慎5臂¥125(投投冻结延续)",
-    "fresh_arms_this_batch": 5,
+    "sheshe_supplement": "设设D21-B23供给塌方期钩子强制轮出批4臂fresh(ENTJ反常识9.0旗舰郑钦文美网逆转/ENTP反常识8.6汤家凤取消英语主科/ENFP好奇心8.5蛤蜊吃出珍珠/INTP好奇心8.3葫芦娃爷爷爆火弱信号fill)·反常识恢复登顶2臂(郑钦文9+汤家凤7·NT象限回归)+好奇心续batch2(蛤蜊珍珠6+葫芦娃5)·ENTJ/ENTP轮出恢复(NT 3/4对冲)·ENFP情感共鸣→好奇心换hook·社会货币0臂(连续11批冷却结构性停用)·小红书post成品1条(INTP好奇心·怀旧文化梗)+brief 4条全填实·finance审慎4臂¥100(供给约束·投投冻结延续)",
+    "fresh_arms_this_batch": 4,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 26,
-      "brief_added": 68,
-      "xhs_active_posts_completed": 17,
+      "posts_added": 27,
+      "brief_added": 72,
+      "xhs_active_posts_completed": 18,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B21新增1条post(INFJ情感共鸣·生命意义)+5条brief·body完整可发布正文·五字段全填实·停摆后首恢复+大面积轮出批·社会货币0臂(连续9批冷却结构性停用)",
+      "note": "小红书成品帖子v2.0持续落地·B23新增1条post(INTP好奇心·怀旧文化梗·文化现象解构)+4条brief·body完整可发布正文·五字段全填实·供给塌方期钩子强制轮出批·社会货币0臂(连续11批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
@@ -36,8 +36,8 @@
       "b21_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复",
-    "last_freeze_batch": "D29-B1",
-    "last_freeze_at": "2026-08-29T09:25:00+08:00"
+    "last_freeze_batch": "D21-B21",
+    "last_freeze_at": "2026-09-05T09:25:00+08:00"
   },
   "items": [
     {
@@ -6534,9 +6534,121 @@
       "flagship": false,
       "attachment_theory_resonance": false,
       "has_post": false
+    },
+    {
+      "id": "D21-B23-ENTJ-1",
+      "title": "「郑钦文美网惊天逆转：决胜盘0-5落后，连赢7局翻盘」——ENTJ的Te-Se看到的不是「逆天改命」的运气。它看到的是：当所有人都认定结局已定时，还能把「必败局」拆成下一步、再下一步的执行力——真正的强者，从不提前认输",
+      "hook": "反常识",
+      "targets": [
+        "ENTJ"
+      ],
+      "channel": "微博",
+      "quality": 9.0,
+      "created": "2026-09-06T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B23-ENTJ-1.json",
+      "paradigm": "反常识·Te-Se逆境战略型(ENTJ恢复batch1·郑钦文美网逆转9旗舰·Te:把必败局拆成可执行步骤·Se:临场行动力·逆境战略/绝地翻盘·⚠️严禁渲染输赢焦虑·用逆袭翻盘/逆境战略角度·正向体育适合触达重建)",
+      "role": "P0·ENTJ反常识恢复batch1(郑钦文美网逆转9旗舰·逆境战略/绝地翻盘·Te-Se行动力)·微博体育舆论位·反常识#1恢复登顶·NT象限回归·触达重建第一优先",
+      "consecutive_hook": 1,
+      "direction_hook": "反常识",
+      "batch": "D21-B23",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B23-ENTP-1",
+      "title": "「汤家凤呼吁取消英语主科地位」——ENTP的Ne-Ti看到的不是「要不要站队」。它看到的是：一个被默认了几十年的「理所当然」，第一次被重新摆回桌面上审视——思辨的价值，从来不在结论，而在「敢于挑战默认答案」的勇气",
+      "hook": "反常识",
+      "targets": [
+        "ENTP"
+      ],
+      "channel": "B站",
+      "quality": 8.6,
+      "created": "2026-09-06T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B23-ENTP-1.json",
+      "paradigm": "反常识·Ne-Ti观点解构型(ENTP恢复batch1·汤家凤呼吁取消英语主科7·Ne:挑战默认答案/提出替代可能性·Ti:思辨主科地位合理性的论证框架·⚠️思辨/教育讨论角度·严禁渲染对立/焦虑·观点交锋非站队)",
+      "role": "P0·ENTP反常识恢复batch1(汤家凤呼吁取消英语主科7·观点交锋/挑战主流·Ne-Ti质疑权威)·B站观点深度位·反常识#1恢复登顶·NT象限回归",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B23",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B23-ENFP-1",
+      "title": "「花15元买2斤蛤蜊，吃出3颗珍珠」——ENFP的Ne-Fi看到的不是「运气好」这么简单。它看到的是：概率小到可以忽略的惊喜，偏偏落在一个对世界保持好奇的人头上——生活偶尔不讲道理，但只奖励那些还愿意相信惊喜的人",
+      "hook": "好奇心",
+      "targets": [
+        "ENFP"
+      ],
+      "channel": "抖音",
+      "quality": 8.5,
+      "created": "2026-09-06T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B23-ENFP-1.json",
+      "paradigm": "好奇心·Ne-Fi生活惊喜型(ENFP换hook·情感共鸣B22→好奇心batch1·蛤蜊吃出珍珠6·Ne:概率之外的可能性·Fi:被生活温柔对待的惊喜·小确幸/正向轻快·适合触达重建)",
+      "role": "P0·ENFP好奇心batch1换hook(蛤蜊吃出珍珠6·小确幸/惊喜·Ne-Fi生活惊喜)·抖音轻快触达重建位·情感共鸣(B22 batch2)→好奇心换hook·正向",
+      "consecutive_hook": 1,
+      "direction_hook": "好奇心",
+      "batch": "D21-B23",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B23-INTP-1",
+      "title": "「葫芦娃爷爷爆火，『蛇精』都来打卡」——INTP的Ne-Ti看到的不是「怀旧」两个字。它看到的是：一个40年前的动画角色突然翻红，背后是一次集体记忆被重新编码成流量的过程——我们怀念的从来不是那部动画，是那个还能被一部动画逗笑的自己",
+      "hook": "好奇心",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "小红书",
+      "quality": 8.3,
+      "created": "2026-09-06T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B23-INTP-1.json",
+      "paradigm": "好奇心·Ne-Ti文化解构型(INTP续batch2·葫芦娃爷爷爆火5·Ne:集体记忆如何被重新编码·Ti:解构病毒传播的结构逻辑·怀旧文化梗·⚠️弱信号fill·5分低于常规≥6阈值·供给塌方期降权标注)",
+      "role": "P1·INTP好奇心batch2续(葫芦娃爷爷爆火5·怀旧文化梗·Ne-Ti解构文化现象复苏)·小红书文化怀旧位·好奇心#2续batch2达上限·⚠️弱信号fill(5分低于≥6阈值·降权)",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "batch": "D21-B23",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": true
     }
   ],
-  "total": 195,
+  "total": 199,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -7832,6 +7944,69 @@
         "authorization": "B21方向船已授权·投投解冻后部署"
       },
       "deployment_authorization": "B21方向船已授权·投投解冻后部署"
+    },
+    {
+      "id": "D21-B23-INTP-1",
+      "title": "「葫芦娃爷爷爆火，『蛇精』都来打卡」——INTP的Ne-Ti看到的不是「怀旧」两个字。它看到的是：一个40年前的动画角色突然翻红，背后是一次集体记忆被重新编码成流量的过程——我们怀念的从来不是那部动画，是那个还能被一部动画逗笑的自己",
+      "hook": "好奇心",
+      "targets": [
+        "INTP"
+      ],
+      "channel": "小红书",
+      "quality": 8.3,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P1",
+      "consecutive_hook": 2,
+      "direction_hook": "好奇心",
+      "arm_id": 4,
+      "batch_num": 1,
+      "signals": [
+        "葫芦娃爷爷爆火\"蛇精\"来打卡(5分·好奇心·文化梗/病毒传播·怀旧集体记忆·heat637万)"
+      ],
+      "paradigm": "好奇心·Ne-Ti文化解构型(INTP续batch2·葫芦娃爷爷爆火5·Ne:集体记忆如何被重新编码·Ti:解构病毒传播的结构逻辑·怀旧文化梗·⚠️弱信号fill·5分低于常规≥6阈值·供给塌方期降权标注)",
+      "role": "P1·INTP好奇心batch2续(葫芦娃爷爷爆火5·怀旧文化梗·Ne-Ti解构文化现象复苏)·小红书文化怀旧位·好奇心#2续batch2达上限·⚠️弱信号fill(5分低于≥6阈值·降权)",
+      "direction_compliance": "D21-B23 rotation对齐·INTP×好奇心×小红书·续batch2·好奇心#2续batch2达上限(B24必轮出)·弱信号fill降权",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(D21-B23供给塌方期钩子强制轮出批·INTP好奇心batch2续)·依据B23方向船mandates+priority_types+signal-pool·小红书post成品v2.0·怀旧文化梗·Ne-Ti解构·⚠️弱信号fill(5分·供给塌方期降权)·投投冻结延续·解冻后按方向船部署",
+      "brief": {
+        "pain_point": "INTP以Ne-Ti为根基，遇到任何「火得莫名其妙」的现象都忍不住拆解它的机制。葫芦娃爷爷爆火、『蛇精』来打卡，对INTP的吸引力不在「怀旧情怀」，而在于『一个40年前的符号，为什么会在今天被重新激活』这个解构命题。INTP停留，是因为好奇这件事「怎么火起来的」。",
+        "hook_first3": "第一行『葫芦娃爷爷爆火，蛇精都来打卡』抛出荒诞反差；第二行『一个40年前的动画角色，突然被玩成新梗』点出时间跨度；第三行『INTP忍不住拆解：为什么偏偏是蛇精？』切入Ne-Ti。",
+        "emotion_curve": "荒诞(这也火) → 好奇(凭什么火) → 拆解(集体记忆如何编码) → 恍然(怀的是童真的自己) → 温柔(给过去一个注脚)。",
+        "structure": [
+          "钩子·荒诞反差开场",
+          "反叙事·40年前的符号翻红",
+          "洞察·集体记忆被重新编码成流量",
+          "迁移·我们怀念的是童真的自己",
+          "CTA·你童年最难忘的反派"
+        ],
+        "differentiation": "别人写葫芦娃玩梗/怀旧煽情/贩卖年龄焦虑，我们写Ne-Ti的『文化现象解构』——不渲染代际对立，落点『怀旧=给过去一个当代注脚』；把『蛇精翻红』还原成『一次集体记忆的再编码』，让INTP看见的不是怀旧，而是一个可拆解的文化样本。"
+      },
+      "post": {
+        "cover_title": "40年前的蛇精，突然被全网追着打卡",
+        "body": "最近「葫芦娃爷爷」火了，\n连「蛇精」都来打卡。🐍\n\n不是爷爷本人，\n是当年那部动画里的角色，\n突然被年轻人玩成了新梗。\n\n作为一个爱琢磨的人，\n我忍不住拆解一下：\n为什么偏偏是「蛇精」？🧠\n\n40年过去了，\n我们记得最牢的，\n不是主角的正能量，\n而是那个妖艳又笨拙的反派。\n\n因为反派有「人味」，\n有缺点、会翻车、\n会喊出那句魔性台词。\n\n怀旧从来不是回到过去，\n是给过去一个当代的注脚。📝\n\n我们怀念的也不是那部动画，\n是那个还能被一部动画逗笑的自己。\n\n💬 你童年里最难忘的一个反派是谁？\n评论区说说，看看我们是不是同一代人。",
+        "hashtags": [
+          "#葫芦娃",
+          "#童年回忆",
+          "#INTP",
+          "#怀旧",
+          "#文化梗"
+        ],
+        "cover_visual": "复古高饱和配色(经典葫芦娃粗线条+撞色)，主视觉用蛇精卡通剪影+现代「打卡」手势的拼贴，文字排版用像素/复古字体，带一点「爷青回」的俏皮感，避免沉重怀旧色调",
+        "cta": "你童年里最难忘的一个反派是谁？评论区说说，看看我们是不是同一代人。",
+        "post_time": "12:00-13:00 或 18:00-20:00（文化怀旧/轻松向·午间或下班高峰）",
+        "avoid": "不渲染代际对立/年龄焦虑、不玩梗过度低俗、不消费老一辈、不用『落伍/过时』式焦虑标题；落点『怀旧=给过去当代注脚/童真的自己』"
+      },
+      "post_spec_version": "v2.0",
+      "deployment": {
+        "allowed": true,
+        "state": "active-ready",
+        "reason": "B23方向授权已获取(gate PASS·ESC-2026-09-06-1 resolved_by_b23)·投投冻结延续(控控budget-vessel明令·支付~923h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+        "authorization": "B23方向船已授权·投投解冻后部署"
+      },
+      "deployment_authorization": "B23方向船已授权·投投解冻后部署"
     },
     {
       "id": "D21-B3-INFJ-1",
@@ -13604,6 +13779,86 @@
         }
       }
     },
+    "D21-B23-ENFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B23-ENFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B23"
+        },
+        "created_at": "2026-09-06T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-06-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B23-ENFP-1",
+        "title": "「花15元买2斤蛤蜊，吃出3颗珍珠」——ENFP的Ne-Fi看到的不是「运气好」这么简单。它看到的是：概率小到可以忽略的惊喜，偏偏落在一个对世界保持好奇的人头上——生活偶尔不讲道理，但只奖励那些还愿意相信惊喜的人",
+        "hook": "好奇心",
+        "targets": [
+          "ENFP"
+        ],
+        "channel": "抖音",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "好奇心",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "花15元买2斤蛤蜊吃出3颗珍珠(6分·好奇心·小确幸/惊喜·heat656万)"
+        ],
+        "paradigm": "好奇心·Ne-Fi生活惊喜型(ENFP换hook·情感共鸣B22→好奇心batch1·蛤蜊吃出珍珠6·Ne:概率之外的可能性·Fi:被生活温柔对待的惊喜·小确幸/正向轻快·适合触达重建)",
+        "role": "P0·ENFP好奇心batch1换hook(蛤蜊吃出珍珠6·小确幸/惊喜·Ne-Fi生活惊喜)·抖音轻快触达重建位·情感共鸣(B22 batch2)→好奇心换hook·正向",
+        "direction_compliance": "D21-B23 rotation对齐·ENFP×好奇心×抖音·换hook batch1·情感共鸣(B22)→好奇心·NF象限1/4·触达重建主线保留",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B23供给塌方期钩子强制轮出批·ENFP好奇心batch1换hook)·依据B23方向船mandates+priority_types+signal-pool·小确幸/惊喜·正向轻快适合沉睡用户触达重建·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENFP以Ne-Fi为根基，靠「对世界保持好奇」来给自己充电。当生活被工作、压力和「没意思」填满，一条『15块蛤蜊吃出3颗珍珠』的小概率惊喜，会瞬间点亮ENFP内心那个『生活还可以这么好玩』的开关。ENFP停留，是因为他们太需要一次「惊喜真的会降临」的确认。",
+          "hook_first3": "第一行『15块，2斤蛤蜊，3颗珍珠』三个数字快速并置；第二行『概率小到可以忽略』点出反常规；第三行『但惊喜偏偏落在保持好奇的人头上』切入Ne-Fi。",
+          "emotion_curve": "惊讶(这也行) → 好笑(生活不讲道理) → 暖(被温柔对待) → 期待(惊喜会降临) → 轻盈(保持好奇)。",
+          "structure": [
+            "钩子·三数字开场",
+            "反差·概率小到忽略",
+            "洞察·惊喜只奖励好奇的人",
+            "迁移·你最近一次被生活惊喜",
+            "CTA·你遇到过什么小概率的甜"
+          ],
+          "differentiation": "别人写蛤蜊珍珠当猎奇新闻/转发图一乐，我们写Ne-Fi的『生活惊喜观』——不渲染暴富/运气玄学，落点『保持好奇，惊喜才会找上门』；把『吃出珍珠』还原成『一次生活对好奇心的温柔回应』，让ENFP看见的不是奇闻，而是自己该被奖励的那份好奇心。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B23方向授权已获取(gate PASS·ESC-2026-09-06-1 resolved_by_b23)·投投冻结延续(控控budget-vessel明令·支付~923h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B23方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B23方向船已授权·投投解冻后部署"
+      }
+    },
     "D20-B9-INFP-1": {
       "vessel": {
         "version": "1.0",
@@ -17529,6 +17784,102 @@
         }
       }
     },
+    "D21-B23-INTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B23-INTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B23"
+        },
+        "created_at": "2026-09-06T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-06-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B23-INTP-1",
+        "title": "「葫芦娃爷爷爆火，『蛇精』都来打卡」——INTP的Ne-Ti看到的不是「怀旧」两个字。它看到的是：一个40年前的动画角色突然翻红，背后是一次集体记忆被重新编码成流量的过程——我们怀念的从来不是那部动画，是那个还能被一部动画逗笑的自己",
+        "hook": "好奇心",
+        "targets": [
+          "INTP"
+        ],
+        "channel": "小红书",
+        "quality": 8.3,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 2,
+        "direction_hook": "好奇心",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "葫芦娃爷爷爆火\"蛇精\"来打卡(5分·好奇心·文化梗/病毒传播·怀旧集体记忆·heat637万)"
+        ],
+        "paradigm": "好奇心·Ne-Ti文化解构型(INTP续batch2·葫芦娃爷爷爆火5·Ne:集体记忆如何被重新编码·Ti:解构病毒传播的结构逻辑·怀旧文化梗·⚠️弱信号fill·5分低于常规≥6阈值·供给塌方期降权标注)",
+        "role": "P1·INTP好奇心batch2续(葫芦娃爷爷爆火5·怀旧文化梗·Ne-Ti解构文化现象复苏)·小红书文化怀旧位·好奇心#2续batch2达上限·⚠️弱信号fill(5分低于≥6阈值·降权)",
+        "direction_compliance": "D21-B23 rotation对齐·INTP×好奇心×小红书·续batch2·好奇心#2续batch2达上限(B24必轮出)·弱信号fill降权",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B23供给塌方期钩子强制轮出批·INTP好奇心batch2续)·依据B23方向船mandates+priority_types+signal-pool·小红书post成品v2.0·怀旧文化梗·Ne-Ti解构·⚠️弱信号fill(5分·供给塌方期降权)·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INTP以Ne-Ti为根基，遇到任何「火得莫名其妙」的现象都忍不住拆解它的机制。葫芦娃爷爷爆火、『蛇精』来打卡，对INTP的吸引力不在「怀旧情怀」，而在于『一个40年前的符号，为什么会在今天被重新激活』这个解构命题。INTP停留，是因为好奇这件事「怎么火起来的」。",
+          "hook_first3": "第一行『葫芦娃爷爷爆火，蛇精都来打卡』抛出荒诞反差；第二行『一个40年前的动画角色，突然被玩成新梗』点出时间跨度；第三行『INTP忍不住拆解：为什么偏偏是蛇精？』切入Ne-Ti。",
+          "emotion_curve": "荒诞(这也火) → 好奇(凭什么火) → 拆解(集体记忆如何编码) → 恍然(怀的是童真的自己) → 温柔(给过去一个注脚)。",
+          "structure": [
+            "钩子·荒诞反差开场",
+            "反叙事·40年前的符号翻红",
+            "洞察·集体记忆被重新编码成流量",
+            "迁移·我们怀念的是童真的自己",
+            "CTA·你童年最难忘的反派"
+          ],
+          "differentiation": "别人写葫芦娃玩梗/怀旧煽情/贩卖年龄焦虑，我们写Ne-Ti的『文化现象解构』——不渲染代际对立，落点『怀旧=给过去一个当代注脚』；把『蛇精翻红』还原成『一次集体记忆的再编码』，让INTP看见的不是怀旧，而是一个可拆解的文化样本。"
+        },
+        "post": {
+          "cover_title": "40年前的蛇精，突然被全网追着打卡",
+          "body": "最近「葫芦娃爷爷」火了，\n连「蛇精」都来打卡。🐍\n\n不是爷爷本人，\n是当年那部动画里的角色，\n突然被年轻人玩成了新梗。\n\n作为一个爱琢磨的人，\n我忍不住拆解一下：\n为什么偏偏是「蛇精」？🧠\n\n40年过去了，\n我们记得最牢的，\n不是主角的正能量，\n而是那个妖艳又笨拙的反派。\n\n因为反派有「人味」，\n有缺点、会翻车、\n会喊出那句魔性台词。\n\n怀旧从来不是回到过去，\n是给过去一个当代的注脚。📝\n\n我们怀念的也不是那部动画，\n是那个还能被一部动画逗笑的自己。\n\n💬 你童年里最难忘的一个反派是谁？\n评论区说说，看看我们是不是同一代人。",
+          "hashtags": [
+            "#葫芦娃",
+            "#童年回忆",
+            "#INTP",
+            "#怀旧",
+            "#文化梗"
+          ],
+          "cover_visual": "复古高饱和配色(经典葫芦娃粗线条+撞色)，主视觉用蛇精卡通剪影+现代「打卡」手势的拼贴，文字排版用像素/复古字体，带一点「爷青回」的俏皮感，避免沉重怀旧色调",
+          "cta": "你童年里最难忘的一个反派是谁？评论区说说，看看我们是不是同一代人。",
+          "post_time": "12:00-13:00 或 18:00-20:00（文化怀旧/轻松向·午间或下班高峰）",
+          "avoid": "不渲染代际对立/年龄焦虑、不玩梗过度低俗、不消费老一辈、不用『落伍/过时』式焦虑标题；落点『怀旧=给过去当代注脚/童真的自己』"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B23方向授权已获取(gate PASS·ESC-2026-09-06-1 resolved_by_b23)·投投冻结延续(控控budget-vessel明令·支付~923h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B23方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B23方向船已授权·投投解冻后部署"
+      }
+    },
     "D20-B6-1": {
       "vessel": {
         "version": "1.0",
@@ -18862,6 +19213,86 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B23-ENTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B23-ENTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B23"
+        },
+        "created_at": "2026-09-06T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-06-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B23-ENTJ-1",
+        "title": "「郑钦文美网惊天逆转：决胜盘0-5落后，连赢7局翻盘」——ENTJ的Te-Se看到的不是「逆天改命」的运气。它看到的是：当所有人都认定结局已定时，还能把「必败局」拆成下一步、再下一步的执行力——真正的强者，从不提前认输",
+        "hook": "反常识",
+        "targets": [
+          "ENTJ"
+        ],
+        "channel": "微博",
+        "quality": 9.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "郑钦文美网惊天逆转 决胜盘0-5落后连赢7局(9分·反常识·逆境绝地翻盘/不认输·heat795万)"
+        ],
+        "paradigm": "反常识·Te-Se逆境战略型(ENTJ恢复batch1·郑钦文美网逆转9旗舰·Te:把必败局拆成可执行步骤·Se:临场行动力·逆境战略/绝地翻盘·⚠️严禁渲染输赢焦虑·用逆袭翻盘/逆境战略角度·正向体育适合触达重建)",
+        "role": "P0·ENTJ反常识恢复batch1(郑钦文美网逆转9旗舰·逆境战略/绝地翻盘·Te-Se行动力)·微博体育舆论位·反常识#1恢复登顶·NT象限回归·触达重建第一优先",
+        "direction_compliance": "D21-B23 rotation对齐·ENTJ×反常识×微博·恢复batch1·反常识#1恢复登顶·NT象限回归(B21/B22轮出→B23恢复·间隔≥1批命中)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B23供给塌方期钩子强制轮出批·ENTJ反常识恢复batch1)·依据B23方向船mandates+priority_types+signal-pool·9分旗舰·⚠️严禁渲染输赢焦虑/成败对立(用逆境战略/绝地翻盘/不认输角度)·正向体育适合沉睡用户触达重建·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENTJ以Te-Se为根基，最受不了「提前认输」和「算胜率后放弃」。郑钦文决胜盘0-5落后连赢7局，击中的是ENTJ内心最深的那根弦——当局面看起来已经无解，真正的强者不是靠情绪硬撑，而是把「必败局」重新拆成可以一个个拿下的步骤。ENTJ停留，是因为这正好是他们自己最信奉的打法。",
+          "hook_first3": "第一行『决胜盘0-5落后，连赢7局』两个数字并置制造反直觉反差；第二行『当所有人都以为比赛已经结束』点出「提前认输」的集体默认；第三行『ENTJ看到的不是运气，是拆解必败局的执行力』切入Te-Se。",
+          "emotion_curve": "窒息(0-5绝境) → 怀疑(还能翻吗) → 震撼(连赢7局) → 顿悟(绝境=可拆解的任务) → 振奋(强者从不提前认输)。",
+          "structure": [
+            "钩子·0-5到7局的数字反差",
+            "反叙事·不是运气是拆解",
+            "洞察·绝境=可执行的下一步",
+            "迁移·你的必败局怎么拆",
+            "CTA·你经历过哪次不肯认输"
+          ],
+          "differentiation": "别人写郑钦文渲染「燃/泪目/逆天改命」，我们写Te-Se的『逆境战略』——不渲染输赢焦虑，落点『把必败局拆成可执行步骤』；把『连赢7局』还原成『把注意力从结局收回，专注下一分』，让ENTJ看见的不是奇迹，而是他们最熟悉的打法。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B23方向授权已获取(gate PASS·ESC-2026-09-06-1 resolved_by_b23)·投投冻结延续(控控budget-vessel明令·支付~923h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B23方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B23方向船已授权·投投解冻后部署"
       }
     },
     "D21-B19-ENFP-1": {
@@ -22266,6 +22697,86 @@
         "usage_count": 0,
         "social_proof_alternative": true,
         "alternative_note": "社会证明0信号→身份认同替代·Si学术传统视角·信任7.60零维护"
+      }
+    },
+    "D21-B23-ENTP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B23-ENTP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B23"
+        },
+        "created_at": "2026-09-06T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-06-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-06-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B23-ENTP-1",
+        "title": "「汤家凤呼吁取消英语主科地位」——ENTP的Ne-Ti看到的不是「要不要站队」。它看到的是：一个被默认了几十年的「理所当然」，第一次被重新摆回桌面上审视——思辨的价值，从来不在结论，而在「敢于挑战默认答案」的勇气",
+        "hook": "反常识",
+        "targets": [
+          "ENTP"
+        ],
+        "channel": "B站",
+        "quality": 8.6,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "汤家凤呼吁取消英语主科地位(7分·反常识·观点交锋/挑战主流·heat532万)"
+        ],
+        "paradigm": "反常识·Ne-Ti观点解构型(ENTP恢复batch1·汤家凤呼吁取消英语主科7·Ne:挑战默认答案/提出替代可能性·Ti:思辨主科地位合理性的论证框架·⚠️思辨/教育讨论角度·严禁渲染对立/焦虑·观点交锋非站队)",
+        "role": "P0·ENTP反常识恢复batch1(汤家凤呼吁取消英语主科7·观点交锋/挑战主流·Ne-Ti质疑权威)·B站观点深度位·反常识#1恢复登顶·NT象限回归",
+        "direction_compliance": "D21-B23 rotation对齐·ENTP×反常识×B站·恢复batch1·反常识#1恢复登顶·NT象限回归(B21/B22轮出→B23恢复·间隔≥1批命中)",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B23供给塌方期钩子强制轮出批·ENTP反常识恢复batch1)·依据B23方向船mandates+priority_types+signal-pool·⚠️严禁渲染教育对立/焦虑(用思辨/教育讨论/挑战默认答案角度)·观点交锋非站队·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENTP以Ne-Ti为根基，天生享受「挑战默认答案」的思辨快感。当有人呼吁取消英语主科地位，ENTP的兴奋点从来不在「该不该取消」这个结论，而在于「一个被默认了几十年的规则，居然可以重新被质疑」。ENTP停留，是因为这是一个值得玩味的思辨题，而不是一个需要站队的判断题。",
+          "hook_first3": "第一行『取消英语主科地位』直接抛出争议命题；第二行『被默认了几十年的理所当然，第一次摆回桌面』点出「默认答案被挑战」的反常；第三行『ENTP关心的不是站队，是这道思辨题本身』切入Ne-Ti。",
+          "emotion_curve": "意外(这也敢说) → 好奇(凭什么不能质疑) → 兴奋(思辨题来了) → 冷静(结论之外还有框架) → 开放(保持思考)。",
+          "structure": [
+            "钩子·争议命题开场",
+            "反叙事·默认答案被挑战",
+            "洞察·思辨价值不在结论在框架",
+            "迁移·你生活里哪些默认该重审",
+            "CTA·你怎么看这道题"
+          ],
+          "differentiation": "别人写这题煽动对立/站队带节奏，我们写Ne-Ti的『思辨本身』——不渲染教育对立，落点『敢于挑战默认答案的勇气』；把『取消主科』还原成『一次关于规则合理性的公开思辨』，让ENTP看见的不是阵营，而是思维游戏。"
+        },
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B23方向授权已获取(gate PASS·ESC-2026-09-06-1 resolved_by_b23)·投投冻结延续(控控budget-vessel明令·支付~923h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B23方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B23方向船已授权·投投解冻后部署"
       }
     },
     "D21-B19-ENFJ-1": {
