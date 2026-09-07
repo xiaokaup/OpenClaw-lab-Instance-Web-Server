@@ -1,31 +1,31 @@
 {
   "pool_status": {
-    "level": 199,
+    "level": 204,
     "status": "CRITICAL_OVER_SOFT_CAP",
     "max_capacity_soft": 25,
     "warning": "🔴🔴 池180>>25软上限·投投零部署为根因·非内容过剩·D21-B18大面积轮出批满产7臂fresh(ENFP 82岁跨栏9.0旗舰+ISTJ扶老人获退款8.8+INTJ AI真人脸8.8+INTP比尔盖茨8.6+INFJ孩子装病8.7+ENTP 13岁AI 8.7+ENTJ英伟达8.5)·方向船B18明令7臂全fresh(恢复满产¥175)·豁免池水位降产·对冲走清stale并行",
-    "last_creation": "2026-09-06T08:55:00+08:00",
-    "last_creation_batch": "D21-B23",
+    "last_creation": "2026-09-07T08:55:00+08:00",
+    "last_creation_batch": "D21-B24",
     "last_deployment": "2026-08-27T09:25:00+08:00",
     "last_deployment_batch": "D21-B18",
-    "net_change_this_batch": 4,
+    "net_change_this_batch": 5,
     "d20_b7_daka_supplement": "大卡08:45紧急补产5篇·全部fresh·TTL72h",
     "recovery_note": "content-active.json于08:41从git恢复·从73个vessel文件重建(2个损坏/未知)",
-    "total_items": 199,
-    "active_items": 103,
+    "total_items": 204,
+    "active_items": 108,
     "hook_conflict_items": 1,
     "last_deployment_arms": 5,
-    "sheshe_supplement": "设设D21-B23供给塌方期钩子强制轮出批4臂fresh(ENTJ反常识9.0旗舰郑钦文美网逆转/ENTP反常识8.6汤家凤取消英语主科/ENFP好奇心8.5蛤蜊吃出珍珠/INTP好奇心8.3葫芦娃爷爷爆火弱信号fill)·反常识恢复登顶2臂(郑钦文9+汤家凤7·NT象限回归)+好奇心续batch2(蛤蜊珍珠6+葫芦娃5)·ENTJ/ENTP轮出恢复(NT 3/4对冲)·ENFP情感共鸣→好奇心换hook·社会货币0臂(连续11批冷却结构性停用)·小红书post成品1条(INTP好奇心·怀旧文化梗)+brief 4条全填实·finance审慎4臂¥100(供给约束·投投冻结延续)",
-    "fresh_arms_this_batch": 4,
+    "sheshe_supplement": "设设D21-B24大面积恢复批5臂fresh(ISTJ反常识8.5旗舰400元塑料砖头戒手机/INFP社会证明8.4葫芦爷爷剪流量喧嚣/INFJ社会证明8.4失明男孩大学报到/INTJ身份认同8.0中国科大弱信号fill/ENFJ情感共鸣8.1五岁女孩抢收稻谷弱信号fill)·社会证明#1恢复登顶2臂+反常识#2续batch2达上限+身份认同#3恢复+情感共鸣#4恢复·好奇心B23 batch2达上限→B24强制轮出·5人格轮出恢复(ISTJ/INFP/INFJ/INTJ/ENFJ全恢复)·4hook多样性0.667(修复B23 0.333)·社会货币0臂(连续12批冷却结构性停用)·小红书post成品1条(INFP社会证明·个人边界/本真)+brief 5条全填实·5臂¥125(恢复批·2臂6分弱信号fill已标注)·content-gate BLOCK(ESC-2026-09-07-1)已解除",
+    "fresh_arms_this_batch": 5,
     "reuse_arms_this_batch": 0,
     "xhs_v2_completion": {
       "spec": "content-spec-v2-xiaohongshu.md (河山签发 2026-08-19 23:15)",
-      "posts_added": 27,
-      "brief_added": 72,
-      "xhs_active_posts_completed": 18,
+      "posts_added": 28,
+      "brief_added": 77,
+      "xhs_active_posts_completed": 19,
       "xhs_b10_posts_completed": 2,
       "xhs_b12_posts_completed": 3,
-      "note": "小红书成品帖子v2.0持续落地·B23新增1条post(INTP好奇心·怀旧文化梗·文化现象解构)+4条brief·body完整可发布正文·五字段全填实·供给塌方期钩子强制轮出批·社会货币0臂(连续11批冷却结构性停用)",
+      "note": "小红书成品帖子v2.0持续落地·B24新增1条post(INFP社会证明·葫芦爷爷剪流量喧嚣·个人边界/本真·回归安静)+5条brief·body完整可发布正文·五字段全填实·大面积恢复批·社会货币0臂(连续12批冷却结构性停用)",
       "b14_posts_completed": 2,
       "b15_posts_completed": 2,
       "b16_posts_completed": 1,
@@ -33,7 +33,8 @@
       "b18_posts_completed": 2,
       "b19_posts_completed": 1,
       "b20_posts_completed": 1,
-      "b21_posts_completed": 1
+      "b21_posts_completed": 1,
+      "b24_posts_completed": 1
     },
     "b12b_deployment": "B12b补部署4臂fresh(ENFJ社会证明9旗舰/ENTP身份认同8.8/ENTJ好奇心8.6/INTJ好奇心8.5)·100%完美匹配0dissent·四渠道2-2-2-1均衡恢复",
     "last_freeze_batch": "D21-B21",
@@ -6646,9 +6647,149 @@
       "flagship": false,
       "attachment_theory_resonance": false,
       "has_post": true
+    },
+    {
+      "id": "D21-B24-ISTJ-1",
+      "title": "「花400块买块『塑料砖头』，就为了锁住手机」——ISTJ的Si-Te看到的不是『交智商税』。它看到的是：当自律变成一件看得见摸得着的实物，你才真正把『决心』从情绪里搬进了现实——最可靠的承诺，从来不是发誓，是结构",
+      "hook": "反常识",
+      "targets": [
+        "ISTJ"
+      ],
+      "channel": "微博",
+      "quality": 8.5,
+      "created": "2026-09-07T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B24-ISTJ-1.json",
+      "paradigm": "反常识·Si-Te自律承诺装置型(ISTJ恢复batch2·400元塑料砖头8旗舰·Si:把决心外化为物理实物·Te:用结构而非意志力执行·自律不是硬扛·是把诱惑变成不可能·⚠️严禁贩卖数字焦虑)",
+      "role": "P0·ISTJ反常识batch2旗舰(400元塑料砖头8·Si-Te自律承诺装置)·微博消费洞察位·反常识#2续batch2达上限(B25必轮出)·ISTJ轮出(B22社会证明)→恢复(反常识新hook)",
+      "consecutive_hook": 2,
+      "direction_hook": "反常识",
+      "batch": "D21-B24",
+      "producer": "设设",
+      "arm_id": 1,
+      "batch_num": 1,
+      "flagship": true,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B24-INFP-1",
+      "title": "「葫芦爷爷剪的不是葫芦，是流量喧嚣」——INFP的Fi看到的不是『老人拒绝配合炒作』。它看到的是：当全世界都追着流量跑，有一个人选择把门关上、回到安静——真正的本真，不是活成别人想看的样子，是在被围观时依然有说不的底气",
+      "hook": "社会证明",
+      "targets": [
+        "INFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.4,
+      "created": "2026-09-07T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B24-INFP-1.json",
+      "paradigm": "社会证明·Fi本真边界型(INFP恢复batch1·葫芦爷爷剪流量喧嚣7·Fi:本真胜过流量·个人边界神圣·公众站爷爷这边=社会认可『拒绝被消费』的权利·正向回归安静)",
+      "role": "P0·INFP社会证明恢复batch1(葫芦爷爷剪流量喧嚣7·Fi本真/个人边界)·小红书本真位·社会证明#1恢复登顶2臂之一·INFP轮出(B22身份认同)→恢复(社会证明新hook)·正向触达重建",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B24",
+      "producer": "设设",
+      "arm_id": 2,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": true
+    },
+    {
+      "id": "D21-B24-INFJ-1",
+      "title": "「惨遭伤害永久失明男孩，完成大学报到」——INFJ的Fe看到的不是『一个励志故事』。它看到的是：一个在黑暗里长大的孩子，独自走到大学门口，社会为他让出的不是怜悯，是把他当成一个普通新生来迎接的尊重——善意最好的样子，是成全，不是施舍",
+      "hook": "社会证明",
+      "targets": [
+        "INFJ"
+      ],
+      "channel": "抖音",
+      "quality": 8.4,
+      "created": "2026-09-07T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P0",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B24-INFJ-1.json",
+      "paradigm": "社会证明·Fe共情自强型(INFJ恢复batch1·失明男孩大学报到7·Fe:善意=成全非施舍·共情不自伤·社会以普通新生之礼迎接=最高级尊重·⚠️严禁消费苦难·自强励志正向角度)",
+      "role": "P0·INFJ社会证明恢复batch1(失明男孩大学报到7·Fe共情自强/逆境独立新生)·抖音励志位·社会证明#1恢复登顶2臂之一·INFJ轮出(B22情感共鸣)→恢复(社会证明新hook)·⚠️严禁消费苦难·触达重建",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "batch": "D21-B24",
+      "producer": "设设",
+      "arm_id": 3,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B24-INTJ-1",
+      "title": "「这里是中国科大」——INTJ的Ni-Te看到的不是一句『校园宣传语』。它看到的是：一个人选择一个身份，就是选择了一个坐标系——真正的身份认同，从来不是你来自哪里，是你决定站在哪条求真求实的赛道上",
+      "hook": "身份认同",
+      "targets": [
+        "INTJ"
+      ],
+      "channel": "B站",
+      "quality": 8.0,
+      "created": "2026-09-07T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B24-INTJ-1.json",
+      "paradigm": "身份认同·Ni-Te科技认同型(INTJ恢复batch1·中国科大6·Ni:身份=坐标系·Te:求真务实的赛道选择·科技认同非名校崇拜·⚠️弱信号fill·6分恢复期降权)",
+      "role": "P1·INTJ身份认同恢复batch1(中国科大6·Ni-Te科技认同·弱信号fill)·B站知识/科技位·身份认同#3恢复batch1·INTJ轮出(B23)→恢复·⚠️弱信号fill(6分·恢复期降权)",
+      "consecutive_hook": 1,
+      "direction_hook": "身份认同",
+      "batch": "D21-B24",
+      "producer": "设设",
+      "arm_id": 4,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
+    },
+    {
+      "id": "D21-B24-ENFJ-1",
+      "title": "「5岁女孩哭着抢收稻谷，伙伴们纷纷赶来」——ENFJ的Fe看到的不是『一段萌娃视频』。它看到的是：一个5岁孩子眼泪还没干，就有一群小伙伴赶来搭把手——人类最本能的互助，从来不需要被教育，只需要一个被看见的理由",
+      "hook": "情感共鸣",
+      "targets": [
+        "ENFJ"
+      ],
+      "channel": "微博",
+      "quality": 8.1,
+      "created": "2026-09-07T08:55:00+08:00",
+      "ttl_hours": 72,
+      "status": "active",
+      "usage_count": 0,
+      "budget": 25,
+      "priority": "P1",
+      "vessel_ref": "workspace-shared/pools/content-vessels/D21-B24-ENFJ-1.json",
+      "paradigm": "情感共鸣·Fe互助型(ENFJ恢复batch1·5岁女孩抢收稻谷6·Fe:互助是本能非教化·眼泪未干伙伴赶来=善意的自发涌现·童真温暖·⚠️弱信号fill·6分恢复期降权)",
+      "role": "P1·ENFJ情感共鸣恢复batch1(5岁女孩抢收稻谷6·Fe互助/童真·弱信号fill)·微博话题传播位·情感共鸣#4恢复batch1·ENFJ轮出(B23)→恢复·⚠️弱信号fill(6分)",
+      "consecutive_hook": 1,
+      "direction_hook": "情感共鸣",
+      "batch": "D21-B24",
+      "producer": "设设",
+      "arm_id": 5,
+      "batch_num": 1,
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "has_post": false
     }
   ],
-  "total": 199,
+  "total": 204,
   "posts": [
     {
       "id": "D14-B1-1",
@@ -8007,6 +8148,69 @@
         "authorization": "B23方向船已授权·投投解冻后部署"
       },
       "deployment_authorization": "B23方向船已授权·投投解冻后部署"
+    },
+    {
+      "id": "D21-B24-INFP-1",
+      "title": "「葫芦爷爷剪的不是葫芦，是流量喧嚣」——INFP的Fi看到的不是『老人拒绝配合炒作』。它看到的是：当全世界都追着流量跑，有一个人选择把门关上、回到安静——真正的本真，不是活成别人想看的样子，是在被围观时依然有说不的底气",
+      "hook": "社会证明",
+      "targets": [
+        "INFP"
+      ],
+      "channel": "小红书",
+      "quality": 8.4,
+      "budget": 25,
+      "status": "active",
+      "usage_count": 0,
+      "priority": "P0",
+      "consecutive_hook": 1,
+      "direction_hook": "社会证明",
+      "arm_id": 2,
+      "batch_num": 1,
+      "signals": [
+        "葫芦爷爷剪的不是葫芦是流量喧嚣(7分·社会证明·个人边界/本真·公众理解其剪葫芦维护边界·heat95)"
+      ],
+      "paradigm": "社会证明·Fi本真边界型(INFP恢复batch1·葫芦爷爷剪流量喧嚣7·Fi:本真胜过流量·个人边界神圣·公众站爷爷这边=社会认可『拒绝被消费』的权利·正向回归安静)",
+      "role": "P0·INFP社会证明恢复batch1(葫芦爷爷剪流量喧嚣7·Fi本真/个人边界)·小红书本真位·社会证明#1恢复登顶2臂之一·INFP轮出(B22身份认同)→恢复(社会证明新hook)·正向触达重建",
+      "direction_compliance": "D21-B24 rotation对齐·INFP×社会证明×小红书·恢复batch1·社会证明#1恢复登顶(2臂之一)·正向(回归安静·触达重建)·0违规",
+      "flagship": false,
+      "attachment_theory_resonance": false,
+      "note": "🟢 fresh(D21-B24大面积恢复批·INFP社会证明恢复batch1)·依据B24方向船mandates+priority_types+signal-pool·葫芦爷爷剪流量喧嚣7·Fi本真/个人边界·小红书post成品v2.0·正向(回归安静·触达重建)·投投冻结延续·解冻后按方向船部署",
+      "brief": {
+        "pain_point": "INFP最怕被『围观着活成一个模板』。葫芦爷爷剪葫芦的瞬间，戳中的正是INFP对『个人边界』的本能捍卫——当流量把一个人变成打卡点，继续配合就是出卖自己。公众这一次站爷爷这边、理解他剪葫芦维护安静，等于社会终于承认了『一个人有权对流量说不』。INFP停留，是因为这印证了Fi最深的信念：本真比被喜欢更重要。",
+        "hook_first3": "第一行『葫芦爷爷剪的不是葫芦，是流量喧嚣』点出反讽；第二行『他被围观到不得不动手』交代被消费的处境；第三行『INFP看懂了：他剪掉的是别人强加给他的戏』切入Fi边界。",
+        "emotion_curve": "心疼(被围观绑架) → 释然(他动手了) → 共鸣(本真胜过流量) → 坚定(边界值得捍卫) → 温暖(回归安静是选择)。",
+        "structure": [
+          "钩子·反讽点题开场",
+          "背景·流量如何把老人变成打卡点",
+          "洞察·剪葫芦=夺回个人边界",
+          "迁移·本真是被围观时还能说不",
+          "CTA·你有没有想关掉喧嚣的时刻"
+        ],
+        "differentiation": "别人写葫芦爷爷玩梗/猎奇/蹭流量热点；我们写Fi的『本真边界』——不消费当事人、不渲染对立，落点『回归安静是一种主动选择』；把『剪葫芦』还原成一次关于个人边界的公共讨论，让INFP看见的不是一个网红老头，而是一个不肯被流量驯化的普通人。"
+      },
+      "post": {
+        "cover_title": "被围观到动手，他剪掉了流量",
+        "body": "葫芦爷爷火了，\n火到他不得不动手。✂️\n\n他剪的不是葫芦，\n是把他围成打卡点的流量喧嚣。\n\n有人觉得可惜，\n有人觉得他太倔。\n\n但我看懂了：\n他剪掉的是别人强加给他的戏。🌿\n\n流量想让他一直演下去，\n演一个「网红爷爷」。\n\n可他从头到尾，\n只想安安静静种他的葫芦。\n\n这一次，大家都站在他这边。\n不是可怜他，\n是终于懂了——\n一个人有权对流量说不。\n\n本真从来不是活成别人想看的样子，\n是在被围观的时候，\n依然有底气把门关上。🚪\n\n💬 你有没有哪一刻，\n特别想把喧嚣关在门外？\n评论区聊聊，我懂你。",
+        "hashtags": [
+          "#葫芦爷爷",
+          "#个人边界",
+          "#INFP",
+          "#本真",
+          "#拒绝流量"
+        ],
+        "cover_visual": "低饱和治愈系配色(暖灰+一点藤蔓绿)，主视觉用『一双手剪断一根流量线』的极简插画，配一句『回归安静』的手写体，留白大、情绪克制，呼应『关上门』的安静感，避免网红高饱和风",
+        "cta": "你有没有哪一刻，特别想把喧嚣关在门外？评论区聊聊，我懂你。",
+        "post_time": "18:00-20:00（情感/本真向·晚间情绪高峰）",
+        "avoid": "不消费当事人、不渲染网暴对立、不站队拉踩、不用『老人可怜』式煽情；落点『本真/个人边界/回归安静』正向角度"
+      },
+      "post_spec_version": "v2.0",
+      "deployment": {
+        "allowed": true,
+        "state": "active-ready",
+        "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+        "authorization": "B24方向船已授权·投投解冻后部署"
+      },
+      "deployment_authorization": "B24方向船已授权·投投解冻后部署"
     },
     {
       "id": "D21-B3-INFJ-1",
@@ -13419,6 +13623,87 @@
         "note": "🆕 rest1批后恢复首触·情感共鸣成长母题·疲劳3.0→回落·分享率18%资产·D21-B7评估续触batch2"
       }
     },
+    "D21-B24-INTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B24-INTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B24"
+        },
+        "created_at": "2026-09-07T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-07-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B24-INTJ-1",
+        "title": "「这里是中国科大」——INTJ的Ni-Te看到的不是一句『校园宣传语』。它看到的是：一个人选择一个身份，就是选择了一个坐标系——真正的身份认同，从来不是你来自哪里，是你决定站在哪条求真求实的赛道上",
+        "hook": "身份认同",
+        "targets": [
+          "INTJ"
+        ],
+        "channel": "B站",
+        "quality": 8.0,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "身份认同",
+        "arm_id": 4,
+        "batch_num": 1,
+        "signals": [
+          "这里是中国科大(6分·身份认同·校园/科技认同·heat82)"
+        ],
+        "paradigm": "身份认同·Ni-Te科技认同型(INTJ恢复batch1·中国科大6·Ni:身份=坐标系·Te:求真务实的赛道选择·科技认同非名校崇拜·⚠️弱信号fill·6分恢复期降权)",
+        "role": "P1·INTJ身份认同恢复batch1(中国科大6·Ni-Te科技认同·弱信号fill)·B站知识/科技位·身份认同#3恢复batch1·INTJ轮出(B23)→恢复·⚠️弱信号fill(6分·恢复期降权)",
+        "direction_compliance": "D21-B24 rotation对齐·INTJ×身份认同×B站·恢复batch1·身份认同#3恢复batch1·⚠️弱信号fill(6分·恢复期降权)·正向·0违规",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B24大面积恢复批·INTJ身份认同恢复batch1)·依据B24方向船mandates+priority_types+signal-pool·中国科大6·Ni-Te科技认同·⚠️弱信号fill(6分·恢复期降权)·正向·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INTJ对『身份认同』的理解和大多数人不同——TA们不靠标签、不靠出身、不靠别人给的光环来定位自己，而是靠『我在哪条赛道上求真』。『这里是中国科大』这句平淡的话，对INTJ的吸引力不在名校崇拜，而在于它提供了一个可检验的坐标系：一个以『求真务实』为默认规则的地方。INTJ停留，是因为它精确击中了Ni-Te的判断——身份是选择的结果，不是给定的结果。",
+          "hook_first3": "第一行『这里是中国科大』直接抛出朴素宣言；第二行『没有豪言壮语，却让无数人破防』点出反差；第三行『INTJ看懂了：这六个字是一个坐标系』切入Ni-Te。",
+          "emotion_curve": "平淡(一句话而已) → 好奇(为什么破防) → 洞察(身份=坐标系) → 认同(赛道比标签重要) → 清醒(选择决定身份)。",
+          "structure": [
+            "钩子·朴素宣言开场",
+            "反叙事·没有豪言却破防",
+            "洞察·身份认同=坐标系选择",
+            "迁移·你站在哪条求真务实的赛道",
+            "CTA·你用什么坐标定义自己"
+          ],
+          "differentiation": "别人写科大捧杀/拉踩/贴名校标签；我们写Ni-Te的『坐标系』——不吹嘘、不比较，落点『身份=选择的结果』；把『这里是中国科大』还原成一次关于自我定位的理性讨论，让INTJ看见的不是一个名校，而是一个可验证的求真务实坐标系。"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B24方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B24方向船已授权·投投解冻后部署"
+      }
+    },
     "D21-B14-ENFJ-1": {
       "vessel": {
         "version": "1.0",
@@ -17936,6 +18221,87 @@
         ]
       }
     },
+    "D21-B24-ENFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B24-ENFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B24"
+        },
+        "created_at": "2026-09-07T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p1",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-07-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B24-ENFJ-1",
+        "title": "「5岁女孩哭着抢收稻谷，伙伴们纷纷赶来」——ENFJ的Fe看到的不是『一段萌娃视频』。它看到的是：一个5岁孩子眼泪还没干，就有一群小伙伴赶来搭把手——人类最本能的互助，从来不需要被教育，只需要一个被看见的理由",
+        "hook": "情感共鸣",
+        "targets": [
+          "ENFJ"
+        ],
+        "channel": "微博",
+        "quality": 8.1,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P1",
+        "consecutive_hook": 1,
+        "direction_hook": "情感共鸣",
+        "arm_id": 5,
+        "batch_num": 1,
+        "signals": [
+          "5岁女孩哭着抢收稻谷伙伴纷纷赶来(6分·情感共鸣·童真/互助·heat67)"
+        ],
+        "paradigm": "情感共鸣·Fe互助型(ENFJ恢复batch1·5岁女孩抢收稻谷6·Fe:互助是本能非教化·眼泪未干伙伴赶来=善意的自发涌现·童真温暖·⚠️弱信号fill·6分恢复期降权)",
+        "role": "P1·ENFJ情感共鸣恢复batch1(5岁女孩抢收稻谷6·Fe互助/童真·弱信号fill)·微博话题传播位·情感共鸣#4恢复batch1·ENFJ轮出(B23)→恢复·⚠️弱信号fill(6分)",
+        "direction_compliance": "D21-B24 rotation对齐·ENFJ×情感共鸣×微博·恢复batch1·情感共鸣#4恢复batch1·⚠️弱信号fill(6分)·正向暖心·0违规",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B24大面积恢复批·ENFJ情感共鸣恢复batch1)·依据B24方向船mandates+priority_types+signal-pool·5岁女孩抢收稻谷6·Fe互助/童真·⚠️弱信号fill(6分)·正向暖心·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ENFJ天然相信『人是会被善意打动的』，但也常常怀疑：在这个越来越疏离的世界里，互助是不是正在消失。5岁女孩抢收稻谷的瞬间，最打动ENFJ的不是萌娃的可爱，而是『伙伴们纷纷赶来』这个自发的动作——没有大人组织、没有利益交换，只因为一个小伙伴哭了，大家就来了。ENFJ停留，是因为它印证了Fe最深的信念：互助是本能，善意无需被教育，只需被看见。",
+          "hook_first3": "第一行『5岁女孩哭着抢收稻谷』抛出情绪画面；第二行『伙伴们看见后，纷纷赶来搭把手』点出自发互助；第三行『ENFJ看懂了：互助从来不需要被教育』切入Fe。",
+          "emotion_curve": "柔软(孩子的眼泪) → 感动(伙伴赶来) → 共鸣(互助是本能) → 温暖(善意被看见) → 希望(世界没变冷)。",
+          "structure": [
+            "钩子·童真情绪画面开场",
+            "展开·伙伴自发赶来搭把手",
+            "洞察·互助是本能非教化",
+            "迁移·善意只需被看见的理由",
+            "CTA·你最近被谁的善意暖到"
+          ],
+          "differentiation": "别人写萌娃视频刷可爱、蹭流量；我们写Fe的『互助本能』——不消费儿童、不渲染苦难，落点『善意无需教育只需被看见』；把『伙伴赶来』还原成一次关于人性本能的温柔讨论，让ENFJ看见的不是一条萌娃视频，而是一个『世界依然温暖』的证据。"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B24方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B24方向船已授权·投投解冻后部署"
+      }
+    },
     "D21-B14-INTJ-1": {
       "vessel": {
         "version": "1.0",
@@ -19213,6 +19579,102 @@
         },
         "variants_available": 4,
         "status": "active"
+      }
+    },
+    "D21-B24-INFP-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B24-INFP-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B24"
+        },
+        "created_at": "2026-09-07T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-07-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B24-INFP-1",
+        "title": "「葫芦爷爷剪的不是葫芦，是流量喧嚣」——INFP的Fi看到的不是『老人拒绝配合炒作』。它看到的是：当全世界都追着流量跑，有一个人选择把门关上、回到安静——真正的本真，不是活成别人想看的样子，是在被围观时依然有说不的底气",
+        "hook": "社会证明",
+        "targets": [
+          "INFP"
+        ],
+        "channel": "小红书",
+        "quality": 8.4,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 2,
+        "batch_num": 1,
+        "signals": [
+          "葫芦爷爷剪的不是葫芦是流量喧嚣(7分·社会证明·个人边界/本真·公众理解其剪葫芦维护边界·heat95)"
+        ],
+        "paradigm": "社会证明·Fi本真边界型(INFP恢复batch1·葫芦爷爷剪流量喧嚣7·Fi:本真胜过流量·个人边界神圣·公众站爷爷这边=社会认可『拒绝被消费』的权利·正向回归安静)",
+        "role": "P0·INFP社会证明恢复batch1(葫芦爷爷剪流量喧嚣7·Fi本真/个人边界)·小红书本真位·社会证明#1恢复登顶2臂之一·INFP轮出(B22身份认同)→恢复(社会证明新hook)·正向触达重建",
+        "direction_compliance": "D21-B24 rotation对齐·INFP×社会证明×小红书·恢复batch1·社会证明#1恢复登顶(2臂之一)·正向(回归安静·触达重建)·0违规",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B24大面积恢复批·INFP社会证明恢复batch1)·依据B24方向船mandates+priority_types+signal-pool·葫芦爷爷剪流量喧嚣7·Fi本真/个人边界·小红书post成品v2.0·正向(回归安静·触达重建)·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INFP最怕被『围观着活成一个模板』。葫芦爷爷剪葫芦的瞬间，戳中的正是INFP对『个人边界』的本能捍卫——当流量把一个人变成打卡点，继续配合就是出卖自己。公众这一次站爷爷这边、理解他剪葫芦维护安静，等于社会终于承认了『一个人有权对流量说不』。INFP停留，是因为这印证了Fi最深的信念：本真比被喜欢更重要。",
+          "hook_first3": "第一行『葫芦爷爷剪的不是葫芦，是流量喧嚣』点出反讽；第二行『他被围观到不得不动手』交代被消费的处境；第三行『INFP看懂了：他剪掉的是别人强加给他的戏』切入Fi边界。",
+          "emotion_curve": "心疼(被围观绑架) → 释然(他动手了) → 共鸣(本真胜过流量) → 坚定(边界值得捍卫) → 温暖(回归安静是选择)。",
+          "structure": [
+            "钩子·反讽点题开场",
+            "背景·流量如何把老人变成打卡点",
+            "洞察·剪葫芦=夺回个人边界",
+            "迁移·本真是被围观时还能说不",
+            "CTA·你有没有想关掉喧嚣的时刻"
+          ],
+          "differentiation": "别人写葫芦爷爷玩梗/猎奇/蹭流量热点；我们写Fi的『本真边界』——不消费当事人、不渲染对立，落点『回归安静是一种主动选择』；把『剪葫芦』还原成一次关于个人边界的公共讨论，让INFP看见的不是一个网红老头，而是一个不肯被流量驯化的普通人。"
+        },
+        "post": {
+          "cover_title": "被围观到动手，他剪掉了流量",
+          "body": "葫芦爷爷火了，\n火到他不得不动手。✂️\n\n他剪的不是葫芦，\n是把他围成打卡点的流量喧嚣。\n\n有人觉得可惜，\n有人觉得他太倔。\n\n但我看懂了：\n他剪掉的是别人强加给他的戏。🌿\n\n流量想让他一直演下去，\n演一个「网红爷爷」。\n\n可他从头到尾，\n只想安安静静种他的葫芦。\n\n这一次，大家都站在他这边。\n不是可怜他，\n是终于懂了——\n一个人有权对流量说不。\n\n本真从来不是活成别人想看的样子，\n是在被围观的时候，\n依然有底气把门关上。🚪\n\n💬 你有没有哪一刻，\n特别想把喧嚣关在门外？\n评论区聊聊，我懂你。",
+          "hashtags": [
+            "#葫芦爷爷",
+            "#个人边界",
+            "#INFP",
+            "#本真",
+            "#拒绝流量"
+          ],
+          "cover_visual": "低饱和治愈系配色(暖灰+一点藤蔓绿)，主视觉用『一双手剪断一根流量线』的极简插画，配一句『回归安静』的手写体，留白大、情绪克制，呼应『关上门』的安静感，避免网红高饱和风",
+          "cta": "你有没有哪一刻，特别想把喧嚣关在门外？评论区聊聊，我懂你。",
+          "post_time": "18:00-20:00（情感/本真向·晚间情绪高峰）",
+          "avoid": "不消费当事人、不渲染网暴对立、不站队拉踩、不用『老人可怜』式煽情；落点『本真/个人边界/回归安静』正向角度"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B24方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B24方向船已授权·投投解冻后部署"
       }
     },
     "D21-B23-ENTJ-1": {
@@ -21422,6 +21884,87 @@
         }
       }
     },
+    "D21-B24-ISTJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B24-ISTJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B24"
+        },
+        "created_at": "2026-09-07T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-07-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B24-ISTJ-1",
+        "title": "「花400块买块『塑料砖头』，就为了锁住手机」——ISTJ的Si-Te看到的不是『交智商税』。它看到的是：当自律变成一件看得见摸得着的实物，你才真正把『决心』从情绪里搬进了现实——最可靠的承诺，从来不是发誓，是结构",
+        "hook": "反常识",
+        "targets": [
+          "ISTJ"
+        ],
+        "channel": "微博",
+        "quality": 8.5,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 2,
+        "direction_hook": "反常识",
+        "arm_id": 1,
+        "batch_num": 1,
+        "signals": [
+          "400元买块\"塑料砖头\"戒手机(8分·反常识·反直觉消费/自律承诺装置·heat98)"
+        ],
+        "paradigm": "反常识·Si-Te自律承诺装置型(ISTJ恢复batch2·400元塑料砖头8旗舰·Si:把决心外化为物理实物·Te:用结构而非意志力执行·自律不是硬扛·是把诱惑变成不可能·⚠️严禁贩卖数字焦虑)",
+        "role": "P0·ISTJ反常识batch2旗舰(400元塑料砖头8·Si-Te自律承诺装置)·微博消费洞察位·反常识#2续batch2达上限(B25必轮出)·ISTJ轮出(B22社会证明)→恢复(反常识新hook)",
+        "direction_compliance": "D21-B24 rotation对齐·ISTJ×反常识×微博·续batch2·反常识#2续batch2达上限(B25强制轮出)·旗舰P0·严禁贩卖数字焦虑(自律正向角度)",
+        "flagship": true,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B24大面积恢复批·ISTJ反常识batch2旗舰)·依据B24方向船mandates+priority_types+signal-pool·400元塑料砖头8旗舰·Si-Te自律承诺装置·⚠️严禁贩卖数字焦虑(用自律/自我约束正向角度)·触达重建第一优先·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "ISTJ最反感『空谈决心』。Ta们见过太多人年初立flag、月底就崩，因为意志力是情绪，情绪会波动。400元塑料砖头的吸引力不在『戒手机』这个目标，而在于『花真金白银买一个看得见的物理障碍』——ISTJ相信可验证的结构，胜过相信任何发誓。TA停留，是因为这件事把『自律』这件玄乎的事，变成了一个可执行的工程问题。",
+          "hook_first3": "第一行『花400块买块塑料砖头，就为了锁手机』抛出反直觉消费反差；第二行『有人笑这是交智商税，有人却下单了』点出两派分歧；第三行『ISTJ一眼看懂：人家买的不是砖，是结构』切入Si-Te。",
+          "emotion_curve": "荒诞(这也要400块) → 好奇(为什么有人真买) → 洞察(自律是工程不是意志力) → 认同(结构比发誓可靠) → 坚定(把决心变成实物)。",
+          "structure": [
+            "钩子·反直觉消费反差开场",
+            "反叙事·交智商税vs真下单",
+            "洞察·自律=工程问题·承诺装置",
+            "迁移·最可靠的承诺不是发誓是结构",
+            "CTA·你用什么『笨办法』管住自己"
+          ],
+          "differentiation": "别人写『戒手机』贩卖数字焦虑、渲染手机毁掉人生；我们写Si-Te的『自律承诺装置』——不恐吓、不站队，落点『把决心外化成结构』；把『花400买砖头』还原成一次关于自律的工程学讨论，让ISTJ看见的不是韭菜，而是一个务实的自我约束方案。"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B24方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B24方向船已授权·投投解冻后部署"
+      }
+    },
     "D21-B8-INFP-1": {
       "vessel": {
         "version": "1.0",
@@ -22657,6 +23200,87 @@
           ],
           "differentiation": "别人写被骗是「骗子可恨/受害者可怜/反诈说教」，我们讲「极度自律与瞬间失控并存于同一灵魂」；Te落点「理性人的认知盲区」，绝不贩卖钱财焦虑、绝不羞辱受害者。"
         }
+      }
+    },
+    "D21-B24-INFJ-1": {
+      "vessel": {
+        "version": "1.0",
+        "type": "content-vessel",
+        "id": "D21-B24-INFJ-1",
+        "source": {
+          "agent": "设设",
+          "subsystem": "内容Spoke-1",
+          "batch": "D21-B24"
+        },
+        "created_at": "2026-09-07T08:55:00+08:00",
+        "freshness_ttl_hours": 72,
+        "priority": "p0",
+        "dependencies": [
+          {
+            "vessel_type": "direction-vessel",
+            "vessel_id": "direction-vessel-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "direction-pool",
+            "vessel_id": "direction-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "strategy-pool",
+            "vessel_id": "strategy-pool-2026-09-07-0815"
+          },
+          {
+            "vessel_type": "signal-pool",
+            "vessel_id": "signal-pool-2026-09-07-0815"
+          }
+        ]
+      },
+      "content": {
+        "id": "D21-B24-INFJ-1",
+        "title": "「惨遭伤害永久失明男孩，完成大学报到」——INFJ的Fe看到的不是『一个励志故事』。它看到的是：一个在黑暗里长大的孩子，独自走到大学门口，社会为他让出的不是怜悯，是把他当成一个普通新生来迎接的尊重——善意最好的样子，是成全，不是施舍",
+        "hook": "社会证明",
+        "targets": [
+          "INFJ"
+        ],
+        "channel": "抖音",
+        "quality": 8.4,
+        "budget": 25,
+        "status": "active",
+        "usage_count": 0,
+        "priority": "P0",
+        "consecutive_hook": 1,
+        "direction_hook": "社会证明",
+        "arm_id": 3,
+        "batch_num": 1,
+        "signals": [
+          "惨遭伤害永久失明男孩完成大学报到(7分·社会证明·自强/逆境/独立新生·heat84)"
+        ],
+        "paradigm": "社会证明·Fe共情自强型(INFJ恢复batch1·失明男孩大学报到7·Fe:善意=成全非施舍·共情不自伤·社会以普通新生之礼迎接=最高级尊重·⚠️严禁消费苦难·自强励志正向角度)",
+        "role": "P0·INFJ社会证明恢复batch1(失明男孩大学报到7·Fe共情自强/逆境独立新生)·抖音励志位·社会证明#1恢复登顶2臂之一·INFJ轮出(B22情感共鸣)→恢复(社会证明新hook)·⚠️严禁消费苦难·触达重建",
+        "direction_compliance": "D21-B24 rotation对齐·INFJ×社会证明×抖音·恢复batch1·社会证明#1恢复登顶(2臂之一)·⚠️严禁消费苦难(用自强/励志正向角度)·0违规",
+        "flagship": false,
+        "attachment_theory_resonance": false,
+        "note": "🟢 fresh(D21-B24大面积恢复批·INFJ社会证明恢复batch1)·依据B24方向船mandates+priority_types+signal-pool·失明男孩大学报到7·Fe共情自强·⚠️严禁消费苦难(用自强/励志正向角度)·触达重建·投投冻结延续·解冻后按方向船部署",
+        "brief": {
+          "pain_point": "INFJ对『苦难叙事』既共情又警觉——共情在于能瞬间代入那种黑暗里的挣扎，警觉在于厌恶把苦难当成流量消费。这个男孩的故事最打动INFJ的，不是他有多惨，而是他『完成了大学报到』这个普通动作：社会没有把他当成一个需要怜悯的符号，而是把他当成一个正常的新生来迎接。INFJ停留，是因为它印证了Fe的信念——真正的善意是成全，不是施舍。",
+          "hook_first3": "第一行『他失去光明，却自己走到了大学门口』点出自强；第二行『完成报到的那一刻，没人把他当特殊案例』点出尊重的分量；第三行『INFJ看懂了：善意最好的样子，是成全不是施舍』切入Fe。",
+          "emotion_curve": "沉重(遭遇不公) → 敬佩(独自走到门口) → 温暖(被当普通新生迎接) → 升华(善意是成全) → 希望(独立新生)。",
+          "structure": [
+            "钩子·自强反差开场",
+            "背景·黑暗里的独自成长",
+            "洞察·报到=被当普通新生迎接",
+            "迁移·善意最好的样子是成全",
+            "CTA·你见过最温柔的成全"
+          ],
+          "differentiation": "别人写失明男孩渲染惨案细节、消费苦难博同情；我们写Fe的『自强/成全』——不消费苦难、不卖惨，落点『善意=成全非施舍』；把『完成报到』还原成一次关于尊严与尊重的公共讨论，让INFJ看见的不是一个励志符号，而是一个被世界以平等相待的普通人。"
+        },
+        "post_spec_version": "v2.0",
+        "deployment": {
+          "allowed": true,
+          "state": "active-ready",
+          "reason": "B24方向授权已获取(gate PASS·ESC-2026-09-07-1 resolved_by_b24)·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·触达重建第一优先·解冻后按方向船执行",
+          "authorization": "B24方向船已授权·投投解冻后部署"
+        },
+        "deployment_authorization": "B24方向船已授权·投投解冻后部署"
       }
     },
     "D20-B8-ISTJ-1": {
