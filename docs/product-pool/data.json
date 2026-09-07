@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-06-1000",
+    "id": "product-available-2026-09-07-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D37-B1·九月D6·周日"
+      "batch": "D38-B1·九月D7·周一"
     },
-    "created_at": "2026-09-06T10:00:00+08:00",
+    "created_at": "2026-09-07T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -47,7 +47,7 @@
       "purpose": "荐荐管理的产品目录池·策略v2.0：产品与支付脱钩·全部重构为一次性交付物·优先人格积分卡类·供策策/投投/控控/大卡/设设/析析消费",
       "excludes": "定价决策权(属策策·但定价不再作为交付前置)·内容生产权(属设设)·预算分配权(属大卡)",
       "action_threshold": {
-        "payment_uncoupled": "🔴🔴 支付停滞~946h(39.4天)·936h(39天)已于9/5 23:00突破·34阈值全破·960h(40天)9/6 23:00下一阈值·产品侧一次性交付(10箱记分卡)完全隔离",
+        "payment_uncoupled": "🔴🔴 支付停滞~970h(40.4天)·960h(40天)已于9/6 23:00突破(~10.5h前)·35阈值全破·984h(41天)9/7 23:00下一阈值·产品侧一次性交付(11箱记分卡)完全隔离",
         "s1_delivered": "✅ S1人格记分卡v1.0+v2.0已交付(CSV+静态HTML双形态·8题双Tab)·首选旗舰",
         "s2_delivered": "✅ S2依恋类型记分卡已交付(CSV+HTML+v2.0双Tab)+v1.1双人匹配卡",
         "s3_delivered": "✅ S3认知功能速查卡已交付(CSV+HTML+v2.0双Tab·8认知功能)",
@@ -56,20 +56,21 @@
         "n1_delivered": "✅ N1职业匹配记分卡已交付(HTML双Tab+CSV标准卡)·付费主力",
         "n3_delivered": "✅ N3消费人格记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D36-B1第9箱",
         "n2_delivered": "✅ N2副业匹配记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D37-B1第10箱",
+        "n5_delivered": "✅ N5育儿风格记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D38-B1第11箱",
         "l1_refactored": "L1深度人格报告交付侧改为一次性交付形态·不再等待支付",
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡",
         "l3_refactored": "L3-A/B/C重构为一次性交付物",
-        "product_retirement": "无产品需退役·10箱记分卡产品线",
-        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23连续4批冻结(0臂¥0·block_rate 1.0·friction 0.97)·零触达连续~9天·产品方向不受影响",
-        "content_gate_block_resolved": "🆕 B22方向-only→content-gate BLOCK整夜(ESC-2026-09-06-1)→B23原子提交解除·「方向/内容错节拍」新断层",
-        "infp_fatigue_refreshed": "🟢 INFP疲劳刷新2.0→1.2(ruling-033)·永久基线假说被推翻·复评轮休结束",
-        "936h_breached": "🔴🔴🔴🔴🔴 936h(39天)已于9/5 23:00突破(~11h前)·34阈值全破(168h→936h)·S1首次39.4天金融盲飞·全ROI永久作废·下一阈值960h(9/6 23:00·40天)",
+        "product_retirement": "无产品需退役·11箱记分卡产品线",
+        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24连续5批冻结(0臂¥0·block_rate 1.0·friction 0.98)·零触达连续~10天·产品方向不受影响",
+        "content_gate_block_resolved": "🆕 content-gate BLOCK夜间例行复发(ESC-2026-09-07-1·direction TTL 6h vs 24h节拍)→B24原子提交解除·例行误报≠生产阻断",
+        "infp_fatigue_refreshed": "🟢 INFP疲劳刷新2.0→1.2(ruling-033)·永久基线假说被推翻·复评轮休结束·B24回流校准首轮兑现",
+        "960h_breached": "🔴🔴🔴🔴🔴 960h(40天)已于9/6 23:00突破(~10.5h前)·35阈值全破(168h→960h)·S1首次40.4天金融盲飞·全ROI永久作废·下一阈值984h(9/7 23:00·41天)",
         "plan_c_ruling015_execution_zero_491h": "🔴 ruling-015执行仍零~491h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
         "psych_engine_frozen_63d": "🔴 psych-engine results.jsonl冻结~63.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
         "ruling_027_pointer": "🟢 B23方向船四件atomic_commit·direction-batch-current已D21-B23·上游一致性修复",
         "distribution_94pct_freeze": "🔴 分发桶94.25%(距95%差¥35)·与936h双红线重叠·控控明令冻结投放·B19/B20/B21/B23连续4批冻结0臂"
       },
-      "expires_after": "2026-09-07T10:00:00+08:00",
+      "expires_after": "2026-09-08T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -109,10 +110,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D37-B1·九月D6·周日",
-  "timestamp": "2026-09-06T10:00:00+08:00",
+  "batch": "D38-B1·九月D7·周一",
+  "timestamp": "2026-09-07T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 946,
+    "stagnant_hours": 970,
     "thresholds_breached": [
       168,
       192,
@@ -147,28 +148,25 @@
       864,
       888,
       912,
-      936
+      936,
+      960
     ],
-    "thresholds_total": 34,
+    "thresholds_total": 35,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 960,
-      "at": "2026-09-06T23:00:00+08:00",
-      "label": "40天·下一阈值·~13h倒计时"
+      "hours": 984,
+      "at": "2026-09-07T23:00:00+08:00",
+      "label": "41天·下一阈值·~13h倒计时"
     },
-    "final_defense": {
-      "hours": 936,
-      "at": "2026-09-05T23:00:00+08:00",
-      "label": "39天·936h已于9/5 23:00突破(~11h前)·全系统公认防线连续突破"
-    },
+    "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
     "zero_settlement_batches": 38,
-    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(10箱记分卡)完全隔离于支付/投放冻结",
+    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(11箱记分卡)完全隔离于支付/投放冻结",
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
-    "milestone_936h": "🔴 BREACHED at 2026-09-05 23:00·39天·S1首次39.4天"
+    "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -180,10 +178,10 @@
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b23_frozen_4batches_936h_breached_34_thresholds_zero_reach_9days_content_gate_resolved_infp_fatigue_refreshed_nt_3of4_product_side_10_containers_isolated",
-    "key_risk": "支付~946h(39.4天)·936h(39天)9/5 23:00已破~11h(34阈值全破·S1首次39.4天盲飞·38批零结算·全ROI永久作废·下一阈值960h今晚23:00)·D21-B19/B20/B21/B23连续4批冻结(0臂¥0·block_rate 1.0·friction 0.97·零触达连续~9天)·content-gate BLOCK整夜已解除(B22方向-only错节拍新断层)·ruling-032 C异质provider兜底(09-06今日强制落地)未落地·用户层active归零(0.0%)·Plan C执行零~491h·杰安/河山失联~31天·psych-engine冻结~63.4天(SP象限2006人盲区)·知知缺位~40天·内容池199>>25软上限CRITICAL·社会货币连续11批冷却结构性停用",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：10箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2)一次性交付不受支付/投放冻结影响·D37-B1新增N2副业匹配记分卡第10箱(副业母题·金钱线)·INFP疲劳刷新2.0→1.2(ruling-033·永久基线假说被推翻·复评轮休结束)·NT象限3/4回归(ENTJ反常识9.0旗舰郑钦文美网逆转·B22预警兑现)·content-gate BLOCK解除(ESC-2026-09-06-1)·商户号Day56稳定·荐荐36批连续产出",
-    "d37_health": 4.4
+    "trend": "b24_frozen_5batches_960h_breached_35_thresholds_zero_reach_10days_content_gate_routine_recurrence_infp_reflux_calibration_nf_3of4_product_side_11_containers_isolated",
+    "key_risk": "支付~970h(40.4天)·960h(40天)9/6 23:00已破~10.5h(35阈值全破·S1首次40.4天盲飞·38批零结算·全ROI永久作废·下一阈值984h今晚23:00)·D21-B19/B20/B21/B23/B24连续5批冻结(0臂¥0·block_rate 1.0·friction 0.98·零触达连续~10天)·content-gate BLOCK夜间例行复发已解除(ESC-2026-09-07-1·TTL 6h vs 24h节拍错配)·ruling-032 C异质provider兜底(09-06)未落地·ruling-034死手开关(09-07)待落地·用户层active归零(0.0%·INFP dormant逼近流失线~3天)·Plan C执行零~526h·杰安/河山失联~32天·psych-engine冻结~64.4天(SP象限2006人盲区)·知知缺位~41天·内容池204>>25软上限CRITICAL·社会货币连续12批冷却结构性停用",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：11箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5)一次性交付不受支付/投放冻结影响·D38-B1新增N5育儿风格记分卡第11箱(育儿母题·家庭/边界线)·INFP回流校准首轮兑现(疲劳1.2→B24社会证明batch1·ruling-033首次部署验证)·B24大面积恢复批5臂fresh avg8.28(4hook多样性0.667修复B23 0.333)·B23 NT 3/4→B24 NF 3/4自然摆动对冲(B23预警兑现)·商户号Day57稳定·荐荐37批连续产出",
+    "d38_health": 4.4
   },
   "pipeline": {
     "delivered": [
@@ -196,7 +194,8 @@
       "N1",
       "L1",
       "N3",
-      "N2"
+      "N2",
+      "N5"
     ],
     "active": [
       "L1"
@@ -208,11 +207,11 @@
       "L3-B",
       "L3-C"
     ],
-    "total_products": 10,
+    "total_products": 11,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十箱记分卡(S1/S2/S3/#4/#5/#10/N1+L1+N3+N2一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D37-B1新增N2副业匹配记分卡",
-    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2]·方向=待装配箱[L2,L3-A/B/C,N5,N7,N8]·统一集装箱规格·编号口径与平台对齐"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十一箱记分卡(S1/S2/S3/#4/#5/#10/N1+L1+N3+N2+N5一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D38-B1新增N5育儿风格记分卡",
+    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5]·方向=待装配箱[L2,L3-A/B/C,N7,N8]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
     {
@@ -637,6 +636,70 @@
           "label": "v1.0",
           "relpath": "consumption-personality/consumption-personality-cases-v1.csv",
           "url": "files/consumption-personality/consumption-personality-cases-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "育儿风格记分卡",
+      "emoji": "👨‍👩‍👧",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡",
+        "CSV案例库"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/parenting-style/parenting-style-v1.html",
+        "standards_csv": "workspace-shared/pools/products/parenting-style/parenting-style-standards-v1.csv",
+        "cases_csv": "workspace-shared/pools/products/parenting-style/parenting-style-cases-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4育儿风格(守护型🛡️/放养型🌿/边界型📏/教练型🎯)→育儿宣言+优势/盲区+触发/行动·Tab B 四型标准卡+8经典案例",
+      "content_source": "育儿/家庭/边界母题(女儿过夜被拒9.0/四个儿子争养母亲8.9/41岁妈妈考上985 8.8/单亲妈妈扛钢管8.7/人民日报评家长群8.5等8案例)·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)·D38-B1第11箱",
+      "priority": "P1·家长付费强·家庭/边界线",
+      "motif": "growth",
+      "need": "be_seen",
+      "target_personalities": [
+        "INFJ",
+        "ENFJ",
+        "INFP",
+        "INTJ",
+        "ISTJ"
+      ],
+      "motif_note": "育儿风格·四型养育方式·家庭/边界母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "parenting",
+          "family_building"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
+      "key": "N5",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "parenting-style/parenting-style-v1.html",
+          "url": "files/parenting-style/parenting-style-v1.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v1.0",
+          "relpath": "parenting-style/parenting-style-standards-v1.csv",
+          "url": "files/parenting-style/parenting-style-standards-v1.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v1.0",
+          "relpath": "parenting-style/parenting-style-cases-v1.csv",
+          "url": "files/parenting-style/parenting-style-cases-v1.csv"
         }
       ]
     },
@@ -1306,5 +1369,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 14
+  "total": 15
 }

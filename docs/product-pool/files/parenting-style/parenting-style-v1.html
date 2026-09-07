@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>育儿风格记分卡</title>
+<style>
+  :root { --bg:#f6f3ee; --card:#fff; --ink:#2b2b2b; --accent:#b06a3a; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eae5da; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d9b193; }
+  .opt.sel { border-color:var(--accent); background:#f7ede4; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f7f0ea; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>👨‍👩‍👧 育儿风格记分卡</h1>
+  <div class="sub">8 题测一测 · 找到属于你的养育方式</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的育儿风格是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    育儿风格记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-07<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · N5 已发货箱（第11箱）
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "育儿风格记分卡", "subtitle": "8 题测一测 · 找到属于你的养育方式", "estimated_time": "2分钟", "types": {"guardian": {"name": "守护型", "emoji": "🛡️", "color": "#b06a3a", "core": "你靠「在场」守护孩子——安全优先，先把底兜住，再谈飞多高", "declaration": "我的育儿宣言：孩子飞多高不重要，我永远在下面接着", "strength": "安全感足·情感联结深·孩子有底气", "blind": "容易过度保护·替孩子扛得太多·边界内化晚", "case": "单亲妈妈扛钢管供女儿考上北大（D18-B1-2·8.7）· 四个儿子争养95岁老母亲（D21-B8-ENFJ-1·8.9）", "trigger": "当孩子遇到危险或委屈时，你的第一反应是冲上去", "action": "试着把「我来」换成「你怎么看」，给孩子一次自己处理的机会"}, "free": {"name": "放养型", "emoji": "🌿", "color": "#4a8a5a", "core": "你靠「信任」养孩子——给空间、给自由，让孩子长成自己的样子", "declaration": "我的育儿宣言：我不替你走路，但我把路让给你", "strength": "孩子独立早·创造力强·不设限", "blind": "容易撒手太早·关键节点缺陪伴·规矩感弱", "case": "13岁女孩三天靠AI赚1.8万（D21-B18-ENTP-1·8.7）· 00后女儿和80后妈妈前后脚生娃（D21-B8-INFP-1·9.0）", "trigger": "当孩子说「我想自己试试」时，你愿意退后一步", "action": "在放手前先约定一条安全底线，让自由也有边界"}, "boundary": {"name": "边界型", "emoji": "📏", "color": "#3a6a8a", "core": "你靠「边界」养孩子——规则清晰、尊重独立，爱是允许对方成为大人", "declaration": "我的育儿宣言：我爱你，但你是你自己的主人", "strength": "孩子独立自主·边界感强·不越界不讨好", "blind": "容易显得疏离·孩子觉得「不被需要」·温情表达少", "case": "女儿过夜被拒全网吵翻（D21-B4-INFJ-1·9.0）· 人民日报评大学生家长群（D21-B17-INTJ-1·8.5）", "trigger": "当「为你好」和「放你走」冲突时，你选后者", "action": "每次划边界时补一句「我依然爱你」，让规则不冷"}, "coach": {"name": "教练型", "emoji": "🎯", "color": "#8a6a3a", "core": "你靠「引导」养孩子——看见情绪、赋能成长，和孩子一起变更好", "declaration": "我的育儿宣言：我不替你决定，但我帮你看见自己", "strength": "情绪被看见·成长型思维·亲子共学", "blind": "容易过度解读·把养娃当成项目·自己太累", "case": "41岁妈妈考上985（D20-B5-2·8.8）· 孩子一提上学就装病（D21-B18-INFJ-1·8.7）", "trigger": "当孩子「表现反常」时，你先问「你怎么了」而不是「你怎么这样」", "action": "把「你应该」换成「你觉得呢」，多一次提问少一次命令"}}, "questions": [{"id": 1, "type": "guardian", "text": "「单亲妈妈扛钢管供女儿考上北大」，你最先看到的是：", "options": [{"text": "妈妈用尽全部，把「现在」替孩子扛住了", "scores": {"guardian": 3}}, {"text": "很了不起，但孩子也该早点分担", "scores": {"guardian": 1}}, {"text": "苦情叙事，不一定是好事", "scores": {"guardian": -1}}, {"text": "不值得宣扬，太沉重了", "scores": {"guardian": -2}}]}, {"id": 2, "type": "guardian", "text": "「四个儿子争着养95岁老母亲」，你觉得「被争着养」靠的是：", "options": [{"text": "一辈子攒下的「值得」，在晚年收到全额利息", "scores": {"guardian": 3}}, {"text": "家庭和睦，子女孝顺", "scores": {"guardian": 1}}, {"text": "老人有家产吧", "scores": {"guardian": -1}}, {"text": "作秀，不必拔高", "scores": {"guardian": -2}}]}, {"id": 3, "type": "free", "text": "「13岁女孩三天靠AI赚1.8万」，你的第一反应是：", "options": [{"text": "这代孩子的创造力，正在用新方式定义「会赚钱」", "scores": {"free": 3}}, {"text": "好苗子，家长肯定没打压", "scores": {"free": 1}}, {"text": "别人家的孩子，看看就好", "scores": {"free": -1}}, {"text": "未成年就赚钱，不妥", "scores": {"free": -2}}]}, {"id": 4, "type": "free", "text": "「00后女儿和80后妈妈前后脚生娃」，你觉得：", "options": [{"text": "两代人同时当妈，是「成为母亲」和「成为自己」被允许同年发生", "scores": {"free": 3}}, {"text": "时代变了，选择自由真好", "scores": {"free": 1}}, {"text": "有点乱，节奏没对上", "scores": {"free": -1}}, {"text": "太早生娃，不成熟", "scores": {"free": -2}}]}, {"id": 5, "type": "boundary", "text": "「人民日报评大学生家长群」，你更认同：", "options": [{"text": "当「为你好」变成「替你活着」，边界感是成年人的第一课", "scores": {"boundary": 3}}, {"text": "家长也是关心，只是方式过了", "scores": {"boundary": 1}}, {"text": "家长群有必要，省心", "scores": {"boundary": -1}}, {"text": "小题大做", "scores": {"boundary": -2}}]}, {"id": 6, "type": "boundary", "text": "「婚礼第二天，新娘的指纹被爸爸从门锁删掉」，你读到的是：", "options": [{"text": "有些爱只存在于「你需要我」，却缺席于「你已是独立的人」", "scores": {"boundary": 3}}, {"text": "爸爸太狠心了，有点伤人", "scores": {"boundary": 1}}, {"text": "这是给新人的仪式感，正常", "scores": {"boundary": -1}}, {"text": "家事，外人不该评价", "scores": {"boundary": -2}}]}, {"id": 7, "type": "coach", "text": "「41岁妈妈考上985」，最打动你的是：", "options": [{"text": "妈妈终于开始为自己的人生投资了", "scores": {"coach": 3}}, {"text": "女儿那句「妈，你去考吧」最温柔", "scores": {"coach": 1}}, {"text": "励志，但年龄有点尴尬", "scores": {"coach": -1}}, {"text": "学历焦虑，没必要", "scores": {"coach": -2}}]}, {"id": 8, "type": "coach", "text": "「孩子一提上学就装病」，你第一反应是：", "options": [{"text": "那些说不出口的情绪，正在用身体替他喊出来", "scores": {"coach": 3}}, {"text": "先别急着骂，问问他怎么了", "scores": {"coach": 1}}, {"text": "就是懒，不想上学", "scores": {"coach": -1}}, {"text": "得治治，不能惯", "scores": {"coach": -2}}]}], "cases": [{"type": "守护型", "id": "D18-B1-2", "title": "单亲妈妈扛钢管供女儿考上北大", "q": 8.7, "summary": "她不是苦情故事的主角，是「用Ni看见终点·用Fe扛住现在」的关系建筑师"}, {"type": "守护型", "id": "D21-B8-ENFJ-1", "title": "四个儿子争着养95岁老母亲", "q": 8.9, "summary": "被争着养从来不是钱的问题，是一辈子攒下的「值得」在晚年收到全额利息"}, {"type": "放养型", "id": "D21-B18-ENTP-1", "title": "13岁女孩三天靠AI赚1.8万", "q": 8.7, "summary": "这一代孩子的创造力，正在用大人看不懂的方式重新定义「会赚钱」"}, {"type": "放养型", "id": "D21-B8-INFP-1", "title": "00后女儿和80后妈妈前后脚生娃", "q": 9.0, "summary": "两代人同时当妈，是「成为母亲」和「成为自己」第一次被允许同年发生"}, {"type": "边界型", "id": "D21-B4-INFJ-1", "title": "女儿想在同学家过夜被爸爸拒绝", "q": 9.0, "summary": "这场争吵真正的主角不是「该不该过夜」，是家庭用「边界」书写的依恋说明书"}, {"type": "边界型", "id": "D21-B17-INTJ-1", "title": "人民日报评「大学生家长群」", "q": 8.5, "summary": "当「为你好」变成「替你活着」，边界感才是成年人的第一课"}, {"type": "教练型", "id": "D20-B5-2", "title": "41岁妈妈考上985", "q": 8.8, "summary": "那句迟到24年的「对不起，让你等了这么久」，是Fi对自己最深的告白"}, {"type": "教练型", "id": "D21-B18-INFJ-1", "title": "孩子一提上学就「装病」", "q": 8.7, "summary": "那些说不出口的情绪，正在用身体替你喊出来"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池育儿/家庭/边界母题（女儿过夜 9.0 / 四个儿子争养母亲 8.9 / 41岁妈妈考上985 8.8 / 单亲妈妈扛钢管 8.7 / 人民日报评家长群 8.5 等）提炼的趣味倾向测试，用于自我觉察与亲子反思，不构成育儿建议或心理评估。", "result_fields": [{"key": "declaration", "label": "💬 育儿宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
