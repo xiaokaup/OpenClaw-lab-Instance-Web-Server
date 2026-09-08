@@ -8,7 +8,7 @@
     },
     "freshness_ttl_hours": 24,
     "id": "user-pool-vessel-2026-09-07T10:07:17+08:00",
-    "created_at": "2026-09-07T10:07:17+08:00",
+    "created_at": "2026-09-08T10:11:17+08:00",
     "priority": "high",
     "dependencies": [
       {
@@ -73,7 +73,7 @@
       "change_summary": "B9(D4-B1) 5臂执行对齐·INFP 第5触永久基线第二裁决点落地·D4-B2 零部署封锁（内容塌方）·ENFJ 方向冲突标注·镜像分裂复发·预算船 stale"
     }
   },
-  "updated_at": "2026-09-07T10:07:17+08:00",
+  "updated_at": "2026-09-08T10:11:17+08:00",
   "total_users": 8250,
   "population_estimate": {
     "xixi_estimates": 8480,
@@ -96,8 +96,8 @@
     49,
     49
   ],
-  "operator": "营营·D21-B24对齐(2026-09-07 10:00 cron·大面积恢复批·冻结延续)",
-  "system_status": "🔴 冻结延续(投投frozen_no_deploy·0臂¥0·支付~946h/39.4天+分发桶94.25%双红线未解除)·方向船已推进D21-B24(09-07 08:15): 5臂¥125大面积恢复批(好奇心强制轮出+社会证明/身份认同/情感共鸣三hook恢复batch1)·4hook多样性0.667(修复B23供给塌方0.333)·5人格轮出恢复(ISTJ/INFP/INFJ/INTJ/ENFJ)·反常识续batch2达上限(B25轮出)·触达重建第一优先(active_rate 0.0·ESC-09-04-3)·营营10:00对齐刷新(eligible按B24方向船·count/trust/theme确定性刷新)",
+  "operator": "营营·D21-B24对齐(2026-09-08 10:00 cron·stale·B25未产出·保持原值)",
+  "system_status": "⚠️ 2026-09-08 10:00 刷新: 上游 strategy-pool/direction-vessel 仍为 D21-B24(09-07 08:15·TTL 6h已过期~20h)·B25未产出·按 spec 五 失败处理保持原值(不静默伪造)·count/trust/eligible/note 均沿用昨日 B24 对齐值 | 🔴 冻结延续(投投frozen_no_deploy·0臂¥0·支付~946h/39.4天+分发桶94.25%双红线未解除)·方向船已推进D21-B24(09-07 08:15): 5臂¥125大面积恢复批(好奇心强制轮出+社会证明/身份认同/情感共鸣三hook恢复batch1)·4hook多样性0.667(修复B23供给塌方0.333)·5人格轮出恢复(ISTJ/INFP/INFJ/INTJ/ENFJ)·反常识续batch2达上限(B25轮出)·触达重建第一优先(active_rate 0.0·ESC-09-04-3)·营营10:00对齐刷新(eligible按B24方向船·count/trust/theme确定性刷新)",
   "system_status_detail": "D21-B24(09-07 08:15方向船)eligible对齐: 优先=ISTJ(反常识batch2·塑料砖头8旗舰)/INFP(社会证明恢复·葫芦爷爷7)/INFJ(社会证明恢复·失明男孩7)/INTJ(身份认同恢复·中国科大6·弱信号fill)/ENFJ(情感共鸣恢复·5岁女孩6·弱信号fill)·排除=ENTJ(反常识batch1已部署B23·轮出)/ENTP(反常识batch1已部署B23·轮出)/ENFP(好奇心batch2达上限·强制轮出)/INTP(好奇心batch2达上限·强制轮出)·resting=ISFP(无Se信号)·SP象限(ISTP/ESTP/ESFP 2006人)结构性盲区待人类决策(ESC-2026-08-17-1)·trust源=strategy-pool D21-B24 fatigue_management(INTP 7.35上端/INTJ 8.56/ENFJ 7.10/ENTJ 7.74/ENTP 7.25+/INFJ 8.13/ISTJ 7.62/INFP 6.93+/ENFP 6.49/ISFP 7.52)·persona-pool count源=08-21版(上游profiles.json冻结ESC-2026-08-17-1·count保持原值)·投投冻结延续(控控budget-vessel明令)·支付~946h(39.4天)·解冻须控控/大卡/进进裁决",
   "segments": {
     "active": [
