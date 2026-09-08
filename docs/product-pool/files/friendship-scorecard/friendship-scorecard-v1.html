@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>朋友关系记分卡</title>
+<style>
+  :root { --bg:#f4f2f6; --card:#fff; --ink:#2b2b2b; --accent:#6a5a8a; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eae8f0; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#b8a9d9; }
+  .opt.sel { border-color:var(--accent); background:#f0ecf7; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f4f0fa; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>👭 朋友关系记分卡</h1>
+  <div class="sub">8 题测一测 · 找到你在友情里的样子</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的朋友关系风格是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    朋友关系记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-08<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · N7 已发货箱（第12箱）
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "朋友关系记分卡", "subtitle": "8 题测一测 · 找到你在友情里的样子", "estimated_time": "2分钟", "types": {"healer": {"name": "治愈型", "emoji": "💗", "color": "#c25a6a", "core": "你靠「共情」交朋友——先接住情绪，再谈道理，你是朋友的安全气囊", "declaration": "我的交友宣言：你难过了就来找我，我不问对错，先抱你", "strength": "情绪价值高·朋友愿意袒露·关系有温度", "blind": "容易掏空自己·边界模糊·「被需要」成瘾", "case": "朋友圈最会安慰人的ENFJ被掏空（D15-B3-1·8.7）· 当ENFJ终于学会不接电话（D16-B1-1·8.8）", "trigger": "当朋友情绪低落时，你的第一反应是放下手头一切去陪", "action": "试着先问自己「我还有电吗」，再决定要不要接住对方"}, "calibrator": {"name": "校准型", "emoji": "🔍", "color": "#4a6a8a", "core": "你靠「筛选」交朋友——先校准对方会成为什么样的人，再决定要不要深交", "declaration": "我的交友宣言：我不随便交朋友，我在校准你会成为谁", "strength": "高质量关系·边界清晰·不被消耗", "blind": "容易显得高冷·错过潜在好关系·慢热", "case": "INFJ不交朋友是在校准你（D17-B1-2·8.8）· 何炅断交的人不超过4个（D21-B19-ENFJ-1·8.6）", "trigger": "认识新朋友时，你先观察很久才决定要不要走近", "action": "试着在「校准」里留一扇小门，让新的人有机会走进来"}, "igniter": {"name": "点亮型", "emoji": "✨", "color": "#c98a2a", "core": "你靠「点亮」交朋友——你不占位，你把对方身上最亮的地方照亮", "declaration": "我的交友宣言：我不抢你的光，我是那个帮你开灯的人", "strength": "让朋友更有能量·社交氛围担当·被记住", "blind": "容易忽略自己·自己的需求排最后·能量透支", "case": "ENFP的社交是把人点亮（D21-B11-ENFP-2·8.7）· ENFP转发视频锁定你需要的（D18-B3-1·8.8）", "trigger": "聚会里你最擅长让每个人都被看见、被记住", "action": "试着也把灯照向自己一次，问自己「我需要被谁点亮」"}, "deep": {"name": "深交型", "emoji": "🫂", "color": "#5a6a4a", "core": "你靠「投入」交朋友——朋友不多，但每一个都是你花了「自己」换来的", "declaration": "我的交友宣言：我不评价你，我告诉你我在你身上花了多少自己", "strength": "关系深度高·忠诚·能接住最真实的你", "blind": "容易受伤·把「被需要」当「被爱」·失望后难再打开", "case": "你的INFP朋友给你打了9分（D18-B6-1·8.8）· 最擅长社交的人最孤独（D15-B2-2·8.7）", "trigger": "你宁可只有两三个能说真话的朋友，也不想要一群点头之交", "action": "试着把「深交」的标准松一点，让「浅交」也能慢慢长成深交"}}, "questions": [{"id": 1, "type": "healer", "text": "「朋友圈最会安慰人的那个ENFJ，已经快被掏空了」，你最先想到的是：", "options": [{"text": "那个最会安慰人的人，也需要有人安慰她", "scores": {"healer": 3}}, {"text": "好人容易累，这很正常", "scores": {"healer": 1}}, {"text": "说明她不会拒绝，边界有问题", "scores": {"healer": -1}}, {"text": "被需要是自找的，别太圣母", "scores": {"healer": -2}}]}, {"id": 2, "type": "healer", "text": "「当ENFJ终于学会不接电话的那个晚上，她第一次听到了自己的呼吸声」，你觉得：", "options": [{"text": "学会「不接电话」，是给自己留了口气", "scores": {"healer": 3}}, {"text": "人得先照顾自己", "scores": {"healer": 1}}, {"text": "不接电话太冷了吧", "scores": {"healer": -1}}, {"text": "矫情，接个电话能多累", "scores": {"healer": -2}}]}, {"id": 3, "type": "calibrator", "text": "「INFJ不交朋友，是在校准你会成为的那个人」，你认同：", "options": [{"text": "交朋友是双向选择，先看清楚再投入", "scores": {"calibrator": 3}}, {"text": "慢热一点没坏处", "scores": {"calibrator": 1}}, {"text": "太谨慎了，会错过很多", "scores": {"calibrator": -1}}, {"text": "装清高，交个朋友还挑三拣四", "scores": {"calibrator": -2}}]}, {"id": 4, "type": "calibrator", "text": "「何炅自曝断交的人不超过4个」，你读到的是：", "options": [{"text": "成熟的关系观：珍惜连接，也守住边界", "scores": {"calibrator": 3}}, {"text": "人缘好的人其实很挑", "scores": {"calibrator": 1}}, {"text": "明星嘛，肯定有很多塑料朋友", "scores": {"calibrator": -1}}, {"text": "断交少就是会做人，没啥深意", "scores": {"calibrator": -2}}]}, {"id": 5, "type": "igniter", "text": "「ENFP的社交不是话多，是把人点亮」，你的第一反应是：", "options": [{"text": "这才是社交的最高境界：让对方发光", "scores": {"igniter": 3}}, {"text": "会来事儿的人让人舒服", "scores": {"igniter": 1}}, {"text": "太累了，谁都想点亮会把自己点没", "scores": {"igniter": -1}}, {"text": "说得好听，就是讨好型人格", "scores": {"igniter": -2}}]}, {"id": 6, "type": "igniter", "text": "「ENFP转发视频，是她的Ne-Fi在你147句话里跑了三天，锁定你需要的」，你觉得：", "options": [{"text": "被这样惦记着，很暖", "scores": {"igniter": 3}}, {"text": "细心的人总能送到点子上", "scores": {"igniter": 1}}, {"text": "转个视频而已，别过度解读", "scores": {"igniter": -1}}, {"text": "这不就是监视吗，有点吓人", "scores": {"igniter": -2}}]}, {"id": 7, "type": "deep", "text": "「你的INFP朋友给你打了9分，她不是在评价你，是在告诉你她在你身上花了多少自己」，你读到：", "options": [{"text": "深交是把「自己」分给对方，很珍贵", "scores": {"deep": 3}}, {"text": "用心的人值得珍惜", "scores": {"deep": 1}}, {"text": "打分好累，友情不该这么较真", "scores": {"deep": -1}}, {"text": "情感绑架，付出就要回报", "scores": {"deep": -2}}]}, {"id": 8, "type": "deep", "text": "「最擅长社交的那个人，恰恰是最孤独的那一个」，你觉得：", "options": [{"text": "因为真正能被接住的时刻太少", "scores": {"deep": 3}}, {"text": "表面热闹，内心孤单，常有的事", "scores": {"deep": 1}}, {"text": "擅长社交的人朋友多，怎么会孤独", "scores": {"deep": -1}}, {"text": "无病呻吟，孤独是自找的", "scores": {"deep": -2}}]}], "cases": [{"type": "治愈型", "id": "D15-B3-1", "title": "朋友圈最会安慰人的ENFJ被掏空", "q": 8.7, "summary": "那句「只有我能治愈全世界，但谁能治愈我」，是治愈型朋友最不敢说出口的求救"}, {"type": "治愈型", "id": "D16-B1-1", "title": "当ENFJ终于学会不接电话", "q": 8.8, "summary": "「我不需要被需要，我本身就有价值」——敢为自己关机，才是治愈别人的前提"}, {"type": "校准型", "id": "D17-B1-2", "title": "INFJ不交朋友，是在校准你", "q": 8.8, "summary": "她不是冷漠，是在「校准」你会成为的那个人，再决定要不要陪你走这段路"}, {"type": "校准型", "id": "D21-B19-ENFJ-1", "title": "何炅自曝断交的人不超过4个", "q": 8.6, "summary": "成熟的关系观不是人缘好，是既珍视连接，又守住边界"}, {"type": "点亮型", "id": "D21-B11-ENFP-2", "title": "ENFP的社交不是话多，是把人点亮", "q": 8.7, "summary": "最高级的社交不是话多，是把对方身上最亮的地方照亮"}, {"type": "点亮型", "id": "D18-B3-1", "title": "ENFP转发视频锁定你需要的", "q": 8.8, "summary": "那条「你自己都不知道需要」的视频，是她花三天跑完你147句话才锁定的"}, {"type": "深交型", "id": "D18-B6-1", "title": "你的INFP朋友给你打了9分", "q": 8.8, "summary": "她不是评价你，是告诉你「我在你身上花了多少自己」"}, {"type": "深交型", "id": "D15-B2-2", "title": "最擅长社交的人最孤独", "q": 8.7, "summary": "最擅长社交的人最孤独，因为「被需要」≠「被看见」"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池社交/友谊母题（ENFJ被掏空 8.7 / INFJ不交朋友 8.8 / ENFP点亮人 8.7 / INFP给9分 8.8 / 何炅断交观 8.6 / ESFJ被需要陷阱 8.7 等）提炼的趣味倾向测试，用于自我觉察与关系反思，不构成人际诊断或心理评估。", "result_fields": [{"key": "declaration", "label": "💬 交友宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
