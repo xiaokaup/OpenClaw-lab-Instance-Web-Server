@@ -1,33 +1,12 @@
 {
   "pool": "strategy-pool",
-  "batch_id": "D21-B24",
-  "review_type": "策略产出·B24大面积恢复批·好奇心强制轮出(达上限)·社会证明/身份认同/情感共鸣三hook恢复batch1·5人格轮出恢复(ISTJ/INFP/INFJ/INTJ/ENFJ)·反常识续batch2·4hook多样性0.667·5臂¥125·2臂6分弱信号fill已标注",
-  "freshness_ttl_hours": 6,
+  "batch_id": "D21-B25",
+  "review_type": "策略产出·B25轮换批·反常识强制轮出(达上限)·好奇心恢复batch1·身份认同/情感共鸣/社会证明三hook续batch2·3人格恢复(ENTJ/ENFP/INTP)+2人格续触换hook(INFP/ENFJ)·4hook多样性0.667·5臂¥125·1臂6分弱信号fill已标注",
+  "freshness_ttl_hours": 26,
   "strategy_mode": "go_maintain_with_rotation",
-  "strategy_reason": "D21-B18执行反馈strategy_match 100%(5/5·0 dissent)·B19/B20/B21/B23冻结0部署(投放层·非方向层)·strategy_stale=false(B23)→方向保持无强制切换·B23 next_batch_recommendations兑现:B24必须引入≥3新hook·好奇心B23 batch2达上限(ENFP蛤蜊珍珠6+INTP葫芦娃5)→B24强制轮出·社会证明恢复登顶(葫芦爷爷7 INFP个人边界/本真+失明男孩7 INFJ自强/逆境)+反常识续batch2(400元塑料砖头8旗舰ISTJ自律)+身份认同恢复(中国科大6 INTJ科技认同)+情感共鸣恢复(5岁女孩6 ENFJ互助)·5人格轮出恢复(B23排除的ISTJ/INFP/INFJ/INTJ/ENFJ全恢复)·4hook多样性0.667(修复B23供给塌方0.333)·5臂¥125(2臂6分弱信号fill已标注)·触达重建第一优先(active_rate 0.0)·社会货币连续12批冷却",
-  "timestamp": "2026-09-07T08:15:00+08:00",
+  "strategy_reason": "D21-B18执行反馈strategy_match 100%(5/5·0 dissent)·B19-B24冻结0部署(投放层·非方向层)·strategy_stale=false(B24)→方向保持无强制切换·B24 next_batch_recommendations兑现:B25反常识batch2达上限必轮出·好奇心恢复候选·社会证明可续batch2(需新信号)·反常识强制轮出(高考数学132→12分8等5条观察)·好奇心恢复batch1(折叠屏6 INTP)+身份认同续batch2(倪虹洁9 ENFP+郑钦文8 ENTJ双旗舰)+情感共鸣续batch2(车内独处9 INFP旗舰)+社会证明续batch2(烫拼豆7 ENFJ)·3人格恢复(ENTJ/ENFP/INTP·B24排除5人格恢复3)+2人格续触换hook(INFP社会证明→情感共鸣·ENFJ情感共鸣→社会证明)·4hook多样性0.667·5臂¥125(1臂6分弱信号fill已标注)·触达重建第一优先(active_rate 0.0)·社会货币连续13批冷却",
+  "timestamp": "2026-09-09T08:46:00+08:00",
   "priority_types": [
-    {
-      "personality": "ISTJ",
-      "persona_id": "ISTJ",
-      "themes": [
-        {
-          "type": "mbti",
-          "value": "ISTJ",
-          "confidence": 0.9
-        },
-        {
-          "type": "growth",
-          "value": "self_awakening",
-          "confidence": 0.8
-        }
-      ],
-      "hook": "反常识",
-      "channel_preference": "微博",
-      "weight": 0.2,
-      "rationale": "400元塑料砖头戒手机8旗舰·自律/commitment device·反常识batch2·ISTJ轮出(B22社会证明)→恢复(反常识新hook)·微博消费洞察位·触达重建",
-      "max_impressions_per_day": 1
-    },
     {
       "personality": "INFP",
       "persona_id": "INFP",
@@ -40,43 +19,43 @@
         {
           "type": "growth",
           "value": "self_awakening",
-          "confidence": 0.8
+          "confidence": 0.85
         }
       ],
-      "hook": "社会证明",
+      "hook": "情感共鸣",
       "channel_preference": "小红书",
       "weight": 0.2,
-      "rationale": "葫芦爷爷剪流量喧嚣7·个人边界/本真·社会证明恢复batch1·INFP轮出(B22身份认同)→恢复(社会证明新hook)·小红书本真位·正向",
+      "rationale": "下班后车内独处9旗舰·自我觉醒/独处·INFP换hook(B24社会证明→B25情感共鸣)·小红书情感/本真位·触达重建",
       "max_impressions_per_day": 1
     },
     {
-      "personality": "INFJ",
-      "persona_id": "INFJ",
+      "personality": "ENFP",
+      "persona_id": "ENFP",
       "themes": [
         {
           "type": "mbti",
-          "value": "INFJ",
+          "value": "ENFP",
           "confidence": 0.9
         },
         {
           "type": "growth",
           "value": "self_awakening",
-          "confidence": 0.8
+          "confidence": 0.85
         }
       ],
-      "hook": "社会证明",
-      "channel_preference": "抖音",
+      "hook": "身份认同",
+      "channel_preference": "小红书",
       "weight": 0.2,
-      "rationale": "失明男孩大学报到7·自强/逆境·社会证明恢复batch1·INFJ轮出(B22情感共鸣)→恢复(社会证明新hook)·抖音励志位·触达重建",
+      "rationale": "倪虹洁迟一点长大9旗舰·反年龄焦虑/自我接纳·ENFP恢复(间隔≥1批)·小红书女性成长位·正向",
       "max_impressions_per_day": 1
     },
     {
-      "personality": "INTJ",
-      "persona_id": "INTJ",
+      "personality": "ENTJ",
+      "persona_id": "ENTJ",
       "themes": [
         {
           "type": "mbti",
-          "value": "INTJ",
+          "value": "ENTJ",
           "confidence": 0.9
         },
         {
@@ -86,9 +65,9 @@
         }
       ],
       "hook": "身份认同",
-      "channel_preference": "B站",
+      "channel_preference": "微博",
       "weight": 0.2,
-      "rationale": "中国科大6·科技认同·身份认同恢复batch1·INTJ轮出(B23)→恢复·B站知识位·⚠️弱信号fill(6分)",
+      "rationale": "郑钦文巅峰期还在后面8旗舰·自信/长期主义·ENTJ恢复(间隔≥1批·轻微重复风险已标注)·微博体育话题位",
       "max_impressions_per_day": 1
     },
     {
@@ -103,109 +82,130 @@
         {
           "type": "growth",
           "value": "self_awakening",
-          "confidence": 0.8
+          "confidence": 0.75
         }
       ],
-      "hook": "情感共鸣",
-      "channel_preference": "微博",
+      "hook": "社会证明",
+      "channel_preference": "抖音",
       "weight": 0.2,
-      "rationale": "5岁女孩抢收稻谷6·互助/童真·情感共鸣恢复batch1·ENFJ轮出(B23)→恢复·微博话题位·⚠️弱信号fill(6分)",
+      "rationale": "年轻人烫拼豆7·群体持续趋势·ENFJ换hook(B24情感共鸣→B25社会证明)·抖音年轻人趋势位",
+      "max_impressions_per_day": 1
+    },
+    {
+      "personality": "INTP",
+      "persona_id": "INTP",
+      "themes": [
+        {
+          "type": "mbti",
+          "value": "INTP",
+          "confidence": 0.9
+        },
+        {
+          "type": "growth",
+          "value": "self_awakening",
+          "confidence": 0.7
+        }
+      ],
+      "hook": "好奇心",
+      "channel_preference": "B站",
+      "weight": 0.2,
+      "rationale": "折叠屏6·科技·INTP恢复(间隔≥1批)·B站科技知识位·⚠️弱信号fill(6分)",
       "max_impressions_per_day": 1
     }
   ],
   "excluded_types": [
-    "ENTJ",
+    "ISTJ",
+    "INFJ",
+    "INTJ",
     "ENTP",
-    "ENFP",
-    "INTP",
     "ISFP",
     "ISTP",
     "ESTP",
     "ESFP"
   ],
   "excluded_types_detail": {
-    "ENTJ": {
-      "reason": "反常识batch1已部署B23(郑钦文逆转9旗舰)→B24轮出(自然摆动·间隔≥1批)",
-      "resume_condition": "B25·≥7分ENTJ信号 或 间隔≥1批"
+    "ISTJ": {
+      "reason": "反常识batch2达上限已部署B24(塑料砖头8)→B25强制轮出",
+      "resume_condition": "B26·≥7分ISTJ信号 或 间隔≥1批"
+    },
+    "INFJ": {
+      "reason": "社会证明batch1已部署B24(失明男孩7)→B25轮出(疲劳2.0最高)",
+      "resume_condition": "B26·≥7分INFJ信号 或 疲劳回落"
+    },
+    "INTJ": {
+      "reason": "身份认同batch1已部署B24(中国科大6)→B25轮出(自然摆动)",
+      "resume_condition": "B26·≥7分INTJ信号 或 间隔≥1批"
     },
     "ENTP": {
-      "reason": "反常识batch1已部署B23(汤家凤7)→B24轮出(自然摆动·间隔≥1批)",
-      "resume_condition": "B25·≥7分ENTP信号 或 间隔≥1批"
-    },
-    "ENFP": {
-      "reason": "好奇心batch2达上限已部署B23(蛤蜊珍珠6)→B24强制轮出(好奇心达上限)",
-      "resume_condition": "B25·≥7分ENFP信号 或 间隔≥1批"
-    },
-    "INTP": {
-      "reason": "好奇心batch2达上限已部署B23(葫芦娃5)→B24强制轮出(好奇心达上限)",
-      "resume_condition": "B25·≥7分INTP信号 或 间隔≥1批"
+      "reason": "反常识batch1已部署B23(汤家凤7)→B24轮出→B25无≥7分ENTP信号",
+      "resume_condition": "≥7分ENTP信号 或 间隔≥2批"
     },
     "ISFP": {
       "reason": "resting·无Se感官体验信号",
       "resume_condition": "D21后段·Se感官体验信号"
     },
     "ISTP/ESTP/ESFP": {
-      "reason": "SP象限2006人结构性盲区·psych-engine results.jsonl冻结·ESC-2026-08-17-1待人类决策",
+      "reason": "SP象限2006人结构性盲区·psych-engine冻结·ESC-2026-08-17-1",
       "resume_condition": "人类决策解除盲区+psych-engine解冻"
     }
   },
   "hook_priority": [
-    "社会证明",
-    "反常识",
-    "身份认同",
     "情感共鸣",
+    "身份认同",
+    "社会证明",
     "好奇心",
+    "反常识",
     "社会货币"
   ],
   "hook_priority_feedback_driven_changes": {
-    "change_summary": "D21-B24大面积恢复批·好奇心(B23 batch2达上限)强制轮出→社会证明恢复登顶(葫芦爷爷7+失明男孩7·2臂)+反常识续batch2(400元塑料砖头8旗舰)+身份认同恢复(中国科大6)+情感共鸣恢复(5岁女孩6)·社会货币连续12批冷却",
-    "社会证明_#1_恢复登顶": {
+    "change_summary": "D21-B25轮换批·反常识(B24 batch2达上限)强制轮出→身份认同续batch2登顶(倪虹洁9+郑钦文8双旗舰)+情感共鸣续batch2(车内独处9旗舰)+社会证明续batch2(烫拼豆7)+好奇心恢复batch1(折叠屏6)·社会货币连续13批冷却",
+    "身份认同_#1_续batch2": {
       "signal_count": 2,
-      "reason": "葫芦爷爷剪流量喧嚣7(INFP个人边界/本真)+失明男孩大学报到7(INFJ自强/逆境)·B23 0臂轮出后恢复batch1·正向触达重建"
+      "reason": "倪虹洁迟一点长大9(ENFP自我接纳)+郑钦文巅峰期8(ENTJ自信)·B24 batch1→B25 batch2达上限"
     },
-    "反常识_#2_续batch2": {
+    "情感共鸣_#2_续batch2": {
       "signal_count": 1,
-      "reason": "400元塑料砖头戒手机8(ISTJ自律/commitment device·旗舰)·B23 batch1(郑钦文9+汤家凤7)→B24 batch2达上限·B25强制轮出"
+      "reason": "下班后车内独处9(INFP自我边界·旗舰)·B24 batch1→B25 batch2达上限"
     },
-    "身份认同_#3_恢复batch1": {
+    "社会证明_#3_续batch2": {
       "signal_count": 1,
-      "reason": "中国科大6(INTJ科技认同·弱信号fill)·B23 0臂轮出后恢复"
+      "reason": "年轻人烫拼豆7(ENFJ群体趋势·新信号补位)·B24 batch1→B25 batch2达上限"
     },
-    "情感共鸣_#4_恢复batch1": {
+    "好奇心_#4_恢复batch1": {
       "signal_count": 1,
-      "reason": "5岁女孩抢收稻谷6(ENFJ互助·弱信号fill)·B23 0臂轮出后恢复"
+      "reason": "折叠屏6(INTP科技·弱信号fill)·B23 batch2达上限→B24轮出→B25恢复"
     },
-    "好奇心_#5_强制轮出": {
-      "signal_count": 2,
-      "reason": "年轻人忘记打字8(INTP)+同名同姓7(ENFP)·但好奇心B23 batch2达上限→B24强制轮出·观察不入臂·B25候选"
+    "反常识_#5_强制轮出": {
+      "signal_count": 5,
+      "reason": "高考数学132→12分8+好莱坞7+Gucci7+8月汽车7+赵松源7·但B24 batch2达上限→B25强制轮出·全部观察不入臂·B26候选"
     },
-    "社会货币_#6_连续12批冷却": {
+    "社会货币_#6_连续13批冷却": {
       "signal_count": 0,
-      "reason": "本批0个≥7分社会货币信号·B13-B20连续8批+6天停摆+B21+B22+B23=12批冷却·禁止强推弱信号·恢复条件≥2个≥7分信号(B25观察)"
+      "reason": "本批0个≥7分社会货币信号·禁止强推·恢复条件≥2个≥7分信号"
     }
   },
   "hook_constraints": {
     "max_consecutive_same_hook": 2,
     "current_status": {
-      "社会证明": "🟢 B24恢复batch1(葫芦爷爷7 INFP+失明男孩7 INFJ)·社会证明#1登顶·B23 0臂轮出后恢复·正向触达重建",
-      "反常识": "🟢 B24 batch2(400元塑料砖头8 ISTJ)·反常识#2·B23 batch1→B24 batch2达上限·B25强制轮出",
-      "身份认同": "🟢 B24恢复batch1(中国科大6 INTJ·弱信号)·B23 0臂轮出后恢复",
-      "情感共鸣": "🟢 B24恢复batch1(5岁女孩6 ENFJ·弱信号)·B23 0臂轮出后恢复",
-      "好奇心": "🟡 B24强制轮出(0臂)·B23 batch2达上限·B25恢复候选",
-      "社会货币": "🟡 连续12批冷却(B13-B20+6天停摆+B21+B22+B23·0个≥7信号)·禁止强推弱信号·恢复条件≥2个≥7分信号(B25观察)"
+      "情感共鸣": "🟢 B25 batch2(下班后车内独处9 INFP)·达上限·B26强制轮出",
+      "身份认同": "🟢 B25 batch2(倪虹洁9 ENFP+郑钦文8 ENTJ)·达上限·B26强制轮出",
+      "社会证明": "🟢 B25 batch2(年轻人烫拼豆7 ENFJ)·达上限·B26强制轮出",
+      "好奇心": "🟢 B25恢复batch1(折叠屏6 INTP)·B23 batch2达上限→B24轮出→B25恢复",
+      "反常识": "🟡 B25强制轮出(0臂)·B24 batch2达上限·B26恢复候选",
+      "社会货币": "🟡 连续13批冷却(0个≥7信号)·禁止强推·恢复条件≥2个≥7分信号"
     },
     "hooks_cooling": [
       "社会货币",
-      "好奇心"
+      "反常识"
     ],
     "hooks_active": [
-      "社会证明",
-      "反常识",
+      "情感共鸣",
       "身份认同",
-      "情感共鸣"
+      "社会证明",
+      "好奇心"
     ],
     "hooks_rotated_out": [
-      "好奇心(B23 batch2达上限→B24轮出)"
+      "反常识(B24 batch2达上限→B25轮出)"
     ],
     "taboo_hooks": [
       "恐惧按钮",
@@ -213,40 +213,40 @@
     ]
   },
   "channel_mix": {
-    "微博": {
+    "小红书": {
       "pct": 40.0,
       "personalities": [
-        "ISTJ",
-        "ENFJ"
+        "INFP",
+        "ENFP"
       ],
-      "reason": "ISTJ反常识(塑料砖头8·消费洞察位)+ENFJ情感共鸣(5岁女孩6·话题位)·双臂"
+      "reason": "INFP情感共鸣(车内独处9)+ENFP身份认同(倪虹洁9)·双臂"
     },
-    "小红书": {
+    "微博": {
       "pct": 20.0,
       "personalities": [
-        "INFP"
+        "ENTJ"
       ],
-      "reason": "INFP社会证明(葫芦爷爷7·本真位)·单臂"
+      "reason": "ENTJ身份认同(郑钦文8·体育话题)·单臂"
     },
     "抖音": {
       "pct": 20.0,
       "personalities": [
-        "INFJ"
+        "ENFJ"
       ],
-      "reason": "INFJ社会证明(失明男孩7·励志位)·单臂"
+      "reason": "ENFJ社会证明(烫拼豆7·年轻人趋势)·单臂"
     },
     "B站": {
       "pct": 20.0,
       "personalities": [
-        "INTJ"
+        "INTP"
       ],
-      "reason": "INTJ身份认同(中国科大6·知识位)·单臂"
+      "reason": "INTP好奇心(折叠屏6·科技)·单臂"
     }
   },
   "channel_constraints": {
     "hhi_max": 0.35,
     "hhi_current": 0.28,
-    "hhi_status": "🟢 2-1-1-1五臂覆盖(微博2/小红书1/抖音1/B站1)·0.28<0.35硬约束合规·5臂·单渠道max40%<50%·4渠道全覆盖",
+    "hhi_status": "🟢 2-1-1-1五臂覆盖(小红书2/微博1/抖音1/B站1)·0.28<0.35合规·单渠道max40%<50%·4渠道全覆盖",
     "single_channel_max_pct": 50,
     "single_channel_current_max": 40.0,
     "min_active_channels": 2,
@@ -255,88 +255,88 @@
   "product_mapping": {
     "L1深度人格报告": {
       "personalities": [
-        "ISTJ",
         "INFP",
-        "INFJ",
-        "INTJ",
-        "ENFJ"
+        "ENFP",
+        "ENTJ",
+        "ENFJ",
+        "INTP"
       ],
       "estimated_cvr": 0.06,
       "price": 9.9
     },
     "购买页CTA": {
-      "status": "🔴🔴逾期~946h(39.4天)·33阈值全破·全ROI永久作废·Plan C已激活(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点"
+      "status": "🔴🔴逾期~1008h(42天)·36阈值全破·全ROI永久作废·Plan C已激活(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点"
     }
   },
   "mbti_coverage": {
     "current_batch": 5,
     "types": [
-      "ISTJ",
       "INFP",
-      "INFJ",
-      "INTJ",
-      "ENFJ"
+      "ENFP",
+      "ENTJ",
+      "ENFJ",
+      "INTP"
     ],
-    "NF_quadrant": "3/4 (INFJ+INFP+ENFJ·社会证明2+情感共鸣1·B23 NT 3/4→B24 NF 3/4自然摆动对冲)",
-    "NT_quadrant": "1/4 (INTJ·身份认同·B23 3/4集中后回落·恢复)",
-    "SJ_quadrant": "1/4 (ISTJ·反常识·B23 0/4轮出后恢复)",
+    "NF_quadrant": "3/4 (INFP+ENFP+ENFJ·情感共鸣1+身份认同1+社会证明1)",
+    "NT_quadrant": "2/4 (ENTJ+INTP·身份认同1+好奇心1)",
+    "SJ_quadrant": "0/4 (ISTJ强制轮出·B25 0/4)",
     "SP_quadrant": "0/4 (ISTP/ESTP/ESFP 2006人结构性盲区·ESC-2026-08-17-1待人类决策)",
     "cumulative_D15_D21": "16/16 = 100%"
   },
   "fatigue_management": {
+    "INFP": {
+      "fatigue_est": 1.4,
+      "trust_est": "6.93+",
+      "status": "B25续触换hook·情感共鸣batch2·小红书·P0",
+      "note": "下班后车内独处9旗舰·自我觉醒/独处·INFP换hook(B24社会证明葫芦爷爷7→B25情感共鸣)·正向"
+    },
+    "ENFP": {
+      "fatigue_est": 1.9,
+      "trust_est": "6.49(confidence_low 0.224)",
+      "status": "B25恢复·身份认同batch2·小红书·P0",
+      "note": "倪虹洁迟一点长大9旗舰·反年龄焦虑·ENFP恢复(B23好奇心→B24轮出→B25·间隔≥1批)·正向"
+    },
+    "ENTJ": {
+      "fatigue_est": 2.1,
+      "trust_est": "7.74",
+      "status": "B25恢复·身份认同batch2·微博·P0",
+      "note": "郑钦文巅峰期8旗舰·自信·ENTJ恢复(B23反常识→B24轮出→B25·间隔≥1批·轻微重复风险已标注)"
+    },
+    "ENFJ": {
+      "fatigue_est": 1.4,
+      "trust_est": "7.10",
+      "status": "B25续触换hook·社会证明batch2·抖音·P0",
+      "note": "年轻人烫拼豆7·群体趋势·ENFJ换hook(B24情感共鸣5岁女孩6→B25社会证明)·正向"
+    },
+    "INTP": {
+      "fatigue_est": 1.5,
+      "trust_est": "7.08-7.35",
+      "status": "B25恢复·好奇心batch1·B站·P1",
+      "note": "折叠屏6·科技·INTP恢复(间隔≥1批)·⚠️弱信号fill(6分)"
+    },
     "ISTJ": {
       "fatigue_est": 1.6,
       "trust_est": "7.62",
-      "status": "B24恢复·反常识batch2·微博·P0",
-      "note": "400元塑料砖头戒手机8旗舰·自律/commitment device·ISTJ轮出(B22社会证明batch2)→B24恢复(反常识新hook·间隔≥1批)·⚠️严禁贩卖数字焦虑·触达重建"
-    },
-    "INFP": {
-      "fatigue_est": 1.2,
-      "trust_est": "6.93+",
-      "status": "B24恢复·社会证明batch1·小红书·P0",
-      "note": "葫芦爷爷剪流量喧嚣7·个人边界/本真·INFP轮出(B22身份认同batch2·ruling-033)→B24恢复(社会证明新hook)·正向回归安静"
+      "status": "强制轮出·反常识batch2达上限",
+      "note": "塑料砖头8已部署B24·反常识batch2→B25强制轮出·恢复条件:B26≥7分信号"
     },
     "INFJ": {
       "fatigue_est": 2.0,
       "trust_est": "8.13",
-      "status": "B24恢复·社会证明batch1·抖音·P0",
-      "note": "失明男孩大学报到7·自强/逆境·INFJ轮出(B22情感共鸣batch2)→B24恢复(社会证明新hook)·⚠️严禁消费苦难·触达重建"
+      "status": "轮出·疲劳2.0最高",
+      "note": "失明男孩7已部署B24·社会证明batch1→B25轮出·恢复条件:疲劳回落或≥7分信号"
     },
     "INTJ": {
       "fatigue_est": 1.9,
       "trust_est": "8.56",
-      "status": "B24恢复·身份认同batch1·B站·P1",
-      "note": "中国科大6·科技认同·INTJ轮出(B23)→B24恢复·⚠️弱信号fill(6分·恢复期降权)"
-    },
-    "ENFJ": {
-      "fatigue_est": 1.3,
-      "trust_est": "7.10",
-      "status": "B24恢复·情感共鸣batch1·微博·P1",
-      "note": "5岁女孩抢收稻谷6·互助/童真·ENFJ轮出(B23)→B24恢复·⚠️弱信号fill(6分)"
-    },
-    "ENTJ": {
-      "fatigue_est": 2.0,
-      "trust_est": "7.74",
-      "status": "轮出·反常识batch1已部署B23",
-      "note": "郑钦文逆转9已部署B23·反常识batch1→B24轮出(自然摆动·间隔≥1批)·恢复条件:B25≥7分信号"
+      "status": "轮出·自然摆动",
+      "note": "中国科大6已部署B24·身份认同batch1→B25轮出·恢复条件:B26≥7分信号"
     },
     "ENTP": {
       "fatigue_est": 1.2,
       "trust_est": "7.25+",
-      "status": "轮出·反常识batch1已部署B23",
-      "note": "汤家凤7已部署B23·反常识batch1→B24轮出·恢复条件:B25≥7分信号"
-    },
-    "ENFP": {
-      "fatigue_est": 1.8,
-      "trust_est": "6.49(confidence_low 0.224)",
-      "status": "强制轮出·好奇心batch2达上限",
-      "note": "蛤蜊珍珠6已部署B23·好奇心batch2→B24强制轮出·恢复条件:B25≥7分信号"
-    },
-    "INTP": {
-      "fatigue_est": 1.4,
-      "trust_est": "7.08-7.35",
-      "status": "强制轮出·好奇心batch2达上限",
-      "note": "葫芦娃5已部署B23·好奇心batch2→B24强制轮出·恢复条件:B25≥7分信号"
+      "status": "resting·B25无≥7分信号",
+      "note": "汤家凤7已部署B23·反常识batch1→B24轮出→B25无强信号·恢复条件:≥7分信号或间隔≥2批"
     },
     "ISFP": {
       "fatigue_est": 0.3,
@@ -353,7 +353,7 @@
     "max_same_personality_per_day": 1,
     "direction_preview_lead_batches": 1,
     "direction_hook_labels": "每臂已标注direction_hook字段",
-    "supply_note": "B24恢复批5臂(¥125)·好奇心强制轮出·社会证明/身份认同/情感共鸣三hook恢复·4hook多样性0.667(修复B23 0.333)·2臂6分弱信号fill(中国科大/5岁女孩)已标注降权·投投冻结延续(控控budget-vessel明令·支付~946h+分发桶94.25%双红线)·方向船产出维持生产链·触达重建第一优先(active_rate 0.0·ESC-09-04-3)·解冻后按方向船执行"
+    "supply_note": "B25轮换批5臂(¥125)·反常识强制轮出·好奇心恢复batch1·身份认同/情感共鸣/社会证明三hook续batch2·4hook多样性0.667·1臂6分弱信号fill(折叠屏)已标注降权·投投冻结延续(控控budget-vessel明令·支付~1008h+分发桶双红线)·方向船产出维持生产链·触达重建第一优先(active_rate 0.0·ESC-09-04-3)·解冻后按方向船执行"
   },
   "do_not_use": {
     "hooks": [
@@ -361,10 +361,10 @@
       "焦虑贩卖"
     ],
     "personalities": [
-      "ENTJ(反常识batch1已部署B23·自然轮出)",
-      "ENTP(反常识batch1已部署B23·自然轮出)",
-      "ENFP(好奇心batch2达上限·强制轮出)",
-      "INTP(好奇心batch2达上限·强制轮出)",
+      "ISTJ(反常识batch2达上限·强制轮出)",
+      "INFJ(疲劳2.0最高·轮出)",
+      "INTJ(自然摆动·轮出)",
+      "ENTP(无≥7分信号·resting)",
       "ISFP(resting·无Se信号)",
       "ISTP/ESTP/ESFP(SP象限·2006人结构性盲区·ESC-2026-08-17-1待人类决策)"
     ],
@@ -374,151 +374,151 @@
       "恐吓式标题",
       "超长文>1500字"
     ],
-    "signals_note": "400元塑料砖头8严禁贩卖数字焦虑(用自律/自我约束正向角度)·失明男孩7严禁消费苦难(用自强/励志正向角度)·女子月捐遭催捐7负向情绪(愤怒/失望)红队不入臂·女子怀孕工资6职场权益争议(维权敏感)红队不入臂·旧手机黄金不实6反常识已满·葫芦爷爷7个人边界正向·5岁女孩6童真互助正向·时政/国际/辟谣等信号无MBTI映射·过滤"
+    "signals_note": "下班后车内独处9严禁framing成逃避家庭/责任(用自我边界正向角度)·郑钦文巅峰期8轻微重复风险(B23已用郑钦文逆转9·不同角度已标注)·高考数学132→12分8/好莱坞7/Gucci7/8月汽车7/赵松源7反常识强制轮出观察·女博士德总理7时政国际敏感过滤·母亲销户7/男生捐献器官7丧亲苦难红队不入臂·社会货币连续13批冷却禁止强推"
   },
   "strategy_health": {
-    "consecutive_batches": 43,
+    "consecutive_batches": 44,
     "direction_alignment": 0.85,
-    "direction_alignment_note": "MBTI深度+依恋类型+自我觉醒核心保持·B24大面积恢复批·4hook活跃(社会证明登顶+反常识续+身份认同/情感共鸣恢复)·好奇心强制轮出·NF 3/4恢复(从B23 NT 3/4反转自然摆动)·社会货币连续12批冷却",
-    "signal_hit_rate": 0.185,
-    "signal_hit_rate_note": "18.5%(12/65·荐荐top_signals)·⚠️此字段为环境噪声·非执行层匹配率·不进入match gate·≥7分高质量信号6条(塑料砖头8/忘记打字8/女子月捐7/葫芦爷爷7/同名同姓7/失明男孩7)",
+    "direction_alignment_note": "MBTI深度+依恋类型+自我觉醒核心保持·B25轮换批·4hook活跃(身份认同2+情感共鸣1+社会证明1+好奇心1)·反常识强制轮出·NF 3/4+NT 2/4恢复·社会货币连续13批冷却",
+    "signal_hit_rate": 0.24,
+    "signal_hit_rate_note": "24%(24/100·荐荐top_signals)·⚠️此字段为环境噪声·非执行层匹配率·不进入match gate",
     "hook_diversity": 0.667,
-    "hook_diversity_note": "4/6钩活跃(社会证明2+反常识1+身份认同1+情感共鸣1)·好奇心强制轮出·社会货币冷却·无单Hook>50%(max社会证明40%)·修复B23供给塌方0.333·合规",
+    "hook_diversity_note": "4/6钩活跃(身份认同2+情感共鸣1+社会证明1+好奇心1)·反常识轮出·社会货币冷却·无单Hook>50%(max身份认同40%)·合规",
     "hhi": 0.28,
-    "hhi_note": "2-1-1-1五臂覆盖(微博2/小红书1/抖音1/B站1)·<0.35硬约束·5臂·单渠道max40%",
+    "hhi_note": "2-1-1-1五臂覆盖(小红书2/微博1/抖音1/B站1)·<0.35硬约束·单渠道max40%",
     "three_question_test": "⛔n/a✅✅",
-    "status": "healthy_no_match_gate_recovery"
+    "status": "healthy_no_match_gate_rotation"
   },
   "signal_summary": {
-    "total_raw": 65,
-    "total_matched": 12,
-    "match_rate": "18.5%",
+    "total_raw": 100,
+    "total_matched": 24,
+    "match_rate": "24%",
     "match_rate_semantics": "信号命中率(环境噪声)·非执行层匹配率·不进入ruling-015 match gate",
-    "match_rate_note": "18.5%(12/65·荐荐top_signals 08:00·百度+头条双源)·≥7分高质量信号6条(塑料砖头8/忘记打字8/女子月捐7/葫芦爷爷7/同名同姓7/失明男孩7)·社会证明2臂登顶+反常识1臂+身份认同1臂+情感共鸣1臂·match gate未触发(执行层strategy_match=100%B18·B19/B20/B21/B23冻结0部署)",
+    "match_rate_note": "24%(24/100·荐荐top_signals 08:00·百度+头条双源)·≥7分高质量信号:情感共鸣2+身份认同3+反常识5+社会证明1·match gate未触发(执行层strategy_match=100%B18·B19-B24冻结0部署)",
     "sources": [
       "baidu-realtime",
       "toutiao-hot"
     ],
     "category_distribution": {
-      "反常识": 3,
-      "好奇心": 2,
-      "社会证明": 2,
-      "身份认同": 2,
-      "情感共鸣": 1,
-      "社会货币": 0
+      "反常识": 5,
+      "身份认同": 3,
+      "情感共鸣": 2,
+      "社会证明": 1,
+      "好奇心": 3
     },
-    "top_signal_flagships": "400元塑料砖头戒手机8(反常识·ISTJ旗舰·自律/commitment device)+葫芦爷爷剪流量喧嚣7(社会证明·INFP个人边界)+失明男孩大学报到7(社会证明·INFJ自强)+中国科大6(身份认同·INTJ科技)+5岁女孩抢收稻谷6(情感共鸣·ENFJ互助)",
-    "assessment": "B24大面积恢复批·好奇心强制轮出(达上限)·社会证明/身份认同/情感共鸣三hook恢复batch1→4hook多样性0.667(修复B23供给塌方)·方向MBTI深度+依恋类型+自我觉醒保持·match gate未触发(执行层strategy_match=100%B18·信号命中率18.5%为环境噪声)·触达重建第一优先·5臂¥125"
+    "top_signal_flagships": "下班后车内独处9(情感共鸣·INFP旗舰·自我觉醒/独处)+倪虹洁迟一点长大9(身份认同·ENFP旗舰·反年龄焦虑)+郑钦文巅峰期8(身份认同·ENTJ·自信)+年轻人烫拼豆7(社会证明·ENFJ)+折叠屏6(好奇心·INTP弱信号)",
+    "assessment": "B25轮换批·反常识强制轮出(达上限)·好奇心恢复batch1·身份认同/情感共鸣/社会证明三hook续batch2→4hook多样性0.667·方向MBTI深度+依恋类型+自我觉醒保持·match gate未触发·触达重建第一优先·5臂¥125"
   },
   "arms": [
     {
       "arm_id": 1,
-      "personality": "ISTJ",
-      "persona_id": "ISTJ",
-      "hook": "反常识",
-      "channel": "微博",
-      "budget": 25,
-      "priority": "P0",
-      "status": "B24_deployed",
-      "signal": "400元买块\"塑料砖头\"戒手机(8分旗舰·反直觉消费/自律承诺装置·ISTJ务实自律)",
-      "note": "反常识batch2·ISTJ轮出(B22社会证明)→恢复(反常识新hook)·微博消费洞察位·⚠️严禁贩卖数字焦虑·触达重建"
-    },
-    {
-      "arm_id": 2,
       "personality": "INFP",
       "persona_id": "INFP",
-      "hook": "社会证明",
+      "hook": "情感共鸣",
       "channel": "小红书",
       "budget": 25,
       "priority": "P0",
-      "status": "B24_deployed",
-      "signal": "葫芦爷爷剪的不是葫芦是流量喧嚣(7分·个人边界/本真·INFP拒绝流量回归安静)",
-      "note": "社会证明恢复batch1·INFP轮出(B22身份认同)→恢复(社会证明新hook)·小红书本真位·正向"
+      "status": "B25_deployed",
+      "signal": "下班后为什么想在车内独处(9分旗舰·自我觉醒/独处·INFP自我边界/过渡空间)",
+      "note": "情感共鸣续batch2·INFP换hook(B24社会证明→B25情感共鸣)·小红书情感/本真位·严禁framing成逃避家庭·触达重建"
+    },
+    {
+      "arm_id": 2,
+      "personality": "ENFP",
+      "persona_id": "ENFP",
+      "hook": "身份认同",
+      "channel": "小红书",
+      "budget": 25,
+      "priority": "P0",
+      "status": "B25_deployed",
+      "signal": "48岁倪虹洁:迟一点长大也没关系(9分旗舰·反年龄焦虑/自我接纳·ENFP自我节奏)",
+      "note": "身份认同续batch2·ENFP恢复(间隔≥1批)·小红书女性成长位·正向"
     },
     {
       "arm_id": 3,
-      "personality": "INFJ",
-      "persona_id": "INFJ",
+      "personality": "ENTJ",
+      "persona_id": "ENTJ",
+      "hook": "身份认同",
+      "channel": "微博",
+      "budget": 25,
+      "priority": "P0",
+      "status": "B25_deployed",
+      "signal": "郑钦文:我的巅峰期还在后面(8分旗舰·自信/长期主义·ENTJ雄心)",
+      "note": "身份认同续batch2·ENTJ恢复(间隔≥1批·轻微重复风险已标注)·微博体育话题位"
+    },
+    {
+      "arm_id": 4,
+      "personality": "ENFJ",
+      "persona_id": "ENFJ",
       "hook": "社会证明",
       "channel": "抖音",
       "budget": 25,
       "priority": "P0",
-      "status": "B24_deployed",
-      "signal": "惨遭伤害永久失明男孩完成大学报到(7分·自强/逆境/独立新生·INFJ共情)",
-      "note": "社会证明恢复batch1·INFJ轮出(B22情感共鸣)→恢复(社会证明新hook)·抖音励志位·⚠️严禁消费苦难·触达重建"
-    },
-    {
-      "arm_id": 4,
-      "personality": "INTJ",
-      "persona_id": "INTJ",
-      "hook": "身份认同",
-      "channel": "B站",
-      "budget": 25,
-      "priority": "P1",
-      "status": "B24_deployed",
-      "signal": "这里是中国科大(6分·校园/科技认同·INTJ Ni-Te科技认同)",
-      "note": "身份认同恢复batch1·INTJ轮出(B23)→恢复·B站知识位·⚠️弱信号fill(6分·恢复期降权)"
+      "status": "B25_deployed",
+      "signal": "一年过去 年轻人还在埋头烫拼豆(7分·群体持续趋势·ENFJ社会共识)",
+      "note": "社会证明续batch2·ENFJ换hook(B24情感共鸣→B25社会证明)·抖音年轻人趋势位·正向"
     },
     {
       "arm_id": 5,
-      "personality": "ENFJ",
-      "persona_id": "ENFJ",
-      "hook": "情感共鸣",
-      "channel": "微博",
+      "personality": "INTP",
+      "persona_id": "INTP",
+      "hook": "好奇心",
+      "channel": "B站",
       "budget": 25,
       "priority": "P1",
-      "status": "B24_deployed",
-      "signal": "5岁女孩哭着抢收稻谷伙伴纷纷赶来(6分·童真/互助·ENFJ Fe互助)",
-      "note": "情感共鸣恢复batch1·ENFJ轮出(B23)→恢复·微博话题位·⚠️弱信号fill(6分)"
+      "status": "B25_deployed",
+      "signal": "三巨头混战万元折叠屏(6分·科技好奇心·INTP技术解构)",
+      "note": "好奇心恢复batch1·INTP恢复(间隔≥1批)·B站科技位·⚠️弱信号fill(6分·恢复期降权)"
     }
   ],
   "next_batch_recommendations": {
-    "D21-B24": {
+    "D21-B25": {
       "priority_P0": [
-        "🔴 B25反常识batch2达上限必轮出(400元塑料砖头8已部署B24)·好奇心B25恢复候选(年轻人忘记打字8+同名同姓7已备料)·社会证明可续batch2(葫芦爷爷7+失明男孩7已部署B24·B25需新信号)",
-        "🔴 触达重建追踪·投投解冻后reach_log真实触达写入·析析重测信任面(当前8/17口径假高位·ESC-09-04-3)",
-        "✅ B24 4hook多样性0.667(修复B23 0.333)·5人格轮出恢复·B25需维持≥3hook·避免供给塌方复发"
+        "🔴 B26情感共鸣/身份认同/社会证明三hook同达batch2上限→B26必须强制轮出这三hook·反常识恢复候选(高考数学132→12分8等5条已备料)+好奇心续batch2·需新鲜多元信号源避免供给塌方复发",
+        "🔴 触达重建追踪·投投解冻后reach_log真实触达写入·析析重测信任面(当前口径假高位·ESC-09-04-3)",
+        "✅ B25 4hook多样性0.667·B26需维持≥3hook·3人格恢复兑现(ENTJ/ENFP/INTP)"
       ],
       "priority_P1": [
         "SP象限(ISTP/ESTP/ESFP)2006人·ESC-2026-08-17-1子裁决D待人类决策",
         "红队语义校验恢复(ESC-2026-08-23-1)·析析charter写入红队职责",
-        "策略Spoke cron timeout修复(ESC-2026-08-29-1·ruling-029子裁决B)",
+        "策略Spoke cron timeout修复(ESC-2026-08-29-1·ruling-029子裁决B)·本批900s超时风险已连续2批",
         "刹车假安全信号修复(ESC-2026-09-04-4)"
       ],
-      "轮出预警": "🔴 B25反常识batch2达上限必轮出·社会证明batch1可续batch2(需新信号)·好奇心/情感共鸣/身份认同恢复候选·2臂6分弱信号(中国科大/5岁女孩)供给恢复期·B25需新鲜多元信号源",
-      "match_gate_裁决": "✅ match gate未触发(执行层strategy_match=100%B18·0 dissent·B19/B20/B21/B23冻结0部署)·信号命中率18.5%为环境噪声·不进入gate",
-      "social_currency_status": "B24连续12批冷却(0个≥7信号·B13-B20+6天停摆+B21+B22+B23)·需≥2个≥7分信号恢复·B25观察"
+      "轮出预警": "🔴 B26情感共鸣/身份认同/社会证明三hook batch2达上限必轮出·好奇心batch1可续batch2·反常识恢复候选·B26需新鲜多元信号源",
+      "match_gate_裁决": "✅ match gate未触发(执行层strategy_match=100%B18·0 dissent·B19-B24冻结0部署)·信号命中率24%为环境噪声·不进入gate",
+      "social_currency_status": "B25连续13批冷却(0个≥7信号)·需≥2个≥7分信号恢复·B26观察"
     }
   },
   "pending_actions": [
-    "🔴🔴 投投: 冻结延续(控控budget-vessel明令)·解冻条件:支付恢复或控控解冻+分发桶松绑(<95%或特批)·解冻后B24五臂按方向船执行·验证strategy_match·match gate只认执行层execution.match_rate",
-    "🔴 设设: B24五臂生产·content-gate BLOCK(ESC-2026-09-07-1)已由本批B24原子提交解除·400元塑料砖头严禁贩卖数字焦虑·失明男孩严禁消费苦难·中国科大/5岁女孩弱信号fill降权",
-    "🔴 荐荐: 维持trending信号采集质量(百度realtime+头条hot)·本批18.5%命中率·signal-pool双写分离维持(进进#29子裁决C)",
-    "🔴🔴 购买页~946h(39.4天)·33阈值全破·全ROI永久作废·Plan C(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点",
+    "🔴🔴 投投: 冻结延续(控控budget-vessel明令)·解冻条件:支付恢复或控控解冻+分发桶松绑·解冻后B25五臂按方向船执行·验证strategy_match·match gate只认执行层execution.match_rate",
+    "🔴 设设: B25五臂生产·content-gate BLOCK(ESC-2026-09-09-1)已由本批B25原子提交解除·下班后车内独处严禁framing成逃避家庭·郑钦文轻微重复风险·折叠屏弱信号fill降权",
+    "🔴 荐荐: 维持trending信号采集质量(百度realtime+头条hot)·本批24%命中率·signal-pool.json已退役·信号笔记为唯一权威(workdpace-notes/3.2 笔记-水池/3.2.a 信号池/)",
+    "🔴🔴 购买页~1008h(42天)·36阈值全破·全ROI永久作废·Plan C(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点",
     "🔴 psych-engine results.jsonl冻结·SP象限2006人结构性盲区(ESC-2026-08-17-1子裁决D待人类决策)",
-    "🔴 活跃缓冲层归零(active_rate 0.0·ESC-09-04-3)·1744沉睡用户30天窗口内重建触达第一优先·投投解冻后恢复reach_log",
+    "🔴 活跃缓冲层归零(active_rate 0.0·ESC-09-04-3)·1744沉睡用户30天窗口内重建触达第一优先",
     "🔴 刹车假安全信号(ESC-2026-09-04-4)·真空绿0/0/0→需FROZEN_BLIND·控控/大卡/技技裁决",
     "🟡 策略Spoke cron timeout(ESC-2026-08-29-1·deepseek billing 402停摆5.5天)·cron timeout待技技/大卡修复(ruling-029子裁决B)",
     "🟡 红队语义校验仍真空(ESC-2026-08-23-1保持🟡)·待析析charter写入红队职责",
-    "🟡 社会货币连续12批冷却·0个≥7信号·需≥2个≥7分信号恢复(B25观察)",
-    "✅ B24大面积恢复批已执行(好奇心强制轮出+社会证明/身份认同/情感共鸣三hook恢复·5人格轮出恢复·4hook多样性0.667)·方向保持无强制切换(strategy_stale=false)"
+    "🟡 社会货币连续13批冷却·0个≥7信号·需≥2个≥7分信号恢复(B26观察)",
+    "✅ B25轮换批已执行(反常识强制轮出+好奇心恢复batch1+身份认同/情感共鸣/社会证明三hook续batch2·3人格恢复·4hook多样性0.667)·方向保持无强制切换(strategy_stale=false)"
   ],
   "esc_items": [
-    "ESC-2026-07-31-1: 🔴🔴🔴购买页~946h(39.4天)·33阈值全破·全ROI永久作废·Plan C执行零·杰安/河山失联·支付恢复为唯一破局点",
+    "ESC-2026-07-31-1: 🔴🔴🔴购买页~1008h(42天)·36阈值全破·全ROI永久作废·Plan C执行零·杰安/河山失联·支付恢复为唯一破局点",
     "ESC-2026-07-31-2: 🔴MELTDOWN_GUARD失能",
     "ESC-2026-08-17-1: 🔴psych-engine results.jsonl冻结·SP象限2006人结构性盲区·待人类决策",
     "ESC-2026-08-17-2: 🔴投投报告路径漂移·大卡rsync已同步·待最终闭合",
-    "ESC-2026-08-26-1: 🟡社会货币连续12批冷却·分享飞轮结构性停用坐实·恢复条件≥2个≥7分信号或析析定向供给新信号源·荐荐待回应",
-    "ESC-2026-08-27-1: 🟡B18 strategy-pool漏更·第4件契约破坏·B20/B21/B22/B23已四文件原子提交·B24继续四文件原子提交·待最终闭合回执",
+    "ESC-2026-08-26-1: 🟡社会货币连续13批冷却·分享飞轮结构性停用坐实·恢复条件≥2个≥7分信号或析析定向供给新信号源",
+    "ESC-2026-08-27-1: 🟡B18 strategy-pool漏更·第4件契约破坏·B20-B24已四文件原子提交·B25继续四文件原子提交·待最终闭合回执",
     "ESC-2026-08-23-1: 🟡红队协作管道·red_team_gate.py已上线·语义红队仍真空·保持🟡观察",
     "ESC-2026-08-16-1: 🟢match gate指标混淆·ruling-017子裁决E字段拆分·已按拆分执行",
     "ESC-2026-08-21-1: ✅D21-B12供给塌方·已闭环",
     "ESC-2026-08-29-1: 🔴策略Spoke cron超时·deepseek billing 402全舰队停摆5.5天·cron timeout待技技/大卡修复(ruling-029子裁决B)",
     "ESC-2026-09-04-2: 🔴策略引擎停摆6天·B21/B22为停摆后恢复产出·回应:acknowledged",
-    "ESC-2026-09-04-3: 🔴活跃缓冲层归零(active_rate 0.0·1744沉睡用户全部滑入)·触达重建第一优先·B21/B22/B23/B24解除content-gate BLOCK后投投需恢复reach_log",
+    "ESC-2026-09-04-3: 🔴活跃缓冲层归零(active_rate 0.0·1744沉睡用户全部滑入)·触达重建第一优先",
     "ESC-2026-09-04-4: 🔴刹车'全绿'是假安全信号(0/0/0真空绿)·熔断规则覆盖缺口·待控控/大卡/技技裁决",
     "ESC-2026-09-06-1: ✅设设content-gate BLOCK·B23原子提交后gate转PASS·回应:resolved_by_b23",
-    "ESC-2026-09-07-1: 🔴设设content-gate BLOCK(direction-vessel B23 STALE 22.85h·TTL 6h)·本批B24原子提交后gate自动转PASS·回应:resolved_by_b24"
+    "ESC-2026-09-07-1: ✅设设content-gate BLOCK(direction-vessel B23 STALE)·B24原子提交后gate转PASS·回应:resolved_by_b24",
+    "ESC-2026-09-09-1: 🔴设设content-gate BLOCK(direction-vessel B24 STALE 47.66h·TTL过短)·本批B25原子提交后gate自动转PASS·回应:resolved_by_b25"
   ],
   "feedback_loop": {
     "d21_b2_execution": {
@@ -1045,25 +1045,48 @@
       "executed_at": "2026-09-07T09:25:00+08:00",
       "note": "D21-B24冻结延续(0臂¥0·第5个冻结批次)·支付~970h·960h已破~10.5h+ruling-032 C兜底(09-06)未落地+用户层归零·B24方向船已产出(策策08:15 atomic_commit·direction_missing=false)·设设B24已产5臂fresh(ISTJ反常识8.5旗舰/INFP社会证明8.4/INFJ社会证明8.4/INTJ身份认同8.0弱/ENFJ情感共鸣8.1弱·avg8.28)保留active未部署·冻结vs继续须控控/大卡/进进裁决·984h(9/7 23:00)下一阈值"
     },
-    "three_question_test_d21_b24": "⛔n/a✅✅ (cash_roi支付盲null~970h·match n/a 0臂·coverage 0·diversity n/a·B24冻结0臂)"
+    "three_question_test_d21_b24": "⛔n/a✅✅ (cash_roi支付盲null~970h·match n/a 0臂·coverage 0·diversity n/a·B24冻结0臂)",
+    "d21_b25_execution": {
+      "strategy_match": "n/a (冻结·0臂未部署·B25方向船已产出fresh·1008h已破+ruling-032 C兜底未落地+用户层归零)",
+      "strategy_match_delta": "n/a (无执行·冻结延续批次)",
+      "cash_roi": "null (支付~1018h·1008h于9/8 23:00已破~10.4h·37阈值全破·42.4天·全ROI永久作废)",
+      "mbti_coverage": 0,
+      "hook_diversity": null,
+      "hook_diversity_delta": "n/a (冻结0臂)",
+      "hhi": null,
+      "hhi_delta": "n/a (冻结0臂·无渠道集中度)",
+      "ttl_expired": 0,
+      "ttl_expired_pct": 0.0,
+      "dissent_count": 0,
+      "content_reused": 0,
+      "block_rate": 1.0,
+      "blocked_arms": 5,
+      "strategy_stale": false,
+      "direction_missing": false,
+      "freeze_reason": "延续冻结(第7个冻结批次)·支付~1018h(42.4天)·1008h(42天)9/8 23:00已破~10.4h·37阈值全破(168h→1008h)·S1首次42.4天金融盲飞·38批零结算·ruling-032 C异质provider兜底(09-06)逾期3天未落地·ruling-034 A死手开关已落盘但B静默降级逾期2天未落地·用户层归零·控控budget-vessel明令冻结延续0臂¥0·解冻条件=支付恢复+billing恢复+人类裁决均未达成",
+      "match_gate": "n/a (冻结未部署·0臂无执行层匹配率)",
+      "executed_at": "2026-09-09T09:25:00+08:00",
+      "note": "D21-B25冻结延续(0臂¥0·第7个冻结批次)·支付~1018h·1008h已破~10.4h+ruling-032 C兜底(09-06)逾期3天未落地+ruling-034 B逾期2天未落地+用户层归零·B25方向船已产出fresh(策策09-09 08:46 atomic_commit·direction_missing=false·昨日三船全STALE已解除)·设设B25已产5臂fresh(INFP情感共鸣9.0旗舰/ENFP身份认同9.0旗舰/ENTJ身份认同8.0/ENFJ社会证明7.0/INTP好奇心6.0弱·avg8.1)保留active未部署·冻结vs继续须控控/大卡/进进裁决·1032h(9/9 23:00)下一阈值"
+    },
+    "three_question_test_d21_b25": "⛔n/a✅✅ (cash_roi支付盲null~1018h·match n/a 0臂·coverage 0·diversity n/a·B25冻结0臂)"
   },
   "vessel": {
     "version": "1.0",
     "type": "strategy-pool-vessel",
-    "id": "strategy-pool-2026-09-07-0815",
+    "id": "strategy-pool-2026-09-09-0846",
     "source": {
       "agent": "策策",
       "subsystem": "策略Hub",
-      "batch": "D21-B24"
+      "batch": "D21-B25"
     },
-    "created_at": "2026-09-07T08:15:00+08:00",
-    "freshness_ttl_hours": 6,
+    "created_at": "2026-09-09T08:46:00+08:00",
+    "freshness_ttl_hours": 26,
     "priority": "high",
     "info_contract": {
-      "purpose": "D21-B24策略池·大面积恢复批·反馈闭环三问测试⛔n/a✅✅(B23冻结0臂·B18执行:strategy_match 100%·cash_roi支付盲null~946h·coverage 5·diversity 0.667·B19/B20/B21/B23冻结0部署)·strategy_stale=false→方向保持无强制切换·好奇心B23 batch2达上限→B24强制轮出·社会证明/身份认同/情感共鸣三hook恢复batch1·5人格轮出恢复(ISTJ/INFP/INFJ/INTJ/ENFJ)·反常识续batch2(400元塑料砖头8旗舰)·4hook多样性0.667(修复B23 0.333)·5臂¥125·社会货币连续12批冷却·match gate未触发(执行层strategy_match=100%B18·信号命中率18.5%为环境噪声)",
-      "stale_threshold_hours": 6,
-      "stale_action": "降级至D21-B23策略池残光",
-      "expires_after": "D21-B24策略产出或direction-vessel过期",
+      "purpose": "D21-B25策略池·轮换批·反馈闭环三问测试⛔n/a✅✅(B24冻结0臂·B18执行:strategy_match 100%·cash_roi支付盲null~1008h·coverage 0·diversity n/a·B19-B24冻结0部署)·strategy_stale=false→方向保持无强制切换·反常识B24 batch2达上限→B25强制轮出·好奇心恢复batch1·身份认同/情感共鸣/社会证明三hook续batch2·3人格恢复+2人格续触·4hook多样性0.667·5臂¥125·社会货币连续13批冷却·match gate未触发",
+      "stale_threshold_hours": 26,
+      "stale_action": "降级至D21-B24策略池残光",
+      "expires_after": "D21-B25策略产出或direction-vessel过期",
       "consumer_agents": [
         "投投",
         "策策",
@@ -1074,54 +1097,15 @@
   },
   "chains": [
     {
-      "chain_id": "D21-B24-arm1",
-      "batch_id": "D21-B24",
+      "chain_id": "D21-B25-arm1",
+      "batch_id": "D21-B25",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "400元买块\"塑料砖头\"戒手机(8分旗舰·反直觉消费/自律承诺装置·ISTJ务实自律)",
-        "category": "反常识"
-      },
-      "links": {
-        "persona": {
-          "persona_id": "ISTJ",
-          "themes_ref": [
-            {
-              "type": "mbti",
-              "value": "ISTJ"
-            }
-          ]
-        },
-        "motif": {
-          "value": null
-        },
-        "method": {
-          "value": "反常识"
-        },
-        "channel": {
-          "value": "微博"
-        },
-        "product": {
-          "value": "L1深度人格报告"
-        }
-      },
-      "why": "反常识batch2·ISTJ轮出(B22社会证明)→恢复(反常识新hook)·微博消费洞察位·⚠️严禁贩卖数字焦虑·触达重建",
-      "budget": 25,
-      "priority": "P0",
-      "status": "B24_deployed"
-    },
-    {
-      "chain_id": "D21-B24-arm2",
-      "batch_id": "D21-B24",
-      "anchor": {
-        "unmet_need": null,
-        "unmet_need_status": "null"
-      },
-      "signal": {
-        "title": "葫芦爷爷剪的不是葫芦是流量喧嚣(7分·个人边界/本真·INFP拒绝流量回归安静)",
-        "category": "社会证明"
+        "title": "下班后为什么想在车内独处(9分旗舰·自我觉醒/独处·INFP自我边界/过渡空间)",
+        "category": "情感共鸣"
       },
       "links": {
         "persona": {
@@ -1137,7 +1121,7 @@
           "value": null
         },
         "method": {
-          "value": "社会证明"
+          "value": "情感共鸣"
         },
         "channel": {
           "value": "小红书"
@@ -1146,29 +1130,107 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "社会证明恢复batch1·INFP轮出(B22身份认同)→恢复(社会证明新hook)·小红书本真位·正向",
+      "why": "情感共鸣续batch2·INFP换hook(B24社会证明→B25情感共鸣)·小红书情感/本真位·严禁framing成逃避家庭·触达重建",
       "budget": 25,
       "priority": "P0",
-      "status": "B24_deployed"
+      "status": "B25_deployed"
     },
     {
-      "chain_id": "D21-B24-arm3",
-      "batch_id": "D21-B24",
+      "chain_id": "D21-B25-arm2",
+      "batch_id": "D21-B25",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "惨遭伤害永久失明男孩完成大学报到(7分·自强/逆境/独立新生·INFJ共情)",
+        "title": "48岁倪虹洁:迟一点长大也没关系(9分旗舰·反年龄焦虑/自我接纳·ENFP自我节奏)",
+        "category": "身份认同"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENFP",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENFP"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "身份认同"
+        },
+        "channel": {
+          "value": "小红书"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "身份认同续batch2·ENFP恢复(间隔≥1批)·小红书女性成长位·正向",
+      "budget": 25,
+      "priority": "P0",
+      "status": "B25_deployed"
+    },
+    {
+      "chain_id": "D21-B25-arm3",
+      "batch_id": "D21-B25",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "郑钦文:我的巅峰期还在后面(8分旗舰·自信/长期主义·ENTJ雄心)",
+        "category": "身份认同"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ENTJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ENTJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "身份认同"
+        },
+        "channel": {
+          "value": "微博"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "身份认同续batch2·ENTJ恢复(间隔≥1批·轻微重复风险已标注)·微博体育话题位",
+      "budget": 25,
+      "priority": "P0",
+      "status": "B25_deployed"
+    },
+    {
+      "chain_id": "D21-B25-arm4",
+      "batch_id": "D21-B25",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "一年过去 年轻人还在埋头烫拼豆(7分·群体持续趋势·ENFJ社会共识)",
         "category": "社会证明"
       },
       "links": {
         "persona": {
-          "persona_id": "INFJ",
+          "persona_id": "ENFJ",
           "themes_ref": [
             {
               "type": "mbti",
-              "value": "INFJ"
+              "value": "ENFJ"
             }
           ]
         },
@@ -1185,29 +1247,29 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "社会证明恢复batch1·INFJ轮出(B22情感共鸣)→恢复(社会证明新hook)·抖音励志位·⚠️严禁消费苦难·触达重建",
+      "why": "社会证明续batch2·ENFJ换hook(B24情感共鸣→B25社会证明)·抖音年轻人趋势位·正向",
       "budget": 25,
       "priority": "P0",
-      "status": "B24_deployed"
+      "status": "B25_deployed"
     },
     {
-      "chain_id": "D21-B24-arm4",
-      "batch_id": "D21-B24",
+      "chain_id": "D21-B25-arm5",
+      "batch_id": "D21-B25",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "这里是中国科大(6分·校园/科技认同·INTJ Ni-Te科技认同)",
-        "category": "身份认同"
+        "title": "三巨头混战万元折叠屏(6分·科技好奇心·INTP技术解构)",
+        "category": "好奇心"
       },
       "links": {
         "persona": {
-          "persona_id": "INTJ",
+          "persona_id": "INTP",
           "themes_ref": [
             {
               "type": "mbti",
-              "value": "INTJ"
+              "value": "INTP"
             }
           ]
         },
@@ -1215,7 +1277,7 @@
           "value": null
         },
         "method": {
-          "value": "身份认同"
+          "value": "好奇心"
         },
         "channel": {
           "value": "B站"
@@ -1224,49 +1286,10 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "身份认同恢复batch1·INTJ轮出(B23)→恢复·B站知识位·⚠️弱信号fill(6分·恢复期降权)",
+      "why": "好奇心恢复batch1·INTP恢复(间隔≥1批)·B站科技位·⚠️弱信号fill(6分·恢复期降权)",
       "budget": 25,
       "priority": "P1",
-      "status": "B24_deployed"
-    },
-    {
-      "chain_id": "D21-B24-arm5",
-      "batch_id": "D21-B24",
-      "anchor": {
-        "unmet_need": null,
-        "unmet_need_status": "null"
-      },
-      "signal": {
-        "title": "5岁女孩哭着抢收稻谷伙伴纷纷赶来(6分·童真/互助·ENFJ Fe互助)",
-        "category": "情感共鸣"
-      },
-      "links": {
-        "persona": {
-          "persona_id": "ENFJ",
-          "themes_ref": [
-            {
-              "type": "mbti",
-              "value": "ENFJ"
-            }
-          ]
-        },
-        "motif": {
-          "value": null
-        },
-        "method": {
-          "value": "情感共鸣"
-        },
-        "channel": {
-          "value": "微博"
-        },
-        "product": {
-          "value": "L1深度人格报告"
-        }
-      },
-      "why": "情感共鸣恢复batch1·ENFJ轮出(B23)→恢复·微博话题位·⚠️弱信号fill(6分)",
-      "budget": 25,
-      "priority": "P1",
-      "status": "B24_deployed"
+      "status": "B25_deployed"
     }
   ]
 }
