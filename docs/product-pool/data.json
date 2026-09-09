@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-08-1000",
+    "id": "product-available-2026-09-09-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D39-B1·九月D8·周二"
+      "batch": "D40-B1·九月D9·周三"
     },
-    "created_at": "2026-09-08T10:00:00+08:00",
+    "created_at": "2026-09-09T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -61,7 +61,7 @@
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡",
         "l3_refactored": "L3-A/B/C重构为一次性交付物",
         "product_retirement": "无产品需退役·12箱记分卡产品线",
-        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24连续5批冻结+9/8第6批延续(0臂¥0·block_rate 1.0·friction 0.985)·零触达连续~11天·产品方向不受影响",
+        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25连续7个冻结批次(0臂¥0·block_rate 1.0·friction 0.94)·零触达连续~11-12天·方向/策略/内容三链复产(B25 fresh)·仅budget-vessel STALE·产品方向不受影响",
         "content_gate_block_resolved": "🆕 content-gate BLOCK夜间例行复发(ESC-2026-09-07-1·direction TTL 6h vs 24h节拍)→B24原子提交解除·例行误报≠生产阻断",
         "infp_fatigue_refreshed": "🟢 INFP疲劳刷新2.0→1.2(ruling-033)·永久基线假说被推翻·复评轮休结束·B24回流校准首轮兑现",
         "960h_breached": "🔴🔴🔴🔴🔴 960h(40天)已于9/6 23:00突破(~10.5h前)·35阈值全破(168h→960h)·S1首次40.4天金融盲飞·全ROI永久作废·下一阈值984h(9/7 23:00·41天)",
@@ -70,9 +70,15 @@
         "ruling_027_pointer": "🟢 B23方向船四件atomic_commit·direction-batch-current已D21-B23·上游一致性修复",
         "distribution_94pct_freeze": "🔴 分发桶94.25%(距95%差¥35)·与984h双红线重叠·控控明令冻结投放·B19/B20/B21/B23/B24连续5批冻结+9/8第6批延续",
         "n7_delivered": "✅ N7朋友关系记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D39-B1第12箱",
-        "984h_breached": "🔴🔴🔴🔴🔴🔴 984h(41天)已于9/7 23:00突破(~10.5h前)·36阈值全破(168h→984h)·S1首次41.4天金融盲飞·全ROI永久作废·下一阈值1008h(9/8 23:00·42天)"
+        "984h_breached": "🔴🔴🔴🔴🔴🔴 984h(41天)已于9/7 23:00突破(~10.5h前)·36阈值全破(168h→984h)·S1首次41.4天金融盲飞·全ROI永久作废·下一阈值1008h(9/8 23:00·42天)",
+        "1008h_breached": "🔴🔴🔴🔴🔴🔴 1008h(42天)已于9/8 23:00突破(~11h前)·37阈值全破(168h→1008h)·S1首次42.4天金融盲飞·~1018h总停滞·38批零结算·全ROI永久作废·下一阈值1032h(9/9 23:00·43天)",
+        "n8_delivered": "✅ N8社交能量记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D40-B1第13箱·社交能量母题·四型充电/蓄能/精准/外求",
+        "ruling_034_partial": "🟡 ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期2天未落地·ruling-032 C异质provider兜底(09-06)逾期3天未落地·监控链provider单点脆弱持续",
+        "three_vessels_recovered": "🟢 昨日三船全STALE已解除：direction-vessel D21-B25(09-09 08:46 atomic_commit FRESH)+strategy-pool FRESH+content FRESH·仅budget-vessel STALE~23.2h",
+        "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~66.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
+        "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~574h·策略v2.0已绕开：不依赖Plan C释放即可交付产品"
       },
-      "expires_after": "2026-09-09T10:00:00+08:00",
+      "expires_after": "2026-09-10T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -112,10 +118,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D39-B1·九月D8·周二",
-  "timestamp": "2026-09-08T10:00:00+08:00",
+  "batch": "D40-B1·九月D9·周三",
+  "timestamp": "2026-09-09T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 994,
+    "stagnant_hours": 1018,
     "thresholds_breached": [
       168,
       192,
@@ -152,16 +158,17 @@
       912,
       936,
       960,
-      984
+      984,
+      1008
     ],
-    "thresholds_total": 36,
+    "thresholds_total": 37,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 1008,
-      "at": "2026-09-08T23:00:00+08:00",
-      "label": "42天·下一阈值·~13h倒计时"
+      "hours": 1032,
+      "at": "2026-09-09T23:00:00+08:00",
+      "label": "43天·下一阈值·~13h倒计时"
     },
     "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
@@ -170,7 +177,8 @@
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
     "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天",
-    "milestone_984h": "🔴 BREACHED at 2026-09-07 23:00 (~10.5h ago)·41天·S1首次41.4天"
+    "milestone_984h": "🔴 BREACHED at 2026-09-07 23:00 (~10.5h ago)·41天·S1首次41.4天",
+    "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -178,15 +186,16 @@
     "spent": 390,
     "remaining_cap": 110,
     "frozen_bucket": 1220,
-    "frozen_days": 39,
+    "frozen_days": 40,
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b24_frozen_6th_batch_984h_breached_36_thresholds_zero_reach_11days_three_vessels_stale_content_gate_routine_product_side_12_containers_isolated",
-    "key_risk": "支付~994h(41.4天)·984h(41天)9/7 23:00已破~10.5h(36阈值全破·S1首次41.4天盲飞·38批零结算·全ROI永久作废·下一阈值1008h今晚23:00)·D21-B19/B20/B21/B23/B24连续5批冻结+9/8第6批延续(0臂¥0·block_rate 1.0·friction 0.985·零触达连续~11天)·方向/策略/预算三船全STALE(策策09-08方向船断供·B24方向~25h)·ruling-032 C异质provider兜底(09-06)仍逾期未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级未落地·用户层active归零(0.0%·INFP dormant逼近流失线~2天)·Plan C执行零~550h·杰安/河山失联~33天·psych-engine冻结~65.4天(SP象限2006人盲区)·知知缺位~42天·内容池204>>25软上限CRITICAL·社会货币连续13批冷却结构性停用",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：12箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7)一次性交付不受支付/投放冻结影响·D39-B1新增N7朋友关系记分卡第12箱(社交/友谊母题·四型治愈/校准/点亮/深交)·INFP回流校准首轮兑现(ruling-033)·B24大面积恢复批4hook多样性0.667修复·商户号Day58稳定·荐荐38批连续产出·产品侧唯一不停摆子系统",
+    "trend": "b25_frozen_7th_batch_1008h_breached_37_thresholds_zero_reach_11_12days_direction_recovered_budget_stale_product_side_13_containers_isolated",
+    "key_risk": "支付~1018h(42.4天)·1008h(42天)9/8 23:00已破~11h(37阈值全破·S1首次42.4天盲飞·38批零结算·全ROI永久作废·下一阈值1032h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25连续7个冻结批次(0臂¥0·block_rate 1.0·friction 0.94·零触达连续~11-12天)·ruling-032 C异质provider兜底(09-06)逾期3天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期2天未落地·用户层active归零(0.0%·INFP dormant距流失线~1.5天)·Plan C执行零~574h·杰安/河山失联~34天·psych-engine冻结~66.4天(SP象限2006人盲区)·知知缺位~43天·内容池354>>25软上限CRITICAL·社会货币连续13批冷却结构性停用·仅budget-vessel STALE~23.2h",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：13箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8)一次性交付不受支付/投放冻结影响·D40-B1新增N8社交能量记分卡第13箱(社交能量母题·四型充电/蓄能/精准/外求)·方向/策略/内容三链复产(B25 fresh·昨日三船全STALE已解除)·B25轮换批5臂fresh avg8.76·商户号Day59稳定·荐荐39批连续产出·产品侧唯一不停摆子系统",
     "d38_health": 4.4,
-    "d39_health": 4.4
+    "d39_health": 4.4,
+    "d40_health": 4.4
   },
   "pipeline": {
     "delivered": [
@@ -201,7 +210,8 @@
       "N3",
       "N2",
       "N5",
-      "N7"
+      "N7",
+      "N8"
     ],
     "active": [
       "L1"
@@ -213,11 +223,11 @@
       "L3-B",
       "L3-C"
     ],
-    "total_products": 12,
+    "total_products": 13,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十二箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1+N3+N2+N5+N7一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D39-B1新增N7朋友关系记分卡",
-    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7]·方向=待装配箱[L2,L3-A/B/C,N8]·统一集装箱规格·编号口径与平台对齐"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十三箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1+N3+N2+N5+N7+N8一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D40-B1新增N8社交能量记分卡",
+    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
     {
@@ -771,6 +781,71 @@
           "label": "v1.0",
           "relpath": "friendship-scorecard/friendship-scorecard-cases-v1.csv",
           "url": "files/friendship-scorecard/friendship-scorecard-cases-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "社交能量记分卡",
+      "emoji": "🔋",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡",
+        "CSV案例库"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/social-energy/social-energy-scorecard-v1.html",
+        "standards_csv": "workspace-shared/pools/products/social-energy/social-energy-standards-v1.csv",
+        "cases_csv": "workspace-shared/pools/products/social-energy/social-energy-cases-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4社交能量类型(充电型⚡/蓄能型🌙/精准型🎯/外求型🔍)→能量宣言+优势/盲区+触发/行动·Tab B 四型标准卡+8经典案例",
+      "content_source": "社交能量母题(ENFP点亮8.7/车里独处9.0/INFJ校准8.8/社恐审美8.7/关系建筑师8.7/别交到别人秤上8.7/在意别人怎么看8.6/不再证明自己8.5等8案例)·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)·D40-B1第13箱",
+      "priority": "P2·社交线·N7朋友关系姊妹箱",
+      "motif": "attachment",
+      "need": "self_confirm",
+      "target_personalities": [
+        "ENFP",
+        "ENFJ",
+        "INFP",
+        "INFJ",
+        "ISFP"
+      ],
+      "motif_note": "社交能量·四型能量管理风格·社交/能量母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
+      "key": "N8",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "social-energy/social-energy-scorecard-v1.html",
+          "url": "files/social-energy/social-energy-scorecard-v1.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v1.0",
+          "relpath": "social-energy/social-energy-standards-v1.csv",
+          "url": "files/social-energy/social-energy-standards-v1.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v1.0",
+          "relpath": "social-energy/social-energy-cases-v1.csv",
+          "url": "files/social-energy/social-energy-cases-v1.csv"
         }
       ]
     },
@@ -1440,5 +1515,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 16
+  "total": 17
 }

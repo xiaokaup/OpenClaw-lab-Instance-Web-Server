@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社交能量记分卡</title>
+<style>
+  :root { --bg:#f4f2f6; --card:#fff; --ink:#2b2b2b; --accent:#5a7a8a; --muted:#8a857d; --bdr:#e0dcd2; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#eae8f0; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#b8a9d9; }
+  .opt.sel { border-color:var(--accent); background:#f0ecf7; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f4f0fa; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🔋 社交能量记分卡</h1>
+  <div class="sub">8 题测一测 · 找到你的社交「电量」从哪来</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的社交能量类型是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    社交能量记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-09<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · N8 已发货箱（第13箱）
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "社交能量记分卡", "subtitle": "8 题测一测 · 找到你的社交「电量」从哪来", "estimated_time": "2分钟", "types": {"charger": {"name": "充电型", "emoji": "⚡", "color": "#c27a2a", "core": "你在「人群」里充电——热闹就是你的充电宝，越社交越有劲", "declaration": "我的能量宣言：我不是话多，我是把场子点亮", "strength": "快速破冰·带动氛围·让冷场变热场", "blind": "独处时电量骤降·怕冷场·依赖外部反馈续命", "case": "ENFP的社交是把人点亮（D21-B11-ENFP-2·8.7）· 扛钢管的妈妈是关系建筑师（D18-B1-2·8.7）", "trigger": "你一到人多的地方就活过来了，越热闹越精神", "action": "试着给自己留一次「一个人的局」，看看安静里能不能也充上电"}, "recharger": {"name": "蓄能型", "emoji": "🌙", "color": "#4a5a8a", "core": "你在「独处」里回血——社交是消耗，安静才是你的充电站", "declaration": "我的能量宣言：不是不想理你，是我得先把自己变回自己", "strength": "自我觉察深·独处质量高·不被外界带节奏", "blind": "容易被当「不合群」·社交后需长时间恢复·拒绝多了有负罪感", "case": "下班后我总要在车里多坐十分钟（D21-B25-INFP-1·9.0）· 你的社恐是在守护一个审美世界（D15-B2-3·8.7）", "trigger": "聚会结束后，你需要一段独处才能缓过来", "action": "试着把「独处回血」说出口，而不是硬撑到社交耗尽"}, "economizer": {"name": "精准型", "emoji": "🎯", "color": "#5a7a4a", "core": "你把能量「精准投放」——只给值得的人，拒绝无效社交耗电", "declaration": "我的能量宣言：我不随便交朋友，我在校准你会成为谁", "strength": "关系质量高·边界清晰·能量利用率高", "blind": "容易显得高冷·错过潜在好关系·慢热", "case": "INFJ不交朋友她在校准你（D17-B1-2·8.8）· 别把最珍贵的东西交到别人的秤上（D21-B9-INFP-1·8.7）", "trigger": "认识新朋友时，你会先观察很久才决定要不要走近", "action": "试着在「精准」里留一扇小门，让值得的新人有机会走进来"}, "seeker": {"name": "外求型", "emoji": "🔍", "color": "#8a4a6a", "core": "你的电量来自「被认可」——别人的眼光是你的充电器，也是你的耗电源", "declaration": "我的能量宣言：我不缺能力，我缺一句「你值得」", "strength": "在意反馈·能快速对齐他人期待·社交敏感度高", "blind": "能量随外界评价剧烈波动·容易内耗·把「被认可」当「自我价值」", "case": "我们为什么那么在意别人怎么看（D21-B5-ENFJ-1·8.6）· 你会在几岁不再证明自己（D14-B1-1·8.5）", "trigger": "当没人给你反馈时，你会突然找不到自己的价值感", "action": "试着把「认可自己」练成习惯，别把被认可当成唯一目标"}}, "questions": [{"id": 1, "type": "charger", "text": "「ENFP 的社交，是把人点亮」，你读到这句的第一反应是：", "options": [{"text": "这才是社交的最高境界：让对方发光", "scores": {"charger": 3}}, {"text": "会来事儿的人让人舒服", "scores": {"charger": 1}}, {"text": "太累了，谁都想点亮会把自己点没", "scores": {"charger": -1}}, {"text": "说得好听，就是讨好型人格", "scores": {"charger": -2}}]}, {"id": 2, "type": "charger", "text": "「扛钢管的妈妈，是关系建筑师」，你觉得「关系建筑师」说的是：", "options": [{"text": "把一家人黏在一起的，不是血缘是关系", "scores": {"charger": 3}}, {"text": "会经营关系的人厉害", "scores": {"charger": 1}}, {"text": "这话太文艺了，扛钢管就是谋生", "scores": {"charger": -1}}, {"text": "把家庭说成工程，太冷", "scores": {"charger": -2}}]}, {"id": 3, "type": "recharger", "text": "「下班后，我总要在车里多坐十分钟」，你的第一反应是：", "options": [{"text": "那不是逃避，是在过渡——把自己变回自己", "scores": {"recharger": 3}}, {"text": "上班累，谁不想喘口气", "scores": {"recharger": 1}}, {"text": "到家门口不下车，太矫情了", "scores": {"recharger": -1}}, {"text": "这有什么好说的，大家都这样", "scores": {"recharger": -2}}]}, {"id": 4, "type": "recharger", "text": "「你的社恐，是在守护一个审美世界」，你认同：", "options": [{"text": "安静是选择，不是缺陷", "scores": {"recharger": 3}}, {"text": "内向的人有自己的世界", "scores": {"recharger": 1}}, {"text": "社恐就是社恐，别美化", "scores": {"recharger": -1}}, {"text": "这是给「不合群」找借口", "scores": {"recharger": -2}}]}, {"id": 5, "type": "economizer", "text": "「INFJ 不交朋友，是在校准你」，你觉得：", "options": [{"text": "交朋友是双向选择，先看清再投入", "scores": {"economizer": 3}}, {"text": "慢热一点没坏处", "scores": {"economizer": 1}}, {"text": "太谨慎了，会错过很多", "scores": {"economizer": -1}}, {"text": "装清高，交个朋友还挑三拣四", "scores": {"economizer": -2}}]}, {"id": 6, "type": "economizer", "text": "「别把最珍贵的东西，交到别人的秤上」，你读到的是：", "options": [{"text": "热爱不该被定价、被比较", "scores": {"economizer": 3}}, {"text": "人要给自己留一块不交出去的地方", "scores": {"economizer": 1}}, {"text": "说得太理想了，生活要吃饭", "scores": {"economizer": -1}}, {"text": "不交出去就是矫情，市场说了算", "scores": {"economizer": -2}}]}, {"id": 7, "type": "seeker", "text": "「我们为什么那么在意别人怎么看」，你觉得最扎心的是：", "options": [{"text": "越在意外面怎么看，越说明心里还没被自己认可", "scores": {"seeker": 3}}, {"text": "谁都希望被认可，正常", "scores": {"seeker": 1}}, {"text": "在意别人看法就是没主见", "scores": {"seeker": -1}}, {"text": "这是贩卖焦虑，别想太多", "scores": {"seeker": -2}}]}, {"id": 8, "type": "seeker", "text": "「你会在几岁，不再证明自己」，你的第一反应是：", "options": [{"text": "什么时候不再向谁证明，才算活明白了", "scores": {"seeker": 3}}, {"text": "人总在证明自己，很正常", "scores": {"seeker": 1}}, {"text": "不证明自己就是没上进心", "scores": {"seeker": -1}}, {"text": "这问题太矫情了", "scores": {"seeker": -2}}]}], "cases": [{"type": "充电型", "id": "D21-B11-ENFP-2", "title": "ENFP的社交是把人点亮", "q": 8.7, "summary": "最高级的社交不是话多，是把对方身上最亮的地方照亮"}, {"type": "充电型", "id": "D18-B1-2", "title": "扛钢管的妈妈是关系建筑师", "q": 8.7, "summary": "把一家人黏在一起的不是血缘，是她用一次次托举砌起来的关系"}, {"type": "蓄能型", "id": "D21-B25-INFP-1", "title": "下班后我总要在车里多坐十分钟", "q": 9.0, "summary": "那不是逃避，是过渡——先把自己变回自己，再推开那扇门"}, {"type": "蓄能型", "id": "D15-B2-3", "title": "你的社恐是在守护一个审美世界", "q": 8.7, "summary": "强行把安静的人拉进喧闹，等于把一幅画扔进了菜市场"}, {"type": "精准型", "id": "D17-B1-2", "title": "INFJ不交朋友她在校准你", "q": 8.8, "summary": "她不是冷漠，是在校准你会成为的那个人，再决定要不要陪你走这段路"}, {"type": "精准型", "id": "D21-B9-INFP-1", "title": "别把最珍贵的东西交到别人的秤上", "q": 8.7, "summary": "保护热爱最好的方式，是永远给自己留一块不交出去的地方"}, {"type": "外求型", "id": "D21-B5-ENFJ-1", "title": "我们为什么那么在意别人怎么看", "q": 8.6, "summary": "外界的掌声是镜子不是答案，真正的底气是自己知道自己值多少"}, {"type": "外求型", "id": "D14-B1-1", "title": "你会在几岁不再证明自己", "q": 8.5, "summary": "当不再向谁证明自己，才算真正把自己接回了家"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池社交能量母题（ENFP点亮 8.7 / 车里独处 9.0 / INFJ校准 8.8 / 社恐审美 8.7 / 关系建筑师 8.7 / 别交到别人秤上 8.7 / 在意别人怎么看 8.6 / 不再证明自己 8.5）提炼的趣味倾向测试，用于自我觉察与能量管理反思，不构成心理诊断或人格测量。", "result_fields": [{"key": "declaration", "label": "💬 能量宣言"}, {"key": "strength", "label": "⚡ 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ cells.push(`<div class="cell"><h3>${fields.find(x=>x.key===f.k)?.label||f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
