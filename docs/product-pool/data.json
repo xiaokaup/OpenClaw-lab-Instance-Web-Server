@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-09-1000",
+    "id": "product-available-2026-09-10-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D40-B1·九月D9·周三"
+      "batch": "D41-B1·九月D10·周四"
     },
-    "created_at": "2026-09-09T10:00:00+08:00",
+    "created_at": "2026-09-10T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -47,7 +47,7 @@
       "purpose": "荐荐管理的产品目录池·策略v2.0：产品与支付脱钩·全部重构为一次性交付物·优先人格积分卡类·供策策/投投/控控/大卡/设设/析析消费",
       "excludes": "定价决策权(属策策·但定价不再作为交付前置)·内容生产权(属设设)·预算分配权(属大卡)",
       "action_threshold": {
-        "payment_uncoupled": "🔴🔴 支付停滞~994h(41.4天)·984h(41天)已于9/7 23:00突破(~10.5h前)·36阈值全破·1008h(42天)9/8 23:00下一阈值·产品侧一次性交付(12箱记分卡)完全隔离",
+        "payment_uncoupled": "🔴🔴 支付停滞~1041h(43.4天)·1032h(43天)已于9/9 23:00突破(~10.4h前)·38阈值全破·S1首次43.4天金融盲飞·1056h(44天)9/10 23:00下一阈值·产品侧一次性交付(14箱记分卡)完全隔离",
         "s1_delivered": "✅ S1人格记分卡v1.0+v2.0已交付(CSV+静态HTML双形态·8题双Tab)·首选旗舰",
         "s2_delivered": "✅ S2依恋类型记分卡已交付(CSV+HTML+v2.0双Tab)+v1.1双人匹配卡",
         "s3_delivered": "✅ S3认知功能速查卡已交付(CSV+HTML+v2.0双Tab·8认知功能)",
@@ -61,7 +61,7 @@
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡",
         "l3_refactored": "L3-A/B/C重构为一次性交付物",
         "product_retirement": "无产品需退役·12箱记分卡产品线",
-        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25连续7个冻结批次(0臂¥0·block_rate 1.0·friction 0.94)·零触达连续~11-12天·方向/策略/内容三链复产(B25 fresh)·仅budget-vessel STALE·产品方向不受影响",
+        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26连续8个冻结批次(0臂¥0·block_rate 1.0·friction 0.94)·零触达连续~13天·方向/策略/内容三链复产(B26供给约束批fresh·仅budget-vessel STALE~47.2h)·产品方向不受影响",
         "content_gate_block_resolved": "🆕 content-gate BLOCK夜间例行复发(ESC-2026-09-07-1·direction TTL 6h vs 24h节拍)→B24原子提交解除·例行误报≠生产阻断",
         "infp_fatigue_refreshed": "🟢 INFP疲劳刷新2.0→1.2(ruling-033)·永久基线假说被推翻·复评轮休结束·B24回流校准首轮兑现",
         "960h_breached": "🔴🔴🔴🔴🔴 960h(40天)已于9/6 23:00突破(~10.5h前)·35阈值全破(168h→960h)·S1首次40.4天金融盲飞·全ROI永久作废·下一阈值984h(9/7 23:00·41天)",
@@ -73,12 +73,14 @@
         "984h_breached": "🔴🔴🔴🔴🔴🔴 984h(41天)已于9/7 23:00突破(~10.5h前)·36阈值全破(168h→984h)·S1首次41.4天金融盲飞·全ROI永久作废·下一阈值1008h(9/8 23:00·42天)",
         "1008h_breached": "🔴🔴🔴🔴🔴🔴 1008h(42天)已于9/8 23:00突破(~11h前)·37阈值全破(168h→1008h)·S1首次42.4天金融盲飞·~1018h总停滞·38批零结算·全ROI永久作废·下一阈值1032h(9/9 23:00·43天)",
         "n8_delivered": "✅ N8社交能量记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D40-B1第13箱·社交能量母题·四型充电/蓄能/精准/外求",
-        "ruling_034_partial": "🟡 ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期2天未落地·ruling-032 C异质provider兜底(09-06)逾期3天未落地·监控链provider单点脆弱持续",
-        "three_vessels_recovered": "🟢 昨日三船全STALE已解除：direction-vessel D21-B25(09-09 08:46 atomic_commit FRESH)+strategy-pool FRESH+content FRESH·仅budget-vessel STALE~23.2h",
-        "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~66.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
-        "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~574h·策略v2.0已绕开：不依赖Plan C释放即可交付产品"
+        "ruling_034_partial": "🟡 ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期3天未落地·ruling-032 C异质provider兜底(09-06)逾期4天未落地·监控链provider单点脆弱持续",
+        "three_vessels_recovered": "🟢 方向/策略/内容三链持续复产：direction-vessel D21-B26(09-10 08:22:53 atomic_commit FRESH)+strategy-pool FRESH+content FRESH·仅budget-vessel STALE~47.2h(控控cron 10:10未到)",
+        "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~67.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
+        "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~598h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
+        "1032h_breached": "🔴🔴🔴🔴🔴🔴 1032h(43天)已于9/9 23:00突破(~10.4h前)·38阈值全破(168h→1032h)·S1首次43.4天金融盲飞·~1041h总停滞·38批零结算·全ROI永久作废·下一阈值1056h(9/10 23:00·44天)",
+        "b2_delivered": "✅ #2恋爱类型记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D41-B1第14箱·16型映射(Keirsey四气质)·四型恋爱人设"
       },
-      "expires_after": "2026-09-10T10:00:00+08:00",
+      "expires_after": "2026-09-11T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -118,10 +120,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D40-B1·九月D9·周三",
-  "timestamp": "2026-09-09T10:00:00+08:00",
+  "batch": "D41-B1·九月D10·周四",
+  "timestamp": "2026-09-10T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 1018,
+    "stagnant_hours": 1041,
     "thresholds_breached": [
       168,
       192,
@@ -159,26 +161,28 @@
       936,
       960,
       984,
-      1008
+      1008,
+      1032
     ],
-    "thresholds_total": 37,
+    "thresholds_total": 38,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 1032,
-      "at": "2026-09-09T23:00:00+08:00",
-      "label": "43天·下一阈值·~13h倒计时"
+      "hours": 1056,
+      "at": "2026-09-10T23:00:00+08:00",
+      "label": "44天·下一阈值·~13h倒计时"
     },
     "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
     "zero_settlement_batches": 38,
-    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(12箱记分卡)完全隔离于支付/投放冻结",
+    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(14箱记分卡)完全隔离于支付/投放冻结",
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
     "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天",
     "milestone_984h": "🔴 BREACHED at 2026-09-07 23:00 (~10.5h ago)·41天·S1首次41.4天",
-    "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天"
+    "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天",
+    "milestone_1032h": "🔴🔴 BREACHED at 2026-09-09 23:00 (~10.4h ago)·43天·S1首次43.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -190,12 +194,13 @@
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b25_frozen_7th_batch_1008h_breached_37_thresholds_zero_reach_11_12days_direction_recovered_budget_stale_product_side_13_containers_isolated",
-    "key_risk": "支付~1018h(42.4天)·1008h(42天)9/8 23:00已破~11h(37阈值全破·S1首次42.4天盲飞·38批零结算·全ROI永久作废·下一阈值1032h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25连续7个冻结批次(0臂¥0·block_rate 1.0·friction 0.94·零触达连续~11-12天)·ruling-032 C异质provider兜底(09-06)逾期3天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期2天未落地·用户层active归零(0.0%·INFP dormant距流失线~1.5天)·Plan C执行零~574h·杰安/河山失联~34天·psych-engine冻结~66.4天(SP象限2006人盲区)·知知缺位~43天·内容池354>>25软上限CRITICAL·社会货币连续13批冷却结构性停用·仅budget-vessel STALE~23.2h",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：13箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8)一次性交付不受支付/投放冻结影响·D40-B1新增N8社交能量记分卡第13箱(社交能量母题·四型充电/蓄能/精准/外求)·方向/策略/内容三链复产(B25 fresh·昨日三船全STALE已解除)·B25轮换批5臂fresh avg8.76·商户号Day59稳定·荐荐39批连续产出·产品侧唯一不停摆子系统",
+    "trend": "b26_frozen_8th_batch_1032h_breached_38_thresholds_zero_reach_13days_direction_recovered_budget_stale_product_side_14_containers_isolated",
+    "key_risk": "支付~1041h(43.4天)·1032h(43天)9/9 23:00已破~10.4h(38阈值全破·S1首次43.4天盲飞·38批零结算·全ROI永久作废·下一阈值1056h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26连续8个冻结批次(0臂¥0·block_rate 1.0·friction 0.94·零触达连续~13天)·ruling-032 C异质provider兜底(09-06)逾期4天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期3天未落地·用户层active归零(0.0%·INFP dormant~13天距流失线~1天)·Plan C执行零~598h·杰安/河山失联~35天·psych-engine冻结~67.4天(SP象限2006人盲区)·知知缺位~44天·内容池360>>25软上限CRITICAL·社会货币连续14批冷却结构性停用·仅budget-vessel STALE~47.2h·B26供给约束(2hook多样性0.333)",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：14箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2)一次性交付不受支付/投放冻结影响·D41-B1新增#2恋爱类型记分卡第14箱(关系/依恋线·四型恋爱人设·16型映射)·方向/策略/内容三链复产(B26供给约束批fresh·昨日三船STALE仅budget未解除)·B26方向船3臂¥75已产出·商户号Day60稳定·荐荐40批连续产出·产品侧唯一不停摆子系统",
     "d38_health": 4.4,
     "d39_health": 4.4,
-    "d40_health": 4.4
+    "d40_health": 4.4,
+    "d41_health": 4.4
   },
   "pipeline": {
     "delivered": [
@@ -211,7 +216,8 @@
       "N2",
       "N5",
       "N7",
-      "N8"
+      "N8",
+      "#2"
     ],
     "active": [
       "L1"
@@ -223,10 +229,10 @@
       "L3-B",
       "L3-C"
     ],
-    "total_products": 13,
+    "total_products": 14,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十三箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1+N3+N2+N5+N7+N8一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D40-B1新增N8社交能量记分卡",
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十四箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D41-B1新增#2恋爱类型记分卡",
     "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
@@ -297,6 +303,82 @@
           "label": "v1.0",
           "relpath": "counterintuitive-card/counterintuitive-card-cases-v1.csv",
           "url": "files/counterintuitive-card/counterintuitive-card-cases-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "恋爱类型记分卡",
+      "emoji": "💞",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡",
+        "CSV案例库"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/love-type-scorecard/love-type-scorecard-v1.html",
+        "standards_csv": "workspace-shared/pools/products/love-type-scorecard/love-type-scorecard-standards-v1.csv",
+        "cases_csv": "workspace-shared/pools/products/love-type-scorecard/love-type-scorecard-cases-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4恋爱类型(治愈型💗/守护型🛡️/探险型🚀/洞察型🔮)→恋爱宣言+优势/盲区+触发/行动·Tab B 四型标准卡+8经典案例·16型映射(Keirsey四气质)",
+      "content_source": "内容池关系/依恋母题(结婚38年补拍婚纱照7.0/被争着养8.9/过夜争吵9.0/别交到别人的秤上8.7/成年人爱敢说出口8.5/七夕红包520 8.5/吵架跳江游回来8.9/3孩非亲生8.0等8案例)+web恋爱类型测试形态验证·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)·D41-B1第14箱",
+      "priority": "P2·关系/依恋线·16型恋爱类型卡方向落地",
+      "motif": "attachment",
+      "need": "relationship_safety",
+      "target_personalities": [
+        "ENFJ",
+        "ENFP",
+        "INFJ",
+        "INFP",
+        "ESTJ",
+        "ESFJ",
+        "ISTJ",
+        "ISFJ",
+        "ESTP",
+        "ESFP",
+        "ISTP",
+        "ISFP",
+        "ENTJ",
+        "ENTP",
+        "INTJ",
+        "INTP"
+      ],
+      "motif_note": "恋爱类型·四型恋爱人设(治愈/守护/探险/洞察)·16型映射·关系/依恋母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "life_stage": [
+          "early_career",
+          "established",
+          "family_building"
+        ],
+        "gender": [
+          "female",
+          "male"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
+      "key": "#2",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "love-type-scorecard/love-type-scorecard-v1.html",
+          "url": "files/love-type-scorecard/love-type-scorecard-v1.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v1.0",
+          "relpath": "love-type-scorecard/love-type-scorecard-standards-v1.csv",
+          "url": "files/love-type-scorecard/love-type-scorecard-standards-v1.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v1.0",
+          "relpath": "love-type-scorecard/love-type-scorecard-cases-v1.csv",
+          "url": "files/love-type-scorecard/love-type-scorecard-cases-v1.csv"
         }
       ]
     },
@@ -1515,5 +1597,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 17
+  "total": 18
 }

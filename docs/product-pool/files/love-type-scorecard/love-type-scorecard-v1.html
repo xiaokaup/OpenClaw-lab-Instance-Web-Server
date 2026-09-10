@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>恋爱类型记分卡</title>
+<style>
+  :root { --bg:#fdf2f4; --card:#fff; --ink:#2b2b2b; --accent:#b05a6e; --muted:#8a857d; --bdr:#ecd8dc; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#fbeaee; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#d89aa8; }
+  .opt.sel { border-color:var(--accent); background:#fbeef0; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fbf0f2; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>💞 恋爱类型记分卡</h1>
+  <div class="sub">8 题测一测 · 找到你在爱里的「人设」</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的恋爱类型是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    恋爱类型记分卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-10<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · #2 已发货箱（第14箱）
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "恋爱类型记分卡", "subtitle": "8 题测一测 · 找到你在爱里的「人设」", "estimated_time": "2分钟", "types": {"healer": {"name": "治愈型", "emoji": "💗", "color": "#c27a5a", "core": "你的爱是「陪伴与疗愈」——不急着解决问题，先接住对方的情绪", "declaration": "我的恋爱宣言：我不需要轰轰烈烈，我需要「你懂我的不容易」", "strength": "共情力强·情绪接得住·让对方感觉被治愈", "blind": "容易过度付出·把对方的情绪背在自己身上·忽略自己的需求", "case": "结婚38年才补拍婚纱照（D21-B12-INFP-1·7.0）· 被争着养是攒了一辈子的值得（D21-B8-ENFJ-1·8.9）", "trigger": "当对方难过时，你第一反应是「陪他/她」，而不是「给方案」", "action": "试着先问「你需要我陪你，还是需要我帮你出主意」，别默认替对方扛", "mbti": "ENFJ·ENFP·INFJ·INFP"}, "guardian": {"name": "守护型", "emoji": "🛡️", "color": "#4a5a6a", "core": "你的爱是「稳定与托底」——不说太多，但一直都在", "declaration": "我的恋爱宣言：我不擅长浪漫，但我会是你最稳的那张底牌", "strength": "靠谱·有边界·长期主义·说到做到", "blind": "容易用「拒绝/规则」表达爱·显得冷·把情绪藏太深", "case": "一场过夜争吵藏着每个家庭的边界（D21-B4-INFJ-1·9.0）· 别把最珍贵的东西交到别人的秤上（D21-B9-INFP-1·8.7）", "trigger": "你表达爱的方式，是「为你挡住风险」，而不是「说爱你」", "action": "试着把「我担心你」说出口，别只用行动让对方猜", "mbti": "ESTJ·ESFJ·ISTJ·ISFJ"}, "adventurer": {"name": "探险型", "emoji": "🚀", "color": "#5a7a4a", "core": "你的爱是「热情与新鲜」——敢表达、敢体验，把日子过成冒险", "declaration": "我的恋爱宣言：我不怕爱得热烈，我怕的是「不敢开始」", "strength": "敢表达·有感染力·能带动对方·让关系保鲜", "blind": "容易三分钟热度·新鲜感过了就倦·把「激情」当「爱」本身", "case": "成年人的爱敢说出口才算数（D21-B9-ENFP-1·8.5）· 七夕微信红包开到520（D21-B10-ENFP-1·8.5）", "trigger": "你愿意主动说「我在爱」，不玩暧昧试探那一套", "action": "试着在「新鲜感」之后，练习把热情沉淀成陪伴", "mbti": "ESTP·ESFP·ISTP·ISFP"}, "insightful": {"name": "洞察型", "emoji": "🔮", "color": "#8a4a6a", "core": "你的爱是「理解与看透」——看清冲突背后的本质，连接而非纠缠", "declaration": "我的恋爱宣言：我想先看懂你，再决定怎么爱你", "strength": "洞察深·能看透冲突本质·不做情绪化反应", "blind": "容易过度分析·把「看懂」当「连接」·显得疏离·错过当下", "case": "男子吵架跳江第二天自己游回来（D21-B8-ENTP-1·8.9）· 3孩非亲生案庭审男方发声（D21-B9-INFJ-1·8.0）", "trigger": "吵架时你第一反应是「为什么会这样」，而不是「谁对谁错」", "action": "试着在「看透」之后，多给一点「此刻」的回应，别总在分析", "mbti": "ENTJ·ENTP·INTJ·INTP"}}, "questions": [{"id": 1, "type": "healer", "text": "「结婚38年，才补拍婚纱照——不是补办婚礼，是两个人安安静静把迟到38年的那张照片补上」，你读到：", "options": [{"text": "爱情最好的样子，就是平平淡淡一起变老", "scores": {"healer": 3}}, {"text": "能一起走过38年，不容易", "scores": {"healer": 1}}, {"text": "38年不秀恩爱，说明感情早就淡了", "scores": {"healer": -1}}, {"text": "补拍婚纱照，是给外人看的仪式感", "scores": {"healer": -2}}]}, {"id": 2, "type": "healer", "text": "「被争着养，是攒了一辈子的『值得』」，你觉得：", "options": [{"text": "被爱不是天生的，是一点一点攒出来的", "scores": {"healer": 3}}, {"text": "妈妈以前一定也温柔对待过孩子", "scores": {"healer": 1}}, {"text": "孝顺是义务，说那么煽情干嘛", "scores": {"healer": -1}}, {"text": "四个儿子争养，是家庭条件好", "scores": {"healer": -2}}]}, {"id": 3, "type": "guardian", "text": "「女儿想过夜被爸爸拒绝，全网吵翻」，你觉得这场争吵真正的主角是：", "options": [{"text": "不是「该不该过夜」，是「边界」两个字", "scores": {"guardian": 3}}, {"text": "爸爸是担心女儿安全", "scores": {"guardian": 1}}, {"text": "孩子大了，管太多反而不对", "scores": {"guardian": -1}}, {"text": "这种小事也值得吵，太矫情", "scores": {"guardian": -2}}]}, {"id": 4, "type": "guardian", "text": "「别把最珍贵的东西，交到别人的秤上」，你读到的是：", "options": [{"text": "真正珍贵的东西，不该被定价、被比较", "scores": {"guardian": 3}}, {"text": "人要给自己留一块不交出去的地方", "scores": {"guardian": 1}}, {"text": "说得太理想，生活还是要吃饭", "scores": {"guardian": -1}}, {"text": "不交出去就是矫情", "scores": {"guardian": -2}}]}, {"id": 5, "type": "adventurer", "text": "「成年人的爱，敢说出口才算数」，你的第一反应是：", "options": [{"text": "敢坦然说「我需要你」的人，更容易遇到对的人", "scores": {"adventurer": 3}}, {"text": "先试探再暧昧，确实很累", "scores": {"adventurer": 1}}, {"text": "谁先承认谁就输了，不能太主动", "scores": {"adventurer": -1}}, {"text": "说出口了也不一定长久", "scores": {"adventurer": -2}}]}, {"id": 6, "type": "adventurer", "text": "「七夕，微信把红包上限开到520」，你盯着那个数字想到的是：", "options": [{"text": "520不是金额，是把心意说出口的勇气", "scores": {"adventurer": 3}}, {"text": "微信挺会做节日的", "scores": {"adventurer": 1}}, {"text": "一个红包也当回事，太物质", "scores": {"adventurer": -1}}, {"text": "数字营销而已，别当真", "scores": {"adventurer": -2}}]}, {"id": 7, "type": "insightful", "text": "「男子跟老婆吵架跳江，第二天自己又游回来了」，你觉得这故事里最真实的是：", "options": [{"text": "情绪上头的那一刻，荒诞里藏着没说完的话", "scores": {"insightful": 3}}, {"text": "吵架吵到跳江，太冲动了", "scores": {"insightful": 1}}, {"text": "这就是博眼球", "scores": {"insightful": -1}}, {"text": "婚姻吵到这样，早该离了", "scores": {"insightful": -2}}]}, {"id": 8, "type": "insightful", "text": "「3孩非亲生案庭审结束，男方发声」，你第一反应是想知道：", "options": [{"text": "这段婚姻里，信任是怎么一步步崩掉的", "scores": {"insightful": 3}}, {"text": "三个孩子以后怎么办", "scores": {"insightful": 1}}, {"text": "男方可真惨", "scores": {"insightful": -1}}, {"text": "这种狗血新闻有什么好关注的", "scores": {"insightful": -2}}]}], "cases": [{"type": "治愈型", "id": "D21-B12-INFP-1", "title": "结婚38年才补拍婚纱照", "q": 7.0, "summary": "爱情最好的样子，是平平淡淡一起变老——安全型依恋不是离不开，是愿意一直在"}, {"type": "治愈型", "id": "D21-B8-ENFJ-1", "title": "被争着养是攒了一辈子的值得", "q": 8.9, "summary": "被爱不是天生的，是被一次次温柔回应后，一点一点攒出来的值得"}, {"type": "守护型", "id": "D21-B4-INFJ-1", "title": "一场过夜争吵藏着每个家庭的边界", "q": 9.0, "summary": "有的家庭用拒绝表达爱，有的用承担表达爱——两种爱没有对错，都是守护"}, {"type": "守护型", "id": "D21-B9-INFP-1", "title": "别把最珍贵的东西交到别人的秤上", "q": 8.7, "summary": "保护热爱最好的方式，是永远给自己留一块不交出去的地方"}, {"type": "探险型", "id": "D21-B9-ENFP-1", "title": "成年人的爱敢说出口才算数", "q": 8.5, "summary": "敢坦然说「我需要你」的人，反而更早遇到对的人"}, {"type": "探险型", "id": "D21-B10-ENFP-1", "title": "七夕微信红包开到520", "q": 8.5, "summary": "520不是金额，是「我想说很多又怕说太多」的人，终于把心意说出口"}, {"type": "洞察型", "id": "D21-B8-ENTP-1", "title": "男子吵架跳江第二天自己游回来", "q": 8.9, "summary": "情绪上头的那一刻，荒诞里藏着没说出口的话——看懂冲突，才接得住彼此"}, {"type": "洞察型", "id": "D21-B9-INFJ-1", "title": "3孩非亲生案庭审男方发声", "q": 8.0, "summary": "婚姻最痛的不是对错，是信任怎么一步步崩掉——看透本质才能不再纠缠"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池关系/依恋母题（结婚38年补拍婚纱照 7.0 / 被争着养 8.9 / 过夜争吵 9.0 / 别交到别人的秤上 8.7 / 成年人的爱敢说出口 8.5 / 七夕红包520 8.5 / 吵架跳江游回来 8.9 / 3孩非亲生 8.0）提炼的趣味恋爱人设倾向测试，用于自我觉察与关系反思，不构成心理诊断或人格测量。", "result_fields": [{"key": "declaration", "label": "💬 恋爱宣言"}, {"key": "strength", "label": "💪 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const fields = DATA.result_fields;
+  const cells = [];
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  tv.forEach(f=>{ const lab = fields.find(x=>x.key===f.k); cells.push(`<div class="cell"><h3>${lab?lab.label:f.k}</h3><p>${f.v}</p></div>`); });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">16型映射：${t.mbti}</span><span class="tag">${DATA.estimated_time}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>16型映射</b>：${t.mbti}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · ${c.id} · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>
