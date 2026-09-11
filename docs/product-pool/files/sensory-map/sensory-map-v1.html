@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格感官映射卡</title>
+<style>
+  :root { --bg:#f6f4f1; --card:#fff; --ink:#2b2b2b; --accent:#6b5b8a; --muted:#8a857d; --bdr:#e6e2da; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#efece6; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#c9b8d8; }
+  .opt.sel { border-color:var(--accent); background:#f1edf6; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f0eee6; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#f4f0f7; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎨 人格感官映射卡</h1>
+  <div class="sub">8 题测一测 · 找到你的「代表动物 / 颜色 / 歌单」</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的感官人格是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型感官档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格感官映射卡 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-11<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · #7 已发货箱（第15箱）· 多感官选择器
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格感官映射卡", "subtitle": "8 题测一测 · 找到你的「代表动物 / 颜色 / 歌单」", "estimated_time": "2分钟", "types": {"quiet": {"name": "静谧型", "emoji": "🐈", "color": "#7b8794", "core": "你的感官偏爱「留白」——信息越少，你越安心", "declaration": "我的感官宣言：我不是冷漠，我只是需要一片安静，把世界看清楚", "animal": "猫（不吵不闹·自成一界）", "palette": "雾灰蓝", "playlist": "氛围音乐 / 白噪音 / 后摇", "scent": "雨后青草 / 旧书页", "strength": "专注力强·对细节敏感·能长期沉浸·抗噪", "blind": "容易把自己关进壳里·对热闹过敏·错过需要参与的当下", "case": "下班后为什么想在车内独处（9.0）· 你说的社恐其实是ISFP在守护一个不能被打扰的审美（8.7）", "trigger": "嘈杂聚会里，你最先想溜走的那一刻", "action": "给自己留每天30分钟的「感官留白」，也试着主动走进一次热闹", "mbti": "INTJ·INTP·ISTJ·ISTP"}, "warm": {"name": "烟火型", "emoji": "🔥", "color": "#e07a3f", "core": "你的感官偏爱「温度」——有烟火气的地方，你才觉得活着", "declaration": "我的感官宣言：热闹不是噪音，是人间的温度", "animal": "金毛犬（热络·想靠近）", "palette": "落日橙红", "playlist": "现场民谣 / 流行热歌 / 合唱", "scent": "饭菜香 / 柴火 / 烤面包", "strength": "感染力强·能暖场·善于共情·让人放松", "blind": "容易把别人的情绪扛上身·热闹散去后容易空落", "case": "胖东来周边店主生意没了心气也没了（8.8）· 结婚38年他们才补拍婚纱照（7.0）", "trigger": "饭桌上一群人因为你笑作一团的那一刻", "action": "热闹之后，记得给自己留一点「收尾」的独处，别只输出温度", "mbti": "ENFP·ENFJ·ESFP·ESFJ"}, "nature": {"name": "自然型", "emoji": "🌲", "color": "#6a8f5f", "core": "你的感官偏爱「生长」——自然的东西，最能给你充电", "declaration": "我的感官宣言：我不是慢，我只是按自己的节奏生长", "animal": "鹿（温和·警觉·靠近自然）", "palette": "森绿苔青", "playlist": "自然白噪音 / 民谣 / 轻疗愈", "scent": "草木 / 木质 / 青苔", "strength": "稳定·疗愈力强·对情绪敏感·能滋养别人", "blind": "容易回避冲突·把自己活成别人的树洞·忽略自己", "case": "葫芦爷爷剪的不是葫芦是流量喧嚣（8.4）· 大雨将至一家六口6分钟收完一千斤稻谷（8.7）", "trigger": "走进一片绿意 / 闻到雨后泥土味就放松下来的那一刻", "action": "定期给自己安排「自然充电」日，也学会向别人说「我需要」", "mbti": "INFJ·INFP·ISFJ·ISFP"}, "neon": {"name": "霓虹型", "emoji": "🦊", "color": "#7a5bd0", "core": "你的感官偏爱「冲击」——新鲜和未来感，最能点燃你", "declaration": "我的感官宣言：我不是叛逆，我只是不想活成模板", "animal": "狐狸（机敏·狡黠·先锋）", "palette": "霓虹紫电光蓝", "playlist": "电子 / 先锋 / 独立", "scent": "咖啡 / 金属 / 雨后城市", "strength": "思维快·敢尝新·能洞察本质·引领潮流", "blind": "容易三分钟热度·把「新」当「好」·忽略稳定价值", "case": "车企终于承认取消实体按键是过去十年最昂贵的极简（8.8）· 男子吵架跳江第二天自己游回来（8.9）", "trigger": "看到一个新东西就想「我要第一个试」的那一刻", "action": "追逐新鲜的同时，练习把一件事做到「深」，别只求「先」", "mbti": "ENTJ·ENTP·ESTJ·ESTP"}}, "questions": [{"id": 1, "type": "quiet", "text": "「下班后，你总想在车里多坐一会儿再上楼」，你懂这种感受吗？", "options": [{"text": "车里的几分钟，是给感官一个「不被要求回应」的留白", "scores": {"quiet": 3}}, {"text": "说明你有点累，需要休息", "scores": {"quiet": 1}}, {"text": "在车里坐着干嘛，回家不好吗", "scores": {"quiet": -1}}, {"text": "这是一种拖延", "scores": {"quiet": -2}}]}, {"id": 2, "type": "quiet", "text": "「社恐其实是ISFP在守护一个不能被打扰的审美」，你读到：", "options": [{"text": "社恐不是缺陷，是有人需要把审美关进安静的房间才能守护", "scores": {"quiet": 3}}, {"text": "每个人都有自己的小世界", "scores": {"quiet": 1}}, {"text": "社恐就是不会社交，别美化", "scores": {"quiet": -1}}, {"text": "太矫情了", "scores": {"quiet": -2}}]}, {"id": 3, "type": "warm", "text": "「胖东来周边店主说：生意没了，心气也没了」，你第一反应是：", "options": [{"text": "烟火气散了，人还在——「心气」是普通人对明天的全部押注", "scores": {"warm": 3}}, {"text": "小店生意确实不容易", "scores": {"warm": 1}}, {"text": "市场就是这样，优胜劣汰", "scores": {"warm": -1}}, {"text": "关我什么事", "scores": {"warm": -2}}]}, {"id": 4, "type": "warm", "text": "「结婚38年，才补拍婚纱照」，你读到的是：", "options": [{"text": "一张迟到的照片里，有38年的温度", "scores": {"warm": 3}}, {"text": "能一起走过38年不容易", "scores": {"warm": 1}}, {"text": "补拍婚纱照是给外人看的", "scores": {"warm": -1}}, {"text": "老夫老妻还整这些", "scores": {"warm": -2}}]}, {"id": 5, "type": "nature", "text": "「葫芦爷爷剪的不是葫芦，是流量喧嚣」，你觉得他剪掉的是：", "options": [{"text": "把喧嚣剪掉，剩下的才是生长——慢下来的人最先听见自然", "scores": {"nature": 3}}, {"text": "老人有自己的节奏", "scores": {"nature": 1}}, {"text": "剪葫芦能有什么深意", "scores": {"nature": -1}}, {"text": "又是炒作", "scores": {"nature": -2}}]}, {"id": 6, "type": "nature", "text": "「大雨将至，一家六口6分钟收完一千斤稻谷」，你看到的是：", "options": [{"text": "刻在身体里的节奏感和对土地的本能信任", "scores": {"nature": 3}}, {"text": "一家人齐心协力的力量", "scores": {"nature": 1}}, {"text": "农民干活就是快", "scores": {"nature": -1}}, {"text": "这有什么好拍的", "scores": {"nature": -2}}]}, {"id": 7, "type": "neon", "text": "「车企终于承认：取消实体按键是过去十年最昂贵的极简」，你第一反应是：", "options": [{"text": "「极简」追到极致才发现，人需要能被手指确认的反馈", "scores": {"neon": 3}}, {"text": "设计不能只为了好看", "scores": {"neon": 1}}, {"text": "实体按键就是落后", "scores": {"neon": -1}}, {"text": "车企自己打自己脸", "scores": {"neon": -2}}]}, {"id": 8, "type": "neon", "text": "「男子吵架跳江，第二天自己又游回来了」，你觉得最真实的是：", "options": [{"text": "情绪上头的那一刻，荒诞里藏着没说出口的话", "scores": {"neon": 3}}, {"text": "吵架吵到跳江，太冲动了", "scores": {"neon": 1}}, {"text": "这就是博眼球", "scores": {"neon": -1}}, {"text": "婚姻吵到这样，早该离了", "scores": {"neon": -2}}]}], "cases": [{"type": "静谧型", "title": "下班后为什么想在车内独处", "q": 9.0, "summary": "车里的那几分钟不是逃避，是给感官一个「不被要求回应」的留白"}, {"type": "静谧型", "title": "你说的社恐其实是ISFP在守护一个不能被打扰的审美", "q": 8.7, "summary": "社恐不是缺陷，是有人需要把审美世界关进一个安静的房间才能守护"}, {"type": "烟火型", "title": "胖东来周边店主生意没了心气也没了", "q": 8.8, "summary": "烟火气散了，人还在——「心气」是普通人对明天的全部押注"}, {"type": "烟火型", "title": "结婚38年他们才补拍婚纱照", "q": 7.0, "summary": "爱情最好的样子是平平淡淡一起变老，一张迟到的照片里有38年的温度"}, {"type": "自然型", "title": "葫芦爷爷剪的不是葫芦是流量喧嚣", "q": 8.4, "summary": "把喧嚣剪掉，剩下的才是生长——慢下来的人反而最先听见自然"}, {"type": "自然型", "title": "大雨将至一家六口6分钟收完一千斤稻谷", "q": 8.7, "summary": "抢在雨前收完的稻谷，是刻在身体里的节奏感和对土地的本能信任"}, {"type": "霓虹型", "title": "车企终于承认取消实体按键是过去十年最昂贵的极简", "q": 8.8, "summary": "「极简」追到极致才发现，人需要的是能被手指确认的反馈"}, {"type": "霓虹型", "title": "男子吵架跳江第二天自己游回来", "q": 8.9, "summary": "情绪上头的那一刻，荒诞里藏着没说出口的话——先锋的人先看穿本质"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池趣味/表达母题（车内独处 9.0 / 社恐审美 8.7 / 胖东来心气 8.8 / 结婚38年 7.0 / 葫芦爷爷 8.4 / 大雨收稻谷 8.7 / 车企极简 8.8 / 跳江游回来 8.9）提炼的趣味感官人设倾向测试，用于自我觉察与表达探索，不构成心理诊断或人格测量。", "result_fields": [{"key": "declaration", "label": "💬 感官宣言"}, {"key": "strength", "label": "💪 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  const fields = DATA.result_fields;
+  const cells = tv.map(f=>{ const lab = fields.find(x=>x.key===f.k); return `<div class="cell"><h3>${lab?lab.label:f.k}</h3><p>${f.v}</p></div>`; });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">🦁 代表动物：${t.animal}</span><span class="tag">🎨 颜色：${t.palette}</span><span class="tag">🎵 歌单：${t.playlist}</span><span class="tag">👃 气味：${t.scent}</span><span class="tag">16型映射：${t.mbti}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>🦁 动物</b>：${t.animal}</p><p><b>🎨 颜色</b>：${t.palette}</p><p><b>🎵 歌单</b>：${t.playlist}</p><p><b>👃 气味</b>：${t.scent}</p><p><b>16型映射</b>：${t.mbti}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>

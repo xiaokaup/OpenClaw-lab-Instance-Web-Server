@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-10-1000",
+    "id": "product-available-2026-09-11-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D41-B1·九月D10·周四"
+      "batch": "D42-B1·九月D11·周五"
     },
-    "created_at": "2026-09-10T10:00:00+08:00",
+    "created_at": "2026-09-11T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -120,10 +120,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D41-B1·九月D10·周四",
-  "timestamp": "2026-09-10T10:00:00+08:00",
+  "batch": "D42-B1·九月D11·周五",
+  "timestamp": "2026-09-11T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 1041,
+    "stagnant_hours": 1065,
     "thresholds_breached": [
       168,
       192,
@@ -162,27 +162,29 @@
       960,
       984,
       1008,
-      1032
+      1032,
+      1056
     ],
-    "thresholds_total": 38,
+    "thresholds_total": 39,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 1056,
-      "at": "2026-09-10T23:00:00+08:00",
-      "label": "44天·下一阈值·~13h倒计时"
+      "hours": 1080,
+      "at": "2026-09-11T23:00:00+08:00",
+      "label": "45天·下一阈值·~14h倒计时"
     },
     "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
-    "zero_settlement_batches": 38,
-    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(14箱记分卡)完全隔离于支付/投放冻结",
+    "zero_settlement_batches": 39,
+    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(15箱记分卡)完全隔离于支付/投放冻结",
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
     "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天",
     "milestone_984h": "🔴 BREACHED at 2026-09-07 23:00 (~10.5h ago)·41天·S1首次41.4天",
     "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天",
-    "milestone_1032h": "🔴🔴 BREACHED at 2026-09-09 23:00 (~10.4h ago)·43天·S1首次43.4天"
+    "milestone_1032h": "🔴🔴 BREACHED at 2026-09-09 23:00 (~10.4h ago)·43天·S1首次43.4天",
+    "milestone_1056h": "🔴🔴 BREACHED at 2026-09-10 23:00 (~10.4h ago)·44天·S1首次44.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -194,13 +196,14 @@
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b26_frozen_8th_batch_1032h_breached_38_thresholds_zero_reach_13days_direction_recovered_budget_stale_product_side_14_containers_isolated",
-    "key_risk": "支付~1041h(43.4天)·1032h(43天)9/9 23:00已破~10.4h(38阈值全破·S1首次43.4天盲飞·38批零结算·全ROI永久作废·下一阈值1056h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26连续8个冻结批次(0臂¥0·block_rate 1.0·friction 0.94·零触达连续~13天)·ruling-032 C异质provider兜底(09-06)逾期4天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期3天未落地·用户层active归零(0.0%·INFP dormant~13天距流失线~1天)·Plan C执行零~598h·杰安/河山失联~35天·psych-engine冻结~67.4天(SP象限2006人盲区)·知知缺位~44天·内容池360>>25软上限CRITICAL·社会货币连续14批冷却结构性停用·仅budget-vessel STALE~47.2h·B26供给约束(2hook多样性0.333)",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：14箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2)一次性交付不受支付/投放冻结影响·D41-B1新增#2恋爱类型记分卡第14箱(关系/依恋线·四型恋爱人设·16型映射)·方向/策略/内容三链复产(B26供给约束批fresh·昨日三船STALE仅budget未解除)·B26方向船3臂¥75已产出·商户号Day60稳定·荐荐40批连续产出·产品侧唯一不停摆子系统",
+    "trend": "b27_frozen_9th_batch_1056h_breached_39_thresholds_zero_reach_14days_recovery_batch_4hook_supply_resolved_direction_recovered_budget_stale_product_side_15_containers_isolated",
+    "key_risk": "支付~1065h(44.4天)·1056h(44天)9/10 23:00已破~10.4h(39阈值全破·S1首次44.4天盲飞·39批零结算·全ROI永久作废·下一阈值1080h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27连续9个冻结批次(0臂¥0·block_rate 1.0·friction 0.95·零触达连续~14天)·ruling-032 C异质provider兜底(09-06)逾期5天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期4天未落地·用户层active归零(0.0%·INFP dormant~14天已触流失线)·Plan C执行零~565h·杰安/河山失联~36天·psych-engine冻结~68.5天(SP象限2006人盲区)·知知缺位~45天·内容池366>>25软上限CRITICAL·社会货币连续15批冷却结构性停用·仅budget-vessel STALE·B28反常识必轮出供给再收紧风险",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：15箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7)一次性交付不受支付/投放冻结影响·D42-B1新增#7人格感官映射卡第15箱(趣味/表达线·多感官选择器·代表动物/颜色/歌单)·B27恢复批供给约束解除(4hook多样性0.667恢复破floor0.5·5臂¥125·2旗舰INFP9/ENTJ8.7)·方向/策略/内容三链持续复产(B27 fresh·仅budget STALE)·商户号Day61稳定·荐荐41批连续产出·产品侧唯一不停摆子系统",
     "d38_health": 4.4,
     "d39_health": 4.4,
     "d40_health": 4.4,
-    "d41_health": 4.4
+    "d41_health": 4.4,
+    "d42_health": 4.4
   },
   "pipeline": {
     "delivered": [
@@ -217,7 +220,8 @@
       "N5",
       "N7",
       "N8",
-      "#2"
+      "#2",
+      "#7"
     ],
     "active": [
       "L1"
@@ -229,11 +233,11 @@
       "L3-B",
       "L3-C"
     ],
-    "total_products": 14,
+    "total_products": 15,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十四箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D41-B1新增#2恋爱类型记分卡",
-    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十五箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D42-B1新增#7人格感官映射卡",
+    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8,#2,#7]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
     {
@@ -488,6 +492,82 @@
           "label": "v1.0",
           "relpath": "boundary-manual/boundary-manual-standards-v1.csv",
           "url": "files/boundary-manual/boundary-manual-standards-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "人格感官映射卡",
+      "emoji": "🎨",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡",
+        "CSV案例库"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/sensory-map/sensory-map-v1.html",
+        "standards_csv": "workspace-shared/pools/products/sensory-map/sensory-map-standards-v1.csv",
+        "cases_csv": "workspace-shared/pools/products/sensory-map/sensory-map-cases-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4感官人格(静谧型🐈/烟火型🔥/自然型🌲/霓虹型🦊)→感官宣言+优势/盲区+触发/行动·代表动物/颜色/歌单/气味·Tab B 四型标准卡+8经典案例·16型映射",
+      "content_source": "内容池趣味/表达母题(车内独处9.0/社恐ISFP审美8.7/胖东来心气8.8/结婚38年7.0/葫芦爷爷8.4/大雨收稻谷8.7/车企极简8.8/跳江游回来8.9等8案例)·web多感官选择器形态验证·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)·D42-B1第15箱",
+      "priority": "P2·趣味/表达线·多感官选择器(代表动物/颜色/歌单)",
+      "motif": "self_expression",
+      "need": "be_understood",
+      "target_personalities": [
+        "INTJ",
+        "INTP",
+        "ISTJ",
+        "ISTP",
+        "ENFP",
+        "ENFJ",
+        "ESFP",
+        "ESFJ",
+        "INFJ",
+        "INFP",
+        "ISFJ",
+        "ISFP",
+        "ENTJ",
+        "ENTP",
+        "ESTJ",
+        "ESTP"
+      ],
+      "motif_note": "感官映射·四型感官人设(静谧/烟火/自然/霓虹)·代表动物/颜色/歌单·趣味表达母题",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
+      "key": "#7",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "sensory-map/sensory-map-v1.html",
+          "url": "files/sensory-map/sensory-map-v1.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v1.0",
+          "relpath": "sensory-map/sensory-map-standards-v1.csv",
+          "url": "files/sensory-map/sensory-map-standards-v1.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v1.0",
+          "relpath": "sensory-map/sensory-map-cases-v1.csv",
+          "url": "files/sensory-map/sensory-map-cases-v1.csv"
         }
       ]
     },
@@ -1597,5 +1677,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 18
+  "total": 19
 }
