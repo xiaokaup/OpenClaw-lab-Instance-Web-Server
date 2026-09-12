@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人格能量日历</title>
+<style>
+  :root { --bg:#faf6ef; --card:#fff; --ink:#2b2b2b; --accent:#d9822b; --muted:#8a857d; --bdr:#e6e2da; --good:#3d7a5a; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); padding:20px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  h1 { font-size:22px; text-align:center; letter-spacing:1px; }
+  .sub { color:var(--muted); font-size:13px; margin:8px 0 18px; line-height:1.7; text-align:center; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; background:#f3ede0; border-radius:12px; padding:5px; }
+  .tab { flex:1; padding:10px; text-align:center; border-radius:9px; font-size:14px; cursor:pointer; color:var(--muted); font-weight:600; }
+  .tab.active { background:#fff; color:var(--accent); box-shadow:0 1px 6px rgba(0,0,0,.08); }
+  .panel { display:none; } .panel.active { display:block; }
+  .card { background:var(--card); border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.05); margin-bottom:14px; }
+  .q { margin-bottom:18px; }
+  .q .qt { font-size:15px; font-weight:600; line-height:1.6; margin-bottom:10px; }
+  .opt { display:block; width:100%; text-align:left; background:var(--bg); border:2px solid var(--bdr); border-radius:10px; padding:11px 14px; font-size:13px; color:var(--ink); cursor:pointer; margin-bottom:8px; line-height:1.5; transition:.12s; }
+  .opt:hover { border-color:#ecc08a; }
+  .opt.sel { border-color:var(--accent); background:#fdf3e6; font-weight:600; }
+  .next { display:block; width:100%; padding:12px; border:none; border-radius:10px; background:var(--accent); color:#fff; font-size:15px; font-weight:700; cursor:pointer; letter-spacing:2px; }
+  .next:disabled { background:#d8d4c8; cursor:not-allowed; }
+  .result-head { text-align:center; }
+  .type-big { font-size:30px; font-weight:800; margin:6px 0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+  @media(max-width:680px){ .grid2{ grid-template-columns:1fr; } }
+  .cell { background:#f8f7f3; border-radius:10px; padding:12px 14px; }
+  .cell h3 { font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .cell p { font-size:13px; line-height:1.7; }
+  .tag { display:inline-block; background:#f3ede0; border-radius:6px; padding:3px 9px; font-size:12px; color:#6f6a5e; margin:3px; }
+  .case-quote { border-left:3px solid var(--accent); padding:10px 12px; background:#fdf3e6; border-radius:0 8px 8px 0; font-size:13px; line-height:1.8; color:#5a5a5a; margin-top:12px; }
+  .disclaimer { font-size:11px; color:var(--muted); background:#f8f7f3; border-radius:8px; padding:10px 12px; line-height:1.7; margin-top:12px; }
+  .std-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:680px){ .std-grid{ grid-template-columns:1fr; } }
+  .std-card { background:#f8f7f3; border-radius:10px; padding:14px; border-top:3px solid; }
+  .std-card h3 { font-size:14px; margin-bottom:4px; }
+  .std-card p { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:4px; }
+  .footer { text-align:center; color:var(--muted); font-size:12px; margin-top:22px; line-height:1.8; }
+  .btn-sec { display:flex; gap:10px; margin-top:12px; }
+  .btn-sec button { flex:1; padding:10px; border:none; border-radius:9px; font-size:13px; cursor:pointer; }
+  .btn-retry { background:#ece8de; color:#6f6a5e; }
+  .btn-std { background:var(--good); color:#fff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🗓️ 人格能量日历</h1>
+  <div class="sub">8 题测一测 · 找到你的「能量人格」与「高能日 / 低能日」节律</div>
+  <div class="tabs">
+    <div class="tab active" id="tabA" onclick="switchTab('A')">🎯 测一测 · 出结果</div>
+    <div class="tab" id="tabB" onclick="switchTab('B')">📚 标准卡 + 经典案例</div>
+  </div>
+
+  <div class="panel active" id="panelA">
+    <div class="card" id="quizCard">
+      <div class="sub" style="text-align:left;margin:0 0 12px;" id="qProgress">第 1/8 题 · 约 2 分钟</div>
+      <div class="q" id="qBody"></div>
+      <button class="next" id="nextBtn" disabled>下一题</button>
+    </div>
+    <div class="card" id="resultCard" style="display:none;">
+      <div class="result-head">
+        <div class="sub" style="margin:0;">你的能量人格是</div>
+        <div class="type-big" id="rType"></div>
+        <div class="sub" style="margin:0;" id="rCore"></div>
+      </div>
+      <div class="grid2" id="rGrid"></div>
+      <div style="margin-top:10px;" id="rTags"></div>
+      <div class="case-quote" id="rCase"></div>
+      <div class="btn-sec">
+        <button class="btn-retry" onclick="retry()">🔄 再测一次</button>
+        <button class="btn-std" onclick="switchTab('B')">📚 看标准卡</button>
+      </div>
+      <div class="disclaimer" id="rDisclaimer"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panelB">
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">标准卡 · 四型能量档案</div>
+      <div class="std-grid" id="stdGrid"></div>
+    </div>
+    <div class="card">
+      <div class="sub" style="margin:0 0 10px;">经典案例库 · 内容池旗舰（真实引用）</div>
+      <div id="caseList"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    人格能量日历 · 荐荐（产品Hub）· 一次性交付 · 无支付依赖 · 2026-09-12<br>
+    集装箱规格：8题+双Tab · 复用S1记分卡引擎 · #8 已发货箱（第16箱）· 12月/365天能量周期 · 高能日/低能日
+  </div>
+</div>
+
+<script>
+const DATA = {"title": "人格能量日历", "subtitle": "8 题测一测 · 找到你的「能量人格」与「高能日 / 低能日」节律", "estimated_time": "2分钟", "types": {"charge": {"name": "充电型", "emoji": "🔋", "color": "#7b8794", "core": "你的能量来自「独处留白」——和世界断开一会儿，你才重新通电", "declaration": "我的能量宣言：我不是孤僻，我只是需要先把自己充满，再去照亮", "rhythm": "独处后满格 → 社交快速耗电 → 需要回充", "high_energy": "安静独处 / 深度沉浸 / 不被打断的日子", "low_energy": "连续社交 / 被打断 / 被过度曝光的日子", "recharge": "独处 · 阅读 · 白噪音 · 深度工作", "drain": "无效社交 · 被打断 · 被迫即时回应", "strength": "深度专注·能长期沉浸·洞察力强·自我驱动", "blind": "容易过度隔离·社交电量见底才察觉·错过即时反馈", "case": "下班后为什么想在车内独处（9.0）· 葫芦爷爷剪的不是葫芦是流量喧嚣（8.4）", "trigger": "连续社交后，你突然特别想「一个人待着」的那一刻", "action": "把「独处充电」写进日历当固定档期，也定期留一次主动走进人群的机会", "mbti": "INTJ·INTP·INFJ·INFP"}, "connect": {"name": "取能型", "emoji": "⚡", "color": "#e07a3f", "core": "你的能量来自「人群共鸣」——和人对上电的那一刻，你就满血", "declaration": "我的能量宣言：我不是闲不住，我是靠连接活着的人", "rhythm": "人群互动 → 满血 → 独处过久 → 掉电", "high_energy": "有人互动 / 被需要 / 有反馈的日子", "low_energy": "长时间独处 / 被冷落 / 没有回应的日子", "recharge": "和朋友相处 · 分享 · 被需要 · 热闹", "drain": "长时间独处 · 被忽视 · 冷场 · 无人回应", "strength": "感染力强·能暖场·善于共情·擅长连接人", "blind": "容易把能量透支给别人·热闹散去后空落·忽略自己的需要", "case": "胖东来周边店主生意没了心气也没了（8.8）· 结婚38年他们才补拍婚纱照（7.0）", "trigger": "饭桌上一群人因为你笑作一团的那一刻", "action": "热闹之后给自己留一段「收尾独处」，别只输出温度，也给自己充充电", "mbti": "ENFP·ENFJ·ESFP·ESFJ"}, "sprint": {"name": "爆发型", "emoji": "🚀", "color": "#7a5bd0", "core": "你的能量来自「目标冲刺」——冲起来雷霆万钧，冲完需要断电重启", "declaration": "我的能量宣言：我不是莽，我只是习惯把能量一次性烧在最值得的地方", "rhythm": "目标出现 → 全力冲刺 → 达成后断崖式掉电", "high_energy": "有明确目标 / 有竞争 / 有推进感的日子", "low_energy": "无目标 / 被拖节奏 / 无聊重复的日子", "recharge": "赢下挑战 · 推进项目 · 竞争 · 新鲜刺激", "drain": "无聊 · 被拖延 · 无意义的重复", "strength": "行动力强·敢冲·能扛压·结果导向", "blind": "冲刺后断崖式崩·忽略休息·把「快」当「好」", "case": "男子吵架跳江第二天自己游回来（8.9）· 车企终于承认取消实体按键是过去十年最昂贵的极简（8.8）", "trigger": "看到一个目标，就想「我要第一个拿下」的那一刻", "action": "冲刺之后主动安排「断电日」恢复，别把每一次都当成必须赢的战役", "mbti": "ENTJ·ENTP·ESTJ·ESTP"}, "steady": {"name": "节律型", "emoji": "🧭", "color": "#6a8f5f", "core": "你的能量来自「稳定节律」——按自己的节奏走，你就稳如钟", "declaration": "我的能量宣言：我不是慢，我只是有自己的时区和节奏", "rhythm": "规律作息 → 稳定输出 → 被打乱才掉电", "high_energy": "规律作息 / 熟悉流程 / 按计划走的日子", "low_energy": "打乱节奏 / 突发变动 / 被催促的日子", "recharge": "规律作息 · 熟悉流程 · 动手做具体的事", "drain": "计划被打乱 · 被迫临时应变 · 被催促", "strength": "稳定可靠·耐力强·能落地·对细节敏感", "blind": "抗拒变化·把自己活成流程·忽略情绪信号", "case": "大雨将至一家六口6分钟收完一千斤稻谷（8.7）· 4次考公失败后花2万2旅行6国（9.0）", "trigger": "计划被打乱时，你心里那根「乱了」的弦绷紧的那一刻", "action": "守住自己的节奏，也刻意安排一次「计划外」，练习在变化里找稳", "mbti": "ISTJ·ISFJ·ISTP·ISFP"}}, "questions": [{"id": 1, "type": "charge", "text": "「下班后，你总想在车里多坐一会儿再上楼」，你懂这种感受吗？", "options": [{"text": "车里的几分钟，是给能量一个「不被要求回应」的回充", "scores": {"charge": 3}}, {"text": "说明你有点累，需要休息", "scores": {"charge": 1}}, {"text": "在车里坐着干嘛，回家不好吗", "scores": {"charge": -1}}, {"text": "这是一种拖延", "scores": {"charge": -2}}]}, {"id": 2, "type": "charge", "text": "「葫芦爷爷剪的不是葫芦，是流量喧嚣」，你读到：", "options": [{"text": "把喧嚣剪掉，剩下的才是生长——慢下来的人最先听见自己的心跳", "scores": {"charge": 3}}, {"text": "老人有自己的节奏", "scores": {"charge": 1}}, {"text": "剪葫芦能有什么深意", "scores": {"charge": -1}}, {"text": "又是炒作", "scores": {"charge": -2}}]}, {"id": 3, "type": "connect", "text": "「胖东来周边店主说：生意没了，心气也没了」，你第一反应是：", "options": [{"text": "烟火气散了，人还在——「心气」是普通人对明天的全部押注", "scores": {"connect": 3}}, {"text": "小店生意确实不容易", "scores": {"connect": 1}}, {"text": "市场就是这样，优胜劣汰", "scores": {"connect": -1}}, {"text": "关我什么事", "scores": {"connect": -2}}]}, {"id": 4, "type": "connect", "text": "「结婚38年，才补拍婚纱照」，你读到的是：", "options": [{"text": "一张迟到的照片里，有38年互相供电的温度", "scores": {"connect": 3}}, {"text": "能一起走过38年不容易", "scores": {"connect": 1}}, {"text": "补拍婚纱照是给外人看的", "scores": {"connect": -1}}, {"text": "老夫老妻还整这些", "scores": {"connect": -2}}]}, {"id": 5, "type": "sprint", "text": "「车企终于承认：取消实体按键是过去十年最昂贵的极简」，你第一反应是：", "options": [{"text": "「极简」追到极致才发现，人需要能被手指确认的反馈", "scores": {"sprint": 3}}, {"text": "设计不能只为了好看", "scores": {"sprint": 1}}, {"text": "实体按键就是落后", "scores": {"sprint": -1}}, {"text": "车企自己打自己脸", "scores": {"sprint": -2}}]}, {"id": 6, "type": "sprint", "text": "「男子吵架跳江，第二天自己又游回来了」，你觉得最真实的是：", "options": [{"text": "情绪上头的那一刻，荒诞里藏着没说出口的话", "scores": {"sprint": 3}}, {"text": "吵架吵到跳江，太冲动了", "scores": {"sprint": 1}}, {"text": "这就是博眼球", "scores": {"sprint": -1}}, {"text": "婚姻吵到这样，早该离了", "scores": {"sprint": -2}}]}, {"id": 7, "type": "steady", "text": "「大雨将至，一家六口6分钟收完一千斤稻谷」，你看到的是：", "options": [{"text": "刻在身体里的节奏感和对土地的本能信任", "scores": {"steady": 3}}, {"text": "一家人齐心协力的力量", "scores": {"steady": 1}}, {"text": "农民干活就是快", "scores": {"steady": -1}}, {"text": "这有什么好拍的", "scores": {"steady": -2}}]}, {"id": 8, "type": "steady", "text": "「4次考公失败后，他花2万2旅行了6个国家」，你读到的是：", "options": [{"text": "不是放弃，是按自己的节奏换一条路继续走", "scores": {"steady": 3}}, {"text": "换个环境调整一下也好", "scores": {"steady": 1}}, {"text": "考不上就去玩，太不踏实了", "scores": {"steady": -1}}, {"text": "这就是逃避现实", "scores": {"steady": -2}}]}], "cases": [{"type": "充电型", "title": "下班后为什么想在车内独处", "q": 9.0, "summary": "车里的那几分钟不是逃避，是给能量一个「不被要求回应」的回充"}, {"type": "充电型", "title": "葫芦爷爷剪的不是葫芦是流量喧嚣", "q": 8.4, "summary": "把喧嚣剪掉，剩下的才是生长——慢下来的人反而最先听见自己的心跳"}, {"type": "取能型", "title": "胖东来周边店主生意没了心气也没了", "q": 8.8, "summary": "烟火气散了，人还在——「心气」是普通人对明天的全部押注"}, {"type": "取能型", "title": "结婚38年他们才补拍婚纱照", "q": 7.0, "summary": "爱情最好的样子是平平淡淡一起变老，一张迟到的照片里有38年互相供电的温度"}, {"type": "爆发型", "title": "车企终于承认取消实体按键是过去十年最昂贵的极简", "q": 8.8, "summary": "「极简」追到极致才发现，人需要的是能被手指确认的反馈"}, {"type": "爆发型", "title": "男子吵架跳江第二天自己游回来", "q": 8.9, "summary": "情绪上头的那一刻，荒诞里藏着没说出口的话——爆发的人先烧穿情绪"}, {"type": "节律型", "title": "大雨将至一家六口6分钟收完一千斤稻谷", "q": 8.7, "summary": "抢在雨前收完的稻谷，是刻在身体里的节奏感和对土地的本能信任"}, {"type": "节律型", "title": "4次考公失败后花2万2旅行6国", "q": 9.0, "summary": "不是放弃，是按自己的节奏换一条路继续走"}], "disclaimer": "娱乐性自评工具·非心理测量：基于内容池能量周期/节奏母题（车内独处 9.0 / 葫芦爷爷 8.4 / 胖东来心气 8.8 / 结婚38年 7.0 / 车企极简 8.8 / 跳江游回来 8.9 / 大雨收稻谷 8.7 / 4次考公 9.0）提炼的趣味能量人格倾向测试，用于自我觉察与节奏探索，不构成心理诊断或人格测量。", "result_fields": [{"key": "declaration", "label": "💬 能量宣言"}, {"key": "rhythm", "label": "🔁 能量曲线"}, {"key": "high_energy", "label": "🔋 高能日"}, {"key": "low_energy", "label": "🪫 低能日"}, {"key": "recharge", "label": "⚡ 充电方式"}, {"key": "drain", "label": "🚫 耗电方式"}, {"key": "strength", "label": "💪 优势"}, {"key": "blind", "label": "⚠️ 盲区"}, {"key": "trigger", "label": "🔍 触发场景"}, {"key": "action", "label": "🎯 行动建议"}], "tags_fn": null};
+const QS = DATA.questions, TYPES = DATA.types;
+const TKEYS = Object.keys(TYPES);
+const totalQ = QS.length;
+let qi = 0, answers = [], score = {};
+TKEYS.forEach(k => score[k] = 0);
+
+function switchTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active', (t==='A'&&i===0)||(t==='B'&&i===1)));
+  document.getElementById('panelA').classList.toggle('active', t==='A');
+  document.getElementById('panelB').classList.toggle('active', t==='B');
+  if(t==='B') renderStd();
+}
+function renderQ(){
+  const q = QS[qi];
+  document.getElementById('qProgress').textContent = `第 ${qi+1}/${totalQ} 题 · 约 2 分钟`;
+  document.getElementById('qBody').innerHTML = `<div class="qt">${q.text}</div>` + q.options.map((o,i)=>`<button class="opt" onclick="pick(${i})">${o.text}</button>`).join('');
+  document.getElementById('nextBtn').disabled = true;
+}
+function pick(i){
+  document.querySelectorAll('#qBody .opt').forEach((el,j)=>el.classList.toggle('sel', j===i));
+  answers[qi] = i;
+  document.getElementById('nextBtn').disabled = false;
+}
+function next(){
+  if(document.getElementById('nextBtn').disabled) return;
+  const opt = QS[qi].options[answers[qi]];
+  TKEYS.forEach(k => score[k] += (opt.scores[k]||0));
+  qi++;
+  if(qi < totalQ) renderQ();
+  else finish();
+}
+document.getElementById('nextBtn').addEventListener('click', next);
+function finish(){
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('resultCard').style.display = 'block';
+  const keys = TKEYS.slice().sort((a,b)=>score[b]-score[a]);
+  const top = keys[0], second = keys[1];
+  const t = TYPES[top];
+  document.getElementById('rType').textContent = `${t.emoji} ${t.name}`;
+  document.getElementById('rCore').textContent = t.core;
+  const tv = [
+    {k:'declaration', v:t.declaration},
+    {k:'rhythm', v:t.rhythm},
+    {k:'high_energy', v:t.high_energy},
+    {k:'low_energy', v:t.low_energy},
+    {k:'recharge', v:t.recharge},
+    {k:'drain', v:t.drain},
+    {k:'strength', v:t.strength},
+    {k:'blind', v:t.blind},
+    {k:'trigger', v:t.trigger},
+    {k:'action', v:t.action}
+  ];
+  const fields = DATA.result_fields;
+  const cells = tv.map(f=>{ const lab = fields.find(x=>x.key===f.k); return `<div class="cell"><h3>${lab?lab.label:f.k}</h3><p>${f.v}</p></div>`; });
+  document.getElementById('rGrid').innerHTML = cells.join('');
+  document.getElementById('rTags').innerHTML = `<span class="tag">次型：${TYPES[second].name}</span><span class="tag">⚡ 能量人格：${t.name}</span><span class="tag">🔁 能量曲线：${t.rhythm}</span><span class="tag">📅 年度节律：12月周期·标注高能/低能日</span><span class="tag">16型映射：${t.mbti}</span>`;
+  document.getElementById('rCase').innerHTML = `📌 <b>你的经典案例</b>：${t.case}`;
+  document.getElementById('rDisclaimer').textContent = DATA.disclaimer;
+}
+function retry(){
+  qi = 0; answers = []; TKEYS.forEach(k => score[k]=0);
+  document.getElementById('resultCard').style.display = 'none';
+  document.getElementById('quizCard').style.display = 'block';
+  renderQ();
+}
+function renderStd(){
+  document.getElementById('stdGrid').innerHTML = TKEYS.map(k=>{
+    const t = TYPES[k];
+    return `<div class="std-card" style="border-color:${t.color}"><h3>${t.emoji} ${t.name}</h3><p>${t.core}</p><p><b>🔁 能量曲线</b>：${t.rhythm}</p><p><b>🔋 高能日</b>：${t.high_energy}</p><p><b>🪫 低能日</b>：${t.low_energy}</p><p><b>⚡ 充电</b>：${t.recharge}</p><p><b>🚫 耗电</b>：${t.drain}</p><p><b>16型映射</b>：${t.mbti}</p><p><b>优势</b>：${t.strength}</p><p><b>盲区</b>：${t.blind}</p></div>`;
+  }).join('');
+  document.getElementById('caseList').innerHTML = DATA.cases.map(c=>`
+    <div class="case-quote"><b>${c.title}</b> · 质量分 ${c.q}<br>${c.summary}</div>
+  `).join('');
+}
+renderQ();
+</script>
+</body>
+</html>

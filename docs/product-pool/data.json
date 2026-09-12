@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-11-1000",
+    "id": "product-available-2026-09-12-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D42-B1·九月D11·周五"
+      "batch": "D43-B1·九月D12·周六"
     },
-    "created_at": "2026-09-11T10:00:00+08:00",
+    "created_at": "2026-09-12T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -78,9 +78,12 @@
         "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~67.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
         "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~598h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
         "1032h_breached": "🔴🔴🔴🔴🔴🔴 1032h(43天)已于9/9 23:00突破(~10.4h前)·38阈值全破(168h→1032h)·S1首次43.4天金融盲飞·~1041h总停滞·38批零结算·全ROI永久作废·下一阈值1056h(9/10 23:00·44天)",
-        "b2_delivered": "✅ #2恋爱类型记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D41-B1第14箱·16型映射(Keirsey四气质)·四型恋爱人设"
+        "b2_delivered": "✅ #2恋爱类型记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D41-B1第14箱·16型映射(Keirsey四气质)·四型恋爱人设",
+        "energy_calendar_delivered": "✅ #8人格能量日历已交付(HTML双Tab+CSV标准卡+CSV案例)·D43-B1第16箱·四型能量人格(充电型🔋/取能型⚡/爆发型🚀/节律型🧭)·12月/365天能量周期·高能日/低能日",
+        "1080h_breached": "🔴🔴🔴🔴🔴🔴 1080h(45天)已于9/11 23:00突破(~10.4h前)·40阈值全破(168h→1080h)·S1首次45.4天金融盲飞·40批零结算·全ROI永久作废·下一阈值1104h(9/12 23:00·46天·今晚)",
+        "b28_frozen_10th_batch": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28连续10个冻结批次(0臂¥0·block_rate 1.0·friction 0.96)·1080h已破+ruling-032 C逾期6天+ruling-034 B逾期5天+用户层归零·零触达连续~15天·B28反常识强制轮出批(5臂¥125 avg8.66·3臂≥8.5)"
       },
-      "expires_after": "2026-09-11T10:00:00+08:00",
+      "expires_after": "2026-09-12T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -120,10 +123,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D42-B1·九月D11·周五",
-  "timestamp": "2026-09-11T10:00:00+08:00",
+  "batch": "D43-B1·九月D12·周六",
+  "timestamp": "2026-09-12T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 1065,
+    "stagnant_hours": 1090,
     "thresholds_breached": [
       168,
       192,
@@ -163,28 +166,30 @@
       984,
       1008,
       1032,
-      1056
+      1056,
+      1080
     ],
-    "thresholds_total": 39,
+    "thresholds_total": 40,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 1080,
-      "at": "2026-09-11T23:00:00+08:00",
-      "label": "45天·下一阈值·~14h倒计时"
+      "hours": 1104,
+      "at": "2026-09-12T23:00:00+08:00",
+      "label": "46天·下一阈值·今晚23:00"
     },
     "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
-    "zero_settlement_batches": 39,
-    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(15箱记分卡)完全隔离于支付/投放冻结",
+    "zero_settlement_batches": 40,
+    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(16箱记分卡)完全隔离于支付/投放冻结",
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
     "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天",
     "milestone_984h": "🔴 BREACHED at 2026-09-07 23:00 (~10.5h ago)·41天·S1首次41.4天",
     "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天",
     "milestone_1032h": "🔴🔴 BREACHED at 2026-09-09 23:00 (~10.4h ago)·43天·S1首次43.4天",
-    "milestone_1056h": "🔴🔴 BREACHED at 2026-09-10 23:00 (~10.4h ago)·44天·S1首次44.4天"
+    "milestone_1056h": "🔴🔴 BREACHED at 2026-09-10 23:00 (~10.4h ago)·44天·S1首次44.4天",
+    "milestone_1080h": "🔴🔴 BREACHED at 2026-09-11 23:00 (~10.4h ago)·45天·S1首次45.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -196,14 +201,15 @@
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b27_frozen_9th_batch_1056h_breached_39_thresholds_zero_reach_14days_recovery_batch_4hook_supply_resolved_direction_recovered_budget_stale_product_side_15_containers_isolated",
-    "key_risk": "支付~1065h(44.4天)·1056h(44天)9/10 23:00已破~10.4h(39阈值全破·S1首次44.4天盲飞·39批零结算·全ROI永久作废·下一阈值1080h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27连续9个冻结批次(0臂¥0·block_rate 1.0·friction 0.95·零触达连续~14天)·ruling-032 C异质provider兜底(09-06)逾期5天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期4天未落地·用户层active归零(0.0%·INFP dormant~14天已触流失线)·Plan C执行零~565h·杰安/河山失联~36天·psych-engine冻结~68.5天(SP象限2006人盲区)·知知缺位~45天·内容池366>>25软上限CRITICAL·社会货币连续15批冷却结构性停用·仅budget-vessel STALE·B28反常识必轮出供给再收紧风险",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：15箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7)一次性交付不受支付/投放冻结影响·D42-B1新增#7人格感官映射卡第15箱(趣味/表达线·多感官选择器·代表动物/颜色/歌单)·B27恢复批供给约束解除(4hook多样性0.667恢复破floor0.5·5臂¥125·2旗舰INFP9/ENTJ8.7)·方向/策略/内容三链持续复产(B27 fresh·仅budget STALE)·商户号Day61稳定·荐荐41批连续产出·产品侧唯一不停摆子系统",
+    "trend": "b28_frozen_10th_batch_1080h_breached_40_thresholds_zero_reach_15days_rotation_batch_4hook_supply_direction_recovered_budget_stale_product_side_16_containers_isolated",
+    "key_risk": "支付~1090h(45.4天)·1080h(45天)9/11 23:00已破~10.4h(40阈值全破·S1首次45.4天盲飞·40批零结算·全ROI永久作废·下一阈值1104h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28连续10个冻结批次(0臂¥0·block_rate 1.0·friction 0.96·零触达连续~15天)·ruling-032 C异质provider兜底(09-06)逾期6天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期5天未落地·用户层active归零(0.0%·INFP dormant已跨14天流失线)·Plan C执行零·杰安/河山失联~37天·psych-engine冻结~69.5天(SP象限2006人盲区)·知知缺位~45天·内容池373>>25软上限CRITICAL·社会货币连续16批冷却结构性停用·仅budget-vessel STALE·B29三hook达上限必轮出供给再收紧风险",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：16箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7/#8)一次性交付不受支付/投放冻结影响·D43-B1新增#8人格能量日历第16箱(能量周期线·四型能量人格充电/取能/爆发/节律·高能日/低能日)·B28反常识强制轮出批(4hook多样性0.667·5臂¥125·avg8.66质量新高·3臂≥8.5INFP9/INTP8.6/ENFP8.5)·方向/策略/内容三链持续复产(B28 fresh·仅budget STALE)·商户号Day62稳定·荐荐42批连续产出·产品侧唯一不停摆子系统",
     "d38_health": 4.4,
     "d39_health": 4.4,
     "d40_health": 4.4,
     "d41_health": 4.4,
-    "d42_health": 4.4
+    "d42_health": 4.4,
+    "d43_health": 4.4
   },
   "pipeline": {
     "delivered": [
@@ -221,7 +227,8 @@
       "N7",
       "N8",
       "#2",
-      "#7"
+      "#7",
+      "#8"
     ],
     "active": [
       "L1"
@@ -233,11 +240,11 @@
       "L3-B",
       "L3-C"
     ],
-    "total_products": 15,
+    "total_products": 16,
     "revenue_generating": 1,
     "blocked_by_payment": [],
-    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十五箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D42-B1新增#7人格感官映射卡",
-    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8,#2,#7]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
+    "blocked_note": "✅ 策略v2.0后零支付阻塞产品·十六箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7/#8一次性交付)已发货·L2/L3-A/B/C refactored_one_time·D43-B1新增#8人格能量日历",
+    "container_note": "成品=已发货箱[S1,S2,S3,#4,#5,#10,N1,L1,N3,N2,N5,N7,N8,#2,#7,#8]·方向=待装配箱[L2,L3-A/B/C]·统一集装箱规格·编号口径与平台对齐"
   },
   "finished": [
     {
@@ -568,6 +575,82 @@
           "label": "v1.0",
           "relpath": "sensory-map/sensory-map-cases-v1.csv",
           "url": "files/sensory-map/sensory-map-cases-v1.csv"
+        }
+      ]
+    },
+    {
+      "name": "人格能量日历",
+      "emoji": "🗓️",
+      "form": [
+        "可交互静态HTML(双Tab)",
+        "CSV标准卡",
+        "CSV案例库"
+      ],
+      "price_note": "定价权属策策",
+      "status": "delivered_v1.0",
+      "lifecycle": "launched_one_time",
+      "deliverables": {
+        "html": "workspace-shared/pools/products/energy-calendar/energy-calendar-v1.html",
+        "standards_csv": "workspace-shared/pools/products/energy-calendar/energy-calendar-standards-v1.csv",
+        "cases_csv": "workspace-shared/pools/products/energy-calendar/energy-calendar-cases-v1.csv"
+      },
+      "interaction": "Tab A 8题选择→4能量人格(充电型🔋/取能型⚡/爆发型🚀/节律型🧭)→能量宣言+能量曲线+高能/低能日+充电/耗电·Tab B 四型标准卡+8经典案例·16型映射",
+      "content_source": "内容池能量周期/节奏母题(车内独处9.0/葫芦爷爷8.4/胖东来心气8.8/结婚38年7.0/车企极简8.8/跳江游回来8.9/大雨收稻谷8.7/4次考公9.0等8案例)·web未来趋势预测形态验证·诚实标注娱乐性自评",
+      "container": "已发货箱(集装箱规格·8题+双Tab·复用S1引擎)·D43-B1第16箱",
+      "priority": "P2·能量周期线·12月/365天能量周期(高能日/低能日)",
+      "motif": "self_regulation",
+      "need": "self_confirm",
+      "target_personalities": [
+        "INTJ",
+        "INTP",
+        "INFJ",
+        "INFP",
+        "ENFP",
+        "ENFJ",
+        "ESFP",
+        "ESFJ",
+        "ENTJ",
+        "ENTP",
+        "ESTJ",
+        "ESTP",
+        "ISTJ",
+        "ISFJ",
+        "ISTP",
+        "ISFP"
+      ],
+      "motif_note": "能量节律·四型能量人格(充电/取能/爆发/节律)·高能日/低能日·自我节律探索",
+      "ontology": "motif-need-ontology-v1（原则#16·去MBTI化·主题无关）",
+      "dimensions": {
+        "occupation": [
+          "white_collar",
+          "student",
+          "freelancer"
+        ],
+        "age": [
+          "z18_24",
+          "y25_34"
+        ]
+      },
+      "dimensions_taxonomy": "user-dimension-taxonomy-v1（大卡·河山指令·13维度4组·主题无关）",
+      "key": "#8",
+      "deliverable_urls": [
+        {
+          "type": "html",
+          "label": "v1.0",
+          "relpath": "energy-calendar/energy-calendar-v1.html",
+          "url": "files/energy-calendar/energy-calendar-v1.html"
+        },
+        {
+          "type": "standards_csv",
+          "label": "v1.0",
+          "relpath": "energy-calendar/energy-calendar-standards-v1.csv",
+          "url": "files/energy-calendar/energy-calendar-standards-v1.csv"
+        },
+        {
+          "type": "cases_csv",
+          "label": "v1.0",
+          "relpath": "energy-calendar/energy-calendar-cases-v1.csv",
+          "url": "files/energy-calendar/energy-calendar-cases-v1.csv"
         }
       ]
     },
@@ -1677,5 +1760,5 @@
       "fun": "复测追踪成长"
     }
   ],
-  "total": 19
+  "total": 20
 }
