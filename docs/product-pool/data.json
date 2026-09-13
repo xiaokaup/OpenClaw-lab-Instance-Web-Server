@@ -2,14 +2,14 @@
   "vessel": {
     "version": "2.0",
     "type": "product-available",
-    "id": "product-available-2026-09-12-1000",
+    "id": "product-available-2026-09-13-1000",
     "source": {
       "agent": "荐荐",
       "subsystem": "产品Hub",
       "role": "分类+推荐官 · 产品研发",
-      "batch": "D43-B1·九月D12·周六"
+      "batch": "D44-B1·九月D13·周日"
     },
-    "created_at": "2026-09-12T10:00:00+08:00",
+    "created_at": "2026-09-13T10:00:00+08:00",
     "freshness_ttl_hours": 24,
     "priority": "p1",
     "strategy_basis": {
@@ -47,7 +47,7 @@
       "purpose": "荐荐管理的产品目录池·策略v2.0：产品与支付脱钩·全部重构为一次性交付物·优先人格积分卡类·供策策/投投/控控/大卡/设设/析析消费",
       "excludes": "定价决策权(属策策·但定价不再作为交付前置)·内容生产权(属设设)·预算分配权(属大卡)",
       "action_threshold": {
-        "payment_uncoupled": "🔴🔴 支付停滞~1041h(43.4天)·1032h(43天)已于9/9 23:00突破(~10.4h前)·38阈值全破·S1首次43.4天金融盲飞·1056h(44天)9/10 23:00下一阈值·产品侧一次性交付(14箱记分卡)完全隔离",
+        "payment_uncoupled": "🔴🔴 支付停滞~1114h(46.4天)·1104h(46天)已于9/12 23:00突破(~10.4h前)·41阈值全破·S1首次46.4天金融盲飞·1128h(47天)9/13 23:00下一阈值·产品侧一次性交付(16箱记分卡)完全隔离",
         "s1_delivered": "✅ S1人格记分卡v1.0+v2.0已交付(CSV+静态HTML双形态·8题双Tab)·首选旗舰",
         "s2_delivered": "✅ S2依恋类型记分卡已交付(CSV+HTML+v2.0双Tab)+v1.1双人匹配卡",
         "s3_delivered": "✅ S3认知功能速查卡已交付(CSV+HTML+v2.0双Tab·8认知功能)",
@@ -61,7 +61,7 @@
         "l2_refactored": "L2人格深度关系图谱(83%)重构为一次性交付对照卡",
         "l3_refactored": "L3-A/B/C重构为一次性交付物",
         "product_retirement": "无产品需退役·12箱记分卡产品线",
-        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26连续8个冻结批次(0臂¥0·block_rate 1.0·friction 0.94)·零触达连续~13天·方向/策略/内容三链复产(B26供给约束批fresh·仅budget-vessel STALE~47.2h)·产品方向不受影响",
+        "supply_rotation_batch_freeze": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28/B29连续11个冻结批次(0臂¥0·block_rate 1.0·friction 0.97)·1104h已破+ruling-032 C逾期7天+ruling-034 B逾期6天+用户层归零·零触达连续~16天·B29三hook强制轮出批(2hook多样性0.333·供给收窄兑现)·产品方向不受影响",
         "content_gate_block_resolved": "🆕 content-gate BLOCK夜间例行复发(ESC-2026-09-07-1·direction TTL 6h vs 24h节拍)→B24原子提交解除·例行误报≠生产阻断",
         "infp_fatigue_refreshed": "🟢 INFP疲劳刷新2.0→1.2(ruling-033)·永久基线假说被推翻·复评轮休结束·B24回流校准首轮兑现",
         "960h_breached": "🔴🔴🔴🔴🔴 960h(40天)已于9/6 23:00突破(~10.5h前)·35阈值全破(168h→960h)·S1首次40.4天金融盲飞·全ROI永久作废·下一阈值984h(9/7 23:00·41天)",
@@ -73,17 +73,24 @@
         "984h_breached": "🔴🔴🔴🔴🔴🔴 984h(41天)已于9/7 23:00突破(~10.5h前)·36阈值全破(168h→984h)·S1首次41.4天金融盲飞·全ROI永久作废·下一阈值1008h(9/8 23:00·42天)",
         "1008h_breached": "🔴🔴🔴🔴🔴🔴 1008h(42天)已于9/8 23:00突破(~11h前)·37阈值全破(168h→1008h)·S1首次42.4天金融盲飞·~1018h总停滞·38批零结算·全ROI永久作废·下一阈值1032h(9/9 23:00·43天)",
         "n8_delivered": "✅ N8社交能量记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D40-B1第13箱·社交能量母题·四型充电/蓄能/精准/外求",
-        "ruling_034_partial": "🟡 ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期3天未落地·ruling-032 C异质provider兜底(09-06)逾期4天未落地·监控链provider单点脆弱持续",
-        "three_vessels_recovered": "🟢 方向/策略/内容三链持续复产：direction-vessel D21-B26(09-10 08:22:53 atomic_commit FRESH)+strategy-pool FRESH+content FRESH·仅budget-vessel STALE~47.2h(控控cron 10:10未到)",
-        "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~67.4天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
-        "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~598h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
+        "ruling_034_partial": "🟡 ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期6天未落地·ruling-032 C异质provider兜底(09-06)逾期7天未落地·监控链provider单点脆弱持续",
+        "three_vessels_recovered": "🟢 方向/策略/内容三链持续复产：direction-vessel D21-B29(09-13 08:19:57 atomic_commit FRESH)+strategy-pool FRESH+content FRESH·仅budget-vessel STALE~23.25h(控控cron 10:10未到)",
+        "psych_engine_frozen": "🔴 psych-engine results.jsonl冻结~70.45天(ESC-08-17-1)·SP象限2006人结构性盲区·待人类决策",
+        "plan_c_ruling015_execution_zero": "🔴 ruling-015执行仍零~670h·策略v2.0已绕开：不依赖Plan C释放即可交付产品",
         "1032h_breached": "🔴🔴🔴🔴🔴🔴 1032h(43天)已于9/9 23:00突破(~10.4h前)·38阈值全破(168h→1032h)·S1首次43.4天金融盲飞·~1041h总停滞·38批零结算·全ROI永久作废·下一阈值1056h(9/10 23:00·44天)",
         "b2_delivered": "✅ #2恋爱类型记分卡已交付(HTML双Tab+CSV标准卡+CSV案例)·D41-B1第14箱·16型映射(Keirsey四气质)·四型恋爱人设",
         "energy_calendar_delivered": "✅ #8人格能量日历已交付(HTML双Tab+CSV标准卡+CSV案例)·D43-B1第16箱·四型能量人格(充电型🔋/取能型⚡/爆发型🚀/节律型🧭)·12月/365天能量周期·高能日/低能日",
         "1080h_breached": "🔴🔴🔴🔴🔴🔴 1080h(45天)已于9/11 23:00突破(~10.4h前)·40阈值全破(168h→1080h)·S1首次45.4天金融盲飞·40批零结算·全ROI永久作废·下一阈值1104h(9/12 23:00·46天·今晚)",
-        "b28_frozen_10th_batch": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28连续10个冻结批次(0臂¥0·block_rate 1.0·friction 0.96)·1080h已破+ruling-032 C逾期6天+ruling-034 B逾期5天+用户层归零·零触达连续~15天·B28反常识强制轮出批(5臂¥125 avg8.66·3臂≥8.5)"
+        "b28_frozen_10th_batch": "🔴 D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28连续10个冻结批次(0臂¥0·block_rate 1.0·friction 0.96)·1080h已破+ruling-032 C逾期6天+ruling-034 B逾期5天+用户层归零·零触达连续~15天·B28反常识强制轮出批(5臂¥125 avg8.66·3臂≥8.5)",
+        "1104h_breached": "🔴🔴🔴🔴🔴🔴 1104h(46天)已于9/12 23:00突破(~10.4h前)·41阈值全破(168h→1104h)·S1首次46.4天金融盲飞·~1114h总停滞·41批零结算·全ROI永久作废·下一阈值1128h(9/13 23:00·47天·今晚)",
+        "b29_supply_retightened": "🟡 B29三hook强制轮出批·2hook可用(反常识恢复batch1×3+好奇心续batch2×2)·多样性0.333破floor0.5(结构性供给约束非降产)·5臂¥125 avg8.42全≥7无弱信号(INFP反常识8.9旗舰)·B28预警的供给再收紧风险本批落地",
+        "b30_supply_warning": "🟡 B30好奇心batch2达上限必轮出·反常识可续batch2·三hook(情感共鸣/身份认同/社会证明)恢复候选(今日9/8/7/7+9/8已观察)·供给再收紧延续",
+        "social_currency_17batch": "🔴 社会货币连续17批冷却(0个≥7分信号)·结构性停用坐实(ESC-08-26-1)·荐荐维持negotiating",
+        "user_layer_zeroed_3rdday": "🔴🔴 用户层active 0(0.0%)·INFP dormant已跨14天流失线第3日·二次流失潮9/26-9/28倒计时·触达重建第一优先(ESC-09-04-3)",
+        "content_pool_380": "🟡 内容池380>>25软上限CRITICAL(md化·01选题221+02成品59+03指标100)·连续十一批冻结零消耗·budget-vessel STALE~23.25h",
+        "product_line_16_no_new": "✅ 16箱记分卡一次性交付隔离于冻结·本批无新增发货(#8后暂无直接候选·后续待内容池提炼)"
       },
-      "expires_after": "2026-09-12T10:00:00+08:00",
+      "expires_after": "2026-09-13T10:00:00+08:00",
       "report_type": "product-catalog-v2",
       "consumer_agents": [
         "策策",
@@ -123,10 +130,10 @@
       "applied_at": "2026-08-22T00:45:00+08:00"
     }
   },
-  "batch": "D43-B1·九月D12·周六",
-  "timestamp": "2026-09-12T10:00:00+08:00",
+  "batch": "D44-B1·九月D13·周日",
+  "timestamp": "2026-09-13T10:00:00+08:00",
   "payment_status": {
-    "stagnant_hours": 1090,
+    "stagnant_hours": 1114,
     "thresholds_breached": [
       168,
       192,
@@ -167,21 +174,22 @@
       1008,
       1032,
       1056,
-      1080
+      1080,
+      1104
     ],
-    "thresholds_total": 40,
+    "thresholds_total": 41,
     "milestone_696h": "BREACHED at 2026-08-26 23:00·S1首次29天",
     "milestone_720h": "BREACHED at 2026-08-27 23:00·S1首次30天·全系统公认不可逆防线突破",
     "milestone_744h": "BREACHED at 2026-08-28 23:00·S1首次31天",
     "next_threshold": {
-      "hours": 1104,
-      "at": "2026-09-12T23:00:00+08:00",
-      "label": "46天·下一阈值·今晚23:00"
+      "hours": 1128,
+      "at": "2026-09-13T23:00:00+08:00",
+      "label": "47天·下一阈值·今晚23:00"
     },
     "milestone_960h": "🔴 BREACHED at 2026-09-06 23:00 (~10.5h ago)·40天·S1首次40.4天",
     "confirmed_revenue": 300.37,
-    "zero_settlement_batches": 40,
-    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(16箱记分卡)完全隔离于支付/投放冻结",
+    "zero_settlement_batches": 41,
+    "strategy_note": "策略v2.0起产品交付不再等待支付·支付状态仅作环境背景·不阻塞任何产品·产品侧一次性交付(16箱记分卡)完全隔离于支付/投放冻结·本批无新增发货",
     "milestone_888h": "BREACHED at 2026-09-03 23:00·37天",
     "milestone_912h": "BREACHED at 2026-09-04 23:00·38天·S1首次",
     "milestone_936h": "BREACHED at 2026-09-05 23:00·39天·S1首次39.4天",
@@ -189,7 +197,8 @@
     "milestone_1008h": "🔴🔴 BREACHED at 2026-09-08 23:00 (~11h ago)·42天·S1首次42.4天",
     "milestone_1032h": "🔴🔴 BREACHED at 2026-09-09 23:00 (~10.4h ago)·43天·S1首次43.4天",
     "milestone_1056h": "🔴🔴 BREACHED at 2026-09-10 23:00 (~10.4h ago)·44天·S1首次44.4天",
-    "milestone_1080h": "🔴🔴 BREACHED at 2026-09-11 23:00 (~10.4h ago)·45天·S1首次45.4天"
+    "milestone_1080h": "🔴🔴 BREACHED at 2026-09-11 23:00 (~10.4h ago)·45天·S1首次45.4天",
+    "milestone_1104h": "🔴🔴 BREACHED at 2026-09-12 23:00 (~10.4h ago)·46天·S1首次46.4天"
   },
   "rd_budget": {
     "note": "策略v2.0：一次性交付产品不依赖产研桶冻结释放·产研桶状态仅记录不阻塞",
@@ -197,19 +206,20 @@
     "spent": 390,
     "remaining_cap": 110,
     "frozen_bucket": 1220,
-    "frozen_days": 40,
+    "frozen_days": 44,
     "plan_c_release_required": false
   },
   "health_indicators": {
-    "trend": "b28_frozen_10th_batch_1080h_breached_40_thresholds_zero_reach_15days_rotation_batch_4hook_supply_direction_recovered_budget_stale_product_side_16_containers_isolated",
-    "key_risk": "支付~1090h(45.4天)·1080h(45天)9/11 23:00已破~10.4h(40阈值全破·S1首次45.4天盲飞·40批零结算·全ROI永久作废·下一阈值1104h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28连续10个冻结批次(0臂¥0·block_rate 1.0·friction 0.96·零触达连续~15天)·ruling-032 C异质provider兜底(09-06)逾期6天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期5天未落地·用户层active归零(0.0%·INFP dormant已跨14天流失线)·Plan C执行零·杰安/河山失联~37天·psych-engine冻结~69.5天(SP象限2006人盲区)·知知缺位~45天·内容池373>>25软上限CRITICAL·社会货币连续16批冷却结构性停用·仅budget-vessel STALE·B29三hook达上限必轮出供给再收紧风险",
-    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：16箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7/#8)一次性交付不受支付/投放冻结影响·D43-B1新增#8人格能量日历第16箱(能量周期线·四型能量人格充电/取能/爆发/节律·高能日/低能日)·B28反常识强制轮出批(4hook多样性0.667·5臂¥125·avg8.66质量新高·3臂≥8.5INFP9/INTP8.6/ENFP8.5)·方向/策略/内容三链持续复产(B28 fresh·仅budget STALE)·商户号Day62稳定·荐荐42批连续产出·产品侧唯一不停摆子系统",
+    "trend": "b29_frozen_11th_batch_1104h_breached_41_thresholds_zero_reach_16days_supply_retightened_direction_recovered_budget_stale_product_side_16_containers_isolated_no_new_shipment",
+    "key_risk": "支付~1114h(46.4天)·1104h(46天)9/12 23:00已破~10.4h(41阈值全破·S1首次46.4天盲飞·41批零结算·全ROI永久作废·下一阈值1128h今晚23:00)·D21-B19/B20/B21/B23/B24/B24续/B25/B26/B27/B28/B29连续11个冻结批次(0臂¥0·block_rate 1.0·friction 0.97·零触达连续~16天)·ruling-032 C异质provider兜底(09-06)逾期7天未落地·ruling-034 A死手开关已落盘(09-07 22:01)但B静默降级逾期6天未落地·用户层active归零(0.0%·INFP dormant已跨14天流失线第3日)·Plan C执行零~670h·杰安/河山失联~38天·psych-engine冻结~70.45天(SP象限2006人盲区)·知知缺位~46天·内容池380>>25软上限CRITICAL·社会货币连续17批冷却结构性停用·仅budget-vessel STALE·B29供给收窄兑现(diversity 0.333)·B30好奇心达上限必轮出",
+    "key_positive": "✅ 策略v2.0产品侧完全隔离持续验证：16箱记分卡(S1/S2/S3/#4/#5/#10/N1/L1/N3/N2/N5/N7/N8/#2/#7/#8)一次性交付不受支付/投放冻结影响·本批无新增发货(#8后暂无直接候选)·B29三hook强制轮出批(2hook多样性0.333结构性·5臂¥125·avg8.42·全≥7无弱信号·INFP反常识8.9旗舰)·方向/策略/内容三链持续复产(B29 fresh·仅budget STALE)·商户号Day63稳定·荐荐43批连续产出·产品侧唯一不停摆子系统",
     "d38_health": 4.4,
     "d39_health": 4.4,
     "d40_health": 4.4,
     "d41_health": 4.4,
     "d42_health": 4.4,
-    "d43_health": 4.4
+    "d43_health": 4.4,
+    "d44_health": 4.3
   },
   "pipeline": {
     "delivered": [
