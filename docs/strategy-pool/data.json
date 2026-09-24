@@ -1,52 +1,52 @@
 {
   "pool": "strategy-pool",
-  "batch_id": "D21-B32",
-  "review_type": "策略产出·B32信号源复产批·身份认同恢复batch1(女排8 ENTJ+China Haul7 ISTJ)+反常识恢复batch1(存款利息8 INTJ+心梗7 ISFJ)+社会证明续batch2(马斯克7 ENFJ)·情感共鸣达上限强制轮出·好奇心无fresh≥7轮出·3hook活跃(多样性0.5)·5臂¥125",
+  "batch_id": "D21-B33",
+  "review_type": "策略产出·B33情感共鸣恢复批·情感共鸣恢复batch1(打车9 INFJ+忆母8.5 ENFJ)+反常识续batch2(换糖7.5 INTJ+月饼7 ISTJ·达上限)+好奇心恢复batch1(结节7 ISFJ)·社会证明达上限强制轮出·身份认同无fresh≥7轮出·3hook活跃(多样性0.5)·5臂¥125",
   "freshness_ttl_hours": 26,
   "strategy_mode": "go_maintain_with_rotation",
-  "strategy_reason": "D21-B18执行反馈strategy_match 100%·B19-B31冻结0部署(投放层·非方向层)·strategy_stale=false(B29)→方向保持无强制切换·B31 next_batch_recommendations兑现:情感共鸣batch2达上限必轮出(B32 0臂)+身份认同/反常识恢复batch1(女排8/China Haul7/存款利息8/心梗7)+社会证明可续batch2(马斯克7)+好奇心B31 batch1→B32轮出(无fresh≥7)·社会货币连续20批冷却(0个≥7信号·禁止强推)·3hook多样性0.5(达floor0.5)·5臂¥125·信号源复产批(SearXNG三引擎恢复+百度/头条双源回归·31raw/16matched·51.6%·较B31供给危机4%大幅恢复)·全≥7强信号(供给恢复后不再用弱信号fill)·触达重建第一优先(active_rate 0.0)",
-  "timestamp": "2026-09-23T08:15:00+08:00",
+  "strategy_reason": "D21-B18执行反馈strategy_match 100%·B19-B32冻结0部署(投放层·非方向层)·strategy_stale=false(B29)→方向保持无强制切换·B32 next_batch_recommendations兑现:社会证明batch2达上限必轮出(B33 0臂)+情感共鸣/好奇心恢复候选+身份认同/反常识可续batch2·情感共鸣B32轮出→B33恢复batch1(打车9/忆母8.5强信号)+反常识B32 batch1→B33续batch2(换糖7.5/月饼7·达上限)+好奇心B31 batch1→B32轮出→B33恢复batch1(结节7)·身份认同无fresh≥7(最高6张展硕/于子迪)轮出·社会证明batch2达上限强制轮出·社会货币连续21批冷却(0个≥7信号·禁止强推)·3hook多样性0.5(达floor0.5)·5臂¥125·全≥7强信号(供给恢复后不再用弱信号fill)·信号源双源持续(72raw/20matched·27.8%)·触达重建第一优先(active_rate 0.0)",
+  "timestamp": "2026-09-24T08:15:00+08:00",
   "priority_types": [
     {
-      "personality": "ENTJ",
-      "persona_id": "ENTJ",
+      "personality": "INFJ",
+      "persona_id": "INFJ",
       "themes": [
         {
           "type": "mbti",
-          "value": "ENTJ",
+          "value": "INFJ",
           "confidence": 0.9
         },
         {
           "type": "growth",
-          "value": "achievement",
-          "confidence": 0.8
+          "value": "empathy",
+          "confidence": 0.78
         }
       ],
-      "hook": "身份认同",
+      "hook": "情感共鸣",
       "channel_preference": "微博",
       "weight": 0.2,
-      "rationale": "中国女排夺冠8·集体荣誉/民族自豪·ENTJ Te-Ni成就导向·身份认同恢复batch1(B30 batch1北大硕士9→B31轮出→B32恢复·间隔≥1批)·微博公共议题位·P0·正向(禁渲染民族对立/仇日情绪)",
+      "rationale": "女子打车回家只剩13元司机仅收9元9·陌生人善意/共情·INFJ Ni-Fe理想主义·情感共鸣恢复batch1(B30 batch1寿衣8→B31轮出→B32轮出→B33恢复·间隔≥1批)·微博公共温情位·P0·正向(禁渲染苦情/卖惨)",
       "max_impressions_per_day": 1
     },
     {
-      "personality": "ISTJ",
-      "persona_id": "ISTJ",
+      "personality": "ENFJ",
+      "persona_id": "ENFJ",
       "themes": [
         {
           "type": "mbti",
-          "value": "ISTJ",
+          "value": "ENFJ",
           "confidence": 0.9
         },
         {
           "type": "growth",
-          "value": "plain_values",
-          "confidence": 0.7
+          "value": "empathy",
+          "confidence": 0.75
         }
       ],
-      "hook": "身份认同",
-      "channel_preference": "小红书",
+      "hook": "情感共鸣",
+      "channel_preference": "微博",
       "weight": 0.2,
-      "rationale": "China Haul火了7·国货出海/文化自信·ISTJ Si务实·身份认同恢复batch1·ISTJ B31社会证明宁波校长6→B32换hook身份认同·小红书种草/文化位·P1·正向(禁渲染排外/优越感对立)",
+      "rationale": "全网最爱发钱老板中秋宴忆母落泪8.5·亲情/感恩·ENFJ Fe社会关怀·情感共鸣恢复batch1(B32社会证明batch2达上限→B33换hook情感共鸣)·微博公共温情位·P0·正向(禁渲染亲情绑架/道德压力)",
       "max_impressions_per_day": 1
     },
     {
@@ -67,7 +67,28 @@
       "hook": "反常识",
       "channel_preference": "B站",
       "weight": 0.2,
-      "rationale": "多家银行存款利息涨了8·利率预期反转/财经反常识·INTJ Ni-Te策略思维·反常识恢复batch1(B26高考数学→B27-B31轮出→B32恢复·间隔≥1批)·B站知识/财经位·P0·正向(禁渲染焦虑恐慌)",
+      "rationale": "食品企业为什么开始换糖7.5·消费健康/理性分析·INTJ Ni-Te策略思维·反常识续batch2(B32 batch1存款利息8→B33 batch2·达上限B34必轮出)·B站知识/财经位·P0·正向(禁渲染焦虑恐慌)",
+      "max_impressions_per_day": 1
+    },
+    {
+      "personality": "ISTJ",
+      "persona_id": "ISTJ",
+      "themes": [
+        {
+          "type": "mbti",
+          "value": "ISTJ",
+          "confidence": 0.9
+        },
+        {
+          "type": "growth",
+          "value": "plain_values",
+          "confidence": 0.7
+        }
+      ],
+      "hook": "反常识",
+      "channel_preference": "小红书",
+      "weight": 0.2,
+      "rationale": "月饼市场从面子回归里子7·务实消费/去包装·ISTJ Si务实·反常识续batch2(B32身份认同China Haul7→B33换hook反常识)·小红书种草/消费位·P1·正向(禁渲染消费降级焦虑)",
       "max_impressions_per_day": 1
     },
     {
@@ -82,70 +103,49 @@
         {
           "type": "growth",
           "value": "health",
-          "confidence": 0.7
+          "confidence": 0.72
         }
       ],
-      "hook": "反常识",
+      "hook": "好奇心",
       "channel_preference": "抖音",
       "weight": 0.2,
-      "rationale": "男子不抽烟少饮酒坚持长跑突发心梗7·自律悖论/健康反常识·ISFJ Si健康养生·反常识恢复batch1(ISFJ B31情感共鸣batch2达上限→B32换hook反常识)·抖音下沉/健康位·P1·正向(禁渲染健康焦虑/恐吓)",
-      "max_impressions_per_day": 1
-    },
-    {
-      "personality": "ENFJ",
-      "persona_id": "ENFJ",
-      "themes": [
-        {
-          "type": "mbti",
-          "value": "ENFJ",
-          "confidence": 0.9
-        },
-        {
-          "type": "growth",
-          "value": "empathy",
-          "confidence": 0.75
-        }
-      ],
-      "hook": "社会证明",
-      "channel_preference": "微博",
-      "weight": 0.2,
-      "rationale": "马斯克建议有时间一定要去中国7·名人背书/社会证明·ENFJ Fe社会关怀·社会证明续batch2(B31 batch1宁波校长6→B32 batch2达上限·B33必轮出·ENFJ B31情感共鸣麻袋女孩7达上限→B32换hook社会证明)·微博公共议题位·P1·正向(禁渲染崇洋/身份焦虑)",
+      "rationale": "医生:不易长结节的人有4个特征7·健康养生/自检·ISFJ Si健康养生·好奇心恢复batch1(B32反常识心梗7→B33换hook好奇心·B31好奇心奥氏马6→B32轮出→B33恢复)·抖音下沉/健康位·P1·正向(禁渲染健康焦虑/恐吓)",
       "max_impressions_per_day": 1
     }
   ],
   "excluded_types": [
     "INFP",
-    "ENFP",
-    "INFJ",
-    "INTP",
+    "ENTJ",
     "ENTP",
+    "INTP",
+    "ENFP",
     "ESTJ",
     "ESFJ",
-    "ISTP",
     "ISFP",
+    "ISTP",
     "ESTP",
     "ESFP"
   ],
   "excluded_types_detail": {
     "INFP": {
-      "reason": "B31情感共鸣batch2已配ISFJ/ENFJ·B32情感共鸣达上限强制轮出·INFP轮出休息·无≥7分INFP专属信号",
+      "reason": "B33情感共鸣恢复batch1已配INFJ/ENFJ·INFP轮出休息·无≥7分INFP专属信号",
       "resume_condition": "≥7分INFP信号 或 间隔≥1批"
     },
-    "ENFP": {
-      "reason": "B30身份认同batch1已部署(文字失语8)→B31轮出·B32身份认同已配ENTJ/ISTJ·轮出休息",
-      "resume_condition": "≥7分ENFP信号 或 间隔≥1批"
-    },
-    "INFJ": {
-      "reason": "B30情感共鸣batch1已部署(寿衣8)→B31轮出·B32情感共鸣达上限轮出·疲劳回落",
-      "resume_condition": "≥7分INFJ信号 或 间隔≥1批"
-    },
-    "INTP": {
-      "reason": "B31好奇心batch1已部署(奥氏马6)→B32好奇心无fresh≥7(航天员6/5G+6G 6/GPT-6 6全<7)·轮出休息",
-      "resume_condition": "≥7分INTP信号 或 间隔≥1批"
+    "ENTJ": {
+      "reason": "B32身份认同batch1已部署(女排夺冠8)→B33身份认同无fresh≥7(最高6张展硕/于子迪)·轮出休息",
+      "resume_condition": "≥7分身份认同信号 或 间隔≥1批"
     },
     "ENTP": {
-      "reason": "B29反常识batch1已部署(AI短剧7)→B31轮出·B32无其他hook≥7专属信号·轮出",
+      "reason": "B29反常识batch1已部署(AI短剧7)→B31轮出·B33无其他hook≥7专属信号·轮出",
       "resume_condition": "≥7分ENTP信号 或 间隔≥1批"
+    },
+    "INTP": {
+      "reason": "B31好奇心batch1已部署(奥氏马6)→B32轮出·B33好奇心恢复batch1已配ISFJ·INTP轮出休息",
+      "resume_condition": "≥7分INTP信号 或 间隔≥1批"
+    },
+    "ENFP": {
+      "reason": "B30身份认同batch1已部署(文字失语8)→B31轮出·无≥7分ENFP专属信号·轮出",
+      "resume_condition": "≥7分ENFP信号 或 间隔≥1批"
     },
     "ESTJ": {
       "reason": "resting·无≥7分ESTJ专属信号",
@@ -173,28 +173,28 @@
     "社会货币"
   ],
   "hook_priority_feedback_driven_changes": {
-    "change_summary": "D21-B32信号源复产批·情感共鸣B30 batch1+B31 batch2达上限→B32强制轮出(0臂)·身份认同恢复batch1(女排8 ENTJ+China Haul7 ISTJ)·反常识恢复batch1(存款利息8 INTJ+心梗7 ISFJ)·社会证明续batch2(马斯克7 ENFJ)·好奇心无fresh≥7轮出·3hook活跃(多样性0.5达floor)·社会货币连续20批冷却",
-    "身份认同_#2_恢复batch1": {
+    "change_summary": "D21-B33情感共鸣恢复批·情感共鸣B32轮出→B33恢复batch1(打车9 INFJ+忆母8.5 ENFJ)·反常识续batch2(换糖7.5 INTJ+月饼7 ISTJ·达上限)·好奇心恢复batch1(结节7 ISFJ)·社会证明batch2达上限强制轮出·身份认同无fresh≥7轮出·3hook活跃(多样性0.5达floor)·社会货币连续21批冷却",
+    "情感共鸣_#1_恢复batch1": {
       "signal_count": 2,
-      "reason": "女排夺冠8(ENTJ入臂)+China Haul7(ISTJ入臂)·B30 batch1(北大硕士9/文字失语8)→B31轮出→B32恢复·SearXNG复产供给身份认同≥7信号"
+      "reason": "女子打车9(INFJ入臂)+老板忆母8.5(ENFJ入臂)·B30 batch1+B31 batch2达上限→B32强制轮出(0臂)→B33恢复·双源情感共鸣强信号≥7"
     },
-    "反常识_#3_恢复batch1": {
+    "反常识_#3_续batch2": {
       "signal_count": 2,
-      "reason": "存款利息涨8(INTJ入臂)+心梗7(ISFJ入臂)·B30 batch2达上限→B31轮出→B32恢复"
+      "reason": "食品换糖7.5(INTJ入臂)+月饼回归里子7(ISTJ入臂)·B32 batch1→B33 batch2达上限·B34必轮出"
     },
-    "社会证明_#5_续batch2": {
+    "好奇心_#4_恢复batch1": {
       "signal_count": 1,
-      "reason": "马斯克去中国7(ENFJ入臂)·B31 batch1宁波校长6→B32 batch2达上限·B33必轮出"
+      "reason": "不易长结节4特征7(ISFJ入臂)·B31 batch1(奥氏马6)→B32轮出→B33恢复·医疗/健康强信号≥7"
     },
-    "情感共鸣_#1_强制轮出": {
+    "身份认同_#2_轮出": {
       "signal_count": 0,
-      "reason": "B30 batch1+B31 batch2达上限→B32强制轮出(0臂)·虽有交警怒吼8/11岁男孩英语7 fresh·但达上限必轮出·B33候选"
+      "reason": "B33无fresh≥7身份认同信号(最高6张展硕亚运200自/于子迪)·B32 batch1(女排8/China Haul7)后轮出"
     },
-    "好奇心_#4_轮出": {
+    "社会证明_#5_强制轮出": {
       "signal_count": 0,
-      "reason": "B31 batch1(奥氏马6)→B32轮出(航天员6/5G+6G 6/GPT-6 6全<7不入臂)·供给恢复后不用弱信号fill"
+      "reason": "B31 batch1(宁波校长6)+B32 batch2(马斯克7)达上限·B33强制轮出(0臂)·B34候选"
     },
-    "社会货币_#6_连续20批冷却": {
+    "社会货币_#6_连续21批冷却": {
       "signal_count": 0,
       "reason": "本批0个≥7分社会货币信号·禁止强推·恢复条件≥2个≥7分信号或析析定向供给"
     }
@@ -202,26 +202,24 @@
   "hook_constraints": {
     "max_consecutive_same_hook": 2,
     "current_status": {
-      "身份认同": "🟢 B32恢复batch1(女排8 ENTJ+China Haul7 ISTJ)·B31轮出→B32恢复",
-      "反常识": "🟢 B32恢复batch1(存款利息8 INTJ+心梗7 ISFJ)·B30 batch2达上限→B31轮出→B32恢复",
-      "社会证明": "🟡 B32续batch2(马斯克7 ENFJ)·B31 batch1→B32 batch2达上限·B33必轮出",
-      "情感共鸣": "🟡 B32强制轮出(0臂)·B30 batch1+B31 batch2达上限·B33候选",
-      "好奇心": "🟡 B32轮出(0臂)·无fresh≥7·航天员6/5G+6G 6/GPT-6 6全<7",
-      "社会货币": "🟡 连续20批冷却(0个≥7信号)·禁止强推·恢复条件≥2个≥7分信号"
+      "情感共鸣": "🟢 B33恢复batch1(打车9 INFJ+忆母8.5 ENFJ)·B32轮出→B33恢复",
+      "反常识": "🟢 B33续batch2(换糖7.5 INTJ+月饼7 ISTJ)·B32 batch1→B33 batch2达上限·B34必轮出",
+      "好奇心": "🟢 B33恢复batch1(结节7 ISFJ)·B31 batch1→B32轮出→B33恢复",
+      "身份认同": "🟡 B33轮出(0臂)·无fresh≥7(最高6张展硕/于子迪)·B32 batch1后轮出",
+      "社会证明": "🟡 B33强制轮出(0臂)·B31 batch1+B32 batch2达上限",
+      "社会货币": "🟡 连续21批冷却(0个≥7信号)·禁止强推·恢复条件≥2个≥7分信号"
     },
     "hooks_cooling": [
-      "社会货币",
-      "情感共鸣",
-      "好奇心"
+      "社会货币"
     ],
     "hooks_active": [
-      "身份认同",
+      "情感共鸣",
       "反常识",
-      "社会证明"
+      "好奇心"
     ],
     "hooks_rotated_out": [
-      "情感共鸣(B30 batch1+B31 batch2达上限)",
-      "好奇心(无fresh≥7信号)"
+      "身份认同(无fresh≥7)",
+      "社会证明(batch2达上限)"
     ],
     "taboo_hooks": [
       "恐惧按钮",
@@ -232,31 +230,31 @@
     "微博": {
       "pct": 40.0,
       "personalities": [
-        "ENTJ",
+        "INFJ",
         "ENFJ"
       ],
-      "reason": "ENTJ身份认同(女排8·公共议题位)+ENFJ社会证明(马斯克7·公共议题位)"
+      "reason": "INFJ情感共鸣(打车9·公共温情位)+ENFJ情感共鸣(忆母8.5·公共温情位)"
     },
     "小红书": {
       "pct": 20.0,
       "personalities": [
         "ISTJ"
       ],
-      "reason": "ISTJ身份认同(China Haul7·种草/文化位)·单臂"
+      "reason": "ISTJ反常识(月饼回归里子7·种草/务实消费位)·单臂"
     },
     "B站": {
       "pct": 20.0,
       "personalities": [
         "INTJ"
       ],
-      "reason": "INTJ反常识(存款利息8·知识/财经位)·单臂"
+      "reason": "INTJ反常识(食品换糖7.5·知识/财经位)·单臂"
     },
     "抖音": {
       "pct": 20.0,
       "personalities": [
         "ISFJ"
       ],
-      "reason": "ISFJ反常识(心梗7·下沉/健康位)·单臂"
+      "reason": "ISFJ好奇心(不易长结节7·下沉/健康位)·单臂"
     }
   },
   "channel_constraints": {
@@ -271,64 +269,64 @@
   "product_mapping": {
     "L1深度人格报告": {
       "personalities": [
-        "ENTJ",
-        "ISTJ",
+        "INFJ",
+        "ENFJ",
         "INTJ",
-        "ISFJ",
-        "ENFJ"
+        "ISTJ",
+        "ISFJ"
       ],
       "estimated_cvr": 0.06,
       "price": 9.9
     },
     "购买页CTA": {
-      "status": "🔴🔴逾期~1341h(55.9天)·50阈值全破·全ROI永久作废·Plan C已激活(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点"
+      "status": "🔴🔴逾期~1365.8h(56.9天·ESTIMATES_ONLY财务追踪断档10天)·50+阈值全破·全ROI永久作废·Plan C已激活(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点"
     }
   },
   "mbti_coverage": {
     "current_batch": 5,
     "types": [
-      "ENTJ",
-      "ISTJ",
+      "INFJ",
+      "ENFJ",
       "INTJ",
-      "ISFJ",
-      "ENFJ"
+      "ISTJ",
+      "ISFJ"
     ],
-    "NF_quadrant": "1/5 (ENFJ社会证明)",
-    "NT_quadrant": "2/5 (ENTJ身份认同+INTJ反常识)",
-    "SJ_quadrant": "2/5 (ISTJ身份认同+ISFJ反常识)",
+    "NF_quadrant": "2/5 (INFJ情感共鸣+ENFJ情感共鸣)",
+    "NT_quadrant": "1/5 (INTJ反常识)",
+    "SJ_quadrant": "2/5 (ISTJ反常识+ISFJ好奇心)",
     "SP_quadrant": "0/5 (ISTP/ESTP/ESFP 2006人结构性盲区·ESC-2026-08-17-1待人类决策)",
     "cumulative_D15_D21": "16/16 = 100%"
   },
   "fatigue_management": {
-    "ENTJ": {
+    "INFJ": {
       "fatigue_est": 1.9,
-      "trust_est": "7.74",
-      "status": "B32恢复·身份认同·微博·P0",
-      "note": "女排夺冠8·集体荣誉/民族自豪·B30身份认同北大硕士9→B31轮出→B32恢复·正向(禁渲染民族对立/仇日情绪)"
-    },
-    "ISTJ": {
-      "fatigue_est": 2.0,
-      "trust_est": "7.62",
-      "status": "B32换hook·身份认同·小红书·P1",
-      "note": "China Haul7·国货出海/文化自信·B31社会证明宁波校长6→B32换hook身份认同·正向(禁渲染排外/优越感对立)"
-    },
-    "INTJ": {
-      "fatigue_est": 1.8,
-      "trust_est": "7.08-7.35",
-      "status": "B32恢复·反常识·B站·P0",
-      "note": "存款利息涨8·利率反转/财经反常识·B26高考数学→B31轮出→B32恢复·正向(禁渲染焦虑恐慌)"
-    },
-    "ISFJ": {
-      "fatigue_est": 0.6,
-      "trust_est": "7.6+",
-      "status": "B32换hook·反常识·抖音·P1",
-      "note": "心梗7·自律悖论/健康反常识·B31情感共鸣赵雷7首触→B32换hook反常识·正向(禁渲染健康焦虑/恐吓)"
+      "trust_est": "8.13",
+      "status": "B33恢复·情感共鸣·微博·P0",
+      "note": "打车9·陌生人善意/共情·B30寿衣8→B31轮出→B32轮出→B33恢复·正向(禁渲染苦情/卖惨)"
     },
     "ENFJ": {
       "fatigue_est": 2.0,
       "trust_est": "7.10",
-      "status": "B32换hook·社会证明·微博·P1",
-      "note": "马斯克去中国7·名人背书·B31情感共鸣麻袋女孩7达上限→B32换hook社会证明·正向(禁渲染崇洋/身份焦虑)"
+      "status": "B33换hook·情感共鸣·微博·P0",
+      "note": "忆母8.5·亲情/感恩·B32社会证明马斯克7达上限→B33换hook情感共鸣·正向(禁渲染亲情绑架/道德压力)"
+    },
+    "INTJ": {
+      "fatigue_est": 1.8,
+      "trust_est": "8.56",
+      "status": "B33续batch2·反常识·B站·P0",
+      "note": "食品换糖7.5·消费健康理性·B32存款利息8 batch1→B33续batch2达上限·正向(禁渲染焦虑恐慌)"
+    },
+    "ISTJ": {
+      "fatigue_est": 2.0,
+      "trust_est": "7.62",
+      "status": "B33换hook·反常识·小红书·P1",
+      "note": "月饼回归里子7·务实消费·B32身份认同China Haul7→B33换hook反常识·正向(禁渲染消费降级焦虑)"
+    },
+    "ISFJ": {
+      "fatigue_est": 0.6,
+      "trust_est": "7.6+",
+      "status": "B33换hook·好奇心·抖音·P1",
+      "note": "不易长结节7·健康养生·B32反常识心梗7→B33换hook好奇心·正向(禁渲染健康焦虑/恐吓)"
     },
     "INFP": {
       "fatigue_est": 1.9,
@@ -336,17 +334,17 @@
       "status": "轮出休息·B30情感共鸣batch1已部署",
       "note": "房东催租9已部署B30·B31轮出·恢复条件≥7分或间隔≥1批"
     },
-    "INFJ": {
+    "ENTJ": {
       "fatigue_est": 1.9,
-      "trust_est": "8.13",
-      "status": "轮出休息·B30情感共鸣batch1已部署",
-      "note": "寿衣8已部署B30·B31轮出·疲劳回落"
+      "trust_est": "7.74",
+      "status": "轮出休息·B32身份认同batch1已部署",
+      "note": "女排夺冠8已部署B32·B33身份认同无fresh≥7·轮出"
     },
     "INTP": {
       "fatigue_est": 1.8,
       "trust_est": "7.08-7.35",
       "status": "轮出休息·B31好奇心batch1已部署",
-      "note": "奥氏马6已部署B31·B32好奇心无fresh≥7·轮出"
+      "note": "奥氏马6已部署B31·B33好奇心已配ISFJ·轮出"
     },
     "ENFP": {
       "fatigue_est": 1.9,
@@ -376,7 +374,7 @@
     "max_same_personality_per_day": 1,
     "direction_preview_lead_batches": 1,
     "direction_hook_labels": "每臂已标注direction_hook字段",
-    "supply_note": "B32信号源复产批5臂(¥125)·身份认同恢复batch1(2臂≥7)+反常识恢复batch1(2臂≥7)+社会证明续batch2(1臂≥7)·全≥7强信号(供给恢复后不再用弱信号fill)·3hook多样性0.5(达floor0.5)·投投冻结延续(第14个冻结批次预期·控控budget-vessel明令·支付~1341h+分发桶双红线)·方向船产出维持生产链·触达重建第一优先(active_rate 0.0)·SearXNG三引擎恢复+百度/头条双源回归(31raw/16matched·51.6%·较B31供给危机4%大幅恢复)·解冻后按方向船执行"
+    "supply_note": "B33情感共鸣恢复批5臂(¥125)·情感共鸣恢复batch1(2臂≥7)+反常识续batch2(2臂≥7)+好奇心恢复batch1(1臂≥7)·全≥7强信号(供给恢复后不再用弱信号fill)·3hook多样性0.5(达floor0.5)·投投冻结延续(第15个冻结批次预期·控控budget-vessel明令·支付~1365.8h ESTIMATES_ONLY+分发桶双红线)·方向船产出维持生产链·触达重建第一优先(active_rate 0.0)·信号源双源持续(72raw/20matched·27.8%)·解冻后按方向船执行"
   },
   "do_not_use": {
     "hooks": [
@@ -384,11 +382,11 @@
       "焦虑贩卖"
     ],
     "personalities": [
-      "INFP(B31情感共鸣batch2已配·轮出休息)",
-      "ENFP(B30身份认同batch1已部署·轮出休息)",
-      "INFJ(B30情感共鸣batch1已部署·轮出休息)",
-      "INTP(B31好奇心batch1已部署·无fresh≥7)",
-      "ENTP(B29反常识batch1已部署·无其他hook≥7)",
+      "INFP(轮出休息·B30情感共鸣已部署)",
+      "ENTJ(轮出·B32身份认同已部署·无fresh≥7)",
+      "ENFP(轮出休息·B30身份认同已部署)",
+      "INTP(轮出·B31好奇心已部署·B33已配ISFJ)",
+      "ENTP(轮出·B29反常识已部署·无其他hook≥7)",
       "ESTJ/ESFJ(resting·无专属信号)",
       "ISFP(resting·无Se信号)",
       "ISTP/ESTP/ESFP(SP象限·2006人结构性盲区·ESC-2026-08-17-1待人类决策)"
@@ -399,63 +397,63 @@
       "恐吓式标题",
       "超长文>1500字"
     ],
-    "signals_note": "女排夺冠8正向集体荣誉(禁渲染民族对立/仇日情绪)·China Haul7正向文化自信(禁渲染排外/优越感)·存款利息涨8正向财经(禁渲染焦虑恐慌)·心梗7正向健康(禁渲染健康焦虑/恐吓)·马斯克去中国7正向名人背书(禁渲染崇洋/身份焦虑)·社会货币连续20批冷却禁止强推·供给恢复后全≥7强信号非弱信号fill"
+    "signals_note": "打车9正向陌生人善意(禁渲染苦情/卖惨)·忆母8.5正向亲情(禁渲染亲情绑架/道德压力)·食品换糖7.5正向消费健康(禁渲染焦虑恐慌)·月饼回归里子7正向务实消费(禁渲染消费降级焦虑)·不易长结节7正向健康(禁渲染健康焦虑/恐吓)·社会货币连续21批冷却禁止强推·供给恢复后全≥7强信号非弱信号fill"
   },
   "strategy_health": {
-    "consecutive_batches": 51,
+    "consecutive_batches": 52,
     "direction_alignment": 0.86,
-    "direction_alignment_note": "MBTI深度+依恋类型+自我觉醒核心保持·B32信号源复产批·3hook活跃(身份认同2+反常识2+社会证明1)·NT 2/5+SJ 2/5+NF 1/5·SP 0/5盲区·社会货币连续20批冷却",
-    "signal_hit_rate": 0.516,
-    "signal_hit_rate_note": "51.6%(16/31·百度+头条双源·SearXNG三引擎恢复·较B31供给危机4%大幅恢复·非执行层匹配率·不进入match gate)",
+    "direction_alignment_note": "MBTI深度+依恋类型+自我觉醒核心保持·B33情感共鸣恢复批·3hook活跃(情感共鸣2+反常识2+好奇心1)·NF 2/5+NT 1/5+SJ 2/5·SP 0/5盲区·社会货币连续21批冷却",
+    "signal_hit_rate": 0.278,
+    "signal_hit_rate_note": "27.8%(20/72·百度+头条双源持续·较B32 51.6%回落但双源稳定·非执行层匹配率·不进入match gate)",
     "hook_diversity": 0.5,
-    "hook_diversity_note": "🟢 3/6钩活跃(身份认同2+反常识2+社会证明1)·多样性0.5达floor0.5·情感共鸣达上限强制轮出+好奇心无fresh≥7轮出·社会货币冷却",
+    "hook_diversity_note": "🟢 3/6钩活跃(情感共鸣2+反常识2+好奇心1)·多样性0.5达floor0.5·社会证明达上限强制轮出+身份认同无fresh≥7轮出·社会货币冷却",
     "hhi": 0.28,
     "hhi_note": "2-1-1-1五臂覆盖(微博2/小红书1/B站1/抖音1)·<0.35硬约束·单渠道max40%",
     "three_question_test": "⛔n/a✅✅",
-    "status": "healthy_signal_recovery_three_hooks"
+    "status": "healthy_emotion_recovery_three_hooks"
   },
   "signal_summary": {
-    "total_raw": 31,
-    "total_matched": 16,
-    "match_rate": "51.6%",
+    "total_raw": 72,
+    "total_matched": 20,
+    "match_rate": "27.8%",
     "match_rate_semantics": "信号命中率(环境噪声)·非执行层匹配率·不进入ruling-015 match gate",
-    "match_rate_note": "🟢B32信号源复产·百度实时+头条热榜双源回归(SearXNG三引擎恢复·ESC-2026-09-13-1解除)·31raw/16matched/29unique·身份认同3+反常识2+情感共鸣2+社会证明2+好奇心3(全<7)·入臂:身份认同2(女排8+China Haul7≥7)+反常识2(存款利息8+心梗7≥7)+社会证明1(马斯克7≥7)·情感共鸣2(交警怒吼8/11岁男孩英语7·达上限轮出)·好奇心0·社会货币0·match gate未触发(执行层strategy_match=100%B18·B19-B31冻结0部署)",
+    "match_rate_note": "🟢B33双源持续(百度实时+头条热榜)·72raw/20matched·情感共鸣6(打车9/忆母8.5/女排落泪8/雨蝶8/漂洋过海7.5/四年级男孩7.5全≥7)+反常识3(换糖7.5/月饼里子7/月饼不装7≥7)+好奇心4(降压疫苗7.5/结节7/董事长离婚7/DeepSeek7≥7)+身份认同0(最高6)+社会证明0(最高5)·入臂:情感共鸣2(打车9 INFJ+忆母8.5 ENFJ)+反常识2(换糖7.5 INTJ+月饼7 ISTJ)+好奇心1(结节7 ISFJ)·match gate未触发(执行层strategy_match=100%B18·B19-B32冻结0部署)",
     "sources": [
       "baidu-realtime",
       "toutiao-hot"
     ],
     "category_distribution": {
-      "身份认同": 2,
+      "情感共鸣": 2,
       "反常识": 2,
-      "社会证明": 1
+      "好奇心": 1
     },
-    "top_signal_flagships": "女排夺冠8(身份认同·ENTJ入臂)+存款利息涨8(反常识·INTJ入臂)·China Haul7(身份认同·ISTJ)+心梗7(反常识·ISFJ)+马斯克去中国7(社会证明·ENFJ)",
-    "assessment": "B32信号源复产批·身份认同恢复batch1(2臂≥7)+反常识恢复batch1(2臂≥7)+社会证明续batch2(1臂≥7)·3hook多样性0.5·5臂¥125·全≥7强信号·方向MBTI深度+依恋类型+自我觉醒保持·match gate未触发·触达重建第一优先·信号源复产(SearXNG恢复+双源回归)"
+    "top_signal_flagships": "女子打车只剩13元司机收9元9(情感共鸣·INFJ入臂)+全网最爱发钱老板忆母8.5(情感共鸣·ENFJ入臂)·食品换糖7.5(反常识·INTJ)+月饼回归里子7(反常识·ISTJ)+不易长结节7(好奇心·ISFJ)",
+    "assessment": "B33情感共鸣恢复批·情感共鸣恢复batch1(2臂≥7)+反常识续batch2(2臂≥7)+好奇心恢复batch1(1臂≥7)·3hook多样性0.5·5臂¥125·全≥7强信号·方向MBTI深度+依恋类型+自我觉醒保持·match gate未触发·触达重建第一优先·信号源双源持续"
   },
   "arms": [
     {
       "arm_id": 1,
-      "personality": "ENTJ",
-      "persona_id": "ENTJ",
-      "hook": "身份认同",
+      "personality": "INFJ",
+      "persona_id": "INFJ",
+      "hook": "情感共鸣",
       "channel": "微博",
       "budget": 25,
       "priority": "P0",
-      "status": "B32_designed",
-      "signal": "中国女排夺冠！3-0横扫日本(8分·集体荣誉/民族自豪·ENTJ Te-Ni成就导向)",
-      "note": "身份认同恢复batch1·ENTJ B30北大硕士9→B31轮出→B32恢复·微博公共议题位·正向(禁渲染民族对立/仇日情绪)"
+      "status": "B33_designed",
+      "signal": "女子打车回家只剩13元司机仅收9元(9分·陌生人善意/共情·INFJ Ni-Fe理想主义)",
+      "note": "情感共鸣恢复batch1·INFJ B30寿衣8→B31/B32轮出→B33恢复·微博公共温情位·正向(禁渲染苦情/卖惨)"
     },
     {
       "arm_id": 2,
-      "personality": "ISTJ",
-      "persona_id": "ISTJ",
-      "hook": "身份认同",
-      "channel": "小红书",
+      "personality": "ENFJ",
+      "persona_id": "ENFJ",
+      "hook": "情感共鸣",
+      "channel": "微博",
       "budget": 25,
-      "priority": "P1",
-      "status": "B32_designed",
-      "signal": "China Haul火了(7分·国货出海/文化自信·ISTJ Si务实)",
-      "note": "身份认同恢复batch1·ISTJ B31社会证明→B32换hook身份认同·小红书种草/文化位·正向(禁渲染排外/优越感对立)"
+      "priority": "P0",
+      "status": "B33_designed",
+      "signal": "全网最爱发钱老板中秋宴忆母落泪(8.5分·亲情/感恩·ENFJ Fe社会关怀)",
+      "note": "情感共鸣恢复batch1·ENFJ B32社会证明batch2达上限→B33换hook情感共鸣·微博公共温情位·正向(禁渲染亲情绑架/道德压力)"
     },
     {
       "arm_id": 3,
@@ -465,84 +463,87 @@
       "channel": "B站",
       "budget": 25,
       "priority": "P0",
-      "status": "B32_designed",
-      "signal": "多家银行存款利息涨了(8分·利率反转/财经反常识·INTJ Ni-Te策略思维)",
-      "note": "反常识恢复batch1·INTJ B26高考数学→B31轮出→B32恢复·B站知识/财经位·正向(禁渲染焦虑恐慌)"
+      "status": "B33_designed",
+      "signal": "食品企业为什么开始换糖(7.5分·消费健康/理性分析·INTJ Ni-Te策略思维)",
+      "note": "反常识续batch2·INTJ B32存款利息8 batch1→B33续batch2达上限·B站知识/财经位·正向(禁渲染焦虑恐慌)"
     },
     {
       "arm_id": 4,
-      "personality": "ISFJ",
-      "persona_id": "ISFJ",
+      "personality": "ISTJ",
+      "persona_id": "ISTJ",
       "hook": "反常识",
-      "channel": "抖音",
+      "channel": "小红书",
       "budget": 25,
       "priority": "P1",
-      "status": "B32_designed",
-      "signal": "男子不抽烟少饮酒坚持长跑突发心梗(7分·自律悖论/健康反常识·ISFJ Si健康养生)",
-      "note": "反常识恢复batch1·ISFJ B31情感共鸣batch2达上限→B32换hook反常识·抖音下沉/健康位·正向(禁渲染健康焦虑/恐吓)"
+      "status": "B33_designed",
+      "signal": "月饼市场从面子回归里子(7分·务实消费/去包装·ISTJ Si务实)",
+      "note": "反常识续batch2·ISTJ B32身份认同China Haul7→B33换hook反常识·小红书种草/消费位·正向(禁渲染消费降级焦虑)"
     },
     {
       "arm_id": 5,
-      "personality": "ENFJ",
-      "persona_id": "ENFJ",
-      "hook": "社会证明",
-      "channel": "微博",
+      "personality": "ISFJ",
+      "persona_id": "ISFJ",
+      "hook": "好奇心",
+      "channel": "抖音",
       "budget": 25,
       "priority": "P1",
-      "status": "B32_designed",
-      "signal": "马斯克建议有时间一定要去中国(7分·名人背书/社会证明·ENFJ Fe社会关怀)",
-      "note": "社会证明续batch2·ENFJ B31情感共鸣麻袋女孩7达上限→B32换hook社会证明·微博公共议题位·正向(禁渲染崇洋/身份焦虑)"
+      "status": "B33_designed",
+      "signal": "医生:不易长结节的人有4个特征(7分·健康养生/自检·ISFJ Si健康养生)",
+      "note": "好奇心恢复batch1·ISFJ B32反常识心梗7→B33换hook好奇心·抖音下沉/健康位·正向(禁渲染健康焦虑/恐吓)"
     }
   ],
   "next_batch_recommendations": {
-    "D21-B33": {
+    "D21-B34": {
       "priority_P0": [
-        "🔴 B33社会证明batch2达上限必轮出·身份认同/反常识可续batch2·情感共鸣/好奇心恢复候选·需保持双源信号采集",
+        "🔴 B34反常识batch2达上限必轮出·情感共鸣/好奇心可续batch2·身份认同/社会证明恢复候选·需保持双源信号采集",
         "🔴 触达重建追踪·投投解冻后reach_log真实触达写入·析析重测信任面(当前口径假高位·ESC-09-04-3)",
-        "🔴 社会货币连续20批冷却·需≥2个≥7分信号恢复·析析定向供给新信号源"
+        "🔴 社会货币连续21批冷却·需≥2个≥7分信号恢复·析析定向供给新信号源"
       ],
       "priority_P1": [
         "🔴 全系统cron调度异常(21 job×7报错·ESC-2026-09-22-2)·大卡/技技排查恢复·尤其投投每日报告job+策策方向船job",
+        "🔴 财务追踪断档10天(ESC-2026-09-23-2)·支付/冻结/用户层指标全ESTIMATES_ONLY·控控复产+补记历史批次",
         "SP象限(ISTP/ESTP/ESFP)2006人·ESC-2026-08-17-1子裁决D待人类决策",
         "红队语义校验恢复(ESC-2026-08-23-1)·析析charter写入红队职责",
         "策略Spoke cron timeout修复(ESC-2026-08-29-1·ruling-029子裁决B)",
         "刹车假安全信号修复(ESC-2026-09-04-4)"
       ],
-      "轮出预警": "🔴 B33社会证明batch2达上限必轮出·身份认同/反常识B32恢复batch1→B33可续batch2·情感共鸣/好奇心B32轮出→B33恢复候选·社会货币继续冷却",
-      "match_gate_裁决": "✅ match gate未触发(执行层strategy_match=100%B18·0 dissent·B19-B31冻结0部署)·信号命中率为环境噪声·不进入gate",
-      "social_currency_status": "B32连续20批冷却(0个≥7信号)·需≥2个≥7分信号恢复·B33观察"
+      "轮出预警": "🔴 B34反常识batch2达上限必轮出·情感共鸣/好奇心B33恢复batch1→B34可续batch2·身份认同/社会证明B33轮出→B34恢复候选·社会货币继续冷却",
+      "match_gate_裁决": "✅ match gate未触发(执行层strategy_match=100%B18·0 dissent·B19-B32冻结0部署)·信号命中率为环境噪声·不进入gate",
+      "social_currency_status": "B33连续21批冷却(0个≥7信号)·需≥2个≥7分信号恢复·B34观察"
     }
   },
   "pending_actions": [
-    "🔴🔴 投投: 冻结延续(控控budget-vessel明令)·解冻条件:支付恢复或控控解冻+分发桶松绑·解冻后B32五臂按方向船执行·验证strategy_match·match gate只认执行层execution.match_rate",
-    "🔴 设设: B32五臂生产·content-gate需direction-vessel fresh(本批原子提交后自动转PASS·解除ESC-09-23-1 BLOCK)·女排8禁渲染民族对立/仇日·China Haul7禁渲染排外/优越感·存款利息8禁渲染焦虑恐慌·心梗7禁渲染健康焦虑/恐吓·马斯克7禁渲染崇洋/身份焦虑",
-    "🔴 荐荐: 保持SearXNG+百度/头条双源采集(信号源复产已恢复)·signal-pool.json已退役·信号笔记为唯一权威·需定向供给情感共鸣/好奇心/社会货币≥7分信号(B33恢复候选)",
+    "🔴🔴 投投: 冻结延续(控控budget-vessel明令)·解冻条件:支付恢复或控控解冻+分发桶松绑·解冻后B33五臂按方向船执行·验证strategy_match·match gate只认执行层execution.match_rate",
+    "🔴 设设: B33五臂生产·content-gate需direction-vessel fresh(本批原子提交后自动转PASS)·打车9禁渲染苦情/卖惨·忆母8.5禁渲染亲情绑架/道德压力·换糖7.5禁渲染焦虑恐慌·月饼7禁渲染消费降级焦虑·结节7禁渲染健康焦虑/恐吓",
+    "🔴 荐荐: 保持SearXNG+百度/头条双源采集·signal-pool.json已退役·信号笔记为唯一权威·需定向供给身份认同/社会证明/社会货币≥7分信号(B34恢复候选)",
     "🔴 大卡/技技: 全系统cron调度异常(21 job×7报错·ESC-2026-09-22-2)·排查恢复·尤其投投每日投放报告job+策策方向船job+信号采集job",
-    "🔴🔴 购买页~1341h(55.9天)·50阈值全破·全ROI永久作废·Plan C(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点",
+    "🔴 控控: 财务追踪断档10天(ESC-2026-09-23-2)·cron恢复后立即复产+补记09-14→09-23历史批次(标注ESTIMATES_ONLY)",
+    "🔴🔴 购买页~1365.8h(56.9天·ESTIMATES_ONLY)·50+阈值全破·全ROI永久作废·Plan C(ruling-015)执行仍零·杰安/河山失联·支付恢复为唯一破局点",
     "🔴 psych-engine results.jsonl冻结·SP象限2006人结构性盲区(ESC-2026-08-17-1子裁决D待人类决策)",
     "🔴 活跃缓冲层归零(active_rate 0.0·ESC-09-04-3)·1744沉睡用户30天窗口内重建触达第一优先",
     "🔴 刹车假安全信号(ESC-2026-09-04-4)·真空绿0/0/0→需FROZEN_BLIND·控控/大卡/技技裁决",
     "🟡 策略Spoke cron timeout(ESC-2026-08-29-1)·cron timeout待技技/大卡修复(ruling-029子裁决B)",
     "🟡 红队语义校验仍真空(ESC-2026-08-23-1保持🟡)·待析析charter写入红队职责",
-    "🟡 社会货币连续20批冷却·0个≥7信号·需≥2个≥7分信号恢复(B33观察)",
-    "✅ B32信号源复产批已执行(身份认同恢复batch1+反常识恢复batch1+社会证明续batch2·情感共鸣强制轮出·好奇心轮出·5臂全≥7·3hook多样性0.5)·方向保持无强制切换(strategy_stale=false)·SearXNG复产解除ESC-09-13-1"
+    "🟡 社会货币连续21批冷却·0个≥7信号·需≥2个≥7分信号恢复(B34观察)",
+    "✅ B33情感共鸣恢复批已执行(情感共鸣恢复batch1+反常识续batch2+好奇心恢复batch1·社会证明/身份认同轮出·5臂全≥7·3hook多样性0.5)·方向保持无强制切换(strategy_stale=false)"
   ],
   "esc_items": [
-    "ESC-2026-07-31-1: 🔴🔴🔴购买页~1341h(55.9天)·50阈值全破·全ROI永久作废·Plan C执行零·杰安/河山失联·支付恢复为唯一破局点",
+    "ESC-2026-07-31-1: 🔴🔴🔴购买页~1365.8h(56.9天·ESTIMATES_ONLY)·50+阈值全破·全ROI永久作废·Plan C执行零·杰安/河山失联·支付恢复为唯一破局点",
     "ESC-2026-07-31-2: 🔴MELTDOWN_GUARD失能",
     "ESC-2026-08-17-1: 🔴psych-engine results.jsonl冻结·SP象限2006人结构性盲区·待人类决策",
     "ESC-2026-08-17-2: 🔴投投报告路径漂移·大卡rsync已同步·待最终闭合",
-    "ESC-2026-08-26-1: 🟡社会货币连续20批冷却·分享飞轮结构性停用坐实·恢复条件≥2个≥7分信号或析析定向供给新信号源",
-    "ESC-2026-08-27-1: 🟡B18 strategy-pool漏更·第4件契约破坏·B20-B32已四文件原子提交·待最终闭合回执",
+    "ESC-2026-08-26-1: 🟡社会货币连续21批冷却·分享飞轮结构性停用坐实·恢复条件≥2个≥7分信号或析析定向供给新信号源",
+    "ESC-2026-08-27-1: 🟡B18 strategy-pool漏更·第4件契约破坏·B20-B33已四文件原子提交·待最终闭合回执",
     "ESC-2026-08-23-1: 🟡红队协作管道·red_team_gate.py已上线·语义红队仍真空·保持🟡观察",
     "ESC-2026-08-16-1: 🟢match gate指标混淆·ruling-017子裁决E字段拆分·已按拆分执行",
     "ESC-2026-08-29-1: 🔴策略Spoke cron超时·deepseek billing 402全舰队停摆·cron timeout待技技/大卡修复(ruling-029子裁决B)",
     "ESC-2026-09-04-2: 🔴策略引擎停摆·B21/B22为停摆后恢复产出·回应:acknowledged",
     "ESC-2026-09-04-3: 🔴活跃缓冲层归零(active_rate 0.0·1744沉睡用户全部滑入)·触达重建第一优先",
     "ESC-2026-09-04-4: 🔴刹车'全绿'是假安全信号(0/0/0真空绿)·熔断规则覆盖缺口·待控控/大卡/技技裁决",
-    "ESC-2026-09-13-1: ✅SearXNG三引擎全灭→已恢复(SearXNG 4引擎HHI 0.2832·百度/头条双源回归)·B32信号源复产·回应:resolved_by_b32",
-    "ESC-2026-09-22-2: 🟡渠道执行层回写中断~9天(channel-pool stale~227h·投投报告缺失)·根因=全系统cron调度异常·待大卡/技技修复",
-    "ESC-2026-09-23-1: 🔴设设content-gate BLOCK(direction-vessel B31 STALE 191h)·B32原子提交后转PASS·回应:resolved_by_b32"
+    "ESC-2026-09-13-1: ✅SearXNG三引擎全灭→已恢复·B32信号源复产·回应:resolved_by_b32",
+    "ESC-2026-09-22-2: 🟡渠道执行层回写中断~10天(channel-pool stale·投投报告缺失)·根因=全系统cron调度异常·待大卡/技技修复",
+    "ESC-2026-09-23-1: ✅设设content-gate BLOCK(direction-vessel B31 STALE 191h)·B32原子提交后转PASS·回应:resolved_by_b32",
+    "ESC-2026-09-23-2: 🔴控控财务追踪报告断档10天(09-14→09-23)·审计无断档基线被击穿·cron部分恢复但财务链未复产·支付/冻结指标全ESTIMATES_ONLY·待控控复产+技技排查"
   ],
   "feedback_loop": {
     "d21_b2_execution": {
@@ -1189,20 +1190,20 @@
   "vessel": {
     "version": "1.0",
     "type": "strategy-pool-vessel",
-    "id": "strategy-pool-2026-09-23-0815",
+    "id": "strategy-pool-2026-09-24-0815",
     "source": {
       "agent": "策策",
       "subsystem": "策略Hub",
-      "batch": "D21-B32"
+      "batch": "D21-B33"
     },
-    "created_at": "2026-09-23T08:15:00+08:00",
+    "created_at": "2026-09-24T08:15:00+08:00",
     "freshness_ttl_hours": 26,
     "priority": "high",
     "info_contract": {
-      "purpose": "D21-B32信号源复产批·反馈闭环三问测试⛔n/a✅✅(B19-B31冻结0臂·strategy_match n/a·cash_roi支付盲null~1341h·coverage 0·diversity n/a)·strategy_stale=false→方向保持无强制切换·情感共鸣B30 batch1+B31 batch2达上限→B32强制轮出(0臂)·身份认同恢复batch1(女排8 ENTJ+China Haul7 ISTJ)+反常识恢复batch1(存款利息8 INTJ+心梗7 ISFJ)+社会证明续batch2(马斯克7 ENFJ)·好奇心B31 batch1→B32轮出(无fresh≥7)·3hook多样性0.5(达floor0.5)·5臂¥125·信号源复产(SearXNG三引擎恢复+百度/头条双源回归·31raw/16matched·51.6%)·触达重建第一优先",
+      "purpose": "D21-B33情感共鸣恢复批·反馈闭环三问测试⛔n/a✅✅(B19-B32冻结0臂·strategy_match n/a·cash_roi支付盲null~1365.8h ESTIMATES_ONLY·coverage 0·diversity n/a)·strategy_stale=false→方向保持无强制切换·情感共鸣B32轮出(0臂)→B33恢复batch1(打车9 INFJ+忆母8.5 ENFJ)+反常识续batch2(换糖7.5 INTJ+月饼7 ISTJ·达上限B34必轮出)+好奇心恢复batch1(结节7 ISFJ)·社会证明batch2达上限强制轮出(0臂)·身份认同无fresh≥7轮出(0臂)·3hook多样性0.5(达floor0.5)·5臂¥125全≥7强信号·信号源双源回归持续(72raw/20matched·27.8%)·触达重建第一优先",
       "stale_threshold_hours": 26,
-      "stale_action": "降级至D21-B31策略池残光",
-      "expires_after": "D21-B32策略产出或direction-vessel过期",
+      "stale_action": "降级至D21-B32策略池残光",
+      "expires_after": "D21-B33策略产出或direction-vessel过期",
       "consumer_agents": [
         "投投",
         "策策",
@@ -1213,23 +1214,23 @@
   },
   "chains": [
     {
-      "chain_id": "D21-B32-arm1",
-      "batch_id": "D21-B32",
+      "chain_id": "D21-B33-arm1",
+      "batch_id": "D21-B33",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "中国女排夺冠！3-0横扫日本(8分·集体荣誉/民族自豪·ENTJ Te-Ni成就导向)",
-        "category": "身份认同"
+        "title": "女子打车回家只剩13元司机仅收9元(9分·陌生人善意/共情·INFJ Ni-Fe理想主义)",
+        "category": "情感共鸣"
       },
       "links": {
         "persona": {
-          "persona_id": "ENTJ",
+          "persona_id": "INFJ",
           "themes_ref": [
             {
               "type": "mbti",
-              "value": "ENTJ"
+              "value": "INFJ"
             }
           ]
         },
@@ -1237,7 +1238,7 @@
           "value": null
         },
         "method": {
-          "value": "身份认同"
+          "value": "情感共鸣"
         },
         "channel": {
           "value": "微博"
@@ -1246,29 +1247,29 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "身份认同恢复batch1·ENTJ B30北大硕士9→B31轮出→B32恢复·微博公共议题位·正向(禁渲染民族对立/仇日情绪)",
+      "why": "情感共鸣恢复batch1·INFJ B30寿衣8→B31/B32轮出→B33恢复·微博公共温情位·正向(禁渲染苦情/卖惨)",
       "budget": 25,
       "priority": "P0",
-      "status": "B32_designed"
+      "status": "B33_designed"
     },
     {
-      "chain_id": "D21-B32-arm2",
-      "batch_id": "D21-B32",
+      "chain_id": "D21-B33-arm2",
+      "batch_id": "D21-B33",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "China Haul火了(7分·国货出海/文化自信·ISTJ Si务实)",
-        "category": "身份认同"
+        "title": "全网最爱发钱老板中秋宴忆母落泪(8.5分·亲情/感恩·ENFJ Fe社会关怀)",
+        "category": "情感共鸣"
       },
       "links": {
         "persona": {
-          "persona_id": "ISTJ",
+          "persona_id": "ENFJ",
           "themes_ref": [
             {
               "type": "mbti",
-              "value": "ISTJ"
+              "value": "ENFJ"
             }
           ]
         },
@@ -1276,29 +1277,29 @@
           "value": null
         },
         "method": {
-          "value": "身份认同"
+          "value": "情感共鸣"
         },
         "channel": {
-          "value": "小红书"
+          "value": "微博"
         },
         "product": {
           "value": "L1深度人格报告"
         }
       },
-      "why": "身份认同恢复batch1·ISTJ B31社会证明→B32换hook身份认同·小红书种草/文化位·正向(禁渲染排外/优越感对立)",
+      "why": "情感共鸣恢复batch1·ENFJ B32社会证明batch2达上限→B33换hook情感共鸣·微博公共温情位·正向(禁渲染亲情绑架/道德压力)",
       "budget": 25,
-      "priority": "P1",
-      "status": "B32_designed"
+      "priority": "P0",
+      "status": "B33_designed"
     },
     {
-      "chain_id": "D21-B32-arm3",
-      "batch_id": "D21-B32",
+      "chain_id": "D21-B33-arm3",
+      "batch_id": "D21-B33",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "多家银行存款利息涨了(8分·利率反转/财经反常识·INTJ Ni-Te策略思维)",
+        "title": "食品企业为什么开始换糖(7.5分·消费健康/理性分析·INTJ Ni-Te策略思维)",
         "category": "反常识"
       },
       "links": {
@@ -1324,21 +1325,60 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "反常识恢复batch1·INTJ B26高考数学→B31轮出→B32恢复·B站知识/财经位·正向(禁渲染焦虑恐慌)",
+      "why": "反常识续batch2·INTJ B32存款利息8 batch1→B33续batch2达上限·B站知识/财经位·正向(禁渲染焦虑恐慌)",
       "budget": 25,
       "priority": "P0",
-      "status": "B32_designed"
+      "status": "B33_designed"
     },
     {
-      "chain_id": "D21-B32-arm4",
-      "batch_id": "D21-B32",
+      "chain_id": "D21-B33-arm4",
+      "batch_id": "D21-B33",
       "anchor": {
         "unmet_need": null,
         "unmet_need_status": "null"
       },
       "signal": {
-        "title": "男子不抽烟少饮酒坚持长跑突发心梗(7分·自律悖论/健康反常识·ISFJ Si健康养生)",
+        "title": "月饼市场从面子回归里子(7分·务实消费/去包装·ISTJ Si务实)",
         "category": "反常识"
+      },
+      "links": {
+        "persona": {
+          "persona_id": "ISTJ",
+          "themes_ref": [
+            {
+              "type": "mbti",
+              "value": "ISTJ"
+            }
+          ]
+        },
+        "motif": {
+          "value": null
+        },
+        "method": {
+          "value": "反常识"
+        },
+        "channel": {
+          "value": "小红书"
+        },
+        "product": {
+          "value": "L1深度人格报告"
+        }
+      },
+      "why": "反常识续batch2·ISTJ B32身份认同China Haul7→B33换hook反常识·小红书种草/消费位·正向(禁渲染消费降级焦虑)",
+      "budget": 25,
+      "priority": "P1",
+      "status": "B33_designed"
+    },
+    {
+      "chain_id": "D21-B33-arm5",
+      "batch_id": "D21-B33",
+      "anchor": {
+        "unmet_need": null,
+        "unmet_need_status": "null"
+      },
+      "signal": {
+        "title": "医生:不易长结节的人有4个特征(7分·健康养生/自检·ISFJ Si健康养生)",
+        "category": "好奇心"
       },
       "links": {
         "persona": {
@@ -1354,7 +1394,7 @@
           "value": null
         },
         "method": {
-          "value": "反常识"
+          "value": "好奇心"
         },
         "channel": {
           "value": "抖音"
@@ -1363,49 +1403,10 @@
           "value": "L1深度人格报告"
         }
       },
-      "why": "反常识恢复batch1·ISFJ B31情感共鸣batch2达上限→B32换hook反常识·抖音下沉/健康位·正向(禁渲染健康焦虑/恐吓)",
+      "why": "好奇心恢复batch1·ISFJ B32反常识心梗7→B33换hook好奇心·抖音下沉/健康位·正向(禁渲染健康焦虑/恐吓)",
       "budget": 25,
       "priority": "P1",
-      "status": "B32_designed"
-    },
-    {
-      "chain_id": "D21-B32-arm5",
-      "batch_id": "D21-B32",
-      "anchor": {
-        "unmet_need": null,
-        "unmet_need_status": "null"
-      },
-      "signal": {
-        "title": "马斯克建议有时间一定要去中国(7分·名人背书/社会证明·ENFJ Fe社会关怀)",
-        "category": "社会证明"
-      },
-      "links": {
-        "persona": {
-          "persona_id": "ENFJ",
-          "themes_ref": [
-            {
-              "type": "mbti",
-              "value": "ENFJ"
-            }
-          ]
-        },
-        "motif": {
-          "value": null
-        },
-        "method": {
-          "value": "社会证明"
-        },
-        "channel": {
-          "value": "微博"
-        },
-        "product": {
-          "value": "L1深度人格报告"
-        }
-      },
-      "why": "社会证明续batch2·ENFJ B31情感共鸣麻袋女孩7达上限→B32换hook社会证明·微博公共议题位·正向(禁渲染崇洋/身份焦虑)",
-      "budget": 25,
-      "priority": "P1",
-      "status": "B32_designed"
+      "status": "B33_designed"
     }
   ]
 }
